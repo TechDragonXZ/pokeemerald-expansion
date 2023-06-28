@@ -6066,6 +6066,31 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
     [MOVE_PSYBLADE] = {0}, // TODO
 
     [MOVE_HYDRO_STEAM] = {0}, // TODO
+
+    [MOVE_MYSTIC_SLASH] =
+    {
+        .effect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .comboStarterId = 0,
+        .comboMoves = {0}
+    },
+
+    [MOVE_DRAGON_POWER] =
+    {
+        .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = 0,
+        .comboMoves = {0}
+    },
+
+    [MOVE_DRACO_SWARM] =
+    {
+        .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = 0,
+        .comboMoves = {0}
+    },
+
 };
 
 const struct ContestEffect gContestEffects[] =

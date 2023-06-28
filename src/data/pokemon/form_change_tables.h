@@ -301,8 +301,8 @@ static const struct FormChange sGiratinaFormChangeTable[] = {
 };
 
 static const struct FormChange sShayminFormChangeTable[] = {
-    {FORM_CHANGE_ITEM_USE, SPECIES_SHAYMIN_SKY, ITEM_GRACIDEA, DAY},
-    // {FORM_CHANGE_WITHDRAW, SPECIES_SHAYMIN},
+    {FORM_CHANGE_ITEM_USE, SPECIES_SHAYMIN_SKY, ITEM_GRACIDEA},
+    {FORM_CHANGE_ITEM_USE, SPECIES_SHAYMIN, ITEM_GRACIDEA},
     {FORM_CHANGE_TERMINATOR},
 };
 
@@ -441,8 +441,8 @@ static const struct FormChange sDiancieFormChangeTable[] = {
 };
 
 static const struct FormChange sHoopaFormChangeTable[] = {
-    {FORM_CHANGE_ITEM_USE, SPECIES_HOOPA_UNBOUND, ITEM_PRISON_BOTTLE, SPECIES_HOOPA},
-    {FORM_CHANGE_WITHDRAW, SPECIES_HOOPA},
+    {FORM_CHANGE_ITEM_USE, SPECIES_HOOPA_UNBOUND, ITEM_PRISON_BOTTLE},
+    {FORM_CHANGE_ITEM_USE, SPECIES_HOOPA, ITEM_PRISON_BOTTLE},
     {FORM_CHANGE_TERMINATOR},
 };
 #endif

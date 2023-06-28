@@ -316,6 +316,7 @@
 #define EVO_ITEM_NIGHT                    39     // specified item is used on Pokémon, is night
 #define EVO_ITEM_DAY                      40     // specified item is used on Pokémon, is day
 #define EVO_ITEM_HOLD                     41     // Pokémon levels up, holds specified item
+#define EVO_LEVEL_PSYCHIC_TYPE_MON_IN_PARTY  42     // Pokémon reaches the specified level with a Psychic Type Pokémon in party
 
 #define EVOS_PER_MON 10
 

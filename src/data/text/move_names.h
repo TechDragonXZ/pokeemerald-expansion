@@ -1665,6 +1665,9 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_MAGICAL_TORQUE] = _("MagiclTorque"),
     [MOVE_PSYBLADE] = _("Psyblade"),
     [MOVE_HYDRO_STEAM] = _("Hydro Steam"),
+    [MOVE_MYSTIC_SLASH] = _("Mystic Slash"),
+    [MOVE_DRAGON_POWER] = _("Dragon Power"),
+    [MOVE_DRACO_SWARM] = _("Draco Swarm"),
 };
 #endif
 

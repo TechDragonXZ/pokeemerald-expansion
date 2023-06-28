@@ -88,12 +88,12 @@
 
 #define CASTFORM_SPECIES_INFO(type, color)            \
     {                                                 \
-        .baseHP        = 70,                          \
-        .baseAttack    = 70,                          \
-        .baseDefense   = 70,                          \
-        .baseSpeed     = 70,                          \
-        .baseSpAttack  = 70,                          \
-        .baseSpDefense = 70,                          \
+        .baseHP        = 80,                          \
+        .baseAttack    = 80,                          \
+        .baseDefense   = 80,                          \
+        .baseSpeed     = 80,                          \
+        .baseSpAttack  = 80,                          \
+        .baseSpDefense = 80,                          \
         .types = { type, type },                      \
         .catchRate = 45,                              \
         .expYield = 147,                              \
@@ -8953,7 +8953,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 81,
         .baseSpAttack  = 100,
         .baseSpDefense = 125,
-        .types = { TYPE_WATER, TYPE_WATER},
+        .types = { TYPE_WATER, TYPE_FAIRY},
         .catchRate = 60,
         .expYield = 189,
         .evYield_SpDefense = 2,
@@ -11582,7 +11582,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 116,
         .baseSpDefense = 56,
-        .types = { TYPE_BUG, TYPE_FLYING},
+        .types = { TYPE_BUG, TYPE_DRAGON},
         .catchRate = 30,
         .expYield = 180,
         .evYield_Attack    = 2,
@@ -21853,7 +21853,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 115,
         .baseSpAttack  = 115,
         .baseSpDefense = 60,
-        .types = { TYPE_DARK, TYPE_DARK},
+        .types = { TYPE_DARK, TYPE_FAIRY},
         .catchRate = 30,
         .expYield = 198,
         .evYield_Attack    = 2,

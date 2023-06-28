@@ -3260,6 +3260,10 @@ static const u8 sHydroSteamDescription[] = _(
     "This move's power increases\n"
     "under harsh sunlight.");
 
+static const u8 sDracoSwarmDescription[] = _(
+    "This attack does Dragon\n"
+    "and Bug-type damage.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4099,4 +4103,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MAGICAL_TORQUE - 1] = sMagicalTorqueDescription,
     [MOVE_PSYBLADE - 1] = sPsybladeDescription,
     [MOVE_HYDRO_STEAM - 1] = sHydroSteamDescription,
+    [MOVE_MYSTIC_SLASH - 1] = sNightSlashDescription,
+    [MOVE_DRAGON_POWER - 1] = sAncientPowerDescription,
+    [MOVE_DRACO_SWARM - 1] = sDracoSwarmDescription,
 };
