@@ -6397,9 +6397,6 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
 
     if (heldItem == ITEM_ENIGMA_BERRY)
         holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
-        #else
-        holdEffect = 0;
-        #endif
     else
         holdEffect = ItemId_GetHoldEffect(heldItem);
 
