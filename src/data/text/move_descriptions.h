@@ -3264,6 +3264,10 @@ static const u8 sDracoSwarmDescription[] = _(
     "This attack does Dragon\n"
     "and Bug-type damage.");
 
+static const u8 sHiddenStrengthDescription[] = _(
+    "The effectiveness varies\n"
+    "with the user.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4106,4 +4110,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MYSTIC_SLASH - 1] = sNightSlashDescription,
     [MOVE_DRAGON_POWER - 1] = sAncientPowerDescription,
     [MOVE_DRACO_SWARM - 1] = sDracoSwarmDescription,
+    [MOVE_HIDDEN_STRENGTH - 1] = sHiddenStrengthDescription,
 };

@@ -1668,6 +1668,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_MYSTIC_SLASH] = _("Mystic Slash"),
     [MOVE_DRAGON_POWER] = _("Dragon Power"),
     [MOVE_DRACO_SWARM] = _("Draco Swarm"),
+    [MOVE_HIDDEN_STRENGTH] = _("Hidden Strength"),
 };
 #endif
 
