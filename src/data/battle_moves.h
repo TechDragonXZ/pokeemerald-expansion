@@ -13656,6 +13656,53 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .zMoveEffect = Z_EFFECT_NONE,
     },
 
+    [MOVE_MYSTIC_SLASH] =
+    {
+        .effect = EFFECT_HIT,
+        .power = 70,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_HIGH_CRIT | FLAG_SLICING_MOVE,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_DRACO_SWARM] =
+    {
+        .power = 100,
+        .effect = EFFECT_TWO_TYPED_MOVE,
+        .type = TYPE_BUG,
+        .accuracy = 95,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_DMG_MINIMIZE,
+        .split = SPLIT_SPECIAL,
+        .argument = TYPE_DRAGON,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_DISASTER_BREAK] =
+    {
+        .power = 80,
+        .effect = EFFECT_TWO_TYPED_MOVE,
+        .type = TYPE_DARK,
+        .accuracy = 95,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 2,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_DMG_MINIMIZE | FLAG_HIGH_CRIT | FLAG_SLICING_MOVE | FLAG_DMG_IN_AIR | FLAG_DMG_UNDERGROUND | FLAG_DMG_UNDERWATER | FLAG_DMG_MINIMIZE | FLAG_DMG_UNGROUNDED_IGNORE_TYPE_IF_FLYING,
+        .split = SPLIT_PHYSICAL,
+        .argument = TYPE_FAIRY,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

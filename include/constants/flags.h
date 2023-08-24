@@ -41,10 +41,10 @@
 #define FLAG_TEMP_1F     (TEMP_FLAGS_START + 0x1F)
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
+#define FLAG_NO_COLLISION    0x20 // No Collision Flag
+#define FLAG_NO_TRAINER_SEE  0x21 // No Trainer See Flag
+#define FLAG_NO_ENCOUNTER    0x22 // No Encounter Flag
+#define FLAG_GOT_MEGA_RING   0x23 // Mega Ring Flag
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag

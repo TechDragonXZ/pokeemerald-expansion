@@ -6551,6 +6551,21 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                     }
                 }
                 break;
+            case EVO_LEVEL_PSY_TYPE_MON_IN_PARTY:
+                if (gEvolutionTable[species][i].param <= level)
+                {
+                    for (j = 0; j < PARTY_SIZE; j++)
+                    {
+                        u16 currSpecies = GetMonData(&gPlayerParty[j], MON_DATA_SPECIES, NULL);
+                        if (gSpeciesInfo[currSpecies].types[0] == TYPE_PSYCHIC
+                         || gSpeciesInfo[currSpecies].types[1] == TYPE_PSYCHIC)
+                        {
+                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                            break;
+                        }
+                    }
+                }
+                break;
             case EVO_LEVEL_RAIN:
                 j = GetCurrentWeather();
                 if (gEvolutionTable[species][i].param <= level

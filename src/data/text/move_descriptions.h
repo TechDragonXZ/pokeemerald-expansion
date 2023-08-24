@@ -3260,6 +3260,18 @@ static const u8 sHydroSteamDescription[] = _(
     "This move's power increases\n"
     "under harsh sunlight.");
 
+static const u8 sMysticSlashDescription[] = _(
+    "Hits as soon as possible.\n"
+    "High critical-hit ratio.");
+
+static const u8 sDracoSwarmDescription[] = _(
+    "This attack does Bug\n"
+    "and Dragon-type damage.");
+
+static const u8 sDisasterBreakDescription[] = _(
+    "Always hits first, High crit ratio.\n"
+    "Does Dark and Fairy-type damage.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4099,4 +4111,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MAGICAL_TORQUE - 1] = sMagicalTorqueDescription,
     [MOVE_PSYBLADE - 1] = sPsybladeDescription,
     [MOVE_HYDRO_STEAM - 1] = sHydroSteamDescription,
+    [MOVE_MYSTIC_SLASH - 1] = sMysticSlashDescription,
+    [MOVE_DRACO_SWARM - 1] = sDracoSwarmDescription,
+    [MOVE_DISASTER_BREAK - 1] = sDisasterBreakDescription,
 };

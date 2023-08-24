@@ -424,7 +424,7 @@ If this works, then proceed to [Installation](#installation). Otherwise, ask for
     cd agbcc
     git clean -fX
     ./build.sh
-    ./install.sh ../pokeemerald
+    ./install.sh ../pokeemerald-expansion
     ```
 
 - **Otherwise**, if agbcc has been built before on the same terminal, run the following commands to install agbcc into pokeemerald:
