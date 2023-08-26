@@ -1337,5 +1337,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_CALYREX_ICE_RIDER] = _("Calyrex"),
     [SPECIES_CALYREX_SHADOW_RIDER] = _("Calyrex"),
     [SPECIES_BASCULEGION_FEMALE] = _("Bsculegion"),
+    [SPECIES_PIKACHU_PARTNER] = _("Pikachu"),
+    [SPECIES_EEVEE_PARTNER] = _("Eevee"),
 #endif
 };

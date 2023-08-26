@@ -585,7 +585,8 @@
     "NavelRock_Bottom",
     "TrainerHill_Elevator",
     "MeteorFalls_Peak",
-    "TimeRift"
+    "TimeRift",
+    "MysteriousHouse"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",

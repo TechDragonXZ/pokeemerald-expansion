@@ -1334,6 +1334,9 @@ const struct CompressedSpriteSheet gMonBackPicTable[] =
     SPECIES_SPRITE(ENAMORUS_THERIAN, gMonBackPic_EnamorusTherian),
 
     SPECIES_SPRITE(BASCULEGION_FEMALE, gMonBackPic_BasculegionFemale),
+
+    SPECIES_SPRITE(PIKACHU_PARTNER, gMonBackPic_Pikachu),
+    SPECIES_SPRITE(EEVEE_PARTNER, gMonBackPic_Eevee),
 #endif
     SPECIES_SPRITE(EGG, gMonFrontPic_Egg),
 };

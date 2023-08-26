@@ -405,6 +405,12 @@ PlayersHouse_1F_Text_PortsInSlateportLilycove:
 	.string "If I recall, there are ferry ports in\n"
 	.string "SLATEPORT and LILYCOVE.$"
 
+PlayersHouse_1F_Text_OtherTickets:
+	.string "DAD: {PLAYER}!, I have some more\n"
+	.string " TICKETS for you.\p"
+	.string "I got these tickets from the lottery,\n"
+	.string "But I can't use them, so here you go.$"
+
 PlayersHouse_1F_Text_BetterGetBackToGym:
 	.string "I'd better get back to PETALBURG GYM.\p"
 	.string "MOM, thanks for looking after the house\n"

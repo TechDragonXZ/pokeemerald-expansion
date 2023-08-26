@@ -556,6 +556,7 @@
 #define MAP_TRAINER_HILL_ELEVATOR                           (88 | (26 << 8))
 #define MAP_METEOR_FALLS_PEAK                               (89 | (26 << 8))
 #define MAP_TIME_RIFT                                       (90 | (26 << 8))
+#define MAP_MYSTERIOUS_HOUSE                                (91 | (26 << 8))
 
 // gMapGroup_IndoorRoute104Prototype
 #define MAP_ROUTE104_PROTOTYPE                          (0 | (27 << 8))

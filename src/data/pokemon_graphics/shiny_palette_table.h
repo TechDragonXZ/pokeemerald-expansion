@@ -1331,6 +1331,8 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
 
     SPECIES_SHINY_PAL(BASCULEGION_FEMALE, gMonShinyPalette_BasculegionFemale),
     SPECIES_SHINY_PAL(ENAMORUS_THERIAN, gMonShinyPalette_EnamorusTherian),
+    SPECIES_SHINY_PAL(PIKACHU_PARTNER, gMonShinyPalette_Pikachu),
+    SPECIES_SHINY_PAL(EEVEE_PARTNER, gMonShinyPalette_Eevee),
 #endif
     SPECIES_SHINY_PAL(EGG, gMonPalette_Egg),
 };

@@ -1335,5 +1335,7 @@ const u16 *const gTeachableLearnsets[NUM_SPECIES] =
     // Enamorus
     [SPECIES_ENAMORUS_THERIAN] = sEnamorusTeachableLearnset,
     [SPECIES_BASCULEGION_FEMALE] = sBasculegionTeachableLearnset,
+    [SPECIES_PIKACHU_PARTNER] = sPikachuPartnerTeachableLearnset,
+    [SPECIES_EEVEE_PARTNER] = sEeveePartnerTeachableLearnset,
 #endif
 };

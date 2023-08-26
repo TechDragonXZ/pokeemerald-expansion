@@ -12446,3 +12446,41 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
     .species = SPECIES_KYOGRE,
     }
 };
+
+static const struct TrainerMonCustomized sParty_Bond[] = {
+    {
+    .species = SPECIES_DITTO,
+    .ability = ABILITY_IMPOSTER,
+    .lvl = 20,
+    .iv = 255,
+    .nature = NATURE_DOCILE,
+    .heldItem = ITEM_QUICK_POWDER,
+    .friendship = 70,
+    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .ball = BALL_LUXURY,
+    .isShiny = TRUE,
+    },
+    {
+    .species = SPECIES_PIKACHU_PARTNER,
+    .ability = ABILITY_MOTOR_DRIVE,
+    .lvl = 20,
+    .iv = 255,
+    .nature = NATURE_HASTY,
+    .heldItem = ITEM_LIGHT_BALL,
+    .friendship = 70,
+    .moves = {MOVE_ZIPPY_ZAP, MOVE_PIKA_PAPOW, MOVE_FLOATY_FALL, MOVE_NASTY_PLOT},
+    .ball = BALL_PREMIER,
+    },
+    {
+    .species = SPECIES_EEVEE_PARTNER,
+    .ability = ABILITY_SCRAPPY,
+    .lvl = 20,
+    .iv = 255,
+    .nature = NATURE_ADAMANT,
+    .heldItem = ITEM_SILK_SCARF,
+    .friendship = 70,
+    .moves = {MOVE_GLITZY_GLOW, MOVE_VEEVEE_VOLLEY, MOVE_BOUNCY_BUBBLE, MOVE_CALM_MIND},
+    .ball = BALL_PREMIER,
+    }
+};
+

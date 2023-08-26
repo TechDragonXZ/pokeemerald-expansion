@@ -1064,3 +1064,5 @@ Common_EventScript_LegendaryFlewAway::
 
 	.include "data/maps/TimeRift/scripts.inc"
 	.include "data/scripts/change_deoxys_form.inc"
+
+	.include "data/maps/MysteriousHouse/scripts.inc"

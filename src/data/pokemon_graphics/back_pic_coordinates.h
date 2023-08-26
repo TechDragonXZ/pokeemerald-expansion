@@ -1358,6 +1358,8 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_ENAMORUS_THERIAN]             = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
     // Basculegion
     [SPECIES_BASCULEGION_FEMALE]           = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
+    [SPECIES_PIKACHU_PARTNER]                      = PIKACHU_BACK_PIC_COORDS,
+    [SPECIES_EEVEE_PARTNER]                        = { .size = MON_COORDS_SIZE(56, 48), .y_offset = 10 },
 #endif
     [SPECIES_EGG]                          = { .size = MON_COORDS_SIZE(24, 24), .y_offset = 20 },
 };

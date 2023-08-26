@@ -908,6 +908,8 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_GLASTRIER] = gMonFootprint_Glastrier,
     [SPECIES_SPECTRIER] = gMonFootprint_Spectrier,
     [SPECIES_CALYREX] = gMonFootprint_Calyrex,
+    [SPECIES_PIKACHU_PARTNER] = gMonFootprint_Pikachu,
+    [SPECIES_EEVEE_PARTNER] = gMonFootprint_Eevee,
 #endif
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

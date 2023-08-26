@@ -2417,7 +2417,7 @@
       "width": 58,
       "height": 26,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "0",
+      "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/UnusedOutdoorArea/border.bin",
       "blockdata_filepath": "data/layouts/UnusedOutdoorArea/map.bin"
     },
@@ -4425,11 +4425,21 @@
       "id": "LAYOUT_TIME_RIFT",
       "name": "TimeRift_Layout",
       "width": 18,
-      "height": 20,
+      "height": 26,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/TimeRift/border.bin",
       "blockdata_filepath": "data/layouts/TimeRift/map.bin"
+    },
+    {
+      "id": "LAYOUT_MYSTERIOUS_HOUSE",
+      "name": "MysteriousHouse_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/MysteriousHouse/border.bin",
+      "blockdata_filepath": "data/layouts/MysteriousHouse/map.bin"
     }
   ]
 }

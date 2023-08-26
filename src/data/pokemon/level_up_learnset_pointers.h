@@ -1335,5 +1335,7 @@ const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
     // Enamorus
     [SPECIES_ENAMORUS_THERIAN] = sEnamorusLevelUpLearnset,
     [SPECIES_BASCULEGION_FEMALE] = sBasculegionLevelUpLearnset,
+    [SPECIES_PIKACHU_PARTNER] = sPikachuLevelUpLearnset,
+    [SPECIES_EEVEE_PARTNER] = sEeveeLevelUpLearnset,
 #endif
 };
