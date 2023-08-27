@@ -44,6 +44,8 @@ const u8 gBattlePalaceNatureToMoveTarget[NUM_NATURES] =
     [NATURE_SASSY]   = PALACE_TARGET_WEAKER,
     [NATURE_CAREFUL] = PALACE_TARGET_WEAKER,
     [NATURE_QUIRKY]  = PALACE_TARGET_STRONGER,
+    [NATURE_PRIDEFUL] = PALACE_TARGET_RANDOM,
+    [NATURE_LOWLY] = PALACE_TARGET_RANDOM,
 };
 
 static const struct CompressedSpriteSheet sSmokescreenImpactSpriteSheet =
