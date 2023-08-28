@@ -1062,18 +1062,6 @@ static bool8 ShouldUseItem(void)
         if (itemEffects == NULL)
             continue;
 
-        if (item == ITEM_ENIGMA_BERRY)
-            #ifndef FREE_ENIGMA_BERRY
-            itemEffects = gSaveBlock1Ptr->enigmaBerry.itemEffect;
-            #else
-            itemEffects = 0;
-            #endif
-        else
-            itemEffects = gItemEffectTable[item - ITEM_POTION];
-
-        *(gBattleStruct->AI_itemType + gActiveBattler / 2) = GetAI_ItemType(item, itemEffects);
-
-        switch (*(gBattleStruct->AI_itemType + gActiveBattler / 2))
         switch (ItemId_GetBattleUsage(item))
         {
         case EFFECT_ITEM_HEAL_AND_CURE_STATUS:
