@@ -70,9 +70,7 @@
 #define NATURE_SASSY    22
 #define NATURE_CAREFUL  23
 #define NATURE_QUIRKY   24
-#define NATURE_PRIDEFUL 25
-#define NATURE_LOWLY    26
-#define NUM_NATURES     27
+#define NUM_NATURES     25
 
 // Pokemon Stats
 #define STAT_HP      0
@@ -94,7 +92,7 @@
 #define MAX_STAT_STAGE    12
 
 // Shiny odds
-#define SHINY_ODDS 32 // Actual probability is SHINY_ODDS/65536
+#define SHINY_ODDS 8 // Actual probability is SHINY_ODDS/65536
 
 // Ribbon IDs used by TV and Pokénav
 #define CHAMPION_RIBBON       0

@@ -2811,8 +2811,6 @@ void ShowNatureGirlMessage(void)
         [NATURE_SASSY]   = BattleFrontier_Lounge5_Text_NatureGirlSassy,
         [NATURE_CAREFUL] = BattleFrontier_Lounge5_Text_NatureGirlCareful,
         [NATURE_QUIRKY]  = BattleFrontier_Lounge5_Text_NatureGirlDocileNaiveQuietQuirky,
-        [NATURE_PRIDEFUL]  = BattleFrontier_Lounge5_Text_NatureGirlDocileNaiveQuietQuirky,
-        [NATURE_LOWLY]  = BattleFrontier_Lounge5_Text_NatureGirlCareful,
     };
 
     u8 nature;
