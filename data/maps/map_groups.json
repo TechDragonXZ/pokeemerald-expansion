@@ -492,7 +492,8 @@
     "BattlePyramidSquare14",
     "BattlePyramidSquare15",
     "BattlePyramidSquare16",
-    "UnionRoom"
+    "UnionRoom",
+    "BondLabBasement"
   ],
   "gMapGroup_SpecialArea": [
     "SafariZone_Northwest",
@@ -585,8 +586,9 @@
     "NavelRock_Bottom",
     "TrainerHill_Elevator",
     "MeteorFalls_Peak",
-    "TimeRift",
-    "MysteriousHouse"
+    "DeepPetalburgWoods",
+    "BondLab",
+    "StrangeSpace"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",

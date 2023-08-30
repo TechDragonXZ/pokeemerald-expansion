@@ -1062,7 +1062,11 @@ Common_EventScript_LegendaryFlewAway::
 
 	.include "data/maps/MeteorFalls_Peak/scripts.inc"
 
-	.include "data/maps/TimeRift/scripts.inc"
+	.include "data/maps/DeepPetalburgWoods/scripts.inc"
 	.include "data/scripts/change_deoxys_form.inc"
 
-	.include "data/maps/MysteriousHouse/scripts.inc"
+	.include "data/maps/BondLab/scripts.inc"
+
+	.include "data/maps/BondLabBasement/scripts.inc"
+
+	.include "data/maps/StrangeSpace/scripts.inc"

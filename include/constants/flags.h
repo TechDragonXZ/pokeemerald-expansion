@@ -45,12 +45,12 @@
 #define FLAG_NO_TRAINER_SEE  0x21 // No Trainer See Flag
 #define FLAG_NO_ENCOUNTER    0x22 // No Encounter Flag
 #define FLAG_GOT_MEGA_RING   0x23 // Mega Ring Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
+#define FLAG_PARTNER_PICKED  0x24 // Partner Picked Flag
+#define FLAG_BOND_DEFEATED   0x25 // Player Beat Bond Flag
+#define FLAG_PARTNER_CAN_BE_PICKED    0x26 // Player Can Pick A Partner Flag
+#define FLAG_PARTNER_PIKACHU_PICKED    0x27 // Player Picked Pikachu(Partner) Flag
+#define FLAG_PARTNER_EEVEE_PICKED    0x28 // Player Picked Eevee(Partner) Flag
+#define FLAG_PIKACHU_MOVED   0x29 // Stairs Pikachu Moved Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
@@ -1181,7 +1181,7 @@
 #define FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08                       0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
 #define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F
-#define FLAG_ITEM_TIME_RIFT_LINKING_CORD                            0x470
+#define FLAG_ITEM_DEEP_PETALBURG_WOODS_LINKING_CORD                            0x470
 #define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
 #define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
@@ -1568,8 +1568,8 @@
 #define FLAG_UNUSED_0x920                           (DAILY_FLAGS_START + 0x0)  // Unused Flag
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
-#define FLAG_ROTOM_PC0_USED                         (DAILY_FLAGS_START + 0x3)  // Used Rotom PC 0 Flag
-#define FLAG_ROTOM_PC1_USED                         (DAILY_FLAGS_START + 0x4)  // Used Rotom PC 1 Flag
+#define FLAG_ROTOM_PC_USED                          (DAILY_FLAGS_START + 0x3)  // Used Rotom PC Flag
+#define FLAG_UNUSED_0x924                           (DAILY_FLAGS_START + 0x4)  // Unused Flag
 #define FLAG_UNUSED_0x925                           (DAILY_FLAGS_START + 0x5)  // Unused Flag
 #define FLAG_UNUSED_0x926                           (DAILY_FLAGS_START + 0x6)  // Unused Flag
 #define FLAG_UNUSED_0x927                           (DAILY_FLAGS_START + 0x7)  // Unused Flag

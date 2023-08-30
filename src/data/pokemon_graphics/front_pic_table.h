@@ -1343,6 +1343,7 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
 const struct CompressedSpriteSheet gMonFrontPicTableFemale[] =
 {
     SPECIES_SPRITE(EEVEE, gMonFrontPic_EeveeF),
+    SPECIES_SPRITE(EEVEE_PARTNER, gMonFrontPic_EeveeF),
 #if P_GEN_4_POKEMON == TRUE
     SPECIES_SPRITE(STARLY, gMonFrontPic_StarlyF),
     SPECIES_SPRITE(STARAVIA, gMonFrontPic_StaraviaF),

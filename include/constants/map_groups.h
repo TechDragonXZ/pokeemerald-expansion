@@ -463,6 +463,7 @@
 #define MAP_BATTLE_PYRAMID_SQUARE15  (58 | (25 << 8))
 #define MAP_BATTLE_PYRAMID_SQUARE16  (59 | (25 << 8))
 #define MAP_UNION_ROOM               (60 | (25 << 8))
+#define MAP_BOND_LAB_BASEMENT        (61 | (25 << 8))
 
 // gMapGroup_SpecialArea
 #define MAP_SAFARI_ZONE_NORTHWEST                           (0 | (26 << 8))
@@ -555,8 +556,9 @@
 #define MAP_NAVEL_ROCK_BOTTOM                               (87 | (26 << 8))
 #define MAP_TRAINER_HILL_ELEVATOR                           (88 | (26 << 8))
 #define MAP_METEOR_FALLS_PEAK                               (89 | (26 << 8))
-#define MAP_TIME_RIFT                                       (90 | (26 << 8))
-#define MAP_MYSTERIOUS_HOUSE                                (91 | (26 << 8))
+#define MAP_DEEP_PETALBURG_WOODS                            (90 | (26 << 8))
+#define MAP_BOND_LAB                                        (91 | (26 << 8))
+#define MAP_STRANGE_SPACE                                   (92 | (26 << 8))
 
 // gMapGroup_IndoorRoute104Prototype
 #define MAP_ROUTE104_PROTOTYPE                          (0 | (27 << 8))

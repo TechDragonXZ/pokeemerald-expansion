@@ -728,6 +728,9 @@ extern const u8 gText_BattlePyramid[];
 extern const u8 gText_RankingHall[];
 extern const u8 gText_ExchangeService[];
 
+extern const u8 gText_Pikachu[];
+extern const u8 gText_Eevee[];
+
 // Battle Frontier Move Tutors
 extern const u8 gText_Softboiled16BP[];
 extern const u8 gText_SeismicToss24BP[];

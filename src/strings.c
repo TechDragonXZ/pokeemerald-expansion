@@ -867,6 +867,10 @@ const u8 gText_MtPyre[] = _("MT. PYRE");
 const u8 gText_SkyPillar[] = _("SKY PILLAR");
 const u8 gText_DontRemember[] = _("Don't remember");
 const u8 gText_Exit[] = _("EXIT");
+
+const u8 gText_Pikachu[] = _("PIKACHU");
+const u8 gText_Eevee[] = _("EEVEE");
+
 const u8 gText_ExitFromBox[] = _("Exit from the BOX?");
 const u8 gText_WhatDoYouWantToDo[] = _("What do you want to do?");
 const u8 gText_PleasePickATheme[] = _("Please pick a theme.");
