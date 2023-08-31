@@ -21,6 +21,7 @@ enum {
     MON_DATA_OT_NAME,
     MON_DATA_MARKINGS,
     MON_DATA_CHECKSUM,
+    MON_DATA_YEAR_MET,
     MON_DATA_ENCRYPT_SEPARATOR,
     MON_DATA_SPECIES,
     MON_DATA_HELD_ITEM,
@@ -100,6 +101,8 @@ enum {
     MON_DATA_SPEED2,
     MON_DATA_SPATK2,
     MON_DATA_SPDEF2,
+    MON_DATA_DAY_MET,
+    MON_DATA_MONTH_MET,
 };
 
 struct PokemonSubstruct0
@@ -214,7 +217,9 @@ struct BoxPokemon
     u8 otName[PLAYER_NAME_LENGTH];
     u8 markings;
     u16 checksum;
-    u16 unknown;
+    u16 dayMet:5;
+    u16 monthMet:4;
+    u16 yearMet:7;
 
     union
     {
@@ -458,6 +463,7 @@ u8 GetMonGender(struct Pokemon *mon);
 u8 GetBoxMonGender(struct BoxPokemon *boxMon);
 u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality);
 u32 GetUnownSpeciesId(u32 personality);
+u32 GetArbokVariant(u8 metGame);
 void SetMultiuseSpriteTemplateToPokemon(u16 speciesTag, u8 battlerPosition);
 void SetMultiuseSpriteTemplateToTrainerBack(u16 trainerSpriteId, u8 battlerPosition);
 void SetMultiuseSpriteTemplateToTrainerFront(u16 trainerPicId, u8 battlerPosition);
@@ -528,8 +534,10 @@ void PartySpreadPokerus(struct Pokemon *party);
 bool8 TryIncrementMonLevel(struct Pokemon *mon);
 u8 CanLearnTeachableMove(u16 species, u16 move);
 u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves);
+u8 GetMoveTutorMoves(struct Pokemon *mon, u16 *moves);
 u8 GetLevelUpMovesBySpecies(u16 species, u16 *moves);
 u8 GetNumberOfRelearnableMoves(struct Pokemon *mon);
+bool8 CanLearnTutorMoves(struct Pokemon *mon);
 u16 SpeciesToPokedexNum(u16 species);
 bool32 IsSpeciesInHoennDex(u16 species);
 void ClearBattleMonForms(void);
@@ -572,6 +580,7 @@ u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum);
 u16 GetFormSpeciesId(u16 speciesId, u8 formId);
 u8 GetFormIdFromFormSpeciesId(u16 formSpeciesId);
 u16 GetFormChangeTargetSpecies(struct Pokemon *mon, u16 method, u32 arg);
+void CreateShinyMonWithNature(struct Pokemon* mon, u16 species, u8 level, u8 nature);
 u16 GetFormChangeTargetSpeciesBoxMon(struct BoxPokemon *boxMon, u16 method, u32 arg);
 bool32 DoesSpeciesHaveFormChangeMethod(u16 species, u16 method);
 u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove);

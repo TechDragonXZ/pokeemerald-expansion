@@ -42,7 +42,32 @@ EverGrandeCity_GlaciasRoom_EventScript_Glacia::
 	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_GlaciasRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	switch VAR_HALL_OF_FAMES
+	case 0, EverGrandeCity_GlaciasRoom_EventScript_Glacia1
+	case 1, EverGrandeCity_GlaciasRoom_EventScript_Glacia2
+	case 2, EverGrandeCity_GlaciasRoom_EventScript_Glacia3
+	case 3, EverGrandeCity_GlaciasRoom_EventScript_Glacia4
 	trainerbattle_no_intro TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat
+	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_GlaciasRoom_EventScript_Glacia1::
+	trainerbattle_no_intro TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat
+	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_GlaciasRoom_EventScript_Glacia2::
+	trainerbattle_no_intro TRAINER_GLACIA_2, EverGrandeCity_GlaciasRoom_Text_Defeat
+	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_GlaciasRoom_EventScript_Glacia3::
+	trainerbattle_no_intro TRAINER_GLACIA_3, EverGrandeCity_GlaciasRoom_Text_Defeat
+	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_GlaciasRoom_EventScript_Glacia4::
+	trainerbattle_no_intro TRAINER_GLACIA_4, EverGrandeCity_GlaciasRoom_Text_Defeat
 	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
 	end
 
@@ -59,18 +84,18 @@ EverGrandeCity_GlaciasRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_GlaciasRoom_Text_IntroSpeech:
-	.string "Welcome, my name is GLACIA\n"
-	.string "of the ELITE FOUR.\p"
-	.string "I've traveled from afar to HOENN\n"
+	.string "Welcome, my name is Glacia\n"
+	.string "of the Elite Four.\p"
+	.string "I've traveled from afar to Hoenn\n"
 	.string "so that I may hone my ice skills.\p"
 	.string "But all I have seen are challenges by\n"
-	.string "weak TRAINERS and their POKéMON.\p"
+	.string "weak Trainers and their Pokémon.\p"
 	.string "What about you?\p"
 	.string "It would please me to no end if I could\n"
 	.string "go all out against you!$"
 
 EverGrandeCity_GlaciasRoom_Text_Defeat:
-	.string "You and your POKéMON…\n"
+	.string "You and your Pokémon…\n"
 	.string "How hot your spirits burn!\p"
 	.string "The all-consuming heat overwhelms.\p"
 	.string "It's no surprise that my icy skills\n"
@@ -79,5 +104,5 @@ EverGrandeCity_GlaciasRoom_Text_Defeat:
 EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech:
 	.string "Advance to the next room.\p"
 	.string "And there, confirm the truly fearsome\n"
-	.string "side of the POKéMON LEAGUE.$"
+	.string "side of the Pokémon League.$"
 

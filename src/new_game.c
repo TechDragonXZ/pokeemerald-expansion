@@ -45,6 +45,7 @@
 #include "mystery_gift.h"
 #include "union_room_chat.h"
 #include "constants/items.h"
+#include "constants/map_groups.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 
@@ -90,7 +91,7 @@ static void InitPlayerTrainerId(void)
 // L=A isnt set here for some reason.
 static void SetDefaultOptions(void)
 {
-    gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_MID;
+    gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
     gSaveBlock2Ptr->optionsWindowFrameType = 0;
     gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_MONO;
     gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SHIFT;
@@ -118,10 +119,10 @@ void ClearAllContestWinnerPics(void)
 
 static void ClearFrontierRecord(void)
 {
-    CpuFill32(0, &gSaveBlock2Ptr->frontier, sizeof(gSaveBlock2Ptr->frontier));
+    CpuFill32(0, &gSaveBlock1Ptr->frontier, sizeof(gSaveBlock1Ptr->frontier));
 
-    gSaveBlock2Ptr->frontier.opponentNames[0][0] = EOS;
-    gSaveBlock2Ptr->frontier.opponentNames[1][0] = EOS;
+    gSaveBlock1Ptr->frontier.opponentNames[0][0] = EOS;
+    gSaveBlock1Ptr->frontier.opponentNames[1][0] = EOS;
 }
 
 static void WarpToTruck(void)
@@ -152,6 +153,8 @@ void NewGameInitData(void)
         RtcReset();
 
     gDifferentSaveFile = TRUE;
+    gSaveBlock2Ptr->saveVersion = SAVE_VERSION;
+    gSaveBlock2Ptr->uniqueID = 0xFFFFFFFF;
     gSaveBlock2Ptr->encryptionKey = 0;
     ZeroPlayerPartyMons();
     ZeroEnemyPartyMons();
@@ -182,7 +185,7 @@ void NewGameInitData(void)
     ResetPokemonStorageSystem();
     ClearRoamerData();
     ClearRoamerLocationData();
-    gSaveBlock1Ptr->registeredItem = ITEM_NONE;
+    gSaveBlock2Ptr->registeredItem = ITEM_NONE;
     ClearBag();
     NewGameInitPCItems();
     ClearPokeblocks();
@@ -204,6 +207,7 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
+    gSaveBlock1Ptr->dexNavChain = 0;
 }
 
 static void ResetMiniGamesRecords(void)

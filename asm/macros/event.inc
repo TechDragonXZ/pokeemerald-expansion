@@ -1347,7 +1347,7 @@
 	@ The specified id can be used to refer to the sprite again later with turnvobject.
 	.macro createvobject graphicsId:req, id:req, x:req, y:req, elevation=3, direction=DIR_SOUTH
 	.byte 0xaa
-	.byte \graphicsId
+	.2byte \graphicsId
 	.byte \id
 	.2byte \x
 	.2byte \y
@@ -1735,6 +1735,130 @@
 	.2byte \quantity
 	.endm
 
+  @ Like callnative, but function expects a ctx
+  .macro callfunc func:req
+  .byte 0xe3
+  .4byte \func
+  .endm
+
+	.macro givecustommon species:req, level:req, item, ball, nature, abilityNum, hpEv, atkEv, defEv, speedEv, spAtkEv, spDefEv, hpIv, atkIv, defIv, speedIv, spAtkIv, spDefIv, move1, move2, move3, move4, isShiny
+    .byte 0xe4
+    .2byte \species
+    .byte \level
+    .ifb \item
+        .2byte ITEM_NONE
+    .else
+        .2byte \item
+    .endif
+    .ifb \ball
+        .byte 0
+    .else
+        .byte \ball
+    .endif
+    .ifb \nature
+        .byte NUM_NATURES
+    .else
+        .byte \nature
+    .endif
+    .ifb \abilityNum
+        .byte 3
+    .else
+        .byte \abilityNum
+    .endif
+    @evs
+    .ifb \hpEv
+        .byte 0
+    .else
+        .byte \hpEv
+    .endif
+    .ifb \atkEv
+        .byte 0
+    .else
+        .byte \atkEv
+    .endif
+    .ifb \defEv
+        .byte 0
+    .else
+        .byte \defEv
+    .endif
+    .ifb \speedEv
+        .byte 0
+    .else
+        .byte \speedEv
+    .endif
+    .ifb \spAtkEv
+        .byte 0
+    .else
+        .byte \spAtkEv
+    .endif
+    .ifb \spDefEv
+        .byte 0
+    .else
+        .byte \spDefEv
+    .endif
+    @ivs
+    .ifb \hpIv
+        .byte 32
+    .else
+        .byte \hpIv
+    .endif
+    .ifb \atkIv
+        .byte 32
+    .else
+        .byte \atkIv
+    .endif
+    .ifb \defIv
+        .byte 32
+    .else
+        .byte \defIv
+    .endif
+    .ifb \speedIv
+        .byte 32
+    .else
+        .byte \speedIv
+    .endif
+    .ifb \spAtkIv
+        .byte 32
+    .else
+        .byte \spAtkIv
+    .endif
+    .ifb \spDefIv
+        .byte 32
+    .else
+        .byte \spDefIv
+    .endif
+    .ifb \move1
+        .2byte 0
+    .else
+        .2byte \move1
+    .endif
+    .ifb \move2
+        .2byte 0
+    .else
+        .2byte \move2
+    .endif
+    .ifb \move3
+        .2byte 0
+    .else
+        .2byte \move3
+    .endif
+    .ifb \move4
+        .2byte 0
+    .else
+        .2byte \move4
+    .endif
+    .ifb \isShiny
+        .byte 0
+    .else
+        .byte \isShiny
+    .endif
+    .endm
+
+	@ Checks if any of the party can learn a TM (used for ow HM moves)
+	.macro canlearntm tm:req
+	.byte 0xe5
+	.2byte \tm
+	.endm
 
 @ Supplementary
 

@@ -61,7 +61,7 @@ Route110_TrickHouseEnd_EventScript_CompletedPuzzle1::
 	msgbox Route110_TrickHouseEnd_Text_AllNightToPlantTrees, MSGBOX_DEFAULT
 	msgbox Route110_TrickHouseEnd_Text_YouHaveEarnedThisReward, MSGBOX_DEFAULT
 	setvar VAR_TRICK_HOUSE_PRIZE_PICKUP, 0
-	giveitem ITEM_RARE_CANDY
+	giveitem ITEM_TM12
 	call_if_eq VAR_RESULT, FALSE, Route110_TrickHouseEnd_EventScript_BagFull
 	msgbox Route110_TrickHouseEnd_Text_MakeNewTricksToStumpYou, MSGBOX_DEFAULT
 	closemessage
@@ -109,7 +109,7 @@ Route110_TrickHouseEnd_EventScript_CompletedPuzzle5::
 	msgbox Route110_TrickHouseEnd_Text_AllNightToMakeMechadolls, MSGBOX_DEFAULT
 	msgbox Route110_TrickHouseEnd_Text_YouHaveEarnedThisReward, MSGBOX_DEFAULT
 	setvar VAR_TRICK_HOUSE_PRIZE_PICKUP, 0
-	giveitem ITEM_TM12
+	giveitem ITEM_TM92
 	call_if_eq VAR_RESULT, FALSE, Route110_TrickHouseEnd_EventScript_BagFull
 	msgbox Route110_TrickHouseEnd_Text_MakeNewTricksToStumpYou, MSGBOX_DEFAULT
 	closemessage
@@ -278,7 +278,7 @@ Route110_TrickHouseEnd_Text_AllNightToShoveBoulders:
 	.string "one, two, three places!$"
 
 Route110_TrickHouseEnd_Text_AllNightToMakeMechadolls:
-	.string "It took me all night to make MECHADOLLS\n"
+	.string "It took me all night to make Mechadolls\n"
 	.string "and another to think up the quiz…\p"
 	.string "You're almost my equal in greatness by\n"
 	.string "one, two places!$"
@@ -317,7 +317,7 @@ Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent:
 	.string "that is myself, I demand that you take\l"
 	.string "this keepsake!\p"
 	.string "Actually there are two--\n"
-	.string "a RED TENT and a BLUE TENT.\l"
+	.string "a Red Tent and a Blue Tent.\l"
 	.string "Which do you prefer?$"
 
 Route110_TrickHouseEnd_Text_NoRoomInPC:

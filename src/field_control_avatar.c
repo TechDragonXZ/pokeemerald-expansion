@@ -3,6 +3,7 @@
 #include "bike.h"
 #include "coord_event_weather.h"
 #include "daycare.h"
+#include "dexnav.h"
 #include "debug.h"
 #include "faraway_island.h"
 #include "event_data.h"
@@ -69,6 +70,7 @@ static bool8 TryStartMiscWalkingScripts(u16);
 static bool8 TryStartStepCountScript(u16);
 static void UpdateFriendshipStepCounter(void);
 static bool8 UpdatePoisonStepCounter(void);
+static bool8 EnableAutoRun(void);
 
 void FieldClearPlayerInput(struct FieldInput *input)
 {
@@ -80,7 +82,8 @@ void FieldClearPlayerInput(struct FieldInput *input)
     input->heldDirection2 = FALSE;
     input->tookStep = FALSE;
     input->pressedBButton = FALSE;
-    input->input_field_1_0 = FALSE;
+    input->pressedLButton = FALSE;
+    input->pressedRButton = FALSE;
     input->input_field_1_1 = FALSE;
     input->input_field_1_2 = FALSE;
     input->input_field_1_3 = FALSE;
@@ -105,6 +108,8 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 input->pressedAButton = TRUE;
             if (newKeys & B_BUTTON)
                 input->pressedBButton = TRUE;
+            if (newKeys & R_BUTTON && !FlagGet(FLAG_SYS_DEXNAV_SEARCH))
+                input->pressedRButton = TRUE;
         }
 
         if (heldKeys & (DPAD_UP | DPAD_DOWN | DPAD_LEFT | DPAD_RIGHT))
@@ -131,6 +136,8 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
     else if (heldKeys & DPAD_RIGHT)
         input->dpadDirection = DIR_EAST;
 
+    if (newKeys & L_BUTTON)
+        input->pressedLButton = TRUE;
 #if DEBUG_OVERWORLD_MENU == TRUE && DEBUG_OVERWORLD_IN_MENU == FALSE
     if ((heldKeys & DEBUG_OVERWORLD_HELD_KEYS) && input->DEBUG_OVERWORLD_TRIGGER_EVENT)
     {
@@ -194,7 +201,17 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         ShowStartMenu();
         return TRUE;
     }
+    
+    if (input->tookStep && TryFindHiddenPokemon())
+        return TRUE;
+    
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
+        return TRUE;
+    
+    if (input->pressedRButton && TryStartDexnavSearch())
+        return TRUE;
+
+    if (input->pressedLButton && EnableAutoRun())
         return TRUE;
 
 #if DEBUG_OVERWORLD_MENU == TRUE && DEBUG_OVERWORLD_IN_MENU == FALSE
@@ -1026,4 +1043,26 @@ int SetCableClubWarp(void)
     MapGridGetMetatileBehaviorAt(position.x, position.y);  //unnecessary
     SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
     return 0;
+}
+
+extern const u8 EventScript_DisableAutoRun[];
+extern const u8 EventScript_EnableAutoRun[];
+static bool8 EnableAutoRun(void)
+{
+    if (!FlagGet(FLAG_SYS_B_DASH))
+        return FALSE;   //auto run unusable until you get running shoes
+
+    PlaySE(SE_SELECT);
+    if (gSaveBlock2Ptr->autoRun)
+    {
+        gSaveBlock2Ptr->autoRun = FALSE;
+        ScriptContext_SetupScript(EventScript_DisableAutoRun);
+    }
+    else
+    {
+        gSaveBlock2Ptr->autoRun = TRUE;
+        ScriptContext_SetupScript(EventScript_EnableAutoRun);
+    }
+
+    return TRUE;
 }

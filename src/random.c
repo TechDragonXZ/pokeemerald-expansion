@@ -32,6 +32,7 @@ u16 Random2(void)
     return gRng2Value >> 16;
 }
 
+<<<<<<< HEAD
 __attribute__((weak, alias("RandomUniformDefault")))
 u32 RandomUniform(enum RandomTag tag, u32 lo, u32 hi);
 
@@ -76,3 +77,15 @@ const void *RandomElementArrayDefault(enum RandomTag tag, const void *array, siz
 {
     return (const u8 *)array + size * RandomUniformDefault(tag, 0, count - 1);
 }
+=======
+// NEW
+u16 RandRange(u16 min, u16 max)
+{    
+    if (min == max)
+        return min;
+    
+    max++;   // make inclusive
+    return (Random() % (max - min)) + min;
+}
+
+>>>>>>> art/GlimmeringEmerald_dev

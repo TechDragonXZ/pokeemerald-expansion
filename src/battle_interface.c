@@ -2148,7 +2148,7 @@ static void TryAddPokeballIconToHealthbox(u8 healthboxSpriteId, bool8 noStatus)
     battlerId = gSprites[healthboxSpriteId].hMain_Battler;
     if (GetBattlerSide(battlerId) == B_SIDE_PLAYER)
         return;
-    if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(GetMonData(&gEnemyParty[gBattlerPartyIndexes[battlerId]], MON_DATA_SPECIES)), FLAG_GET_CAUGHT))
+    if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(GET_BASE_SPECIES_ID(GetMonData(&gEnemyParty[gBattlerPartyIndexes[battlerId]], MON_DATA_SPECIES))), FLAG_GET_CAUGHT))
         return;
 
     healthBarSpriteId = gSprites[healthboxSpriteId].hMain_HealthBarSpriteId;
@@ -3226,7 +3226,7 @@ static const struct OamData sOamData_LastUsedBall =
 static const struct SpriteTemplate sSpriteTemplate_LastUsedBallWindow =
 {
     .tileTag = LAST_BALL_WINDOW_TAG,
-    .paletteTag = ABILITY_POP_UP_TAG,
+    .paletteTag = TAG_HEALTHBOX_PAL,
     .oam = &sOamData_LastUsedBall,
     .anims = gDummySpriteAnimTable,
     .images = NULL,

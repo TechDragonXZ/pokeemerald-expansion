@@ -714,7 +714,7 @@ static const u8 sSnoreDescription[] = _(
 
 static const u8 sCurseDescription[] = _(
     "A move that functions\n"
-    "differently for GHOSTS.");
+    "differently for Ghosts.");
 
 static const u8 sFlailDescription[] = _(
     "Inflicts more damage when\n"
@@ -4025,6 +4025,15 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_GLACIAL_LANCE - 1] = sGlacialLanceDescription,
     [MOVE_ASTRAL_BARRAGE - 1] = sAstralBarrageDescription,
     [MOVE_EERIE_SPELL - 1] = sEerieSpellDescription,
+    [MOVE_HIDDEN_POWER_GROUND - 1] = sHiddenPowerDescription,
+    [MOVE_HIDDEN_POWER_GRASS - 1] = sHiddenPowerDescription,
+    [MOVE_HIDDEN_POWER_FIGHTING - 1] = sHiddenPowerDescription,
+    [MOVE_HIDDEN_POWER_FIRE - 1] = sHiddenPowerDescription,
+    [MOVE_HIDDEN_POWER_ROCK - 1] = sHiddenPowerDescription,
+    [MOVE_HIDDEN_POWER_ELECTRIC - 1] = sHiddenPowerDescription,
+    [MOVE_HIDDEN_POWER_ICE - 1] = sHiddenPowerDescription,
+    [MOVE_HIDDEN_POWER_WATER - 1] = sHiddenPowerDescription,
+    [MOVE_HIDDEN_POWER_FLYING - 1] = sHiddenPowerDescription,
     [MOVE_DIRE_CLAW - 1] = sDireClawDescription,
     [MOVE_PSYSHIELD_BASH - 1] = sPsyshieldBashDescription,
     [MOVE_POWER_SHIFT - 1] = sPowerShiftDescription,

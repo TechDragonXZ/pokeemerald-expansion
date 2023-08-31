@@ -112,6 +112,7 @@ enum { // Flags
     DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF,
     DEBUG_FLAG_MENU_ITEM_BAG_USE_ONOFF,
     DEBUG_FLAG_MENU_ITEM_CATCHING_ONOFF,
+    DEBUG_FLAG_MENU_ITEM_CHAMPION_ONOFF,
 };
 enum { // Vars
     DEBUG_VARS_MENU_ITEM_VARS,
@@ -243,6 +244,7 @@ static void DebugAction_Flags_EncounterOnOff(u8 taskId);
 static void DebugAction_Flags_TrainerSeeOnOff(u8 taskId);
 static void DebugAction_Flags_BagUseOnOff(u8 taskId);
 static void DebugAction_Flags_CatchingOnOff(u8 taskId);
+static void DebugAction_Flags_ChampionOnOff(u8 taskId);
 
 static void DebugAction_Vars_Vars(u8 taskId);
 static void DebugAction_Vars_Select(u8 taskId);
@@ -349,6 +351,7 @@ static const u8 sDebugText_Flags_SwitchEncounter[] =    _("Encounter ON/OFF");
 static const u8 sDebugText_Flags_SwitchTrainerSee[] =   _("TrainerSee ON/OFF");
 static const u8 sDebugText_Flags_SwitchBagUse[] =       _("BagUse ON/OFF");
 static const u8 sDebugText_Flags_SwitchCatching[] =     _("Catching ON/OFF");
+static const u8 sDebugText_Flags_SwitchChampion[] =     _("Champion ON/OFF");
 static const u8 sDebugText_Flags_Flag[] =               _("Flag: {STR_VAR_1}   \n{STR_VAR_2}                   \n{STR_VAR_3}");
 static const u8 sDebugText_Flags_FlagHex[] =            _("{STR_VAR_1}           \n0x{STR_VAR_2}             ");
 static const u8 sDebugText_Flags_FlagSet[] =            _("TRUE");
@@ -484,6 +487,7 @@ static const struct ListMenuItem sDebugMenu_Items_Flags[] =
     [DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF] = {sDebugText_Flags_SwitchTrainerSee,   DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF},
     [DEBUG_FLAG_MENU_ITEM_BAG_USE_ONOFF]     = {sDebugText_Flags_SwitchBagUse,       DEBUG_FLAG_MENU_ITEM_BAG_USE_ONOFF},
     [DEBUG_FLAG_MENU_ITEM_CATCHING_ONOFF]    = {sDebugText_Flags_SwitchCatching,     DEBUG_FLAG_MENU_ITEM_CATCHING_ONOFF},
+    [DEBUG_FLAG_MENU_ITEM_CHAMPION_ONOFF]    = {sDebugText_Flags_SwitchChampion,     DEBUG_FLAG_MENU_ITEM_CHAMPION_ONOFF},
 };
 static const struct ListMenuItem sDebugMenu_Items_Vars[] =
 {
@@ -564,6 +568,7 @@ static void (*const sDebugMenu_Actions_Flags[])(u8) =
     [DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF] = DebugAction_Flags_TrainerSeeOnOff,
     [DEBUG_FLAG_MENU_ITEM_BAG_USE_ONOFF]     = DebugAction_Flags_BagUseOnOff,
     [DEBUG_FLAG_MENU_ITEM_CATCHING_ONOFF]    = DebugAction_Flags_CatchingOnOff,
+    [DEBUG_FLAG_MENU_ITEM_CHAMPION_ONOFF]    = DebugAction_Flags_ChampionOnOff,
 };
 static void (*const sDebugMenu_Actions_Vars[])(u8) =
 {
@@ -1194,6 +1199,16 @@ void CheckPokemonStorageSize(void)
 
 static void DebugAction_Util_CheckSaveBlock(u8 taskId)
 {
+<<<<<<< HEAD
+=======
+    static const u8 sDebugText_SaveBlockSize[] =  _("SaveBlock1 size: {STR_VAR_1}/16336 bytes.\nSaveBlock2 size: {STR_VAR_2}/4084 bytes.\p{PKMN}Storage size: {STR_VAR_3}/36756 bytes.");
+
+    ConvertIntToDecimalStringN(gStringVar1, sizeof(struct SaveBlock1), STR_CONV_MODE_LEFT_ALIGN, 6);
+    ConvertIntToDecimalStringN(gStringVar2, sizeof(struct SaveBlock2), STR_CONV_MODE_LEFT_ALIGN, 6);
+    ConvertIntToDecimalStringN(gStringVar3, sizeof(struct PokemonStorage), STR_CONV_MODE_LEFT_ALIGN, 6);
+    StringExpandPlaceholders(gStringVar4, sDebugText_SaveBlockSize);
+
+>>>>>>> art/GlimmeringEmerald_dev
     Debug_DestroyMenu_Full(taskId);
     LockPlayerFieldControls();
     ScriptContext_SetupScript(Debug_CheckSaveBlock);
@@ -1655,6 +1670,15 @@ static void DebugAction_Flags_CatchingOnOff(u8 taskId)
         PlaySE(SE_PC_LOGIN);
     FlagToggle(B_FLAG_NO_CATCHING);
 #endif
+}
+static void DebugAction_Flags_ChampionOnOff(u8 taskId)
+{
+    // Sound effect
+    if (FlagGet(FLAG_IS_CHAMPION))
+        PlaySE(SE_PC_OFF);
+    else
+        PlaySE(SE_PC_LOGIN);
+    FlagToggle(FLAG_IS_CHAMPION);
 }
 
 // *******************************
@@ -2788,7 +2812,7 @@ static void DebugAction_Give_MaxCoins(u8 taskId)
 
 static void DebugAction_Give_MaxBattlePoints(u8 taskId)
 {
-    gSaveBlock2Ptr->frontier.battlePoints = MAX_BATTLE_FRONTIER_POINTS;
+    gSaveBlock1Ptr->frontier.battlePoints = MAX_BATTLE_FRONTIER_POINTS;
 }
 
 static void DebugAction_Give_DayCareEgg(u8 taskId)

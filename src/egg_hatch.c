@@ -372,7 +372,7 @@ static void AddHatchedMonToParty(u8 id)
     GetSpeciesName(name, species);
     SetMonData(mon, MON_DATA_NICKNAME, name);
 
-    species = SpeciesToNationalPokedexNum(species);
+    species = SpeciesToNationalPokedexNum(GET_BASE_SPECIES_ID(species));
     GetSetPokedexFlag(species, FLAG_SET_SEEN);
     GetSetPokedexFlag(species, FLAG_SET_CAUGHT);
 
@@ -443,7 +443,7 @@ static u8 EggHatchCreateMonSprite(u8 useAlt, u8 state, u8 partyId, u16 *speciesL
             u32 pid = GetMonData(mon, MON_DATA_PERSONALITY);
             HandleLoadSpecialPokePic(TRUE,
                                      gMonSpritesGfxPtr->sprites.ptr[(useAlt * 2) + B_POSITION_OPPONENT_LEFT],
-                                     species, pid);
+                                     species, pid, VERSION_EMERALD);
             LoadCompressedSpritePalette(GetMonSpritePalStruct(mon));
             *speciesLoc = species;
         }

@@ -16,6 +16,7 @@
 #include "field_screen_effect.h"
 #include "field_specials.h"
 #include "field_weather.h"
+#include "global_trade_station.h"
 #include "graphics.h"
 #include "international_string_util.h"
 #include "item_icon.h"
@@ -101,7 +102,7 @@ void SetPlayerGotFirstFans(void);
 u16 GetNumFansOfPlayerInTrainerFanClub(void);
 
 static void RecordCyclingRoadResults(u32, u8);
-static void LoadLinkPartnerObjectEventSpritePalette(u8, u8, u8);
+static void LoadLinkPartnerObjectEventSpritePalette(u16, u8, u8);
 static void Task_PetalburgGymSlideOpenRoomDoors(u8);
 static void PetalburgGymSetDoorMetatiles(u8, u16);
 static void Task_PCTurnOnEffect(u8);
@@ -150,6 +151,13 @@ void Special_ViewWallClock(void)
 {
     gMain.savedCallback = CB2_ReturnToField;
     SetMainCallback2(CB2_ViewWallClock);
+    LockPlayerFieldControls();
+}
+
+void Special_InitGTS(void)
+{
+    gMain.savedCallback = CB2_ReturnToField;
+    SetMainCallback2(CB2_InitGlobalTradeStation);
     LockPlayerFieldControls();
 }
 
@@ -513,7 +521,7 @@ void SpawnLinkPartnerObjectEvent(void)
     };
     u8 myLinkPlayerNumber;
     u8 playerFacingDirection;
-    u8 linkSpriteId;
+    u16 linkSpriteId;
     u8 i;
 
     myLinkPlayerNumber = GetMultiplayerId();
@@ -574,7 +582,7 @@ void SpawnLinkPartnerObjectEvent(void)
     }
 }
 
-static void LoadLinkPartnerObjectEventSpritePalette(u8 graphicsId, u8 localEventId, u8 paletteNum)
+static void LoadLinkPartnerObjectEventSpritePalette(u16 graphicsId, u8 localEventId, u8 paletteNum)
 {
     u8 adjustedPaletteNum;
     // Note: This temp var is necessary; paletteNum += 6 doesn't match.
@@ -2154,53 +2162,53 @@ void ShowFrontierManiacMessage(void)
     case FRONTIER_MANIAC_TOWER_DOUBLES:
     case FRONTIER_MANIAC_TOWER_MULTIS:
     case FRONTIER_MANIAC_TOWER_LINK:
-        if (gSaveBlock2Ptr->frontier.towerWinStreaks[facility][FRONTIER_LVL_50]
-            >= gSaveBlock2Ptr->frontier.towerWinStreaks[facility][FRONTIER_LVL_OPEN])
-            winStreak = gSaveBlock2Ptr->frontier.towerWinStreaks[facility][FRONTIER_LVL_50];
+        if (gSaveBlock1Ptr->frontier.towerWinStreaks[facility][FRONTIER_LVL_50]
+            >= gSaveBlock1Ptr->frontier.towerWinStreaks[facility][FRONTIER_LVL_OPEN])
+            winStreak = gSaveBlock1Ptr->frontier.towerWinStreaks[facility][FRONTIER_LVL_50];
         else
-            winStreak = gSaveBlock2Ptr->frontier.towerWinStreaks[facility][FRONTIER_LVL_OPEN];
+            winStreak = gSaveBlock1Ptr->frontier.towerWinStreaks[facility][FRONTIER_LVL_OPEN];
         break;
     case FRONTIER_MANIAC_DOME:
-        if (gSaveBlock2Ptr->frontier.domeWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50]
-            >= gSaveBlock2Ptr->frontier.domeWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN])
-            winStreak = gSaveBlock2Ptr->frontier.domeWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50];
+        if (gSaveBlock1Ptr->frontier.domeWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50]
+            >= gSaveBlock1Ptr->frontier.domeWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN])
+            winStreak = gSaveBlock1Ptr->frontier.domeWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50];
         else
-            winStreak = gSaveBlock2Ptr->frontier.domeWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN];
+            winStreak = gSaveBlock1Ptr->frontier.domeWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN];
         break;
     case FRONTIER_MANIAC_FACTORY:
-        if (gSaveBlock2Ptr->frontier.factoryWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50]
-            >= gSaveBlock2Ptr->frontier.factoryWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN])
-            winStreak = gSaveBlock2Ptr->frontier.factoryWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50];
+        if (gSaveBlock1Ptr->frontier.factoryWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50]
+            >= gSaveBlock1Ptr->frontier.factoryWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN])
+            winStreak = gSaveBlock1Ptr->frontier.factoryWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50];
         else
-            winStreak = gSaveBlock2Ptr->frontier.factoryWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN];
+            winStreak = gSaveBlock1Ptr->frontier.factoryWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN];
         break;
     case FRONTIER_MANIAC_PALACE:
-        if (gSaveBlock2Ptr->frontier.palaceWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50]
-            >= gSaveBlock2Ptr->frontier.palaceWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN])
-            winStreak = gSaveBlock2Ptr->frontier.palaceWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50];
+        if (gSaveBlock1Ptr->frontier.palaceWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50]
+            >= gSaveBlock1Ptr->frontier.palaceWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN])
+            winStreak = gSaveBlock1Ptr->frontier.palaceWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_50];
         else
-            winStreak = gSaveBlock2Ptr->frontier.palaceWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN];
+            winStreak = gSaveBlock1Ptr->frontier.palaceWinStreaks[FRONTIER_MODE_SINGLES][FRONTIER_LVL_OPEN];
         break;
     case FRONTIER_MANIAC_ARENA:
-        if (gSaveBlock2Ptr->frontier.arenaWinStreaks[FRONTIER_LVL_50]
-            >= gSaveBlock2Ptr->frontier.arenaWinStreaks[FRONTIER_LVL_OPEN])
-            winStreak = gSaveBlock2Ptr->frontier.arenaWinStreaks[FRONTIER_LVL_50];
+        if (gSaveBlock1Ptr->frontier.arenaWinStreaks[FRONTIER_LVL_50]
+            >= gSaveBlock1Ptr->frontier.arenaWinStreaks[FRONTIER_LVL_OPEN])
+            winStreak = gSaveBlock1Ptr->frontier.arenaWinStreaks[FRONTIER_LVL_50];
         else
-            winStreak = gSaveBlock2Ptr->frontier.arenaWinStreaks[FRONTIER_LVL_OPEN];
+            winStreak = gSaveBlock1Ptr->frontier.arenaWinStreaks[FRONTIER_LVL_OPEN];
         break;
     case FRONTIER_MANIAC_PIKE:
-        if (gSaveBlock2Ptr->frontier.pikeWinStreaks[FRONTIER_LVL_50]
-            >= gSaveBlock2Ptr->frontier.pikeWinStreaks[FRONTIER_LVL_OPEN])
-            winStreak = gSaveBlock2Ptr->frontier.pikeWinStreaks[FRONTIER_LVL_50];
+        if (gSaveBlock1Ptr->frontier.pikeWinStreaks[FRONTIER_LVL_50]
+            >= gSaveBlock1Ptr->frontier.pikeWinStreaks[FRONTIER_LVL_OPEN])
+            winStreak = gSaveBlock1Ptr->frontier.pikeWinStreaks[FRONTIER_LVL_50];
         else
-            winStreak = gSaveBlock2Ptr->frontier.pikeWinStreaks[FRONTIER_LVL_OPEN];
+            winStreak = gSaveBlock1Ptr->frontier.pikeWinStreaks[FRONTIER_LVL_OPEN];
         break;
     case FRONTIER_MANIAC_PYRAMID:
-        if (gSaveBlock2Ptr->frontier.pyramidWinStreaks[FRONTIER_LVL_50]
-            >= gSaveBlock2Ptr->frontier.pyramidWinStreaks[FRONTIER_LVL_OPEN])
-            winStreak = gSaveBlock2Ptr->frontier.pyramidWinStreaks[FRONTIER_LVL_50];
+        if (gSaveBlock1Ptr->frontier.pyramidWinStreaks[FRONTIER_LVL_50]
+            >= gSaveBlock1Ptr->frontier.pyramidWinStreaks[FRONTIER_LVL_OPEN])
+            winStreak = gSaveBlock1Ptr->frontier.pyramidWinStreaks[FRONTIER_LVL_50];
         else
-            winStreak = gSaveBlock2Ptr->frontier.pyramidWinStreaks[FRONTIER_LVL_OPEN];
+            winStreak = gSaveBlock1Ptr->frontier.pyramidWinStreaks[FRONTIER_LVL_OPEN];
         break;
     }
 
@@ -2218,7 +2226,7 @@ void BufferBattleTowerElevatorFloors(void)
 
     u8 i;
     u16 battleMode = VarGet(VAR_FRONTIER_BATTLE_MODE);
-    u8 lvlMode = gSaveBlock2Ptr->frontier.lvlMode;
+    u8 lvlMode = gSaveBlock1Ptr->frontier.lvlMode;
 
     if (battleMode == FRONTIER_MODE_MULTIS && !FlagGet(FLAG_CHOSEN_MULTI_BATTLE_NPC_PARTNER))
     {
@@ -2229,7 +2237,7 @@ void BufferBattleTowerElevatorFloors(void)
 
     for (i = 0; i < ARRAY_COUNT(sBattleTowerStreakThresholds) - 1; i++)
     {
-        if (sBattleTowerStreakThresholds[i] > gSaveBlock2Ptr->frontier.towerWinStreaks[battleMode][lvlMode])
+        if (sBattleTowerStreakThresholds[i] > gSaveBlock1Ptr->frontier.towerWinStreaks[battleMode][lvlMode])
         {
             gSpecialVar_0x8005 = 4;
             gSpecialVar_0x8006 = i + 5;
@@ -2266,131 +2274,161 @@ void ShowScrollableMultichoice(void)
 
     switch (gSpecialVar_0x8004)
     {
-    case SCROLL_MULTI_NONE:
-        task->tMaxItemsOnScreen = 1;
-        task->tNumItems = 1;
-        task->tLeft = 1;
-        task->tTop = 1;
-        task->tWidth = 1;
-        task->tHeight = 1;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_GLASS_WORKSHOP_VENDOR:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN - 1;
-        task->tNumItems = 8;
-        task->tLeft = 1;
-        task->tTop = 1;
-        task->tWidth = 9;
-        task->tHeight = 10;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_POKEMON_FAN_CLUB_RATER:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 12;
-        task->tLeft = 1;
-        task->tTop = 1;
-        task->tWidth = 7;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_1:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 11;
-        task->tLeft = 14;
-        task->tTop = 1;
-        task->tWidth = 15;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 6;
-        task->tLeft = 14;
-        task->tTop = 1;
-        task->tWidth = 15;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 7;
-        task->tLeft = 14;
-        task->tTop = 1;
-        task->tWidth = 15;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 10;
-        task->tLeft = 14;
-        task->tTop = 1;
-        task->tWidth = 15;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_BERRY_POWDER_VENDOR:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 12;
-        task->tLeft = 15;
-        task->tTop = 1;
-        task->tWidth = 14;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_BF_RECEPTIONIST:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 10;
-        task->tLeft = 17;
-        task->tTop = 1;
-        task->tWidth = 11;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_BF_MOVE_TUTOR_1:
-    case SCROLL_MULTI_BF_MOVE_TUTOR_2:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 11;
-        task->tLeft = 15;
-        task->tTop = 1;
-        task->tWidth = 14;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_SS_TIDAL_DESTINATION:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 7;
-        task->tLeft = 19;
-        task->tTop = 1;
-        task->tWidth = 10;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_BATTLE_TENT_RULES:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 7;
-        task->tLeft = 17;
-        task->tTop = 1;
-        task->tWidth = 12;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    default:
-        gSpecialVar_Result = MULTI_B_PRESSED;
-        DestroyTask(taskId);
-        break;
+        case SCROLL_MULTI_NONE:
+            task->tMaxItemsOnScreen = 1;
+            task->tNumItems = 1;
+            task->tLeft = 1;
+            task->tTop = 1;
+            task->tWidth = 1;
+            task->tHeight = 1;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_GLASS_WORKSHOP_VENDOR:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN - 1;
+            task->tNumItems = 8;
+            task->tLeft = 1;
+            task->tTop = 1;
+            task->tWidth = 9;
+            task->tHeight = 10;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_POKEMON_FAN_CLUB_RATER:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 12;
+            task->tLeft = 1;
+            task->tTop = 1;
+            task->tWidth = 7;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_1:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 32;
+            task->tLeft = 14;
+            task->tTop = 1;
+            task->tWidth = 15;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 19;
+            task->tLeft = 14;
+            task->tTop = 1;
+            task->tWidth = 15;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 14;
+            task->tLeft = 14;
+            task->tTop = 1;
+            task->tWidth = 15;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 31;
+            task->tLeft = 14;
+            task->tTop = 1;
+            task->tWidth = 15;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_BERRY_POWDER_VENDOR:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 12;
+            task->tLeft = 15;
+            task->tTop = 1;
+            task->tWidth = 14;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_BF_RECEPTIONIST:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 10;
+            task->tLeft = 17;
+            task->tTop = 1;
+            task->tWidth = 11;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_BF_MOVE_TUTOR_1:
+        case SCROLL_MULTI_BF_MOVE_TUTOR_2:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 11;
+            task->tLeft = 15;
+            task->tTop = 1;
+            task->tWidth = 14;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_SS_TIDAL_DESTINATION:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 7;
+            task->tLeft = 19;
+            task->tTop = 1;
+            task->tWidth = 10;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_BATTLE_TENT_RULES:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 7;
+            task->tLeft = 17;
+            task->tTop = 1;
+            task->tWidth = 12;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_PWT_OPTIONS:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 9;
+            task->tLeft = 19;
+            task->tTop = 1;
+            task->tWidth = 10;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_PWT_OPTIONS2:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 8;
+            task->tLeft = 19;
+            task->tTop = 1;
+            task->tWidth = 10;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        case SCROLL_MULTI_PWT_OPTIONS3:
+            task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+            task->tNumItems = 7;
+            task->tLeft = 19;
+            task->tTop = 1;
+            task->tWidth = 10;
+            task->tHeight = 12;
+            task->tKeepOpenAfterSelect = FALSE;
+            task->tTaskId = taskId;
+            break;
+        default:
+            gSpecialVar_Result = MULTI_B_PRESSED;
+            DestroyTask(taskId);
+            break;
     }
 }
 
@@ -2428,25 +2466,59 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_1] =
     {
-        gText_KissPoster16BP,
-        gText_KissCushion32BP,
-        gText_SmoochumDoll32BP,
-        gText_TogepiDoll48BP,
-        gText_MeowthDoll48BP,
-        gText_ClefairyDoll48BP,
-        gText_DittoDoll48BP,
-        gText_CyndaquilDoll80BP,
-        gText_ChikoritaDoll80BP,
-        gText_TotodileDoll80BP,
+        gText_ChilanBerry5BP,
+        gText_OccaBerry5BP,
+        gText_PasshoBerry5BP,
+        gText_WacanBerry5BP,
+        gText_RindoBerry5BP,
+        gText_YacheBerry5BP,
+        gText_ChopleBerry5BP,
+        gText_KebiaBerry5BP,
+        gText_ShucaBerry5BP,
+        gText_CobaBerry5BP,
+        gText_PayapaBerry5BP,
+        gText_TangaBerry5BP,
+        gText_ChartiBerry5BP,
+        gText_KasibBerry5BP,
+        gText_HabanBerry5BP,
+        gText_ColburBerry5BP,
+        gText_BabiriBerry5BP,
+        gText_RoseliBerry5BP,
+        gText_MicleBerry5BP,
+        gText_CustapBerry5BP,
+        gText_JabocaBerry5BP,
+        gText_RowapBerry5BP,
+        gText_KeeBerry5BP,
+        gText_MarangaBerry5BP,
+        gText_RedApricorn10BP,
+        gText_BlueApricorn10BP,
+        gText_YellowApricorn10BP,
+        gText_GreenApricorn10BP,
+        gText_PinkApricorn10BP,
+        gText_WhiteApricorn10BP,
+        gText_BlackApricorn10BP,
         gText_Exit
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2] =
     {
-        gText_LaprasDoll128BP,
-        gText_SnorlaxDoll128BP,
-        gText_VenusaurDoll256BP,
-        gText_CharizardDoll256BP,
-        gText_BlastoiseDoll256BP,
+        gText_NormalGem32BP,
+        gText_FireGem32BP,
+        gText_WaterGem32BP,
+        gText_ElectricGem32BP,
+        gText_GrassGem32BP,
+        gText_IceGem32BP,
+        gText_FightingGem32BP,
+        gText_PoisonGem32BP,
+        gText_GroundGem32BP,
+        gText_FlyingGem32BP,
+        gText_PsychicGem32BP,
+        gText_BugGem32BP,
+        gText_RockGem32BP,
+        gText_GhostGem32BP,
+        gText_DragonGem32BP,
+        gText_DarkGem32BP,
+        gText_SteelGem32BP,
+        gText_FairyGem32BP,
         gText_Exit
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR] =
@@ -2457,19 +2529,47 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_Zinc1BP,
         gText_Carbos1BP,
         gText_HpUp1BP,
+        gText_PowerAnklet16BP,
+        gText_PowerBand16BP,
+        gText_PowerBelt16BP,
+        gText_PowerBracer16BP,
+        gText_PowerLens16BP,
+        gText_PowerWeight16BP,
+        gText_RareCandy48BP,
         gText_Exit
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR] =
     {
+        gText_ToxicOrb16BP,
+        gText_FlameOrb16BP,
+        gText_WhiteHerb32BP,
+        gText_PowerHerb32BP,
+        gText_MentalHerb32BP,
+        gText_AbsorbBulb32BP,
+        gText_CellBattery32BP,
+        gText_RedCard32BP,
+        gText_EjectButton32BP,
+        gText_WeaknessPolicy32BP,
+        gText_RingTarget32BP,
+        gText_WiseGlasses48BP,
+        gText_AssaultVest48BP,
+        gText_FocusSash48BP,
+        gText_Brightpowder48BP,
+        gText_IronBall48BP,
+        gText_AirBalloon48BP,
+        gText_BindingBand48BP,
+        gText_SafetyGoggles48BP,
         gText_Leftovers48BP,
-        gText_WhiteHerb48BP,
-        gText_QuickClaw48BP,
-        gText_MentalHerb48BP,
-        gText_BrightPowder64BP,
-        gText_ChoiceBand64BP,
-        gText_KingsRock64BP,
-        gText_FocusBand64BP,
         gText_ScopeLens64BP,
+        gText_ZoomLens64BP,
+        gText_WideLens64BP,
+        gText_MuscleBand64BP,
+        gText_FocusBand64BP,
+        gText_ChoiceSpecs64BP,
+        gText_ChoiceBand64BP,
+        gText_ChoiceScarf64BP,
+        gText_LifeOrb64BP,
+        gText_AbilityCapsule200BP,
         gText_Exit
     },
     [SCROLL_MULTI_BERRY_POWDER_VENDOR] =
@@ -2546,6 +2646,39 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_PokemonMoves,
         gText_Underpowered,
         gText_WhenInDanger,
+        gText_Exit
+    },
+    [SCROLL_MULTI_PWT_OPTIONS] =
+    {
+        gText_KantoLeaders,
+        gText_JohtoLeaders,
+        gText_HoennLeaders,
+        gText_SinnohLeaders,
+        gText_UnovaLeaders,
+        gText_WorldLeaders,
+        gText_Champions,
+        gText_Special,
+        gText_Exit
+    },
+    [SCROLL_MULTI_PWT_OPTIONS2] =
+    {
+        gText_KantoLeaders,
+        gText_JohtoLeaders,
+        gText_HoennLeaders,
+        gText_SinnohLeaders,
+        gText_UnovaLeaders,
+        gText_WorldLeaders,
+        gText_Special,
+        gText_Exit
+    },
+    [SCROLL_MULTI_PWT_OPTIONS3] =
+    {
+        gText_KantoLeaders,
+        gText_JohtoLeaders,
+        gText_HoennLeaders,
+        gText_SinnohLeaders,
+        gText_UnovaLeaders,
+        gText_Special,
         gText_Exit
     }
 };
@@ -2910,7 +3043,7 @@ void UpdateBattlePointsWindow(void)
 {
     u8 string[32];
     u32 x;
-    StringCopy(ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->frontier.battlePoints, STR_CONV_MODE_RIGHT_ALIGN, 4), gText_BP);
+    StringCopy(ConvertIntToDecimalStringN(string, gSaveBlock1Ptr->frontier.battlePoints, STR_CONV_MODE_RIGHT_ALIGN, 4), gText_BP);
     x = GetStringRightAlignXOffset(FONT_NORMAL, string, 48);
     AddTextPrinterParameterized(sBattlePointsWindowId, FONT_NORMAL, string, x, 1, 0, NULL);
 }
@@ -2942,23 +3075,23 @@ void CloseBattlePointsWindow(void)
 
 void TakeFrontierBattlePoints(void)
 {
-    if (gSaveBlock2Ptr->frontier.battlePoints < gSpecialVar_0x8004)
-        gSaveBlock2Ptr->frontier.battlePoints = 0;
+    if (gSaveBlock1Ptr->frontier.battlePoints < gSpecialVar_0x8004)
+        gSaveBlock1Ptr->frontier.battlePoints = 0;
     else
-        gSaveBlock2Ptr->frontier.battlePoints -= gSpecialVar_0x8004;
+        gSaveBlock1Ptr->frontier.battlePoints -= gSpecialVar_0x8004;
 }
 
 void GiveFrontierBattlePoints(void)
 {
-    if (gSaveBlock2Ptr->frontier.battlePoints + gSpecialVar_0x8004 > MAX_BATTLE_FRONTIER_POINTS)
-        gSaveBlock2Ptr->frontier.battlePoints = MAX_BATTLE_FRONTIER_POINTS;
+    if (gSaveBlock1Ptr->frontier.battlePoints + gSpecialVar_0x8004 > MAX_BATTLE_FRONTIER_POINTS)
+        gSaveBlock1Ptr->frontier.battlePoints = MAX_BATTLE_FRONTIER_POINTS;
     else
-        gSaveBlock2Ptr->frontier.battlePoints = gSaveBlock2Ptr->frontier.battlePoints + gSpecialVar_0x8004;
+        gSaveBlock1Ptr->frontier.battlePoints = gSaveBlock1Ptr->frontier.battlePoints + gSpecialVar_0x8004;
 }
 
 u16 GetFrontierBattlePoints(void)
 {
-    return gSaveBlock2Ptr->frontier.battlePoints;
+    return gSaveBlock1Ptr->frontier.battlePoints;
 }
 
 void ShowFrontierExchangeCornerItemIconWindow(void)
@@ -2996,29 +3129,11 @@ static void FillFrontierExchangeCornerWindowAndItemIcon(u16 menu, u16 selection)
         {
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_1:
             AddTextPrinterParameterized2(0, FONT_NORMAL, sFrontierExchangeCorner_Decor1Descriptions[selection], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
-            if (sFrontierExchangeCorner_Decor1[selection] == ITEM_LIST_END)
-            {
-                ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_Decor1[selection]);
-            }
-            else
-            {
-                FreeSpriteTilesByTag(TAG_ITEM_ICON);
-                FreeSpritePaletteByTag(TAG_ITEM_ICON);
-                sScrollableMultichoice_ItemSpriteId = AddDecorationIconObject(sFrontierExchangeCorner_Decor1[selection], 33, 88, 0, TAG_ITEM_ICON, TAG_ITEM_ICON);
-            }
+            ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_Decor1[selection]);
             break;
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2:
             AddTextPrinterParameterized2(0, FONT_NORMAL, sFrontierExchangeCorner_Decor2Descriptions[selection], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
-            if (sFrontierExchangeCorner_Decor2[selection] == ITEM_LIST_END)
-            {
-                ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_Decor2[selection]);
-            }
-            else
-            {
-                FreeSpriteTilesByTag(TAG_ITEM_ICON);
-                FreeSpritePaletteByTag(TAG_ITEM_ICON);
-                sScrollableMultichoice_ItemSpriteId = AddDecorationIconObject(sFrontierExchangeCorner_Decor2[selection], 33, 88, 0, TAG_ITEM_ICON, TAG_ITEM_ICON);
-            }
+            ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_Decor2[selection]);
             break;
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR:
             AddTextPrinterParameterized2(0, FONT_NORMAL, sFrontierExchangeCorner_VitaminsDescriptions[selection], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
@@ -4206,4 +4321,14 @@ void SetPlayerGotFirstFans(void)
 u8 Script_TryGainNewFanFromCounter(void)
 {
     return TryGainNewFanFromCounter(gSpecialVar_0x8004);
+}
+
+void CheckSavefileSize(void)
+{
+    u32 size = (sizeof(struct SaveBlock1));
+    u32 size2 = (sizeof(struct SaveBlock2));
+    u32 size3 = (sizeof(struct PokemonStorage));
+    ConvertIntToDecimalStringN(gStringVar1, size, STR_CONV_MODE_LEFT_ALIGN, 6);
+    ConvertIntToDecimalStringN(gStringVar2, size2, STR_CONV_MODE_LEFT_ALIGN, 6);
+    ConvertIntToDecimalStringN(gStringVar3, size3, STR_CONV_MODE_LEFT_ALIGN, 6);
 }

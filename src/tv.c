@@ -195,36 +195,72 @@ static const struct {
     u16 moves[MAX_MON_MOVES];
     u8 level;
     u8 location;
+    u8 location2;
+    u8 encounterType;
 } sPokeOutbreakSpeciesList[] = {
+    {
+        .species = SPECIES_TREECKO,
+        .moves = {MOVE_ABSORB, MOVE_POUND, MOVE_LEER},
+        .level = 6,
+        .location = MAP_NUM(PETALBURG_WOODS),
+        .location2 = MAP_GROUP(PETALBURG_WOODS),
+        .encounterType = 0,
+    },
+    {
+        .species = SPECIES_TORCHIC,
+        .moves = {MOVE_FIRE_SPIN, MOVE_PECK, MOVE_SAND_ATTACK,MOVE_EMBER},
+        .level = 21,
+        .location = MAP_NUM(JAGGED_PASS),
+        .location2 = MAP_GROUP(JAGGED_PASS),
+        .encounterType = 0,
+    },
+    {
+        .species = SPECIES_MUDKIP,
+        .moves = {MOVE_ROCK_THROW, MOVE_BIDE, MOVE_WATER_GUN, MOVE_MUD_SLAP},
+        .level = 25,
+        .location = MAP_NUM(ROUTE120),
+        .location2 = MAP_GROUP(ROUTE120),
+        .encounterType = 0,
+    },
     {
         .species = SPECIES_SEEDOT,
         .moves = {MOVE_BIDE, MOVE_HARDEN, MOVE_LEECH_SEED},
         .level = 3,
-        .location = MAP_NUM(ROUTE102)
+        .location = MAP_NUM(ROUTE102),
+        .location2 = MAP_GROUP(ROUTE102),
+        .encounterType = 0,
     },
     {
         .species = SPECIES_NUZLEAF,
         .moves = {MOVE_HARDEN, MOVE_GROWTH, MOVE_NATURE_POWER, MOVE_LEECH_SEED},
         .level = 15,
         .location = MAP_NUM(ROUTE114),
+        .location2 = MAP_GROUP(ROUTE114),
+        .encounterType = 0,
     },
     {
         .species = SPECIES_SEEDOT,
         .moves = {MOVE_HARDEN, MOVE_GROWTH, MOVE_NATURE_POWER, MOVE_LEECH_SEED},
         .level = 13,
         .location = MAP_NUM(ROUTE117),
+        .location2 = MAP_GROUP(ROUTE117),
+        .encounterType = 0,
     },
     {
         .species = SPECIES_SEEDOT,
         .moves = {MOVE_GIGA_DRAIN, MOVE_FRUSTRATION, MOVE_SOLAR_BEAM, MOVE_LEECH_SEED},
         .level = 25,
         .location = MAP_NUM(ROUTE120),
+        .location2 = MAP_GROUP(ROUTE120),
+        .encounterType = 0,
     },
     {
         .species = SPECIES_SKITTY,
         .moves = {MOVE_GROWL, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_ATTRACT},
         .level = 8,
         .location = MAP_NUM(ROUTE116),
+        .location2 = MAP_GROUP(ROUTE116),
+        .encounterType = 0,
     }
 };
 
@@ -262,7 +298,6 @@ static const u8 *const sPokeNewsTextGroup_Upcoming[NUM_POKENEWS_TYPES + 1] = {
     [POKENEWS_NONE]        = NULL,
     [POKENEWS_SLATEPORT]   = gPokeNewsTextSlateport_Upcoming,
     [POKENEWS_GAME_CORNER] = gPokeNewsTextGameCorner_Upcoming,
-    [POKENEWS_LILYCOVE]    = gPokeNewsTextLilycove_Upcoming,
     [POKENEWS_BLENDMASTER] = gPokeNewsTextBlendMaster_Upcoming
 };
 
@@ -270,7 +305,6 @@ static const u8 *const sPokeNewsTextGroup_Ongoing[NUM_POKENEWS_TYPES + 1] = {
     [POKENEWS_NONE]        = NULL,
     [POKENEWS_SLATEPORT]   = gPokeNewsTextSlateport_Ongoing,
     [POKENEWS_GAME_CORNER] = gPokeNewsTextGameCorner_Ongoing,
-    [POKENEWS_LILYCOVE]    = gPokeNewsTextLilycove_Ongoing,
     [POKENEWS_BLENDMASTER] = gPokeNewsTextBlendMaster_Ongoing
 };
 
@@ -278,7 +312,6 @@ static const u8 *const sPokeNewsTextGroup_Ending[NUM_POKENEWS_TYPES + 1] = {
     [POKENEWS_NONE]        = NULL,
     [POKENEWS_SLATEPORT]   = gPokeNewsTextSlateport_Ending,
     [POKENEWS_GAME_CORNER] = gPokeNewsTextGameCorner_Ending,
-    [POKENEWS_LILYCOVE]    = gPokeNewsTextLilycove_Ending,
     [POKENEWS_BLENDMASTER] = gPokeNewsTextBlendMaster_Ending
 };
 
@@ -1468,22 +1501,22 @@ static void InterviewAfter_BravoTrainerBattleTowerProfile(void)
     show->bravoTrainerTower.kind = TVSHOW_BRAVO_TRAINER_BATTLE_TOWER_PROFILE;
     show->bravoTrainerTower.active = TRUE;
     StringCopy(show->bravoTrainerTower.trainerName, gSaveBlock2Ptr->playerName);
-    StringCopy(show->bravoTrainerTower.pokemonName, gSaveBlock2Ptr->frontier.towerInterview.opponentName);
-    show->bravoTrainerTower.species = gSaveBlock2Ptr->frontier.towerInterview.playerSpecies;
-    show->bravoTrainerTower.defeatedSpecies = gSaveBlock2Ptr->frontier.towerInterview.opponentSpecies;
-    show->bravoTrainerTower.numFights = GetCurrentBattleTowerWinStreak(gSaveBlock2Ptr->frontier.towerLvlMode, 0);
-    show->bravoTrainerTower.wonTheChallenge = gSaveBlock2Ptr->frontier.towerBattleOutcome;
-    if (gSaveBlock2Ptr->frontier.towerLvlMode == FRONTIER_LVL_50)
-        show->bravoTrainerTower.btLevel = FRONTIER_MAX_LEVEL_50;
+    StringCopy(show->bravoTrainerTower.pokemonName, gSaveBlock1Ptr->frontier.towerInterview.opponentName);
+    show->bravoTrainerTower.species = gSaveBlock1Ptr->frontier.towerInterview.playerSpecies;
+    show->bravoTrainerTower.defeatedSpecies = gSaveBlock1Ptr->frontier.towerInterview.opponentSpecies;
+    show->bravoTrainerTower.numFights = GetCurrentBattleTowerWinStreak(gSaveBlock1Ptr->frontier.towerLvlMode, 0);
+    show->bravoTrainerTower.wonTheChallenge = gSaveBlock1Ptr->frontier.towerBattleOutcome;
+    if (gSaveBlock1Ptr->frontier.towerLvlMode == FRONTIER_LVL_50)
+        show->bravoTrainerTower.btLevel = 50;
     else
         show->bravoTrainerTower.btLevel = FRONTIER_MAX_LEVEL_OPEN;
     show->bravoTrainerTower.interviewResponse = gSpecialVar_0x8004;
     StorePlayerIdInNormalShow(show);
     show->bravoTrainerTower.language = gGameLanguage;
-    if (show->bravoTrainerTower.language == LANGUAGE_JAPANESE || gSaveBlock2Ptr->frontier.towerInterview.opponentLanguage == LANGUAGE_JAPANESE)
+    if (show->bravoTrainerTower.language == LANGUAGE_JAPANESE || gSaveBlock1Ptr->frontier.towerInterview.opponentLanguage == LANGUAGE_JAPANESE)
         show->bravoTrainerTower.pokemonNameLanguage = LANGUAGE_JAPANESE;
     else
-        show->bravoTrainerTower.pokemonNameLanguage = gSaveBlock2Ptr->frontier.towerInterview.opponentLanguage;
+        show->bravoTrainerTower.pokemonNameLanguage = gSaveBlock1Ptr->frontier.towerInterview.opponentLanguage;
 }
 
 void TryPutSmartShopperOnAir(void)
@@ -1553,8 +1586,8 @@ void StartMassOutbreak(void)
     gSaveBlock1Ptr->outbreakLocationMapNum = show->massOutbreak.locationMapNum;
     gSaveBlock1Ptr->outbreakLocationMapGroup = show->massOutbreak.locationMapGroup;
     gSaveBlock1Ptr->outbreakPokemonLevel = show->massOutbreak.level;
-    gSaveBlock1Ptr->outbreakUnused1 = show->massOutbreak.unused1;
-    gSaveBlock1Ptr->outbreakUnused2 = show->massOutbreak.unused2;
+    gSaveBlock1Ptr->outbreakShinyRolls = show->massOutbreak.shinyRolls;
+    gSaveBlock1Ptr->outbreakEncounterType = show->massOutbreak.encounterType;
     gSaveBlock1Ptr->outbreakPokemonMoves[0] = show->massOutbreak.moves[0];
     gSaveBlock1Ptr->outbreakPokemonMoves[1] = show->massOutbreak.moves[1];
     gSaveBlock1Ptr->outbreakPokemonMoves[2] = show->massOutbreak.moves[2];
@@ -1652,16 +1685,16 @@ static void TryStartRandomMassOutbreak(void)
                 show->massOutbreak.kind = TVSHOW_MASS_OUTBREAK;
                 show->massOutbreak.active = TRUE;
                 show->massOutbreak.level = sPokeOutbreakSpeciesList[outbreakIdx].level;
-                show->massOutbreak.unused1 = 0;
+                show->massOutbreak.shinyRolls = 3;
                 show->massOutbreak.unused3 = 0;
                 show->massOutbreak.species = sPokeOutbreakSpeciesList[outbreakIdx].species;
-                show->massOutbreak.unused2 = 0;
+                show->massOutbreak.encounterType = sPokeOutbreakSpeciesList[outbreakIdx].encounterType;
                 show->massOutbreak.moves[0] = sPokeOutbreakSpeciesList[outbreakIdx].moves[0];
                 show->massOutbreak.moves[1] = sPokeOutbreakSpeciesList[outbreakIdx].moves[1];
                 show->massOutbreak.moves[2] = sPokeOutbreakSpeciesList[outbreakIdx].moves[2];
                 show->massOutbreak.moves[3] = sPokeOutbreakSpeciesList[outbreakIdx].moves[3];
                 show->massOutbreak.locationMapNum = sPokeOutbreakSpeciesList[outbreakIdx].location;
-                show->massOutbreak.locationMapGroup = 0;
+                show->massOutbreak.locationMapGroup = sPokeOutbreakSpeciesList[outbreakIdx].location2;
                 show->massOutbreak.unused4 = 0;
                 show->massOutbreak.probability = 50;
                 show->massOutbreak.unused5 = 0;
@@ -1679,8 +1712,8 @@ void EndMassOutbreak(void)
     gSaveBlock1Ptr->outbreakLocationMapNum = 0;
     gSaveBlock1Ptr->outbreakLocationMapGroup = 0;
     gSaveBlock1Ptr->outbreakPokemonLevel = 0;
-    gSaveBlock1Ptr->outbreakUnused1 = 0;
-    gSaveBlock1Ptr->outbreakUnused2 = 0;
+    gSaveBlock1Ptr->outbreakShinyRolls = 0;
+    gSaveBlock1Ptr->outbreakEncounterType = 0;
     gSaveBlock1Ptr->outbreakPokemonMoves[0] = MOVE_NONE;
     gSaveBlock1Ptr->outbreakPokemonMoves[1] = MOVE_NONE;
     gSaveBlock1Ptr->outbreakPokemonMoves[2] = MOVE_NONE;
@@ -1854,7 +1887,7 @@ void TryPutTodaysRivalTrainerOnAir(void)
             if (FlagGet(sGoldSymbolFlags[i]) == TRUE)
                 show->rivalTrainer.nGoldSymbols++;
         }
-        show->rivalTrainer.battlePoints = gSaveBlock2Ptr->frontier.battlePoints;
+        show->rivalTrainer.battlePoints = gSaveBlock1Ptr->frontier.battlePoints;
         StringCopy(show->rivalTrainer.playerName, gSaveBlock2Ptr->playerName);
         StorePlayerIdInRecordMixShow(show);
         show->rivalTrainer.language = gGameLanguage;
@@ -1977,7 +2010,7 @@ static void SecretBaseVisit_CalculateDecorationData(TVShow *show)
     // Count (and save) the unique decorations in the base
     for (i = 0, n = 0; i < DECOR_MAX_SECRET_BASE; i++)
     {
-        decoration = gSaveBlock1Ptr->secretBases[0].decorations[i];
+        decoration = gSaveBlock2Ptr->secretBases[0].decorations[i];
         if (decoration != DECOR_NONE)
         {
             // Search for an empty spot to save decoration
@@ -2402,8 +2435,8 @@ void TryPutFrontierTVShowOnAir(u16 winStreak, u8 facilityAndMode)
             show->frontier.species2 = GetMonData(&gPlayerParty[1], MON_DATA_SPECIES, NULL);
             break;
         case FRONTIER_SHOW_TOWER_LINK_MULTIS:
-            show->frontier.species1 = GetMonData(&gSaveBlock1Ptr->playerParty[gSaveBlock2Ptr->frontier.selectedPartyMons[0] - 1], MON_DATA_SPECIES, NULL);
-            show->frontier.species2 = GetMonData(&gSaveBlock1Ptr->playerParty[gSaveBlock2Ptr->frontier.selectedPartyMons[1] - 1], MON_DATA_SPECIES, NULL);
+            show->frontier.species1 = GetMonData(&gSaveBlock1Ptr->playerParty[gSaveBlock1Ptr->frontier.selectedPartyMons[0] - 1], MON_DATA_SPECIES, NULL);
+            show->frontier.species2 = GetMonData(&gSaveBlock1Ptr->playerParty[gSaveBlock1Ptr->frontier.selectedPartyMons[1] - 1], MON_DATA_SPECIES, NULL);
             break;
         }
         StorePlayerIdInRecordMixShow(show);
@@ -2434,10 +2467,10 @@ void TryPutSecretBaseSecretsOnAir(void)
             show->secretBaseSecrets.flags = VarGet(VAR_SECRET_BASE_LOW_TV_FLAGS) + (VarGet(VAR_SECRET_BASE_HIGH_TV_FLAGS) << 16);
             StorePlayerIdInRecordMixShow(show);
             show->secretBaseSecrets.language = gGameLanguage;
-            if (show->secretBaseSecrets.language == LANGUAGE_JAPANESE || gSaveBlock1Ptr->secretBases[VarGet(VAR_CURRENT_SECRET_BASE)].language == LANGUAGE_JAPANESE)
+            if (show->secretBaseSecrets.language == LANGUAGE_JAPANESE || gSaveBlock2Ptr->secretBases[VarGet(VAR_CURRENT_SECRET_BASE)].language == LANGUAGE_JAPANESE)
                 show->secretBaseSecrets.baseOwnersNameLanguage = LANGUAGE_JAPANESE;
             else
-                show->secretBaseSecrets.baseOwnersNameLanguage = gSaveBlock1Ptr->secretBases[VarGet(VAR_CURRENT_SECRET_BASE)].language;
+                show->secretBaseSecrets.baseOwnersNameLanguage = gSaveBlock2Ptr->secretBases[VarGet(VAR_CURRENT_SECRET_BASE)].language;
         }
     }
 }
@@ -2657,17 +2690,11 @@ bool8 IsPokeNewsActive(u8 newsKind)
 // For any other type of PokeNews this is always TRUE.
 static bool8 ShouldApplyPokeNewsEffect(u8 newsKind)
 {
-    switch (newsKind)
+    if(newsKind == POKENEWS_SLATEPORT)
     {
-    case POKENEWS_SLATEPORT:
         if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SLATEPORT_CITY)
          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(SLATEPORT_CITY)
          && gSpecialVar_LastTalked == LOCALID_SLATEPORT_ENERGY_GURU)
-            return TRUE;
-        return FALSE;
-    case POKENEWS_LILYCOVE:
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(LILYCOVE_CITY_DEPARTMENT_STORE_ROOFTOP)
-         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_ROOFTOP))
             return TRUE;
         return FALSE;
     }
@@ -3068,7 +3095,7 @@ static u16 GetRandomDifferentSpeciesSeenByPlayer(u16 excludedSpecies)
     u16 species = Random() % (NUM_SPECIES - 1) + 1;
     u16 initSpecies = species;
 
-    while (GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_SEEN) != TRUE || species == excludedSpecies)
+    while (GetSetPokedexFlag(SpeciesToNationalPokedexNum(GET_BASE_SPECIES_ID(species)), FLAG_GET_SEEN) != TRUE || species == excludedSpecies)
     {
         if (species == SPECIES_NONE + 1)
             species = NUM_SPECIES - 1;
@@ -3762,7 +3789,7 @@ static void DeactivateShow(u8 showIdx)
 
 static void DeactivateShowIfNotSeenSpecies(u16 species, u8 showIdx)
 {
-    if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_SEEN))
+    if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(GET_BASE_SPECIES_ID(species)), FLAG_GET_SEEN))
         gSaveBlock1Ptr->tvShows[showIdx].common.active = FALSE;
 }
 

@@ -6,6 +6,8 @@
 #include "bg.h"
 #include "cable_club.h"
 #include "clock.h"
+#include "day_night.h"
+#include "dexnav.h"
 #include "event_data.h"
 #include "event_object_movement.h"
 #include "event_scripts.h"
@@ -42,6 +44,7 @@
 #include "random.h"
 #include "roamer.h"
 #include "rotating_gate.h"
+#include "rtc.h"
 #include "safari_zone.h"
 #include "save.h"
 #include "save_location.h"
@@ -102,7 +105,6 @@ static void CB2_LoadMapOnReturnToFieldCableClub(void);
 static void CB2_LoadMap2(void);
 static void VBlankCB_Field(void);
 static void SpriteCB_LinkPlayer(struct Sprite *);
-static void ChooseAmbientCrySpecies(void);
 static void DoMapLoadLoop(u8 *);
 static bool32 LoadMapInStepsLocal(u8 *, bool32);
 static bool32 LoadMapInStepsLink(u8 *);
@@ -192,6 +194,8 @@ bool8 (*gFieldCallback2)(void);
 u8 gLocalLinkPlayerId; // This is our player id in a multiplayer mode.
 u8 gFieldLinkPlayerCount;
 
+
+// EWRAM vars
 EWRAM_DATA static u8 sObjectEventLoadFlag = 0;
 EWRAM_DATA struct WarpData gLastUsedWarp = {0};
 EWRAM_DATA static struct WarpData sWarpDestination = {0};  // new warp position
@@ -202,6 +206,7 @@ EWRAM_DATA static struct InitialPlayerAvatarState sInitialPlayerAvatarState = {0
 EWRAM_DATA static u16 sAmbientCrySpecies = 0;
 EWRAM_DATA static bool8 sIsAmbientCryWaterMon = FALSE;
 EWRAM_DATA struct LinkPlayerObjectEvent gLinkPlayerObjectEvents[4] = {0};
+
 
 static const struct WarpData sDummyWarpData =
 {
@@ -823,6 +828,7 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     LoadObjEventTemplatesFromHeader();
     TrySetMapSaveWarpStatus();
     ClearTempFieldEventData();
+    ResetDexNavSearch();
     ResetCyclingRoadChallengeData();
     RestartWildEncounterImmunitySteps();
     TryUpdateRandomTrainerRematches(mapGroup, mapNum);
@@ -873,6 +879,7 @@ static void LoadMapFromWarp(bool32 a1)
     CheckLeftFriendsSecretBase();
     TrySetMapSaveWarpStatus();
     ClearTempFieldEventData();
+    ResetDexNavSearch();
     ResetCyclingRoadChallengeData();
     RestartWildEncounterImmunitySteps();
     TryUpdateRandomTrainerRematches(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
@@ -1341,7 +1348,7 @@ void UpdateAmbientCry(s16 *state, u16 *delayCounter)
     }
 }
 
-static void ChooseAmbientCrySpecies(void)
+void ChooseAmbientCrySpecies(void)
 {
     if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE130)
      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE130))
@@ -1514,8 +1521,10 @@ void CB2_Overworld(void)
     if (fading)
         SetVBlankCallback(NULL);
     OverworldBasic();
-    if (fading)
-        SetFieldVBlankCallback();
+    if (fading) {
+      SetFieldVBlankCallback();
+      return;
+    }
 }
 
 void SetMainCallback1(MainCallback cb)
@@ -1816,6 +1825,7 @@ static void VBlankCB_Field(void)
     FieldUpdateBgTilemapScroll();
     TransferPlttBuffer();
     TransferTilesetAnimsBuffer();
+    CheckClockForImmediateTimeEvents();
 }
 
 static void InitCurrentFlashLevelScanlineEffect(void)
@@ -1994,6 +2004,10 @@ static bool32 ReturnToFieldLocal(u8 *state)
         ResetScreenForMapLoad();
         ResumeMap(FALSE);
         InitObjectEventsReturnToField();
+        if (gFieldCallback == FieldCallback_Fly)
+          RemoveFollowingPokemon();
+        else
+          UpdateFollowingPokemon();
         SetCameraToTrackPlayer();
         (*state)++;
         break;
@@ -2009,7 +2023,6 @@ static bool32 ReturnToFieldLocal(u8 *state)
     case 3:
         return TRUE;
     }
-
     return FALSE;
 }
 
@@ -2164,10 +2177,7 @@ static void ResumeMap(bool32 a1)
     ResetAllPicSprites();
     ResetCameraUpdateInfo();
     InstallCameraPanAheadCallback();
-    if (!a1)
-        InitObjectEventPalettes(0);
-    else
-        InitObjectEventPalettes(1);
+    FreeAllSpritePalettes();
 
     FieldEffectActiveListClear();
     StartWeather();
@@ -2201,6 +2211,7 @@ static void InitObjectEventsLocal(void)
     SetPlayerAvatarTransitionFlags(player->transitionFlags);
     ResetInitialPlayerAvatarState();
     TrySpawnObjectEvents(0, 0);
+    UpdateFollowingPokemon();
     TryRunOnWarpIntoMapScript();
 }
 

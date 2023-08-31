@@ -42,7 +42,32 @@ EverGrandeCity_PhoebesRoom_EventScript_Phoebe::
 	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	switch VAR_HALL_OF_FAMES
+	case 0, EverGrandeCity_PhoebesRoom_EventScript_Phoebe1
+	case 1, EverGrandeCity_PhoebesRoom_EventScript_Phoebe2
+	case 2, EverGrandeCity_PhoebesRoom_EventScript_Phoebe3
+	case 3, EverGrandeCity_PhoebesRoom_EventScript_Phoebe4
+	trainerbattle_no_intro TRAINER_PHOEBE_5, EverGrandeCity_PhoebesRoom_Text_Defeat
+	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_Phoebe1::
 	trainerbattle_no_intro TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_Defeat
+	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_Phoebe2::
+	trainerbattle_no_intro TRAINER_PHOEBE_2, EverGrandeCity_PhoebesRoom_Text_Defeat
+	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_Phoebe3::
+	trainerbattle_no_intro TRAINER_PHOEBE_3, EverGrandeCity_PhoebesRoom_Text_Defeat
+	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_Phoebe4::
+	trainerbattle_no_intro TRAINER_PHOEBE_4, EverGrandeCity_PhoebesRoom_Text_Defeat
 	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
 	end
 
@@ -60,14 +85,14 @@ EverGrandeCity_PhoebesRoom_EventScript_Defeated::
 
 EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
 	.string "Ahahaha!\p"
-	.string "I'm PHOEBE of the ELITE FOUR.\n"
-	.string "I did my training on MT. PYRE.\p"
+	.string "I'm Phoebe of the Elite Four.\n"
+	.string "I did my training on Mt. Pyre.\p"
 	.string "While I trained, I gained the ability\n"
-	.string "to commune with GHOST-type POKéMON.\p"
-	.string "Yes, the bond I developed with POKéMON\n"
+	.string "to commune with Ghost-type Pokémon.\p"
+	.string "Yes, the bond I developed with Pokémon\n"
 	.string "is extremely tight.\p"
 	.string "So, come on, just try and see if you can\n"
-	.string "even inflict damage on my POKéMON!$"
+	.string "even inflict damage on my Pokémon!$"
 
 EverGrandeCity_PhoebesRoom_Text_Defeat:
 	.string "Oh, darn.\n"
@@ -75,7 +100,7 @@ EverGrandeCity_PhoebesRoom_Text_Defeat:
 
 EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
 	.string "There's a definite bond between you\n"
-	.string "and your POKéMON, too.\p"
+	.string "and your Pokémon, too.\p"
 	.string "I didn't recognize it, so it's only\n"
 	.string "natural that I lost.\p"
 	.string "Yup, I'd like to see how far your bond\n"

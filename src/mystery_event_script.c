@@ -3,6 +3,7 @@
 #include "battle_tower.h"
 #include "easy_chat.h"
 #include "event_data.h"
+#include "constants/flags.h"
 #include "mail.h"
 #include "mystery_event_script.h"
 #include "pokedex.h"
@@ -31,21 +32,6 @@ EWRAM_DATA static struct ScriptContext sMysteryEventScriptContext = {0};
 
 static bool32 CheckCompatibility(u16 unk0, u32 unk1, u16 unk2, u32 version)
 {
-    // 0x1 in English FRLG, 0x2 in English RS, 0x4 in German RS
-    if (!(unk0 & 0x1))
-        return FALSE;
-
-    // Same as above
-    if (!(unk1 & 0x1))
-        return FALSE;
-
-    // 0x1 in FRLG, 0x4 in RS
-    if (!(unk2 & 0x4))
-        return FALSE;
-
-    if (!(version & VERSION_MASK))
-        return FALSE;
-
     return TRUE;
 }
 
@@ -338,7 +324,7 @@ bool8 MEScrCmd_givepokemon(struct ScriptContext *ctx)
 
         if (species != SPECIES_EGG)
         {
-            u16 pokedexNum = SpeciesToNationalPokedexNum(species);
+            u16 pokedexNum = SpeciesToNationalPokedexNum(GET_BASE_SPECIES_ID(species));
             GetSetPokedexFlag(pokedexNum, FLAG_SET_SEEN);
             GetSetPokedexFlag(pokedexNum, FLAG_SET_CAUGHT);
         }
@@ -358,9 +344,24 @@ bool8 MEScrCmd_givepokemon(struct ScriptContext *ctx)
 bool8 MEScrCmd_addtrainer(struct ScriptContext *ctx)
 {
     u32 data = ScriptReadWord(ctx) - ctx->mOffset + ctx->mScriptBase;
-    memcpy(&gSaveBlock2Ptr->frontier.ereaderTrainer, (void *)data, sizeof(gSaveBlock2Ptr->frontier.ereaderTrainer));
+    memcpy(&gSaveBlock1Ptr->frontier.ereaderTrainer[0], (void *)data, sizeof(gSaveBlock1Ptr->frontier.ereaderTrainer[0]));
     ValidateEReaderTrainer();
     StringExpandPlaceholders(gStringVar4, gText_MysteryEventNewTrainer);
+    ctx->mStatus = MEVENT_STATUS_SUCCESS;
+    return FALSE;
+}
+
+bool8 MEScrCmd_addbattledometrainer(struct ScriptContext *ctx)
+{
+    u32 data = ScriptReadWord(ctx) - ctx->mOffset + ctx->mScriptBase;
+    memcpy(&gSaveBlock1Ptr->frontier.ereaderTrainer[VarGet(VAR_DOME_TRAINER)+1], (void *)data, sizeof(gSaveBlock1Ptr->frontier.ereaderTrainer[0]));
+    ValidateEReaderTrainer();
+    VarSet(VAR_DOME_TRAINER, VarGet(VAR_DOME_TRAINER)+1);
+    if(VarGet(VAR_DOME_TRAINER)==8){
+        VarSet(VAR_DOME_TRAINER,0);
+    }
+    FlagSet(FLAG_SPECIAL_PWT);
+    StringExpandPlaceholders(gStringVar4, gText_MysteryEventNewBattleDomeTrainer);
     ctx->mStatus = MEVENT_STATUS_SUCCESS;
     return FALSE;
 }

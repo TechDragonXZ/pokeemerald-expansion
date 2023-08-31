@@ -48,7 +48,32 @@ EverGrandeCity_SidneysRoom_EventScript_Sidney::
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	switch VAR_HALL_OF_FAMES
+	case 0, EverGrandeCity_SidneysRoom_EventScript_Sidney1
+	case 1, EverGrandeCity_SidneysRoom_EventScript_Sidney2
+	case 2, EverGrandeCity_SidneysRoom_EventScript_Sidney3
+	case 3, EverGrandeCity_SidneysRoom_EventScript_Sidney4
+	trainerbattle_no_intro TRAINER_SIDNEY_5, EverGrandeCity_SidneysRoom_Text_Defeat
+	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_Sidney1::
 	trainerbattle_no_intro TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_Defeat
+	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_Sidney2::
+	trainerbattle_no_intro TRAINER_SIDNEY_2, EverGrandeCity_SidneysRoom_Text_Defeat
+	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_Sidney3::
+	trainerbattle_no_intro TRAINER_SIDNEY_3, EverGrandeCity_SidneysRoom_Text_Defeat
+	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_Sidney4::
+	trainerbattle_no_intro TRAINER_SIDNEY_4, EverGrandeCity_SidneysRoom_Text_Defeat
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
 	end
 
@@ -66,13 +91,13 @@ EverGrandeCity_SidneysRoom_EventScript_Defeated::
 
 EverGrandeCity_SidneysRoom_Text_IntroSpeech:
 	.string "Welcome, challenger!\n"
-	.string "I'm SIDNEY of the ELITE FOUR.\p"
+	.string "I'm Sidney of the Elite Four.\p"
 	.string "I like that look you're giving me.\n"
 	.string "I guess you'll give me a good match.\l"
 	.string "That's good! Looking real good!\p"
 	.string "All right! You and me, let's enjoy\n"
 	.string "a battle that can only be staged\l"
-	.string "here in the POKéMON LEAGUE!$"
+	.string "here in the Pokémon League!$"
 
 EverGrandeCity_SidneysRoom_Text_Defeat:
 	.string "Well, how do you like that? I lost!\n"

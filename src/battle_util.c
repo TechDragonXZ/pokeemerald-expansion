@@ -667,7 +667,7 @@ void HandleAction_Run(void)
         }
 
         gBattleOutcome |= B_OUTCOME_LINK_BATTLE_RAN;
-        gSaveBlock2Ptr->frontier.disableRecordBattle = TRUE;
+        gSaveBlock1Ptr->frontier.disableRecordBattle = TRUE;
     }
     else
     {
@@ -4291,6 +4291,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     {
                         gBattleWeather = (B_WEATHER_SUN_PERMANENT | B_WEATHER_SUN_TEMPORARY);
                         gBattleScripting.animArg1 = B_ANIM_SUN_CONTINUES;
+                        effect++;
+                    }
+                    break;
+                case WEATHER_SNOW:
+                    if (!(gBattleWeather & B_WEATHER_HAIL))
+                    {
+                        gBattleWeather = B_WEATHER_HAIL;
+                        gBattleScripting.animArg1 = B_ANIM_HAIL_CONTINUES;
+                        gBattleScripting.battler = battler;
                         effect++;
                     }
                     break;
@@ -9334,13 +9343,6 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
         break;
     }
 
-    // The offensive stats of a Player's Pokémon are boosted by x1.1 (+10%) if they have the 1st badge and 7th badges.
-    // Having the 1st badge boosts physical attack while having the 7th badge boosts special attack.
-    if (ShouldGetStatBadgeBoost(FLAG_BADGE01_GET, battlerAtk) && IS_MOVE_PHYSICAL(move))
-        MulModifier(&modifier, UQ_4_12(1.1));
-    if (ShouldGetStatBadgeBoost(FLAG_BADGE07_GET, battlerAtk) && IS_MOVE_SPECIAL(move))
-        MulModifier(&modifier, UQ_4_12(1.1));
-
     return ApplyModifier(modifier, atkStat);
 }
 
@@ -9497,13 +9499,6 @@ static u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, 
     // snow def boost for ice types
     if (IS_BATTLER_OF_TYPE(battlerDef, TYPE_ICE) && gBattleWeather & B_WEATHER_SNOW && WEATHER_HAS_EFFECT && usesDefStat)
         MulModifier(&modifier, UQ_4_12(1.5));
-
-    // The defensive stats of a Player's Pokémon are boosted by x1.1 (+10%) if they have the 5th badge and 7th badges.
-    // Having the 5th badge boosts physical defense while having the 7th badge boosts special defense.
-    if (ShouldGetStatBadgeBoost(FLAG_BADGE05_GET, battlerDef) && IS_MOVE_PHYSICAL(move))
-        MulModifier(&modifier, UQ_4_12(1.1));
-    if (ShouldGetStatBadgeBoost(FLAG_BADGE07_GET, battlerDef) && IS_MOVE_SPECIAL(move))
-        MulModifier(&modifier, UQ_4_12(1.1));
 
     return ApplyModifier(modifier, defStat);
 }
@@ -10045,7 +10040,7 @@ bool32 CanMegaEvolve(u8 battlerId)
     u8 partnerPosition = GetBattlerPosition(BATTLE_PARTNER(battlerId));
     struct MegaEvolutionData *mega = &(((struct ChooseMoveStruct *)(&gBattleResources->bufferA[gActiveBattler][4]))->mega);
 
-    // Check if Player has a Mega Ring
+    // Check if Player has a Mega Bracelet
     if ((GetBattlerPosition(battlerId) == B_POSITION_PLAYER_LEFT || (!(gBattleTypeFlags & BATTLE_TYPE_MULTI) && GetBattlerPosition(battlerId) == B_POSITION_PLAYER_RIGHT))
      && !CheckBagHasItem(ITEM_MEGA_RING, 1))
         return FALSE;

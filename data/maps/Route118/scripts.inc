@@ -1,9 +1,11 @@
 .set LOCALID_STEVEN, 19
+.set LOCALID_LATIAS, 23
 
 Route118_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route118_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, Route118_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route118_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, Route118_OnWarp
 	.byte 0
 
 Route118_OnTransition:
@@ -20,7 +22,28 @@ Route118_OnLoad:
 
 Route118_OnFrame:
 	map_script_2 VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_EndEventAndCleanup_1
+	map_script_2 VAR_ROUTE118_STATE, 3, LatiEventEnd
 	.2byte 0
+
+Route118_OnWarp:
+	map_script_2 VAR_ROUTE118_STATE, 3, Route118_EventScript_ChangeDir
+	.2byte 0
+
+Route118_EventScript_ChangeDir::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	end
+
+LatiEventEnd::
+	lock
+	msgbox Route118_Text_StevenGoodbye, MSGBOX_DEFAULT
+	closemessage
+	applymovement 22, Route118_Movement_StevenExitFinal
+	waitmovement 0
+	removeobject 22
+	release
+	setvar VAR_ROUTE118_STATE, 4
+	clearflag FLAG_LANDMARK_SOUTHERN_ISLAND
+	end
 
 Route118_EventScript_GoodRodFisherman::
 	lock
@@ -90,18 +113,39 @@ Route118_EventScript_StevenTrigger2::
 	end
 
 Route118_EventScript_StevenTrigger::
+	addobject LOCALID_LATIAS
 	playse SE_LEDGE
 	applymovement LOCALID_STEVEN, Route118_Movement_StevenJumpLedge
 	waitmovement 0
 	delay 30
 	msgbox Route118_Text_StevenQuestions, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq VAR_0x8008, 0, Route118_EventScript_StevenExit0
-	call_if_eq VAR_0x8008, 1, Route118_EventScript_StevenExit1
-	call_if_eq VAR_0x8008, 2, Route118_EventScript_StevenExit2
-	setvar VAR_ROUTE118_STATE, 1
-	removeobject LOCALID_STEVEN
-	releaseall
+	playmoncry SPECIES_LATIAS, 0
+	delay 90
+	playse SE_PIN
+	applymovement LOCALID_STEVEN, Common_Movement_ExclamationMark
+	delay 30
+	compare VAR_0x8008, 0
+	call_if_eq Route118_EventScript_StevenExit0
+	compare VAR_0x8008, 1
+	call_if_eq Route118_EventScript_StevenExit1
+	compare VAR_0x8008, 2
+	call_if_eq Route118_EventScript_StevenExit2
+	applymovement LOCALID_LATIAS, Route118_Movement_LatiasEnter
+	waitmovement 0
+	playmoncry SPECIES_LATIAS, 0
+	delay 90
+	msgbox Route118_Text_StevenLatias1, MSGBOX_DEFAULT
+	compare VAR_0x8008, 0
+	call_if_eq Route118_EventScript_StevenTurn0
+	compare VAR_0x8008, 1
+	call_if_eq Route118_EventScript_StevenTurn1
+	compare VAR_0x8008, 2
+	call_if_eq Route118_EventScript_StevenTurn1
+	msgbox Route118_Text_StevenLatias2, MSGBOX_DEFAULT
+	clearflag FLAG_HIDE_SOUTHERN_ISLAND_EON_STONE
+	setflag FLAG_SOUTHERNISLAND_SHIP
+	warp MAP_SOUTHERN_ISLAND_EXTERIOR, 255, 15, 20
 	end
 
 Route118_EventScript_StevenExit0::
@@ -111,20 +155,45 @@ Route118_EventScript_StevenExit0::
 	return
 
 Route118_EventScript_StevenExit1::
-	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerWatchStevenExit
+	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_TurnToStevenLeft
 	applymovement LOCALID_STEVEN, Route118_Movement_StevenExit1
 	waitmovement 0
 	return
 
 Route118_EventScript_StevenExit2::
-	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerWatchStevenExit
+	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_TurnToStevenLeft
 	applymovement LOCALID_STEVEN, Route118_Movement_StevenExit2
 	waitmovement 0
 	return
 
+Route118_EventScript_StevenTurn0::
+	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerTurnsRight
+	applymovement 19, Route118_Movement_PlayerTurnsLeft
+	waitmovement 0
+	return
+
+Route118_EventScript_StevenTurn1::
+	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerTurnsLeft
+	applymovement 19, Route118_Movement_PlayerTurnsRight
+	waitmovement 0
+	return
+
+Route118_Movement_PlayerTurnsRight::
+	walk_in_place_right
+	step_end
+
+Route118_Movement_PlayerTurnsLeft::
+	walk_in_place_left
+	step_end
+
 Route118_Movement_PlayerWatchStevenExit:
 	delay_16
 	walk_in_place_faster_right
+	step_end
+
+Route118_Movement_TurnToStevenLeft:
+	delay_16
+	walk_in_place_faster_left
 	step_end
 
 Route118_Movement_StevenApproachLedge0:
@@ -141,33 +210,30 @@ Route118_Movement_StevenJumpLedge:
 	walk_down
 	step_end
 
+Route118_Movement_LatiasEnter:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
 Route118_Movement_StevenExit0:
 	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_down
 	step_end
 
 Route118_Movement_StevenExit1:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_left
+	walk_down
 	step_end
 
 Route118_Movement_StevenExit2:
-	walk_right
+	walk_left
+	walk_down
+	step_end
+
+Route118_Movement_StevenExitFinal:
 	walk_right
 	walk_right
 	walk_right
@@ -245,33 +311,58 @@ Route118_EventScript_Deandre::
 	end
 
 Route118_Text_StevenQuestions:
-	.string "STEVEN: Hi, {PLAYER}{KUN}!\p"
-	.string "It's me, STEVEN!\n"
-	.string "We met in the cave near DEWFORD.\p"
-	.string "Have you met many kinds of POKéMON\n"
+	.string "Steven: Hi, {PLAYER}{KUN}!\p"
+	.string "It's me, Steven!\n"
+	.string "We met in the cave near Dewford.\p"
+	.string "Have you met many kinds of Pokémon\n"
 	.string "since I last saw you?\p"
-	.string "There are many, many kinds of POKéMON\n"
+	.string "There are many, many kinds of Pokémon\n"
 	.string "in this wide world of ours.\p"
 	.string "If you wanted to raise only your\n"
 	.string "favorites, that's fine.\p"
 	.string "Perhaps you find it more fun to raise\n"
-	.string "all sorts of POKéMON.\p"
-	.string "As a TRAINER of POKéMON,\n"
+	.string "all sorts of Pokémon.\p"
+	.string "As a Trainer of Pokémon,\n"
 	.string "what do you think?\p"
 	.string "Of course, it's not any of my business.\p"
 	.string "It would be nice if we were to meet\n"
 	.string "again somewhere.$"
 
+Route118_Text_StevenLatias1:
+	.string "…Hm?\p"
+	.string "Latias!!\p"
+	.string "Do you…want us to soar somewhere\n"
+	.string "with you?$"
+
+Route118_Text_StevenLatias2:
+	.string "{PLAYER}{KUN}.\p"
+	.string "Come with me.\p"
+	.string "Latias…\n"
+	.string "I believe that it sought us out for\l"
+	.string "help.\p"
+	.string "If that's the case, let's go!$"
+
+Route118_Text_StevenGoodbye:
+	.string "Thank you for your help {PLAYER}{KUN}.\p"
+	.string "In the end you were a far greater\n"
+	.string "help than I expected you might be.\p"
+	.string "I expect that you and your team will\n"
+	.string "be able to best both Route 119 ahead\l"
+	.string "and even the Fortree Gym beyond that.\p"
+	.string "I'll be curious to see how much stronger\n"
+	.string "you might grow by the next time we meet.\p"
+	.string "Until then, {PLAYER}{KUN}.$"
+
 Route118_Text_YouAgreeGoodRodIsGood:
 	.string "Hmm!\n"
-	.string "A GOOD ROD is really good!\p"
+	.string "A Good Rod is really good!\p"
 	.string "Wouldn't you agree?$"
 
 Route118_Text_IdenticalMindsTakeThis:
 	.string "Hmm!\n"
 	.string "We're of identical minds!\p"
 	.string "Hmm!\n"
-	.string "Take this GOOD ROD!$"
+	.string "Take this Good Rod!$"
 
 Route118_Text_TryYourLuckFishing:
 	.string "Wherever there's water, try your luck\n"
@@ -281,21 +372,21 @@ Route118_Text_DontYouLikeToFish:
 	.string "Don't you like to fish?$"
 
 Route118_Text_TryCatchingMonWithGoodRod:
-	.string "Try catching all sorts of POKéMON\n"
-	.string "with your GOOD ROD.$"
+	.string "Try catching all sorts of Pokémon\n"
+	.string "with your Good Rod.$"
 
 Route118_Text_CanCrossRiversWithSurf:
 	.string "Even if there isn't a boat, you can\n"
 	.string "cross rivers and the sea if you have\l"
-	.string "a POKéMON that knows SURF.\p"
-	.string "POKéMON can be counted on to do so\n"
+	.string "a Pokémon that knows Surf.\p"
+	.string "Pokémon can be counted on to do so\n"
 	.string "much!$"
 
 Route118_Text_RouteSignMauville:
-	.string "ROUTE 118\n"
-	.string "{LEFT_ARROW} MAUVILLE CITY$"
+	.string "Route 118\n"
+	.string "{LEFT_ARROW} Mauville City$"
 
 Route118_Text_RouteSign119:
-	.string "ROUTE 118\n"
-	.string "{UP_ARROW} ROUTE 119$"
+	.string "Route 118\n"
+	.string "{UP_ARROW} Route 119$"
 

@@ -142,7 +142,11 @@ static void AlignFishingAnimationFrames(void);
 
 static u8 TrySpinPlayerForWarp(struct ObjectEvent *, s16 *);
 
-static bool8 (*const sForcedMovementTestFuncs[NUM_FORCED_MOVEMENTS])(u8) =
+static void PlayerGoSlow(u8 direction);
+
+// .rodata
+
+static bool8 (*const sForcedMovementTestFuncs[])(u8) =
 {
     MetatileBehavior_IsTrickHouseSlipperyFloor,
     MetatileBehavior_IsIce_2,
@@ -232,7 +236,7 @@ static bool8 (*const sArrowWarpMetatileBehaviorChecks[])(u8) =
     [DIR_EAST - 1]  = MetatileBehavior_IsEastArrowWarp,
 };
 
-static const u8 sRivalAvatarGfxIds[][2] =
+static const u16 sRivalAvatarGfxIds[][2] =
 {
     [PLAYER_AVATAR_STATE_NORMAL]     = {OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL,     OBJ_EVENT_GFX_RIVAL_MAY_NORMAL},
     [PLAYER_AVATAR_STATE_MACH_BIKE]  = {OBJ_EVENT_GFX_RIVAL_BRENDAN_MACH_BIKE,  OBJ_EVENT_GFX_RIVAL_MAY_MACH_BIKE},
@@ -244,7 +248,7 @@ static const u8 sRivalAvatarGfxIds[][2] =
     [PLAYER_AVATAR_STATE_WATERING]   = {OBJ_EVENT_GFX_BRENDAN_WATERING,         OBJ_EVENT_GFX_MAY_WATERING}
 };
 
-static const u8 sPlayerAvatarGfxIds[][2] =
+static const u16 sPlayerAvatarGfxIds[][2] =
 {
     [PLAYER_AVATAR_STATE_NORMAL]     = {OBJ_EVENT_GFX_BRENDAN_NORMAL,     OBJ_EVENT_GFX_MAY_NORMAL},
     [PLAYER_AVATAR_STATE_MACH_BIKE]  = {OBJ_EVENT_GFX_BRENDAN_MACH_BIKE,  OBJ_EVENT_GFX_MAY_MACH_BIKE},
@@ -626,20 +630,34 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
             return;
         }
     }
-
+    
+    gPlayerAvatar.creeping = FALSE;
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
     {
-        // same speed as running
-        PlayerWalkFast(direction);
+        if (FlagGet(FLAG_SYS_DEXNAV_SEARCH) && (heldKeys & A_BUTTON))
+        {
+            gPlayerAvatar.creeping = TRUE;
+            PlayerGoSlow(direction);
+        }
+        else
+        {
+            // speed 2 is fast, same speed as running
+            PlayerWalkFast(direction);
+        }
         return;
     }
 
-    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
+    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON || gSaveBlock2Ptr->autoRun) && FlagGet(FLAG_SYS_B_DASH)
      && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0)
     {
         PlayerRun(direction);
         gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
         return;
+    }
+    else if (FlagGet(FLAG_SYS_DEXNAV_SEARCH) && (heldKeys & A_BUTTON))
+    {
+        gPlayerAvatar.creeping = TRUE;
+        PlayerGoSlow(direction);
     }
     else
     {
@@ -929,12 +947,12 @@ static bool8 PlayerCheckIfAnimFinishedOrInactive(void)
 
 static void PlayerSetCopyableMovement(u8 movement)
 {
-    gObjectEvents[gPlayerAvatar.objectEventId].playerCopyableMovement = movement;
+    gObjectEvents[gPlayerAvatar.objectEventId].extra.playerCopyableMovement = movement;
 }
 
 u8 PlayerGetCopyableMovement(void)
 {
-    return gObjectEvents[gPlayerAvatar.objectEventId].playerCopyableMovement;
+    return gObjectEvents[gPlayerAvatar.objectEventId].extra.playerCopyableMovement;
 }
 
 static void PlayerForceSetHeldMovement(u8 movementActionId)
@@ -949,6 +967,12 @@ void PlayerSetAnimId(u8 movementActionId, u8 copyableMovement)
         PlayerSetCopyableMovement(copyableMovement);
         ObjectEventSetHeldMovement(&gObjectEvents[gPlayerAvatar.objectEventId], movementActionId);
     }
+}
+
+// slow
+static void PlayerGoSlow(u8 direction)
+{
+    PlayerSetAnimId(GetWalkSlowMovementAction(direction), 2);
 }
 
 void PlayerWalkNormal(u8 direction)
@@ -1212,32 +1236,32 @@ void StopPlayerAvatar(void)
     }
 }
 
-u8 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
+u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
 {
     return sRivalAvatarGfxIds[state][gender];
 }
 
-u8 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
+u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
 {
     return sPlayerAvatarGfxIds[state][gender];
 }
 
-u8 GetFRLGAvatarGraphicsIdByGender(u8 gender)
+u16 GetFRLGAvatarGraphicsIdByGender(u8 gender)
 {
     return sFRLGAvatarGfxIds[gender];
 }
 
-u8 GetRSAvatarGraphicsIdByGender(u8 gender)
+u16 GetRSAvatarGraphicsIdByGender(u8 gender)
 {
     return sRSAvatarGfxIds[gender];
 }
 
-u8 GetPlayerAvatarGraphicsIdByStateId(u8 state)
+u16 GetPlayerAvatarGraphicsIdByStateId(u8 state)
 {
     return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gPlayerAvatar.gender);
 }
 
-u8 unref_GetRivalAvatarGenderByGraphicsId(u8 gfxId)
+u8 unref_GetRivalAvatarGenderByGraphicsId(u16 gfxId)
 {
     switch (gfxId)
     {
@@ -1255,7 +1279,7 @@ u8 unref_GetRivalAvatarGenderByGraphicsId(u8 gfxId)
     }
 }
 
-u8 GetPlayerAvatarGenderByGraphicsId(u8 gfxId)
+u8 GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
 {
     switch (gfxId)
     {
@@ -1283,7 +1307,7 @@ bool8 PartyHasMonWithSurf(void)
         {
             if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
                 break;
-            if (MonKnowsMove(&gPlayerParty[i], MOVE_SURF))
+            if (CanLearnTeachableMove(GetMonData(&gPlayerParty[i], MON_DATA_SPECIES), ItemIdToBattleMoveId(ITEM_HM03)))
                 return TRUE;
         }
     }
@@ -1324,7 +1348,7 @@ void SetPlayerAvatarStateMask(u8 flags)
     gPlayerAvatar.flags |= flags;
 }
 
-static u8 GetPlayerAvatarStateTransitionByGraphicsId(u8 graphicsId, u8 gender)
+static u8 GetPlayerAvatarStateTransitionByGraphicsId(u16 graphicsId, u8 gender)
 {
     u8 i;
 
@@ -1336,7 +1360,7 @@ static u8 GetPlayerAvatarStateTransitionByGraphicsId(u8 graphicsId, u8 gender)
     return PLAYER_AVATAR_FLAG_ON_FOOT;
 }
 
-u8 GetPlayerAvatarGraphicsIdByCurrentState(void)
+u16 GetPlayerAvatarGraphicsIdByCurrentState(void)
 {
     u8 i;
     u8 flags = gPlayerAvatar.flags;
@@ -1349,7 +1373,7 @@ u8 GetPlayerAvatarGraphicsIdByCurrentState(void)
     return 0;
 }
 
-void SetPlayerAvatarExtraStateTransition(u8 graphicsId, u8 transitionFlag)
+void SetPlayerAvatarExtraStateTransition(u16 graphicsId, u8 transitionFlag)
 {
     u8 stateFlag = GetPlayerAvatarStateTransitionByGraphicsId(graphicsId, gPlayerAvatar.gender);
 
@@ -1663,6 +1687,7 @@ static void Task_WaitStopSurfing(u8 taskId)
         gPlayerAvatar.preventStep = FALSE;
         UnlockPlayerFieldControls();
         DestroySprite(&gSprites[playerObjEvent->fieldEffectSpriteId]);
+        playerObjEvent->triggerGroundEffectsOnMove = TRUE;
         DestroyTask(taskId);
     }
 }

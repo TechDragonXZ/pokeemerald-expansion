@@ -17,8 +17,8 @@ SkyPillar_Top_EventScript_TryRemoveRayquaza::
 	return
 
 SkyPillar_Top_OnTransition:
-	call_if_lt VAR_SKY_PILLAR_STATE, 2, SkyPillar_Top_EventScript_SetCleanLayout
-	call_if_ge VAR_SKY_PILLAR_STATE, 2, SkyPillar_Top_EventScript_TryShowRayquaza
+	call_if_lt VAR_SKY_PILLAR_STATE, 4, SkyPillar_Top_EventScript_SetCleanLayout
+	call_if_ge VAR_SKY_PILLAR_STATE, 4, SkyPillar_Top_EventScript_TryShowRayquaza
 	end
 
 SkyPillar_Top_EventScript_SetCleanLayout::
@@ -181,5 +181,5 @@ SkyPillar_Top_Movement_CameraPanDown:
 	step_end
 
 SkyPillar_Top_Text_RayquazaFlewOff:
-	.string "The awakened RAYQUAZA flew off…$"
+	.string "The awakened Rayquaza flew off…$"
 

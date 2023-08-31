@@ -4,6 +4,7 @@
 #include "decompress.h"
 #include "decoration.h"
 #include "decoration_inventory.h"
+#include "event_data.h" 
 #include "event_object_movement.h"
 #include "field_player_avatar.h"
 #include "field_screen_effect.h"
@@ -34,6 +35,7 @@
 #include "text_window.h"
 #include "tv.h"
 #include "constants/decorations.h"
+#include "constants/event_objects.h"
 #include "constants/items.h"
 #include "constants/metatile_behaviors.h"
 #include "constants/rgb.h"
@@ -154,6 +156,177 @@ static void Task_HandleShopMenuBuy(u8 taskId);
 static void Task_HandleShopMenuSell(u8 taskId);
 static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, struct ListMenu *list);
 static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y);
+
+static const u16 sShopInventory_ZeroBadges[] = {
+    ITEM_POKE_BALL,
+    ITEM_POTION,
+    ITEM_ANTIDOTE,
+    ITEM_BURN_HEAL,
+    ITEM_ICE_HEAL,
+    ITEM_AWAKENING,
+    ITEM_PARALYZE_HEAL,
+    ITEM_REVIVE,
+    ITEM_NONE
+};
+
+static const u16 sShopInventory_OneBadge[] = {
+    ITEM_POKE_BALL,
+    ITEM_GREAT_BALL,
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_ANTIDOTE,
+    ITEM_BURN_HEAL,
+    ITEM_ICE_HEAL,
+    ITEM_AWAKENING,
+    ITEM_PARALYZE_HEAL,
+    ITEM_REVIVE,
+    ITEM_NONE
+};
+
+static const u16 sShopInventory_TwoBadges[] = {
+    ITEM_POKE_BALL,
+    ITEM_GREAT_BALL,
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_ANTIDOTE,
+    ITEM_BURN_HEAL,
+    ITEM_ICE_HEAL,
+    ITEM_AWAKENING,
+    ITEM_PARALYZE_HEAL,
+    ITEM_REVIVE,
+    ITEM_POKE_DOLL,
+    ITEM_NONE
+};
+
+static const u16 sShopInventory_ThreeBadges[] = {
+    ITEM_POKE_BALL,
+    ITEM_GREAT_BALL,
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_ANTIDOTE,
+    ITEM_BURN_HEAL,
+    ITEM_ICE_HEAL,
+    ITEM_AWAKENING,
+    ITEM_PARALYZE_HEAL,
+    ITEM_REVIVE,
+    ITEM_REPEL,
+    ITEM_POKE_DOLL,
+    ITEM_NONE
+};
+
+static const u16 sShopInventory_FourBadges[] = {
+    ITEM_POKE_BALL,
+    ITEM_GREAT_BALL,
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_HYPER_POTION,
+    ITEM_ANTIDOTE,
+    ITEM_BURN_HEAL,
+    ITEM_ICE_HEAL,
+    ITEM_AWAKENING,
+    ITEM_PARALYZE_HEAL,
+    ITEM_REVIVE,
+    ITEM_REPEL,
+    ITEM_POKE_DOLL,
+    ITEM_NONE
+};
+
+static const u16 sShopInventory_FiveBadges[] = {
+    ITEM_POKE_BALL,
+    ITEM_GREAT_BALL,
+    ITEM_ULTRA_BALL,
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_HYPER_POTION,
+    ITEM_ANTIDOTE,
+    ITEM_BURN_HEAL,
+    ITEM_ICE_HEAL,
+    ITEM_AWAKENING,
+    ITEM_PARALYZE_HEAL,
+    ITEM_REVIVE,
+    ITEM_REPEL,
+    ITEM_SUPER_REPEL,
+    ITEM_POKE_DOLL,
+    ITEM_NONE
+};
+
+static const u16 sShopInventory_SixBadges[] = {
+    ITEM_POKE_BALL,
+    ITEM_GREAT_BALL,
+    ITEM_ULTRA_BALL,
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_HYPER_POTION,
+    ITEM_ANTIDOTE,
+    ITEM_BURN_HEAL,
+    ITEM_ICE_HEAL,
+    ITEM_AWAKENING,
+    ITEM_PARALYZE_HEAL,
+    ITEM_FULL_HEAL,
+    ITEM_REVIVE,
+    ITEM_REPEL,
+    ITEM_SUPER_REPEL,
+    ITEM_POKE_DOLL,
+    ITEM_NONE
+};
+
+static const u16 sShopInventory_SevenBadges[] = {
+    ITEM_POKE_BALL,
+    ITEM_GREAT_BALL,
+    ITEM_ULTRA_BALL,
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_HYPER_POTION,
+    ITEM_MAX_POTION,
+    ITEM_ANTIDOTE,
+    ITEM_BURN_HEAL,
+    ITEM_ICE_HEAL,
+    ITEM_AWAKENING,
+    ITEM_PARALYZE_HEAL,
+    ITEM_FULL_HEAL,
+    ITEM_REVIVE,
+    ITEM_REPEL,
+    ITEM_SUPER_REPEL,
+    ITEM_MAX_REPEL,
+    ITEM_POKE_DOLL,
+    ITEM_NONE
+};
+
+static const u16 sShopInventory_EightBadges[] = {
+    ITEM_POKE_BALL,
+    ITEM_GREAT_BALL,
+    ITEM_ULTRA_BALL,
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_HYPER_POTION,
+    ITEM_MAX_POTION,
+    ITEM_FULL_RESTORE,
+    ITEM_ANTIDOTE,
+    ITEM_BURN_HEAL,
+    ITEM_ICE_HEAL,
+    ITEM_AWAKENING,
+    ITEM_PARALYZE_HEAL,
+    ITEM_FULL_HEAL,
+    ITEM_REVIVE,
+    ITEM_REPEL,
+    ITEM_SUPER_REPEL,
+    ITEM_MAX_REPEL,
+    ITEM_POKE_DOLL,
+    ITEM_NONE
+};
+
+static const u16* const sShopInventories[] =
+{
+    sShopInventory_ZeroBadges,
+    sShopInventory_OneBadge,
+    sShopInventory_TwoBadges,
+    sShopInventory_ThreeBadges,
+    sShopInventory_FourBadges,
+    sShopInventory_FiveBadges,
+    sShopInventory_SixBadges,
+    sShopInventory_SevenBadges,
+    sShopInventory_EightBadges
+};
 
 static const struct YesNoFuncTable sShopPurchaseYesNoFuncs =
 {
@@ -374,14 +547,31 @@ static void SetShopMenuCallback(void (* callback)(void))
     sMartInfo.callback = callback;
 }
 
+static u8 GetNumberOfBadges(void)
+{
+    u16 badgeFlag;
+    u8 count = 0;
+
+    for (badgeFlag = FLAG_BADGE01_GET; badgeFlag < FLAG_BADGE01_GET + NUM_BADGES; badgeFlag++)
+    {
+        if (FlagGet(badgeFlag))
+            count++;
+    }
+
+    return count;
+}
+
 static void SetShopItemsForSale(const u16 *items)
 {
     u16 i = 0;
+    u8 badgeCount = GetNumberOfBadges();
 
-    sMartInfo.itemList = items;
+    if (items == NULL)
+        sMartInfo.itemList = sShopInventories[badgeCount];
+    else
+        sMartInfo.itemList = items;
+
     sMartInfo.itemCount = 0;
-
-    // Read items until ITEM_NONE / DECOR_NONE is reached
     while (sMartInfo.itemList[i])
     {
         sMartInfo.itemCount++;
@@ -579,7 +769,10 @@ static void BuyMenuBuildListMenuTemplate(void)
 static void BuyMenuSetListEntry(struct ListMenuItem *menuItem, u16 item, u8 *name)
 {
     if (sMartInfo.martType == MART_TYPE_NORMAL)
-        CopyItemName(item, name);
+        if (ItemId_GetPocket(item) != POCKET_TM_HM)
+            CopyItemName(item, name);
+        else
+            StringCopy(name, gMoveNames[ItemIdToBattleMoveId(item)]);
     else
         StringCopy(name, gDecorations[item].name);
 
@@ -868,7 +1061,8 @@ static void BuyMenuCollectObjectEventData(void)
         {
             u8 objEventId = GetObjectEventIdByXY(facingX - 4 + x, facingY - 2 + y);
 
-            if (objEventId != OBJECT_EVENTS_COUNT)
+            // skip if invalid or an overworld pokemon that is not following the player
+            if (objEventId != OBJECT_EVENTS_COUNT && !(gObjectEvents[objEventId].active && gObjectEvents[objEventId].graphicsId == OBJ_EVENT_GFX_OW_MON && gObjectEvents[objEventId].localId != OBJ_EVENT_ID_FOLLOWER))
             {
                 sShopData->viewportObjects[numObjects][OBJ_EVENT_ID] = objEventId;
                 sShopData->viewportObjects[numObjects][X_COORD] = x;
@@ -902,7 +1096,12 @@ static void BuyMenuDrawObjectEvents(void)
     u8 i;
     u8 spriteId;
     const struct ObjectEventGraphicsInfo *graphicsInfo;
+    u8 weatherTemp = gWeatherPtr->palProcessingState;
 
+    // This function runs during fadeout, so the weather palette processing state must be temporarily changed,
+    // so that time-blending will work properly
+    if (weatherTemp == WEATHER_PAL_STATE_SCREEN_FADING_OUT)
+        gWeatherPtr->palProcessingState = WEATHER_PAL_STATE_IDLE;
     for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
     {
         if (sShopData->viewportObjects[i][OBJ_EVENT_ID] == OBJECT_EVENTS_COUNT)
@@ -925,6 +1124,9 @@ static void BuyMenuDrawObjectEvents(void)
 
         StartSpriteAnim(&gSprites[spriteId], sShopData->viewportObjects[i][ANIM_NUM]);
     }
+
+    gWeatherPtr->palProcessingState = weatherTemp; // restore weather state
+    CpuFastCopy(gPlttBufferFaded + 16*16, gPlttBufferUnfaded + 16*16, PLTT_BUFFER_SIZE);
 }
 
 static bool8 BuyMenuCheckIfObjectEventOverlapsMenuBg(s16 *object)
@@ -997,6 +1199,10 @@ static void Task_BuyMenu(u8 taskId)
             else if (!IsEnoughMoney(&gSaveBlock1Ptr->money, sShopData->totalCost))
             {
                 BuyMenuDisplayMessage(taskId, gText_YouDontHaveMoney, BuyMenuReturnToItemList);
+            }
+            else if (ItemId_GetPocket(itemId) == POCKET_TM_HM && CheckBagHasItem(itemId, 1))
+            {
+                BuyMenuDisplayMessage(taskId, gText_YouAlreadyHaveThis, BuyMenuReturnToItemList);
             }
             else
             {
@@ -1160,10 +1366,17 @@ static void Task_ReturnToItemListAfterItemPurchase(u8 taskId)
     if (JOY_NEW(A_BUTTON | B_BUTTON))
     {
         PlaySE(SE_SELECT);
-
-        // Purchasing 10+ Poke Balls gets the player a Premier Ball
-        if (tItemId == ITEM_POKE_BALL && tItemCount >= 10 && AddBagItem(ITEM_PREMIER_BALL, 1) == TRUE)
-            BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBall, BuyMenuReturnToItemList);
+        if ((ItemId_GetPocket(tItemId) == POCKET_POKE_BALLS) && tItemCount > 9 && AddBagItem(ITEM_PREMIER_BALL, tItemCount / 10) == TRUE)
+        {
+            if (tItemCount > 19)
+            {
+                BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBalls, BuyMenuReturnToItemList);
+            }
+            else
+            {
+                BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBall, BuyMenuReturnToItemList);
+            }
+        }
         else
             BuyMenuReturnToItemList(taskId);
     }

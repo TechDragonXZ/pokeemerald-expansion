@@ -3,6 +3,7 @@ ShoalCave_LowTideEntranceRoom_MapScripts::
 	.byte 0
 
 ShoalCave_LowTideEntranceRoom_OnTransition:
+	setflag FLAG_VISITED_ROUTE125
 	special UpdateShoalTideFlag
 	goto_if_set FLAG_SYS_SHOAL_TIDE, ShoalCave_LowTideEntranceRoom_EventScript_SetHighTide
 	goto ShoalCave_LowTideEntranceRoom_EventScript_SetLowTide
@@ -36,6 +37,16 @@ ShoalCave_LowTideEntranceRoom_EventScript_ShellBellExpert::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox ShoalCave_LowTideEntranceRoom_Text_ExplainShellBell, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_2
+	goto_if_set FLAG_ITEM_SLOWBRONITE, ShoalCave_LowTideEntranceRoom_EventScript_End
+	msgbox ShoalCave_LowTideEntranceRoom_Text_Slowbronite, MSGBOX_DEFAULT
+	giveitem ITEM_SLOWBRONITE
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	setflag FLAG_ITEM_SLOWBRONITE
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_End::
 	release
 	end
 

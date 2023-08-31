@@ -3026,9 +3026,9 @@ static const u8 sEnigmaBerryEReaderDesc[] = _(
 
 // TMs/HMs
 static const u8 sTM01Desc[] = _(
-    "Powerful, but makes\n"
-    "the user flinch if\n"
-    "hit by the foe.");
+    "Sharpens claws to\n"
+    "boost attack and\n"
+    "accuracy.");
 
 static const u8 sTM02Desc[] = _(
     "Hooks and slashes\n"
@@ -3036,9 +3036,9 @@ static const u8 sTM02Desc[] = _(
     "sharp claws.");
 
 static const u8 sTM03Desc[] = _(
-    "Generates an\n"
-    "ultrasonic wave\n"
-    "that may confuse.");
+    "Generates a psychic\n"
+    "wave. Does physical\n"
+    "damage.");
 
 static const u8 sTM04Desc[] = _(
     "Raises Sp. Atk and\n"
@@ -3066,9 +3066,9 @@ static const u8 sTM08Desc[] = _(
     "Attack & Defense.");
 
 static const u8 sTM09Desc[] = _(
-    "Shoots 2 to 5 seeds\n"
-    "in a row to strike\n"
-    "the foe.");
+    "The attack power is\n"
+    "is doubed if the \n"
+    "foe is poisoned.");
 
 static const u8 sTM10Desc[] = _(
     "The attack power\n"
@@ -3116,9 +3116,9 @@ static const u8 sTM18Desc[] = _(
     "for 5 turns.");
 
 static const u8 sTM19Desc[] = _(
-    "Recovers half the\n"
-    "HP of the damage \n"
-    "this move inflicts.");
+    "The user lands to\n"
+    "restore half of\n"
+    "their HP.");
 
 static const u8 sTM20Desc[] = _(
     "Prevents status\n"
@@ -3136,9 +3136,9 @@ static const u8 sTM22Desc[] = _(
     "attacks next turn.");
 
 static const u8 sTM23Desc[] = _(
-    "Slams the foe with\n"
-    "a hard tail. It may\n"
-    "lower Defense.");
+    "Throws a projectile\n"
+    "at the foe. Flying \n"
+    "Pokémon fall down.");
 
 static const u8 sTM24Desc[] = _(
     "A powerful electric\n"
@@ -3191,9 +3191,9 @@ static const u8 sTM33Desc[] = _(
     "physical attacks.");
 
 static const u8 sTM34Desc[] = _(
-    "Zaps the foe with a\n"
-    "jolt of electricity\n"
-    "that never misses.");
+    "Creates a giant\n"
+    "sludge wave. It may\n"
+    "poison the foe.");
 
 static const u8 sTM35Desc[] = _(
     "Looses a stream of\n"
@@ -3236,9 +3236,9 @@ static const u8 sTM42Desc[] = _(
     "or paralyzed.");
 
 static const u8 sTM43Desc[] = _(
-    "Adds an effect to\n"
-    "attack depending\n"
-    "on the location.");
+    "The user attacks\n"
+    "with a cloak of\n"
+    "fire. Raises speed.");
 
 static const u8 sTM44Desc[] = _(
     "The user sleeps for\n"
@@ -3256,174 +3256,274 @@ static const u8 sTM46Desc[] = _(
     "foe's held item.");
 
 static const u8 sTM47Desc[] = _(
-    "Spreads hard-\n"
-    "edged wings and\n"
-    "slams into the foe.");
+    "Attacks the foe's\n"
+    "legs reducing their\n"
+    "speed.");
 
 static const u8 sTM48Desc[] = _(
-    "Switches abilities\n"
-    "with the foe on the\n"
-    "turn this is used.");
+    "Attacks with a song.\n"
+    "More singers deals\n"
+    "more damage.");
 
 static const u8 sTM49Desc[] = _(
-    "Steals the effects\n"
-    "of the move the foe\n"
-    "is trying to use.");
+    "A vocal attack that\n"
+    "does more damage if\n"
+    "used repeatedly.");
 
 static const u8 sTM50Desc[] = _(
     "Enables full-power\n"
     "attack, but sharply\n"
     "lowers Sp. Atk.");
 
-static const u8 sTM51Desc[] = _( // Todo
-    "?????");
+static const u8 sTM51Desc[] = _(
+    "Spreads hard-\n"
+    "edged wings and\n"
+    "slams into the foe.");
 
-static const u8 sTM52Desc[] = _( // Todo
-    "?????");
+static const u8 sTM52Desc[] = _(
+    "Unleashes a focused\n"
+    "mental blast. It\n"
+    "may lower Sp. Def.");
 
-static const u8 sTM53Desc[] = _( // Todo
-    "?????");
+static const u8 sTM53Desc[] = _(
+    "Draws power from\n"
+    "nature to attack.\n"
+    "May lower Sp. Def.");
 
-static const u8 sTM54Desc[] = _( // Todo
-    "?????");
+static const u8 sTM54Desc[] = _(
+    "A restrained attack\n"
+    "that prevents the\n"
+    "foe from fainting.");
 
-static const u8 sTM55Desc[] = _( // Todo
-    "?????");
+static const u8 sTM55Desc[] = _(
+    "Shoots boiling\n"
+    "water at the foe.\n"
+    "May leave a burn.");
 
-static const u8 sTM56Desc[] = _( // Todo
-    "?????");
+static const u8 sTM56Desc[] = _(
+    "The user flings its\n"
+    "held item at the\n"
+    "foe to attack.");
 
-static const u8 sTM57Desc[] = _( // Todo
-    "?????");
+static const u8 sTM57Desc[] = _(
+    "Attacks with an\n"
+    "electric charge.\n"
+    "May raise Sp. Atk.");
 
-static const u8 sTM58Desc[] = _( // Todo
-    "?????");
+static const u8 sTM58Desc[] = _(
+    "Takes the foe into\n"
+    "the sky and drops\n"
+    "them the next turn.");
 
-static const u8 sTM59Desc[] = _( // Todo
-    "?????");
+static const u8 sTM59Desc[] = _(
+    "Attacks with fire.\n"
+    "Burns any berry the\n"
+    "foe is holding.");
 
-static const u8 sTM60Desc[] = _( // Todo
-    "?????");
+static const u8 sTM60Desc[] = _(
+    "Suppresses the foe\n"
+    "and makes its move\n"
+    "go last.");
 
-static const u8 sTM61Desc[] = _( // Todo
-    "?????");
+static const u8 sTM61Desc[] = _(
+    "Shoots a bluish-\n"
+    "white flame to burn\n"
+    "the foe.");
 
-static const u8 sTM62Desc[] = _( // Todo
-    "?????");
+static const u8 sTM62Desc[] = _(
+    "Does massive damage\n"
+    "if the user is not\n"
+    "holding an item.");
 
-static const u8 sTM63Desc[] = _( // Todo
-    "?????");
+static const u8 sTM63Desc[] = _(
+    "Prevents the foe\n"
+    "from using their\n"
+    "held item.");
 
-static const u8 sTM64Desc[] = _( // Todo
-    "?????");
+static const u8 sTM64Desc[] = _(
+    "The user explodes\n"
+    "to inflict damage.\n"
+    "The user faints.");
 
-static const u8 sTM65Desc[] = _( // Todo
-    "?????");
+static const u8 sTM65Desc[] = _(
+    "Slashes with claws\n"
+    "of shadows. High\n"
+    "critical-hit ratio.");
 
-static const u8 sTM66Desc[] = _( // Todo
-    "?????");
+static const u8 sTM66Desc[] = _(
+    "The power doubles\n"
+    "if the user moves\n"
+    "mafter the target.");
 
-static const u8 sTM67Desc[] = _( // Todo
-    "?????");
+static const u8 sTM67Desc[] = _(
+    "If an ally fainted\n"
+    "the previous turn\n"
+    "attack power doubles.");
 
-static const u8 sTM68Desc[] = _( // Todo
-    "?????");
+static const u8 sTM68Desc[] = _(
+    "The user charges\n"
+    "with all its power.\n"
+    "Must recharge.");
 
-static const u8 sTM69Desc[] = _( // Todo
-    "?????");
+static const u8 sTM69Desc[] = _(
+    "The user polishes\n"
+    "its body. Sharply\n"
+    "raises Speed.");
 
-static const u8 sTM70Desc[] = _( // Todo
-    "?????");
+static const u8 sTM70Desc[] = _(
+    "Looses a powerful\n"
+    "blast of light that\n"
+    "reduces accuracy.");
 
-static const u8 sTM71Desc[] = _( // Todo
-    "?????");
+static const u8 sTM71Desc[] = _(
+    "Stabs the foe with\n"
+    "sharp stones. High\n"
+    "critical-hit ratio.");
 
-static const u8 sTM72Desc[] = _( // Todo
-    "?????");
+static const u8 sTM72Desc[] = _(
+    "Attacks and rushes\n"
+    "back to switch with\n"
+    "a party Pokémon.");
 
-static const u8 sTM73Desc[] = _( // Todo
-    "?????");
+static const u8 sTM73Desc[] = _(
+    "A weak electric\n"
+    "charge that causes\n"
+    "paralysis.");
 
-static const u8 sTM74Desc[] = _( // Todo
-    "?????");
+static const u8 sTM74Desc[] = _(
+    "The slower the user,\n"
+    "the greater the\n"
+    "damage.");
 
-static const u8 sTM75Desc[] = _( // Todo
-    "?????");
+static const u8 sTM75Desc[] = _(
+    "A frenetic dance\n"
+    "that sharply raises\n"
+    "the user's Attack.");
 
-static const u8 sTM76Desc[] = _( // Todo
-    "?????");
+static const u8 sTM76Desc[] = _(
+    "Attacks the foe,\n"
+    "lowering their \n"
+    "Sp. Atk.");
 
-static const u8 sTM77Desc[] = _( // Todo
-    "?????");
+static const u8 sTM77Desc[] = _(
+    "The user hypnotizes\n"
+    "to copy the foe's\n"
+    "stat changes.");
 
-static const u8 sTM78Desc[] = _( // Todo
-    "?????");
+static const u8 sTM78Desc[] = _(
+    "Damages all Pokémon,\n"
+    "lowering the Speed\n"
+    "of everything hit.");
 
-static const u8 sTM79Desc[] = _( // Todo
-    "?????");
+static const u8 sTM79Desc[] = _(
+    "Blows a cold breath\n"
+    "on the foe. Always\n"
+    "critical-hits.");
 
-static const u8 sTM80Desc[] = _( // Todo
-    "?????");
+static const u8 sTM80Desc[] = _(
+    "Large boulders are\n"
+    "hurled at the foe.\n"
+    "May cause flinching.");
 
-static const u8 sTM81Desc[] = _( // Todo
-    "?????");
+static const u8 sTM81Desc[] = _(
+    "The user attacks the\n"
+    "foe with crossed\n"
+    "scythes or claws.");
 
-static const u8 sTM82Desc[] = _( // Todo
-    "?????");
+static const u8 sTM82Desc[] = _(
+    "Knocks away the foe\n"
+    "and drags out\n"
+    "another Pokémon.");
 
-static const u8 sTM83Desc[] = _( // Todo
-    "?????");
+static const u8 sTM83Desc[] = _(
+    "The foe is infested\n"
+    "and attacked for\n"
+    "four to five turns.");
 
-static const u8 sTM84Desc[] = _( // Todo
-    "?????");
+static const u8 sTM84Desc[] = _(
+    "The foe is stabbed\n"
+    "with a poisoned arm.\n"
+    "May poison.");
 
-static const u8 sTM85Desc[] = _( // Todo
-    "?????");
+static const u8 sTM85Desc[] = _(
+    "The user eats a\n"
+    "foe's dreams.\n"
+    "Restores some HP.");
 
-static const u8 sTM86Desc[] = _( // Todo
-    "?????");
+static const u8 sTM86Desc[] = _(
+    "The heavier the foe,\n"
+    "the greater the\n"
+    "damage.");
 
-static const u8 sTM87Desc[] = _( // Todo
-    "?????");
+static const u8 sTM87Desc[] = _(
+    "Enrages the foe to\n"
+    "sharply raise Attack\n"
+    "and also confuse.");
 
-static const u8 sTM88Desc[] = _( // Todo
-    "?????");
+static const u8 sTM88Desc[] = _(
+    "Uses a random move\n"
+    "while the user is\n"
+    "asleep.");
 
-static const u8 sTM89Desc[] = _( // Todo
-    "?????");
+static const u8 sTM89Desc[] = _(
+    "Attacks and rushes\n"
+    "back to switch with\n"
+    "a party Pokémon.");
 
-static const u8 sTM90Desc[] = _( // Todo
-    "?????");
+static const u8 sTM90Desc[] = _(
+    "The user cuts some\n"
+    "HP to create a copy\n"
+    "of itself.");
 
-static const u8 sTM91Desc[] = _( // Todo
-    "?????");
+static const u8 sTM91Desc[] = _(
+    "Releases light\n"
+    "energy at the foe\n"
+    "lowering Sp. Def.");
 
-static const u8 sTM92Desc[] = _( // Todo
-    "?????");
+static const u8 sTM92Desc[] = _(
+    "Causes slower\n"
+    "Pokémon to move\n"
+    "first for 5 turns.");
 
-static const u8 sTM93Desc[] = _( // Todo
-    "?????");
+static const u8 sTM93Desc[] = _(
+    "An electric charge\n"
+    "smashes the foe,\n"
+    "damaging the user.");
 
-static const u8 sTM94Desc[] = _( // Todo
-    "?????");
+static const u8 sTM94Desc[] = _(
+    "Adds an effect to\n"
+    "attack depending\n"
+    "on the location.");
 
-static const u8 sTM95Desc[] = _( // Todo
-    "?????");
+static const u8 sTM95Desc[] = _(
+    "Yells at the foe\n"
+    "lowering their\n"
+    "Sp. Atk.");
 
-static const u8 sTM96Desc[] = _( // Todo
-    "?????");
+static const u8 sTM96Desc[] = _(
+    "The effects vary\n"
+    "depending on the\n"
+    "user's environment.");
 
-static const u8 sTM97Desc[] = _( // Todo
-    "?????");
+static const u8 sTM97Desc[] = _(
+    "Releases a horrible\n"
+    "aura. May also make\n"
+    "the foe flinch.");
 
-static const u8 sTM98Desc[] = _( // Todo
-    "?????");
+static const u8 sTM98Desc[] = _(
+    "Strikes with hard\n"
+    "fists. Raises the\n"
+    "user's Attack.");
 
-static const u8 sTM99Desc[] = _( // Todo
-    "?????");
+static const u8 sTM99Desc[] = _(
+    "A powerful fairy\n"
+    "attack damaging the\n"
+    "foe with a flash.");
 
-static const u8 sTM100Desc[] = _( // Todo
-    "?????");
+static const u8 sTM100Desc[] = _(
+    "Tells the foe a\n"
+    "secret, lowering\n"
+    "their Sp. Atk.");
 
 static const u8 sHM01Desc[] = _(
     "Attacks the foe\n"
@@ -3446,9 +3546,9 @@ static const u8 sHM04Desc[] = _(
     "the foe.");
 
 static const u8 sHM05Desc[] = _(
-    "Looses a powerful\n"
-    "blast of light that\n"
-    "reduces accuracy.");
+    "Attacks the foe\n"
+    "with enough power\n"
+    "to climb waterfalls.");
 
 static const u8 sHM06Desc[] = _(
     "A rock-crushingly\n"
@@ -3456,11 +3556,6 @@ static const u8 sHM06Desc[] = _(
     "may lower Defense.");
 
 static const u8 sHM07Desc[] = _(
-    "Attacks the foe\n"
-    "with enough power\n"
-    "to climb waterfalls.");
-
-static const u8 sHM08Desc[] = _(
     "Dives underwater\n"
     "the 1st turn, then\n"
     "attacks next turn.");
@@ -3808,6 +3903,11 @@ static const u8 sSapphireDesc[] = _(
     "that symbolizes\n"
     "honesty.");
 
+static const u8 sEonFluteDesc[] = _(
+    "A flute that can\n"
+    "summon Latias or\n"
+    "Latios.");
+
 static const u8 sAbilityShieldDesc[] = _(
     "Ability changes are\n"
     "prevented for this\n"
@@ -3833,6 +3933,7 @@ static const u8 sLoadedDiceDesc[] = _(
     "Multihit strikes\n"
     "hit more times.");
 
+<<<<<<< HEAD
 static const u8 sAuspiciousArmorDesc[] = _(
     "Armor inhabited by\n"
     "auspicious wishes.\n"
@@ -3912,3 +4013,19 @@ static const u8 sBerserkGene[] = _(
     "Sharply boosts\n"
     "Attack, but causes\n"
     "lasting confusion.");
+=======
+static const u8 sBlackAuguriteDesc[] = _(
+    "A black stone that\n"
+    "makes some Pokémon\n"
+    "evolve.");;
+
+static const u8 sLinkingCordDesc[] = _(
+    "A mysterious string\n"
+    "that makes some\n"
+    "Pokémon evolve.");
+
+static const u8 sPeatBlockDesc[] = _(
+    "A block of material\n"
+    "that makes some\n"
+    "Pokémon evolve.");
+>>>>>>> art/GlimmeringEmerald_dev

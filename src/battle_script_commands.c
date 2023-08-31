@@ -1318,11 +1318,11 @@ static const u16 sRarePickupItems[] =
     ITEM_FULL_RESTORE,
     ITEM_ETHER,
     ITEM_WHITE_HERB,
-    ITEM_TM44_REST,
+    ITEM_IRON_BALL,
     ITEM_ELIXIR,
-    ITEM_TM01_FOCUS_PUNCH,
+    ITEM_DESTINY_KNOT,
     ITEM_LEFTOVERS,
-    ITEM_TM26_EARTHQUAKE,
+    ITEM_PRISM_SCALE,
 };
 
 static const u8 sPickupProbabilities[] =
@@ -6514,7 +6514,7 @@ static void Cmd_switchinanim(void)
                                  | BATTLE_TYPE_RECORDED_LINK
                                  | BATTLE_TYPE_TRAINER_HILL
                                  | BATTLE_TYPE_FRONTIER)))
-        HandleSetPokedexFlag(SpeciesToNationalPokedexNum(gBattleMons[gActiveBattler].species), FLAG_SET_SEEN, gBattleMons[gActiveBattler].personality);
+            HandleSetPokedexFlag(SpeciesToNationalPokedexNum(GET_BASE_SPECIES_ID(gBattleMons[gActiveBattler].species)), FLAG_SET_SEEN, gBattleMons[gActiveBattler].personality);
 
     gAbsentBattlerFlags &= ~(gBitTable[gActiveBattler]);
 
@@ -12889,6 +12889,9 @@ static void Cmd_transformdataexecution(void)
                 gBattleMons[gBattlerAttacker].pp[i] = gBattleMoves[gBattleMons[gBattlerAttacker].moves[i]].pp;
             else
                 gBattleMons[gBattlerAttacker].pp[i] = 5;
+
+            if (gBattleMons[gBattlerAttacker].moves[i] >= MOVE_HIDDEN_POWER_GROUND)
+                gBattleMons[gBattlerAttacker].moves[i] = MOVE_HIDDEN_POWER;
         }
 
         gActiveBattler = gBattlerAttacker;
@@ -12950,7 +12953,12 @@ static void Cmd_mimicattackcopy(void)
         if (i == MAX_MON_MOVES)
         {
             gChosenMove = 0xFFFF;
-            gBattleMons[gBattlerAttacker].moves[gCurrMovePos] = gLastMoves[gBattlerTarget];
+            
+            if (gLastMoves[gBattlerTarget] >= MOVE_HIDDEN_POWER_GROUND)
+                gBattleMons[gBattlerAttacker].moves[gCurrMovePos] = MOVE_HIDDEN_POWER;
+            else
+                gBattleMons[gBattlerAttacker].moves[gCurrMovePos] = gLastMoves[gBattlerTarget];
+
             if (gBattleMoves[gLastMoves[gBattlerTarget]].pp < 5)
                 gBattleMons[gBattlerAttacker].pp[gCurrMovePos] = gBattleMoves[gLastMoves[gBattlerTarget]].pp;
             else
@@ -13268,7 +13276,11 @@ static void Cmd_copymovepermanently(void)
         {
             struct MovePpInfo movePpData;
 
-            gBattleMons[gBattlerAttacker].moves[gCurrMovePos] = gLastPrintedMoves[gBattlerTarget];
+            if (gLastMoves[gBattlerTarget] >= MOVE_HIDDEN_POWER_GROUND)
+                gBattleMons[gBattlerAttacker].moves[gCurrMovePos] = MOVE_HIDDEN_POWER;
+            else
+                gBattleMons[gBattlerAttacker].moves[gCurrMovePos] = gLastPrintedMoves[gBattlerTarget];
+            
             gBattleMons[gBattlerAttacker].pp[gCurrMovePos] = gBattleMoves[gLastPrintedMoves[gBattlerTarget]].pp;
             gActiveBattler = gBattlerAttacker;
 
@@ -15751,7 +15763,7 @@ static void Cmd_trysetcaughtmondexflags(void)
 {
     CMD_ARGS(const u8 *failInstr);
 
-    u16 species = GetMonData(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]], MON_DATA_SPECIES, NULL);
+    u16 species = GET_BASE_SPECIES_ID(GetMonData(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]], MON_DATA_SPECIES, NULL));
     u32 personality = GetMonData(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]], MON_DATA_PERSONALITY, NULL);
 
     if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT))

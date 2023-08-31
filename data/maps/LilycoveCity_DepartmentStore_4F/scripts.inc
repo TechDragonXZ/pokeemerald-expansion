@@ -29,6 +29,12 @@ LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:
 	.2byte ITEM_TM25  @ Thunder
 	.2byte ITEM_TM14  @ Blizzard
 	.2byte ITEM_TM15  @ Hyper Beam
+	.2byte ITEM_TM52
+	.2byte ITEM_TM68
+	.2byte ITEM_TM71
+	.2byte ITEM_TM83
+	.2byte ITEM_TM87
+	.2byte ITEM_TM95
 	.2byte ITEM_NONE
 	release
 	end
@@ -58,7 +64,7 @@ LilycoveCity_DepartmentStore_4F_Text_AttackOrDefenseTM:
 	.string "An attacking move…\n"
 	.string "Or a defensive move…\p"
 	.string "It's no easy matter to decide which TM\n"
-	.string "moves should be taught to POKéMON…$"
+	.string "moves should be taught to Pokémon…$"
 
 LilycoveCity_DepartmentStore_4F_Text_FiftyDifferentTMs:
 	.string "There are so many different kinds of\n"
@@ -68,5 +74,5 @@ LilycoveCity_DepartmentStore_4F_Text_FiftyDifferentTMs:
 
 LilycoveCity_DepartmentStore_4F_Text_PokemonOnlyHaveFourMoves:
 	.string "I'd like to get all the different TMs,\n"
-	.string "but a POKéMON learns only four moves.$"
+	.string "but a Pokémon learns only four moves.$"
 

@@ -17,6 +17,7 @@
 #include "bg.h"
 #include "data.h"
 #include "decompress.h"
+#include "dexnav.h"
 #include "dma3.h"
 #include "event_data.h"
 #include "evolution_scene.h"
@@ -598,7 +599,7 @@ static void CB2_InitBattleInternal(void)
     }
 
     gMain.inBattle = TRUE;
-    gSaveBlock2Ptr->frontier.disableRecordBattle = FALSE;
+    gSaveBlock1Ptr->frontier.disableRecordBattle = FALSE;
 
     for (i = 0; i < PARTY_SIZE; i++)
         AdjustFriendship(&gPlayerParty[i], FRIENDSHIP_EVENT_LEAGUE_BATTLE);
@@ -2340,7 +2341,7 @@ static void EndLinkBattleInSteps(void)
 
             for (i = 0; i < battlerCount && (gLinkPlayers[i].version & 0xFF) == VERSION_EMERALD; i++);
 
-            if (!gSaveBlock2Ptr->frontier.disableRecordBattle && i == battlerCount)
+            if (!gSaveBlock1Ptr->frontier.disableRecordBattle && i == battlerCount)
             {
                 if (FlagGet(FLAG_SYS_FRONTIER_PASS))
                 {
@@ -3023,6 +3024,29 @@ void SpriteCB_PlayerMonFromBall(struct Sprite *sprite)
 {
     if (sprite->affineAnimEnded)
         BattleAnimateBackSprite(sprite, sprite->sSpeciesId);
+}
+
+void SpriteCB_PlayerMonSlideIn(struct Sprite *sprite) {
+    if (sprite->data[3] == 0) {
+        PlaySE(SE_BALL_TRAY_ENTER);
+        sprite->data[3]++;
+    } else if (sprite->data[3] == 1) {
+        if (sprite->animEnded)
+            return;
+        sprite->data[4] = sprite->x;
+        sprite->x = -33;
+        sprite->invisible = FALSE;
+        sprite->data[3]++;
+    } else if (sprite->data[3] < 27) {
+        sprite->x += 4;
+        sprite->data[3]++;
+    } else {
+        sprite->data[3] = 0;
+        sprite->x = sprite->data[4];
+        sprite->data[4] = 0;
+        sprite->callback = SpriteCB_PlayerMonFromBall;
+        PlayCry_ByMode(sprite->sSpeciesId, -25, CRY_MODE_NORMAL);
+    }
 }
 
 static void SpriteCB_TrainerThrowObject_Main(struct Sprite *sprite)
@@ -3779,7 +3803,7 @@ static void DoBattleIntro(void)
                                           | BATTLE_TYPE_RECORDED_LINK
                                           | BATTLE_TYPE_TRAINER_HILL)))
                 {
-                    HandleSetPokedexFlag(SpeciesToNationalPokedexNum(gBattleMons[gActiveBattler].species), FLAG_SET_SEEN, gBattleMons[gActiveBattler].personality);
+                    HandleSetPokedexFlag(SpeciesToNationalPokedexNum(GET_BASE_SPECIES_ID(gBattleMons[gActiveBattler].species)), FLAG_SET_SEEN, gBattleMons[gActiveBattler].personality);
                 }
             }
 
@@ -4692,14 +4716,6 @@ u32 GetBattlerTotalSpeedStat(u8 battlerId)
     speed *= gStatStageRatios[gBattleMons[battlerId].statStages[STAT_SPEED]][0];
     speed /= gStatStageRatios[gBattleMons[battlerId].statStages[STAT_SPEED]][1];
 
-    // player's badge boost
-    if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))
-        && ShouldGetStatBadgeBoost(FLAG_BADGE03_GET, battlerId)
-        && GetBattlerSide(battlerId) == B_SIDE_PLAYER)
-    {
-        speed = (speed * 110) / 100;
-    }
-
     // item effects
     if (holdEffect == HOLD_EFFECT_MACHO_BRACE || holdEffect == HOLD_EFFECT_POWER_ITEM)
         speed /= 2;
@@ -5314,7 +5330,7 @@ static void HandleEndTurn_BattleLost(void)
             {
                 gBattlescriptCurrInstr = BattleScript_PrintPlayerForfeitedLinkBattle;
                 gBattleOutcome &= ~B_OUTCOME_LINK_BATTLE_RAN;
-                gSaveBlock2Ptr->frontier.disableRecordBattle = TRUE;
+                gSaveBlock1Ptr->frontier.disableRecordBattle = TRUE;
             }
             else
             {
@@ -5346,7 +5362,7 @@ static void HandleEndTurn_RanFromBattle(void)
     {
         gBattlescriptCurrInstr = BattleScript_PrintPlayerForfeited;
         gBattleOutcome = B_OUTCOME_FORFEITED;
-        gSaveBlock2Ptr->frontier.disableRecordBattle = TRUE;
+        gSaveBlock1Ptr->frontier.disableRecordBattle = TRUE;
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER_HILL)
     {
@@ -5480,6 +5496,12 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
     {
         gIsFishingEncounter = FALSE;
         gIsSurfingEncounter = FALSE;
+        
+        if (gDexnavBattle && (gBattleOutcome == B_OUTCOME_WON || gBattleOutcome == B_OUTCOME_CAUGHT))
+            IncrementDexNavChain();
+        else
+            gSaveBlock1Ptr->dexNavChain = 0;
+        
         ResetSpriteData();
         if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK
                                   | BATTLE_TYPE_RECORDED_LINK
@@ -5593,6 +5615,16 @@ static void ReturnFromBattleToOverworld(void)
         if ((gBattleOutcome == B_OUTCOME_WON) || gBattleOutcome == B_OUTCOME_CAUGHT) // Bug: When Roar is used by roamer, gBattleOutcome is B_OUTCOME_PLAYER_TELEPORTED (5).
 #endif                                                                               // & with B_OUTCOME_WON (1) will return TRUE and deactivates the roamer.
             SetRoamerInactive();
+
+            if (gBattleOutcome == B_OUTCOME_CAUGHT) {
+                FlagSet(FLAG_CAUGHT_ROAMER);
+                if (FlagGet(FLAG_EON_LATI)) {
+                    FlagClear(FLAG_ITEM_LATIOSITE);
+                }
+                else {
+                    FlagClear(FLAG_ITEM_LATIASITE);
+                }
+            }
     }
 
     m4aSongNumStop(SE_LOW_HEALTH);

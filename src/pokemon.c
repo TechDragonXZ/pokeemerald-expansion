@@ -11,6 +11,8 @@
 #include "battle_tower.h"
 #include "battle_z_move.h"
 #include "data.h"
+#include "day_night.h"
+#include "dexnav.h"
 #include "event_data.h"
 #include "evolution_scene.h"
 #include "field_specials.h"
@@ -42,7 +44,11 @@
 #include "constants/battle_frontier.h"
 #include "constants/battle_move_effects.h"
 #include "constants/battle_script_commands.h"
+<<<<<<< HEAD
 #include "constants/form_change_types.h"
+=======
+#include "constants/day_night.h"
+>>>>>>> art/GlimmeringEmerald_dev
 #include "constants/hold_effects.h"
 #include "constants/item_effects.h"
 #include "constants/items.h"
@@ -1313,45 +1319,45 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     [SPECIES_KYOGRE_PRIMAL - 1] = NATIONAL_DEX_KYOGRE,
     [SPECIES_GROUDON_PRIMAL - 1] = NATIONAL_DEX_GROUDON,
     // Alolan Forms
-    [SPECIES_RATTATA_ALOLAN - 1] = NATIONAL_DEX_RATTATA,
-    [SPECIES_RATICATE_ALOLAN - 1] = NATIONAL_DEX_RATICATE,
-    [SPECIES_RAICHU_ALOLAN - 1] = NATIONAL_DEX_RAICHU,
-    [SPECIES_SANDSHREW_ALOLAN - 1] = NATIONAL_DEX_SANDSHREW,
-    [SPECIES_SANDSLASH_ALOLAN - 1] = NATIONAL_DEX_SANDSLASH,
-    [SPECIES_VULPIX_ALOLAN - 1] = NATIONAL_DEX_VULPIX,
-    [SPECIES_NINETALES_ALOLAN - 1] = NATIONAL_DEX_NINETALES,
-    [SPECIES_DIGLETT_ALOLAN - 1] = NATIONAL_DEX_DIGLETT,
-    [SPECIES_DUGTRIO_ALOLAN - 1] = NATIONAL_DEX_DUGTRIO,
-    [SPECIES_MEOWTH_ALOLAN - 1] = NATIONAL_DEX_MEOWTH,
-    [SPECIES_PERSIAN_ALOLAN - 1] = NATIONAL_DEX_PERSIAN,
-    [SPECIES_GEODUDE_ALOLAN - 1] = NATIONAL_DEX_GEODUDE,
-    [SPECIES_GRAVELER_ALOLAN - 1] = NATIONAL_DEX_GRAVELER,
-    [SPECIES_GOLEM_ALOLAN - 1] = NATIONAL_DEX_GOLEM,
-    [SPECIES_GRIMER_ALOLAN - 1] = NATIONAL_DEX_GRIMER,
-    [SPECIES_MUK_ALOLAN - 1] = NATIONAL_DEX_MUK,
-    [SPECIES_EXEGGUTOR_ALOLAN - 1] = NATIONAL_DEX_EXEGGUTOR,
-    [SPECIES_MAROWAK_ALOLAN - 1] = NATIONAL_DEX_MAROWAK,
+    SPECIES_TO_NATIONAL(RATTATA_ALOLAN),
+    SPECIES_TO_NATIONAL(RATICATE_ALOLAN),
+    SPECIES_TO_NATIONAL(RAICHU_ALOLAN),
+    SPECIES_TO_NATIONAL(SANDSHREW_ALOLAN),
+    SPECIES_TO_NATIONAL(SANDSLASH_ALOLAN),
+    SPECIES_TO_NATIONAL(VULPIX_ALOLAN),
+    SPECIES_TO_NATIONAL(NINETALES_ALOLAN),
+    SPECIES_TO_NATIONAL(DIGLETT_ALOLAN),
+    SPECIES_TO_NATIONAL(DUGTRIO_ALOLAN),
+    SPECIES_TO_NATIONAL(MEOWTH_ALOLAN),
+    SPECIES_TO_NATIONAL(PERSIAN_ALOLAN),
+    SPECIES_TO_NATIONAL(GEODUDE_ALOLAN),
+    SPECIES_TO_NATIONAL(GRAVELER_ALOLAN),
+    SPECIES_TO_NATIONAL(GOLEM_ALOLAN),
+    SPECIES_TO_NATIONAL(GRIMER_ALOLAN),
+    SPECIES_TO_NATIONAL(MUK_ALOLAN),
+    SPECIES_TO_NATIONAL(EXEGGUTOR_ALOLAN),
+    SPECIES_TO_NATIONAL(MAROWAK_ALOLAN),
     // Galarian Forms
-    [SPECIES_MEOWTH_GALARIAN - 1] = NATIONAL_DEX_MEOWTH,
-    [SPECIES_PONYTA_GALARIAN - 1] = NATIONAL_DEX_PONYTA,
-    [SPECIES_RAPIDASH_GALARIAN - 1] = NATIONAL_DEX_RAPIDASH,
-    [SPECIES_SLOWPOKE_GALARIAN - 1] = NATIONAL_DEX_SLOWPOKE,
-    [SPECIES_SLOWBRO_GALARIAN - 1] = NATIONAL_DEX_SLOWBRO,
-    [SPECIES_FARFETCHD_GALARIAN - 1] = NATIONAL_DEX_FARFETCHD,
-    [SPECIES_WEEZING_GALARIAN - 1] = NATIONAL_DEX_WEEZING,
-    [SPECIES_MR_MIME_GALARIAN - 1] = NATIONAL_DEX_MR_MIME,
-    [SPECIES_ARTICUNO_GALARIAN - 1] = NATIONAL_DEX_ARTICUNO,
-    [SPECIES_ZAPDOS_GALARIAN - 1] = NATIONAL_DEX_ZAPDOS,
-    [SPECIES_MOLTRES_GALARIAN - 1] = NATIONAL_DEX_MOLTRES,
-    [SPECIES_SLOWKING_GALARIAN - 1] = NATIONAL_DEX_SLOWKING,
-    [SPECIES_CORSOLA_GALARIAN - 1] = NATIONAL_DEX_CORSOLA,
-    [SPECIES_ZIGZAGOON_GALARIAN - 1] = NATIONAL_DEX_ZIGZAGOON,
-    [SPECIES_LINOONE_GALARIAN - 1] = NATIONAL_DEX_LINOONE,
+    SPECIES_TO_NATIONAL(MEOWTH_GALARIAN),
+    SPECIES_TO_NATIONAL(PONYTA_GALARIAN),
+    SPECIES_TO_NATIONAL(RAPIDASH_GALARIAN),
+    SPECIES_TO_NATIONAL(SLOWPOKE_GALARIAN),
+    SPECIES_TO_NATIONAL(SLOWBRO_GALARIAN),
+    SPECIES_TO_NATIONAL(FARFETCHD_GALARIAN),
+    SPECIES_TO_NATIONAL(WEEZING_GALARIAN),
+    SPECIES_TO_NATIONAL(MR_MIME_GALARIAN),
+    SPECIES_TO_NATIONAL(ARTICUNO_GALARIAN),
+    SPECIES_TO_NATIONAL(ZAPDOS_GALARIAN),
+    SPECIES_TO_NATIONAL(MOLTRES_GALARIAN),
+    SPECIES_TO_NATIONAL(SLOWKING_GALARIAN),
+    SPECIES_TO_NATIONAL(CORSOLA_GALARIAN),
+    SPECIES_TO_NATIONAL(ZIGZAGOON_GALARIAN),
+    SPECIES_TO_NATIONAL(LINOONE_GALARIAN),
 #if P_GEN_5_POKEMON == TRUE
-    [SPECIES_DARUMAKA_GALARIAN - 1] = NATIONAL_DEX_DARUMAKA,
-    [SPECIES_DARMANITAN_GALARIAN - 1] = NATIONAL_DEX_DARMANITAN,
-    [SPECIES_YAMASK_GALARIAN - 1] = NATIONAL_DEX_YAMASK,
-    [SPECIES_STUNFISK_GALARIAN - 1] = NATIONAL_DEX_STUNFISK,
+    SPECIES_TO_NATIONAL(DARUMAKA_GALARIAN),
+    SPECIES_TO_NATIONAL(DARMANITAN_GALARIAN),
+    SPECIES_TO_NATIONAL(YAMASK_GALARIAN),
+    SPECIES_TO_NATIONAL(STUNFISK_GALARIAN),
 #endif
 //Hisuian Forms
     [SPECIES_GROWLITHE_HISUIAN - 1] = NATIONAL_DEX_GROWLITHE,
@@ -3427,6 +3433,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     u32 personality;
     u32 value;
     u16 checksum;
+    struct SiiRtcInfo rtc;
     u8 i;
     u8 availableIVs[NUM_STATS];
     u8 selectedIvs[LEGENDARY_PERFECT_IV_COUNT];
@@ -3439,7 +3446,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         personality = Random32();
 
     // Determine original trainer ID
-    if (otIdType == OT_ID_RANDOM_NO_SHINY)
+    if (otIdType == OT_ID_RANDOM_NO_SHINY) // Pokemon cannot be shiny
     {
         u32 shinyValue;
         do
@@ -3455,10 +3462,12 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     }
     else // Player is the OT
     {
+        u32 i;
+
         value = gSaveBlock2Ptr->playerTrainerId[0]
-              | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
-              | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
-              | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+                  | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+                  | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+                  | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
 
 #if P_FLAG_FORCE_NO_SHINY != 0
         if (FlagGet(P_FLAG_FORCE_NO_SHINY))
@@ -3482,6 +3491,10 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
 #endif
         {
             u32 totalRerolls = 0;
+            
+            if(species==gSaveBlock1Ptr->outbreakPokemonSpecies)
+                totalRerolls = totalRerolls + gSaveBlock1Ptr->outbreakShinyRolls;
+        
             if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
                 totalRerolls += I_SHINY_CHARM_REROLLS;
             if (LURE_STEP_COUNT != 0)
@@ -3494,7 +3507,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
             }
         }
     }
-
+    
     SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
     SetBoxMonData(boxMon, MON_DATA_OT_ID, &value);
 
@@ -3606,6 +3619,14 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         value = personality & 1;
         SetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, &value);
     }
+
+    RtcGetDateTime(&rtc);
+    value = ConvertBcdToBinary(rtc.day);
+    SetBoxMonData(boxMon, MON_DATA_DAY_MET, &value);
+    value = ConvertBcdToBinary(rtc.month);
+    SetBoxMonData(boxMon, MON_DATA_MONTH_MET, &value);
+    value = ConvertBcdToBinary(rtc.year);
+    SetBoxMonData(boxMon, MON_DATA_YEAR_MET, &value);
 
     GiveBoxMonInitialMoveset(boxMon);
 }
@@ -3781,8 +3802,8 @@ void CreateBattleTowerMon_HandleLevel(struct Pokemon *mon, struct BattleTowerPok
     u8 language;
     u8 value;
 
-    if (gSaveBlock2Ptr->frontier.lvlMode != FRONTIER_LVL_50)
-        level = GetFrontierEnemyMonLevel(gSaveBlock2Ptr->frontier.lvlMode);
+    if (gSaveBlock1Ptr->frontier.lvlMode != FRONTIER_LVL_50)
+        level = GetFrontierEnemyMonLevel(gSaveBlock1Ptr->frontier.lvlMode);
     else if (lvl50)
         level = FRONTIER_MAX_LEVEL_50;
     else
@@ -4476,6 +4497,17 @@ u32 GetUnownSpeciesId(u32 personality)
     return unownLetter + SPECIES_UNOWN_B - 1;
 }
 
+u32 GetArbokVariant(u8 metGame)
+{
+    if (metGame == VERSION_FIRE_RED || metGame == VERSION_LEAF_GREEN)
+        return SPECIES_ARBOK_KANTO;
+    if (metGame == VERSION_HEART_GOLD || metGame == VERSION_SOUL_SILVER)
+        return SPECIES_ARBOK_JOHTO;
+    if (metGame == VERSION_DIAMOND || metGame == VERSION_PEARL || metGame == VERSION_PLATINUM)
+        return SPECIES_ARBOK_SINNOH;
+    return SPECIES_ARBOK;
+}
+
 void SetMultiuseSpriteTemplateToPokemon(u16 speciesTag, u8 battlerPosition)
 {
     if (gMonSpritesGfxPtr != NULL)
@@ -4704,8 +4736,8 @@ u32 GetBoxMonData3(struct BoxPokemon *boxMon, s32 field, u8 *data)
     struct PokemonSubstruct2 *substruct2 = NULL;
     struct PokemonSubstruct3 *substruct3 = NULL;
 
-    // Any field greater than MON_DATA_ENCRYPT_SEPARATOR is encrypted and must be treated as such
-    if (field > MON_DATA_ENCRYPT_SEPARATOR)
+    // Any field greater than MON_DATA_YEAR_MET  is encrypted and must be treated as such
+    if (field > MON_DATA_YEAR_MET && field < MON_DATA_DAY_MET)
     {
         substruct0 = &(GetSubstruct(boxMon, boxMon->personality, 0)->type0);
         substruct1 = &(GetSubstruct(boxMon, boxMon->personality, 1)->type1);
@@ -4799,8 +4831,14 @@ u32 GetBoxMonData3(struct BoxPokemon *boxMon, s32 field, u8 *data)
     case MON_DATA_CHECKSUM:
         retVal = boxMon->checksum;
         break;
-    case MON_DATA_ENCRYPT_SEPARATOR:
-        retVal = boxMon->unknown;
+    case MON_DATA_YEAR_MET:
+        retVal = boxMon->yearMet;
+        break;
+    case MON_DATA_DAY_MET:
+        retVal = boxMon->dayMet;
+        break;
+    case MON_DATA_MONTH_MET:
+        retVal = boxMon->monthMet;
         break;
     case MON_DATA_SPECIES:
         retVal = boxMon->isBadEgg ? SPECIES_EGG : substruct0->species;
@@ -5045,7 +5083,7 @@ u32 GetBoxMonData3(struct BoxPokemon *boxMon, s32 field, u8 *data)
         break;
     }
 
-    if (field > MON_DATA_ENCRYPT_SEPARATOR)
+    if (field > MON_DATA_YEAR_MET && field < MON_DATA_DAY_MET)
         EncryptBoxMon(boxMon);
 
     return retVal;
@@ -5110,7 +5148,7 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
     struct PokemonSubstruct2 *substruct2 = NULL;
     struct PokemonSubstruct3 *substruct3 = NULL;
 
-    if (field > MON_DATA_ENCRYPT_SEPARATOR)
+    if (field > MON_DATA_YEAR_MET && field < MON_DATA_DAY_MET)
     {
         substruct0 = &(GetSubstruct(boxMon, boxMon->personality, 0)->type0);
         substruct1 = &(GetSubstruct(boxMon, boxMon->personality, 1)->type1);
@@ -5169,8 +5207,14 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
     case MON_DATA_CHECKSUM:
         SET16(boxMon->checksum);
         break;
-    case MON_DATA_ENCRYPT_SEPARATOR:
-        SET16(boxMon->unknown);
+    case MON_DATA_YEAR_MET:
+        SET16(boxMon->yearMet);
+        break;
+    case MON_DATA_MONTH_MET:
+        SET16(boxMon->monthMet);
+        break;
+    case MON_DATA_DAY_MET:
+        SET16(boxMon->dayMet);
         break;
     case MON_DATA_SPECIES:
     {
@@ -5365,7 +5409,7 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
         break;
     }
 
-    if (field > MON_DATA_ENCRYPT_SEPARATOR)
+    if (field > MON_DATA_YEAR_MET && field < MON_DATA_DAY_MET)
     {
         boxMon->checksum = CalculateBoxMonChecksum(boxMon);
         EncryptBoxMon(boxMon);
@@ -6425,7 +6469,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                 break;
             case EVO_FRIENDSHIP_DAY:
                 RtcCalcLocalTime();
-                if (gLocalTime.hours >= 12 && gLocalTime.hours < 24 && friendship >= 220)
+                if (GetCurrentTimeOfDay() != TIME_NIGHT && friendship >= 220)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL_DAY:
@@ -6435,7 +6479,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                 break;
             case EVO_FRIENDSHIP_NIGHT:
                 RtcCalcLocalTime();
-                if (gLocalTime.hours >= 0 && gLocalTime.hours < 12 && friendship >= 220)
+                if (GetCurrentTimeOfDay() == TIME_NIGHT && friendship >= 220)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL_NIGHT:
@@ -6800,104 +6844,75 @@ u16 HoennToNationalOrder(u16 hoennNum)
     return sHoennToNationalOrder[hoennNum - 1];
 }
 
-// Spots can be drawn on Spinda's color indexes 1, 2, or 3
-#define FIRST_SPOT_COLOR 1
-#define LAST_SPOT_COLOR  3
+void DrawSpindaSpotsToFrame(u32 personality, u8 *dest, bool32 isSecondFrame)
+{
+    int i;
 
-// To draw a spot pixel, add 4 to the color index
-#define SPOT_COLOR_ADJUSTMENT 4
-/*
-    The macro below handles drawing the randomly-placed spots on Spinda's front sprite.
-    Spinda has 4 spots, each with an entry in gSpindaSpotGraphics. Each entry contains
-    a base x and y coordinate for the spot and a 16x16 binary image. Each bit in the image
-    determines whether that pixel should be considered part of the spot.
+    for (i = 0; i < 4; i++)
+    {
+        int j;
+        u8 x = gSpindaSpotGraphics[i].x + ((personality & 0x0F) - 8); 
+        u8 y = gSpindaSpotGraphics[i].y + (((personality & 0xF0) >> 4) - 8);
 
-    The position of each spot is randomized using the Spinda's personality. The entire 32 bit
-    personality value is used, 4 bits for each coordinate of the 4 spots. If the personality
-    value is 0x87654321, then 0x1 will be used for the 1st spot's x coord, 0x2 will be used for
-    the 1st spot's y coord, 0x3 will be used for the 2nd spot's x coord, and so on. Each
-    coordinate is calculated as (baseCoord + (given 4 bits of personality) - 8). In effect this
-    means each spot can start at any position -8 to +7 off of its base coordinates (256 possibilities).
+        if (isSecondFrame)
+        {
+            x = gSpindaSpotGraphics[i].x + ((personality & 0x0F) - 12);
+            y = gSpindaSpotGraphics[i].y + (((personality & 0xF0) >> 4) + 56);
+        }
 
-    The macro then loops over the 16x16 spot image. For each bit in the spot's binary image, if
-    the bit is set then it's part of the spot; try to draw it. A pixel is drawn on Spinda if the
-    pixel on Spinda satisfies the following formula: ((u8)(colorIndex - 1) <= 2). The -1 excludes
-    transparent pixels, as these are index 0. Therefore only colors 1, 2, or 3 on Spinda will
-    allow a spot to be drawn. These color indexes are Spinda's light brown body colors. To create
-    the spot it adds 4 to the color index, so Spinda's spots will be colors 5, 6, and 7.
+        for (j = 0; j < 16; j++)
+        {
+            int k;
+            s32 row = gSpindaSpotGraphics[i].image[j];
 
-    The above is done two different ways in the macro: one with << 4, and one without. This
-    is because Spinda's sprite is a 4 bits per pixel image, but the pointer to Spinda's pixels
-    (destPixels) is an 8 bit pointer, so it addresses two pixels. Shifting by 4 accesses the 2nd
-    of these pixels, so this is done every other time.
-*/
-#define DRAW_SPINDA_SPOTS(personality, dest)                                    \
-{                                                                               \
-    s32 i;                                                                      \
-    for (i = 0; i < (s32)ARRAY_COUNT(gSpindaSpotGraphics); i++)                 \
-    {                                                                           \
-        s32 row;                                                                \
-        u8 x = gSpindaSpotGraphics[i].x + ((personality & 0x0F) - 8);           \
-        u8 y = gSpindaSpotGraphics[i].y + (((personality & 0xF0) >> 4) - 8);    \
-                                                                                \
-        for (row = 0; row < SPINDA_SPOT_HEIGHT; row++)                          \
-        {                                                                       \
-            s32 column;                                                         \
-            s32 spotPixelRow = gSpindaSpotGraphics[i].image[row];               \
-                                                                                \
-            for (column = x; column < x + SPINDA_SPOT_WIDTH; column++)          \
-            {                                                                   \
-                /* Get target pixels on Spinda's sprite */                      \
-                u8 *destPixels = dest + ((column / 8) * TILE_SIZE_4BPP) +       \
-                                        ((column % 8) / 2) +                    \
-                                             ((y / 8) * TILE_SIZE_4BPP * 8) +   \
-                                             ((y % 8) * 4);                     \
-                                                                                \
-                /* Is this pixel in the 16x16 spot image part of the spot? */   \
-                if (spotPixelRow & 1)                                           \
-                {                                                               \
-                    /* destPixels addressess two pixels, alternate which */     \
-                    /* of the two pixels is being considered for drawing */     \
-                    if (column & 1)                                             \
-                    {                                                           \
-                        /* Draw spot pixel if this is Spinda's body color */    \
-                        if ((u8)((*destPixels & 0xF0) - (FIRST_SPOT_COLOR << 4))\
-                                 <= ((LAST_SPOT_COLOR - FIRST_SPOT_COLOR) << 4))\
-                            *destPixels += (SPOT_COLOR_ADJUSTMENT << 4);        \
-                    }                                                           \
-                    else                                                        \
-                    {                                                           \
-                        /* Draw spot pixel if this is Spinda's body color */    \
-                        if ((u8)((*destPixels & 0xF) - FIRST_SPOT_COLOR)        \
-                                 <= (LAST_SPOT_COLOR - FIRST_SPOT_COLOR))       \
-                            *destPixels += SPOT_COLOR_ADJUSTMENT;               \
-                    }                                                           \
-                }                                                               \
-                                                                                \
-                spotPixelRow >>= 1;                                             \
-            }                                                                   \
-                                                                                \
-            y++;                                                                \
-        }                                                                       \
-                                                                                \
-        personality >>= 8;                                                      \
-    }                                                                           \
+            for (k = x; k < x + 16; k++)
+            {
+                u8 *val = dest + ((k / 8) * 32) +
+                                 ((k % 8) / 2) +
+                                 ((y >> 3) << 8) +
+                                 ((y & 7) << 2);
+
+                if (row & 1)
+                {
+                    if (k & 1)
+                    {
+                        if ((u8)((*val & 0xF0) - 0x10) <= 0x20)
+                            *val += 0x40;
+                    }
+                    else
+                    {
+                        if ((u8)((*val & 0xF) - 0x01) <= 0x02)
+                            *val += 0x04;
+                    }
+                }
+
+                row >>= 1;
+            }
+
+            y++;
+        }
+
+        personality >>= 8;
+    }
 }
 
 // Same as DrawSpindaSpots but attempts to discern for itself whether or
 // not it's the front pic.
 static void DrawSpindaSpotsUnused(u16 species, u32 personality, u8 *dest)
 {
+    u32 origPersonality = personality;
     if (species == SPECIES_SPINDA
         && dest != gMonSpritesGfxPtr->sprites.ptr[B_POSITION_PLAYER_LEFT]
         && dest != gMonSpritesGfxPtr->sprites.ptr[B_POSITION_PLAYER_RIGHT])
-        DRAW_SPINDA_SPOTS(personality, dest);
+        DrawSpindaSpotsToFrame(personality, dest, FALSE);
 }
 
 void DrawSpindaSpots(u16 species, u32 personality, u8 *dest, bool8 isFrontPic)
 {
-    if (species == SPECIES_SPINDA && isFrontPic)
-        DRAW_SPINDA_SPOTS(personality, dest);
+    if (species == SPECIES_SPINDA && isFrontPic){
+        DrawSpindaSpotsToFrame(personality, dest, FALSE);
+        DrawSpindaSpotsToFrame(personality, dest, TRUE);
+    }
 }
 
 void EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies)
@@ -7348,6 +7363,7 @@ bool8 TryIncrementMonLevel(struct Pokemon *mon)
 
 u8 CanLearnTeachableMove(u16 species, u16 move)
 {
+    const u8 *learnableMoves;
     if (species == SPECIES_EGG)
     {
         return FALSE;
@@ -7394,6 +7410,7 @@ u8 CanLearnTeachableMove(u16 species, u16 move)
         }
         return FALSE;
     }
+    return FALSE;
 }
 
 u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
@@ -7429,6 +7446,35 @@ u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
                 if (k == numMoves)
                     moves[numMoves++] = gLevelUpLearnsets[species][i].move;
             }
+        }
+    }
+
+    return numMoves;
+}
+
+u8 GetMoveTutorMoves(struct Pokemon *mon, u16 *moves)
+{
+    u16 learnedMoves[4];
+    u8 numMoves = 0;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, 0);
+    int i, j, k;
+
+    for (i = 0; i < MAX_MON_MOVES; i++)
+        learnedMoves[i] = GetMonData(mon, MON_DATA_MOVE1 + i, 0);
+
+    for (i = 0; i < 185; i++)
+    {
+        if (gTeachableLearnsets[species][i] == MOVE_UNAVAILABLE)
+            break;
+        
+        for (j = 0; j < MAX_MON_MOVES && learnedMoves[j] != gTeachableLearnsets[species][i]; j++)
+        ;
+
+        if(IsMoveTmHm(gTeachableLearnsets[species][i]))
+            continue;
+        
+        if (j == MAX_MON_MOVES) {
+            moves[numMoves++] = gTeachableLearnsets[species][i];
         }
     }
 
@@ -7487,6 +7533,35 @@ u8 GetNumberOfRelearnableMoves(struct Pokemon *mon)
     }
 
     return numMoves;
+}
+
+u8 CanLearnTutorMoves(struct Pokemon *mon)
+{
+    u16 learnedMoves[4];
+    u8 numMoves = 0;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, 0);
+    int i, j, k;
+
+    for (i = 0; i < MAX_MON_MOVES; i++)
+        learnedMoves[i] = GetMonData(mon, MON_DATA_MOVE1 + i, 0);
+
+    for (i = 0; i < 40; i++)
+    {
+        if (gTeachableLearnsets[species][i] == MOVE_UNAVAILABLE)
+            break;
+        
+        for (j = 0; j < MAX_MON_MOVES && learnedMoves[j] != gTeachableLearnsets[species][i]; j++)
+            ;
+
+        if(IsMoveTmHm(gTeachableLearnsets[species][i]))
+            continue;
+        
+        if (j == MAX_MON_MOVES) {
+            return TRUE;
+        }
+    }
+
+    return FALSE;
 }
 
 u16 SpeciesToPokedexNum(u16 species)
@@ -7785,7 +7860,8 @@ static s32 GetWildMonTableIdInAlteringCave(u16 species)
 
 void SetWildMonHeldItem(void)
 {
-    if (!(gBattleTypeFlags & (BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_TRAINER | BATTLE_TYPE_PYRAMID | BATTLE_TYPE_PIKE)))
+    if (!(gBattleTypeFlags & (BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_TRAINER | BATTLE_TYPE_PYRAMID | BATTLE_TYPE_PIKE))
+      && !gDexnavBattle)
     {
         u16 rnd;
         u16 species;
@@ -8090,6 +8166,7 @@ void HandleSetPokedexFlag(u16 nationalNum, u8 caseId, u32 personality)
         if (NationalPokedexNumToSpecies(nationalNum) == SPECIES_SPINDA)
             gSaveBlock2Ptr->pokedex.spindaPersonality = personality;
     }
+
 }
 
 const u8 *GetTrainerClassNameFromId(u16 trainerId)
@@ -8109,7 +8186,6 @@ const u8 *GetTrainerNameFromId(u16 trainerId)
 bool8 HasTwoFramesAnimation(u16 species)
 {
     return (species != SPECIES_CASTFORM
-         && species != SPECIES_SPINDA
          && species != SPECIES_UNOWN
          && species != SPECIES_CHERRIM
          && species != SPECIES_CASTFORM_SUNNY
@@ -8408,6 +8484,7 @@ u16 GetFormChangeTargetSpeciesBoxMon(struct BoxPokemon *boxMon, u16 method, u32 
     return targetSpecies;
 }
 
+<<<<<<< HEAD
 bool32 DoesSpeciesHaveFormChangeMethod(u16 species, u16 method)
 {
     u32 i, j;
@@ -8423,6 +8500,23 @@ bool32 DoesSpeciesHaveFormChangeMethod(u16 species, u16 method)
     }
 
     return FALSE;
+=======
+void CreateShinyMonWithNature(struct Pokemon* mon, u16 species, u8 level, u8 nature)
+{
+    u32 personality;
+    u32 otid = gSaveBlock2Ptr->playerTrainerId[0]
+        | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+        | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+        | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+
+    do
+    {
+        personality = Random32();
+        personality = ((((Random() % 8) ^ (HIHALF(otid) ^ LOHALF(otid))) ^ LOHALF(personality)) << 16) | LOHALF(personality);
+    } while (nature != GetNatureFromPersonality(personality));
+
+    CreateMon(mon, species, level, 32, 1, personality, OT_ID_PRESET, otid);
+>>>>>>> art/GlimmeringEmerald_dev
 }
 
 u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)

@@ -52,9 +52,9 @@
 
 // PC main menu options
 enum {
+    OPTION_MOVE_MONS, 
     OPTION_WITHDRAW,
     OPTION_DEPOSIT,
-    OPTION_MOVE_MONS,
     OPTION_MOVE_ITEMS,
     OPTION_EXIT,
     OPTIONS_COUNT
@@ -424,7 +424,7 @@ struct PokemonStorageSystemData
     s16 scrollSpeed;
     u16 scrollTimer;
     u8 wallpaperOffset;
-    u8 scrollUnused1; // Never read
+    u8 infostate;
     u8 scrollToBoxIdUnused; // Never read
     u16 scrollUnused2; // Never read
     s16 scrollDirectionUnused; // Never read.
@@ -432,7 +432,13 @@ struct PokemonStorageSystemData
     u16 scrollUnused4; // Never read
     u16 scrollUnused5; // Never read
     u16 scrollUnused6; // Never read
-    u8 filler1[22];
+    s8 displayMonHPEV[3];
+    s8 displayMonAtkEV[3];
+    s8 displayMonDefEV[3];
+    s8 displayMonSpdEV[3];
+    s8 displayMonSpAtkEV[3];
+    s8 displayMonSpDefEV[3];
+    u8 filler1[4];
     u8 boxTitleTiles[1024];
     u8 boxTitleCycleId;
     u8 wallpaperLoadState; // Written to, but never read.
@@ -547,7 +553,7 @@ struct PokemonStorageSystemData
     struct ItemIcon itemIcons[MAX_ITEM_ICONS];
     u16 movingItemId;
     u16 itemInfoWindowOffset;
-    u8 unkUnused2; // Unused
+    u8 displayMonMetGame; // Unused
     u16 displayMonPalOffset;
     u16 *displayMonTilePtr;
     struct Sprite *displayMonSprite;
@@ -683,6 +689,7 @@ static bool8 IsMonBeingMoved(void);
 static void TryRefreshDisplayMon(void);
 static void ReshowDisplayMon(void);
 static void SetDisplayMonData(void *, u8);
+static void SetDisplayMonEVIV(void *, u8);
 
 // Moving multiple Pokémon at once
 static void MultiMove_Free(void);
@@ -856,7 +863,7 @@ static bool8 IsDisplayMosaicActive(void);
 static void ShowYesNoWindow(s8);
 static void UpdateCloseBoxButtonTilemap(bool8);
 static void PrintMessage(u8 id);
-static void LoadDisplayMonGfx(u16, u32);
+static void LoadDisplayMonGfx(u16, u32, u8 metGame);
 static void SpriteCB_DisplayMonMosaic(struct Sprite *);
 static void SetPartySlotTilemap(u8, bool8);
 
@@ -886,9 +893,9 @@ struct {
     const u8 *desc;
 } static const sMainMenuTexts[OPTIONS_COUNT] =
 {
+    [OPTION_MOVE_MONS] = {gText_MovePokemon,     gText_MoveMonDescription},
     [OPTION_WITHDRAW]   = {gText_WithdrawPokemon, gText_WithdrawMonDescription},
     [OPTION_DEPOSIT]    = {gText_DepositPokemon,  gText_DepositMonDescription},
-    [OPTION_MOVE_MONS]  = {gText_MovePokemon,     gText_MoveMonDescription},
     [OPTION_MOVE_ITEMS] = {gText_MoveItems,       gText_MoveItemsDescription},
     [OPTION_EXIT]       = {gText_SeeYa,           gText_SeeYaDescription}
 };
@@ -1557,6 +1564,7 @@ static void Task_PCMainMenu(u8 taskId)
         AddTextPrinterParameterized2(0, FONT_NORMAL, sMainMenuTexts[task->tSelectedOption].desc, TEXT_SKIP_DRAW, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
         CopyWindowToVram(0, COPYWIN_FULL);
         CopyWindowToVram(task->tWindowId, COPYWIN_FULL);
+        sStorage->infostate = 0;
         task->tState++;
         break;
     case STATE_FADE_IN:
@@ -3905,7 +3913,7 @@ static void CreateWaveformSprites(void)
 
 static void RefreshDisplayMonData(void)
 {
-    LoadDisplayMonGfx(sStorage->displayMonSpecies, sStorage->displayMonPersonality);
+    LoadDisplayMonGfx(sStorage->displayMonSpecies, sStorage->displayMonPersonality, sStorage->displayMonMetGame);
     PrintDisplayMonInfo();
     UpdateWaveformAnimation();
     ScheduleBgCopyTilemapToVram(0);
@@ -3985,14 +3993,14 @@ static void CreateDisplayMonSprite(void)
     }
 }
 
-static void LoadDisplayMonGfx(u16 species, u32 pid)
+static void LoadDisplayMonGfx(u16 species, u32 pid, u8 metGame)
 {
     if (sStorage->displayMonSprite == NULL)
         return;
 
     if (species != SPECIES_NONE)
     {
-        LoadSpecialPokePic(sStorage->tileBuffer, species, pid, TRUE);
+        LoadSpecialPokePic(sStorage->tileBuffer, species, pid, TRUE, metGame);
         LZ77UnCompWram(sStorage->displayMonPalette, sStorage->displayMonPalBuffer);
         CpuCopy32(sStorage->tileBuffer, sStorage->displayMonTilePtr, MON_PIC_SIZE);
         LoadPalette(sStorage->displayMonPalBuffer, sStorage->displayMonPalOffset, PLTT_SIZE_4BPP);
@@ -4009,10 +4017,43 @@ static void PrintDisplayMonInfo(void)
     FillWindowPixelBuffer(WIN_DISPLAY_INFO, PIXEL_FILL(1));
     if (sStorage->boxOption != OPTION_MOVE_ITEMS)
     {
-        AddTextPrinterParameterized(WIN_DISPLAY_INFO, FONT_NORMAL, sStorage->displayMonNameText, 6, 0, TEXT_SKIP_DRAW, NULL);
-        AddTextPrinterParameterized(WIN_DISPLAY_INFO, FONT_SHORT, sStorage->displayMonSpeciesName, 6, 15, TEXT_SKIP_DRAW, NULL);
-        AddTextPrinterParameterized(WIN_DISPLAY_INFO, FONT_SHORT, sStorage->displayMonGenderLvlText, 10, 29, TEXT_SKIP_DRAW, NULL);
-        AddTextPrinterParameterized(WIN_DISPLAY_INFO, FONT_SMALL, sStorage->displayMonItemName, 6, 43, TEXT_SKIP_DRAW, NULL);
+        if(sStorage->infostate == 0){
+            AddTextPrinterParameterized(0, FONT_NORMAL, sStorage->displayMonNameText, 6, 0, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SHORT, sStorage->displayMonSpeciesName, 6, 15, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SHORT, sStorage->displayMonGenderLvlText, 10, 29, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonItemName, 6, 43, TEXT_SKIP_DRAW, NULL);
+        }
+        else{
+            AddTextPrinterParameterized(0, FONT_NORMAL, sStorage->displayMonName, 6, 0, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonDefEV, 18, 43, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, gText_Spd, 35, 43, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonSpdEV, 57, 43, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonAtkEV, 18, 33, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, gText_SpDef5, 35, 33, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonSpDefEV, 57, 33, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonHPEV, 18, 23, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, gText_SpAtk5, 35, 23, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonSpAtkEV, 57, 23, TEXT_SKIP_DRAW, NULL);
+        
+            AddTextPrinterParameterized(0, FONT_SMALL, gText_Def, 1, 43, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, gText_Atk, 1, 33, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_SMALL, gText_HP4, 1, 23, TEXT_SKIP_DRAW, NULL);
+            if(sStorage->infostate == 1){
+                AddTextPrinterParameterized(0, FONT_SMALL, gText_EVs, 1, 13, TEXT_SKIP_DRAW, NULL);
+            }else if(sStorage->infostate == 2){
+                AddTextPrinterParameterized(0, FONT_SMALL, gText_IVs, 1, 13, TEXT_SKIP_DRAW, NULL);
+            }
+
+            if (sStorage->displayMonSpecies == SPECIES_NONE){
+                AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonHPEV, 35, 43, TEXT_SKIP_DRAW, NULL);
+                AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonHPEV, 35, 33, TEXT_SKIP_DRAW, NULL);
+                AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonHPEV, 35, 23, TEXT_SKIP_DRAW, NULL);
+                AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonHPEV, 1, 43, TEXT_SKIP_DRAW, NULL);
+                AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonHPEV, 1, 33, TEXT_SKIP_DRAW, NULL);
+                AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonHPEV, 1, 23, TEXT_SKIP_DRAW, NULL);
+                AddTextPrinterParameterized(0, FONT_SMALL, sStorage->displayMonHPEV, 1, 13, TEXT_SKIP_DRAW, NULL);
+            }
+        }
     }
     else
     {
@@ -5283,15 +5324,8 @@ static void SetUpScrollToBox(u8 boxId)
     s8 direction = DetermineBoxScrollDirection(boxId);
 
     sStorage->scrollSpeed = (direction > 0) ? 6 : -6;
-    sStorage->scrollUnused1 = (direction > 0) ? 1 : 2;
     sStorage->scrollTimer = 32;
-    sStorage->scrollToBoxIdUnused = boxId;
-    sStorage->scrollUnused2 = (direction <= 0) ? 5 : 0;
-    sStorage->scrollDirectionUnused = direction;
 
-    sStorage->scrollUnused3 = (direction > 0) ? 264 : 56;
-    sStorage->scrollUnused4 = (direction <= 0) ? 5 : 0;
-    sStorage->scrollUnused5 = 0;
     sStorage->scrollUnused6 = 2;
     sStorage->scrollToBoxId = boxId;
     sStorage->scrollDirection = direction;
@@ -6932,6 +6966,22 @@ static void SetDisplayMonData(void *pokemon, u8 mode)
             sStorage->displayMonPalette = GetMonFrontSpritePal(mon);
             gender = GetMonGender(mon);
             sStorage->displayMonItemId = GetMonData(mon, MON_DATA_HELD_ITEM);
+            if(sStorage->infostate==1){
+                ConvertIntToDecimalStringN(sStorage->displayMonHPEV, GetMonData(mon, MON_DATA_HP_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonAtkEV, GetMonData(mon, MON_DATA_ATK_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonDefEV, GetMonData(mon, MON_DATA_DEF_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpdEV, GetMonData(mon, MON_DATA_SPEED_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpAtkEV, GetMonData(mon, MON_DATA_SPATK_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpDefEV, GetMonData(mon, MON_DATA_SPDEF_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+            }else if(sStorage->infostate==2){
+                ConvertIntToDecimalStringN(sStorage->displayMonHPEV, GetMonData(mon, MON_DATA_HP_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonAtkEV, GetMonData(mon, MON_DATA_ATK_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonDefEV, GetMonData(mon, MON_DATA_DEF_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpdEV, GetMonData(mon, MON_DATA_SPEED_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpAtkEV, GetMonData(mon, MON_DATA_SPATK_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpDefEV, GetMonData(mon, MON_DATA_SPDEF_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+            }
+            sStorage->displayMonMetGame = GetMonData(mon, MON_DATA_MET_GAME);
         }
     }
     else if (mode == MODE_BOX)
@@ -6957,6 +7007,22 @@ static void SetDisplayMonData(void *pokemon, u8 mode)
             sStorage->displayMonPalette = GetMonSpritePalFromSpeciesAndPersonality(sStorage->displayMonSpecies, otId, sStorage->displayMonPersonality);
             gender = GetGenderFromSpeciesAndPersonality(sStorage->displayMonSpecies, sStorage->displayMonPersonality);
             sStorage->displayMonItemId = GetBoxMonData(boxMon, MON_DATA_HELD_ITEM);
+            if(sStorage->infostate==1){
+                ConvertIntToDecimalStringN(sStorage->displayMonHPEV, GetBoxMonData(boxMon, MON_DATA_HP_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonAtkEV, GetBoxMonData(boxMon, MON_DATA_ATK_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonDefEV, GetBoxMonData(boxMon, MON_DATA_DEF_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpdEV, GetBoxMonData(boxMon, MON_DATA_SPEED_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpAtkEV, GetBoxMonData(boxMon, MON_DATA_SPATK_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpDefEV, GetBoxMonData(boxMon, MON_DATA_SPDEF_EV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+            }else if(sStorage->infostate==2){
+                ConvertIntToDecimalStringN(sStorage->displayMonHPEV, GetBoxMonData(boxMon, MON_DATA_HP_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonAtkEV, GetBoxMonData(boxMon, MON_DATA_ATK_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonDefEV, GetBoxMonData(boxMon, MON_DATA_DEF_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpdEV, GetBoxMonData(boxMon, MON_DATA_SPEED_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpAtkEV, GetBoxMonData(boxMon, MON_DATA_SPATK_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                ConvertIntToDecimalStringN(sStorage->displayMonSpDefEV, GetBoxMonData(boxMon, MON_DATA_SPDEF_IV), STR_CONV_MODE_RIGHT_ALIGN, 3);
+            }\
+            sStorage->displayMonMetGame = GetBoxMonData(boxMon, MON_DATA_MET_GAME);
         }
     }
     else
@@ -6972,6 +7038,12 @@ static void SetDisplayMonData(void *pokemon, u8 mode)
         StringFill(sStorage->displayMonSpeciesName, CHAR_SPACE, 8);
         StringFill(sStorage->displayMonGenderLvlText, CHAR_SPACE, 8);
         StringFill(sStorage->displayMonItemName, CHAR_SPACE, 8);
+        StringFill(sStorage->displayMonHPEV, CHAR_SPACE, 3);
+        StringFill(sStorage->displayMonAtkEV, CHAR_SPACE, 3);
+        StringFill(sStorage->displayMonDefEV, CHAR_SPACE, 3);
+        StringFill(sStorage->displayMonSpdEV, CHAR_SPACE, 3);
+        StringFill(sStorage->displayMonSpAtkEV, CHAR_SPACE, 3);
+        StringFill(sStorage->displayMonSpDefEV, CHAR_SPACE, 3);
     }
     else if (sStorage->displayMonIsEgg)
     {
@@ -7132,12 +7204,15 @@ static u8 InBoxInput_Normal(void)
             }
             break;
         }
-        else if (JOY_NEW(START_BUTTON))
+        else if (JOY_NEW(START_BUTTON) && FlagGet(FLAG_IS_CHAMPION))
         {
-            retVal = INPUT_MOVE_CURSOR;
-            cursorArea = CURSOR_AREA_BOX_TITLE;
-            cursorPosition = 0;
-            break;
+            sStorage->infostate++;
+            if(sStorage->infostate==3){
+                sStorage->infostate=0;
+            }
+            PlaySE(SE_SELECT);
+            SetDisplayMonData(GetBoxedMonPtr(StorageGetCurrentBox(), sCursorPosition), MODE_BOX);
+            PrintDisplayMonInfo();
         }
 
         if ((JOY_NEW(A_BUTTON)) && SetSelectionMenuTexts())
@@ -7468,6 +7543,16 @@ static u8 HandleInput_InParty(void)
         {
             ToggleCursorAutoAction();
             return INPUT_NONE;
+        }
+        else if (JOY_NEW(START_BUTTON) && FlagGet(FLAG_IS_CHAMPION))
+        {
+            sStorage->infostate++;
+            if(sStorage->infostate==3){
+                sStorage->infostate=0;
+            }
+            PlaySE(SE_SELECT);
+            SetDisplayMonData(&gPlayerParty[sCursorPosition], MODE_PARTY);
+            PrintDisplayMonInfo();
         }
 
     } while (0);
@@ -10134,10 +10219,11 @@ void UpdateSpeciesSpritePSS(struct BoxPokemon *boxMon)
 
     // Update front sprite
     sStorage->displayMonSpecies = species;
+    sStorage->displayMonMetGame = GetBoxMonData(boxMon, MON_DATA_MET_GAME);;
     sStorage->displayMonPalette = GetMonSpritePalFromSpeciesAndPersonality(species, otId, pid);
     if (!sJustOpenedBag)
     {
-        LoadDisplayMonGfx(species, pid);
+        LoadDisplayMonGfx(species, pid, sStorage->displayMonMetGame);
         StartDisplayMonMosaicEffect();
 
         // Recreate icon sprite

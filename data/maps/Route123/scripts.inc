@@ -170,29 +170,59 @@ Route123_EventScript_RematchFernando::
 	msgbox Route123_Text_FernandoPostRematch, MSGBOX_AUTOCLOSE
 	end
 
+Route123_EventScript_Girl:: @ 8211125
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_TM99, Route123_ReceivedDazzlingGleam
+	msgbox Route123_Text_HeyHey, MSGBOX_DEFAULT
+	giveitem ITEM_TM99
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_TM99
+	release
+	end
+
+Route123_ReceivedDazzlingGleam::
+	msgbox Route123_Text_NoFairyGym, MSGBOX_DEFAULT
+	release
+	end
+
 Route123_Text_LoveGrassMonsHaveAny:
-	.string "I love GRASS-type POKéMON!\p"
-	.string "Do you have any GRASS-type POKéMON?$"
+	.string "I love Grass-type Pokémon!\p"
+	.string "Do you have any Grass-type Pokémon?$"
 
 Route123_Text_YouLikeGrassMonsTooHaveThis:
 	.string "Oh?\p"
-	.string "You like GRASS-type POKéMON, too,\n"
+	.string "You like Grass-type Pokémon, too,\n"
 	.string "don't you?\p"
 	.string "I'm so happy, you can have this!\n"
 	.string "It's a token of our friendship.$"
 
 Route123_Text_CheckTreesWithMyGrassMon:
-	.string "I check trees with my GRASS-type\n"
-	.string "POKéMON. I'm like a tree doctor.$"
+	.string "I check trees with my Grass-type\n"
+	.string "Pokémon. I'm like a tree doctor.$"
 
 Route123_Text_RouteSign:
-	.string "{RIGHT_ARROW} ROUTE 123\n"
-	.string "{LEFT_ARROW} ROUTE 118$"
+	.string "{RIGHT_ARROW} Route 123\n"
+	.string "{LEFT_ARROW} Route 118$"
 
 Route123_Text_RouteSignMtPyre:
-	.string "{UP_ARROW} MT. PYRE\n"
+	.string "{UP_ARROW} Mt. Pyre\n"
 	.string "“Forbidden to the faint of heart.”$"
 
 Route123_Text_BerryMastersHouse:
-	.string "BERRY MASTER'S HOUSE$"
+	.string "Berry Master's House$"
 
+Route123_Text_HeyHey:
+	.string "Hey, hey!\p"
+	.string "Fairy types are sure-enough\n"
+	.string "cute, but they can be strong,\l"
+	.string "too!\p"
+	.string "I bet you already knew that, eh?$"
+
+Route123_Text_NoFairyGym:
+	.string "There's no Fairy-type Gym in\n"
+	.string "Hoenn, eh?\p"
+	.string "Maybe I'll sure-enough go ahead\n"
+	.string "and make one! Before Miss\l"
+	.string "Valerie even gets here!"

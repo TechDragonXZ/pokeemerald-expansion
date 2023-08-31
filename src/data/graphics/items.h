@@ -1940,8 +1940,16 @@ const u32 gItemIconPalette_Ruby[] = INCBIN_U32("graphics/items/icon_palettes/rub
 
 const u32 gItemIconPalette_Sapphire[] = INCBIN_U32("graphics/items/icon_palettes/sapphire.gbapal.lz");
 
+<<<<<<< HEAD
 const u32 gItemIcon_AbilityShield[] = INCBIN_U32("graphics/items/icons/ability_shield.4bpp.lz");
 const u32 gItemIconPalette_AbilityShield[] = INCBIN_U32("graphics/items/icon_palettes/ability_shield.gbapal.lz");
+=======
+const u32 gItemIcon_EonFlute[] = INCBIN_U32("graphics/items/icons/eon_flute.4bpp.lz");
+const u32 gItemIconPalette_EonFlute[] = INCBIN_U32("graphics/items/icon_palettes/eon_flute.gbapal.lz");
+
+//const u32 gItemIcon_AbilityShield[] = INCBIN_U32("graphics/items/icons/ability_shield.4bpp.lz");
+//const u32 gItemIconPalette_AbilityShield[] = INCBIN_U32("graphics/items/icon_palettes/ability_shield.gbapal.lz");
+>>>>>>> art/GlimmeringEmerald_dev
 
 //const u32 gItemIcon_ClearAmulet[] = INCBIN_U32("graphics/items/icons/clear_amulet.4bpp.lz");
 //const u32 gItemIconPalette_ClearAmulet[] = INCBIN_U32("graphics/items/icon_palettes/clear_amulet.gbapal.lz");
@@ -1952,6 +1960,7 @@ const u32 gItemIconPalette_PunchingGlove[] = INCBIN_U32("graphics/items/icon_pal
 const u32 gItemIcon_CovertCloak[] = INCBIN_U32("graphics/items/icons/covert_cloak.4bpp.lz");
 const u32 gItemIconPalette_CovertCloak[] = INCBIN_U32("graphics/items/icon_palettes/covert_cloak.gbapal.lz");
 
+<<<<<<< HEAD
 const u32 gItemIcon_LoadedDice[] = INCBIN_U32("graphics/items/icons/loaded_dice.4bpp.lz");
 const u32 gItemIconPalette_LoadedDice[] = INCBIN_U32("graphics/items/icon_palettes/loaded_dice.gbapal.lz");
 
@@ -2001,3 +2010,16 @@ const u32 gItemIconPalette_LustrousGlobe[] = INCBIN_U32("graphics/items/icon_pal
 
 const u32 gItemIcon_BerserkGene[] = INCBIN_U32("graphics/items/icons/berserk_gene.4bpp.lz");
 const u32 gItemIconPalette_BerserkGene[] = INCBIN_U32("graphics/items/icon_palettes/berserk_gene.gbapal.lz");
+=======
+//const u32 gItemIcon_LoadedDice[] = INCBIN_U32("graphics/items/icons/loaded_dice.4bpp.lz");
+//const u32 gItemIconPalette_LoadedDice[] = INCBIN_U32("graphics/items/icon_palettes/loaded_dice.gbapal.lz");
+
+const u32 gItemIcon_BlackAugurite[] = INCBIN_U32("graphics/items/icons/black_augurite.4bpp.lz");
+const u32 gItemIconPalette_BlackAugurite[] = INCBIN_U32("graphics/items/icon_palettes/black_augurite.gbapal.lz");
+
+const u32 gItemIcon_LinkingCord[] = INCBIN_U32("graphics/items/icons/linking_cord.4bpp.lz");
+const u32 gItemIconPalette_LinkingCord[] = INCBIN_U32("graphics/items/icon_palettes/linking_cord.gbapal.lz");
+
+const u32 gItemIcon_PeatBlock[] = INCBIN_U32("graphics/items/icons/peat_block.4bpp.lz");
+const u32 gItemIconPalette_PeatBlock[] = INCBIN_U32("graphics/items/icon_palettes/peat_block.gbapal.lz");
+>>>>>>> art/GlimmeringEmerald_dev

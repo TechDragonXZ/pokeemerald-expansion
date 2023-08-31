@@ -20,7 +20,11 @@
 #include "list_menu.h"
 #include "overworld.h"
 #include "item.h"
+<<<<<<< HEAD
 #include "constants/form_change_types.h"
+=======
+//#include "constants/battle_config.h"
+>>>>>>> art/GlimmeringEmerald_dev
 #include "constants/items.h"
 #include "constants/hold_effects.h"
 #include "constants/moves.h"
@@ -490,6 +494,30 @@ static s32 GetParentToInheritNature(struct DayCare *daycare)
     u8 numWithEverstone = 0;
     s32 slot = -1;
 
+<<<<<<< HEAD
+=======
+#if INHERIT_NATURE >= GEN_5
+
+    // search for everstone
+    if (GetBoxMonData(&daycare->mons[0].mon, MON_DATA_HELD_ITEM) == ITEM_EVERSTONE)
+        parent = 0;
+
+    if (GetBoxMonData(&daycare->mons[1].mon, MON_DATA_HELD_ITEM) == ITEM_EVERSTONE) 
+    {
+        parent = 1;
+        if (GetBoxMonData(&daycare->mons[0].mon, MON_DATA_HELD_ITEM) == ITEM_EVERSTONE)
+        {
+            if (Random() >= USHRT_MAX / 2)
+                parent = 0;
+            else
+                parent = 1;
+        }
+    }
+
+
+#else
+    // search for female gender
+>>>>>>> art/GlimmeringEmerald_dev
     for (i = 0; i < DAYCARE_MON_COUNT; i++)
     {
         if (ItemId_GetHoldEffect(GetBoxMonData(&daycare->mons[i].mon, MON_DATA_HELD_ITEM)) == HOLD_EFFECT_PREVENT_EVOLVE
@@ -502,6 +530,7 @@ static s32 GetParentToInheritNature(struct DayCare *daycare)
         }
     }
 
+<<<<<<< HEAD
     if (numWithEverstone >= DAYCARE_MON_COUNT)
         return Random() & 1;
 #if P_NATURE_INHERITANCE > GEN_4
@@ -509,6 +538,34 @@ static s32 GetParentToInheritNature(struct DayCare *daycare)
 #else
     return Random() & 1 ? slot : -1;
 #endif
+=======
+    // search for ditto
+    for (dittoCount = 0, i = 0; i < DAYCARE_MON_COUNT; i++)
+    {
+        species[i] = GetBoxMonData(&daycare->mons[i].mon, MON_DATA_SPECIES);
+        if (species[i] == SPECIES_DITTO)
+            dittoCount++, parent = i;
+    }
+
+    // coin flip on ...two Dittos
+    if (dittoCount == DAYCARE_MON_COUNT)
+    {
+        if (Random() >= USHRT_MAX / 2)
+            parent = 0;
+        else
+            parent = 1;
+    }
+
+    // Don't inherit nature if not holding Everstone
+    if (GetBoxMonData(&daycare->mons[parent].mon, MON_DATA_HELD_ITEM) != ITEM_EVERSTONE
+        || Random() >= USHRT_MAX / 2)
+    {
+        return -1;
+    }
+#endif
+
+    return parent;
+>>>>>>> art/GlimmeringEmerald_dev
 }
 
 static void _TriggerPendingDaycareEgg(struct DayCare *daycare)
@@ -745,7 +802,7 @@ static void InheritAbility(struct Pokemon *egg, struct BoxPokemon *father, struc
 
 // Counts the number of egg moves a pokemon learns and stores the moves in
 // the given array.
-static u8 GetEggMoves(struct Pokemon *pokemon, u16 *eggMoves)
+u8 GetEggMoves(struct Pokemon *pokemon, u16 *eggMoves)
 {
     u16 eggMoveIdx;
     u16 numEggMoves;
@@ -1083,6 +1140,38 @@ static void SetInitialEggData(struct Pokemon *mon, u16 species, struct DayCare *
     CreateMon(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, TRUE, personality, OT_ID_PLAYER_ID, 0);
     metLevel = 0;
     ball = ITEM_POKE_BALL;
+
+#if INHERIT_BALL == GEN_6
+    if (GetBoxMonGender(&daycare->mons[0].mon) == MON_FEMALE && GetBoxMonData(&daycare->mons[0].mon, MON_DATA_POKEBALL) != ITEM_MASTER_BALL) {
+        ball = GetBoxMonData(&daycare->mons[0].mon, MON_DATA_POKEBALL);
+    }
+    else if (GetBoxMonGender(&daycare->mons[1].mon) == MON_FEMALE && GetBoxMonData(&daycare->mons[1].mon, MON_DATA_POKEBALL) != ITEM_MASTER_BALL) {
+        ball = GetBoxMonData(&daycare->mons[1].mon, MON_DATA_POKEBALL);
+    }
+#endif
+
+#if INHERIT_BALL >= GEN_7
+    if (GetBoxMonData(&daycare->mons[0].mon, MON_DATA_SPECIES) == SPECIES_DITTO) {
+        if (GetBoxMonData(&daycare->mons[1].mon, MON_DATA_POKEBALL) != ITEM_MASTER_BALL) {
+            ball = GetBoxMonData(&daycare->mons[1].mon, MON_DATA_POKEBALL);
+        }
+    }
+    else if (GetBoxMonData(&daycare->mons[1].mon, MON_DATA_SPECIES) == SPECIES_DITTO) {
+        if (GetBoxMonData(&daycare->mons[0].mon, MON_DATA_POKEBALL) != ITEM_MASTER_BALL) {
+            ball = GetBoxMonData(&daycare->mons[0].mon, MON_DATA_POKEBALL);
+        }
+    }
+    else if (GetBoxMonData(&daycare->mons[0].mon, MON_DATA_SPECIES) == GetBoxMonData(&daycare->mons[1].mon, MON_DATA_SPECIES)) {
+        u16 rand = Random() % 2;
+        if (GetBoxMonData(&daycare->mons[rand].mon, MON_DATA_POKEBALL) != ITEM_MASTER_BALL) {
+            ball = GetBoxMonData(&daycare->mons[rand].mon, MON_DATA_POKEBALL);
+        }
+    }
+    else if (GetBoxMonGender(&daycare->mons[0].mon) == MON_FEMALE && GetBoxMonData(&daycare->mons[0].mon, MON_DATA_POKEBALL) != ITEM_MASTER_BALL) {
+        ball = GetBoxMonData(&daycare->mons[0].mon, MON_DATA_POKEBALL);
+    }
+#endif
+
     language = LANGUAGE_JAPANESE;
     SetMonData(mon, MON_DATA_POKEBALL, &ball);
     SetMonData(mon, MON_DATA_NICKNAME, sJapaneseEggNickname);

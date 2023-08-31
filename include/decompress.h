@@ -15,13 +15,14 @@ bool8 LoadCompressedSpriteSheetUsingHeap(const struct CompressedSpriteSheet *src
 void LoadCompressedSpritePalette(const struct CompressedSpritePalette *src);
 void LoadCompressedSpritePaletteOverrideBuffer(const struct CompressedSpritePalette *src, void *buffer);
 bool8 LoadCompressedSpritePaletteUsingHeap(const struct CompressedSpritePalette *src);
+void LoadCompressedSpritePaletteDayNight(const struct CompressedSpritePalette *src);
 
 void DecompressPicFromTable(const struct CompressedSpriteSheet *src, void *buffer, s32 species);
 void DecompressPicFromTableGender(void* buffer, s32 species, u32 personality);
 
-void HandleLoadSpecialPokePic(bool32 isFrontPic, void *dest, s32 species, u32 personality);
-
-void LoadSpecialPokePic(void *dest, s32 species, u32 personality, bool8 isFrontPic);
+void HandleLoadSpecialPokePic(bool32 isFrontPic, void *dest, s32 species, u32 personality, u8 metGame);
+void HandleLoadSpecialPokePicCustom(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFemale);
+void LoadSpecialPokePic(void *dest, s32 species, u32 personality, bool8 isFrontPic, u8 metGame);
 
 u32 GetDecompressedDataSize(const u32 *ptr);
 

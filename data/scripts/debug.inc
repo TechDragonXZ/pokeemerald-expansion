@@ -70,6 +70,7 @@ Debug_FlagsNotSetBattleConfigMessage_Text:
 	.string "'include/config/battle.h'!$"
 
 Debug_Script_1::
+    special Special_InitGTS
 	end
 
 Debug_Script_2::

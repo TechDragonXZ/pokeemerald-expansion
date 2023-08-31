@@ -85,6 +85,7 @@ SECTIONS {
         src/pokemon_jump.o(.text);
         src/minigame_countdown.o(.text);
         src/rtc.o(.text);
+        src/day_night.o(.text);
         src/main_menu.o(.text);
         src/battle_controllers.o(.text);
         src/decompress.o(.text);
@@ -122,6 +123,7 @@ SECTIONS {
         src/field_door.o(.text);
         src/field_player_avatar.o(.text);
         src/event_object_movement.o(.text);
+        src/follower_helper.o(.text);
         src/field_message_box.o(.text);
         src/event_object_lock.o(.text);
         src/text_window.o(.text);
@@ -342,6 +344,9 @@ SECTIONS {
         src/gym_leader_rematch.o(.text);
         src/battle_transition_frontier.o(.text);
         src/international_string_util.o(.text);
+        src/soar.o(.text);
+		src/dexnav.o(.text);
+        src/global_trade_station.o(.text)
         src/pokemon_debug.o(.text);
         src/expansion_intro.o(.text);
     } =0
@@ -478,6 +483,7 @@ SECTIONS {
         src/pokemon_jump.o(.rodata);
         src/minigame_countdown.o(.rodata);
         src/rtc.o(.rodata);
+        src/day_night.o(.rodata);
         src/main_menu.o(.rodata);
         src/battle_controllers.o(.rodata);
         src/digit_obj_util.o(.rodata);
@@ -512,6 +518,7 @@ SECTIONS {
         src/field_door.o(.rodata);
         src/field_player_avatar.o(.rodata);
         src/event_object_movement.o(.rodata);
+        src/follower_helper.o(.rodata);
         src/text_window.o(.rodata);
         src/scrcmd.o(.rodata);
         src/field_control_avatar.o(.rodata);
@@ -707,8 +714,11 @@ SECTIONS {
         src/international_string_util.o(.rodata);
         src/mystery_event_msg.o(.rodata);
         data/mystery_gift.o(.rodata);
+        src/soar.o(.rodata);
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
+		src/dexnav.o(.rodata);
+        src/global_trade_station.o(.rodata)
         src/pokemon_debug.o(.rodata);
         src/expansion_intro.o(.rodata);
     } =0
@@ -1309,7 +1319,7 @@ SECTIONS {
         data/multiboot_pokemon_colosseum.o(.rodata);
     } =0
 
-    gfx_data  :
+    gfx_data :
     ALIGN(4)
     {
         src/graphics.o(.rodata);

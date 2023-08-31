@@ -1,28 +1,151 @@
 LilycoveCity_DepartmentStoreRooftop_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, LilycoveCity_DepartmentStoreRooftop_OnTransition
 	.byte 0
-
-LilycoveCity_DepartmentStoreRooftop_OnTransition:
-	getpokenewsactive POKENEWS_LILYCOVE
-	call_if_eq VAR_RESULT, TRUE, LilycoveCity_DepartmentStoreRooftop_EventScript_ShowSaleWoman
-	call_if_eq VAR_RESULT, FALSE, LilycoveCity_DepartmentStoreRooftop_EventScript_HideSaleWoman
-	end
-
-LilycoveCity_DepartmentStoreRooftop_EventScript_ShowSaleWoman::
-	clearflag FLAG_HIDE_LILYCOVE_DEPARTMENT_STORE_ROOFTOP_SALE_WOMAN
-	return
-
-LilycoveCity_DepartmentStoreRooftop_EventScript_HideSaleWoman::
-	setflag FLAG_HIDE_LILYCOVE_DEPARTMENT_STORE_ROOFTOP_SALE_WOMAN
-	return
 
 LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman::
 	lock
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
+	special RtcGetDayOfWeek
+	switch VAR_RESULT
+	case 0, LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Saturday
+	case 1, LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Sunday
+	case 2, LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Monday
+	case 3, LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Tuesday
+	case 4, LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Wednesday
+	case 5, LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Thurday
 	pokemartdecoration LilycoveCity_DepartmentStoreRooftop_PokemartDecor_ClearOutSale
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Saturday::
+    pokemart LilycoveCity_DepartmentStoreRooftop_PokemartStones_ClearOutSale
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Sunday::
+    pokemart LilycoveCity_DepartmentStoreRooftop_PokemartHoldEvo_ClearOutSale
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Monday::
+    pokemartdecoration LilycoveCity_DepartmentStoreRooftop_PokemartBigDecor_ClearOutSale
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Tuesday::
+    pokemart LilycoveCity_DepartmentStoreRooftop_PokemartEvo_ClearOutSale
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Wednesday::
+    pokemartdecoration LilycoveCity_DepartmentStoreRooftop_PokemartMiscDecor_ClearOutSale
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman_Thurday::
+    pokemart LilycoveCity_DepartmentStoreRooftop_PokemartMisc_ClearOutSale
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LilycoveCity_DepartmentStoreRooftop_PokemartStones_ClearOutSale:
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_DAWN_STONE
+	.2byte ITEM_ICE_STONE
+	.2byte 0
+	release
+	end
+
+	.align 2
+LilycoveCity_DepartmentStoreRooftop_PokemartHoldEvo_ClearOutSale:
+	.2byte ITEM_DRAGON_SCALE
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_METAL_COAT
+	.2byte ITEM_UPGRADE
+	.2byte ITEM_DEEP_SEA_SCALE
+	.2byte ITEM_DEEP_SEA_TOOTH
+	.2byte ITEM_DUBIOUS_DISC
+	.2byte ITEM_ELECTIRIZER
+	.2byte ITEM_MAGMARIZER
+	.2byte ITEM_OVAL_STONE
+	.2byte ITEM_PROTECTOR
+	.2byte ITEM_RAZOR_CLAW
+	.2byte ITEM_RAZOR_FANG
+	.2byte ITEM_REAPER_CLOTH
+	.2byte ITEM_PRISM_SCALE
+	.2byte ITEM_SACHET
+	.2byte ITEM_WHIPPED_DREAM
+	.2byte 0
+	release
+	end
+
+	.align 2
+LilycoveCity_DepartmentStoreRooftop_PokemartBigDecor_ClearOutSale:
+	.2byte DECOR_LAPRAS_DOLL
+	.2byte DECOR_SNORLAX_DOLL
+	.2byte DECOR_VENUSAUR_DOLL
+	.2byte DECOR_CHARIZARD_DOLL
+	.2byte DECOR_BLASTOISE_DOLL
+	.2byte 0
+	release
+	end
+
+	.align 2
+LilycoveCity_DepartmentStoreRooftop_PokemartEvo_ClearOutSale:
+	.2byte ITEM_GALARICA_CUFF
+	.2byte ITEM_GALARICA_WREATH
+	.2byte ITEM_BLACK_AUGURITE
+	.2byte ITEM_PEAT_BLOCK
+	.2byte ITEM_LINKING_CORD
+	.2byte 0
+	release
+	end
+
+	.align 2
+LilycoveCity_DepartmentStoreRooftop_PokemartMiscDecor_ClearOutSale:
+	.2byte DECOR_KISS_POSTER
+	.2byte DECOR_KISS_CUSHION
+	.2byte DECOR_SMOOCHUM_DOLL
+	.2byte DECOR_TOGEPI_DOLL
+	.2byte DECOR_MEOWTH_DOLL
+	.2byte DECOR_CLEFAIRY_DOLL
+	.2byte DECOR_DITTO_DOLL
+	.2byte DECOR_CYNDAQUIL_DOLL
+	.2byte DECOR_CHIKORITA_DOLL
+	.2byte DECOR_TOTODILE_DOLL
+	.2byte 0
+	release
+	end
+
+
+	.align 2
+LilycoveCity_DepartmentStoreRooftop_PokemartMisc_ClearOutSale:
+	.2byte ITEM_EVERSTONE
+	.2byte ITEM_RED_SCARF
+	.2byte ITEM_BLUE_SCARF
+	.2byte ITEM_PINK_SCARF
+	.2byte ITEM_GREEN_SCARF
+	.2byte ITEM_YELLOW_SCARF
+	.2byte ITEM_DAMP_ROCK
+	.2byte ITEM_HEAT_ROCK
+	.2byte ITEM_SMOOTH_ROCK
+	.2byte ITEM_ICY_ROCK
+	.2byte 0
 	release
 	end
 
@@ -49,14 +172,7 @@ LilycoveCity_DepartmentStoreRooftop_PokemartDecor_ClearOutSale:
 LilycoveCity_DepartmentStoreRooftop_EventScript_Man::
 	lock
 	faceplayer
-	getpokenewsactive POKENEWS_LILYCOVE
-	call_if_eq VAR_RESULT, TRUE, LilycoveCity_DepartmentStoreRooftop_EventScript_ManClearOutSale
 	msgbox LilycoveCity_DepartmentStoreRooftop_Text_SetDatesForClearOutSales, MSGBOX_DEFAULT
-	release
-	end
-
-LilycoveCity_DepartmentStoreRooftop_EventScript_ManClearOutSale::
-	msgbox LilycoveCity_DepartmentStoreRooftop_Text_BeenWaitingForClearOutSale, MSGBOX_DEFAULT
 	release
 	end
 
@@ -185,22 +301,16 @@ LilycoveCity_DepartmentStoreRooftop_EventScript_ExitVendingMachine::
 	end
 
 LilycoveCity_DepartmentStoreRooftop_Text_SetDatesForClearOutSales:
-	.string "Don't they have set dates for their\n"
-	.string "clear-out sales?\p"
-	.string "I watch TV, but they never show any\n"
-	.string "commercials.$"
-
-LilycoveCity_DepartmentStoreRooftop_Text_BeenWaitingForClearOutSale:
-	.string "Yes! I've been waiting a long time for\n"
-	.string "this clear-out sale.\p"
 	.string "They have items that you can only get\n"
-	.string "here. I'm going to load up, that I am!$"
+	.string "here.\p"
+	.string "But the items they sell changes every\n"
+	.string "day!$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_BoneDryThirsty:
 	.string "Ohh… I'm bone-dry thirsty!$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_WhichDrinkWouldYouLike:
-	.string "It's a VENDING MACHINE.\n"
+	.string "It's a Vending Machine.\n"
 	.string "Which drink would you like?$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_CanOfDrinkDroppedDown:

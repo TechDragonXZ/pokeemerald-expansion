@@ -26,7 +26,7 @@ static void FreeAndDestroyMonIconSprite_(struct Sprite *sprite);
 
 const u8 *const gMonIconTable[] =
 {
-    [SPECIES_NONE] = gMonIcon_Bulbasaur,
+    [SPECIES_NONE] = gMonIcon_QuestionMark,
     [SPECIES_BULBASAUR] = gMonIcon_Bulbasaur,
     [SPECIES_IVYSAUR] = gMonIcon_Ivysaur,
     [SPECIES_VENUSAUR] = gMonIcon_Venusaur,
@@ -2867,7 +2867,13 @@ const u8 *GetMonIconTiles(u16 species, u32 personality)
 void TryLoadAllMonIconPalettesAtOffset(u16 offset)
 {
     s32 i;
+<<<<<<< HEAD
     if (offset <= BG_PLTT_ID(16 - ARRAY_COUNT(gMonIconPaletteTable)))
+=======
+    const struct SpritePalette* monIconPalettePtr;
+
+    if (offset <= OBJ_PLTT_ID(10))
+>>>>>>> art/GlimmeringEmerald_dev
     {
         for (i = 0; i < (int)ARRAY_COUNT(gMonIconPaletteTable); i++)
         {

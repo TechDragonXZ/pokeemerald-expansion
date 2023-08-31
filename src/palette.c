@@ -1,4 +1,5 @@
 #include "global.h"
+#include "day_night.h"
 #include "palette.h"
 #include "util.h"
 #include "decompress.h"
@@ -11,6 +12,7 @@ enum
     NORMAL_FADE,
     FAST_FADE,
     HARDWARE_FADE,
+    TIME_OF_DAY_FADE,
 };
 
 // These are structs for some unused palette system.
@@ -52,6 +54,7 @@ static u8 UpdateNormalPaletteFade(void);
 static void BeginFastPaletteFadeInternal(u8);
 static u8 UpdateFastPaletteFade(void);
 static u8 UpdateHardwarePaletteFade(void);
+static u8 UpdateTimeOfDayPaletteFade(void);
 static void UpdateBlendRegisters(void);
 static bool8 IsSoftwarePaletteFadeFinishing(void);
 static void Task_BlendPalettesGradually(u8 taskId);
@@ -84,20 +87,23 @@ static const u8 sRoundedDownGrayscaleMap[] = {
 void LoadCompressedPalette(const u32 *src, u16 offset, u16 size)
 {
     LZDecompressWram(src, gPaletteDecompressionBuffer);
-    CpuCopy16(gPaletteDecompressionBuffer, &gPlttBufferUnfaded[offset], size);
-    CpuCopy16(gPaletteDecompressionBuffer, &gPlttBufferFaded[offset], size);
+    CpuFill16(RGB_BLACK, gPlttBufferPreDN + offset, size);
+    CpuCopy16(gPaletteDecompressionBuffer, gPlttBufferUnfaded + offset, size);
+    CpuCopy16(gPaletteDecompressionBuffer, gPlttBufferFaded + offset, size);
 }
 
 void LoadPalette(const void *src, u16 offset, u16 size)
 {
-    CpuCopy16(src, &gPlttBufferUnfaded[offset], size);
-    CpuCopy16(src, &gPlttBufferFaded[offset], size);
+    CpuFill16(RGB_BLACK, gPlttBufferPreDN + offset, size);
+    CpuCopy16(src, gPlttBufferUnfaded + offset, size);
+    CpuCopy16(src, gPlttBufferFaded + offset, size);
 }
 
 void FillPalette(u16 value, u16 offset, u16 size)
 {
-    CpuFill16(value, &gPlttBufferUnfaded[offset], size);
-    CpuFill16(value, &gPlttBufferFaded[offset], size);
+    CpuFill16(RGB_BLACK, gPlttBufferPreDN + offset, size);
+    CpuFill16(value, gPlttBufferUnfaded + offset, size);
+    CpuFill16(value, gPlttBufferFaded + offset, size);
 }
 
 void TransferPlttBuffer(void)
@@ -125,6 +131,8 @@ u8 UpdatePaletteFade(void)
         result = UpdateNormalPaletteFade();
     else if (gPaletteFade.mode == FAST_FADE)
         result = UpdateFastPaletteFade();
+    else if (gPaletteFade.mode == TIME_OF_DAY_FADE)
+        result = UpdateTimeOfDayPaletteFade();
     else
         result = UpdateHardwarePaletteFade();
 
@@ -150,6 +158,7 @@ static void ReadPlttIntoBuffers(void)
 
     for (i = 0; i < PLTT_BUFFER_SIZE; i++)
     {
+        gPlttBufferPreDN[i] = RGB_BLACK;
         gPlttBufferUnfaded[i] = pltt[i];
         gPlttBufferFaded[i] = pltt[i];
     }
@@ -248,6 +257,7 @@ static void PaletteStruct_Copy(struct PaletteStruct *palStruct, u32 *unkFlags)
     {
         while (i < palStruct->template->size)
         {
+            gPlttBufferPreDN[palStruct->destOffset] = RGB_BLACK;
             gPlttBufferUnfaded[palStruct->destOffset] = palStruct->template->src[srcOffset];
             gPlttBufferFaded[palStruct->destOffset] = palStruct->template->src[srcOffset];
             i++;
@@ -405,6 +415,94 @@ static u8 PaletteStruct_GetPalNum(u16 id)
             return i;
 
     return NUM_PALETTE_STRUCTS;
+}
+
+// Like normal palette fade, but respects sprite/tile palettes immune to time of day fading
+static u8 UpdateTimeOfDayPaletteFade(void) // Like normal, but respects sprite palettes immune to fading
+{
+    u8 paletteNum;
+    u16 paletteOffset;
+    u16 selectedPalettes;
+
+    if (!gPaletteFade.active)
+        return PALETTE_FADE_STATUS_DONE;
+
+    if (IsSoftwarePaletteFadeFinishing())
+      return gPaletteFade.active ? PALETTE_FADE_STATUS_ACTIVE : PALETTE_FADE_STATUS_DONE;
+
+    if (!gPaletteFade.objPaletteToggle)
+    {
+        if (gPaletteFade.delayCounter < gPaletteFade_delay)
+        {
+            gPaletteFade.delayCounter++;
+            return 2;
+        }
+        gPaletteFade.delayCounter = 0;
+    }
+
+    paletteOffset = 0;
+
+    if (!gPaletteFade.objPaletteToggle)
+    {
+        selectedPalettes = gPaletteFade_selectedPalettes;
+    }
+    else
+    {
+        selectedPalettes = gPaletteFade_selectedPalettes >> 16;
+        paletteOffset = 256;
+    }
+
+    for (paletteNum = 0; paletteNum < 16; paletteNum++, selectedPalettes >>= 1, paletteOffset += 16) {
+      if (selectedPalettes & 1) {
+        if (gPaletteFade.yDec) {
+          if (gPaletteFade.objPaletteToggle) { // sprite palettes
+            if (gPaletteFade.y >= gPaletteFade.targetY || GetSpritePaletteTagByPaletteNum(paletteNum) & 0x8000)
+              BlendPalette(paletteOffset, 16, gPaletteFade.y, gPaletteFade.blendColor);
+          // tile palettes
+          } else if (gPaletteFade.y >= gPaletteFade.targetY || (paletteNum >= 13 && paletteNum <= 15)) {
+              BlendPalette(paletteOffset, 16, gPaletteFade.y, gPaletteFade.blendColor);
+          }
+        } else {
+          BlendPalette(paletteOffset, 16, gPaletteFade.y, gPaletteFade.blendColor);
+        }
+      }
+    }
+
+    gPaletteFade.objPaletteToggle ^= 1;
+
+    if (!gPaletteFade.objPaletteToggle)
+    {
+        if ((gPaletteFade.yDec && gPaletteFade.y == 0) || (!gPaletteFade.yDec && gPaletteFade.y == gPaletteFade.targetY))
+        {
+            gPaletteFade_selectedPalettes = 0;
+            gPaletteFade.softwareFadeFinishing = 1;
+        }
+        else
+        {
+            s8 val;
+
+            if (!gPaletteFade.yDec)
+            {
+                val = gPaletteFade.y;
+                val += gPaletteFade.deltaY;
+                if (val > gPaletteFade.targetY)
+                    val = gPaletteFade.targetY;
+                gPaletteFade.y = val;
+            }
+            else
+            {
+                val = gPaletteFade.y;
+                val -= gPaletteFade.deltaY;
+                if (val < 0)
+                    val = 0;
+                gPaletteFade.y = val;
+            }
+        }
+    }
+
+    // gPaletteFade.active cannot change since the last time it was checked. So this
+    // is equivalent to `return PALETTE_FADE_STATUS_ACTIVE;`
+    return PALETTE_FADE_STATUS_ACTIVE;
 }
 
 static u8 UpdateNormalPaletteFade(void)
@@ -589,7 +687,6 @@ static u8 UpdateFastPaletteFade(void)
     if (IsSoftwarePaletteFadeFinishing())
         return gPaletteFade.active ? PALETTE_FADE_STATUS_ACTIVE : PALETTE_FADE_STATUS_DONE;
 
-
     if (gPaletteFade.objPaletteToggle)
     {
         paletteOffsetStart = OBJ_PLTT_OFFSET;
@@ -723,7 +820,6 @@ static u8 UpdateFastPaletteFade(void)
         gPaletteFade.mode = NORMAL_FADE;
         gPaletteFade.softwareFadeFinishing = TRUE;
     }
-
     // gPaletteFade.active cannot change since the last time it was checked. So this
     // is equivalent to `return PALETTE_FADE_STATUS_ACTIVE;`
     return gPaletteFade.active ? PALETTE_FADE_STATUS_ACTIVE : PALETTE_FADE_STATUS_DONE;
@@ -939,6 +1035,35 @@ void TintPalette_CustomTone(u16 *palette, u16 count, u16 rTone, u16 gTone, u16 b
             b = 31;
 
         *palette++ = RGB2(r, g, b);
+    }
+}
+
+void TintPalette_CustomToneWithCopy(const u16 *src, u16 *dest, u16 count, u16 rTone, u16 gTone, u16 bTone, bool8 excludeZeroes)
+{
+    s32 r, g, b, i;
+    u32 gray;
+
+    for (i = 0; i < count; i++, src++, dest++)
+    {
+        if (excludeZeroes && *src == RGB_BLACK)
+            continue;
+        
+        r = (*src >>  0) & 0x1F;
+        g = (*src >>  5) & 0x1F;
+        b = (*src >> 10) & 0x1F;
+
+        r = (u16)((rTone * r)) >> 8;
+        g = (u16)((gTone * g)) >> 8;
+        b = (u16)((bTone * b)) >> 8;
+
+        if (r > 31)
+            r = 31;
+        if (g > 31)
+            g = 31;
+        if (b > 31)
+            b = 31;
+
+        *dest = (b << 10) | (g << 5) | (r << 0);
     }
 }
 

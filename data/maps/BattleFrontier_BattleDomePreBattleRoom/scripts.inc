@@ -134,19 +134,7 @@ BattleFrontier_BattleDomePreBattleRoom_EventScript_TourneyInFinals::
 	return
 
 BattleFrontier_BattleDomePreBattleRoom_EventScript_ContinueChallenge::
-	message BattleFrontier_BattleDomePreBattleRoom_Text_ChooseTwoMons
-	waitmessage
-	waitbuttonpress
-	fadescreen FADE_TO_BLACK
-	call BattleFrontier_EventScript_GetLvlMode
-	copyvar VAR_0x8004, VAR_RESULT
-	setvar VAR_0x8005, DOME_BATTLE_PARTY_SIZE  @ 2 of the 3 party mons are selected for battle
-	special ChoosePartyForBattleFrontier
-	waitstate
-	frontier_resetsketch
-	goto_if_eq VAR_RESULT, 0, BattleFrontier_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound
-	dome_set DOME_DATA_SELECTED_MONS
-	dome_reduceparty
+	call_if_eq  VAR_PWT_MODE, 0, BattleFrontier_BattleDomePreBattleRoom_EventScript_ChooseTwoPokemon
 	dome_setopponent
 	msgbox BattleFrontier_BattleDomePreBattleRoom_Text_RightThisWay, MSGBOX_DEFAULT
 	closemessage
@@ -164,6 +152,22 @@ BattleFrontier_BattleDomePreBattleRoom_EventScript_ContinueChallenge::
 	setvar VAR_TEMP_0, 0
 	waitstate
 	end
+
+BattleFrontier_BattleDomePreBattleRoom_EventScript_ChooseTwoPokemon::
+	message BattleFrontier_BattleDomePreBattleRoom_Text_ChooseTwoMons
+	waitmessage
+	waitbuttonpress
+	fadescreen FADE_TO_BLACK
+	call BattleFrontier_EventScript_GetLvlMode
+	copyvar VAR_0x8004, VAR_RESULT
+	setvar VAR_0x8005, DOME_BATTLE_PARTY_SIZE  @ 2 of the 3 party mons are selected for battle
+	special ChoosePartyForBattleFrontier
+	waitstate
+	frontier_resetsketch
+	goto_if_eq VAR_RESULT, 0, BattleFrontier_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound
+	dome_set DOME_DATA_SELECTED_MONS
+	dome_reduceparty
+	return
 
 BattleFrontier_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage::
 	frontier_get FRONTIER_DATA_BATTLE_NUM
@@ -220,6 +224,18 @@ BattleFrontier_BattleDomePreBattleRoom_EventScript_ReturnFromBattle::
 	setvar VAR_TEMP_0, 1
 	msgbox BattleFrontier_BattleDomePreBattleRoom_Text_RestoreMonsToFullHealth, MSGBOX_DEFAULT
 	special LoadPlayerParty
+	goto_if_eq VAR_PWT_MODE, 0, BattleFrontier_BattleDomePreBattleRoom_EventScript_ReturnFromBattle2
+	frontier_setpartyorder MAX_FRONTIER_PARTY_SIZE
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
+	call BattleFrontier_BattleDomePreBattleRoom_EventScript_RoundCompleteMessage
+	fadescreen FADE_TO_BLACK
+	dome_showstatictourneytree
+	waitstate
+	goto BattleFrontier_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound
+
+BattleFrontier_BattleDomePreBattleRoom_EventScript_ReturnFromBattle2::
 	frontier_setpartyorder FRONTIER_PARTY_SIZE
 	playfanfare MUS_HEAL
 	waitfanfare
@@ -288,7 +304,7 @@ BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForFinals:
 	.string "Are you ready?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ChooseTwoMons:
-	.string "Please choose the two POKéMON\n"
+	.string "Please choose the two Pokémon\n"
 	.string "that are to appear in battle.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_RightThisWay:
@@ -296,7 +312,7 @@ BattleFrontier_BattleDomePreBattleRoom_Text_RightThisWay:
 
 BattleFrontier_BattleDomePreBattleRoom_Text_RestoreMonsToFullHealth:
 	.string "Thank you for competing!\p"
-	.string "I'll restore your POKéMON to\n"
+	.string "I'll restore your Pokémon to\n"
 	.string "full health.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_Round1Complete:
@@ -337,7 +353,7 @@ BattleFrontier_BattleDomePreBattleRoom_Text_CongratsReadyForFinals:
 
 BattleFrontier_BattleDomePreBattleRoom_Text_PlayersNextOpponentIsTrainer:
 	.string "{PLAYER}'s next opponent\n"
-	.string "is this TRAINER.$"
+	.string "is this Trainer.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInRound1:
 	.string "The tournament is in the 1st round.$"
@@ -365,13 +381,13 @@ BattleFrontier_BattleDomePreBattleRoom_Text_SavingDataPleaseWait:
 
 BattleFrontier_BattleDomePreBattleRoom_Text_RecordLastMatch:
 	.string "Should I record your last match\n"
-	.string "on your FRONTIER PASS?$"
+	.string "on your Frontier Pass?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerSilver:
 	.string "Congratulations for advancing\n"
 	.string "to the final match.\p"
 	.string "For the final match, you will challenge\n"
-	.string "the DOME ACE TUCKER.\p"
+	.string "the Dome Ace Tucker.\p"
 	.string "Are you ready?$"
 
 @ Identical to ReadyForTuckerSilver
@@ -379,15 +395,15 @@ BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerGold:
 	.string "Congratulations for advancing\n"
 	.string "to the final match.\p"
 	.string "For the final match, you will challenge\n"
-	.string "the DOME ACE TUCKER.\p"
+	.string "the Dome Ace Tucker.\p"
 	.string "Are you ready?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerSilverShort:
-	.string "Your final battle against TUCKER is\n"
+	.string "Your final battle against Tucker is\n"
 	.string "next. Are you ready?$"
 
 @ Identical again
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerGoldShort:
-	.string "Your final battle against TUCKER is\n"
+	.string "Your final battle against Tucker is\n"
 	.string "next. Are you ready?$"
 

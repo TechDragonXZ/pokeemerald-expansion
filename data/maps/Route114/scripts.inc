@@ -177,26 +177,49 @@ Route114_EventScript_Kai::
 	end
 
 Route114_Text_AllMyMonDoesIsRoarTakeThis:
-	.string "All my POKéMON does is ROAR…\n"
+	.string "All my Pokémon does is Roar…\n"
 	.string "No one dares to come near me…\p"
 	.string "Sigh… If you would, please take\n"
 	.string "this TM away…$"
 
 Route114_Text_ExplainRoar:
-	.string "TM05 contains ROAR.\n"
-	.string "A ROAR sends POKéMON scurrying.$"
+	.string "TM05 contains Roar.\n"
+	.string "A Roar sends Pokémon scurrying.$"
 
 Route114_Text_Poochyena:
 	.string "Bow! Bowwow!$"
 
 Route114_Text_MeteorFallsSign:
-	.string "METEOR FALLS\n"
-	.string "RUSTBORO CITY THROUGH HERE$"
+	.string "Meteor Falls\n"
+	.string "Rustboro City through here$"
 
 Route114_Text_FossilManiacsHouseSign:
-	.string "FOSSIL MANIAC'S HOUSE\n"
+	.string "Fossil Maniac's House\n"
 	.string "“Fossils gratefully accepted!”$"
 
 Route114_Text_LanettesHouse:
-	.string "LANETTE'S HOUSE$"
+	.string "Lanette's House$"
 
+Route114_EventScript_StoneSeller::
+	lock
+	faceplayer
+	msgbox Route114_Text_StoneSeller, MSGBOX_DEFAULT
+	waitmessage
+	pokemart Route114_Stonemart
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+Route114_Stonemart:
+	.2byte ITEM_HARD_STONE
+	.2byte ITEM_SCEPTILITE
+	.2byte ITEM_BLAZIKENITE
+	.2byte ITEM_SWAMPERTITE
+	.2byte ITEM_NONE
+	release
+	end
+
+Route114_Text_StoneSeller:
+	.string "What stone would you like\n"
+	.string "today?$"

@@ -31,7 +31,9 @@ struct BagPocket
 
 extern const struct Item gItems[];
 extern struct BagPocket gBagPockets[];
+extern struct ItemSlot gTmHmItemSlots[BAG_TMHM_COUNT];
 
+u16 GetBagItemQuantity(u16 *quantity);
 void ApplyNewEncryptionKeyToBagItems(u32 newKey);
 void ApplyNewEncryptionKeyToBagItems_(u32 newKey);
 void SetBagItemsPointers(void);
@@ -72,6 +74,9 @@ u8 ItemId_GetType(u16 itemId);
 ItemUseFunc ItemId_GetFieldFunc(u16 itemId);
 u8 ItemId_GetBattleUsage(u16 itemId);
 u8 ItemId_GetSecondaryId(u16 itemId);
+//bool32 IsPinchBerryItemEffect(u16 holdEffect);
+void ItemId_GetHoldEffectParam_Script();
+void DeserializeTmHmItemSlots(void);
 u8 ItemId_GetFlingPower(u16 itemId);
 u32 GetItemStatus1Mask(u16 itemId);
 u32 GetItemStatus2Mask(u16 itemId);

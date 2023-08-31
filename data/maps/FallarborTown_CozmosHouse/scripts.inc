@@ -5,9 +5,9 @@ FallarborTown_CozmosHouse_EventScript_ProfCozmo::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_TM27, FallarborTown_CozmosHouse_EventScript_GaveMeteorite
-	checkitem ITEM_METEORITE
-	goto_if_eq VAR_RESULT, TRUE, FallarborTown_CozmosHouse_EventScript_PlayerHasMeteorite
 	msgbox FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow, MSGBOX_DEFAULT
+	giveitem ITEM_TM23
+	setflag FLAG_RECEIVED_TM27
 	release
 	end
 
@@ -41,9 +41,23 @@ FallarborTown_CozmosHouse_EventScript_DeclineGiveMeteorite::
 	end
 
 FallarborTown_CozmosHouse_EventScript_GaveMeteorite::
-	msgbox FallarborTown_CozmosHouse_Text_ReallyGoingToHelpMyResearch, MSGBOX_DEFAULT
+	goto_if_eq FLAG_ITEM_GALLADITE, FallarborTown_CozmosHouse_EventScript_GaveGalladite
+	goto_if_eq FLAG_IS_CHAMPION, FallarborTown_CozmosHouse_EventScript_GiveGalladite
+	msgbox FallarborTown_CozmosHouse_Text_PleaseUseThisTM, MSGBOX_DEFAULT
 	release
 	end
+
+FallarborTown_CozmosHouse_EventScript_GaveGalladite::
+	msgbox FallarborTown_CozmosHouse_Text_AMan, MSGBOX_DEFAULT
+	release
+	end
+
+FallarborTown_CozmosHouse_EventScript_GiveGalladite::
+	msgbox FallarborTown_CozmosHouse_Text_HelloAgain, MSGBOX_DEFAULT
+	giveitem ITEM_GALLADITE
+	setflag FLAG_ITEM_GALLADITE
+	msgbox FallarborTown_CozmosHouse_Text_PickedUp, MSGBOX_DEFAULT
+	goto FallarborTown_CozmosHouse_EventScript_GaveGalladite
 
 FallarborTown_CozmosHouse_EventScript_CozmosWife::
 	lock
@@ -65,54 +79,86 @@ FallarborTown_CozmosHouse_EventScript_CozmoIsHappy::
 	end
 
 FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow:
-	.string "PROF. COZMO: Oh…\n"
+	.string "Prof. Cozmo: Oh…\n"
 	.string "I never should have let myself be\l"
-	.string "conned into telling TEAM MAGMA where\l"
-	.string "you can find METEORITES…\p"
-	.string "That METEORITE from METEOR FALLS…\n"
-	.string "It's never going to be mine now…$"
+	.string "conned into telling Team Magma where\l"
+	.string "you can find Meteorites…\p"
+	.string "That Meteorite from Meteor Falls…\n"
+	.string "It's never going to be mine now…\p"
+	.string "But I need to thank you, as well.\n"
+	.string "You truly saved me from disaster.\p"
+	.string "I hope you'll take this TM as some\n"
+	.string "small form of repayment.$"
 
 FallarborTown_CozmosHouse_Text_IsThatMeteoriteMayIHaveIt:
 	.string "Oh!\n"
 	.string "Hah?\p"
 	.string "That item…\p"
 	.string "Could it be?\p"
-	.string "Is it the METEORITE that TEAM MAGMA\n"
-	.string "took from METEOR FALLS?\p"
+	.string "Is it the Meteorite that Team Magma\n"
+	.string "took from Meteor Falls?\p"
 	.string "Please, may I have it?\p"
 	.string "I'm not asking for it for free.\n"
 	.string "How about in exchange for this TM?$"
 
 FallarborTown_CozmosHouse_Text_PleaseUseThisTM:
-	.string "PROF. COZMO: This TM, it represents\n"
+	.string "Prof. Cozmo: This TM, it represents\n"
 	.string "my feeling of gratitude.\l"
 	.string "Please use it!$"
 
 FallarborTown_CozmosHouse_Text_ReallyGoingToHelpMyResearch:
-	.string "PROF. COZMO: Oh, I can't believe it.\n"
+	.string "Prof. Cozmo: Oh, I can't believe it.\n"
 	.string "This is really, really great!\p"
 	.string "This is really going to help my research!$"
 
 FallarborTown_CozmosHouse_Text_CrushedWithDisappointment:
-	.string "PROF. COZMO: Oh, but…\n"
+	.string "Prof. Cozmo: Oh, but…\n"
 	.string "I'm crushed with disappointment…$"
 
 FallarborTown_CozmosHouse_Text_MayIHaveMeteorite:
-	.string "PROF. COZMO: Please, may I have that\n"
-	.string "METEORITE?\p"
+	.string "Prof. Cozmo: Please, may I have that\n"
+	.string "Meteorite?\p"
 	.string "I'm not asking for it for free.\n"
 	.string "How about in exchange for this TM?$"
 
 FallarborTown_CozmosHouse_Text_CozmoWentToMeteorFalls:
-	.string "PROF. COZMO went off to METEOR FALLS\n"
-	.string "on ROUTE 114 with some people from\l"
-	.string "TEAM MAGMA.$"
+	.string "Prof. Cozmo went off to Meteor Falls\n"
+	.string "on Route 114 with some people from\l"
+	.string "Team Magma.$"
 
 FallarborTown_CozmosHouse_Text_FeelSorryForCozmo:
-	.string "Poor PROF. COZMO…\n"
+	.string "Poor Prof. Cozmo…\n"
 	.string "He's so depressed… I feel sorry for him.$"
 
 FallarborTown_CozmosHouse_Text_CozmoIsSoHappy:
-	.string "Look at PROF. COZMO…\n"
+	.string "Look at Prof. Cozmo…\n"
 	.string "He's so happy! I think it's cute.$"
 
+FallarborTown_CozmosHouse_Text_HelloAgain:
+	.string "Oh! Why, hello again!\p"
+	.string "What good fortune...\p"
+	.string "I'd been thinking that if I saw you\n"
+	.string "again, I would want to give you this...$"
+
+FallarborTown_CozmosHouse_Text_PickedUp::
+	.string "I happened to pick this up some\n"
+	.string "time ago, while doing excavation\l"
+	.string "at Meteor Falls.\p"
+	.string "I hoped it might help you and your\n"
+	.string "team along on your journey.\p"
+	.string "But I'm still astounded by it all.\p"
+	.string "A relationship between the Mega\n"
+	.string "Stones, Key Stones and Meteorites...\p"
+	.string "My, but new facts do come to light\n"
+	.string "every day! This is what makes my\l"
+	.string "research feel worthwhile!"
+
+FallarborTown_CozmosHouse_Text_AMan::
+	.string "I know a man, a dear friend in the\n"
+	.string "Kalos region, who has been researching\l"
+	.string "Mega Evolution.\p"
+	.string "We worked together a few years back\n"
+	.string "here at Meteor Falls researching\l"
+	.string "Meteorites.\p"
+	.string "I'll have to share this information\n"
+	.string "with him at once.$" 

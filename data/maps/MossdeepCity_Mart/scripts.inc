@@ -6,7 +6,7 @@ MossdeepCity_Mart_EventScript_Clerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart MossdeepCity_Mart_Pokemart
+	pokemart 0
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
@@ -38,23 +38,66 @@ MossdeepCity_Mart_EventScript_Sailor::
 	msgbox MossdeepCity_Mart_Text_NetAndDiveBallsRare, MSGBOX_NPC
 	end
 
+MossdeepCity_Mart_EventScript_WomanTM60:: @ 8211125
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_TM60, MossdeepCity_Mart_ReceivedQuash
+	msgbox MossdeepCity_Mart_Text_WantATM, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq MossdeepCity_Mart_EventScript_Yes
+	compare VAR_RESULT, NO
+	goto_if_eq MossdeepCity_Mart_EventScript_No
+	end
+
+MossdeepCity_Mart_EventScript_Yes::
+	giveitem ITEM_TM60
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_TM60
+	goto MossdeepCity_Mart_ReceivedQuash
+	release
+	end
+
+MossdeepCity_Mart_ReceivedQuash::
+	msgbox MossdeepCity_Mart_Text_Sweetie, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Mart_EventScript_No::
+	msgbox MossdeepCity_Mart_Text_ISee, MSGBOX_DEFAULT
+	release
+	end
+
 MossdeepCity_Mart_Text_ReviveIsFantastic:
-	.string "REVIVE is fantastic!\p"
-	.string "Give it to a fainted POKéMON,\n"
-	.string "and the POKéMON will arise.\p"
-	.string "But be careful, REVIVE doesn't restore\n"
+	.string "Revive is fantastic!\p"
+	.string "Give it to a fainted Pokémon,\n"
+	.string "and the Pokémon will arise.\p"
+	.string "But be careful, Revive doesn't restore\n"
 	.string "the used-up PP of moves.$"
 
 MossdeepCity_Mart_Text_MaxRepelLastsLongest:
-	.string "MAX REPEL keeps all weak POKéMON away.\p"
-	.string "Out of all the REPEL sprays, it lasts\n"
+	.string "Max Repel keeps all weak Pokémon away.\p"
+	.string "Out of all the Repel sprays, it lasts\n"
 	.string "the longest.$"
 
 MossdeepCity_Mart_Text_NetAndDiveBallsRare:
-	.string "The NET and DIVE BALLS are rare POKé\n"
-	.string "BALLS that are only made in MOSSDEEP.\p"
-	.string "A NET BALL is effective against\n"
-	.string "BUG-type and WATER-type POKéMON.\p"
-	.string "A DIVE BALL works best on POKéMON\n"
+	.string "The Net and Dive Balls are rare Poké\n"
+	.string "Balls that are only made in Mossdeep.\p"
+	.string "A Net Ball is effective against\n"
+	.string "Bug-type and Water-type Pokémon.\p"
+	.string "A Dive Ball works best on Pokémon\n"
 	.string "at the bottom of the sea.$"
 
+MossdeepCity_Mart_Text_WantATM:
+	.string "Hey, you!\n"
+	.string "Quick question! Do you want a TM?$"
+
+MossdeepCity_Mart_Text_Sweetie:
+	.string "That's the TM that my sweetie\n"
+	.string "gave me when I proposed.\p"
+	.string "But I'm not a Trainer, so I don't\n"
+	.string "know how to use TMs. Hahaha!$"
+
+MossdeepCity_Mart_Text_ISee:
+	.string "I see.\n"
+	.string "If you want to get it, let me know.$" 

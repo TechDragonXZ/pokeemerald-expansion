@@ -45,6 +45,10 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_ABRA]                  = {{EVO_LEVEL, 16, SPECIES_KADABRA}},
     [SPECIES_KADABRA]               = {{EVO_TRADE, 0, SPECIES_ALAKAZAM},
                                        {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_ALAKAZAM}},
+<<<<<<< HEAD
+=======
+    [SPECIES_ALAKAZAM]              = {{EVO_MEGA_EVOLUTION, ITEM_ALAKAZITE, SPECIES_ALAKAZAM_MEGA}},
+>>>>>>> art/GlimmeringEmerald_dev
     [SPECIES_MACHOP]                = {{EVO_LEVEL, 28, SPECIES_MACHOKE}},
     [SPECIES_MACHOKE]               = {{EVO_TRADE, 0, SPECIES_MACHAMP},
                                        {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_MACHAMP}},
@@ -58,6 +62,10 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_SLOWPOKE]              = {{EVO_LEVEL, 37, SPECIES_SLOWBRO},
                                        {EVO_TRADE_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING},
                                        {EVO_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING}},
+<<<<<<< HEAD
+=======
+    [SPECIES_SLOWBRO]               = {{EVO_MEGA_EVOLUTION, ITEM_SLOWBRONITE, SPECIES_SLOWBRO_MEGA}},
+>>>>>>> art/GlimmeringEmerald_dev
     [SPECIES_MAGNEMITE]             = {{EVO_LEVEL, 30, SPECIES_MAGNETON}},
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_MAGNETON]              = {{EVO_MAPSEC, MAPSEC_NEW_MAUVILLE, SPECIES_MAGNEZONE},
@@ -70,6 +78,10 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_GASTLY]                = {{EVO_LEVEL, 25, SPECIES_HAUNTER}},
     [SPECIES_HAUNTER]               = {{EVO_TRADE, 0, SPECIES_GENGAR},
                                        {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GENGAR}},
+<<<<<<< HEAD
+=======
+    [SPECIES_GENGAR]                = {{EVO_MEGA_EVOLUTION, ITEM_GENGARITE, SPECIES_GENGAR_MEGA}},
+>>>>>>> art/GlimmeringEmerald_dev
     [SPECIES_ONIX]                  = {{EVO_TRADE_ITEM, ITEM_METAL_COAT, SPECIES_STEELIX},
                                        {EVO_ITEM, ITEM_METAL_COAT, SPECIES_STEELIX}},
     [SPECIES_DROWZEE]               = {{EVO_LEVEL, 26, SPECIES_HYPNO}},
@@ -100,8 +112,13 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_GOLDEEN]               = {{EVO_LEVEL, 33, SPECIES_SEAKING}},
     [SPECIES_STARYU]                = {{EVO_ITEM, ITEM_WATER_STONE, SPECIES_STARMIE}},
     [SPECIES_SCYTHER]               = {{EVO_TRADE_ITEM, ITEM_METAL_COAT, SPECIES_SCIZOR},
+<<<<<<< HEAD
                                        {EVO_ITEM, ITEM_BLACK_AUGURITE, SPECIES_KLEAVOR},
                                        {EVO_ITEM, ITEM_METAL_COAT, SPECIES_SCIZOR}},
+=======
+                                       {EVO_ITEM, ITEM_METAL_COAT, SPECIES_SCIZOR},
+                                       {EVO_ITEM, ITEM_BLACK_AUGURITE, SPECIES_KLEAVOR}},
+>>>>>>> art/GlimmeringEmerald_dev
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_ELECTABUZZ]            = {{EVO_TRADE_ITEM, ITEM_ELECTIRIZER, SPECIES_ELECTIVIRE},
                                        {EVO_ITEM, ITEM_ELECTIRIZER, SPECIES_ELECTIVIRE}},
@@ -176,6 +193,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
                                        {EVO_ITEM_NIGHT, ITEM_RAZOR_CLAW, SPECIES_WEAVILE}},
 #endif
     [SPECIES_TEDDIURSA]             = {{EVO_LEVEL, 30, SPECIES_URSARING}},
+    [SPECIES_URSARING]              = {{EVO_ITEM, ITEM_PEAT_BLOCK, SPECIES_URSALUNA}},
     [SPECIES_SLUGMA]                = {{EVO_LEVEL, 38, SPECIES_MAGCARGO}},
     [SPECIES_SWINUB]                = {{EVO_LEVEL, 33, SPECIES_PILOSWINE}},
 #if P_GEN_4_POKEMON == TRUE
@@ -263,6 +281,10 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
                                        {EVO_TRADE_ITEM, ITEM_DEEP_SEA_SCALE, SPECIES_GOREBYSS},
                                        {EVO_ITEM, ITEM_DEEP_SEA_TOOTH, SPECIES_HUNTAIL},
                                        {EVO_ITEM, ITEM_DEEP_SEA_SCALE, SPECIES_GOREBYSS}},
+<<<<<<< HEAD
+=======
+    [SPECIES_ABSOL]                 = {{EVO_MEGA_EVOLUTION, ITEM_ABSOLITE, SPECIES_ABSOL_MEGA}},
+>>>>>>> art/GlimmeringEmerald_dev
     [SPECIES_SHUPPET]               = {{EVO_LEVEL, 37, SPECIES_BANETTE}},
     [SPECIES_ARON]                  = {{EVO_LEVEL, 32, SPECIES_LAIRON}},
     [SPECIES_LAIRON]                = {{EVO_LEVEL, 42, SPECIES_AGGRON}},
@@ -379,7 +401,8 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_VANILLITE]             = {{EVO_LEVEL, 35, SPECIES_VANILLISH}},
     [SPECIES_VANILLISH]             = {{EVO_LEVEL, 47, SPECIES_VANILLUXE}},
     [SPECIES_DEERLING]              = {{EVO_LEVEL, 34, SPECIES_SAWSBUCK}},
-    [SPECIES_KARRABLAST]            = {{EVO_TRADE_SPECIFIC_MON, SPECIES_SHELMET, SPECIES_ESCAVALIER}},
+    [SPECIES_KARRABLAST]            = {{EVO_TRADE_SPECIFIC_MON, SPECIES_SHELMET, SPECIES_ESCAVALIER},
+                                       {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_ESCAVALIER}},
     [SPECIES_FOONGUS]               = {{EVO_LEVEL, 39, SPECIES_AMOONGUSS}},
     [SPECIES_FRILLISH]              = {{EVO_LEVEL, 40, SPECIES_JELLICENT}},
     [SPECIES_JOLTIK]                = {{EVO_LEVEL, 36, SPECIES_GALVANTULA}},
@@ -394,7 +417,8 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_AXEW]                  = {{EVO_LEVEL, 38, SPECIES_FRAXURE}},
     [SPECIES_FRAXURE]               = {{EVO_LEVEL, 48, SPECIES_HAXORUS}},
     [SPECIES_CUBCHOO]               = {{EVO_LEVEL, 37, SPECIES_BEARTIC}},
-    [SPECIES_SHELMET]               = {{EVO_TRADE_SPECIFIC_MON, SPECIES_KARRABLAST, SPECIES_ACCELGOR}},
+    [SPECIES_SHELMET]               = {{EVO_TRADE_SPECIFIC_MON, SPECIES_KARRABLAST, SPECIES_ACCELGOR},
+                                       {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_ACCELGOR}},
     [SPECIES_MIENFOO]               = {{EVO_LEVEL, 50, SPECIES_MIENSHAO}},
     [SPECIES_GOLETT]                = {{EVO_LEVEL, 43, SPECIES_GOLURK}},
     [SPECIES_PAWNIARD]              = {{EVO_LEVEL, 52, SPECIES_BISHARP}},
@@ -440,13 +464,20 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_GOOMY]                 = {{EVO_LEVEL, 40, SPECIES_SLIGGOO},
                                        {EVO_NONE, 0, SPECIES_SLIGGOO_HISUIAN}},
     [SPECIES_SLIGGOO]               = {{EVO_LEVEL_RAIN, 50, SPECIES_GOODRA}},
+<<<<<<< HEAD
     [SPECIES_SLIGGOO_HISUIAN]       = {{EVO_LEVEL_RAIN, 40, SPECIES_GOODRA_HISUIAN}},
+=======
+>>>>>>> art/GlimmeringEmerald_dev
     [SPECIES_PHANTUMP]              = {{EVO_TRADE, 0, SPECIES_TREVENANT},
                                        {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_TREVENANT}},
     [SPECIES_PUMPKABOO]             = {{EVO_TRADE, 0, SPECIES_GOURGEIST},
                                        {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GOURGEIST}},
+<<<<<<< HEAD
     [SPECIES_BERGMITE]              = {{EVO_LEVEL, 37, SPECIES_AVALUGG},
                                        {EVO_NONE, 0, SPECIES_AVALUGG_HISUIAN}},
+=======
+    [SPECIES_BERGMITE]              = {{EVO_LEVEL, 37, SPECIES_AVALUGG}},
+>>>>>>> art/GlimmeringEmerald_dev
     [SPECIES_NOIBAT]                = {{EVO_LEVEL, 48, SPECIES_NOIVERN}},
 #endif
 #if P_GEN_7_POKEMON == TRUE
@@ -545,13 +576,10 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_GRAVELER_ALOLAN]       = {{EVO_TRADE, 0, SPECIES_GOLEM_ALOLAN},
                                        {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GOLEM_ALOLAN}},
     [SPECIES_GRIMER_ALOLAN]         = {{EVO_LEVEL, 38, SPECIES_MUK_ALOLAN}},
-#if P_GEN_8_POKEMON == TRUE
     [SPECIES_MEOWTH_GALARIAN]       = {{EVO_LEVEL, 28, SPECIES_PERRSERKER}},
-#endif
     [SPECIES_PONYTA_GALARIAN]       = {{EVO_LEVEL, 40, SPECIES_RAPIDASH_GALARIAN}},
     [SPECIES_SLOWPOKE_GALARIAN]     = {{EVO_ITEM, ITEM_GALARICA_CUFF, SPECIES_SLOWBRO_GALARIAN},
                                        {EVO_ITEM, ITEM_GALARICA_WREATH, SPECIES_SLOWKING_GALARIAN}},
-#if P_GEN_8_POKEMON == TRUE
     [SPECIES_FARFETCHD_GALARIAN]    = {{EVO_CRITICAL_HITS, 3, SPECIES_SIRFETCHD}},
     [SPECIES_MR_MIME_GALARIAN]      = {{EVO_LEVEL, 42, SPECIES_MR_RIME}},
     [SPECIES_CORSOLA_GALARIAN]      = {{EVO_LEVEL, 38, SPECIES_CURSOLA}},
@@ -559,10 +587,6 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_LINOONE_GALARIAN]      = {{EVO_LEVEL_NIGHT, 35, SPECIES_OBSTAGOON}},
     [SPECIES_DARUMAKA_GALARIAN]     = {{EVO_ITEM, ITEM_ICE_STONE, SPECIES_DARMANITAN_GALARIAN}},
     [SPECIES_YAMASK_GALARIAN]       = {{EVO_SCRIPT_TRIGGER_DMG, 49, SPECIES_RUNERIGUS}},
-#else
-    [SPECIES_ZIGZAGOON_GALARIAN]    = {{EVO_LEVEL, 20, SPECIES_LINOONE_GALARIAN}},
-    [SPECIES_DARUMAKA_GALARIAN]     = {{EVO_ITEM, ITEM_ICE_STONE, SPECIES_DARMANITAN_GALARIAN}},
-#endif
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_BURMY_SANDY_CLOAK]     = {{EVO_LEVEL_FEMALE, 20, SPECIES_WORMADAM_SANDY_CLOAK},
                                        {EVO_LEVEL_MALE, 20, SPECIES_MOTHIM}},

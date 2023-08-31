@@ -174,17 +174,35 @@ static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping[] =
     [MAPSEC_DESERT_UNDERPASS - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_STONE,
     [MAPSEC_ALTERING_CAVE - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_STONE,
     [MAPSEC_NAVEL_ROCK - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_STONE,
-    [MAPSEC_TRAINER_HILL - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_MARBLE
+    [MAPSEC_TRAINER_HILL - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_MARBLE,
+    [MAPSEC_MIRAGE_SPOT_PLAIN_A] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_MIRAGE_SPOT_PLAIN_B] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_MIRAGE_SPOT_WOODS_A] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_MIRAGE_SPOT_WOODS_B] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_MIRAGE_SPOT_ASH_A] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_MIRAGE_SPOT_ASH_B] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_MIRAGE_SPOT_DESERT_A] = MAPPOPUP_THEME_STONE,
+    [MAPSEC_MIRAGE_SPOT_DESERT_B] = MAPPOPUP_THEME_STONE,
+    [MAPSEC_MIRAGE_SPOT_TALLGRASS_A] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_MIRAGE_SPOT_TALLGRASS_B] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_MIRAGE_SPOT_ISLAND_A] = MAPPOPUP_THEME_UNDERWATER,
+    [MAPSEC_MIRAGE_SPOT_ISLAND_B] = MAPPOPUP_THEME_UNDERWATER,
+    [MAPSEC_MIRAGE_SPOT_BEACH_A] = MAPPOPUP_THEME_UNDERWATER,
+    [MAPSEC_MIRAGE_SPOT_BEACH_B] = MAPPOPUP_THEME_UNDERWATER,
+    [MAPSEC_MIRAGE_SPOT_CAVE_A] = MAPPOPUP_THEME_STONE,
+    [MAPSEC_MIRAGE_SPOT_CAVE_B] = MAPPOPUP_THEME_STONE,
+    [MAPSEC_MIRAGE_SPOT_SNOW_A] = MAPPOPUP_THEME_STONE,
+    [MAPSEC_MIRAGE_SPOT_SNOW_B] = MAPPOPUP_THEME_STONE
 };
 
-static const u8 sText_PyramidFloor1[] = _("PYRAMID FLOOR 1");
-static const u8 sText_PyramidFloor2[] = _("PYRAMID FLOOR 2");
-static const u8 sText_PyramidFloor3[] = _("PYRAMID FLOOR 3");
-static const u8 sText_PyramidFloor4[] = _("PYRAMID FLOOR 4");
-static const u8 sText_PyramidFloor5[] = _("PYRAMID FLOOR 5");
-static const u8 sText_PyramidFloor6[] = _("PYRAMID FLOOR 6");
-static const u8 sText_PyramidFloor7[] = _("PYRAMID FLOOR 7");
-static const u8 sText_Pyramid[] = _("PYRAMID");
+static const u8 sText_PyramidFloor1[] = _("Pyramid Floor 1");
+static const u8 sText_PyramidFloor2[] = _("Pyramid Floor 2");
+static const u8 sText_PyramidFloor3[] = _("Pyramid Floor 3");
+static const u8 sText_PyramidFloor4[] = _("Pyramid Floor 4");
+static const u8 sText_PyramidFloor5[] = _("Pyramid Floor 5");
+static const u8 sText_PyramidFloor6[] = _("Pyramid Floor 6");
+static const u8 sText_PyramidFloor7[] = _("Pyramid Floor 7");
+static const u8 sText_Pyramid[] = _("Pyramid");
 
 static const u8 *const sBattlePyramid_MapHeaderStrings[FRONTIER_STAGES_PER_CHALLENGE + 1] =
 {
@@ -315,14 +333,16 @@ static void ShowMapNamePopUpWindow(void)
         else
         {
             withoutPrefixPtr = &(mapDisplayHeader[3]);
-            mapDisplayHeaderSource = sBattlePyramid_MapHeaderStrings[gSaveBlock2Ptr->frontier.curChallengeBattleNum];
+            mapDisplayHeaderSource = sBattlePyramid_MapHeaderStrings[gSaveBlock1Ptr->frontier.curChallengeBattleNum];
         }
         StringCopy(withoutPrefixPtr, mapDisplayHeaderSource);
     }
     else
     {
         withoutPrefixPtr = &(mapDisplayHeader[3]);
+        FlagSet(FLAG_TEMP_1);
         GetMapName(withoutPrefixPtr, gMapHeader.regionMapSectionId, 0);
+        FlagClear(FLAG_TEMP_1);
     }
     AddMapNamePopUpWindow();
     LoadMapNamePopUpWindowBg();
@@ -372,7 +392,7 @@ static void LoadMapNamePopUpWindowBg(void)
     u8 popupWindowId = GetMapNamePopUpWindowId();
     u16 regionMapSectionId = gMapHeader.regionMapSectionId;
 
-    if (regionMapSectionId >= KANTO_MAPSEC_START)
+    if (regionMapSectionId >= KANTO_MAPSEC_START && regionMapSectionId <= MAPSEC_NONE)
     {
         if (regionMapSectionId > KANTO_MAPSEC_END)
             regionMapSectionId -= KANTO_MAPSEC_COUNT;
