@@ -1277,6 +1277,10 @@ extern const u32 gMonFrontPic_CalyrexIceRider[];
 extern const u32 gMonFrontPic_CalyrexShadowRider[];
 extern const u32 gMonFrontPic_EnamorusTherian[];
 extern const u32 gMonFrontPic_BasculegionFemale[];
+
+extern const u32 gMonFrontPic_Pikachu_Partner[];
+extern const u32 gMonFrontPic_Eevee_Partner[];
+extern const u32 gMonFrontPic_EeveeF_Partner[];
 #endif
 extern const u32 gMonFrontPic_Egg[];
 
@@ -2489,6 +2493,10 @@ extern const u32 gMonBackPic_CalyrexIceRider[];
 extern const u32 gMonBackPic_CalyrexShadowRider[];
 extern const u32 gMonBackPic_EnamorusTherian[];
 extern const u32 gMonBackPic_BasculegionFemale[];
+
+extern const u32 gMonBackPic_Pikachu_Partner[];
+extern const u32 gMonBackPic_Eevee_Partner[];
+extern const u32 gMonBackPic_EeveeF_Partner[];
 #endif
 
 extern const u32 gMonPalette_CircledQuestionMark[];
@@ -3721,6 +3729,9 @@ extern const u32 gMonPalette_CalyrexIceRider[];
 extern const u32 gMonPalette_CalyrexShadowRider[];
 extern const u32 gMonPalette_EnamorusTherian[];
 extern const u32 gMonPalette_BasculegionFemale[];
+
+extern const u32 gMonPalette_Pikachu_Partner[];
+extern const u32 gMonPalette_Eevee_Partner[];
 #endif
 extern const u32 gMonPalette_Egg[];
 
@@ -4948,6 +4959,9 @@ extern const u32 gMonShinyPalette_CalyrexIceRider[];
 extern const u32 gMonShinyPalette_CalyrexShadowRider[];
 extern const u32 gMonShinyPalette_EnamorusTherian[];
 extern const u32 gMonShinyPalette_BasculegionFemale[];
+
+extern const u32 gMonShinyPalette_Pikachu_Partner[];
+extern const u32 gMonShinyPalette_Eevee_Partner[];
 #endif
 
 extern const u8 gMonIcon_QuestionMark[];
@@ -6168,6 +6182,9 @@ extern const u8 gMonIcon_CalyrexIceRider[];
 extern const u8 gMonIcon_CalyrexShadowRider[];
 extern const u8 gMonIcon_EnamorusTherian[];
 extern const u8 gMonIcon_BasculegionFemale[];
+
+extern const u8 gMonIcon_Pikachu_Partner[];
+extern const u8 gMonIcon_Eevee_Partner[];
 #endif
 extern const u8 gMonIcon_Egg[];
 
@@ -7086,6 +7103,9 @@ extern const u8 gMonFootprint_Calyrex[];
 //extern const u8 gMonFootprint_Sneasler[];
 //extern const u8 gMonFootprint_Overqwil[];
 //extern const u8 gMonFootprint_Enamorus[];
+
+extern const u8 gMonFootPrint_Pikachu_Partner[];
+extern const u8 gMonFootPrint_Eevee_Partner[];
 #endif
 
 // trainer sprites

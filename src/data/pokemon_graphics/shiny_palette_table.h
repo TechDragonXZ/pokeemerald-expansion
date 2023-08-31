@@ -1331,8 +1331,8 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
 
     SPECIES_SHINY_PAL(BASCULEGION_FEMALE, gMonShinyPalette_BasculegionFemale),
     SPECIES_SHINY_PAL(ENAMORUS_THERIAN, gMonShinyPalette_EnamorusTherian),
-    SPECIES_SHINY_PAL(PIKACHU_PARTNER, gMonShinyPalette_Pikachu),
-    SPECIES_SHINY_PAL(EEVEE_PARTNER, gMonShinyPalette_Eevee),
+    SPECIES_SHINY_PAL(PIKACHU_PARTNER, gMonShinyPalette_Pikachu_Partner),
+    SPECIES_SHINY_PAL(EEVEE_PARTNER, gMonShinyPalette_Eevee_Partner),
 #endif
     SPECIES_SHINY_PAL(EGG, gMonPalette_Egg),
 };
@@ -1340,6 +1340,7 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
 const struct CompressedSpritePalette gMonShinyPaletteTableFemale[] =
 {
     SPECIES_SHINY_PAL(EEVEE, gMonShinyPalette_Eevee),
+    SPECIES_SHINY_PAL(EEVEE_PARTNER, gMonShinyPalette_Eevee_Partner),
 #if P_GEN_4_POKEMON == TRUE
     SPECIES_SHINY_PAL(STARLY, gMonShinyPalette_Starly),
     SPECIES_SHINY_PAL(STARAVIA, gMonShinyPalette_Staravia),

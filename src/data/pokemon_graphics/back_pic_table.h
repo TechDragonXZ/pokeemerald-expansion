@@ -1335,8 +1335,8 @@ const struct CompressedSpriteSheet gMonBackPicTable[] =
 
     SPECIES_SPRITE(BASCULEGION_FEMALE, gMonBackPic_BasculegionFemale),
 
-    SPECIES_SPRITE(PIKACHU_PARTNER, gMonBackPic_Pikachu),
-    SPECIES_SPRITE(EEVEE_PARTNER, gMonBackPic_Eevee),
+    SPECIES_SPRITE(PIKACHU_PARTNER, gMonBackPic_Pikachu_Partner),
+    SPECIES_SPRITE(EEVEE_PARTNER, gMonBackPic_Eevee_Partner),
 #endif
     SPECIES_SPRITE(EGG, gMonFrontPic_Egg),
 };
@@ -1344,7 +1344,7 @@ const struct CompressedSpriteSheet gMonBackPicTable[] =
 const struct CompressedSpriteSheet gMonBackPicTableFemale[] =
 {
     SPECIES_SPRITE(EEVEE, gMonBackPic_EeveeF),
-    SPECIES_SPRITE(EEVEE_PARTNER, gMonBackPic_EeveeF),
+    SPECIES_SPRITE(EEVEE_PARTNER, gMonBackPic_EeveeF_Partner),
 #if P_GEN_4_POKEMON == TRUE
     SPECIES_SPRITE(STARLY, gMonBackPic_StarlyF),
     SPECIES_SPRITE(STARAVIA, gMonBackPic_StaraviaF),
