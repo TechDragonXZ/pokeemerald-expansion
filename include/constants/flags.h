@@ -47,8 +47,8 @@
 #define FLAG_GOT_MEGA_RING   0x23 // Mega Ring Flag
 #define FLAG_PARTNER_PICKED  0x24 // Partner Picked Flag
 #define FLAG_BOND_DEFEATED   0x25 // Player Beat Bond Flag
-#define FLAG_PARTNER_CAN_BE_PICKED    0x26 // Player Can Pick A Partner Flag
-#define FLAG_PARTNER_PIKACHU_PICKED    0x27 // Player Picked Pikachu(Partner) Flag
+#define FLAG_PARTNER_CAN_BE_PICKED   0x26 // Player Can Pick A Partner Flag
+#define FLAG_PARTNER_PIKACHU_PICKED  0x27 // Player Picked Pikachu(Partner) Flag
 #define FLAG_PARTNER_EEVEE_PICKED    0x28 // Player Picked Eevee(Partner) Flag
 #define FLAG_PIKACHU_MOVED   0x29 // Stairs Pikachu Moved Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
