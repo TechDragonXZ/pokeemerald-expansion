@@ -13687,13 +13687,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .zMoveEffect = Z_EFFECT_NONE,
     },
 
-    [MOVE_DISASTER_BREAK] =
+    [MOVE_DISASTER_WARN] =
     {
-        .power = 80,
-        .effect = EFFECT_TWO_TYPED_MOVE,
+        .power = 75,
+        .effect = EFFECT_TWO_TYPED_MOVE | EFFECT_TRAP | EFFECT_HIT_ESCAPE | EFFECT_PERISH_SONG,
         .type = TYPE_DARK,
-        .accuracy = 95,
-        .pp = 10,
+        .accuracy = 80,
+        .pp = 8,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 2,

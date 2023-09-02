@@ -3268,7 +3268,7 @@ static const u8 sDracoSwarmDescription[] = _(
     "This attack does Bug\n"
     "and Dragon-type damage.");
 
-static const u8 sDisasterBreakDescription[] = _(
+static const u8 sDisasterWarnDescription[] = _(
     "Always hits first, High crit ratio.\n"
     "Does Dark and Fairy-type damage.");
 
@@ -4113,5 +4113,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_HYDRO_STEAM - 1] = sHydroSteamDescription,
     [MOVE_MYSTIC_SLASH - 1] = sMysticSlashDescription,
     [MOVE_DRACO_SWARM - 1] = sDracoSwarmDescription,
-    [MOVE_DISASTER_BREAK - 1] = sDisasterBreakDescription,
+    [MOVE_DISASTER_WARN - 1] = sDisasterWarnDescription,
 };

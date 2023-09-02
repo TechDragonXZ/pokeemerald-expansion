@@ -3247,7 +3247,7 @@ static const struct TrainerMonItemCustomMoves sParty_Sidney[] = {
     .lvl = 49,
     .species = SPECIES_ABSOL,
     .heldItem = ITEM_ABSOLITE,
-    .moves = {MOVE_DISASTER_BREAK, MOVE_ROCK_SLIDE, MOVE_SWORDS_DANCE, MOVE_SLASH}
+    .moves = {MOVE_DISASTER_WARN, MOVE_ROCK_SLIDE, MOVE_SWORDS_DANCE, MOVE_SLASH}
     }
 };
 

@@ -6084,7 +6084,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0}
     },
 
-    [MOVE_DISASTER_BREAK] =
+    [MOVE_DISASTER_WARN] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_COOL,
