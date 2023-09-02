@@ -710,7 +710,6 @@ SECTIONS {
         data/mystery_gift.o(.rodata);
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
-<<<<<<< HEAD
         src/pokemon_debug.o(.rodata);
         src/expansion_intro.o(.rodata);
         src/tx_registered_items_menu.o(.rodata);
