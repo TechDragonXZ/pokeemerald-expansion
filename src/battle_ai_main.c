@@ -3714,6 +3714,12 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
                 //score += 7;
         }
         break;
+    case EFFECT_DISASTER_WARN:
+        if (ShouldSwitch())
+        EFFECT_TWO_TYPED_MOVE,
+        EFFECT_HIT_ESCAPE,
+        EFFECT_FUTURE_SIGHT;
+        break;
     case EFFECT_BATON_PASS:
         if (ShouldSwitch() && (gBattleMons[battlerAtk].status2 & STATUS2_SUBSTITUTE
           || (gStatuses3[battlerAtk] & (STATUS3_ROOTED | STATUS3_AQUA_RING | STATUS3_MAGNET_RISE | STATUS3_POWER_TRICK))
