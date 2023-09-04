@@ -13690,7 +13690,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_DISASTER_WARN] =
     {
         .power = 75,
-        .effect = EFFECT_DISASTER_WARN,
+        .effect = EFFECT_TWO_TYPED_MOVE,
         .type = TYPE_DARK,
         .accuracy = 80,
         .pp = 8,

@@ -1667,8 +1667,14 @@ static void OpenContextMenu(u8 taskId)
 
                 if (sRegisterSubMenu == FALSE) //tx_registered_items_menu
                 {
+                    if (ItemId_GetFieldFunc(gSpecialVar_ItemId) == ItemUseOutOfBattle_CannotUse){
+                    gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Cancel);
+                    memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_Cancel, sizeof(sContextMenuItems_Cancel));
+                }
+                else{
                     gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_KeyItemsPocket);
                     memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_KeyItemsPocket, sizeof(sContextMenuItems_KeyItemsPocket));
+                }
                     if (gSaveBlock1Ptr->registeredItemSelect == gSpecialVar_ItemId)
                         gBagMenu->contextMenuItemsBuffer[1] = ACTION_DESELECT;
                     if (gSpecialVar_ItemId == ITEM_MACH_BIKE || gSpecialVar_ItemId == ITEM_ACRO_BIKE)

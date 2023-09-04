@@ -1920,31 +1920,33 @@ const struct SpindaSpot gSpindaSpotGraphics[] =
 
 const s8 gNatureStatTable[NUM_NATURES][NUM_NATURE_STATS] =
 {                      // Attack  Defense  Speed  Sp.Atk  Sp. Def
-    [NATURE_HARDY]   = {    0,      0,      0,      0,      0   },
-    [NATURE_LONELY]  = {   +1,     -1,      0,      0,      0   },
-    [NATURE_BRAVE]   = {   +1,      0,     -1,      0,      0   },
-    [NATURE_ADAMANT] = {   +1,      0,      0,     -1,      0   },
-    [NATURE_NAUGHTY] = {   +1,      0,      0,      0,     -1   },
-    [NATURE_BOLD]    = {   -1,     +1,      0,      0,      0   },
-    [NATURE_DOCILE]  = {    0,      0,      0,      0,      0   },
-    [NATURE_RELAXED] = {    0,     +1,     -1,      0,      0   },
-    [NATURE_IMPISH]  = {    0,     +1,      0,     -1,      0   },
-    [NATURE_LAX]     = {    0,     +1,      0,      0,     -1   },
-    [NATURE_TIMID]   = {   -1,      0,     +1,      0,      0   },
-    [NATURE_HASTY]   = {    0,     -1,     +1,      0,      0   },
-    [NATURE_SERIOUS] = {    0,      0,      0,      0,      0   },
-    [NATURE_JOLLY]   = {    0,      0,     +1,     -1,      0   },
-    [NATURE_NAIVE]   = {    0,      0,     +1,      0,     -1   },
-    [NATURE_MODEST]  = {   -1,      0,      0,     +1,      0   },
-    [NATURE_MILD]    = {    0,     -1,      0,     +1,      0   },
-    [NATURE_QUIET]   = {    0,      0,     -1,     +1,      0   },
-    [NATURE_BASHFUL] = {    0,      0,      0,      0,      0   },
-    [NATURE_RASH]    = {    0,      0,      0,     +1,     -1   },
-    [NATURE_CALM]    = {   -1,      0,      0,      0,     +1   },
-    [NATURE_GENTLE]  = {    0,     -1,      0,      0,     +1   },
-    [NATURE_SASSY]   = {    0,      0,     -1,      0,     +1   },
-    [NATURE_CAREFUL] = {    0,      0,      0,     -1,     +1   },
-    [NATURE_QUIRKY]  = {    0,      0,      0,      0,      0   },
+    [NATURE_HARDY]    = {    0,      0,      0,      0,      0   },
+    [NATURE_LONELY]   = {   +1,     -1,      0,      0,      0   },
+    [NATURE_BRAVE]    = {   +1,      0,     -1,      0,      0   },
+    [NATURE_ADAMANT]  = {   +1,      0,      0,     -1,      0   },
+    [NATURE_NAUGHTY]  = {   +1,      0,      0,      0,     -1   },
+    [NATURE_BOLD]     = {   -1,     +1,      0,      0,      0   },
+    [NATURE_DOCILE]   = {    0,      0,      0,      0,      0   },
+    [NATURE_RELAXED]  = {    0,     +1,     -1,      0,      0   },
+    [NATURE_IMPISH]   = {    0,     +1,      0,     -1,      0   },
+    [NATURE_LAX]      = {    0,     +1,      0,      0,     -1   },
+    [NATURE_TIMID]    = {   -1,      0,     +1,      0,      0   },
+    [NATURE_HASTY]    = {    0,     -1,     +1,      0,      0   },
+    [NATURE_SERIOUS]  = {    0,      0,      0,      0,      0   },
+    [NATURE_JOLLY]    = {    0,      0,     +1,     -1,      0   },
+    [NATURE_NAIVE]    = {    0,      0,     +1,      0,     -1   },
+    [NATURE_MODEST]   = {   -1,      0,      0,     +1,      0   },
+    [NATURE_MILD]     = {    0,     -1,      0,     +1,      0   },
+    [NATURE_QUIET]    = {    0,      0,     -1,     +1,      0   },
+    [NATURE_BASHFUL]  = {    0,      0,      0,      0,      0   },
+    [NATURE_RASH]     = {    0,      0,      0,     +1,     -1   },
+    [NATURE_CALM]     = {   -1,      0,      0,      0,     +1   },
+    [NATURE_GENTLE]   = {    0,     -1,      0,      0,     +1   },
+    [NATURE_SASSY]    = {    0,      0,     -1,      0,     +1   },
+    [NATURE_CAREFUL]  = {    0,      0,      0,     -1,     +1   },
+    [NATURE_QUIRKY]   = {    0,      0,      0,      0,      0   },
+    [NATURE_PRIDEFUL] = {   +1,     -1,      0,     +1,     -1   },
+    [NATURE_LOWLY]    = {   -1,     +1,      0,     -1,     +1   },
 };
 
 #include "data/pokemon/trainer_class_lookups.h"
@@ -6600,6 +6602,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                     case NATURE_RASH:
                     case NATURE_SASSY:
                     case NATURE_QUIRKY:
+                    case NATURE_PRIDEFUL:
                         targetSpecies = gEvolutionTable[species][i].targetSpecies;
                         break;
                     }
@@ -6623,6 +6626,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                     case NATURE_CALM:
                     case NATURE_GENTLE:
                     case NATURE_CAREFUL:
+                    case NATURE_LOWLY:
                         targetSpecies = gEvolutionTable[species][i].targetSpecies;
                         break;
                     }
