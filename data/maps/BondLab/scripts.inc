@@ -203,8 +203,7 @@ BondLab_Pikachu_Moves::
 	step_end
 
 BondLab_RotomBox::
-	msgbox BondLab_Text_RotomBox, MSGBOX_AUTOCLOSE
-	closemessage
+	call Rotom_Appliances_Main
 	end
 
 BondLab_Paper::
@@ -247,9 +246,6 @@ BondLab_Text_NoRotomPC::
 
 BondLab_Text_RotomPC::
 	.string "There's something here!$"
-
-BondLab_Text_RotomBox::
-	.string "This box is full of motors!$"
 
 BondLab_Text_Stairs_Pikachu::
 	.string "It's blocking the stairs.$"

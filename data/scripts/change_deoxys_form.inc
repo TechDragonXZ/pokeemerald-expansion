@@ -3,8 +3,8 @@ ChangeDeoxysForm::
 	msgbox ChangeDeoxysForm_Text_Beginning, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq ChangeDeoxysForm_Start
+
 ChangeDeoxysForm_End:
-	msgbox ChangeDeoxysForm_Text_End, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -27,13 +27,11 @@ ChangeDeoxysForm_Success:
 	goto ChangeDeoxysForm_End
 
 ChangeDeoxysForm_Text_Beginning:
-	.string "Do you want to perform\na magic trick?$"
-
-ChangeDeoxysForm_Text_End:
-	.string "Come back anytime.$"
+	.string "It's a strange rock!\n"
+	.string "It feels warm.$"
 
 ChangeDeoxysForm_Text_Select:
-	.string "Please select a DEOXYS.$"
+	.string "Deoxys wants to take a look.$"
 
 ChangeDeoxysForm_Text_Success:
-	.string "Congratulations!\nYour DEOXYS has transformed!$"
+	.string "Deoxys has transformed!$"

@@ -4,7 +4,7 @@
   "layout": "LAYOUT_BOND_LAB_BASEMENT",
   "music": "MUS_RG_POKE_MANSION",
   "region_map_section": "MAPSEC_PETALBURG_WOODS",
-  "requires_flash": true,
+  "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
@@ -31,40 +31,24 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 4,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BondLabBasement_OldMachine"
-    },
-    {
-      "type": "sign",
-      "x": 5,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BondLabBasement_OldMachine"
-    },
-    {
-      "type": "sign",
-      "x": 6,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BondLabBasement_OldMachine"
-    },
-    {
-      "type": "sign",
-      "x": 3,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BondLabBasement_OldMachineTower"
-    },
-    {
-      "type": "sign",
       "x": 7,
-      "y": 6,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BondLabBasement_OldMachine"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BondLabBasement_OldMachine"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "BondLabBasement_OldMachineTower"
@@ -103,11 +87,51 @@
     },
     {
       "type": "sign",
-      "x": 7,
-      "y": 1,
+      "x": 2,
+      "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BondLabBasement_Lights"
+      "script": "BondLabBasement_RotomBox"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BondLabBasement_Box"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BondLabBasement_Box"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BondLabBasement_Box"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BondLabBasement_Box"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BondLabBasement_Box"
     }
   ]
 }

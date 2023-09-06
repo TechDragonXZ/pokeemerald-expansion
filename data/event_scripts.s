@@ -1070,3 +1070,4 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/BondLabBasement/scripts.inc"
 
 	.include "data/maps/StrangeSpace/scripts.inc"
+	.include "data/scripts/rotom.inc"

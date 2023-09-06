@@ -33,17 +33,20 @@ BondLabBasement_WalkAway::
 	closemessage
 	end
 
-BondLabBasement_Lights::
-	setflashlevel 0
-	msgbox BondLabBasement_Text_Lights MSGBOX_DEFAULT
+BondLabBasement_RotomBox::
+	call Rotom_Appliances_Main
+	end
+
+BondLabBasement_Box::
+	msgbox BondLabBasement_Text_Box MSGBOX_DEFAULT
 	closemessage
 	end
 
 BondLabBasement_Text_WalkAway::
 	.string "You walked away.$"
 
-BondLabBasement_Text_Lights::
-	.string "The room lit up!$"
+BondLabBasement_Text_Box::
+	.string "This box is empty!$"
 
 BondLabBasement_Text_Warp::
 	.string "The room went pitch black!$"
