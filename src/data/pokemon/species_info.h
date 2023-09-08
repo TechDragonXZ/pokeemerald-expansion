@@ -806,9 +806,9 @@
         .evYield_Speed     = 2,                            \
         .genderRatio = PERCENT_FEMALE(50),                 \
         .eggCycles = 10,                                   \
-        .friendship = STANDARD_FRIENDSHIP,                                  \
+        .friendship = STANDARD_FRIENDSHIP,                 \
         .growthRate = GROWTH_MEDIUM_FAST,                  \
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY},                      \
+        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY},  \
         .abilities = {ABILITY_HUNGER_SWITCH, ABILITY_NONE},\
         .bodyColor = BODY_COLOR_YELLOW,                    \
         .noFlip = FALSE,                                   \
