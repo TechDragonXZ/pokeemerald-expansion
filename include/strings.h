@@ -3098,4 +3098,8 @@ extern const u8 gText_Grookey[];
 extern const u8 gText_Scorbunny[];
 extern const u8 gText_Sobble[];
 
+// Exp. Share
+extern const u8 gText_ExpShareOn[];
+extern const u8 gText_ExpShareOff[];
+
 #endif // GUARD_STRINGS_H

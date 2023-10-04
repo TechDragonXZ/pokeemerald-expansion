@@ -1910,3 +1910,6 @@ const u8 gText_Popplio[] = _("Popplio");
 const u8 gText_Grookey[] = _("Grookey");
 const u8 gText_Scorbunny[] = _("Scorbunny");
 const u8 gText_Sobble[] = _("Sobble");
+
+const u8 gText_ExpShareOn[] = _("The Exp. Share has been turned on.{PAUSE_UNTIL_PRESS}");
+const u8 gText_ExpShareOff[] = _("The Exp. Share has been turned off.{PAUSE_UNTIL_PRESS}");
