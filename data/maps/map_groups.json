@@ -33,7 +33,9 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124"
+    "gMapGroup_IndoorRoute124",
+    "gMapGroup_DeepPetalburgWoods",
+    "gMapGroup_StrangeSpace"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -492,8 +494,7 @@
     "BattlePyramidSquare14",
     "BattlePyramidSquare15",
     "BattlePyramidSquare16",
-    "UnionRoom",
-    "BondLabBasement"
+    "UnionRoom"
   ],
   "gMapGroup_SpecialArea": [
     "SafariZone_Northwest",
@@ -585,10 +586,7 @@
     "NavelRock_Down11",
     "NavelRock_Bottom",
     "TrainerHill_Elevator",
-    "MeteorFalls_Peak",
-    "DeepPetalburgWoods",
-    "BondLab",
-    "StrangeSpace"
+    "MeteorFalls_Peak"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",
@@ -625,5 +623,23 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
+  ],
+  "gMapGroup_DeepPetalburgWoods": [
+    "DeepPetalburgWoods",
+    "BondLab",
+    "UnderwaterDeepPetalburgWoods",
+    "UnderwaterCave"
+  ],
+  "gMapGroup_StrangeSpace": [
+    "StrangeSpace",
+    "StrangeSpacePlains",
+    "StrangeSpaceDesert",
+    "StrangeSpaceIce",
+    "StrangeSpaceVolcano",
+    "StrangeSpaceCave",
+    "StrangeSpaceForest",
+    "StrangeSpaceMountain",
+    "StrangeSpaceLake",
+    "StrangeSpaceVoid"
   ]
 }

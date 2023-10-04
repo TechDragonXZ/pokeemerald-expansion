@@ -3049,4 +3049,53 @@ extern const u8 gText_ElectricFan[];
 extern const u8 gText_Lawnmower[];
 extern const u8 gText_Recall[];
 
+extern const u8 gText_Group1[];
+extern const u8 gText_Group2[];
+extern const u8 gText_Group3[];
+extern const u8 gText_Group4[];
+extern const u8 gText_Group5[];
+extern const u8 gText_Group6[];
+extern const u8 gText_Leave[];
+
+extern const u8 gText_HelixFossil[];
+extern const u8 gText_DomeFossil[];
+extern const u8 gText_OldAmber[];
+extern const u8 gText_ArmorFossil[];
+extern const u8 gText_SkullFossil[];
+extern const u8 gText_OddKeystone[];
+extern const u8 gText_CoverFossil[];
+extern const u8 gText_PlumeFossil[];
+extern const u8 gText_JawFossil[];
+extern const u8 gText_SailFossil[];
+extern const u8 gText_FossilizedBird[];
+extern const u8 gText_FossilizedDino[];
+extern const u8 gText_FossilizedDrake[];
+extern const u8 gText_FossilizedFish[];
+extern const u8 gText_Next[];
+extern const u8 gText_Back[];
+
+extern const u8 gText_Bulbasaur[];
+extern const u8 gText_Charmander[];
+extern const u8 gText_Squirtle[];
+
+extern const u8 gText_Turtwig[];
+extern const u8 gText_Chimchar[];
+extern const u8 gText_Piplup[];
+
+extern const u8 gText_Snivy[];
+extern const u8 gText_Tepig[];
+extern const u8 gText_Oshawott[];
+
+extern const u8 gText_Chespin[];
+extern const u8 gText_Fennekin[];
+extern const u8 gText_Froakie[];
+
+extern const u8 gText_Rowlet[];
+extern const u8 gText_Litten[];
+extern const u8 gText_Popplio[];
+
+extern const u8 gText_Grookey[];
+extern const u8 gText_Scorbunny[];
+extern const u8 gText_Sobble[];
+
 #endif // GUARD_STRINGS_H

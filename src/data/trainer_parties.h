@@ -10404,6 +10404,13 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne4[] = {
     {
     .iv = 255,
     .lvl = 45,
+    .species = SPECIES_STEELIX,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_IRON_TAIL, MOVE_EARTHQUAKE, MOVE_ROAR, MOVE_ROCK_SLIDE}
+    },
+    {
+    .iv = 255,
+    .lvl = 45,
     .species = SPECIES_PROBOPASS,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_DOUBLE_TEAM, MOVE_EXPLOSION, MOVE_PROTECT, MOVE_ROCK_SLIDE}
@@ -10411,9 +10418,9 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne4[] = {
     {
     .iv = 255,
     .lvl = 47,
-    .species = SPECIES_STEELIX,
-    .heldItem = ITEM_STEELIXITE,
-    .moves = {MOVE_IRON_TAIL, MOVE_EARTHQUAKE, MOVE_ROAR, MOVE_ROCK_SLIDE}
+    .species = SPECIES_AERODACTYL,
+    .heldItem = ITEM_AERODACTYLITE,
+    .moves = {MOVE_ROCK_SLIDE, MOVE_HYPER_BEAM, MOVE_BRAVE_BIRD, MOVE_PROTECT}
     }
 };
 
@@ -10421,9 +10428,9 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne5[] = {
     {
     .iv = 255,
     .lvl = 47,
-    .species = SPECIES_AERODACTYL,
+    .species = SPECIES_STEELIX,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROCK_SLIDE, MOVE_HYPER_BEAM, MOVE_SUPERSONIC, MOVE_PROTECT}
+    .moves = {MOVE_IRON_TAIL, MOVE_EARTHQUAKE, MOVE_ROAR, MOVE_ROCK_SLIDE}
     },
     {
     .iv = 255,
@@ -10456,9 +10463,9 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne5[] = {
     {
     .iv = 255,
     .lvl = 52,
-    .species = SPECIES_STEELIX,
-    .heldItem = ITEM_STEELIXITE,
-    .moves = {MOVE_IRON_TAIL, MOVE_EARTHQUAKE, MOVE_ROAR, MOVE_ROCK_SLIDE}
+    .species = SPECIES_AERODACTYL,
+    .heldItem = ITEM_AERODACTYLITE,
+    .moves = {MOVE_ROCK_SLIDE, MOVE_HYPER_BEAM, MOVE_BRAVE_BIRD, MOVE_PROTECT}
     }
 };
 
@@ -11426,6 +11433,13 @@ static const struct TrainerMonItemCustomMoves sParty_Juan2[] = {
     },
     {
     .iv = 255,
+    .lvl = 45,
+    .species = SPECIES_SLOWPOKE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_YAWN, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_WATER_GUN}
+    },
+    {
+    .iv = 255,
     .lvl = 46,
     .species = SPECIES_WHISCASH,
     .heldItem = ITEM_NONE,
@@ -11475,6 +11489,13 @@ static const struct TrainerMonItemCustomMoves sParty_Juan3[] = {
     .species = SPECIES_WALREIN,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_WATER_PULSE, MOVE_BODY_SLAM, MOVE_PROTECT, MOVE_ICE_BEAM}
+    },
+    {
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_SLOWPOKE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_YAWN, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_WATER_GUN}
     },
     {
     .iv = 255,
@@ -11531,9 +11552,9 @@ static const struct TrainerMonItemCustomMoves sParty_Juan4[] = {
     {
     .iv = 255,
     .lvl = 61,
-    .species = SPECIES_GYARADOS,
-    .heldItem = ITEM_GYARADOSITE,
-    .moves = {MOVE_WATER_PULSE, MOVE_DARK_PULSE, MOVE_HURRICANE, MOVE_RAIN_DANCE}
+    .species = SPECIES_SLOWBRO,
+    .heldItem = ITEM_SLOWBRONITE,
+    .moves = {MOVE_YAWN, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_SCALD}
     }
 };
 
@@ -11575,10 +11596,10 @@ static const struct TrainerMonItemCustomMoves sParty_Juan5[] = {
     },
     {
     .iv = 255,
-    .lvl = 66,
-    .species = SPECIES_GYARADOS,
-    .heldItem = ITEM_GYARADOSITE,
-    .moves = {MOVE_WATER_PULSE, MOVE_DARK_PULSE, MOVE_HURRICANE, MOVE_RAIN_DANCE}
+    .lvl = 65,
+    .species = SPECIES_SLOWBRO,
+    .heldItem = ITEM_SLOWBRONITE,
+    .moves = {MOVE_YAWN, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_SCALD}
     }
 };
 

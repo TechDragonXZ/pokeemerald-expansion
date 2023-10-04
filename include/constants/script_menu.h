@@ -124,6 +124,19 @@
 #define MULTI_TAG_MATCH_TYPE               113
 #define MULTI_PARTNER                      114
 #define MULTI_ROTOM_APPLIANCES             115
+#define MULTI_WILD_POKEMON_GROUPS          116
+#define MULTI_WILD_POKEMON_GROUPS_TWO      117
+#define MULTI_WILD_POKEMON_GROUPS_SIX      118
+#define MULTI_STRANGE_PILLAR1              119
+#define MULTI_STRANGE_PILLAR2              120
+#define MULTI_STRANGE_PILLAR3              121
+#define MULTI_STRANGE_PILLAR4              122
+#define MULTI_KANTO_STARTERS               123
+#define MULTI_SINNOH_STARTERS              124
+#define MULTI_UNOVA_STARTERS               125
+#define MULTI_KALOS_STARTERS               126
+#define MULTI_ALOLA_STARTERS               127
+#define MULTI_GALAR_STARTERS               128
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

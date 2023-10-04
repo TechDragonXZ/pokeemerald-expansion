@@ -362,6 +362,42 @@ static u16 GetCurrentMapWildMonHeaderId(void)
         if (gWildMonHeaders[i].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
             gWildMonHeaders[i].mapNum == gSaveBlock1Ptr->location.mapNum)
         {
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(STRANGE_SPACE) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(STRANGE_SPACE_PLAINS))
+                i += VarGet(VAR_STRANGE_SPACE_PLAINS_TABLES);
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(STRANGE_SPACE) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(STRANGE_SPACE_DESERT))
+                i += VarGet(VAR_STRANGE_SPACE_DESERT_TABLES);
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(STRANGE_SPACE) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(STRANGE_SPACE_ICE))
+                i += VarGet(VAR_STRANGE_SPACE_ICE_TABLES);
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(STRANGE_SPACE) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(STRANGE_SPACE_VOLCANO))
+                i += VarGet(VAR_STRANGE_SPACE_VOLCANO_TABLES);
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(STRANGE_SPACE) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(STRANGE_SPACE_CAVE))
+                i += VarGet(VAR_STRANGE_SPACE_CAVE_TABLES);
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(STRANGE_SPACE) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(STRANGE_SPACE_FOREST))
+                i += VarGet(VAR_STRANGE_SPACE_FOREST_TABLES);
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(STRANGE_SPACE) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(STRANGE_SPACE_MOUNTAIN))
+                i += VarGet(VAR_STRANGE_SPACE_MOUNTAIN_TABLES);
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(STRANGE_SPACE) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(STRANGE_SPACE_LAKE))
+                i += VarGet(VAR_STRANGE_SPACE_LAKE_TABLES);
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(STRANGE_SPACE) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(STRANGE_SPACE_VOID))
+                i += VarGet(VAR_STRANGE_SPACE_VOID_TABLES);
+
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ALTERING_CAVE) &&
                 gSaveBlock1Ptr->location.mapNum == MAP_NUM(ALTERING_CAVE))
             {

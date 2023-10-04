@@ -909,6 +909,23 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	delay 30
 	return
 
+LittlerootTown_Hall_Of_Fame::
+	goto_if_eq VAR_HALL_OF_FAME, 1, LittlerootTown_Hall_Of_Fame_One
+	goto_if_ge VAR_HALL_OF_FAME, 2, LittlerootTown_Hall_Of_Fame_Many
+	end
+
+LittlerootTown_Hall_Of_Fame_One::
+	buffernumberstring STR_VAR_1, VAR_HALL_OF_FAME
+	msgbox LittlerootTown_Text_HallOfFame_One, MSGBOX_DEFAULT
+	closemessage
+	end
+
+LittlerootTown_Hall_Of_Fame_Many::
+	buffernumberstring STR_VAR_1, VAR_HALL_OF_FAME
+	msgbox LittlerootTown_Text_HallOfFame_Many, MSGBOX_DEFAULT
+	closemessage
+	end
+
 LittlerootTown_Text_OurNewHomeLetsGoInside:
 	.string "MOM: {PLAYER}, we're here, honey!\p"
 	.string "It must be tiring riding with our things\n"
@@ -1019,3 +1036,8 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+LittlerootTown_Text_HallOfFame_One:
+	.string "SIGN: {PLAYER}! You have entered the\nHall of Fame {STR_VAR_1} time!$"
+
+LittlerootTown_Text_HallOfFame_Many:
+	.string "SIGN: {PLAYER}! You have entered the\nHall of Fame {STR_VAR_1} times!$"

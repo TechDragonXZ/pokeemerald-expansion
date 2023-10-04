@@ -50,32 +50,32 @@
 #define FLAG_PARTNER_CAN_BE_PICKED   0x26 // Player Can Pick A Partner Flag
 #define FLAG_PARTNER_PIKACHU_PICKED  0x27 // Player Picked Pikachu(Partner) Flag
 #define FLAG_PARTNER_EEVEE_PICKED    0x28 // Player Picked Eevee(Partner) Flag
-#define FLAG_PIKACHU_MOVED   0x29 // Stairs Pikachu Moved Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
+#define FLAG_NO_CATCHING        0x29 // No Catching Flag
+#define FLAG_INVERSE_BATTLE     0x2A // Inverse Battle Flag
+#define FLAG_NO_BAG_USE         0x2B // Can't Use Bag Flag
+#define FLAG_FORCE_SHINY        0x2C // Forces Shiny Flag
+#define FLAG_FORCE_NO_SHINY     0x2D // Forces No Shiny Flag
+#define FLAG_FORCE_DOUBLE_WILD  0x2E // Force Wild Double Battles Flag
+#define FLAG_SMART_WILD_AI      0x2F // Smarter Wild Pokémon Flag
+#define FLAG_ENTERED_HALL_OF_FAME     0x30 // Player Entered Hall of Fame Flag
+#define FLAG_USED_LEAGUE_KIOSK        0x31 // Player Has Used PKMN League Kiosk Flag
+#define FLAG_PICKED_KANTO_STARTER     0x32 // Player Picked a Kanto Starter Flag
+#define FLAG_PICKED_SINNOH_STARTER    0x33 // Player Picked a Sinnoh Starter Flag
+#define FLAG_PICKED_UNOVA_STARTER     0x34 // Player Picked a Unova Starter Flag
+#define FLAG_PICKED_KALOS_STARTER     0x35 // Player Picked a Kalos Starter Flag
+#define FLAG_PICKED_ALOLA_STARTER     0x36 // Player Picked a Alola Starter Flag
+#define FLAG_PICKED_GALAR_STARTER     0x37 // Player Picked a Galar Starter Flag
+#define FLAG_OBTAINED_REWARD_1     0x38 // Got First Reward Flag
+#define FLAG_OBTAINED_REWARD_2     0x39 // Got Second Reward Flag
+#define FLAG_OBTAINED_REWARD_3     0x3A // Got Third Reward Flag
+#define FLAG_OBTAINED_REWARD_4     0x3B // Got Fourth Reward Flag
+#define FLAG_OBTAINED_REWARD_5     0x3C // Got Fifth Reward Flag
+#define FLAG_OBTAINED_REWARD_6     0x3D // Got Sixth Reward Flag
+#define FLAG_OBTAINED_REWARD_7     0x3E // Got Seventh Reward Flag
+#define FLAG_OBTAINED_REWARD_8     0x3F // Got Eighth Reward Flag
+#define FLAG_OBTAINED_REWARD_9     0x40 // Got Ninth Reward Flag
+#define FLAG_OBTAINED_REWARD_10    0x41 // Got Tenth Reward Flag
+#define FLAG_OBTAINED_REWARD_PLUS  0x42 // Got Eleventh+ Reward Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
@@ -1217,25 +1217,25 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
-#define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
+#define FLAG_FOUND_ABOMASITE                                        0x493 // Abomasnow Mega Stone Flag
+#define FLAG_FOUND_AGGRONITE                                        0x494 // Aggrogon Mega Stone Flag
+#define FLAG_FOUND_AMPHAROSITE                                      0x495 // Ampharos Mega Stone Flag
+#define FLAG_FOUND_AUDINITE                                         0x496 // Audino Mega Stone Flag
+#define FLAG_FOUND_BANETTITE                                        0x497 // Banette Mega Stone Flag
+#define FLAG_FOUND_BEEDRILLITE                                      0x498 // Beedrill Mega Stone Flag
+#define FLAG_FOUND_DIANCITE                                         0x499 // Diance Mega Stone Flag
+#define FLAG_FOUND_GARCHOMPITE                                      0x49A // Garchomp Mega Stone Flag
+#define FLAG_FOUND_GARDEVOIRITE                                     0x49B // Gardevoir Mega Stone Flag
+#define FLAG_FOUND_GENGARITE                                        0x49C // Gengar Mega Stone Flag
+#define FLAG_FOUND_HERACRONITE                                      0x49D // Heracross Mega Stone Flag
+#define FLAG_FOUND_LOPUNNITE                                        0x49E // Lopunny Mega Stone Flag
+#define FLAG_FOUND_LUCARIONITE                                      0x4AF // Lucario Mega Stone Flag
+#define FLAG_FOUND_MAWILITE                                         0x4A0 // Mawile Mega Stone Flag
+#define FLAG_FOUND_PIDGEOTITE                                       0x4A1 // Pidgeot Mega Stone Flag
+#define FLAG_FOUND_PINSIRITE                                        0x4A2 // Pinsir Mega Stone Flag
+#define FLAG_FOUND_SCIZORITE                                        0x4A3 // Scizor Mega Stone Flag
+#define FLAG_FOUND_STEELIXITE                                       0x4A4 // Steelix Mega Stone Flag
+#define FLAG_FOUND_TYRANITARITE                                     0x4A5 // Tyranitar Mega Stone Flag
 #define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
 #define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
 #define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag

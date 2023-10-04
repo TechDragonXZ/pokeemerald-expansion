@@ -49,9 +49,9 @@ const u8 gText_Select[] = _("SELECT"); // Unused
 const u8 gText_ControlPad[] = _("+ Control Pad"); // Unused
 const u8 gText_LButtonRButton[] = _("L Button  R Button"); // Unused
 const u8 gText_Controls[] = _("CONTROLS"); // Unused
-ALIGNED(4) const u8 gText_PickOk[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}OK"); // Unused
-ALIGNED(4) const u8 gText_Next[] = _("{A_BUTTON}NEXT"); // Unused
-ALIGNED(4) const u8 gText_NextBack[] = _("{A_BUTTON}NEXT {B_BUTTON}BACK"); // Unused
+//ALIGNED(4) const u8 gText_PickOk[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}OK"); // Unused
+//ALIGNED(4) const u8 gText_Next[] = _("{A_BUTTON}NEXT"); // Unused
+//ALIGNED(4) const u8 gText_NextBack[] = _("{A_BUTTON}NEXT {B_BUTTON}BACK"); // Unused
 ALIGNED(4) const u8 gText_PickNextCancel[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}NEXT {B_BUTTON}CANCEL");
 ALIGNED(4) const u8 gText_PickCancel[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}{B_BUTTON}CANCEL");
 ALIGNED(4) const u8 gText_AButtonExit[] = _("{A_BUTTON}EXIT");
@@ -766,8 +766,8 @@ const u8 gText_SouthernIsland[] = _("SOUTHERN ISLAND");
 const u8 gText_BirthIsland[] = _("BIRTH ISLAND");
 const u8 gText_FarawayIsland[] = _("FARAWAY ISLAND");
 const u8 gText_NavelRock[] = _("NAVEL ROCK");
-const u8 gText_ClawFossil[] = _("CLAW FOSSIL");
-const u8 gText_RootFossil[] = _("ROOT FOSSIL");
+const u8 gText_ClawFossil[] = _("Claw Fossil");
+const u8 gText_RootFossil[] = _("Root Fossil");
 const u8 gText_No4[] = _("NO");
 const u8 gText_IllBattleNow[] = _("I'll battle now!");
 const u8 gText_IWon[] = _("I won!");
@@ -1858,3 +1858,55 @@ const u8 gText_Refrigerator[] = _("Refrigerator");
 const u8 gText_ElectricFan[] = _("Electric Fan");
 const u8 gText_Lawnmower[] = _("Lawnmower");
 const u8 gText_Recall[] = _("Recall");
+
+// Wild PKMN Groups
+const u8 gText_Group1[] = _("Group 1");
+const u8 gText_Group2[] = _("Group 2");
+const u8 gText_Group3[] = _("Group 3");
+const u8 gText_Group4[] = _("Group 4");
+const u8 gText_Group5[] = _("Group 5");
+const u8 gText_Group6[] = _("Group 6");
+const u8 gText_Leave[] = _("Leave");
+
+// Fossil Revival
+const u8 gText_HelixFossil[] = _("Helix Fossil");
+const u8 gText_DomeFossil[] = _("Dome Fossil");
+const u8 gText_OldAmber[] = _("Old Amber");
+const u8 gText_ArmorFossil[] = _("Armor Fossil");
+const u8 gText_SkullFossil[] = _("Skull Fossil");
+const u8 gText_OddKeystone[] = _("Odd Keystone");
+const u8 gText_CoverFossil[] = _("Cover Fossil");
+const u8 gText_PlumeFossil[] = _("Plume Fossil");
+const u8 gText_JawFossil[] = _("Jaw Fossil");
+const u8 gText_SailFossil[] = _("Sail Fossil");
+const u8 gText_FossilizedBird[] = _("Fossilized Bird");
+const u8 gText_FossilizedDino[] = _("Fossilized Dino");
+const u8 gText_FossilizedDrake[] = _("Fossilized Drake");
+const u8 gText_FossilizedFish[] = _("Fossilized Fish");
+const u8 gText_Next[] = _("Next");
+const u8 gText_Back[] = _("Back");
+
+// Regional Starters
+const u8 gText_Bulbasaur[] = _("Bulbasaur");
+const u8 gText_Charmander[] = _("Charmander");
+const u8 gText_Squirtle[] = _("Squirtle");
+
+const u8 gText_Turtwig[] = _("Turtwig");
+const u8 gText_Chimchar[] = _("Chimchar");
+const u8 gText_Piplup[] = _("Piplup");
+
+const u8 gText_Snivy[] = _("Snivy");
+const u8 gText_Tepig[] = _("Tepig");
+const u8 gText_Oshawott[] = _("Oshawott");
+
+const u8 gText_Chespin[] = _("Chespin");
+const u8 gText_Fennekin[] = _("Fennekin");
+const u8 gText_Froakie[] = _("Froakie");
+
+const u8 gText_Rowlet[] = _("Rowlet");
+const u8 gText_Litten[] = _("Litten");
+const u8 gText_Popplio[] = _("Popplio");
+
+const u8 gText_Grookey[] = _("Grookey");
+const u8 gText_Scorbunny[] = _("Scorbunny");
+const u8 gText_Sobble[] = _("Sobble");

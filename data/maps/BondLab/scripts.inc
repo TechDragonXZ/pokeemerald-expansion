@@ -3,10 +3,8 @@
 .set LOCALID_SCIENTIST_2, 5
 .set LOCALID_BALL_PIKACHU, 6
 .set LOCALID_BALL_EEVEE, 7
-.set LOCALID_MON_PIKACHU, 8
 
 BondLab_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD BondLab_Stairs_State
 	.byte 0
 
 BondLab_DailyPC::
@@ -33,10 +31,13 @@ BondLab_Scientist_Bond::
 	end
 
 BondLab_Scientist_Bond_Battle::
+	lock
+	faceplayer
 	trainerbattle_single TRAINER_BOND, BondLab_Text_BondIntro, BondLab_Text_BondDefeated
 	setflag FLAG_BOND_DEFEATED
 	msgbox BondLab_Text_BondPostBattle, MSGBOX_AUTOCLOSE
 	closemessage
+	release
 	end
 
 BondLab_Scientist_Bond_PostBattle::
@@ -45,10 +46,12 @@ BondLab_Scientist_Bond_PostBattle::
 	end
 
 BondLab_Scientist_Bond_Gift::
-	setobjectmovementtype LOCALID_BOND, MOVEMENT_ACTION_FACE_PLAYER
+	lock
+	faceplayer
 	msgbox BondLab_Text_BondGift, MSGBOX_AUTOCLOSE
 	closemessage
 	setflag FLAG_PARTNER_CAN_BE_PICKED
+	release
 	end
 
 BondLab_TablePokeball_Eevee::
@@ -90,11 +93,9 @@ BondLab_TablePokeball_Pikachu_Choice::
 	end
 
 BondLab_Select_Pikachu::
-	showmonpic SPECIES_PIKACHU 10, 3
 	playmoncry SPECIES_PIKACHU CRY_MODE_NORMAL
 	givemon SPECIES_PIKACHU_PARTNER, 5, ITEM_LIGHT_BALL
 	delay 30
-	hidemonpic
 	msgbox BondLab_Text_PickedPartnerPikachu, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_PARTNER_PICKED
@@ -103,21 +104,14 @@ BondLab_Select_Pikachu::
 	end
 
 BondLab_Select_Eevee::
-	showmonpic SPECIES_EEVEE 10, 3
 	playmoncry SPECIES_EEVEE CRY_MODE_NORMAL
 	givemon SPECIES_EEVEE_PARTNER, 5, ITEM_SILK_SCARF
 	delay 30
-	hidemonpic
 	msgbox BondLab_Text_PickedPartnerEevee, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_PARTNER_PICKED
 	setflag FLAG_PARTNER_EEVEE_PICKED
 	removeobject LOCALID_BALL_EEVEE
-	end
-
-BondLab_Stairs_Pikachu::
-	call_if_unset FLAG_BOND_DEFEATED, BondLab_Stairs_Pikachu_PreBattle
-	call_if_set FLAG_BOND_DEFEATED, BondLab_Stairs_Pikachu_PostBattle
 	end
 
 BondLab_WalkAway::
@@ -131,23 +125,24 @@ BondLab_LeaveIt::
 	end
 
 BondLab_Scientist_Bond_PostGift::
-	setobjectmovementtype LOCALID_BOND, MOVEMENT_ACTION_FACE_PLAYER
+	lock
+	faceplayer
 	msgbox BondLab_Text_BondPostGift, MSGBOX_AUTOCLOSE
 	closemessage
+	release
 	end
 
 BondLab_Scientist1::
-	setobjectmovementtype LOCALID_SCIENTIST_1, MOVEMENT_ACTION_FACE_PLAYER
+	lock
+	faceplayer
 	msgbox BondLab_Text_Scientist1, MSGBOX_AUTOCLOSE
 	closemessage
-	setobjectmovementtype LOCALID_SCIENTIST_1, MOVEMENT_ACTION_FACE_RIGHT
+	release
 	end
 
 BondLab_Scientist2::
-	setobjectmovementtype LOCALID_SCIENTIST_2, MOVEMENT_ACTION_FACE_PLAYER
 	msgbox BondLab_Text_Scientist2, MSGBOX_AUTOCLOSE
 	closemessage
-	setobjectmovementtype LOCALID_SCIENTIST_2, MOVEMENT_ACTION_FACE_LEFT
 	end
 
 BondLab_Scientist3::
@@ -156,51 +151,12 @@ BondLab_Scientist3::
 	end
 
 BondLab_Scientist4::
+	lock
+	faceplayer
 	msgbox BondLab_Text_Scientist4, MSGBOX_AUTOCLOSE
 	closemessage
+	release
 	end
-
-BondLab_Stairs_Pikachu_PreBattle::
-	msgbox BondLab_Text_Stairs_Pikachu, MSGBOX_AUTOCLOSE
-	closemessage
-	end
-
-BondLab_Stairs_Pikachu_PostBattle::
-	call_if_unset FLAG_PIKACHU_MOVED, BondLab_Stairs_Pikachu_MovesAside
-	call_if_set FLAG_PIKACHU_MOVED, BondLab_Stairs_Pikachu_MovedAside
-	end
-
-BondLab_Stairs_State::
-	call_if_unset FLAG_PIKACHU_MOVED, BondLab_Stairs_Blocked
-	call_if_set FLAG_PIKACHU_MOVED, BondLab_Stairs_Unblocked
-	end
-
-BondLab_Stairs_Blocked::
-	setobjectxyperm LOCALID_MON_PIKACHU, 9, 2
-	end
-
-BondLab_Stairs_Unblocked::
-	setobjectxyperm LOCALID_MON_PIKACHU, 8, 2
-	end
-
-BondLab_Stairs_Pikachu_MovesAside::
-	applymovement LOCALID_MON_PIKACHU, BondLab_Pikachu_Moves
-	waitmovement 0
-	msgbox BondLab_Text_Stairs_Pikachu_Moved, MSGBOX_AUTOCLOSE
-	closemessage
-	setobjectxyperm LOCALID_MON_PIKACHU, 8, 2
-	setflag FLAG_PIKACHU_MOVED
-	end
-
-BondLab_Stairs_Pikachu_MovedAside::
-	msgbox BondLab_Text_Stairs_Pikachu_Moved, MSGBOX_AUTOCLOSE
-	closemessage
-	end
-
-BondLab_Pikachu_Moves::
-	walk_slow_left
-	face_down
-	step_end
 
 BondLab_RotomBox::
 	call Rotom_Appliances_Main
@@ -246,13 +202,6 @@ BondLab_Text_NoRotomPC::
 
 BondLab_Text_RotomPC::
 	.string "There's something here!$"
-
-BondLab_Text_Stairs_Pikachu::
-	.string "It's blocking the stairs.$"
-
-BondLab_Text_Stairs_Pikachu_Moved::
-	.string "It's allowing you to enter\n"
-	.string "the basement of the lab.$"
 
 BondLab_Text_Machine::
 	.string "A strange machine!$"

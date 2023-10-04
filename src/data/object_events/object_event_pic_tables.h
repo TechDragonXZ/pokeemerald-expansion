@@ -2180,3 +2180,11 @@ static const struct SpriteFrameImage sPicTable_TMBall[] = {
 static const struct SpriteFrameImage sPicTable_Megastone[] = {
     obj_frame_tiles(gObjectEventPic_Megastone),
 };
+
+static const struct SpriteFrameImage sPicTable_Megastone_Alt[] = {
+    obj_frame_tiles(gObjectEventPic_Megastone_Alt),
+};
+
+static const struct SpriteFrameImage sPicTable_Strange_Pillar[] = {
+    obj_frame_tiles(gObjectEventPic_StrangePillar),
+};

@@ -4427,7 +4427,7 @@
       "width": 32,
       "height": 34,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
+      "secondary_tileset": "gTileset_Unused1",
       "border_filepath": "data/layouts/DeepPetalburgWoods/border.bin",
       "blockdata_filepath": "data/layouts/DeepPetalburgWoods/map.bin"
     },
@@ -4442,24 +4442,124 @@
       "blockdata_filepath": "data/layouts/BondLab/map.bin"
     },
     {
-      "id": "LAYOUT_BOND_LAB_BASEMENT",
-      "name": "BondLabBasement_Layout",
-      "width": 11,
-      "height": 10,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Lab",
-      "border_filepath": "data/layouts/BondLabBasement/border.bin",
-      "blockdata_filepath": "data/layouts/BondLabBasement/map.bin"
+      "id": "LAYOUT_STRANGE_SPACE_PLAINS",
+      "name": "StrangeSpacePlains_Layout",
+      "width": 38,
+      "height": 37,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpacePlains/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpacePlains/map.bin"
     },
     {
       "id": "LAYOUT_STRANGE_SPACE",
       "name": "StrangeSpace_Layout",
-      "width": 21,
-      "height": 21,
+      "width": 38,
+      "height": 38,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/StrangeSpace/border.bin",
       "blockdata_filepath": "data/layouts/StrangeSpace/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_DEEP_PETALBURG_WOODS",
+      "name": "UnderwaterDeepPetalburgWoods_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/UnderwaterDeepPetalburgWoods/border.bin",
+      "blockdata_filepath": "data/layouts/UnderwaterDeepPetalburgWoods/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_CAVE",
+      "name": "UnderwaterCave_Layout",
+      "width": 7,
+      "height": 7,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/UnderwaterCave/border.bin",
+      "blockdata_filepath": "data/layouts/UnderwaterCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_PLACE_DESERT",
+      "name": "StrangeSpaceDesert_Layout",
+      "width": 42,
+      "height": 42,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/StrangeSpaceDesert/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpaceDesert/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_ICE",
+      "name": "StrangeSpaceIce_Layout",
+      "width": 42,
+      "height": 49,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpaceIce/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpaceIce/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_VOLCANO",
+      "name": "StrangeSpaceVolcano_Layout",
+      "width": 68,
+      "height": 42,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpaceVolcano/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpaceVolcano/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_CAVE",
+      "name": "StrangeSpaceCave_Layout",
+      "width": 40,
+      "height": 38,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpaceCave/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpaceCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_FOREST",
+      "name": "StrangeSpaceForest_Layout",
+      "width": 38,
+      "height": 38,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpaceForest/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpaceForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_MOUNTAIN",
+      "name": "StrangeSpaceMountain_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpaceMountain/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpaceMountain/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_LAKE",
+      "name": "StrangeSpaceLake_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpaceLake/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpaceLake/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_VOID",
+      "name": "StrangeSpaceVoid_Layout",
+      "width": 38,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpaceVoid/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpaceVoid/map.bin"
     }
   ]
 }

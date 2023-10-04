@@ -1067,7 +1067,27 @@ Common_EventScript_LegendaryFlewAway::
 
 	.include "data/maps/BondLab/scripts.inc"
 
-	.include "data/maps/BondLabBasement/scripts.inc"
+	.include "data/maps/StrangeSpacePlains/scripts.inc"
 
 	.include "data/maps/StrangeSpace/scripts.inc"
 	.include "data/scripts/rotom.inc"
+
+	.include "data/maps/UnderwaterDeepPetalburgWoods/scripts.inc"
+
+	.include "data/maps/UnderwaterCave/scripts.inc"
+
+	.include "data/maps/StrangeSpaceDesert/scripts.inc"
+
+	.include "data/maps/StrangeSpaceIce/scripts.inc"
+
+	.include "data/maps/StrangeSpaceVolcano/scripts.inc"
+
+	.include "data/maps/StrangeSpaceCave/scripts.inc"
+
+	.include "data/maps/StrangeSpaceForest/scripts.inc"
+
+	.include "data/maps/StrangeSpaceMountain/scripts.inc"
+
+	.include "data/maps/StrangeSpaceLake/scripts.inc"
+
+	.include "data/maps/StrangeSpaceVoid/scripts.inc"

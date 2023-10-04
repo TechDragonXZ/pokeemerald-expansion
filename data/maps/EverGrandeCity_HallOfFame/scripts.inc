@@ -45,6 +45,10 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	delay 40
 	setvar VAR_TEMP_1, 1
 	call EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags
+	addvar VAR_HALL_OF_FAME, 1
+	addvar VAR_HALL_OF_FAME_OLD, 1
+	subvar VAR_HALL_OF_FAME_OLD, 1
+	setflag FLAG_ENTERED_HALL_OF_FAME
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, EverGrandeCity_HallOfFame_EventScript_GameClearMale
 	goto_if_eq VAR_RESULT, FEMALE, EverGrandeCity_HallOfFame_EventScript_GameClearFemale
