@@ -222,15 +222,14 @@ Route120_EventScript_StevenGiveDeconScope::
 	setflag FLAG_RECEIVED_DEVON_SCOPE
 	msgbox Route120_Text_StevenGoodbye, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterDown
 	delay 30
 	msgbox Route120_Text_StevenMega, MSGBOX_DEFAULT
 	closemessage
 	giveitem ITEM_MEGA_RING
 	setflag FLAG_GOT_MEGA_RING
-	goto_if_eq VAR_STARTER_MON, 0, Route120_EventScript_Treecko
-	goto_if_eq VAR_STARTER_MON, 1, Route120_EventScript_Torchic
-	goto_if_eq VAR_STARTER_MON, 2, Route120_EventScript_Mudkip
+	call_if_eq VAR_STARTER_MON, 0, Route120_EventScript_Treecko
+	call_if_eq VAR_STARTER_MON, 1, Route120_EventScript_Torchic
+	call_if_eq VAR_STARTER_MON, 2, Route120_EventScript_Mudkip
 	msgbox Route120_Text_StevenMega2, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterDown

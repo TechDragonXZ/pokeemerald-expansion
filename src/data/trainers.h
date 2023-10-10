@@ -10269,7 +10269,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_SUPER_POTION, ITEM_REVIVE},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_ACE_POKEMON,
-        .party = EVERYTHING_CUSTOMIZED(sParty_Bond),
+        .party = TRAINER_PARTY(sParty_Bond),
     },
 
 };

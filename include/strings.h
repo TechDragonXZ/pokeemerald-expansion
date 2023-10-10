@@ -3102,4 +3102,10 @@ extern const u8 gText_Sobble[];
 extern const u8 gText_ExpShareOn[];
 extern const u8 gText_ExpShareOff[];
 
+extern const u8 gText_Moves_Menu[];
+extern const u8 gText_Nickname[];
+
+extern const u8 gText_Pokenav_Access_PC[];
+extern const u8 gText_Pokenav_Cannot_Access_PC[];
+
 #endif // GUARD_STRINGS_H

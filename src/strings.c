@@ -1913,3 +1913,9 @@ const u8 gText_Sobble[] = _("Sobble");
 
 const u8 gText_ExpShareOn[] = _("The Exp. Share has been turned on.{PAUSE_UNTIL_PRESS}");
 const u8 gText_ExpShareOff[] = _("The Exp. Share has been turned off.{PAUSE_UNTIL_PRESS}");
+
+const u8 gText_Moves_Menu[] = _("CHANGE MOVES");
+const u8 gText_Nickname[] = _("NICKNAME");
+
+const u8 gText_Pokenav_Access_PC[] = _("Access your PC.");
+const u8 gText_Pokenav_Cannot_Access_PC[] = _("Can't access PC. Go outside.");

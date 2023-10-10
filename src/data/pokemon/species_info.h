@@ -24738,7 +24738,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_ADAPTABILITY, ABILITY_ANTICIPATION, ABILITY_SCRAPPY},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-        .flags = SPECIES_FLAG_GENDER_DIFFERENCE,
     },
 
     [SPECIES_PIKACHU_PARTNER] =
@@ -24762,7 +24761,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_STATIC, ABILITY_LIGHTNING_ROD, ABILITY_MOTOR_DRIVE},
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
-        .flags = SPECIES_FLAG_GENDER_DIFFERENCE,
     },
 #endif
 };
