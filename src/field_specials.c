@@ -4406,3 +4406,27 @@ bool8 DoesRotomKnowSpecialMove(void)
     initialMove = RotomFormToMove(initialSpecies);
     return MonKnowsMove(&gPlayerParty[gSpecialVar_0x8004], initialMove);
 }
+
+void CheckSpecies(void)
+{
+    u8 i;
+    u16 species;
+    struct Pokemon *pokemon;
+    for (i = 0; i < CalculatePlayerPartyCount(); i++)
+    {
+        pokemon = &gPlayerParty[i];
+        if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES) && !GetMonData(pokemon, MON_DATA_IS_EGG))
+        {
+            species = GetMonData(pokemon, MON_DATA_SPECIES);
+            if (species == gSpecialVar_0x8005)
+            {
+                gSpecialVar_Result = TRUE;
+                return;
+            }
+            else
+            {
+                gSpecialVar_Result = FALSE;
+            }
+        }
+    }
+}

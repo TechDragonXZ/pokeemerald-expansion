@@ -43,6 +43,8 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_POKE_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
+        
     },
 
     [ITEM_GREAT_BALL] =
@@ -54,6 +56,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_GREAT_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_ULTRA_BALL] =
@@ -65,6 +68,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_ULTRA_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_MASTER_BALL] =
@@ -76,6 +80,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_MASTER_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_PREMIER_BALL] =
@@ -87,6 +92,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_PREMIER_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_HEAL_BALL] =
@@ -98,6 +104,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_HEAL_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_NET_BALL] =
@@ -109,6 +116,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_NET_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_NEST_BALL] =
@@ -120,6 +128,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_NEST_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_DIVE_BALL] =
@@ -131,6 +140,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_DIVE_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_DUSK_BALL] =
@@ -142,6 +152,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_DUSK_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_TIMER_BALL] =
@@ -153,6 +164,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_TIMER_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_QUICK_BALL] =
@@ -164,6 +176,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_QUICK_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_REPEAT_BALL] =
@@ -175,6 +188,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_REPEAT_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_LUXURY_BALL] =
@@ -186,6 +200,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_LUXURY_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_LEVEL_BALL] =
@@ -197,6 +212,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_LEVEL_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_LURE_BALL] =
@@ -208,6 +224,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_LURE_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_MOON_BALL] =
@@ -219,6 +236,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_MOON_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_FRIEND_BALL] =
@@ -230,6 +248,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_FRIEND_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_LOVE_BALL] =
@@ -241,6 +260,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_LOVE_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_FAST_BALL] =
@@ -252,6 +272,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_FAST_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_HEAVY_BALL] =
@@ -263,6 +284,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_HEAVY_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_DREAM_BALL] =
@@ -274,6 +296,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_DREAM_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_SAFARI_BALL] =
@@ -285,6 +308,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_SAFARI_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_SPORT_BALL] =
@@ -296,6 +320,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_SPORT_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_PARK_BALL] =
@@ -307,6 +332,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_PARK_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_BEAST_BALL] =
@@ -318,6 +344,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_BEAST_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
     [ITEM_CHERISH_BALL] =
@@ -329,6 +356,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = ITEM_CHERISH_BALL - FIRST_BALL,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
     },
 
 // Medicine
@@ -3522,7 +3550,7 @@ const struct Item gItems[] =
     [ITEM_VENUSAURITE] =
     {
         .name = _("Venusaurite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sVenusauriteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3534,7 +3562,7 @@ const struct Item gItems[] =
     [ITEM_CHARIZARDITE_X] =
     {
         .name = _("CharizarditeX"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sCharizarditeDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3546,7 +3574,7 @@ const struct Item gItems[] =
     [ITEM_CHARIZARDITE_Y] =
     {
         .name = _("CharizarditeY"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sCharizarditeDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3558,7 +3586,7 @@ const struct Item gItems[] =
     [ITEM_BLASTOISINITE] =
     {
         .name = _("Blastoisinite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sBlastoisiniteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3570,7 +3598,7 @@ const struct Item gItems[] =
     [ITEM_BEEDRILLITE] =
     {
         .name = _("Beedrillite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sBeedrilliteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3582,7 +3610,7 @@ const struct Item gItems[] =
     [ITEM_PIDGEOTITE] =
     {
         .name = _("Pidgeotite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sPidgeotiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3594,7 +3622,7 @@ const struct Item gItems[] =
     [ITEM_ALAKAZITE] =
     {
         .name = _("Alakazite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sAlakaziteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3606,7 +3634,7 @@ const struct Item gItems[] =
     [ITEM_SLOWBRONITE] =
     {
         .name = _("Slowbronite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sSlowbroniteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3618,7 +3646,7 @@ const struct Item gItems[] =
     [ITEM_GENGARITE] =
     {
         .name = _("Gengarite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sGengariteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3630,7 +3658,7 @@ const struct Item gItems[] =
     [ITEM_KANGASKHANITE] =
     {
         .name = _("Kangaskhanite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sKangaskhaniteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3642,7 +3670,7 @@ const struct Item gItems[] =
     [ITEM_PINSIRITE] =
     {
         .name = _("Pinsirite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sPinsiriteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3654,7 +3682,7 @@ const struct Item gItems[] =
     [ITEM_GYARADOSITE] =
     {
         .name = _("Gyaradosite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sGyaradositeDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3666,7 +3694,7 @@ const struct Item gItems[] =
     [ITEM_AERODACTYLITE] =
     {
         .name = _("Aerodactylite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sAerodactyliteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3702,7 +3730,7 @@ const struct Item gItems[] =
     [ITEM_AMPHAROSITE] =
     {
         .name = _("Ampharosite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sAmpharositeDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3714,7 +3742,7 @@ const struct Item gItems[] =
     [ITEM_STEELIXITE] =
     {
         .name = _("Steelixite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sSteelixiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3726,7 +3754,7 @@ const struct Item gItems[] =
     [ITEM_SCIZORITE] =
     {
         .name = _("Scizorite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sScizoriteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3738,7 +3766,7 @@ const struct Item gItems[] =
     [ITEM_HERACRONITE] =
     {
         .name = _("Heracronite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sHeracroniteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3750,7 +3778,7 @@ const struct Item gItems[] =
     [ITEM_HOUNDOOMINITE] =
     {
         .name = _("Houndoominite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sHoundoominiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3762,7 +3790,7 @@ const struct Item gItems[] =
     [ITEM_TYRANITARITE] =
     {
         .name = _("Tyranitarite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sTyranitariteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3774,7 +3802,7 @@ const struct Item gItems[] =
     [ITEM_SCEPTILITE] =
     {
         .name = _("Sceptilite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sSceptiliteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3786,7 +3814,7 @@ const struct Item gItems[] =
     [ITEM_BLAZIKENITE] =
     {
         .name = _("Blazikenite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sBlazikeniteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3798,7 +3826,7 @@ const struct Item gItems[] =
     [ITEM_SWAMPERTITE] =
     {
         .name = _("Swampertite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sSwampertiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3810,7 +3838,7 @@ const struct Item gItems[] =
     [ITEM_GARDEVOIRITE] =
     {
         .name = _("Gardevoirite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sGardevoiriteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3822,7 +3850,7 @@ const struct Item gItems[] =
     [ITEM_SABLENITE] =
     {
         .name = _("Sablenite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sSableniteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3834,7 +3862,7 @@ const struct Item gItems[] =
     [ITEM_MAWILITE] =
     {
         .name = _("Mawilite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sMawiliteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3846,7 +3874,7 @@ const struct Item gItems[] =
     [ITEM_AGGRONITE] =
     {
         .name = _("Aggronite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sAggroniteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3858,7 +3886,7 @@ const struct Item gItems[] =
     [ITEM_MEDICHAMITE] =
     {
         .name = _("Medichamite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sMedichamiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3870,7 +3898,7 @@ const struct Item gItems[] =
     [ITEM_MANECTITE] =
     {
         .name = _("Manectite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sManectiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3882,7 +3910,7 @@ const struct Item gItems[] =
     [ITEM_SHARPEDONITE] =
     {
         .name = _("Sharpedonite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sSharpedoniteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3894,7 +3922,7 @@ const struct Item gItems[] =
     [ITEM_CAMERUPTITE] =
     {
         .name = _("Cameruptite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sCameruptiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3906,7 +3934,7 @@ const struct Item gItems[] =
     [ITEM_ALTARIANITE] =
     {
         .name = _("Altarianite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sAltarianiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3918,7 +3946,7 @@ const struct Item gItems[] =
     [ITEM_BANETTITE] =
     {
         .name = _("Banettite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sBanettiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3930,7 +3958,7 @@ const struct Item gItems[] =
     [ITEM_ABSOLITE] =
     {
         .name = _("Absolite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sAbsoliteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3942,7 +3970,7 @@ const struct Item gItems[] =
     [ITEM_GLALITITE] =
     {
         .name = _("Glalitite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sGlalititeDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3954,7 +3982,7 @@ const struct Item gItems[] =
     [ITEM_SALAMENCITE] =
     {
         .name = _("Salamencite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sSalamenciteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -3966,7 +3994,7 @@ const struct Item gItems[] =
     [ITEM_METAGROSSITE] =
     {
         .name = _("Metagrossite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sMetagrossiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -4002,7 +4030,7 @@ const struct Item gItems[] =
     [ITEM_LOPUNNITE] =
     {
         .name = _("Lopunnite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sLopunniteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -4014,7 +4042,7 @@ const struct Item gItems[] =
     [ITEM_GARCHOMPITE] =
     {
         .name = _("Garchompite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sGarchompiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -4026,7 +4054,7 @@ const struct Item gItems[] =
     [ITEM_LUCARIONITE] =
     {
         .name = _("Lucarionite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sLucarioniteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -4038,7 +4066,7 @@ const struct Item gItems[] =
     [ITEM_ABOMASITE] =
     {
         .name = _("Abomasite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sAbomasiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -4050,7 +4078,7 @@ const struct Item gItems[] =
     [ITEM_GALLADITE] =
     {
         .name = _("Galladite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sGalladiteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -4062,7 +4090,7 @@ const struct Item gItems[] =
     [ITEM_AUDINITE] =
     {
         .name = _("Audinite"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sAudiniteDesc,
         .pocket = POCKET_MEGA_STONES,
@@ -4324,7 +4352,7 @@ const struct Item gItems[] =
     [ITEM_NORMALIUM_Z] =
     {
         .name = _("Normalium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sNormaliumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4336,7 +4364,7 @@ const struct Item gItems[] =
     [ITEM_FIRIUM_Z] =
     {
         .name = _("Firium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sFiriumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4348,7 +4376,7 @@ const struct Item gItems[] =
     [ITEM_WATERIUM_Z] =
     {
         .name = _("Waterium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sWateriumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4360,7 +4388,7 @@ const struct Item gItems[] =
     [ITEM_ELECTRIUM_Z] =
     {
         .name = _("Electrium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sElectriumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4372,7 +4400,7 @@ const struct Item gItems[] =
     [ITEM_GRASSIUM_Z] =
     {
         .name = _("Grassium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sGrassiumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4384,7 +4412,7 @@ const struct Item gItems[] =
     [ITEM_ICIUM_Z] =
     {
         .name = _("Icium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sIciumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4396,7 +4424,7 @@ const struct Item gItems[] =
     [ITEM_FIGHTINIUM_Z] =
     {
         .name = _("Fightinium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sFightiniumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4408,7 +4436,7 @@ const struct Item gItems[] =
     [ITEM_POISONIUM_Z] =
     {
         .name = _("Poisonium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sPoisoniumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4420,7 +4448,7 @@ const struct Item gItems[] =
     [ITEM_GROUNDIUM_Z] =
     {
         .name = _("Groundium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sGroundiumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4432,7 +4460,7 @@ const struct Item gItems[] =
     [ITEM_FLYINIUM_Z] =
     {
         .name = _("Flyinium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sFlyiniumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4444,7 +4472,7 @@ const struct Item gItems[] =
     [ITEM_PSYCHIUM_Z] =
     {
         .name = _("Psychium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sPsychiumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4456,7 +4484,7 @@ const struct Item gItems[] =
     [ITEM_BUGINIUM_Z] =
     {
         .name = _("Buginium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sBuginiumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4468,7 +4496,7 @@ const struct Item gItems[] =
     [ITEM_ROCKIUM_Z] =
     {
         .name = _("Rockium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sRockiumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4480,7 +4508,7 @@ const struct Item gItems[] =
     [ITEM_GHOSTIUM_Z] =
     {
         .name = _("Ghostium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sGhostiumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4492,7 +4520,7 @@ const struct Item gItems[] =
     [ITEM_DRAGONIUM_Z] =
     {
         .name = _("Dragonium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sDragoniumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4504,7 +4532,7 @@ const struct Item gItems[] =
     [ITEM_DARKINIUM_Z] =
     {
         .name = _("Darkinium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sDarkiniumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4516,7 +4544,7 @@ const struct Item gItems[] =
     [ITEM_STEELIUM_Z] =
     {
         .name = _("Steelium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sSteeliumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4528,7 +4556,7 @@ const struct Item gItems[] =
     [ITEM_FAIRIUM_Z] =
     {
         .name = _("Fairium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sFairiumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4540,7 +4568,7 @@ const struct Item gItems[] =
     [ITEM_PIKANIUM_Z] =
     {
         .name = _("Pikanium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sPikaniumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4552,7 +4580,7 @@ const struct Item gItems[] =
     [ITEM_EEVIUM_Z] =
     {
         .name = _("Eevium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sEeviumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4564,7 +4592,7 @@ const struct Item gItems[] =
     [ITEM_SNORLIUM_Z] =
     {
         .name = _("Snorlium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sSnorliumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4588,7 +4616,7 @@ const struct Item gItems[] =
     [ITEM_DECIDIUM_Z] =
     {
         .name = _("Decidium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sDecidiumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4600,7 +4628,7 @@ const struct Item gItems[] =
     [ITEM_INCINIUM_Z] =
     {
         .name = _("Incinium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sInciniumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4612,7 +4640,7 @@ const struct Item gItems[] =
     [ITEM_PRIMARIUM_Z] =
     {
         .name = _("Primarium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sPrimariumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4624,7 +4652,7 @@ const struct Item gItems[] =
     [ITEM_LYCANIUM_Z] =
     {
         .name = _("Lycanium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sLycaniumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4636,7 +4664,7 @@ const struct Item gItems[] =
     [ITEM_MIMIKIUM_Z] =
     {
         .name = _("Mimikium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sMimikiumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4648,7 +4676,7 @@ const struct Item gItems[] =
     [ITEM_KOMMONIUM_Z] =
     {
         .name = _("Kommonium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sKommoniumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4708,7 +4736,7 @@ const struct Item gItems[] =
     [ITEM_ALORAICHIUM_Z] =
     {
         .name = _("Aloraichium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sAloraichiumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -4720,7 +4748,7 @@ const struct Item gItems[] =
     [ITEM_PIKASHUNIUM_Z] =
     {
         .name = _("Pikashunium Z"),
-        .price = 0,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = sPikashuniumZDesc,
         .pocket = POCKET_Z_CRYSTALS,
@@ -9630,7 +9658,7 @@ const struct Item gItems[] =
     [ITEM_PEAT_BLOCK] =
     {
         .name = _("Peat Block"),
-        .price = 10000,
+        .price = 1000,
         .description = sPeatBlockDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -9649,4 +9677,16 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
     },
+    
+    [ITEM_CHARGED_METEORITE] =
+    {
+        .name = _("ChargedMeteor"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_PRIMAL_ORB,
+        .description = sMeteoriteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
 };

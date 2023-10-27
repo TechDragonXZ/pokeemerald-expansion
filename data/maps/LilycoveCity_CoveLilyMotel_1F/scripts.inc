@@ -75,6 +75,256 @@ LilycoveCity_CoveLilyMotel_1F_Movement_OwnerReturn:
 	face_up
 	step_end
 
+LilycoveCity_CoveLilyMotel_1F_Stone_Guy::
+	lock
+	faceplayer
+	msgbox LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Text_Welcome, MSGBOX_DEFAULT
+	waitmessage
+	msgbox LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Text_Asks_Rings, MSGBOX_YESNO
+	closemessage
+	goto_if_eq VAR_RESULT, 1, LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Checks_Rings
+	goto_if_eq VAR_RESULT, 0, LilycoveCity_CoveLilyMotel_1F_WalkAway
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Checks_Rings::
+	checkitem ITEM_MEGA_RING, 1
+	goto_if_eq VAR_RESULT, TRUE, LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Notice_Mega_Ring
+	goto_if_eq VAR_RESULT, FALSE, LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Check_Z_Ring
+	end
+
+LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Check_Z_Ring::
+	checkitem ITEM_Z_POWER_RING, 1
+	goto_if_eq VAR_RESULT, TRUE, LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Notice_Z_Ring
+	goto_if_eq VAR_RESULT, FALSE, LilycoveCity_CoveLilyMotel_1F_Stone_Guy_No_Rings
+	end
+
+LilycoveCity_CoveLilyMotel_1F_Stone_Guy_No_Rings::
+	lock
+	faceplayer
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_No_Rings, MSGBOX_AUTOCLOSE
+	closemessage
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Notice_Mega_Ring::
+	checkitem ITEM_Z_POWER_RING, 1
+	goto_if_eq VAR_RESULT, TRUE, LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Also_Have_Z_Ring
+	goto_if_ge VAR_MEGASTONE_COUNT, 21, LilycoveCity_CoveLilyMotel_1F_Megastone_Advanced
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_Mega_Ring, MSGBOX_AUTOCLOSE
+	closemessage
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart LilycoveCity_CoveLilyMotel_1F_Megastone_Shop_Basic
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Also_Have_Z_Ring::
+	lock
+	faceplayer
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_Both_Rings, MSGBOX_DEFAULT
+	closemessage
+	multichoice 21, 8, MULTI_MEGA_Z_SHOP, TRUE
+	switch VAR_RESULT
+	case 2, LilycoveCity_CoveLilyMotel_1F_WalkAway
+	case 1, LilycoveCity_CoveLilyMotel_1F_Z_Crystals
+	case 0, LilycoveCity_CoveLilyMotel_1F_Megastones
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_1F_Megastones::
+	goto_if_ge VAR_MEGASTONE_COUNT, 21, LilycoveCity_CoveLilyMotel_1F_Megastone_Advanced
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart LilycoveCity_CoveLilyMotel_1F_Megastone_Shop_Basic
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_1F_Megastone_Advanced::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart LilycoveCity_CoveLilyMotel_1F_Megastone_Shop_Advanced
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_1F_Z_Crystals::
+	goto_if_ge VAR_Z_CRYSTAL_COUNT, 11, LilycoveCity_CoveLilyMotel_1F_Z_Crystals_Advanced
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart LilycoveCity_CoveLilyMotel_1F_Z_Crystal_Shop_Basic
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_1F_Z_Crystals_Advanced::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart LilycoveCity_CoveLilyMotel_1F_Z_Crystal_Shop_Advanced
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_1F_WalkAway::
+	lock
+	faceplayer
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_WalkAway, MSGBOX_AUTOCLOSE
+	closemessage
+	release
+	end
+
+	.align 2
+LilycoveCity_CoveLilyMotel_1F_Megastone_Shop_Basic::
+	.2byte ITEM_ABOMASITE
+	.2byte ITEM_AGGRONITE
+	.2byte ITEM_AMPHAROSITE
+	.2byte ITEM_AUDINITE
+	.2byte ITEM_BEEDRILLITE
+	.2byte ITEM_GARCHOMPITE
+	.2byte ITEM_GARDEVOIRITE
+	.2byte ITEM_GENGARITE
+	.2byte ITEM_HERACRONITE
+	.2byte ITEM_LOPUNNITE
+	.2byte ITEM_LUCARIONITE
+	.2byte ITEM_MAWILITE
+	.2byte ITEM_PIDGEOTITE
+	.2byte ITEM_PINSIRITE
+	.2byte ITEM_SCIZORITE
+	.2byte ITEM_STEELIXITE
+	.2byte ITEM_TYRANITARITE
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+LilycoveCity_CoveLilyMotel_1F_Megastone_Shop_Advanced::
+	.2byte ITEM_ABOMASITE
+	.2byte ITEM_AGGRONITE
+	.2byte ITEM_AMPHAROSITE
+	.2byte ITEM_AUDINITE
+	.2byte ITEM_BEEDRILLITE
+	.2byte ITEM_GARCHOMPITE
+	.2byte ITEM_GARDEVOIRITE
+	.2byte ITEM_GENGARITE
+	.2byte ITEM_HERACRONITE
+	.2byte ITEM_LOPUNNITE
+	.2byte ITEM_LUCARIONITE
+	.2byte ITEM_MAWILITE
+	.2byte ITEM_PIDGEOTITE
+	.2byte ITEM_PINSIRITE
+	.2byte ITEM_SABLENITE
+	.2byte ITEM_SCIZORITE
+	.2byte ITEM_STEELIXITE
+	.2byte ITEM_TYRANITARITE
+	.2byte ITEM_ABSOLITE
+	.2byte ITEM_AERODACTYLITE
+	.2byte ITEM_ALAKAZITE
+	.2byte ITEM_ALTARIANITE
+	.2byte ITEM_BANETTITE
+	.2byte ITEM_BLASTOISINITE
+	.2byte ITEM_BLAZIKENITE
+	.2byte ITEM_CAMERUPTITE
+	.2byte ITEM_CHARIZARDITE_X
+	.2byte ITEM_CHARIZARDITE_Y
+	.2byte ITEM_GALLADITE
+	.2byte ITEM_GLALITITE
+	.2byte ITEM_GYARADOSITE
+	.2byte ITEM_HOUNDOOMINITE
+	.2byte ITEM_KANGASKHANITE
+	.2byte ITEM_MANECTITE
+	.2byte ITEM_MEDICHAMITE
+	.2byte ITEM_METAGROSSITE
+	.2byte ITEM_SALAMENCITE
+	.2byte ITEM_SCEPTILITE
+	.2byte ITEM_SHARPEDONITE
+	.2byte ITEM_SLOWBRONITE
+	.2byte ITEM_SWAMPERTITE
+	.2byte ITEM_VENUSAURITE
+	.2byte ITEM_NONE
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Notice_Z_Ring::
+	msgbox LilycoveCity_CoveLilyMotel_1F_Text_Z_Ring, MSGBOX_AUTOCLOSE
+	closemessage
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart LilycoveCity_CoveLilyMotel_1F_Z_Crystal_Shop_Basic
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LilycoveCity_CoveLilyMotel_1F_Z_Crystal_Shop_Basic::
+	.2byte ITEM_NORMALIUM_Z
+	.2byte ITEM_WATERIUM_Z
+	.2byte ITEM_FIRIUM_Z
+	.2byte ITEM_GRASSIUM_Z
+	.2byte ITEM_ELECTRIUM_Z
+	.2byte ITEM_GROUNDIUM_Z
+	.2byte ITEM_ROCKIUM_Z
+	.2byte ITEM_DARKINIUM_Z
+	.2byte ITEM_BUGINIUM_Z
+	.2byte ITEM_PSYCHIUM_Z
+	.2byte ITEM_GHOSTIUM_Z
+	.2byte ITEM_FIGHTINIUM_Z
+	.2byte ITEM_STEELIUM_Z
+	.2byte ITEM_FAIRIUM_Z
+	.2byte ITEM_POISONIUM_Z
+	.2byte ITEM_DRAGONIUM_Z
+	.2byte ITEM_ICIUM_Z
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+LilycoveCity_CoveLilyMotel_1F_Z_Crystal_Shop_Advanced::
+	.2byte ITEM_NORMALIUM_Z
+	.2byte ITEM_WATERIUM_Z
+	.2byte ITEM_FIRIUM_Z
+	.2byte ITEM_GRASSIUM_Z
+	.2byte ITEM_ELECTRIUM_Z
+	.2byte ITEM_GROUNDIUM_Z
+	.2byte ITEM_ROCKIUM_Z
+	.2byte ITEM_DARKINIUM_Z
+	.2byte ITEM_BUGINIUM_Z
+	.2byte ITEM_PSYCHIUM_Z
+	.2byte ITEM_GHOSTIUM_Z
+	.2byte ITEM_FIGHTINIUM_Z
+	.2byte ITEM_STEELIUM_Z
+	.2byte ITEM_FAIRIUM_Z
+	.2byte ITEM_POISONIUM_Z
+	.2byte ITEM_DRAGONIUM_Z
+	.2byte ITEM_ICIUM_Z
+	.2byte ITEM_ALORAICHIUM_Z
+	.2byte ITEM_DECIDIUM_Z
+	.2byte ITEM_EEVIUM_Z
+	.2byte ITEM_INCINIUM_Z
+	.2byte ITEM_KOMMONIUM_Z
+	.2byte ITEM_LYCANIUM_Z
+	.2byte ITEM_MIMIKIUM_Z
+	.2byte ITEM_PIKANIUM_Z
+	.2byte ITEM_PIKASHUNIUM_Z
+	.2byte ITEM_PRIMARIUM_Z
+	.2byte ITEM_SNORLIUM_Z
+	.2byte ITEM_NONE
+	release
+	end
+
 LilycoveCity_CoveLilyMotel_1F_Text_GuestsDoubledByMascot:
 	.string "Hm, so they doubled the guests by\n"
 	.string "using POKéMON as attractions?\p"
@@ -128,4 +378,25 @@ LilycoveCity_CoveLilyMotel_1F_Text_BetterGetWorkingOnGuestsDinner:
 	.string "so I guess they must make games.\p"
 	.string "Uh-oh, I'd better get working on\n"
 	.string "their dinner!$"
+
+LilycoveCity_CoveLilyMotel_1F_Text_WalkAway::
+	.string "You walked away.$"
+
+LilycoveCity_CoveLilyMotel_1F_Text_No_Rings::
+	.string "You don't have any special rings.$"
+
+LilycoveCity_CoveLilyMotel_1F_Text_Mega_Ring::
+	.string "You do have a MEGA RING!$"
+
+LilycoveCity_CoveLilyMotel_1F_Text_Z_Ring::
+	.string "You do have a Z POWER RING!$"
+
+LilycoveCity_CoveLilyMotel_1F_Text_Both_Rings::
+	.string "You have both a MEGA RING and\na Z POWER RING!\pWhich set do you want to buy from?$"
+
+LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Text_Welcome::
+	.string "Greetings, I run a little shop where I\nsell special stones and crystals.$"
+
+LilycoveCity_CoveLilyMotel_1F_Stone_Guy_Text_Asks_Rings::
+	.string "You wouldn't happen to have\nany special rings, would ya?$"
 

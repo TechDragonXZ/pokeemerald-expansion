@@ -10440,8 +10440,8 @@ static const struct TrainerMon sParty_Norman4[] = {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 50,
     .species = SPECIES_SNORLAX,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_BODY_SLAM, MOVE_SNORE, MOVE_REST, MOVE_SLEEP_TALK}
+    .heldItem = ITEM_SNORLIUM_Z,
+    .moves = {MOVE_GIGA_IMPACT, MOVE_SNORE, MOVE_REST, MOVE_SLEEP_TALK}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -10485,8 +10485,8 @@ static const struct TrainerMon sParty_Norman5[] = {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 55,
     .species = SPECIES_SNORLAX,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_BODY_SLAM, MOVE_SNORE, MOVE_SLEEP_TALK, MOVE_REST}
+    .heldItem = ITEM_SNORLIUM_Z,
+    .moves = {MOVE_GIGA_IMPACT, MOVE_SNORE, MOVE_SLEEP_TALK, MOVE_REST}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -10695,9 +10695,9 @@ static const struct TrainerMon sParty_TateAndLiza2[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 48,
-    .species = SPECIES_SLOWBRO,
+    .species = SPECIES_ALAKAZAM,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_YAWN, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_PROTECT}
+    .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_PROTECT}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -10740,9 +10740,9 @@ static const struct TrainerMon sParty_TateAndLiza3[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 53,
-    .species = SPECIES_SLOWBRO,
+    .species = SPECIES_ALAKAZAM,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_YAWN, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_PROTECT}
+    .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_PROTECT}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -10820,9 +10820,9 @@ static const struct TrainerMon sParty_TateAndLiza4[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 60,
-    .species = SPECIES_SLOWBRO,
-    .heldItem = ITEM_SLOWBRONITE,
-    .moves = {MOVE_YAWN, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_SCALD}
+    .species = SPECIES_ALAKAZAM,
+    .heldItem = ITEM_ALAKAZITE,
+    .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_HIDDEN_POWER}
     }
 };
 
@@ -10872,9 +10872,9 @@ static const struct TrainerMon sParty_TateAndLiza5[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 65,
-    .species = SPECIES_SLOWBRO,
-    .heldItem = ITEM_SLOWBRONITE,
-    .moves = {MOVE_YAWN, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_SCALD}
+    .species = SPECIES_ALAKAZAM,
+    .heldItem = ITEM_ALAKAZITE,
+    .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_HIDDEN_POWER}
     }
 };
 
@@ -11138,6 +11138,7 @@ static const struct TrainerMon sParty_Steven[] = {
     .lvl = 78,
     .species = SPECIES_METAGROSS,
     .heldItem = ITEM_METAGROSSITE,
+    .ball = ITEM_LUXURY_BALL,
     .moves = {MOVE_EARTHQUAKE, MOVE_PSYCHIC, MOVE_METEOR_MASH, MOVE_SHADOW_BALL}
     }
 };
@@ -11922,11 +11923,11 @@ static const struct TrainerMon sParty_MayLinkPlaceholder[] = {
     }
 };
 
-static const struct TrainerMon sParty_Bond[] = {
+static const struct TrainerMon sParty_Bond1[] = {
     {
     .species = SPECIES_DITTO,
     .ability = ABILITY_IMPOSTER,
-    .lvl = 20,
+    .lvl = 15,
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .nature = NATURE_DOCILE,
     .heldItem = ITEM_QUICK_POWDER,
@@ -11938,7 +11939,7 @@ static const struct TrainerMon sParty_Bond[] = {
     {
     .species = SPECIES_PIKACHU_PARTNER,
     .ability = ABILITY_MOTOR_DRIVE,
-    .lvl = 20,
+    .lvl = 15,
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .nature = NATURE_HASTY,
     .heldItem = ITEM_LIGHT_BALL,
@@ -11949,12 +11950,64 @@ static const struct TrainerMon sParty_Bond[] = {
     {
     .species = SPECIES_EEVEE_PARTNER,
     .ability = ABILITY_SCRAPPY,
-    .lvl = 20,
+    .lvl = 15,
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .nature = NATURE_ADAMANT,
     .heldItem = ITEM_SILK_SCARF,
     .friendship = 70,
     .moves = {MOVE_GLITZY_GLOW, MOVE_VEEVEE_VOLLEY, MOVE_BOUNCY_BUBBLE, MOVE_CALM_MIND},
+    .ball = BALL_PREMIER,
+    }
+};
+
+static const struct TrainerMon sParty_Bond2_Pikachu[] = {
+    {
+    .species = SPECIES_DITTO,
+    .ability = ABILITY_IMPOSTER,
+    .lvl = 30,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .nature = NATURE_DOCILE,
+    .heldItem = ITEM_QUICK_POWDER,
+    .friendship = 255,
+    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .ball = BALL_LUXURY,
+    .isShiny = TRUE,
+    },
+    {
+    .species = SPECIES_PIKACHU_PARTNER,
+    .ability = ABILITY_MOTOR_DRIVE,
+    .lvl = 30,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .nature = NATURE_HASTY,
+    .heldItem = ITEM_PIKASHUNIUM_Z,
+    .friendship = 255,
+    .moves = {MOVE_THUNDERBOLT, MOVE_PIKA_PAPOW, MOVE_FLOATY_FALL, MOVE_NASTY_PLOT},
+    .ball = BALL_PREMIER,
+    }
+};
+
+static const struct TrainerMon sParty_Bond2_Eevee[] = {
+    {
+    .species = SPECIES_DITTO,
+    .ability = ABILITY_IMPOSTER,
+    .lvl = 30,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .nature = NATURE_DOCILE,
+    .heldItem = ITEM_QUICK_POWDER,
+    .friendship = 255,
+    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .ball = BALL_LUXURY,
+    .isShiny = TRUE,
+    },
+    {
+    .species = SPECIES_EEVEE_PARTNER,
+    .ability = ABILITY_SCRAPPY,
+    .lvl = 30,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .nature = NATURE_ADAMANT,
+    .heldItem = ITEM_EEVIUM_Z,
+    .friendship = 255,
+    .moves = {MOVE_LAST_RESORT, MOVE_VEEVEE_VOLLEY, MOVE_BOUNCY_BUBBLE, MOVE_CALM_MIND},
     .ball = BALL_PREMIER,
     }
 };

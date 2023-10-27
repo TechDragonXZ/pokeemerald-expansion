@@ -909,6 +909,35 @@ static const struct MenuAction MultichoiceList_Galar_Starters[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_Partner_Eevee_Moves[] =
+{
+    {gText_Baddy_Bad},
+    {gText_Bouncy_Bubble},
+    {gText_Buzzy_Buzz},
+    {gText_Freezy_Frost},
+    {gText_Glitzy_Glow},
+    {gText_Sappy_Seed},
+    {gText_Sizzly_Slide},
+    {gText_Veevee_Volley},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Partner_Pikachu_Moves[] =
+{
+    {gText_Floaty_Fall},
+    {gText_Pika_Papow},
+    {gText_Splishy_Splash},
+    {gText_Zippy_Zap},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Megastones_Z_Crystals[] =
+{
+    {gText_MegaStones},
+    {gText_ZCrystals},
+    {gText_Exit},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -1046,6 +1075,9 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_KALOS_STARTERS]             = MULTICHOICE(MultichoiceList_Kalos_Starters),
     [MULTI_ALOLA_STARTERS]             = MULTICHOICE(MultichoiceList_Alola_Starters),
     [MULTI_GALAR_STARTERS]             = MULTICHOICE(MultichoiceList_Galar_Starters),
+    [MULTI_PARTNER_EEVEE_MOVES]        = MULTICHOICE(MultichoiceList_Partner_Eevee_Moves),
+    [MULTI_PARTNER_PIKACHU_MOVES]      = MULTICHOICE(MultichoiceList_Partner_Pikachu_Moves),
+    [MULTI_MEGA_Z_SHOP]                = MULTICHOICE(MultichoiceList_Megastones_Z_Crystals),
 };
 
 const u8 *const gStdStrings[] =

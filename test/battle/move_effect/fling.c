@@ -212,6 +212,7 @@ SINGLE_BATTLE_TEST("Fling applies special effects when throwing specific Items")
     PARAMETRIZE {item = ITEM_LIGHT_BALL; effect = EFFECT_PARALYZE; }
     PARAMETRIZE {item = ITEM_RAZOR_FANG; effect = EFFECT_FLINCH_HIT; }
     PARAMETRIZE {item = ITEM_KINGS_ROCK; effect = EFFECT_FLINCH_HIT; }
+    PARAMETRIZE {item = ITEM_SNOWBALL; effect = EFFECT_FROSTBITE_HIT; }
 
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Item(item); }

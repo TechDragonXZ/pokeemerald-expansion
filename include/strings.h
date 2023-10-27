@@ -3042,6 +3042,7 @@ extern const u8 gText_BoxName[];
 extern const u8 gText_PkmnsNickname[];
 extern const u8 gText_TellHimTheWords[];
 
+// Rotom Forms
 extern const u8 gText_MicrowaveOven[];
 extern const u8 gText_WashingMachine[];
 extern const u8 gText_Refrigerator[];
@@ -3049,6 +3050,7 @@ extern const u8 gText_ElectricFan[];
 extern const u8 gText_Lawnmower[];
 extern const u8 gText_Recall[];
 
+// Strange Space
 extern const u8 gText_Group1[];
 extern const u8 gText_Group2[];
 extern const u8 gText_Group3[];
@@ -3057,6 +3059,7 @@ extern const u8 gText_Group5[];
 extern const u8 gText_Group6[];
 extern const u8 gText_Leave[];
 
+// Fossils
 extern const u8 gText_HelixFossil[];
 extern const u8 gText_DomeFossil[];
 extern const u8 gText_OldAmber[];
@@ -3074,26 +3077,32 @@ extern const u8 gText_FossilizedFish[];
 extern const u8 gText_Next[];
 extern const u8 gText_Back[];
 
+// Kanto Starters
 extern const u8 gText_Bulbasaur[];
 extern const u8 gText_Charmander[];
 extern const u8 gText_Squirtle[];
 
+// Sinnoh Starters
 extern const u8 gText_Turtwig[];
 extern const u8 gText_Chimchar[];
 extern const u8 gText_Piplup[];
 
+// Unova Starters
 extern const u8 gText_Snivy[];
 extern const u8 gText_Tepig[];
 extern const u8 gText_Oshawott[];
 
+// Kalos Starters
 extern const u8 gText_Chespin[];
 extern const u8 gText_Fennekin[];
 extern const u8 gText_Froakie[];
 
+// Alola Starters
 extern const u8 gText_Rowlet[];
 extern const u8 gText_Litten[];
 extern const u8 gText_Popplio[];
 
+// Galar Starters
 extern const u8 gText_Grookey[];
 extern const u8 gText_Scorbunny[];
 extern const u8 gText_Sobble[];
@@ -3102,10 +3111,29 @@ extern const u8 gText_Sobble[];
 extern const u8 gText_ExpShareOn[];
 extern const u8 gText_ExpShareOff[];
 
+// Party Screen Sub-menu
 extern const u8 gText_Moves_Menu[];
 extern const u8 gText_Nickname[];
 
+// Pokenav Condition Sub-menu
 extern const u8 gText_Pokenav_Access_PC[];
 extern const u8 gText_Pokenav_Cannot_Access_PC[];
+
+// Partner Eevee Moves
+extern const u8 gText_Bouncy_Bubble[];
+extern const u8 gText_Buzzy_Buzz[];
+extern const u8 gText_Sizzly_Slide[];
+extern const u8 gText_Glitzy_Glow[];
+extern const u8 gText_Baddy_Bad[];
+extern const u8 gText_Sappy_Seed[];
+extern const u8 gText_Freezy_Frost[];
+extern const u8 gText_Sparkly_Swirl[];
+extern const u8 gText_Veevee_Volley[];
+
+// Partner Pikachu Moves
+extern const u8 gText_Floaty_Fall[];
+extern const u8 gText_Splishy_Splash[];
+extern const u8 gText_Zippy_Zap[];
+extern const u8 gText_Pika_Papow[];
 
 #endif // GUARD_STRINGS_H

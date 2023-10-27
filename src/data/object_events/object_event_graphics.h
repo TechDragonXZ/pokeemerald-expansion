@@ -377,6 +377,5 @@ const u32 gObjectEventPic_HoOh[] = INCBIN_U32("graphics/object_events/pics/pokem
 const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/ho_oh.gbapal");
 
 const u32 gObjectEventPic_TMBall[] = INCBIN_U32("graphics/object_events/pics/misc/tm_ball.4bpp");
-const u32 gObjectEventPic_Megastone[] = INCBIN_U32("graphics/object_events/pics/misc/megastone.4bpp");
-const u32 gObjectEventPic_Megastone_Alt[] = INCBIN_U32("graphics/object_events/pics/misc/megastone_alt.4bpp");
+const u32 gObjectEventPic_Special_Item_Sparkle[] = INCBIN_U32("graphics/object_events/pics/misc/special_item_sparkle.4bpp");
 const u32 gObjectEventPic_StrangePillar[] = INCBIN_U32("graphics/object_events/pics/misc/strange_pillar.4bpp");

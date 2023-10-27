@@ -137,6 +137,9 @@
 #define MULTI_KALOS_STARTERS               126
 #define MULTI_ALOLA_STARTERS               127
 #define MULTI_GALAR_STARTERS               128
+#define MULTI_PARTNER_EEVEE_MOVES          129
+#define MULTI_PARTNER_PIKACHU_MOVES        130
+#define MULTI_MEGA_Z_SHOP                  131
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

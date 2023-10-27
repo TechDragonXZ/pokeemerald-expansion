@@ -70,7 +70,7 @@
     {
       "type": "trigger",
       "x": 10,
-      "y": 20,
+      "y": 21,
       "elevation": 3,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",

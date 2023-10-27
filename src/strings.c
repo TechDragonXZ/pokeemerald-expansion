@@ -1919,3 +1919,20 @@ const u8 gText_Nickname[] = _("NICKNAME");
 
 const u8 gText_Pokenav_Access_PC[] = _("Access your PC.");
 const u8 gText_Pokenav_Cannot_Access_PC[] = _("Can't access PC. Go outside.");
+
+// Partner Eevee
+const u8 gText_Bouncy_Bubble[] = _("Bouncy Bubble");
+const u8 gText_Buzzy_Buzz[] = _("Buzzy Buzz");
+const u8 gText_Sizzly_Slide[] = _("Sizzly Slide");
+const u8 gText_Glitzy_Glow[] = _("Glitzy Glow");
+const u8 gText_Baddy_Bad[] = _("Baddy Bad");
+const u8 gText_Sappy_Seed[] = _("Sappy Seed");
+const u8 gText_Freezy_Frost[] = _("Freezy Frost");
+const u8 gText_Sparkly_Swirl[] = _("Sparkly Swirl");
+const u8 gText_Veevee_Volley[] = _("Veevee Volley");
+
+// Partner Pikachu
+const u8 gText_Splishy_Splash[] = _("Splishy Splash");
+const u8 gText_Floaty_Fall[] = _("Floaty Fall");
+const u8 gText_Pika_Papow[] = _("Pika Papow");
+const u8 gText_Zippy_Zap[] = _("Zippy Zap");

@@ -26,15 +26,17 @@ BondLab_NoRotomPC::
 	end
 
 BondLab_Scientist_Bond::
-	call_if_unset FLAG_BOND_DEFEATED, BondLab_Scientist_Bond_Battle
-	call_if_set FLAG_BOND_DEFEATED, BondLab_Scientist_Bond_PostBattle
+	call_if_unset FLAG_BOND_DEFEATED_INITAL, BondLab_Scientist_Bond_Battle
+	call_if_set FLAG_BOND_DEFEATED_INITAL, BondLab_Scientist_Bond_PostBattle
+	call_if_set FLAG_BOND_DEFEATED_EEVEE, BondLab_Scientist_Bond_PostGift2
+	call_if_set FLAG_BOND_DEFEATED_PIKACHU, BondLab_Scientist_Bond_PostGift2
 	end
 
 BondLab_Scientist_Bond_Battle::
 	lock
 	faceplayer
-	trainerbattle_single TRAINER_BOND, BondLab_Text_BondIntro, BondLab_Text_BondDefeated
-	setflag FLAG_BOND_DEFEATED
+	trainerbattle_single TRAINER_BOND_1, BondLab_Text_BondIntro, BondLab_Text_BondDefeated
+	setflag FLAG_BOND_DEFEATED_INITAL
 	msgbox BondLab_Text_BondPostBattle, MSGBOX_AUTOCLOSE
 	closemessage
 	release
@@ -71,12 +73,9 @@ BondLab_TablePokeball_Eevee_Choice::
 	playmoncry SPECIES_EEVEE CRY_MODE_NORMAL
 	delay 50
 	hidemonpic
-	msgbox BondLab_Text_PartnerEevee, MSGBOX_DEFAULT
-	closemessage
-	multichoice 21, 8, MULTI_YESNO, TRUE
-	switch VAR_RESULT
-	case 1, BondLab_WalkAway
-	case 0, BondLab_Select_Eevee
+	msgbox BondLab_Text_PartnerEevee, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, BondLab_Select_Eevee
+	goto_if_eq VAR_RESULT, NO, BondLab_WalkAway
 	end
 
 BondLab_TablePokeball_Pikachu_Choice::
@@ -84,12 +83,9 @@ BondLab_TablePokeball_Pikachu_Choice::
 	playmoncry SPECIES_PIKACHU CRY_MODE_NORMAL
 	delay 50
 	hidemonpic
-	msgbox BondLab_Text_PartnerPikachu, MSGBOX_DEFAULT
-	closemessage
-	multichoice 21, 8, MULTI_YESNO, TRUE
-	switch VAR_RESULT
-	case 1, BondLab_WalkAway
-	case 0, BondLab_Select_Pikachu
+	msgbox BondLab_Text_PartnerPikachu, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, BondLab_Select_Pikachu
+	goto_if_eq VAR_RESULT, NO, BondLab_WalkAway
 	end
 
 BondLab_Select_Pikachu::
@@ -129,8 +125,366 @@ BondLab_Scientist_Bond_PostGift::
 	faceplayer
 	msgbox BondLab_Text_BondPostGift, MSGBOX_AUTOCLOSE
 	closemessage
+	goto_if_set FLAG_BADGE06_GET, BondLab_Scientist_Check_For_Partner
+	goto_if_unset FLAG_BADGE06_GET, BondLab_Scientist_Teach_Partner
 	release
 	end
+
+BondLab_Scientist_Bond_PostGift2::
+	lock
+	faceplayer
+	goto BondLab_Scientist_Teach_Partner
+	release
+	end
+
+BondLab_Scientist_Teach_Partner::
+	lock
+	faceplayer
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, BondLab_Scientist_Bond_NoPartner
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_EEVEE_PARTNER, BondLab_Scientist_Bond_TeachPartnerEevee
+	goto_if_eq VAR_RESULT, SPECIES_PIKACHU_PARTNER, BondLab_Scientist_Bond_TeachPartnerPikachu
+	release
+	end
+
+BondLab_Scientist_Check_For_Partner_Short::
+	lock
+	faceplayer
+	msgbox BondLab_Text_PartnerFront, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_Set_Partner_Front
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, BondLab_Scientist_Bond_NoPartner
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_EEVEE_PARTNER, BondLab_Scientist_Bond_CheckPartnerEevee
+	goto_if_eq VAR_RESULT, SPECIES_PIKACHU_PARTNER, BondLab_Scientist_Bond_CheckPartnerPikachu
+	release
+	end
+
+BondLab_Scientist_Check_For_Partner::
+	lock
+	faceplayer
+	msgbox BondLab_Text_CheckFriendship, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Teach_Partner
+	msgbox BondLab_Text_PartnerFront, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_Set_Partner_Front
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, BondLab_Scientist_Bond_NoPartner
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_EEVEE_PARTNER, BondLab_Scientist_Bond_CheckPartnerEevee
+	goto_if_eq VAR_RESULT, SPECIES_PIKACHU_PARTNER, BondLab_Scientist_Bond_CheckPartnerPikachu
+	release
+	end
+
+BondLab_Scientist_Bond_CheckPartnerEevee::
+	lock
+	faceplayer
+	bufferspeciesname STR_VAR_2, SPECIES_EEVEE_PARTNER
+	specialvar VAR_RESULT, GetLeadMonFriendshipScore
+	goto_if_le VAR_RESULT, FRIENDSHIP_100_TO_149, BondLab_Scientist_Bond_ComeBackLater
+	goto_if_ge VAR_RESULT, FRIENDSHIP_150_TO_199, BondLab_Scientist_Bond_BattlePartnerEevee
+	release
+	end
+
+BondLab_Scientist_Bond_BattlePartnerEevee::
+	lock
+	faceplayer
+	trainerbattle_single TRAINER_BOND_2_PIKACHU, BondLab_Text_BondIntro2, BondLab_Text_BondDefeated2
+	setflag FLAG_BOND_DEFEATED_EEVEE
+	msgbox BondLab_Text_BondPostBattle2, MSGBOX_AUTOCLOSE
+	closemessage
+	giveitem ITEM_Z_POWER_RING, 1
+	giveitem ITEM_EEVIUM_Z, 1
+	setflag FLAG_GOT_Z_RING
+	setflag FLAG_RECIEVED_EEVIUM_Z
+	release
+	end
+
+BondLab_Scientist_Bond_CheckPartnerPikachu::
+	lock
+	faceplayer
+	bufferspeciesname STR_VAR_2, SPECIES_PIKACHU_PARTNER
+	specialvar VAR_RESULT, GetLeadMonFriendshipScore
+	goto_if_le VAR_RESULT, FRIENDSHIP_100_TO_149, BondLab_Scientist_Bond_ComeBackLater
+	goto_if_ge VAR_RESULT, FRIENDSHIP_150_TO_199, BondLab_Scientist_Bond_BattlePartnerPikachu
+	release
+	end
+
+BondLab_Scientist_Bond_BattlePartnerPikachu::
+	lock
+	faceplayer
+	trainerbattle_single TRAINER_BOND_2_EEVEE, BondLab_Text_BondIntro2, BondLab_Text_BondDefeated2
+	setflag FLAG_BOND_DEFEATED_PIKACHU
+	msgbox BondLab_Text_BondPostBattle2, MSGBOX_AUTOCLOSE
+	closemessage
+	giveitem ITEM_Z_POWER_RING, 1
+	giveitem ITEM_PIKASHUNIUM_Z, 1
+	setflag FLAG_GOT_Z_RING
+	setflag FLAG_RECIEVED_PIKASHUNIUM_Z
+	release
+	end
+
+BondLab_Scientist_Bond_Set_Partner_Front::
+	lock
+	faceplayer
+	msgbox BondLab_Text_SetPartnerFront, MSGBOX_AUTOCLOSE
+	closemessage
+	release
+	end
+
+BondLab_Scientist_Bond_ComeBackLater::
+	lock
+	faceplayer
+	msgbox BondLab_Text_ComeBackLater, MSGBOX_AUTOCLOSE
+	closemessage
+	release
+	end
+
+BondLab_Scientist_Bond_NoPartner::
+	lock
+	faceplayer
+	msgbox BondLab_Text_NoPartner, MSGBOX_AUTOCLOSE
+	closemessage
+	release
+	end
+
+BondLab_Scientist_Bond_TeachPartnerEevee::
+	lock
+	faceplayer
+	bufferspeciesname STR_VAR_2, SPECIES_EEVEE_PARTNER
+	msgbox BondLab_Text_TeachPartner, MSGBOX_DEFAULT
+	closemessage
+	multichoice 21, 0, MULTI_PARTNER_EEVEE_MOVES, TRUE
+	switch VAR_RESULT
+	case 0, BondLab_Scientist_Bond_Baddy_Bad
+	case 1, BondLab_Scientist_Bond_Bouncy_Bubble
+	case 2, BondLab_Scientist_Bond_Buzzy_Buzz
+	case 3, BondLab_Scientist_Bond_Freezy_Frost
+	case 4, BondLab_Scientist_Bond_Glitzy_Glow
+	case 5, BondLab_Scientist_Bond_Sappy_Seed
+	case 6, BondLab_Scientist_Bond_Sizzly_Slide
+	case 7, BondLab_Scientist_Bond_Veevee_Volley
+	case 8, BondLab_Scientist_Bond_TeachingDeclined
+	release
+	end
+
+BondLab_Scientist_Bond_Baddy_Bad::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_BADDY_BAD
+	bufferspeciesname STR_VAR_2, SPECIES_EEVEE_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_BADDY_BAD
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_Bouncy_Bubble::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_BOUNCY_BUBBLE
+	bufferspeciesname STR_VAR_2, SPECIES_EEVEE_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_BOUNCY_BUBBLE
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_Buzzy_Buzz::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_BUZZY_BUZZ
+	bufferspeciesname STR_VAR_2, SPECIES_EEVEE_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_BUZZY_BUZZ
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_Freezy_Frost::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_FREEZY_FROST
+	bufferspeciesname STR_VAR_2, SPECIES_EEVEE_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_FREEZY_FROST
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_Glitzy_Glow::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_GLITZY_GLOW
+	bufferspeciesname STR_VAR_2, SPECIES_EEVEE_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_GLITZY_GLOW
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_Sappy_Seed::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_SAPPY_SEED
+	bufferspeciesname STR_VAR_2, SPECIES_EEVEE_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_SAPPY_SEED
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_Sizzly_Slide::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_SIZZLY_SLIDE
+	bufferspeciesname STR_VAR_2, SPECIES_EEVEE_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_SIZZLY_SLIDE
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_Veevee_Volley::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_VEEVEE_VOLLEY
+	bufferspeciesname STR_VAR_2, SPECIES_EEVEE_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_VEEVEE_VOLLEY
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_TeachPartnerPikachu::
+	lock
+	faceplayer
+	bufferspeciesname STR_VAR_2, SPECIES_PIKACHU_PARTNER
+	msgbox BondLab_Text_TeachPartner, MSGBOX_DEFAULT
+	closemessage
+	multichoice 21, 0, MULTI_PARTNER_PIKACHU_MOVES, TRUE
+	switch VAR_RESULT
+	case 0, BondLab_Scientist_Bond_Floaty_Fall
+	case 1, BondLab_Scientist_Bond_Pika_Papow
+	case 2, BondLab_Scientist_Bond_Splishy_Splash
+	case 3, BondLab_Scientist_Bond_Zippy_Zap
+	case 4, BondLab_Scientist_Bond_TeachingDeclined
+	release
+	end
+
+BondLab_Scientist_Bond_Floaty_Fall::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_FLOATY_FALL
+	bufferspeciesname STR_VAR_2, SPECIES_PIKACHU_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_FLOATY_FALL
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_Pika_Papow::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_PIKA_PAPOW
+	bufferspeciesname STR_VAR_2, SPECIES_PIKACHU_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_PIKA_PAPOW
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_Splishy_Splash::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_SPLISHY_SPLASH
+	bufferspeciesname STR_VAR_2, SPECIES_PIKACHU_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_SPLISHY_SPLASH
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_Zippy_Zap::
+	lock
+	faceplayer
+	buffermovename STR_VAR_1, MOVE_ZIPPY_ZAP
+	bufferspeciesname STR_VAR_2, SPECIES_PIKACHU_PARTNER
+	msgbox BondLab_Text_MoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BondLab_Scientist_Bond_MoveDeclined
+	msgbox BondLab_Text_WhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_ZIPPY_ZAP
+	call BondLab_Scientist_Bond_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, BondLab_Scientist_Bond_MoveDeclined
+	goto BondLab_Scientist_Bond_MoveTaught
+	end
+
+BondLab_Scientist_Bond_MoveTaught::
+	lock
+	faceplayer
+	msgbox BondLab_Text_MoveTaught, MSGBOX_AUTOCLOSE
+	closemessage
+	release
+	end
+
+BondLab_Scientist_Bond_MoveDeclined::
+	lock
+	faceplayer
+	msgbox BondLab_Text_MoveDeclined, MSGBOX_AUTOCLOSE
+	closemessage
+	release
+	end
+
+BondLab_Scientist_Bond_TeachingDeclined::
+	lock
+	faceplayer
+	msgbox BondLab_Text_TeachingDeclined, MSGBOX_AUTOCLOSE
+	closemessage
+	release
+	end
+
+BondLab_Scientist_Bond_OpenPartyMenu::
+	special ChooseMonForMoveTutor
+	waitstate
+	lock
+	faceplayer
+	return
 
 BondLab_Scientist1::
 	lock
@@ -276,12 +630,28 @@ BondLab_Text_BondDefeated::
 
 BondLab_Text_BondPostBattle::
 	.string "I recently discovered this strange\n"
-	.string "place deeper in the woods, with my two\p"
+	.string "place below the lake here, with my two\p"
 	.string "partners here. After funding this small\n"
 	.string "group of scientists, we started our\p"
 	.string "research on the connections between,\n"
 	.string "people, Pokémon, locations,\p"
 	.string "and the evolution of Pokémon.$"
+
+BondLab_Text_BondIntro2::
+	.string "Watch and learn! I'm going to really\n"
+	.string "show you the power of our bonds!$"
+
+BondLab_Text_BondDefeated2::
+	.string "Wow... I guess the power of your bonds\n"
+	.string "are really strong.$"
+
+BondLab_Text_BondPostBattle2::
+	.string "I recently received these from a friend\n"
+	.string "who visited the Alola region, they are\p"
+	.string "called Z-CRYSTALS. As a reward for\n"
+	.string "helping our research, I want you to\p"
+	.string "have this Z POWER RING and this\n"
+	.string "Z-CRYSTAL for your PARTNER Pokémon.$"
 
 BondLab_Text_BondGift::
 	.string "Ah, speaking of bonds.\n"
@@ -289,6 +659,40 @@ BondLab_Text_BondGift::
 	.string "Over on the table you can pick one.$"
 
 BondLab_Text_BondPostGift::
-	.string "If you have your PARTNER with you.\n"
-	.string "I can teach it some new moves.$"
+	.string "If you have your PARTNER Pokémon with\nyou. I can teach it some new moves.$"
 
+BondLab_Text_NoPartner::
+	.string "You don't have your PARTNER Pokémon\nwith you?$"
+
+BondLab_Text_TeachPartner::
+	.string "Which move do you want to\nteach your PARTNER {STR_VAR_2}?$"
+
+BondLab_Text_MoveTeach::
+	.string "Do you want to teach your\nPARTNER {STR_VAR_2} {STR_VAR_1}?$"
+
+BondLab_Text_MoveKnown::
+	.string "Your PARTNER {STR_VAR_2} already\nknows {STR_VAR_1}!$"
+
+BondLab_Text_MoveTaught::
+	.string "Your PARTNER Pokémon\nhas learned {STR_VAR_2}!$"
+
+BondLab_Text_MoveDeclined::
+	.string "You declined to teaching your\nPARTNER {STR_VAR_2} {STR_VAR_1}.$"
+
+BondLab_Text_WhichMon::
+	.string "Show me which Pokémon I should teach.$"
+
+BondLab_Text_TeachingDeclined::
+	.string "You declined to teaching your\nPARTNER {STR_VAR_2} a new move.$"
+
+BondLab_Text_CheckFriendship::
+	.string "Or do you want to check your PARTNER\nPokémon friendship levels?$"
+
+BondLab_Text_PartnerFront::
+	.string "Do you have your PARTNER Pokémon at\nthe front of your party?$"
+
+BondLab_Text_SetPartnerFront::
+	.string "Please have your PARTNER Pokémon at\nthe front of your party.$"
+
+BondLab_Text_ComeBackLater::
+	.string "You and your PARTNER {STR_VAR_2}\nfriendship level isn't high enough.$"

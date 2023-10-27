@@ -10880,5 +10880,30 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 296,
         .trainerOffset = 1,
     },
+    
+    [NATIONAL_DEX_PIKACHU_PARTNER] =
+    {
+        .categoryName = _("Mouse"),
+        .height = 4,
+        .weight = 60,
+        .description = gPikachuPartnerPokedexText,
+        .pokemonScale = 479,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_EEVEE_PARTNER] =
+    {
+        .categoryName = _("Evolution"),
+        .height = 3,
+        .weight = 65,
+        .description = gEeveePartnerPokedexText,
+        .pokemonScale = 476,
+        .pokemonOffset = 18,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
 #endif
 };

@@ -5398,4 +5398,17 @@ const u8 gEnamorusPokedexText[] = _(
     "winter. According to legend, this\n"
     "Pokémon's love gives rise to the\n"
     "budding of fresh life across the land.");
+    
+const u8 gEeveePartnerPokedexText[] = _(
+    "An Eevee has an unstable genetic makeup\n"
+    "that suddenly mutates due to its\n"
+    "environment. Radiation from various\n"
+    "Stones causes this Pokémon to evolve.");
+
+const u8 gPikachuPartnerPokedexText[] = _(
+    "It stores electricity in the electric sacs\n"
+    "on its cheeks. When it releases pent-up\n"
+    "energy in a burst, the electric power is\n"
+    "equal to a lightning bolt.");
+
 #endif

@@ -250,16 +250,19 @@ Route120_EventScript_StevenGiveDeconScope::
 
 Route120_EventScript_Treecko::
 	giveitem ITEM_SCEPTILITE
+	setflag FLAG_GIVEN_SCEPTILITE
 	return
 	end
 
 Route120_EventScript_Torchic::
 	giveitem ITEM_BLAZIKENITE
+	setflag FLAG_GIVEN_BLAZIKENITE
 	return
 	end
 
 Route120_EventScript_Mudkip::
 	giveitem ITEM_SWAMPERTITE
+	setflag FLAG_GIVEN_SWAMPERTITE
 	return
 	end
 

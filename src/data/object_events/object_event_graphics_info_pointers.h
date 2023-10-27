@@ -246,9 +246,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvi
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan2;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TMBall;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Megastone;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Megastone_Alt;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Megastone_Alt2;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Special_Item_Sparkle;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Strange_Pillar;
 
 
@@ -494,8 +492,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
     
     [OBJ_EVENT_GFX_TM_BALL] =                  &gObjectEventGraphicsInfo_TMBall,
-    [OBJ_EVENT_GFX_MEGASTONE] =                &gObjectEventGraphicsInfo_Megastone,
-    [OBJ_EVENT_GFX_MEGASTONE_ALT] =            &gObjectEventGraphicsInfo_Megastone_Alt,
+    [OBJ_EVENT_GFX_SPECIAL_ITEM_SPARKLE] =     &gObjectEventGraphicsInfo_Special_Item_Sparkle,
     [OBJ_EVENT_GFX_STRANGE_PILLAR] =           &gObjectEventGraphicsInfo_Strange_Pillar,
 };
 

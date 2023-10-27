@@ -106,10 +106,12 @@ SouthernIsland_Interior_EventScript_Sign::
 
 SouthernIsland_Interior_EventScript_SetLatiosBattleVars::
 	seteventmon SPECIES_LATIOS, 50, ITEM_SOUL_DEW
+	settotemboost B_POSITION_OPPONENT_LEFT, 0, 0, 0, 2, 2, 0, 0
 	return
 
 SouthernIsland_Interior_EventScript_SetLatiasBattleVars::
 	seteventmon SPECIES_LATIAS, 50, ITEM_SOUL_DEW
+	settotemboost B_POSITION_OPPONENT_LEFT, 0, 0, 0, 2, 2, 0, 0
 	return
 
 SouthernIsland_Interior_Movement_CameraPanUp:
