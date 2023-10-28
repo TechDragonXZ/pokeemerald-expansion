@@ -2189,3 +2189,5 @@ static const struct SpriteFrameImage sPicTable_Special_Item_Sparkle[] = {
 static const struct SpriteFrameImage sPicTable_Strange_Pillar[] = {
     obj_frame_tiles(gObjectEventPic_StrangePillar),
 };
+
+extern const struct SpriteFrameImage sPicTable_BallLight[];
