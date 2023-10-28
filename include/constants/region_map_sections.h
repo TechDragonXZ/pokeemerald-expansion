@@ -89,6 +89,8 @@
 #define MAPSEC_SKY_PILLAR                   0x55
 #define MAPSEC_SECRET_BASE                  0x56
 #define MAPSEC_DYNAMIC                      0x57
+
+// Kanto
 #define MAPSEC_PALLET_TOWN                  0x58
 #define MAPSEC_VIRIDIAN_CITY                0x59
 #define MAPSEC_PEWTER_CITY                  0x5A
@@ -144,6 +146,8 @@
 #define MAPSEC_POKEMON_TOWER                0x8C
 #define MAPSEC_CERULEAN_CAVE                0x8D
 #define MAPSEC_POWER_PLANT                  0x8E
+
+// Sevii Islands
 #define MAPSEC_ONE_ISLAND                   0x8F
 #define MAPSEC_TWO_ISLAND                   0x90
 #define MAPSEC_THREE_ISLAND                 0x91
@@ -214,7 +218,8 @@
 #define MAPSEC_ALTERING_CAVE                0xD2
 #define MAPSEC_NAVEL_ROCK                   0xD3
 #define MAPSEC_TRAINER_HILL                 0xD4
-#define MAPSEC_NONE                         0xD5
+#define MAPSEC_DEEP_PETALBURG_WOODS         0xD5
+#define MAPSEC_NONE                         0xD6
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE
