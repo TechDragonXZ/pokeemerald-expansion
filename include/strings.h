@@ -3111,6 +3111,8 @@ extern const u8 gText_Sobble[];
 extern const u8 gText_ExpShareOn[];
 extern const u8 gText_ExpShareOff[];
 
+extern const u8 gText_BasePointsResetToZero[];
+
 // Party Screen Sub-menu
 extern const u8 gText_Moves_Menu[];
 extern const u8 gText_Nickname[];

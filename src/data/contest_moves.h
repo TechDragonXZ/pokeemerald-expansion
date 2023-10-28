@@ -6067,6 +6067,14 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
 
     [MOVE_HYDRO_STEAM] = {0}, // TODO
 
+    [MOVE_BLOOD_MOON] = {0}, // TODO
+
+    [MOVE_MATCHA_GOTCHA] = {0}, // TODO
+
+    [MOVE_SYRUP_BOMB] = {0}, // TODO
+
+    [MOVE_IVY_CUDGEL] = {0}, // TODO
+
     
     [MOVE_MYSTIC_SLASH] =
     {
