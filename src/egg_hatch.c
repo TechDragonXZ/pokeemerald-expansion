@@ -360,6 +360,7 @@ static void AddHatchedMonToParty(u8 id)
     u8 isEgg = 0x46; // ?
     u16 species;
     u8 name[POKEMON_NAME_LENGTH + 1];
+    u16 ball;
     u16 metLevel;
     u8 metLocation;
     struct Pokemon *mon = &gPlayerParty[id];
@@ -777,7 +778,7 @@ static void SpriteCB_Egg_Shake3(struct Sprite *sprite)
     {
         if (++sprite->sTimer > 38)
         {
-            u16 UNUSED species;
+            u16 species;
             sprite->callback = SpriteCB_Egg_WaitHatch;
             sprite->sTimer = 0;
             species = GetMonData(&gPlayerParty[sEggHatchData->eggPartyId], MON_DATA_SPECIES);

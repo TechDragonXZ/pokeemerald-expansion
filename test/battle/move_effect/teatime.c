@@ -96,7 +96,7 @@ SINGLE_BATTLE_TEST("Teatime causes other Pokemon to consume their Berry even if 
 
 DOUBLE_BATTLE_TEST("Teatime causes all Pokémon to consume their berry")
 {
-    struct BattlePokemon *user = NULL;
+    struct BattlePokemon *user;
     PARAMETRIZE { user = playerLeft; }
     PARAMETRIZE { user = playerRight; }
     PARAMETRIZE { user = opponentLeft; }
@@ -143,16 +143,14 @@ SINGLE_BATTLE_TEST("Teatime does not affect Pokémon in the semi-invulnerable tu
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_NONE); }
         OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_LIECHI_BERRY); }
     } WHEN {
-        TURN {
+        TURN { 
             MOVE(opponent, MOVE_FLY);
             MOVE(player, MOVE_TEATIME);
         }
     } SCENE {
         MESSAGE("Wobbuffet used Teatime!");
-        NONE_OF {
-            ANIMATION(ANIM_TYPE_MOVE, MOVE_TEATIME, player);
-            MESSAGE("Using Liechi Berry, the Attack of Foe Wobbuffet rose!");
-        }
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_TEATIME, player);
+        NOT MESSAGE("Using Liechi Berry, the Attack of Foe Wobbuffet rose!");
     }
 }
 
@@ -172,7 +170,7 @@ SINGLE_BATTLE_TEST("Teatime triggers Volt Absorb if it has been affected by Elec
         PLAYER(SPECIES_JOLTEON) { Ability(ABILITY_VOLT_ABSORB); Item(item); HP(55); MaxHP(100); }
         OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_LIECHI_BERRY); }
     } WHEN {
-        TURN {
+        TURN { 
             MOVE(player, move);
             MOVE(opponent, MOVE_TEATIME);
         }
@@ -208,7 +206,7 @@ SINGLE_BATTLE_TEST("Teatime triggers Lightning Rod if it has been affected by El
         PLAYER(SPECIES_PIKACHU) { Ability(ABILITY_LIGHTNING_ROD); Item(item); }
         OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_LIECHI_BERRY); }
     } WHEN {
-        TURN {
+        TURN { 
             MOVE(player, move);
             MOVE(opponent, MOVE_TEATIME);
         }
@@ -248,7 +246,7 @@ SINGLE_BATTLE_TEST("Teatime triggers Motor Drive if it has been affected by Elec
         PLAYER(SPECIES_ELECTIVIRE) { Ability(ABILITY_MOTOR_DRIVE); Item(item); }
         OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_LIECHI_BERRY); }
     } WHEN {
-        TURN {
+        TURN { 
             MOVE(player, move);
             MOVE(opponent, MOVE_TEATIME);
         }

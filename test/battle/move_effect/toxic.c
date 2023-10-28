@@ -40,11 +40,9 @@ SINGLE_BATTLE_TEST("Toxic cannot miss if used by a Poison-type")
             ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_PSN, opponent);
             STATUS_ICON(opponent, badPoison: TRUE);
         } else {
-            NONE_OF {
-                ANIMATION(ANIM_TYPE_MOVE, MOVE_TOXIC, player);
-                ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_PSN, opponent);
-                STATUS_ICON(opponent, badPoison: TRUE);
-            }
+            NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_TOXIC, player);
+            NOT ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_PSN, opponent);
+            NOT STATUS_ICON(opponent, badPoison: TRUE);
         }
     }
 }

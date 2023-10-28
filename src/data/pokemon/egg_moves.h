@@ -2579,7 +2579,7 @@ const u16 gEggMoves[] = {
         MOVE_FLOWER_SHIELD,
         MOVE_GRASSY_TERRAIN),
 
-    egg_moves(SHELLOS_WEST_SEA,
+    egg_moves(SHELLOS,
         MOVE_COUNTER,
         MOVE_MIRROR_COAT,
         MOVE_STOCKPILE,
@@ -3865,7 +3865,7 @@ const u16 gEggMoves[] = {
         MOVE_ENDEAVOR,
         MOVE_AMNESIA),
 
-    egg_moves(ORICORIO_BAILE,
+    egg_moves(ORICORIO,
         MOVE_PLUCK,
         MOVE_TAILWIND,
         MOVE_SAFEGUARD,

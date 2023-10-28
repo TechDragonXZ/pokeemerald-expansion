@@ -17,11 +17,10 @@ SINGLE_BATTLE_TEST("Toxic Debris sets Toxic Spikes on the opposing side if hit b
         if (move == MOVE_TACKLE) {
             ABILITY_POPUP(player, ABILITY_TOXIC_DEBRIS);
             MESSAGE("Poison Spikes were scattered all around the opposing team's feet!");
-        } else {
-            NONE_OF {
-                ABILITY_POPUP(player, ABILITY_TOXIC_DEBRIS);
-                MESSAGE("Poison Spikes were scattered all around the opposing team's feet!");
-            }
+        }
+        else {
+            NOT ABILITY_POPUP(player, ABILITY_TOXIC_DEBRIS);
+            NOT MESSAGE("Poison Spikes were scattered all around the opposing team's feet!");
         }
     }
 }
@@ -43,10 +42,8 @@ SINGLE_BATTLE_TEST("Toxic Debris does not activate if two layers of Toxic Spikes
         ABILITY_POPUP(player, ABILITY_TOXIC_DEBRIS);
         MESSAGE("Poison Spikes were scattered all around the opposing team's feet!");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_TACKLE, opponent);
-        NONE_OF {
-            ABILITY_POPUP(player, ABILITY_TOXIC_DEBRIS);
-            MESSAGE("Poison Spikes were scattered all around the opposing team's feet!");
-        }
+        NOT ABILITY_POPUP(player, ABILITY_TOXIC_DEBRIS);
+        NOT MESSAGE("Poison Spikes were scattered all around the opposing team's feet!");
     }
 }
 
@@ -61,10 +58,8 @@ SINGLE_BATTLE_TEST("If a Substitute is hit, Toxic Debris does not set Toxic Spik
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_SUBSTITUTE, player);
         ANIMATION(ANIM_TYPE_MOVE, MOVE_TACKLE, opponent);
-        NONE_OF {
-            ABILITY_POPUP(player, ABILITY_TOXIC_DEBRIS);
-            MESSAGE("Poison Spikes were scattered all around the opposing team's feet!");
-        }
+        NOT ABILITY_POPUP(player, ABILITY_TOXIC_DEBRIS);
+        NOT MESSAGE("Poison Spikes were scattered all around the opposing team's feet!");
     }
 }
 

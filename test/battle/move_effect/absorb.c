@@ -34,10 +34,8 @@ SINGLE_BATTLE_TEST("Absorb fails if Heal Block applies")
         TURN { MOVE(opponent, MOVE_HEAL_BLOCK); MOVE(player, MOVE_ABSORB); }
     } SCENE {
         MESSAGE("Wobbuffet was prevented from healing!");
-        NONE_OF {
-            ANIMATION(ANIM_TYPE_MOVE, MOVE_ABSORB, player);
-            HP_BAR(opponent);
-            HP_BAR(player);
-        }
+        NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_ABSORB, player);
+        NOT HP_BAR(opponent);
+        NOT HP_BAR(player);
     }
 }

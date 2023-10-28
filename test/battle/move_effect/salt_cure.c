@@ -8,19 +8,18 @@ ASSUMPTIONS
 
 SINGLE_BATTLE_TEST("Salt Cure inflicts 1/8 of the target's maximum HP as damage per turn")
 {
-    u32 j;
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_SALT_CURE); }
-        for (j = 0; j < 3; j++)
+        for (i = 0; i < 3; i++)
             TURN {}
     } SCENE {
         s32 maxHP = GetMonData(&OPPONENT_PARTY[0], MON_DATA_MAX_HP);
         ANIMATION(ANIM_TYPE_MOVE, MOVE_SALT_CURE, player);
         MESSAGE("Foe Wobbuffet is being salt cured!");
-        for (j = 0; j < 4; j++) {
+        for (i = 0; i < 4; i++) {
             ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_SALT_CURE_DAMAGE, opponent);
             HP_BAR(opponent, damage: maxHP / 8);
             MESSAGE("Foe Wobbuffet is hurt by Salt Cure!");
@@ -69,19 +68,5 @@ SINGLE_BATTLE_TEST("Salt Cure is removed when the afflicted Pokémon is switched
             ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_SALT_CURE_DAMAGE, opponent);
             MESSAGE("Foe Wobbuffet is hurt by Salt Cure!");
         }
-    }
-}
-
-SINGLE_BATTLE_TEST("If Salt Cure faints the target no status will be applied")
-{
-    GIVEN {
-        PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WOBBUFFET) { HP(1); }
-    } WHEN {
-        TURN { MOVE(player, MOVE_SALT_CURE); }
-    } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_SALT_CURE, player);
-        NOT MESSAGE("Foe Wobbuffet is being salt cured!");
-        MESSAGE("Foe Wobbuffet fainted!");
     }
 }

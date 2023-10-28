@@ -378,7 +378,7 @@ static void ReloadPokemonSprites(struct PokemonDebugMenu *data);
 static void Exit_Debug_Pokemon(u8);
 
 //Text handling functions
-static void UNUSED PadString(const u8 *src, u8 *dst)
+static void PadString(const u8 *src, u8 *dst)
 {
     u32 i;
 
@@ -542,6 +542,7 @@ static void ValueToCharDigits(u8 *charDigits, u32 newValue, u8 maxDigits)
 
 static void SetArrowInvisibility(struct PokemonDebugMenu *data)
 {
+    bool8 invisible = data->currentSubmenu;
     switch (data->currentSubmenu)
     {
     case 0:
@@ -671,6 +672,7 @@ static bool32 TryMoveDigit(struct PokemonDebugModifyArrows *modArrows, bool32 mo
 
 static void UpdateBattlerValue(struct PokemonDebugMenu *data)
 {
+    u32 i;
     switch (data->modifyArrows.typeOfVal)
     {
     case VAL_U16:
@@ -704,8 +706,13 @@ static const struct CompressedSpritePalette *GetMonSpritePalStructCustom(u16 spe
 
 static void BattleLoadOpponentMonSpriteGfxCustom(u16 species, bool8 isFemale, bool8 isShiny, u8 battlerId)
 {
+    u16 paletteOffset;
     const void *lzPaletteData;
-    u16 paletteOffset = 0x100 + battlerId * 16;;
+    const struct CompressedSpritePalette *palette;
+
+    paletteOffset = 0x100 + battlerId * 16;
+
+    palette = GetMonSpritePalStructCustom(species, isFemale, isShiny);
 
     if (isShiny)
     {
@@ -1102,7 +1109,9 @@ void CB2_Debug_Pokemon(void)
 
             FillBgTilemapBufferRect(0, 0, 0, 0, 32, 20, 15);
             InitBgsFromTemplates(0, sBgTemplates, ARRAY_COUNT(sBgTemplates));
-            LoadBattleBg(0, BATTLE_TERRAIN_GRASS);
+            data->battleBgType = 0;
+            data->battleTerrain = 0;
+            LoadBattleBg(data->battleBgType , data->battleTerrain);
 
             gMain.state++;
             break;
@@ -1253,7 +1262,7 @@ static void ApplyOffsetSpriteValues(struct PokemonDebugMenu *data)
     gSprites[data->backspriteId].y = DEBUG_MON_BACK_Y + gMonBackPicCoords[species].y_offset + data->offsetsSpriteValues.offset_back_picCoords;
     //Front
     gSprites[data->frontspriteId].y = GetBattlerSpriteFinal_YCustom(species, data->offsetsSpriteValues.offset_front_picCoords, data->offsetsSpriteValues.offset_front_elevation);
-
+    
     if (data->currentSubmenu == 2)
         UpdateShadowSpriteInvisible(data);
 }

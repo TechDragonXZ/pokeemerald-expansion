@@ -153,7 +153,6 @@ enum
     LIST_SIDE_STEALTH_ROCK,
     LIST_SIDE_TOXIC_SPIKES,
     LIST_SIDE_STICKY_WEB,
-    LIST_SIDE_STEELSURGE,
 };
 
 enum
@@ -229,7 +228,6 @@ static const u8 sText_PP[] = _("PP");
 static const u8 sText_StealthRock[] = _("Stealth Rock");
 static const u8 sText_ToxicSpikes[] = _("Toxic Spikes");
 static const u8 sText_StickyWeb[] = _("Sticky Web");
-static const u8 sText_Steelsurge[] = _("Steelsurge");
 static const u8 sText_AI[] = _("AI");
 static const u8 sText_NoBadMoves[] = _("No Bad Moves");
 static const u8 sText_Viability[] = _("Viability");
@@ -457,7 +455,6 @@ static const struct ListMenuItem sSideStatusListItems[] =
     {sText_StealthRock, LIST_SIDE_STEALTH_ROCK},
     {sText_ToxicSpikes, LIST_SIDE_TOXIC_SPIKES},
     {sText_StickyWeb, LIST_SIDE_STICKY_WEB},
-    {sText_Steelsurge, LIST_SIDE_STEELSURGE},
 };
 
 static const struct ListMenuItem sSecondaryListItems[] =
@@ -844,7 +841,7 @@ static const u8 *const sAiInfoItemNames[] =
 
 static void PutAiInfoText(struct BattleDebugMenu *data)
 {
-    u32 i;
+    u32 i, j, count;
     u8 *text = Alloc(0x50);
 
     FillWindowPixelBuffer(data->aiMovesWindowId, 0x11);
@@ -860,9 +857,9 @@ static void PutAiInfoText(struct BattleDebugMenu *data)
     {
         if (GetBattlerSide(i) == B_SIDE_PLAYER && IsBattlerAlive(i))
         {
-            u16 ability = AI_DATA->abilities[i];
-            u16 holdEffect = AI_DATA->holdEffects[i];
-            u16 item = AI_DATA->items[i];
+            u16 ability = AI_GetAbility(i);
+            u16 holdEffect = AI_GetHoldEffect(i);
+            u16 item = gBattleMons[i].item;
             u8 x = (i == B_POSITION_PLAYER_LEFT) ? 83 + (i) * 75 : 83 + (i-1) * 75;
             AddTextPrinterParameterized(data->aiMovesWindowId, 0, gAbilityNames[ability], x, 0, 0, NULL);
             AddTextPrinterParameterized(data->aiMovesWindowId, 0, ItemId_GetName(item), x, 15, 0, NULL);
@@ -1739,15 +1736,6 @@ static u8 *GetSideStatusValue(struct BattleDebugMenu *data, bool32 changeStatus,
                 *(u32 *)(data->modifyArrows.modifiedValPtr) &= ~SIDE_STATUS_STICKY_WEB;
         }
         return &sideTimer->stickyWebAmount;
-    case LIST_SIDE_STEELSURGE:
-        if (changeStatus)
-        {
-            if (statusTrue)
-                *(u32 *)(data->modifyArrows.modifiedValPtr) |= SIDE_STATUS_STEELSURGE;
-            else
-                *(u32 *)(data->modifyArrows.modifiedValPtr) &= ~SIDE_STATUS_STEELSURGE;
-        }
-        return &sideTimer->steelsurgeAmount;
     default:
         return NULL;
     }

@@ -153,7 +153,6 @@ BattleScript_PrintCaughtMonInfo::
     getexp BS_TARGET
     sethword gBattle_BG2_X, 0
 BattleScript_TryPrintCaughtMonInfo:
-    jumpifbattletype BATTLE_TYPE_RECORDED, BattleScript_GiveCaughtMonEnd
     trysetcaughtmondexflags BattleScript_TryNicknameCaughtMon
     printstring STRINGID_PKMNDATAADDEDTODEX
     waitstate
@@ -245,7 +244,7 @@ BattleScript_TrainerASlideMsgRet::
 BattleScript_TrainerASlideMsgEnd2::
     call BattleScript_TrainerASlideMsgRet
     end2
-
+    
 BattleScript_TrainerBSlideMsgRet::
     handletrainerslidemsg BS_SCRIPTING, 0
     trainerslidein B_POSITION_OPPONENT_RIGHT

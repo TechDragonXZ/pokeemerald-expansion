@@ -29,10 +29,10 @@ SINGLE_BATTLE_TEST("Seed Sower sets up Grassy Terrain when hit by an attack")
 DOUBLE_BATTLE_TEST("Multi-target moves hit correct battlers after Seed Sower is triggered") // #2796
 {
     u32 j, k, l;
-    u16 usedMove = MOVE_NONE;
+    u16 usedMove;
     static const u16 moves[] = {MOVE_HYPER_VOICE, MOVE_SURF};
-    u16 abilities[MAX_BATTLERS_COUNT] = {0};
-    u8 attacker = 0;
+    u16 abilities[MAX_BATTLERS_COUNT];
+    u8 attacker;
 
     for (j = 0; j < ARRAY_COUNT(moves); j++)
     {

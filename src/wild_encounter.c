@@ -451,15 +451,16 @@ static u8 PickWildMonNature(void)
             }
         }
     }
-#if B_SYNCHRONIZE_NATURE < GEN_9
     // check synchronize for a pokemon with the same ability
     if (!GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG)
         && GetMonAbility(&gPlayerParty[0]) == ABILITY_SYNCHRONIZE
-        && (B_SYNCHRONIZE_NATURE >= GEN_8 || Random() % 2 == 0))
+    #if B_SYNCHRONIZE_NATURE <= GEN_7
+        && (Random() % 2 == 0)
+    #endif
+    )
     {
         return GetMonData(&gPlayerParty[0], MON_DATA_PERSONALITY) % NUM_NATURES;
     }
-#endif
 
     // random nature
     return Random() % NUM_NATURES;
@@ -1149,13 +1150,20 @@ static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
 
 bool8 TryDoDoubleWildBattle(void)
 {
-    if (GetSafariZoneFlag()
-      || (B_DOUBLE_WILD_REQUIRE_2_MONS == TRUE && GetMonsStateToDoubles() != PLAYER_HAS_TWO_USABLE_MONS))
+#if B_DOUBLE_WILD_REQUIRE_2_MONS == TRUE
+    if (GetSafariZoneFlag() || GetMonsStateToDoubles() != PLAYER_HAS_TWO_USABLE_MONS)
+#else
+    if (GetSafariZoneFlag())
+#endif
         return FALSE;
-    else if (B_FLAG_FORCE_DOUBLE_WILD != 0 && FlagGet(B_FLAG_FORCE_DOUBLE_WILD))
+#if B_FLAG_FORCE_DOUBLE_WILD != 0
+    else if (FlagGet(B_FLAG_FORCE_DOUBLE_WILD))
         return TRUE;
-    else if (B_DOUBLE_WILD_CHANCE != 0 && ((Random() % 100) + 1 <= B_DOUBLE_WILD_CHANCE))
+#endif
+#if B_DOUBLE_WILD_CHANCE != 0
+    else if ((Random() % 100) + 1 <= B_DOUBLE_WILD_CHANCE)
         return TRUE;
+#endif
     return FALSE;
 }
 

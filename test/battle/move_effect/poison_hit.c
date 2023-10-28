@@ -4,7 +4,6 @@
 ASSUMPTIONS
 {
     ASSUME(gBattleMoves[MOVE_POISON_STING].effect == EFFECT_POISON_HIT);
-    ASSUME(gBattleMoves[MOVE_TWINEEDLE].effect == EFFECT_POISON_HIT);
 }
 
 SINGLE_BATTLE_TEST("Poison Sting inflicts poison")
@@ -23,24 +22,18 @@ SINGLE_BATTLE_TEST("Poison Sting inflicts poison")
     }
 }
 
-SINGLE_BATTLE_TEST("Poison cannot be inflicted on Poison and Steel-type Pokémon")
+SINGLE_BATTLE_TEST("Poison Sting cannot poison Poison-type")
 {
-    u32 mon;
-    PARAMETRIZE { mon = SPECIES_NIDORAN_M; }
-    PARAMETRIZE { mon = SPECIES_REGISTEEL; }
     GIVEN {
         ASSUME(gSpeciesInfo[SPECIES_NIDORAN_M].types[0] == TYPE_POISON);
-        ASSUME(gSpeciesInfo[SPECIES_REGISTEEL].types[0] == TYPE_STEEL);
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(mon);
+        OPPONENT(SPECIES_NIDORAN_M);
     } WHEN {
-        TURN { MOVE(player, MOVE_TWINEEDLE); }
+        TURN { MOVE(player, MOVE_POISON_STING); }
     } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_TWINEEDLE, player);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_POISON_STING, player);
         HP_BAR(opponent);
-        NONE_OF {
-            ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_PSN, opponent);
-            STATUS_ICON(opponent, poison: TRUE);
-        }
+        NOT ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_PSN, opponent);
+        NOT STATUS_ICON(opponent, poison: TRUE);
     }
 }
