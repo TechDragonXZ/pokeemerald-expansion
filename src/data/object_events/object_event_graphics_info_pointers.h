@@ -2,6 +2,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNorm
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_QuintyPlump;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NinjaBoy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Twin;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Boy1;
@@ -247,13 +248,14 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvi
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TMBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Special_Item_Sparkle;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Strange_Pillar;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight;
+
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
     [OBJ_EVENT_GFX_BRENDAN_MACH_BIKE] =        &gObjectEventGraphicsInfo_BrendanMachBike,
     [OBJ_EVENT_GFX_BRENDAN_SURFING] =          &gObjectEventGraphicsInfo_BrendanSurfing,
     [OBJ_EVENT_GFX_BRENDAN_FIELD_MOVE] =       &gObjectEventGraphicsInfo_BrendanFieldMove,
+    [OBJ_EVENT_GFX_QUINTY_PLUMP] =             &gObjectEventGraphicsInfo_QuintyPlump,
     [OBJ_EVENT_GFX_NINJA_BOY] =                &gObjectEventGraphicsInfo_NinjaBoy,
     [OBJ_EVENT_GFX_TWIN] =                     &gObjectEventGraphicsInfo_Twin,
     [OBJ_EVENT_GFX_BOY_1] =                    &gObjectEventGraphicsInfo_Boy1,
@@ -492,7 +494,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TM_BALL] =                  &gObjectEventGraphicsInfo_TMBall,
     [OBJ_EVENT_GFX_SPECIAL_ITEM_SPARKLE] =     &gObjectEventGraphicsInfo_Special_Item_Sparkle,
     [OBJ_EVENT_GFX_STRANGE_PILLAR] =           &gObjectEventGraphicsInfo_Strange_Pillar,
-    [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

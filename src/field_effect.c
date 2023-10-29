@@ -782,7 +782,7 @@ void FieldEffectScript_LoadFadedPalette(u8 **script)
 {
     struct SpritePalette *palette = (struct SpritePalette *)FieldEffectScript_ReadWord(script);
     LoadSpritePalette(palette);
-    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(palette->tag), TRUE);
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(palette->tag));
     (*script) += 4;
 }
 
@@ -1593,7 +1593,6 @@ static bool8 EscalatorWarpOut_WaitForPlayer(struct Task *task)
     if (!ObjectEventIsMovementOverridden(objectEvent) || ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
         ObjectEventSetHeldMovement(objectEvent, GetFaceDirectionMovementAction(GetPlayerFacingDirection()));
-        objectEvent->hasShadow = TRUE;
         task->tState++;
         task->data[2] = 0;
         task->data[3] = 0;
@@ -1715,7 +1714,6 @@ static bool8 EscalatorWarpIn_Init(struct Task *task)
     u8 behavior;
     CameraObjectReset2();
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
-    objectEvent->hasShadow = TRUE;
     ObjectEventSetHeldMovement(objectEvent, GetFaceDirectionMovementAction(DIR_EAST));
     PlayerGetDestCoords(&x, &y);
     behavior = MapGridGetMetatileBehaviorAt(x, y);
@@ -1812,7 +1810,6 @@ static bool8 EscalatorWarpIn_End(struct Task *task)
 {
     struct ObjectEvent *objectEvent;
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
-    objectEvent->hasShadow = FALSE;
     if (ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
         CameraObjectReset1();
@@ -1965,7 +1962,6 @@ static bool8 LavaridgeGymB1FWarpEffect_Init(struct Task *task, struct ObjectEven
     SetCameraPanningCallback(NULL);
     gPlayerAvatar.preventStep = TRUE;
     objectEvent->fixedPriority = 1;
-    objectEvent->hasShadow = TRUE;
     task->data[1] = 1;
     task->data[0]++;
     return TRUE;
@@ -2158,7 +2154,6 @@ static bool8 LavaridgeGym1FWarpEffect_Init(struct Task *task, struct ObjectEvent
     CameraObjectReset2();
     gPlayerAvatar.preventStep = TRUE;
     objectEvent->fixedPriority = 1;
-    objectEvent->hasShadow = TRUE;
     task->data[0]++;
     return FALSE;
 }
@@ -3121,10 +3116,10 @@ u8 FldEff_NPCFlyOut(void)
     u8 spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIRD], 0x78, 0, 1);
     struct Sprite *sprite = &gSprites[spriteId];
 
+    sprite->oam.paletteNum = 0;
     sprite->oam.priority = 1;
     sprite->callback = SpriteCB_NPCFlyOut;
     sprite->data[1] = gFieldEffectArguments[0];
-    sprite->oam.paletteNum = LoadObjectEventPalette(gSaveBlock2Ptr->playerGender ? FLDEFF_PAL_TAG_MAY : FLDEFF_PAL_TAG_BRENDAN);
     PlaySE(SE_M_FLY);
     return spriteId;
 }
@@ -3272,7 +3267,7 @@ static void FlyOutFieldEffect_FlyOffWithBird(struct Task *task)
         struct ObjectEvent *objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
         ObjectEventClearHeldMovementIfActive(objectEvent);
         objectEvent->inanimate = FALSE;
-        objectEvent->hasShadow = TRUE;
+        objectEvent->hasShadow = FALSE;
         SetFlyBirdPlayerSpriteId(task->tBirdSpriteId, objectEvent->spriteId);
         CameraObjectReset2();
         task->tState++;
@@ -3303,9 +3298,9 @@ static u8 CreateFlyBirdSprite(void)
     struct Sprite *sprite;
     spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIRD], 0xff, 0xb4, 0x1);
     sprite = &gSprites[spriteId];
+    sprite->oam.paletteNum = 0;
     sprite->oam.priority = 1;
     sprite->callback = SpriteCB_FlyBirdLeaveBall;
-    sprite->oam.paletteNum = LoadObjectEventPalette(gSaveBlock2Ptr->playerGender ? FLDEFF_PAL_TAG_MAY : FLDEFF_PAL_TAG_BRENDAN);
     return spriteId;
 }
 
@@ -3493,7 +3488,6 @@ static void FlyInFieldEffect_BirdSwoopDown(struct Task *task)
         ObjectEventTurn(objectEvent, DIR_WEST);
         StartSpriteAnim(&gSprites[objectEvent->spriteId], ANIM_GET_ON_OFF_POKEMON_WEST);
         objectEvent->invisible = FALSE;
-        objectEvent->hasShadow = TRUE;
         task->tBirdSpriteId = CreateFlyBirdSprite();
         StartFlyBirdSwoopDown(task->tBirdSpriteId);
         SetFlyBirdPlayerSpriteId(task->tBirdSpriteId, objectEvent->spriteId);

@@ -47,8 +47,7 @@ struct Weather
     s8 targetColorMapIndex;
     u8 colorMapStepDelay;
     u8 colorMapStepCounter;
-    u16 fadeDestColor:15;
-    u16 hasShadows:1;
+    u16 fadeDestColor;
     u8 palProcessingState;
     u8 fadeScreenCounter;
     bool8 readyForInit;
@@ -153,8 +152,8 @@ void ApplyWeatherColorMapIfIdle(s8 colorMapIndex);
 void ApplyWeatherColorMapIfIdle_Gradual(u8 colorMapIndex, u8 targetColorMapIndex, u8 colorMapStepDelay);
 void FadeScreen(u8 mode, s8 delay);
 bool8 IsWeatherNotFadingIn(void);
-void UpdateSpritePaletteWithWeather(u8 spritePaletteIndex, bool8 allowFog);
-void ApplyWeatherColorMapToPal(u8 paletteIndex, u8 numPalettes);
+void UpdateSpritePaletteWithWeather(u8 spritePaletteIndex);
+void ApplyWeatherColorMapToPal(u8 paletteIndex);
 void LoadCustomWeatherSpritePalette(const u16 *palette);
 void ResetDroughtWeatherPaletteLoading(void);
 bool8 LoadDroughtWeatherPalettes(void);
@@ -223,7 +222,6 @@ void Bubbles_InitVars(void);
 void Bubbles_Main(void);
 void Bubbles_InitAll(void);
 bool8 Bubbles_Finish(void);
-u8 UpdateShadowColor(u16 color);
 
 u8 GetSavedWeather(void);
 void SetSavedWeather(u32 weather);
