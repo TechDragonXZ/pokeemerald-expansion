@@ -40,6 +40,13 @@ struct LinkPlayerObjectEvent
     u8 movementMode;
 };
 
+enum {
+    REGION_HOENN,
+    REGION_KANTO,
+    REGION_SEVII,
+    REGION_DISTORTION_WROLD
+};
+
 extern struct WarpData gLastUsedWarp;
 extern struct LinkPlayerObjectEvent gLinkPlayerObjectEvents[4];
 

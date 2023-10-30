@@ -160,6 +160,7 @@ static const u16 sRegionMap_SpecialPlaceLocations[][2] =
     {MAPSEC_ARTISAN_CAVE,               MAPSEC_ROUTE_103},
     {MAPSEC_ABANDONED_SHIP,             MAPSEC_ROUTE_108},
     {MAPSEC_DEEP_PETALBURG_WOODS,       MAPSEC_PETALBURG_WOODS},
+    {MAPSEC_STRANGE_SPACE,              MAPSEC_DEEP_PETALBURG_WOODS},
     {MAPSEC_NONE,                       MAPSEC_NONE}
 };
 

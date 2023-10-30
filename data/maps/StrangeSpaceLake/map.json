@@ -3,7 +3,7 @@
   "name": "StrangeSpaceLake",
   "layout": "LAYOUT_STRANGE_SPACE_LAKE",
   "music": "MUS_ROUTE120",
-  "region_map_section": "MAPSEC_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_STRANGE_SPACE",
   "requires_flash": false,
   "weather": "WEATHER_RAIN",
   "map_type": "MAP_TYPE_STRANGE_SPACE",

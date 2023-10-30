@@ -3,7 +3,7 @@
   "name": "BondLab",
   "layout": "LAYOUT_BOND_LAB",
   "music": "MUS_RG_POKE_MANSION",
-  "region_map_section": "MAPSEC_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_DEEP_PETALBURG_WOODS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
