@@ -546,3 +546,4 @@ gSpecials::
 	def_special DoesRotomKnowSpecialMove
 	def_special GetRotomNewSpecialMove
 	def_special CheckSpecies
+	def_special DoSlidingPuzzle
