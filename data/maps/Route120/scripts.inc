@@ -222,6 +222,16 @@ Route120_EventScript_StevenGiveDeconScope::
 	setflag FLAG_RECEIVED_DEVON_SCOPE
 	msgbox Route120_Text_StevenGoodbye, MSGBOX_DEFAULT
 	closemessage
+	delay 30
+	msgbox Route120_Text_StevenMega, MSGBOX_DEFAULT
+	closemessage
+	giveitem ITEM_MEGA_RING
+	setflag FLAG_GOT_MEGA_RING
+	call_if_eq VAR_STARTER_MON, 0, Route120_EventScript_Treecko
+	call_if_eq VAR_STARTER_MON, 1, Route120_EventScript_Torchic
+	call_if_eq VAR_STARTER_MON, 2, Route120_EventScript_Mudkip
+	msgbox Route120_Text_StevenMega2, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	delay 50
@@ -236,6 +246,24 @@ Route120_EventScript_StevenGiveDeconScope::
 	setmetatile 13, 17, METATILE_General_ReflectiveWater, FALSE
 	special DrawWholeMapView
 	release
+	end
+
+Route120_EventScript_Treecko::
+	giveitem ITEM_SCEPTILITE
+	setflag FLAG_GIVEN_SCEPTILITE
+	return
+	end
+
+Route120_EventScript_Torchic::
+	giveitem ITEM_BLAZIKENITE
+	setflag FLAG_GIVEN_BLAZIKENITE
+	return
+	end
+
+Route120_EventScript_Mudkip::
+	giveitem ITEM_SWAMPERTITE
+	setflag FLAG_GIVEN_SWAMPERTITE
+	return
 	end
 
 Route120_EventScript_PlayerApproachKecleonNorth::
@@ -407,8 +435,19 @@ Route120_Text_StevenGoodbye: @ 81F5C7B
 	.string "Steven: {PLAYER}{KUN}.\p"
 	.string "I enjoy seeing Pokémon and Trainers\n"
 	.string "who strive together.\p"
-	.string "I think you're doing great.\p"
+	.string "I think you're doing great.\n"
 	.string "Well, let's meet again somewhere.$"
+
+Route120_Text_StevenMega:
+	.string "STEVEN: {PLAYER}{KUN}.\p"
+	.string "Before I leave, I want you to\n"
+	.string "take this Mega Ring and Keystone.\p"
+	.string "It will let you mega evolve your\n"
+	.string "Pokémon once per battle.$"
+
+Route120_Text_StevenMega2:
+	.string "It will let you mega evolve your\n"
+	.string "Pokémon once per battle.$"
 
 Kecleon_Text_SomethingUnseeable:
 	.string "Something unseeable is in the way.$"

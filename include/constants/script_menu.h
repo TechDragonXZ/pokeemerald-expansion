@@ -122,6 +122,24 @@
 #define MULTI_SLATEPORT_TENT_RULES         111
 #define MULTI_FALLARBOR_TENT_RULES         112
 #define MULTI_TAG_MATCH_TYPE               113
+#define MULTI_PARTNER                      114
+#define MULTI_ROTOM_APPLIANCES             115
+#define MULTI_WILD_POKEMON_GROUPS          116
+#define MULTI_WILD_POKEMON_GROUPS_TWO      117
+#define MULTI_WILD_POKEMON_GROUPS_SIX      118
+#define MULTI_STRANGE_PILLAR1              119
+#define MULTI_STRANGE_PILLAR2              120
+#define MULTI_STRANGE_PILLAR3              121
+#define MULTI_STRANGE_PILLAR4              122
+#define MULTI_KANTO_STARTERS               123
+#define MULTI_SINNOH_STARTERS              124
+#define MULTI_UNOVA_STARTERS               125
+#define MULTI_KALOS_STARTERS               126
+#define MULTI_ALOLA_STARTERS               127
+#define MULTI_GALAR_STARTERS               128
+#define MULTI_PARTNER_EEVEE_MOVES          129
+#define MULTI_PARTNER_PIKACHU_MOVES        130
+#define MULTI_MEGA_Z_SHOP                  131
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
@@ -164,5 +182,11 @@
 #define STDSTRING_BATTLE_ARENA     27
 #define STDSTRING_BATTLE_PIKE      28
 #define STDSTRING_BATTLE_PYRAMID   29
+
+#define STDSTRING_MEDICINE         30
+#define STDSTRING_BATTLEITEMS      31
+#define STDSTRING_POWERUP          32
+#define STDSTRING_MEGASTONES       33
+#define STDSTRING_ZCRYSTALS        34
 
 #endif //GUARD_SCRIPT_MENU_CONSTANTS_H

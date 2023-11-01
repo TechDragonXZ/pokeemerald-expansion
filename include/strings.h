@@ -53,6 +53,11 @@ extern const u8 gText_Key_Items[];
 extern const u8 gText_Poke_Balls[];
 extern const u8 gText_TMs_Hms[];
 extern const u8 gText_Berries2[];
+extern const u8 gText_Medicine[];
+extern const u8 gText_BattleItems[];
+extern const u8 gText_PowerUp[];
+extern const u8 gText_MegaStones[];
+extern const u8 gText_ZCrystals[];
 
 extern const u8 gText_Single2[];
 extern const u8 gText_Double2[];
@@ -256,7 +261,6 @@ extern const u8 gText_MenuOption[];
 extern const u8 gText_MenuExit[];
 extern const u8 gText_MenuRetire[];
 extern const u8 gText_MenuRest[];
-extern const u8 gText_MenuDexNav[];
 extern const u8 gText_Floor1[];
 extern const u8 gText_Floor2[];
 extern const u8 gText_Floor3[];
@@ -465,6 +469,7 @@ extern const u8 gText_MailMessageWillBeLost[];
 extern const u8 gText_MailTakenFromPkmn[];
 extern const u8 gText_NoMoreThanVar1Pkmn[];
 extern const u8 gText_PkmnCantBeTradedNow[];
+extern const u8 gText_PkmnCantBeTraded[];
 extern const u8 gText_EggCantBeTradedNow[];
 extern const u8 gText_OnlyPkmnForBattle[];
 extern const u8 gJPText_AreYouSureYouWantToSpinTradeMon[];
@@ -475,6 +480,7 @@ extern const u8 gText_EscapeFromHere[];
 extern const u8 gText_PkmnCuredOfPoison[];
 extern const u8 gText_PkmnWokeUp2[];
 extern const u8 gText_PkmnBurnHealed[];
+extern const u8 gText_PkmnFrostbiteHealed[];
 extern const u8 gText_PkmnThawedOut[];
 extern const u8 gText_PkmnCuredOfParalysis[];
 extern const u8 gText_PkmnGotOverInfatuation[];
@@ -501,6 +507,7 @@ extern const u8 gText_StopLearningMove2[];
 extern const u8 gText_MoveNotLearned[];
 extern const u8 gText_PkmnElevatedToLvVar2[];
 extern const u8 gText_PkmnGainedExp[];
+extern const u8 gText_PkmnGainedExpAndElevatedToLvVar3[];
 extern const u8 gText_RemoveMailBeforeItem[];
 extern const u8 gText_PkmnHoldingItemCantHoldMail[];
 extern const u8 gText_MailTransferredFromMailbox[];
@@ -536,124 +543,6 @@ extern const u8 gText_SearchingPleaseWait[];
 extern const u8 gText_SearchCompleted[];
 extern const u8 gText_NoMatchingPkmnWereFound[];
 extern const u8 gText_SelectorArrow[];
-//PokedexPlus HGSS_Ui
-extern const u8 gText_Stats_Buttons[];
-extern const u8 gText_Stats_Buttons_Decapped[];
-extern const u8 gText_Stats_HP[];
-extern const u8 gText_Stats_Attack[];
-extern const u8 gText_Stats_Defense[];
-extern const u8 gText_Stats_Speed[];
-extern const u8 gText_Stats_SpAttack[];
-extern const u8 gText_Stats_SpDefense[];
-extern const u8 gText_Stats_EV_Plus1[];
-extern const u8 gText_Stats_EV_Plus2[];
-extern const u8 gText_Stats_EV_Plus3[];
-extern const u8 gText_Stats_EvStr1Str2[];
-extern const u8 gText_Stats_MoveSelectedMax[];
-extern const u8 gText_Stats_MoveLevel[];
-extern const u8 gText_Stats_Gender_0[];
-extern const u8 gText_Stats_Gender_12_5[];
-extern const u8 gText_Stats_Gender_25[];
-extern const u8 gText_Stats_Gender_50[];
-extern const u8 gText_Stats_Gender_75[];
-extern const u8 gText_Stats_Gender_87_5[];
-extern const u8 gText_Stats_Gender_100[];
-extern const u8 gText_Stats_CatchRate[];
-extern const u8 gText_Stats_CatchRate_Legend[];
-extern const u8 gText_Stats_CatchRate_VeryHard[];
-extern const u8 gText_Stats_CatchRate_Difficult[];
-extern const u8 gText_Stats_CatchRate_Medium[];
-extern const u8 gText_Stats_CatchRate_Relaxed[];
-extern const u8 gText_Stats_CatchRate_Easy[];
-extern const u8 gText_Stats_ExpYield[];
-extern const u8 gText_Stats_EggCycles[];
-extern const u8 gText_Stats_EggCycles_VeryFast[];
-extern const u8 gText_Stats_EggCycles_Fast[];
-extern const u8 gText_Stats_EggCycles_Normal[];
-extern const u8 gText_Stats_EggCycles_Slow[];
-extern const u8 gText_Stats_Growthrate[];
-extern const u8 gText_Stats_Friendship[];
-extern const u8 gText_Stats_Friendship_BigAnger[];
-extern const u8 gText_Stats_Friendship_Neutral[];
-extern const u8 gText_Stats_Friendship_Happy[];
-extern const u8 gText_Stats_Friendship_BigSmile[];
-extern const u8 gText_Stats_MEDIUM_FAST[];
-extern const u8 gText_Stats_ERRATIC[];
-extern const u8 gText_Stats_FLUCTUATING[];
-extern const u8 gText_Stats_MEDIUM_SLOW[];
-extern const u8 gText_Stats_FAST[];
-extern const u8 gText_Stats_SLOW[];
-extern const u8 gText_Stats_ContestHeart[];
-extern const u8 gText_PlusSymbol[];
-extern const u8 gText_Stats_Minus[];
-extern const u8 gText_Stats_eggGroup[];
-extern const u8 gText_Stats_eggGroup_Groups[];
-extern const u8 gText_Stats_eggGroup_MONSTER[];
-extern const u8 gText_Stats_eggGroup_WATER_1[];
-extern const u8 gText_Stats_eggGroup_BUG[];
-extern const u8 gText_Stats_eggGroup_FLYING[];
-extern const u8 gText_Stats_eggGroup_FIELD[];
-extern const u8 gText_Stats_eggGroup_FAIRY[];
-extern const u8 gText_Stats_eggGroup_GRASS[];
-extern const u8 gText_Stats_eggGroup_HUMAN_LIKE[];
-extern const u8 gText_Stats_eggGroup_WATER_3[];
-extern const u8 gText_Stats_eggGroup_MINERAL[];
-extern const u8 gText_Stats_eggGroup_AMORPHOUS[];
-extern const u8 gText_Stats_eggGroup_WATER_2[];
-extern const u8 gText_Stats_eggGroup_DITTO[];
-extern const u8 gText_Stats_eggGroup_DRAGON[];
-extern const u8 gText_Stats_eggGroup_UNDISCOVERED[];
-extern const u8 gText_Dex_SEEN[];
-extern const u8 gText_Dex_OWN[];
-
-extern const u8 gText_EVO_Buttons[];
-extern const u8 gText_EVO_Buttons_Decapped[];
-extern const u8 gText_EVO_Buttons_PE[];
-extern const u8 gText_EVO_Buttons_Decapped_PE[];
-extern const u8 gText_EVO_Name[];
-extern const u8 gText_EVO_PreEvo[];
-extern const u8 gText_EVO_PreEvo_PE_Mega[];
-extern const u8 gText_EVO_FRIENDSHIP[];
-extern const u8 gText_EVO_FRIENDSHIP_DAY[];
-extern const u8 gText_EVO_FRIENDSHIP_NIGHT[];
-extern const u8 gText_EVO_LEVEL[];
-extern const u8 gText_EVO_TRADE[];
-extern const u8 gText_EVO_TRADE_ITEM[];
-extern const u8 gText_EVO_ITEM[];
-extern const u8 gText_EVO_LEVEL_ATK_GT_DEF[];
-extern const u8 gText_EVO_LEVEL_ATK_EQ_DEF[];
-extern const u8 gText_EVO_LEVEL_ATK_LT_DEF[];
-extern const u8 gText_EVO_LEVEL_SILCOON[];
-extern const u8 gText_EVO_LEVEL_CASCOON[];
-extern const u8 gText_EVO_LEVEL_NINJASK[];
-extern const u8 gText_EVO_LEVEL_SHEDINJA[];
-extern const u8 gText_EVO_BEAUTY[];
-extern const u8 gText_EVO_LEVEL_FEMALE[];
-extern const u8 gText_EVO_LEVEL_MALE[];
-extern const u8 gText_EVO_LEVEL_NIGHT[];
-extern const u8 gText_EVO_LEVEL_DAY[];
-extern const u8 gText_EVO_LEVEL_DUSK[];
-extern const u8 gText_EVO_ITEM_HOLD_DAY[];
-extern const u8 gText_EVO_ITEM_HOLD_NIGHT[];
-extern const u8 gText_EVO_MOVE[];
-extern const u8 gText_EVO_MOVE_TYPE[];
-extern const u8 gText_EVO_MAPSEC[];
-extern const u8 gText_EVO_ITEM_MALE[];
-extern const u8 gText_EVO_ITEM_FEMALE[];
-extern const u8 gText_EVO_LEVEL_RAIN[];
-extern const u8 gText_EVO_SPECIFIC_MON_IN_PARTY[];
-extern const u8 gText_EVO_LEVEL_DARK_TYPE_MON_IN_PARTY[];
-extern const u8 gText_EVO_TRADE_SPECIFIC_MON[];
-extern const u8 gText_EVO_SPECIFIC_MAP[];
-extern const u8 gText_EVO_UNKNOWN[];
-extern const u8 gText_EVO_NONE[];
-
-extern const u8 gText_FORMS_Buttons_PE[];
-extern const u8 gText_FORMS_Buttons_Decapped_PE[];
-extern const u8 gText_FORMS_Buttons_Submenu_PE[];
-extern const u8 gText_FORMS_Buttons_Submenu_Decapped_PE[];
-extern const u8 gText_FORMS_NONE[];
-
 
 // birch dex rating text
 extern const u8 gBirchDexRatingText_LessThan10[];
@@ -843,6 +732,9 @@ extern const u8 gText_BattlePike[];
 extern const u8 gText_BattlePyramid[];
 extern const u8 gText_RankingHall[];
 extern const u8 gText_ExchangeService[];
+
+extern const u8 gText_Pikachu[];
+extern const u8 gText_Eevee[];
 
 // Battle Frontier Move Tutors
 extern const u8 gText_Softboiled16BP[];
@@ -1055,6 +947,7 @@ extern const u8 gText_BootedUpTM[];
 extern const u8 gText_TMHMContainedVar1[];
 extern const u8 gText_PlayerUsedVar2[];
 extern const u8 gText_RepelEffectsLingered[];
+extern const u8 gText_LureEffectsLingered[];
 extern const u8 gText_UsedVar2WildLured[];
 extern const u8 gText_UsedVar2WildRepelled[];
 extern const u8 gText_BoxFull[];
@@ -1142,6 +1035,8 @@ extern const u8 gText_ThrowInPremierBalls[];
 extern const u8 gText_ShopBuy[];
 extern const u8 gText_ShopSell[];
 extern const u8 gText_ShopQuit[];
+extern const u8 gText_ThatItemIsSoldOut[];
+extern const u8 gText_SoldOut[];
 
 extern const u8 gText_OhABite[];
 extern const u8 gText_PokemonOnHook[];
@@ -2274,9 +2169,7 @@ extern const u8 gText_Switch2[];
 extern const u8 gText_Item[];
 extern const u8 gText_NotPkmnOtherTrainerWants[];
 extern const u8 gText_ThatIsntAnEgg[];
-extern const u8 gText_PkmnCantBeTradedNow[];
 extern const u8 gText_OtherTrainersPkmnCantBeTraded[];
-extern const u8 gText_EggCantBeTradedNow[];
 extern const u8 gText_OtherTrainerCantAcceptPkmn[];
 extern const u8 gText_CantTradeWithTrainer[];
 
@@ -3154,5 +3047,99 @@ extern const u8 gText_YourName[];
 extern const u8 gText_BoxName[];
 extern const u8 gText_PkmnsNickname[];
 extern const u8 gText_TellHimTheWords[];
+
+// Rotom Forms
+extern const u8 gText_MicrowaveOven[];
+extern const u8 gText_WashingMachine[];
+extern const u8 gText_Refrigerator[];
+extern const u8 gText_ElectricFan[];
+extern const u8 gText_Lawnmower[];
+extern const u8 gText_Recall[];
+
+// Strange Space
+extern const u8 gText_Group1[];
+extern const u8 gText_Group2[];
+extern const u8 gText_Group3[];
+extern const u8 gText_Group4[];
+extern const u8 gText_Group5[];
+extern const u8 gText_Group6[];
+extern const u8 gText_Leave[];
+
+// Fossils
+extern const u8 gText_HelixFossil[];
+extern const u8 gText_DomeFossil[];
+extern const u8 gText_OldAmber[];
+extern const u8 gText_ArmorFossil[];
+extern const u8 gText_SkullFossil[];
+extern const u8 gText_OddKeystone[];
+extern const u8 gText_CoverFossil[];
+extern const u8 gText_PlumeFossil[];
+extern const u8 gText_JawFossil[];
+extern const u8 gText_SailFossil[];
+extern const u8 gText_FossilizedBird[];
+extern const u8 gText_FossilizedDino[];
+extern const u8 gText_FossilizedDrake[];
+extern const u8 gText_FossilizedFish[];
+extern const u8 gText_Next[];
+extern const u8 gText_Back[];
+
+// Kanto Starters
+extern const u8 gText_Bulbasaur[];
+extern const u8 gText_Charmander[];
+extern const u8 gText_Squirtle[];
+
+// Sinnoh Starters
+extern const u8 gText_Turtwig[];
+extern const u8 gText_Chimchar[];
+extern const u8 gText_Piplup[];
+
+// Unova Starters
+extern const u8 gText_Snivy[];
+extern const u8 gText_Tepig[];
+extern const u8 gText_Oshawott[];
+
+// Kalos Starters
+extern const u8 gText_Chespin[];
+extern const u8 gText_Fennekin[];
+extern const u8 gText_Froakie[];
+
+// Alola Starters
+extern const u8 gText_Rowlet[];
+extern const u8 gText_Litten[];
+extern const u8 gText_Popplio[];
+
+// Galar Starters
+extern const u8 gText_Grookey[];
+extern const u8 gText_Scorbunny[];
+extern const u8 gText_Sobble[];
+
+// Exp. Share
+extern const u8 gText_ExpShareOn[];
+extern const u8 gText_ExpShareOff[];
+
+// Party Screen Sub-menu
+extern const u8 gText_Moves_Menu[];
+extern const u8 gText_Nickname[];
+
+// Pokenav Condition Sub-menu
+extern const u8 gText_Pokenav_Access_PC[];
+extern const u8 gText_Pokenav_Cannot_Access_PC[];
+
+// Partner Eevee Moves
+extern const u8 gText_Bouncy_Bubble[];
+extern const u8 gText_Buzzy_Buzz[];
+extern const u8 gText_Sizzly_Slide[];
+extern const u8 gText_Glitzy_Glow[];
+extern const u8 gText_Baddy_Bad[];
+extern const u8 gText_Sappy_Seed[];
+extern const u8 gText_Freezy_Frost[];
+extern const u8 gText_Sparkly_Swirl[];
+extern const u8 gText_Veevee_Volley[];
+
+// Partner Pikachu Moves
+extern const u8 gText_Floaty_Fall[];
+extern const u8 gText_Splishy_Splash[];
+extern const u8 gText_Zippy_Zap[];
+extern const u8 gText_Pika_Papow[];
 
 #endif // GUARD_STRINGS_H

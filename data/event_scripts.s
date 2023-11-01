@@ -1,8 +1,9 @@
+#include "config/battle.h"
+#include "config/item.h"
 #include "constants/global.h"
 #include "constants/apprentice.h"
 #include "constants/battle.h"
 #include "constants/battle_arena.h"
-#include "constants/battle_config.h"
 #include "constants/battle_dome.h"
 #include "constants/battle_factory.h"
 #include "constants/battle_frontier.h"
@@ -1058,5 +1059,35 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
-    .include "data/scripts/dexnav.inc"
-    
+
+	.include "data/maps/MeteorFalls_Peak/scripts.inc"
+
+	.include "data/maps/DeepPetalburgWoods/scripts.inc"
+	.include "data/scripts/change_deoxys_form.inc"
+
+	.include "data/maps/BondLab/scripts.inc"
+
+	.include "data/maps/StrangeSpacePlains/scripts.inc"
+
+	.include "data/maps/StrangeSpace/scripts.inc"
+	.include "data/scripts/rotom.inc"
+
+	.include "data/maps/UnderwaterDeepPetalburgWoods/scripts.inc"
+
+	.include "data/maps/UnderwaterCave/scripts.inc"
+
+	.include "data/maps/StrangeSpaceDesert/scripts.inc"
+
+	.include "data/maps/StrangeSpaceIce/scripts.inc"
+
+	.include "data/maps/StrangeSpaceVolcano/scripts.inc"
+
+	.include "data/maps/StrangeSpaceCave/scripts.inc"
+
+	.include "data/maps/StrangeSpaceForest/scripts.inc"
+
+	.include "data/maps/StrangeSpaceMountain/scripts.inc"
+
+	.include "data/maps/StrangeSpaceLake/scripts.inc"
+
+	.include "data/maps/StrangeSpaceVoid/scripts.inc"

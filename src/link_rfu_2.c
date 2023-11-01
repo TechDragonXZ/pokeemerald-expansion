@@ -61,7 +61,7 @@ struct SioInfo
     u8 filler[92];
 };
 
-// Struct is mostly empty, presumably because usage of 
+// Struct is mostly empty, presumably because usage of
 // its fields was largely removed before release
 struct RfuDebug
 {
@@ -1115,7 +1115,7 @@ static void RfuHandleReceiveCommand(u8 unused)
                 {
                     gRfu.recvBlock[i].receiving = RECV_STATE_FINISHED;
                     Rfu_SetBlockReceivedFlag(i);
-                    if (GetHostRfuGameData()->activity == (ACTIVITY_CHAT | IN_UNION_ROOM) && gReceivedRemoteLinkPlayers != 0 && gRfu.parentChild == MODE_CHILD)
+                    if (GetHostRfuGameData()->activity == (ACTIVITY_CHAT | IN_UNION_ROOM) && gReceivedRemoteLinkPlayers && gRfu.parentChild == MODE_CHILD)
                         ValidateAndReceivePokemonSioInfo(gBlockRecvBuffer);
                 }
             }
@@ -1643,7 +1643,7 @@ bool32 RfuTryDisconnectLeavingChildren(void)
 {
     u8 childrenLeaving = 0;
     s32 i;
-    
+
     // Check all children, get those waiting to be disconnected
     for (i = 0; i < RFU_CHILD_MAX; i++)
     {
@@ -1918,7 +1918,8 @@ static void Task_PlayerExchangeUpdate(u8 taskId)
         for (i = 0; i < RFU_CHILD_MAX; i++)
             sio->linkPlayerIdx[i] = gRfu.linkPlayerIdx[i];
         memcpy(sio->linkPlayers, gLinkPlayers, sizeof(gLinkPlayers));
-        if (SendBlock(0, gBlockSendBuffer, 0xa0))
+        // Send SioInfo but exclude the 92 unused bytes at the end
+        if (SendBlock(0, gBlockSendBuffer, offsetof(struct SioInfo, filler)))
             gTasks[taskId].tState++;
         break;
     case 5:
@@ -2123,7 +2124,7 @@ void SetUnionRoomChatPlayerData(u32 numPlayers)
                 // Only trainerId is shifted by the number of children, so the active flag and gender
                 // are only ever set for the first child
                 partnerInfo |= ((PINFO_ACTIVE_FLAG
-                             | ((gLinkPlayers[gRfu.linkPlayerIdx[i]].gender & 1) << PINFO_GENDER_SHIFT) 
+                             | ((gLinkPlayers[gRfu.linkPlayerIdx[i]].gender & 1) << PINFO_GENDER_SHIFT)
                              | (gLinkPlayers[gRfu.linkPlayerIdx[i]].trainerId & PINFO_TID_MASK)) << (numConnectedChildren * 8));
                 numConnectedChildren++;
                 if (numConnectedChildren == numPlayers - 1)
@@ -2477,7 +2478,7 @@ static void LinkManagerCB_UnionRoom(u8 msg, u8 paramCount)
             rfu_LMAN_stopManager(FALSE);
         }
 
-        if (gRfuLinkStatus->parentChild == MODE_NEUTRAL 
+        if (gRfuLinkStatus->parentChild == MODE_NEUTRAL
             && !lman.pcswitch_flag
             && FuncIsActiveTask(Task_UnionRoomListen) == TRUE)
             gRfu.state = RFUSTATE_UR_CONNECT;
@@ -2525,9 +2526,8 @@ u8 RfuGetStatus(void)
 
 bool32 RfuHasErrored(void)
 {
-    // RFU_STATUS_OK will underflow here intentionally
-    u32 var = RfuGetStatus() - 1;
-    if (var < RFU_STATUS_CONNECTION_ERROR)
+    u32 status = RfuGetStatus();
+    if (status == RFU_STATUS_FATAL_ERROR || status == RFU_STATUS_CONNECTION_ERROR)
         return TRUE;
     else
         return FALSE;
@@ -2656,7 +2656,7 @@ static u8 GetPartnerIndexByNameAndTrainerID(const u8 *name, u16 id)
 
     for (i = 0; i < RFU_CHILD_MAX; i++)
     {
-        u16 trainerId = ReadU16(gRfuLinkStatus->partner[i].gname + 2);
+        u16 trainerId = ReadU16(((struct RfuGameData *)gRfuLinkStatus->partner[i].gname)->compatibility.playerTrainerId);
         if (IsRfuSerialNumberValid(gRfuLinkStatus->partner[i].serialNo)
             && !StringCompare(name, gRfuLinkStatus->partner[i].uname)
             && id == trainerId)
@@ -2682,9 +2682,9 @@ static void RfuReqDisconnectSlot(u32 slot)
 
 void RequestDisconnectSlotByTrainerNameAndId(const u8 *name, u16 id)
 {
-    u8 var = GetPartnerIndexByNameAndTrainerID(name, id);
-    if (var != 0xFF)
-        RfuReqDisconnectSlot(1 << var);
+    u8 index = GetPartnerIndexByNameAndTrainerID(name, id);
+    if (index != 0xFF)
+        RfuReqDisconnectSlot(1 << index);
 }
 
 void Rfu_DisconnectPlayerById(u32 playerIdx)
@@ -2816,7 +2816,7 @@ static bool32 IsPartnerActivityIncompatible(s16 activity, struct RfuGameData *pa
     }
     else if (activity == (ACTIVITY_TRADE | IN_UNION_ROOM))
     {
-        // Verify that the trade offered hasn't changed 
+        // Verify that the trade offered hasn't changed
         struct RfuGameData *original = &gRfu.parent;
         if (original->tradeSpecies == SPECIES_EGG)
         {

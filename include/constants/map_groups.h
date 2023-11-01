@@ -554,6 +554,7 @@
 #define MAP_NAVEL_ROCK_DOWN11                               (86 | (26 << 8))
 #define MAP_NAVEL_ROCK_BOTTOM                               (87 | (26 << 8))
 #define MAP_TRAINER_HILL_ELEVATOR                           (88 | (26 << 8))
+#define MAP_METEOR_FALLS_PEAK                               (89 | (26 << 8))
 
 // gMapGroup_IndoorRoute104Prototype
 #define MAP_ROUTE104_PROTOTYPE                          (0 | (27 << 8))
@@ -591,6 +592,24 @@
 // gMapGroup_IndoorRoute124
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 
-#define MAP_GROUPS_COUNT 34
+// gMapGroup_DeepPetalburgWoods
+#define MAP_DEEP_PETALBURG_WOODS            (0 | (34 << 8))
+#define MAP_BOND_LAB                        (1 | (34 << 8))
+#define MAP_UNDERWATER_DEEP_PETALBURG_WOODS (2 | (34 << 8))
+#define MAP_UNDERWATER_CAVE                 (3 | (34 << 8))
+
+// gMapGroup_StrangeSpace
+#define MAP_STRANGE_SPACE          (0 | (35 << 8))
+#define MAP_STRANGE_SPACE_PLAINS   (1 | (35 << 8))
+#define MAP_STRANGE_SPACE_DESERT   (2 | (35 << 8))
+#define MAP_STRANGE_SPACE_ICE      (3 | (35 << 8))
+#define MAP_STRANGE_SPACE_VOLCANO  (4 | (35 << 8))
+#define MAP_STRANGE_SPACE_CAVE     (5 | (35 << 8))
+#define MAP_STRANGE_SPACE_FOREST   (6 | (35 << 8))
+#define MAP_STRANGE_SPACE_MOUNTAIN (7 | (35 << 8))
+#define MAP_STRANGE_SPACE_LAKE     (8 | (35 << 8))
+#define MAP_STRANGE_SPACE_VOID     (9 | (35 << 8))
+
+#define MAP_GROUPS_COUNT 36
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

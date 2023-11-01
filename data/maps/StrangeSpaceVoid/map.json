@@ -1,0 +1,62 @@
+{
+  "id": "MAP_STRANGE_SPACE_VOID",
+  "name": "StrangeSpaceVoid",
+  "layout": "LAYOUT_STRANGE_SPACE_VOID",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_STRANGE_SPACE",
+  "requires_flash": false,
+  "weather": "WEATHER_FOG_HORIZONTAL",
+  "map_type": "MAP_TYPE_STRANGE_SPACE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_STRANGE_SPACE_LAKE",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 30,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_STRANGE_SPACE_CAVE",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 6,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_STRANGE_SPACE_FOREST",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 31,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_STRANGE_SPACE_MOUNTAIN",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "StrangeSpaceVoid_ChangeWildMons"
+    }
+  ]
+}

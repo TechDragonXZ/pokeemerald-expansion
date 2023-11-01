@@ -121,9 +121,9 @@ Movement_PkmnCenterNurse_Bow:
 	delay_4
 	step_end
 
- EventScript_PkmnCenterNurse_PlayerTurn::
-   closemessage
-   applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-   waitmovement 0
-   release
-   end
+EventScript_PkmnCenterNurse_PlayerTurn::
+    closemessage
+    applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+    waitmovement 0
+    release
+    end

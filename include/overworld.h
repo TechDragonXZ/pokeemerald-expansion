@@ -40,6 +40,13 @@ struct LinkPlayerObjectEvent
     u8 movementMode;
 };
 
+enum {
+    REGION_HOENN,
+    REGION_KANTO,
+    REGION_SEVII,
+    REGION_DISTORTION_WROLD
+};
+
 extern struct WarpData gLastUsedWarp;
 extern struct LinkPlayerObjectEvent gLinkPlayerObjectEvents[4];
 
@@ -51,6 +58,7 @@ extern void (*gFieldCallback)(void);
 extern bool8 (*gFieldCallback2)(void);
 extern u8 gLocalLinkPlayerId;
 extern u8 gFieldLinkPlayerCount;
+extern bool8 gSysPcFromPokenav;
 
 extern const struct UCoords32 gDirectionToVectors[];
 
@@ -67,7 +75,7 @@ void LoadObjEventTemplatesFromHeader(void);
 void LoadSaveblockObjEventScripts(void);
 void SetObjEventTemplateCoords(u8 localId, s16 x, s16 y);
 void SetObjEventTemplateMovementType(u8 localId, u8 movementType);
-const struct MapLayout *GetMapLayout(void);
+const struct MapLayout *GetMapLayout(u16 mapLayoutId);
 void ApplyCurrentWarp(void);
 struct MapHeader const *const Overworld_GetMapHeaderByGroupAndId(u16 mapGroup, u16 mapNum);
 struct MapHeader const *const GetDestinationWarpMapHeader(void);

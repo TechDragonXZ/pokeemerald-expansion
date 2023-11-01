@@ -776,6 +776,168 @@ static const struct MenuAction MultichoiceList_Exit[] =
     {gText_Exit},
 };
 
+
+static const struct MenuAction MultichoiceList_PikachuEevee[] =
+{
+    {gText_Pikachu},
+    {gText_Eevee},
+};
+
+const struct MenuAction MultichoiceList_RotomAppliances[] = 
+{
+    {gText_MicrowaveOven},
+    {gText_WashingMachine},
+    {gText_Refrigerator},
+    {gText_ElectricFan},
+    {gText_Lawnmower},
+    {gText_Recall},
+};
+
+const struct MenuAction MultichoiceList_WildPokemonGroups[] = 
+{
+    {gText_Group1},
+    {gText_Group2},
+    {gText_Group3},
+    {gText_Leave},
+};
+
+const struct MenuAction MultichoiceList_WildPokemonGroupsTwo[] = 
+{
+    {gText_Group1},
+    {gText_Group2},
+    {gText_Leave},
+};
+
+const struct MenuAction MultichoiceList_WildPokemonGroupsSix[] = 
+{
+    {gText_Group1},
+    {gText_Group2},
+    {gText_Group3},
+    {gText_Group4},
+    {gText_Group5},
+    {gText_Group6},
+    {gText_Leave},
+};
+
+static const struct MenuAction MultichoiceList_Strange_Pillar1[] =
+{
+    {gText_HelixFossil},
+    {gText_DomeFossil},
+    {gText_OldAmber},
+    {gText_RootFossil},
+    {gText_Next},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Strange_Pillar2[] =
+{
+    {gText_ClawFossil},
+    {gText_ArmorFossil},
+    {gText_SkullFossil},
+    {gText_OddKeystone},
+    {gText_Next},
+    {gText_Back},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Strange_Pillar3[] =
+{
+    {gText_CoverFossil},
+    {gText_PlumeFossil},
+    {gText_JawFossil},
+    {gText_SailFossil},
+    {gText_Next},
+    {gText_Back},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Strange_Pillar4[] =
+{
+    {gText_FossilizedBird},
+    {gText_FossilizedDino},
+    {gText_FossilizedDrake},
+    {gText_FossilizedFish},
+    {gText_Back},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Kanto_Starters[] =
+{
+    {gText_Bulbasaur},
+    {gText_Charmander},
+    {gText_Squirtle},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Sinnoh_Starters[] =
+{
+    {gText_Turtwig},
+    {gText_Chimchar},
+    {gText_Piplup},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Unova_Starters[] =
+{
+    {gText_Snivy},
+    {gText_Tepig},
+    {gText_Oshawott},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Kalos_Starters[] =
+{
+    {gText_Chespin},
+    {gText_Fennekin},
+    {gText_Froakie},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Alola_Starters[] =
+{
+    {gText_Rowlet},
+    {gText_Litten},
+    {gText_Popplio},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Galar_Starters[] =
+{
+    {gText_Grookey},
+    {gText_Scorbunny},
+    {gText_Sobble},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Partner_Eevee_Moves[] =
+{
+    {gText_Baddy_Bad},
+    {gText_Bouncy_Bubble},
+    {gText_Buzzy_Buzz},
+    {gText_Freezy_Frost},
+    {gText_Glitzy_Glow},
+    {gText_Sappy_Seed},
+    {gText_Sizzly_Slide},
+    {gText_Veevee_Volley},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Partner_Pikachu_Moves[] =
+{
+    {gText_Floaty_Fall},
+    {gText_Pika_Papow},
+    {gText_Splishy_Splash},
+    {gText_Zippy_Zap},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Megastones_Z_Crystals[] =
+{
+    {gText_MegaStones},
+    {gText_ZCrystals},
+    {gText_Exit},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -898,6 +1060,24 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_SLATEPORT_TENT_RULES]       = MULTICHOICE(MultichoiceList_SlateportTentRules),
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
+    [MULTI_PARTNER]                    = MULTICHOICE(MultichoiceList_PikachuEevee),
+    [MULTI_ROTOM_APPLIANCES]           = MULTICHOICE(MultichoiceList_RotomAppliances),
+    [MULTI_WILD_POKEMON_GROUPS]        = MULTICHOICE(MultichoiceList_WildPokemonGroups),
+    [MULTI_WILD_POKEMON_GROUPS_TWO]    = MULTICHOICE(MultichoiceList_WildPokemonGroupsTwo),
+    [MULTI_WILD_POKEMON_GROUPS_SIX]    = MULTICHOICE(MultichoiceList_WildPokemonGroupsSix),
+    [MULTI_STRANGE_PILLAR1]            = MULTICHOICE(MultichoiceList_Strange_Pillar1),
+    [MULTI_STRANGE_PILLAR2]            = MULTICHOICE(MultichoiceList_Strange_Pillar2),
+    [MULTI_STRANGE_PILLAR3]            = MULTICHOICE(MultichoiceList_Strange_Pillar3),
+    [MULTI_STRANGE_PILLAR4]            = MULTICHOICE(MultichoiceList_Strange_Pillar4),
+    [MULTI_KANTO_STARTERS]             = MULTICHOICE(MultichoiceList_Kanto_Starters),
+    [MULTI_SINNOH_STARTERS]            = MULTICHOICE(MultichoiceList_Sinnoh_Starters),
+    [MULTI_UNOVA_STARTERS]             = MULTICHOICE(MultichoiceList_Unova_Starters),
+    [MULTI_KALOS_STARTERS]             = MULTICHOICE(MultichoiceList_Kalos_Starters),
+    [MULTI_ALOLA_STARTERS]             = MULTICHOICE(MultichoiceList_Alola_Starters),
+    [MULTI_GALAR_STARTERS]             = MULTICHOICE(MultichoiceList_Galar_Starters),
+    [MULTI_PARTNER_EEVEE_MOVES]        = MULTICHOICE(MultichoiceList_Partner_Eevee_Moves),
+    [MULTI_PARTNER_PIKACHU_MOVES]      = MULTICHOICE(MultichoiceList_Partner_Pikachu_Moves),
+    [MULTI_MEGA_Z_SHOP]                = MULTICHOICE(MultichoiceList_Megastones_Z_Crystals),
 };
 
 const u8 *const gStdStrings[] =
@@ -932,6 +1112,12 @@ const u8 *const gStdStrings[] =
     [STDSTRING_BATTLE_ARENA] = gText_BattleArena,
     [STDSTRING_BATTLE_PIKE] = gText_BattlePike,
     [STDSTRING_BATTLE_PYRAMID] = gText_BattlePyramid,
+
+    [STDSTRING_MEDICINE] = gText_Medicine,
+    [STDSTRING_BATTLEITEMS] = gText_BattleItems,
+    [STDSTRING_POWERUP] = gText_PowerUp,
+    [STDSTRING_MEGASTONES] = gText_MegaStones,
+    [STDSTRING_ZCRYSTALS] = gText_ZCrystals,
 };
 
 static const u8 sLinkServicesMultichoiceIds[] =

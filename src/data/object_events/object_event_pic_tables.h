@@ -2172,3 +2172,20 @@ static const struct SpriteFrameImage sPicTable_RubySapphireMay[] = {
     overworld_frame(gObjectEventPic_RubySapphireMayNormal, 2, 4, 7),
     overworld_frame(gObjectEventPic_RubySapphireMayNormal, 2, 4, 8),
 };
+
+static const struct SpriteFrameImage sPicTable_TMBall[] = {
+    obj_frame_tiles(gObjectEventPic_TMBall),
+};
+
+static const struct SpriteFrameImage sPicTable_Special_Item_Sparkle[] = {
+    overworld_frame(gObjectEventPic_Special_Item_Sparkle, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Special_Item_Sparkle, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Special_Item_Sparkle, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Special_Item_Sparkle, 2, 2, 3),
+    overworld_frame(gObjectEventPic_Special_Item_Sparkle, 2, 2, 4),
+    overworld_frame(gObjectEventPic_Special_Item_Sparkle, 2, 2, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_Strange_Pillar[] = {
+    obj_frame_tiles(gObjectEventPic_StrangePillar),
+};

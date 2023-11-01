@@ -1587,8 +1587,8 @@ void BerryTreeTimeUpdate(s32 minutes)
             {
                 *tree = gBlankBerryTree;
             }
-            else
-            {*/
+            else*/
+            {
                 s32 time = minutes;
 
                 while (time != 0)
@@ -1757,7 +1757,7 @@ static u8 GetBerryCountByBerryTreeId(u8 id)
 
 static u16 GetStageDurationByBerryType(u8 berry)
 {
-    return GetBerryInfo(berry)->stageDuration * 60;
+    return GetBerryInfo(berry)->stageDuration * 5;
 }
 
 void ObjectEventInteractionGetBerryTreeData(void)

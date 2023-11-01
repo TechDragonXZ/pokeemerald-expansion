@@ -3,7 +3,8 @@
 
 extern const u8 gMonIconPaletteIndices[];
 extern const u8 gMonIconPaletteIndicesFemale[];
-extern const u8 *const gMonIconTable[];
+extern const u8 *const gMonIconTable[NUM_SPECIES + 1];
+extern const u8 *const gMonIconTableFemale[NUM_SPECIES + 1];
 extern const struct SpritePalette gMonIconPaletteTable[];
 
 const u8 *GetMonIconTiles(u16 species, u32 personality);
@@ -23,9 +24,9 @@ void FreeAndDestroyMonIconSprite(struct Sprite *sprite);
 u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority, u32 personality);
 u8 UpdateMonIconFrame(struct Sprite *sprite);
 void LoadMonIconPalette(u16 species);
+void LoadMonIconPalettePersonality(u16 species, u32 personality);
 void SpriteCB_MonIcon(struct Sprite *sprite);
 void SetPartyHPBarSprite(struct Sprite *sprite, u8 animNum);
 u8 GetMonIconPaletteIndexFromSpecies(u16 species);
-void SafeFreeMonIconPalette(u16 species);
 
 #endif // GUARD_POKEMON_ICON_H

@@ -224,7 +224,8 @@ static const struct MenuAction sItemStorage_MenuActions[] =
 
 static const struct ItemSlot sNewGamePCItems[] =
 {
-    { ITEM_POTION, 1 },
+    { ITEM_POTION, 6 },
+    { ITEM_ORAN_BERRY, 4},
     { ITEM_NONE, 0 }
 };
 
@@ -290,8 +291,9 @@ static const struct ListMenuTemplate sListMenuTemplate_ItemStorage =
     .cursorShadowPal = 3,
     .lettersSpacing = FALSE,
     .itemVerticalPadding = 0,
-    .scrollMultiple = FALSE,
-    .fontId = FONT_NARROW
+    .scrollMultiple = LIST_NO_MULTIPLE_SCROLL,
+    .fontId = FONT_NARROW,
+    .cursorKind = CURSOR_BLACK_ARROW,
 };
 
 static const struct WindowTemplate sWindowTemplates_ItemStorage[ITEMPC_WIN_COUNT] =
@@ -1015,7 +1017,7 @@ static void ItemStorage_MoveCursor(s32 id, bool8 onInit, struct ListMenu *list)
         if (id != LIST_CANCEL)
             ItemStorage_DrawItemIcon(gSaveBlock1Ptr->pcItems[id].itemId);
         else
-            ItemStorage_DrawItemIcon(MSG_GO_BACK_TO_PREV);
+            ItemStorage_DrawItemIcon(ITEM_LIST_END);
         ItemStorage_PrintDescription(id);
     }
 }

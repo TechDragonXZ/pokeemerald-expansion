@@ -442,6 +442,13 @@ PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
 	msgbox PlayersHouse_1F_Text_PortsInSlateportLilycove, MSGBOX_DEFAULT
 	closemessage
 	delay 20
+	msgbox PlayersHouse_1F_Text_OtherTickets, MSGBOX_DEFAULT
+	closemessage
+	delay 20
+	giveitem ITEM_AURORA_TICKET
+	giveitem ITEM_MYSTIC_TICKET
+	closemessage
+	delay 20
 	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_MomApproachDadMale
 	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_MomApproachDadFemale
 	msgbox PlayersHouse_1F_Text_BetterGetBackToGym, MSGBOX_DEFAULT
@@ -451,6 +458,8 @@ PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
 	playse SE_DOOR
 	removeobject VAR_0x8009
 	setflag FLAG_RECEIVED_SS_TICKET
+	setflag FLAG_RECEIVED_AURORA_TICKET
+	setflag FLAG_RECEIVED_MYSTIC_TICKET
 	delay 30
 	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_MomApproachPlayerMale
 	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_MomApproachPlayerFemale

@@ -1,6 +1,6 @@
 // This determines how much higher above the usual position the enemy Pokémon
 // is during battle. Species that float or fly have nonzero values.
-const u8 gEnemyMonElevation[NUM_SPECIES] =
+const u8 gEnemyMonElevation[NUM_SPECIES + 1] =
 {
     [SPECIES_BUTTERFREE] = 10,
     [SPECIES_BEEDRILL] = 9,
@@ -9,7 +9,7 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_ZUBAT] = 16,
     [SPECIES_GOLBAT] = 10,
     [SPECIES_VENOMOTH] = 16,
-    [SPECIES_GEODUDE] = 16,
+    [SPECIES_GEODUDE] = 10,
     [SPECIES_MAGNEMITE] = 17,
     [SPECIES_MAGNETON] = 9,
     [SPECIES_GASTLY] = 10,
@@ -58,7 +58,6 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_LATIOS] = 6,
     [SPECIES_JIRACHI] = 14,
     [SPECIES_CHIMECHO] = 16,
-#if P_NEW_POKEMON == TRUE
     // Gen 4
     [SPECIES_MOTHIM] = 10,
     [SPECIES_COMBEE] = 8,
@@ -182,7 +181,6 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_VOLTORB_HISUIAN] = 1,
     [SPECIES_ELECTRODE_HISUIAN] = 4,
     [SPECIES_BRAVIARY_HISUIAN] = 3,
-#endif
     // Other Forms
     [SPECIES_UNOWN_B] = 8,
     [SPECIES_UNOWN_C] = 8,
@@ -214,7 +212,6 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_CASTFORM_SUNNY] = 5,
     [SPECIES_CASTFORM_RAINY] = 5,
     [SPECIES_CASTFORM_SNOWY] = 5,
-#if P_NEW_POKEMON == TRUE
     [SPECIES_ROTOM_HEAT] = 6,
     [SPECIES_ROTOM_WASH] = 6,
     [SPECIES_ROTOM_FROST] = 6,
@@ -271,5 +268,4 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_SINISTEA_ANTIQUE] = 10,
     [SPECIES_POLTEAGEIST_ANTIQUE] = 12,
     [SPECIES_ETERNATUS_ETERNAMAX] = 13,
-#endif
 };
