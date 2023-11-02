@@ -229,8 +229,8 @@ void RoamerMoveToOtherLocationSet(u8 index)
         // If moving after fighting the player, stalkers leave the area
         if (IsRoamerAt(index, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum))
         {
-            ROAMER(index)->locationMapGroup = MAP_GROUP(NONE);
-            ROAMER(index)->locationMapNum = MAP_NUM(NONE);
+            ROAMER(index)->locationMapGroup = MAP_GROUP(DEEP_PETALBURG_WOODS);
+            ROAMER(index)->locationMapNum = MAP_NUM(DEEP_PETALBURG_WOODS);
             return;
         }
         else
@@ -332,12 +332,12 @@ void CreateRoamerMonInstance(u8 index)
         
         ROAMER(index)->level = max(max(min(GetHighestLevelInPlayerParty() + SCALING_LEVEL_MODIFIER, SCALED_LEVEL_CAP), MIN_LEVEL), ROAMER(index)->level);
         CreateMonWithIVsPersonality(mon, ROAMER(index)->species, ROAMER(index)->level, ROAMER(index)->ivs, ROAMER(index)->personality);
-        evoSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, 0);
+        evoSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, 0, NULL);
         while (evoSpecies != SPECIES_NONE)
         {
             ROAMER(index)->species = evoSpecies;
             CreateMonWithIVsPersonality(mon, evoSpecies, ROAMER(index)->level, ROAMER(index)->ivs, ROAMER(index)->personality);
-            evoSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, 0);
+            evoSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, 0, NULL);
         }
     }
     else
