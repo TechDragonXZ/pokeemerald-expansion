@@ -28,6 +28,26 @@ MeteorFalls_StevensCave_EventScript_Defeated::
 	release
 	end
 
+MeteorFalls_StevensCave_SlidingPuzzle::
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, SLIDING_PUZZLE_KABUTO
+	setvar VAR_0x8005, FALSE // or TRUE if you want to display the solved puzzle
+	special DoSlidingPuzzle
+	waitstate
+	goto_if_eq VAR_RESULT, TRUE, EventScript_PuzzleSolved
+
+EventScript_PuzzleSolved::
+	lockall
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 5  @ shake delay
+	special ShakeCamera
+	waitstate
+	msgbox MeteorFalls_StevensCave_Text_What, MSGBOX_DEFAULT
+	closemessage
+	end
+
 MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst:
 	.string "STEVEN: Oh, wow, {PLAYER}{KUN}.\n"
 	.string "I'm amazed you knew where to find me.\p"
@@ -56,4 +76,8 @@ MeteorFalls_StevensCave_Text_MyPredictionCameTrue:
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "Fufufu, even I couldn't tell you that.$"
+
+MeteorFalls_StevensCave_Text_What:
+	.string "... What?\n"
+	.string "Nothing happened?$"
 
