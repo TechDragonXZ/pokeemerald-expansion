@@ -152,3 +152,4 @@
 	.include "src/tx_registered_items_menu.o"
 	.include "src/battle_controller_player.o"
 	.include "src/sliding_puzzle.o"
+	.include "src/option_plus_menu.o"

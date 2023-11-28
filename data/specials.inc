@@ -547,3 +547,4 @@ gSpecials::
 	def_special GetRotomNewSpecialMove
 	def_special CheckSpecies
 	def_special DoSlidingPuzzle
+	def_special BufferUnitSystemText
