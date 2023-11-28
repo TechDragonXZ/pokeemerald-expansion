@@ -1104,6 +1104,7 @@ const u8 *const gMonIconTable[NUM_SPECIES + 1] =
     [SPECIES_CASTFORM_SUNNY] = gMonIcon_CastformSunny,
     [SPECIES_CASTFORM_RAINY] = gMonIcon_CastformRainy,
     [SPECIES_CASTFORM_SNOWY] = gMonIcon_CastformSnowy,
+    [SPECIES_CASTFORM_SANDY] = gMonIcon_CastformSandy,
     [SPECIES_DEOXYS_ATTACK] = gMonIcon_DeoxysAttack,
     [SPECIES_DEOXYS_DEFENSE] = gMonIcon_DeoxysDefense,
     [SPECIES_DEOXYS_SPEED] = gMonIcon_DeoxysSpeed,
@@ -2532,6 +2533,7 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_BASCULEGION_FEMALE] = 0,
     [SPECIES_PIKACHU_PARTNER] = 2,
     [SPECIES_EEVEE_PARTNER] = 2,
+    [SPECIES_CASTFORM_SANDY] = 0,
 #endif
     [SPECIES_EGG] = 1,
 };

@@ -834,6 +834,8 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_MYSTIC_SLASH] = _("Mystic Slash"),
     [MOVE_DRACO_SWARM] = _("Draco Swarm"),
     [MOVE_DISASTER_WARN] = _("Disaster Warn"),
+    [MOVE_HIDDEN_EXPLOSION] = _("Hidden Explosion"),
+    [MOVE_FROSTBURN] = _("Frostburn"),
 };
 #else
 // 12 letters
@@ -1671,6 +1673,8 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_MYSTIC_SLASH] = _("Mystic Slash"),
     [MOVE_DRACO_SWARM] = _("Draco Swarm"),
     [MOVE_DISASTER_WARN] = _("Disas. Warn"),
+    [MOVE_HIDDEN_EXPLOSION] = _("Hid. Explos."),
+    [MOVE_FROSTBURN] = _("Frostburn"),
 };
 #endif
 

@@ -1711,6 +1711,14 @@
       "y": 7,
       "width": 2,
       "height": 2
+    },
+    {
+      "map_section": "MAPSEC_AEROWAY_ISLAND",
+      "name": "AEROWAY ISLAND",
+      "x": 23,
+      "y": 2,
+      "width": 1,
+      "height": 1
     }
   ]
 }

@@ -414,7 +414,11 @@
 #define EFFECT_MORTAL_SPIN                  408
 #define EFFECT_GIGATON_HAMMER               409
 #define EFFECT_SALT_CURE                    410
+#define EFFECT_HIDDEN_EXPLOSION             411
+#define EFFECT_ACC_DOWN_TWO_TYPED           412
+#define EFFECT_FROSTBURN_HIT                413
+#define EFFECT_DELAY_TWO_TYPED              414
 
-#define NUM_BATTLE_MOVE_EFFECTS             411
+#define NUM_BATTLE_MOVE_EFFECTS             415
 
 #endif  // GUARD_CONSTANTS_BATTLE_MOVE_EFFECTS_H

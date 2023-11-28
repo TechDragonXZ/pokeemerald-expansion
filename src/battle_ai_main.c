@@ -878,6 +878,10 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                     if (moveType == TYPE_ELECTRIC && !IsMoveRedirectionPrevented(move, aiData->abilities[battlerAtk]))
                         RETURN_SCORE_MINUS(20);
                     break;
+                case ABILITY_SURGING_BOND:
+                    if (moveType == TYPE_ELECTRIC && !IsMoveRedirectionPrevented(move, aiData->abilities[battlerAtk]))
+                        RETURN_SCORE_MINUS(20);
+                    break;
                 case ABILITY_STORM_DRAIN:
                     if (moveType == TYPE_WATER && !IsMoveRedirectionPrevented(move, aiData->abilities[battlerAtk]))
                         RETURN_SCORE_MINUS(20);
@@ -1644,6 +1648,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 score -= 10;
             break;
         case EFFECT_FUTURE_SIGHT:
+        case EFFECT_DELAY_TWO_TYPED:
             if (gSideStatuses[GetBattlerSide(battlerDef)] & SIDE_STATUS_FUTUREATTACK
               || gSideStatuses[GetBattlerSide(battlerAtk)] & SIDE_STATUS_FUTUREATTACK)
                 score -= 12;
@@ -2867,6 +2872,14 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                         RETURN_SCORE_PLUS(1);
                     }
                     break;
+                case ABILITY_SURGING_BOND:
+                    if (moveType == TYPE_ELECTRIC
+                      && HasMoveWithSplit(battlerAtkPartner, SPLIT_SPECIAL)
+                      && BattlerStatCanRise(battlerAtkPartner, atkPartnerAbility, STAT_SPATK))
+                    {
+                        RETURN_SCORE_PLUS(1);
+                    }
+                    break;
                 case ABILITY_WATER_ABSORB:
                 case ABILITY_DRY_SKIN:
                     if (!(AI_THINKING_STRUCT->aiFlags & AI_FLAG_HP_AWARE))
@@ -3655,6 +3668,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
     case EFFECT_SPECIAL_ATTACK_DOWN_HIT:
     case EFFECT_SPECIAL_DEFENSE_DOWN_HIT:
     case EFFECT_ACCURACY_DOWN_HIT:
+    case EFFECT_ACC_DOWN_TWO_TYPED:
     case EFFECT_EVASION_DOWN_HIT:
         if (sereneGraceBoost && aiData->abilities[battlerDef] != ABILITY_CONTRARY)
             score += 2;
@@ -3974,7 +3988,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         //TODO - track entire opponent party data to determine hazard effectiveness
         break;
     case EFFECT_FORESIGHT:
-        if (aiData->abilities[battlerAtk] == ABILITY_SCRAPPY)
+        if (aiData->abilities[battlerAtk] == ABILITY_SCRAPPY || aiData->abilities[battlerAtk] == ABILITY_UNSTABLE_BOND)
             break;
         else if (gBattleMons[battlerDef].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE
          || (IS_BATTLER_OF_TYPE(battlerDef, TYPE_GHOST)
@@ -4696,7 +4710,8 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
     case EFFECT_ION_DELUGE:
         if ((aiData->abilities[battlerAtk] == ABILITY_VOLT_ABSORB
           || aiData->abilities[battlerAtk] == ABILITY_MOTOR_DRIVE
-          || aiData->abilities[battlerAtk] == ABILITY_LIGHTNING_ROD)
+          || aiData->abilities[battlerAtk] == ABILITY_LIGHTNING_ROD
+          || aiData->abilities[battlerAtk] == ABILITY_SURGING_BOND)
           && gBattleMoves[predictedMove].type == TYPE_NORMAL)
             score += 2;
         break;
@@ -4765,7 +4780,8 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         if (predictedMove != MOVE_NONE
          && (aiData->abilities[battlerAtk] == ABILITY_VOLT_ABSORB
           || aiData->abilities[battlerAtk] == ABILITY_MOTOR_DRIVE
-          || aiData->abilities[battlerAtk] == ABILITY_LIGHTNING_ROD))
+          || aiData->abilities[battlerAtk] == ABILITY_LIGHTNING_ROD
+          || aiData->abilities[battlerAtk] == ABILITY_SURGING_BOND))
         {
             score += 3;
         }

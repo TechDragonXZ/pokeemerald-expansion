@@ -3207,6 +3207,22 @@ void SetMoveEffect(bool32 primary, u32 certain)
                     SetMoveEffect(FALSE, 0);
                 }
                 break;
+            case MOVE_EFFECT_FROSTBURN:
+                if (gBattleMons[gEffectBattler].status1)
+                {
+                    gBattlescriptCurrInstr++;
+                }
+                else
+                {
+                #if B_USE_FROSTBITE == TRUE
+                    static const u8 sFrostburnEffects[] = { MOVE_EFFECT_BURN, MOVE_EFFECT_FROSTBITE };
+                #else
+                    static const u8 sFrostburnEffects[] = { MOVE_EFFECT_BURN, MOVE_EFFECT_FREEZE };
+                #endif
+                    gBattleScripting.moveEffect = RandomElement(RNG_FROSTBURN, sFrostburnEffects);
+                    SetMoveEffect(FALSE, 0);
+                }
+                break;
             case MOVE_EFFECT_CHARGING:
                 gBattleMons[gEffectBattler].status2 |= STATUS2_MULTIPLETURNS;
                 gLockedMoves[gEffectBattler] = gCurrentMove;
@@ -5375,6 +5391,7 @@ static void Cmd_moveend(void)
                 && (moveType == TYPE_FIRE
             #if B_BURN_HIT_THAW >= GEN_6
                     || gBattleMoves[gCurrentMove].effect == EFFECT_BURN_HIT
+                    || gBattleMoves[gCurrentMove].effect == EFFECT_FROSTBURN_HIT
             #endif
                 )
                 && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
@@ -13642,6 +13659,8 @@ static void Cmd_trysetfutureattack(void)
 
         if (gCurrentMove == MOVE_DOOM_DESIRE)
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOOM_DESIRE;
+        else if (gCurrentMove == MOVE_DISASTER_WARN)
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DISASTER_WARN;
         else
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_FUTURE_SIGHT;
 

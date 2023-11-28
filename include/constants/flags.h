@@ -80,7 +80,7 @@
 #define FLAG_BOND_DEFEATED_INITAL     0x43 // Inital Defeat of Scientist Bond Flag
 #define FLAG_BOND_DEFEATED_EEVEE      0x44 // Second Defeat of Scientist Bond (Eevee) Flag
 #define FLAG_BOND_DEFEATED_PIKACHU    0x45 // Second Defeat of Scientist Bond (Pikachu) Flag
-#define FLAG_UNUSED_0x046             0x46 // Unused Flag
+#define FLAG_DEFEATED_WAILMER         0x46 // Player Defeated/Captured Wailmer Flag
 #define FLAG_UNUSED_0x047             0x47 // Unused Flag
 #define FLAG_UNUSED_0x048             0x48 // Unused Flag
 #define FLAG_UNUSED_0x049             0x49 // Unused Flag
@@ -1398,7 +1398,7 @@
 #define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2C)
 #define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2D)
 
-#define FLAG_UNUSED_0x88E                           (SYSTEM_FLAGS + 0x2E) // Unused Flag
+#define FLAG_VISITED_AEROWAY_ISLAND                 (SYSTEM_FLAGS + 0x2E) // Visited Aeroway Island Flag
 #define FLAG_UNUSED_0x88F                           (SYSTEM_FLAGS + 0x2F) // Unused Flag
 
 #define FLAG_SYS_TV_HOME                            (SYSTEM_FLAGS + 0x30)
@@ -1570,7 +1570,7 @@
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
 #define FLAG_ROTOM_PC_USED                          (DAILY_FLAGS_START + 0x3)  // Used Rotom PC Flag
-#define FLAG_UNUSED_0x924                           (DAILY_FLAGS_START + 0x4)  // Unused Flag
+#define FLAG_ROB_DEFEATED                           (DAILY_FLAGS_START + 0x4)  // Defeated Gentleman Rob Flag
 #define FLAG_UNUSED_0x925                           (DAILY_FLAGS_START + 0x5)  // Unused Flag
 #define FLAG_UNUSED_0x926                           (DAILY_FLAGS_START + 0x6)  // Unused Flag
 #define FLAG_UNUSED_0x927                           (DAILY_FLAGS_START + 0x7)  // Unused Flag

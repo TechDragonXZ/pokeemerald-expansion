@@ -5655,12 +5655,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         #else
             .power = 95,
         #endif
-        .effect = EFFECT_ACCURACY_DOWN_HIT,
+        .effect = EFFECT_ACC_DOWN_TWO_TYPED,
         .type = TYPE_WATER,
         .accuracy = 85,
         .pp = 10,
         .secondaryEffectChance = 30,
         .target = MOVE_TARGET_BOTH,
+        .argument = TYPE_GROUND,
         .priority = 0,
         .split = SPLIT_SPECIAL,
         .zMoveEffect = Z_EFFECT_NONE,
@@ -13856,7 +13857,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_DISASTER_WARN] =
     {
         .power = 75,
-        .effect = EFFECT_TWO_TYPED_MOVE,
+        .effect = EFFECT_DELAY_TWO_TYPED,
         .type = TYPE_DARK,
         .accuracy = 80,
         .pp = 8,
@@ -13864,7 +13865,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 2,
         .makesContact = TRUE,
-        .ignoresProtect = FALSE,
+        .ignoresProtect = TRUE,
         .mirrorMoveBanned = FALSE,
         .ignoresKingsRock = FALSE,
         .highCritRatio = TRUE,
@@ -13876,10 +13877,41 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .ignoreTypeIfFlyingAndUngrounded = TRUE,
         .ignoresTargetDefenseEvasionStages = TRUE,
         .ignoresTargetAbility = TRUE,
-        .ignoresSubstitute = FALSE,
+        .ignoresSubstitute = TRUE,
         .split = SPLIT_PHYSICAL,
         .argument = TYPE_FAIRY,
         .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_HIDDEN_EXPLOSION] =
+    {
+        .effect = EFFECT_HIDDEN_EXPLOSION,
+        .power = 250,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_FROSTBURN] =
+    {
+        .effect = EFFECT_FROSTBURN_HIT,
+        .power = 60,
+        .type = TYPE_ICE,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 50,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .argument = TYPE_FIRE,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .sheerForceBoost = TRUE,
+        .thawsUser = TRUE,
     },
 
     // Z-Moves

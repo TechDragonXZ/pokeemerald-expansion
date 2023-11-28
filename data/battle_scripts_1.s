@@ -437,6 +437,10 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectMortalSpin              @ EFFECT_MORTAL_SPIN
 	.4byte BattleScript_EffectHit                     @ EFFECT_GIGATON_HAMMER
 	.4byte BattleScript_EffectSaltCure                @ EFFECT_SALT_CURE
+	.4byte BattleScript_EffectExplosion               @ EFFECT_HIDDEN_EXPLOSION
+	.4byte BattleScript_EffectAccuracyDownHit         @ EFFECT_ACC_DOWN_TWO_TYPED
+	.4byte BattleScript_EffectFrostburnHit            @ EFFECT_FROSTBURN_HIT
+	.4byte BattleScript_MonTookDisaster               @ EFFECT_DELAY_TWO_TYPED
 
 BattleScript_EffectSaltCure:
 	call BattleScript_EffectHit_Ret
@@ -10374,3 +10378,52 @@ BattleScript_EffectSnow::
 	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_STRONG_WINDS, BattleScript_MysteriousAirCurrentBlowsOn
 	setsnow
 	goto BattleScript_MoveWeatherChange
+
+	
+BattleScript_EffectFrostburnHit::
+	setmoveeffect MOVE_EFFECT_FROSTBURN
+	goto BattleScript_EffectHit
+
+BattleScript_MonTookDisaster::
+	printstring STRINGID_PKMNTOOKDISASTER
+	waitmessage B_WAIT_TIME_LONG
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_DISASTER_WARN, BattleScript_CheckDoomDesireMissDisaster
+	accuracycheck BattleScript_DisasterAttackMiss, MOVE_DISASTER_WARN
+	goto BattleScript_DisasterAttackAnimate
+BattleScript_CheckDoomDesireMissDisaster::
+	accuracycheck BattleScript_DisasterAttackMiss, MOVE_DOOM_DESIRE
+BattleScript_DisasterAttackAnimate::
+	critcalc
+	damagecalc
+	adjustdamage
+	jumpifmovehadnoeffect BattleScript_DoDisasterAttackResult
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_DISASTER_WARN, BattleScript_DisasterHitAnimDoomDesire
+	playanimation BS_ATTACKER, B_ANIM_FUTURE_SIGHT_HIT
+	goto BattleScript_DoDisasterAttackHit
+BattleScript_DisasterHitAnimDoomDesire::
+	playanimation BS_ATTACKER, B_ANIM_DOOM_DESIRE_HIT
+BattleScript_DoDisasterAttackHit::
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_DoDisasterAttackResult:
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_TARGET
+	checkteamslost BattleScript_DisasterAttackEnd
+BattleScript_DisasterAttackEnd::
+	moveendcase MOVEEND_RAGE
+	moveendfromto MOVEEND_ITEM_EFFECTS_ALL, MOVEEND_UPDATE_LAST_MOVES
+	setbyte gMoveResultFlags, 0
+	end2
+BattleScript_DisasterAttackMiss::
+	pause B_WAIT_TIME_SHORT
+	sethword gMoveResultFlags, MOVE_RESULT_FAILED
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	sethword gMoveResultFlags, 0
+	end2

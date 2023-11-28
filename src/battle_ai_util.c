@@ -1562,6 +1562,7 @@ bool32 ShouldSetSandstorm(u32 battler, u32 ability, u32 holdEffect)
 
     if (ability == ABILITY_SAND_VEIL
       || ability == ABILITY_SAND_RUSH
+      || ability == ABILITY_FORECAST
       || ability == ABILITY_SAND_FORCE
       || ability == ABILITY_OVERCOAT
       || ability == ABILITY_MAGIC_GUARD

@@ -1676,7 +1676,7 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     *(txtPtr)++ = EXT_CTRL_CODE_FONT;
     *(txtPtr)++ = FONT_NORMAL;
 
-    if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER)
+    if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER || moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_EXPLOSION)
     {
         u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_ATK_IV) & 1) << 1)

@@ -289,6 +289,8 @@ static const u8 sToxicDebrisDescription[] = _("Throws poison spikes if hit.");
 static const u8 sArmorTailDescription[] = _("Protects from priority.");
 static const u8 sEarthEaterDescription[] = _("Eats ground to heal HP.");
 static const u8 sMyceliumMightDescription[] = _("Status moves never fail.");
+static const u8 sSurgingBondDescription[] = _("Paralyzes, draws Electricity.");
+static const u8 sUnstableBondDescription[] = _("Boosts STAB, hits Ghosts.");
 
 #if B_EXPANDED_ABILITY_NAMES == TRUE
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -592,6 +594,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ARMOR_TAIL] = _("Armor Tail"),
     [ABILITY_EARTH_EATER] = _("Earth Eater"),
     [ABILITY_MYCELIUM_MIGHT] = _("Mycelium Might"),
+    [ABILITY_SURGING_BOND] = _("Surging Bond"),
+    [ABILITY_UNSTABLE_BOND] = _("Unstable Bond"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -895,6 +899,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ARMOR_TAIL] = _("Armor Tail"),
     [ABILITY_EARTH_EATER] = _("Earth Eater"),
     [ABILITY_MYCELIUM_MIGHT] = _("MceliumMight"),
+    [ABILITY_SURGING_BOND] = _("Surging Bond"),
+    [ABILITY_UNSTABLE_BOND] = _("UnstableBond"),
 };
 #endif
 
@@ -1199,4 +1205,6 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_ARMOR_TAIL] = sArmorTailDescription,
     [ABILITY_EARTH_EATER] = sEarthEaterDescription,
     [ABILITY_MYCELIUM_MIGHT] = sMyceliumMightDescription,
+    [ABILITY_SURGING_BOND] = sSurgingBondDescription,
+    [ABILITY_UNSTABLE_BOND] = sUnstableBondDescription,
 };

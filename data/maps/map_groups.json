@@ -35,7 +35,8 @@
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
     "gMapGroup_DeepPetalburgWoods",
-    "gMapGroup_StrangeSpace"
+    "gMapGroup_StrangeSpace",
+    "gMapGroup_IndoorAeroway"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -94,7 +95,8 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "AerowayIsland"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -641,5 +643,9 @@
     "StrangeSpaceMountain",
     "StrangeSpaceLake",
     "StrangeSpaceVoid"
+  ],
+  "gMapGroup_IndoorAeroway": [
+    "AerowayIsland_Cafe",
+    "AerowayIsland_Airport"
   ]
 }

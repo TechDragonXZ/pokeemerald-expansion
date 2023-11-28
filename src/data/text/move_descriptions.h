@@ -3272,6 +3272,14 @@ static const u8 sDisasterWarnDescription[] = _(
     "Always hits first, High crit ratio.\n"
     "Does Dark and Fairy-type damage.");
 
+static const u8 sHiddenExplosionDescription[] = _(
+    "Inflicts severe damage but\n"
+    "makes the user faint.");
+
+static const u8 sFrostburnDescription[] = _(
+    "Hits the foe with a harsh wind\n"
+    "May cause freezing or burning.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4114,4 +4122,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MYSTIC_SLASH - 1] = sMysticSlashDescription,
     [MOVE_DRACO_SWARM - 1] = sDracoSwarmDescription,
     [MOVE_DISASTER_WARN - 1] = sDisasterWarnDescription,
+    [MOVE_HIDDEN_EXPLOSION - 1] = sHiddenExplosionDescription,
+    [MOVE_FROSTBURN - 1] = sFrostburnDescription,
 };

@@ -63,6 +63,7 @@
 #define MAP_UNDERWATER_ROUTE129 (54 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE105 (55 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE125 (56 | (0 << 8))
+#define MAP_AEROWAY_ISLAND      (57 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
@@ -610,6 +611,10 @@
 #define MAP_STRANGE_SPACE_LAKE     (8 | (35 << 8))
 #define MAP_STRANGE_SPACE_VOID     (9 | (35 << 8))
 
-#define MAP_GROUPS_COUNT 36
+// gMapGroup_IndoorAeroway
+#define MAP_AEROWAY_ISLAND_CAFE    (0 | (36 << 8))
+#define MAP_AEROWAY_ISLAND_AIRPORT (1 | (36 << 8))
+
+#define MAP_GROUPS_COUNT 37
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

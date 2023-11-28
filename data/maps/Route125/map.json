@@ -27,6 +27,11 @@
       "map": "MAP_UNDERWATER_ROUTE125",
       "offset": 0,
       "direction": "dive"
+    },
+    {
+      "map": "MAP_AEROWAY_ISLAND",
+      "offset": -5,
+      "direction": "up"
     }
   ],
   "object_events": [

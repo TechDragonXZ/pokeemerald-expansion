@@ -670,8 +670,11 @@
 #define STRINGID_CURRENTMOVECANTSELECT                668
 #define STRINGID_TARGETISBEINGSALTCURED               669
 #define STRINGID_TARGETISHURTBYSALTCURE               670
+#define STRINGID_PKMNRAISEDSTATS                      671
+#define STRINGID_PKMNFORESAWDISASTER                  672
+#define STRINGID_PKMNTOOKDISASTER                     673
 
-#define BATTLESTRINGS_COUNT                           671
+#define BATTLESTRINGS_COUNT                           674
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -817,6 +820,7 @@
 // gFutureMoveUsedStringIds
 #define B_MSG_FUTURE_SIGHT 0
 #define B_MSG_DOOM_DESIRE  1
+#define B_MSG_DISASTER_WARN 2
 
 // gItemSwapStringIds
 #define B_MSG_ITEM_SWAP_TAKEN 0

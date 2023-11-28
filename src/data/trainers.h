@@ -10296,4 +10296,16 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_Bond2_Eevee),
     },
 
+    [TRAINER_ROB] =
+    {
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Rob"),
+        .items = {ITEM_MAX_POTION, ITEM_MAX_POTION, ITEM_REVIVE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_ACE_POKEMON,
+        .party = TRAINER_PARTY(sParty_Rob),
+    },
+
 };

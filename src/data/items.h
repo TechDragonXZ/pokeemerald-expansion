@@ -729,7 +729,7 @@ const struct Item gItems[] =
     [ITEM_PEWTER_CRUNCHIES] =
     {
         .name = _("PewtrCrnches"),
-        .price = 250,
+        .price = 350,
         .description = sPewterCrunchiesDesc,
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -9669,7 +9669,7 @@ const struct Item gItems[] =
     [ITEM_BERSERK_GENE] =
     {
         .name = _("Berserk Gene"),
-        .price = 20,
+        .price = 2500,
         .holdEffect = HOLD_EFFECT_BERSERK_GENE,
         .description = sBerserkGene,
         .pocket = POCKET_ITEMS,

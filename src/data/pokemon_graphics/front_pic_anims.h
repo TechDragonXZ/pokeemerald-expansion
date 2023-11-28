@@ -4173,6 +4173,16 @@ static const union AnimCmd sAnim_CastformSnowy_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_CastformSandy_1[] =
+{
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_FRAME(1, 12),
+    ANIMCMD_FRAME(0, 12),
+    ANIMCMD_FRAME(1, 29),
+    ANIMCMD_FRAME(0, 12),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_Volbeat_1[] =
 {
     ANIMCMD_FRAME(0, 11),
@@ -10895,6 +10905,7 @@ SINGLE_ANIMATION(Castform);
 SINGLE_ANIMATION(CastformSunny);
 SINGLE_ANIMATION(CastformRainy);
 SINGLE_ANIMATION(CastformSnowy);
+SINGLE_ANIMATION(CastformSandy);
 SINGLE_ANIMATION(Volbeat);
 SINGLE_ANIMATION(Illumise);
 SINGLE_ANIMATION(Lileep);
@@ -12734,6 +12745,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[NUM_SPECIES + 1] =
     [SPECIES_CASTFORM_SUNNY] = sAnims_CastformSunny,
     [SPECIES_CASTFORM_RAINY] = sAnims_CastformRainy,
     [SPECIES_CASTFORM_SNOWY] = sAnims_CastformSnowy,
+    [SPECIES_CASTFORM_SANDY] = sAnims_CastformSandy,
     [SPECIES_DEOXYS_ATTACK] = sAnims_DeoxysAttack,
     [SPECIES_DEOXYS_DEFENSE] = sAnims_DeoxysDefense,
     [SPECIES_DEOXYS_SPEED] = sAnims_DeoxysSpeed,

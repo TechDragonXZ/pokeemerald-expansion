@@ -11938,7 +11938,7 @@ static const struct TrainerMon sParty_Bond1[] = {
     },
     {
     .species = SPECIES_PIKACHU_PARTNER,
-    .ability = ABILITY_MOTOR_DRIVE,
+    .ability = ABILITY_SURGING_BOND,
     .lvl = 15,
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .nature = NATURE_HASTY,
@@ -11949,7 +11949,7 @@ static const struct TrainerMon sParty_Bond1[] = {
     },
     {
     .species = SPECIES_EEVEE_PARTNER,
-    .ability = ABILITY_SCRAPPY,
+    .ability = ABILITY_UNSTABLE_BOND,
     .lvl = 15,
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .nature = NATURE_ADAMANT,
@@ -11975,7 +11975,7 @@ static const struct TrainerMon sParty_Bond2_Pikachu[] = {
     },
     {
     .species = SPECIES_PIKACHU_PARTNER,
-    .ability = ABILITY_MOTOR_DRIVE,
+    .ability = ABILITY_SURGING_BOND,
     .lvl = 30,
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .nature = NATURE_HASTY,
@@ -12001,7 +12001,7 @@ static const struct TrainerMon sParty_Bond2_Eevee[] = {
     },
     {
     .species = SPECIES_EEVEE_PARTNER,
-    .ability = ABILITY_SCRAPPY,
+    .ability = ABILITY_UNSTABLE_BOND,
     .lvl = 30,
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .nature = NATURE_ADAMANT,
@@ -12009,6 +12009,55 @@ static const struct TrainerMon sParty_Bond2_Eevee[] = {
     .friendship = 255,
     .moves = {MOVE_LAST_RESORT, MOVE_VEEVEE_VOLLEY, MOVE_BOUNCY_BUBBLE, MOVE_CALM_MIND},
     .ball = BALL_PREMIER,
+    }
+};
+
+static const struct TrainerMon sParty_Rob[] = {
+    {
+    .species = SPECIES_VIKAVOLT,
+    .ability = ABILITY_LIQUID_VOICE,
+    .lvl = 50,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .nature = NATURE_MODEST,
+    .heldItem = ITEM_LEFTOVERS,
+    .friendship = 255,
+    .moves = {MOVE_THUNDERBOLT, MOVE_VOLT_SWITCH, MOVE_BUG_BUZZ, MOVE_ENERGY_BALL},
+    .ball = BALL_NET,
+    .isShiny = FALSE,
+    },
+    {
+    .species = SPECIES_PERSIAN_ALOLAN,
+    .ability = ABILITY_FUR_COAT,
+    .lvl = 50,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .nature = NATURE_TIMID,
+    .heldItem = ITEM_LIFE_ORB,
+    .friendship = 255,
+    .moves = {MOVE_DARK_PULSE, MOVE_SNARL, MOVE_SHADOW_BALL, MOVE_PARTING_SHOT},
+    .ball = BALL_MOON,
+    },
+    {
+    .species = SPECIES_LYCANROC_DUSK,
+    .ability = ABILITY_TOUGH_CLAWS,
+    .lvl = 50,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .nature = NATURE_JOLLY,
+    .heldItem = ITEM_HARD_STONE,
+    .friendship = 255,
+    .moves = {MOVE_ACCELEROCK, MOVE_ROCK_TOMB, MOVE_CRUNCH, MOVE_BULK_UP},
+    .ball = BALL_DUSK,
+    },
+    {
+    .species = SPECIES_PRIMARINA,
+    .ability = ABILITY_LIQUID_VOICE,
+    .lvl = 50,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .nature = NATURE_MODEST,
+    .heldItem = ITEM_PRIMARIUM_Z,
+    .friendship = 255,
+    .moves = {MOVE_SPARKLING_ARIA, MOVE_DAZZLING_GLEAM, MOVE_HYPER_VOICE, MOVE_ENCORE},
+    .ball = BALL_LUXURY,
+    .isShiny = TRUE,
     }
 };
 

@@ -23509,6 +23509,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_CASTFORM_SUNNY] = CASTFORM_SPECIES_INFO(TYPE_FIRE, BODY_COLOR_RED),
     [SPECIES_CASTFORM_RAINY] = CASTFORM_SPECIES_INFO(TYPE_WATER, BODY_COLOR_BLUE),
     [SPECIES_CASTFORM_SNOWY] = CASTFORM_SPECIES_INFO(TYPE_ICE, BODY_COLOR_WHITE),
+    [SPECIES_CASTFORM_SANDY] = CASTFORM_SPECIES_INFO(TYPE_ROCK, BODY_COLOR_BROWN),
 
     [SPECIES_DEOXYS_ATTACK] =
     {
@@ -24735,7 +24736,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},
-        .abilities = {ABILITY_ADAPTABILITY, ABILITY_ANTICIPATION, ABILITY_SCRAPPY},
+        .abilities = {ABILITY_UNSTABLE_BOND, ABILITY_NONE, ABILITY_NONE},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
@@ -24758,7 +24759,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY},
-        .abilities = {ABILITY_STATIC, ABILITY_LIGHTNING_ROD, ABILITY_MOTOR_DRIVE},
+        .abilities = {ABILITY_SURGING_BOND, ABILITY_NONE, ABILITY_NONE},
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },

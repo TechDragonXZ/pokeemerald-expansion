@@ -476,6 +476,7 @@ static const u16 sPoints_MoveEffect[NUM_BATTLE_MOVE_EFFECTS] =
     [EFFECT_SPECIAL_ATTACK_UP_HIT]      = 1,
     [EFFECT_VICTORY_DANCE]              = 0, // TODO: Assign points
     [EFFECT_FROSTBITE_HIT]              = 1,
+    [EFFECT_HIDDEN_EXPLOSION]           = 1,
 };
 
 static const u16 sPoints_Effectiveness[] =
@@ -782,6 +783,10 @@ void BattleTv_SetDataBasedOnString(u16 stringId)
     case STRINGID_PKMNCHOSEXASDESTINY:
         tvPtr->side[atkSide].doomDesireMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
         tvPtr->side[atkSide].doomDesireMoveSlot = moveSlot;
+        break;
+    case STRINGID_PKMNFORESAWDISASTER:
+        tvPtr->side[atkSide].futureSightMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
+        tvPtr->side[atkSide].futureSightMoveSlot = moveSlot;
         break;
     case STRINGID_FAINTINTHREE:
         tvPtr->side[atkSide].perishSongMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
