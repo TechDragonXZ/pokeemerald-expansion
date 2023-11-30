@@ -380,6 +380,7 @@ static const u16 sIgnoredPowerfulMoveEffects[] =
     EFFECT_OVERHEAT,
     EFFECT_MIND_BLOWN,
     EFFECT_MAKE_IT_RAIN,
+    EFFECT_STONE_CANNON,
     IGNORED_MOVES_END
 };
 
@@ -1571,7 +1572,8 @@ bool32 ShouldSetSandstorm(u32 battler, u32 ability, u32 holdEffect)
       || IS_BATTLER_OF_TYPE(battler, TYPE_STEEL)
       || IS_BATTLER_OF_TYPE(battler, TYPE_GROUND)
       || HasMoveEffect(battler, EFFECT_SHORE_UP)
-      || HasMoveEffect(battler, EFFECT_WEATHER_BALL))
+      || HasMoveEffect(battler, EFFECT_WEATHER_BALL)
+      || HasMove(battler, MOVE_STONE_CANNON))
     {
         return TRUE;
     }
@@ -1636,6 +1638,7 @@ bool32 ShouldSetSun(u32 battlerAtk, u32 atkAbility, u32 holdEffect)
       || atkAbility == ABILITY_LEAF_GUARD
       || atkAbility == ABILITY_SOLAR_POWER
       || atkAbility == ABILITY_HARVEST
+      || HasMove(battlerAtk, MOVE_FIRE_STORM)
       || HasMoveEffect(battlerAtk, EFFECT_SOLAR_BEAM)
       || HasMoveEffect(battlerAtk, EFFECT_MORNING_SUN)
       || HasMoveEffect(battlerAtk, EFFECT_SYNTHESIS)

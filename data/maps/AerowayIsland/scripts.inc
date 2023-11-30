@@ -26,8 +26,8 @@ AerowayIsland_Text_EntrySign:
 	.string "“The Interregional flying company.”$"
 
 AerowayIsland_Text_CafeSign:
-	.string "AEROWAY ISLAND CAFÉ\n"
-	.string "“The Interregional café.”$"
+	.string "AEROWAY ISLAND BATTLE CAFÉ\n"
+	.string "“The Interregional Battle & Dine café.”$"
 
 AerowayIsland_Text_AirPortSign:
 	.string "AEROWAY ISLAND AIR PORT\n"

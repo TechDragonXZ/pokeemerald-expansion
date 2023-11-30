@@ -811,6 +811,7 @@ static const u8 sText_TargetIsHurtBySaltCure[] = _("{B_DEF_NAME_WITH_PREFIX} is 
 static const u8 sText_PkmnRaisedStats[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its STATS!");
 static const u8 sText_PkmnForesawDisaster[] = _("{B_ATK_NAME_WITH_PREFIX} foresaw\na disaster!");
 static const u8 sText_PkmnTookDisaster[] = _("{B_DEF_NAME_WITH_PREFIX} took the\ndisaster!");
+static const u8 sText_PkmnGatheredSand[] = _("{B_ATK_NAME_WITH_PREFIX} gathered\nup sand from its surroundings!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1476,6 +1477,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNRAISEDSTATS - BATTLESTRINGS_TABLE_START] = sText_PkmnRaisedStats,
     [STRINGID_PKMNFORESAWDISASTER - 12] = sText_PkmnForesawDisaster,
     [STRINGID_PKMNTOOKDISASTER - 12] = sText_PkmnTookDisaster,
+    [STRINGID_PKMNGATHEREDSAND - 12] = sText_PkmnGatheredSand,
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -1715,6 +1717,7 @@ const u16 gFirstTurnOfTwoStringIds[] =
     [B_MSG_TURN1_FREEZE_SHOCK]  = STRINGID_CLOAKEDINAFREEZINGLIGHT,
     [B_MSG_TURN1_SKY_DROP]      = STRINGID_PKMNTOOKTARGETHIGH,
     [B_MSG_TURN1_METEOR_BEAM]   = STRINGID_METEORBEAMCHARGING,
+    [B_MSG_TURN1_STONE_CANNON]  = STRINGID_PKMNGATHEREDSAND,
 };
 
 // Index copied from move's index in sTrappingMoves

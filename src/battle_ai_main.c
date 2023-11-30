@@ -2104,6 +2104,13 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             if (CanTargetFaintAi(battlerDef, battlerAtk)) //Attacker can be knocked out
                 score -= 4;
             break;
+        case EFFECT_STONE_CANNON:
+            if (aiData->holdEffects[battlerAtk] == HOLD_EFFECT_POWER_HERB
+              || ((AI_GetWeather(aiData) & B_WEATHER_SANDSTORM)))
+                break;
+            if (CanTargetFaintAi(battlerDef, battlerAtk)) //Attacker can be knocked out
+                score -= 4;
+            break;
         case EFFECT_SEMI_INVULNERABLE:
             if (predictedMove != MOVE_NONE
               && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER
@@ -4857,6 +4864,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
     case EFFECT_TWO_TURNS_ATTACK:
     case EFFECT_SKULL_BASH:
     case EFFECT_SOLAR_BEAM:
+    case EFFECT_STONE_CANNON:
         if (aiData->holdEffects[battlerAtk] == HOLD_EFFECT_POWER_HERB)
             score += 2;
         break;
@@ -5277,6 +5285,7 @@ static s32 AI_HPAware(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             case EFFECT_PSYCH_UP:
             case EFFECT_MIRROR_COAT:
             case EFFECT_SOLAR_BEAM:
+            case EFFECT_STONE_CANNON:
             case EFFECT_TWO_TURNS_ATTACK:
             case EFFECT_ERUPTION:
             case EFFECT_TICKLE:

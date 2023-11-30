@@ -8855,6 +8855,10 @@ u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 battlerDef, u3
         if (IsBattlerWeatherAffected(battlerAtk, (B_WEATHER_HAIL | B_WEATHER_SANDSTORM | B_WEATHER_RAIN | B_WEATHER_SNOW)))
             modifier = uq4_12_multiply(modifier, UQ_4_12(0.5));
         break;
+    case EFFECT_STONE_CANNON:
+        if (IsBattlerWeatherAffected(battlerAtk, (B_WEATHER_HAIL | B_WEATHER_SUN | B_WEATHER_RAIN | B_WEATHER_SNOW)))
+            modifier = uq4_12_multiply(modifier, UQ_4_12(0.5));
+        break;
     case EFFECT_STOMPING_TANTRUM:
         if (gBattleStruct->lastMoveFailed & gBitTable[battlerAtk])
             modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));

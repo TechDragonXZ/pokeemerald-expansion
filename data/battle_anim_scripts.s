@@ -861,6 +861,8 @@ gBattleAnims_Moves::
 	.4byte Move_DISASTER_WARN
 	.4byte Move_HIDDEN_EXPLOSION
 	.4byte Move_FROSTBURN
+	.4byte Move_STONE_CANNON
+	.4byte Move_FIRE_STORM
 	
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
@@ -27362,6 +27364,128 @@ Move_FROSTBURN:
 	delay 20
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG | F_PAL_BATTLERS, 1, 3, 0, RGB_BLACK
 	end
+
+Move_STONE_CANNON:
+	loadspritegfx ANIM_TAG_ORBS
+	choosetwoturnanim StoneCannonSetUp, StoneCannonUnleash
+StoneCannonEnd:
+	waitforvisualfinish
+	end
+StoneCannonSetUp:
+	monbg ANIM_ATK_PARTNER
+	setalpha 12, 8
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_ATTACKER, 1, 4, 0, 11, RGB(31, 31, 11)
+	playsewithpan SE_M_MEGA_KICK, SOUND_PAN_ATTACKER
+	call StoneCannonAbsorbEffect
+	waitforvisualfinish
+	clearmonbg ANIM_ATK_PARTNER
+	blendoff
+	goto StoneCannonEnd
+StoneCannonAbsorbEffect:
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 40, 40, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, -40, -40, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 0, 40, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 0, -40, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 40, -20, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 40, 20, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, -40, -20, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, -40, 20, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, -20, 30, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 20, -30, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, -20, -30, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 20, 30, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, -40, 0, 16
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 40, 0, 16
+	delay 2
+	return
+StoneCannonUnleash:
+	call SetSolarBeamBg
+	panse SE_M_SOLAR_BEAM, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
+	createvisualtask AnimTask_CreateSmallSolarBeamOrbs, 5
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 0
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 1
+	delay 4
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 1, 0, 10, RGB(25, 31, 0)
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 2
+	delay 4
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 2, 0, 65, 1
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 3
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 4
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 5
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 6
+	delay 4
+	call StoneCannonUnleash1
+	call StoneCannonUnleash1
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 1, 10, 0, RGB(25, 31, 0)
+	call UnsetSolarBeamBg
+	goto StoneCannonEnd
+StoneCannonUnleash1:
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 0
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 1
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 2
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 3
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 4
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 5
+	delay 4
+	createsprite gSolarBeamBigOrbSpriteTemplate, ANIM_TARGET, 3, 15, 0, 20, 6
+	delay 4
+	return
+
+Move_FIRE_STORM:
+	loadspritegfx ANIM_TAG_GUST
+	monbg ANIM_DEF_PARTNER
+	splitbgprio ANIM_TARGET
+	setalpha 12, 8
+	fadetobg BG_HURRICANE
+	waitbgfadeout
+	createvisualtask AnimTask_StartSlidingBg, 0x5, 0x1000, 0x0, 0x1, 0xffff
+	waitbgfadein
+	playsewithpan SE_M_GUST, SOUND_PAN_TARGET
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 64, 1
+	call FireStormGust
+	delay 0xA
+	call FireStormGust
+	delay 0xA
+	call FireStormGust
+	delay 0xA
+	call FireStormGust
+	delay 0xA
+	call FireStormGust
+	delay 0xA
+	call FireStormGust
+	waitforvisualfinish
+	stopsound
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	call UnsetPsychicBg
+	end
+FireStormGust:
+	createsprite gEllipticalGustSpriteTemplate, ANIM_ATTACKER, 2, 0, -16
+	createvisualtask AnimTask_AnimateGustTornadoPalette, 5, 1, 70
+	return
 
 @@@@@@@@@@ Z MOVES @@@@@@@@@@
 Move_BREAKNECK_BLITZ::

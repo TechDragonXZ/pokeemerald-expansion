@@ -1596,6 +1596,12 @@ static bool32 AccuracyCalcHelper(u16 move)
             JumpIfMoveFailed(7, move);
             return TRUE;
         }
+        if ((IsBattlerWeatherAffected(gBattlerTarget, B_WEATHER_SUN) && (move == MOVE_FIRE_STORM)))
+        {
+            // thunder/hurricane ignore acc checks in rain unless target is holding utility umbrella
+            JumpIfMoveFailed(7, move);
+            return TRUE;
+        }
     #if B_BLIZZARD_HAIL >= GEN_4
         else if ((gBattleWeather & (B_WEATHER_HAIL | B_WEATHER_SNOW)) && move == MOVE_BLIZZARD)
         {
@@ -12858,7 +12864,8 @@ static bool8 IsTwoTurnsMove(u16 move)
      || gBattleMoves[move].effect == EFFECT_SEMI_INVULNERABLE
      || gBattleMoves[move].effect == EFFECT_BIDE
      || gBattleMoves[move].effect == EFFECT_METEOR_BEAM
-     || gBattleMoves[move].effect == EFFECT_GEOMANCY)
+     || gBattleMoves[move].effect == EFFECT_GEOMANCY
+     || gBattleMoves[move].effect == EFFECT_STONE_CANNON)
         return TRUE;
     else
         return FALSE;
@@ -12872,11 +12879,16 @@ static u8 AttacksThisTurn(u8 battler, u16 move) // Note: returns 1 if it's a cha
         && IsBattlerWeatherAffected(battler, B_WEATHER_SUN))
         return 2;
 
+    if (gBattleMoves[move].effect == EFFECT_STONE_CANNON
+        && IsBattlerWeatherAffected(battler, B_WEATHER_SANDSTORM))
+        return 2;
+
     if (gBattleMoves[move].effect == EFFECT_SKULL_BASH
      || gBattleMoves[move].effect == EFFECT_TWO_TURNS_ATTACK
      || gBattleMoves[move].effect == EFFECT_SOLAR_BEAM
      || gBattleMoves[move].effect == EFFECT_SEMI_INVULNERABLE
-     || gBattleMoves[move].effect == EFFECT_BIDE)
+     || gBattleMoves[move].effect == EFFECT_BIDE
+     || gBattleMoves[move].effect == EFFECT_STONE_CANNON)
     {
         if ((gHitMarker & HITMARKER_CHARGING))
             return 1;
@@ -15814,6 +15826,7 @@ static const u16 sParentalBondBannedEffects[] =
     EFFECT_SKULL_BASH,
     EFFECT_SKY_DROP,
     EFFECT_SOLAR_BEAM,
+    EFFECT_STONE_CANNON,
     EFFECT_TRIPLE_KICK,
     EFFECT_TWO_TURNS_ATTACK,
     EFFECT_UPROAR,

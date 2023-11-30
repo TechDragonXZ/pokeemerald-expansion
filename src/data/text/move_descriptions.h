@@ -3277,8 +3277,16 @@ static const u8 sHiddenExplosionDescription[] = _(
     "makes the user faint.");
 
 static const u8 sFrostburnDescription[] = _(
-    "Hits the foe with a harsh wind\n"
+    "Hits the foe with a harsh wind.\n"
     "May cause freezing or burning.");
+
+static const u8 sStoneCannonDescription[] = _(
+    "Absorbs sand in one turn,\n"
+    "then attacks next turn.");
+
+static const u8 sFireStormDescription[] = _(
+    "Traps the foe in a fierce\n"
+    "inferno. May cause burn.");
 
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
@@ -4124,4 +4132,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_DISASTER_WARN - 1] = sDisasterWarnDescription,
     [MOVE_HIDDEN_EXPLOSION - 1] = sHiddenExplosionDescription,
     [MOVE_FROSTBURN - 1] = sFrostburnDescription,
+    [MOVE_STONE_CANNON - 1] = sStoneCannonDescription,
+    [MOVE_FIRE_STORM - 1] = sFireStormDescription,
 };

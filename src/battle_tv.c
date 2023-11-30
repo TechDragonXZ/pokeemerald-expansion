@@ -234,6 +234,7 @@ static const u16 sPoints_MoveEffect[NUM_BATTLE_MOVE_EFFECTS] =
     [EFFECT_GUST]                       = 1,
 //  [EFFECT_FLINCH_MINIMIZE_HIT]        = 1,
     [EFFECT_SOLAR_BEAM]                 = 1,
+    [EFFECT_STONE_CANNON]               = 1,
     [EFFECT_THUNDER]                    = 1,
     [EFFECT_TELEPORT]                   = 1,
     [EFFECT_BEAT_UP]                    = 2,

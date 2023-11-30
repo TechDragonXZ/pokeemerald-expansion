@@ -13914,6 +13914,39 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .thawsUser = TRUE,
     },
 
+    [MOVE_STONE_CANNON] =
+    {
+        .effect = EFFECT_STONE_CANNON,
+        .power = 120,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .makesContact = TRUE,
+    },
+
+    [MOVE_FIRE_STORM] =
+    {
+        .power = 110,
+        .effect = EFFECT_BURN_HIT,
+        .type = TYPE_FIRE,
+        .accuracy = 70,
+        .pp = 5,
+        .secondaryEffectChance = 10,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .sheerForceBoost = TRUE,
+        .windMove = TRUE,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

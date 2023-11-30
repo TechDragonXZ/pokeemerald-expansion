@@ -3281,17 +3281,25 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers Sp. Atk.");
 
-static const u8 sTM51Desc[] = _( // Todo
-    "?????");
+static const u8 sTM51Desc[] = _( // Frostburn
+    "Hits the foe with\n"
+    "a harsh wind. May cause\n"
+    "freezing or burning.");
 
-static const u8 sTM52Desc[] = _( // Todo
-    "?????");
+static const u8 sTM52Desc[] = _( // Hidden Explosion
+    "Inflicts severe damage but\n"
+    "makes the user faint.\n"
+    "Varies between Pokémon.");
 
-static const u8 sTM53Desc[] = _( // Todo
-    "?????");
+static const u8 sTM53Desc[] = _( // Stone Cannon
+    "Absorbs sand in one turn\n"
+    "and compacts it down,\n"
+    "then attacks next turn.");
 
-static const u8 sTM54Desc[] = _( // Todo
-    "?????");
+static const u8 sTM54Desc[] = _( // Fire Storm
+    "Surrounds the foe in a\n"
+    "fierce inferno, this\n"
+    "attack may cause burn.");
 
 static const u8 sTM55Desc[] = _( // Todo
     "?????");

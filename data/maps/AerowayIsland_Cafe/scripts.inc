@@ -6,13 +6,13 @@ AerowayIsland_Cafe_Shop_RegionalTreats::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart AerowayIsland_Cafe_Shop
+	pokemart AerowayIsland_Cafe_Shop_Treats
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-AerowayIsland_Cafe_Shop:
+AerowayIsland_Cafe_Shop_Treats:
 	.2byte ITEM_PEWTER_CRUNCHIES
 	.2byte ITEM_RAGE_CANDY_BAR
 	.2byte ITEM_LAVA_COOKIE
@@ -21,6 +21,26 @@ AerowayIsland_Cafe_Shop:
 	.2byte ITEM_LUMIOSE_GALETTE
 	.2byte ITEM_SHALOUR_SABLE
 	.2byte ITEM_BIG_MALASADA
+	.2byte ITEM_NONE
+	release
+	end
+
+AerowayIsland_Cafe_Shop_TM_Lady::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart AerowayIsland_Cafe_Shop_TMS
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+AerowayIsland_Cafe_Shop_TMS:
+	.2byte ITEM_TM51
+	.2byte ITEM_TM52
+	.2byte ITEM_TM53
+	.2byte ITEM_TM54
 	.2byte ITEM_NONE
 	release
 	end

@@ -441,6 +441,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectAccuracyDownHit         @ EFFECT_ACC_DOWN_TWO_TYPED
 	.4byte BattleScript_EffectFrostburnHit            @ EFFECT_FROSTBURN_HIT
 	.4byte BattleScript_MonTookDisaster               @ EFFECT_DELAY_TWO_TYPED
+	.4byte BattleScript_EffectStoneCannon             @ EFFECT_STONE_CANNON
 
 BattleScript_EffectSaltCure:
 	call BattleScript_EffectHit_Ret
@@ -10430,3 +10431,20 @@ BattleScript_DisasterAttackMiss::
 	waitmessage B_WAIT_TIME_LONG
 	sethword gMoveResultFlags, 0
 	end2
+
+BattleScript_EffectStoneCannon::
+	jumpifweatheraffected BS_ATTACKER, B_WEATHER_SANDSTORM, BattleScript_StoneCannonOnFirstTurn
+BattleScript_StoneCannonDecideTurn::
+	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_TwoTurnMovesSecondTurn
+	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
+	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_STONE_CANNON
+	call BattleScriptFirstChargingTurn
+	jumpifnoholdeffect BS_ATTACKER, HOLD_EFFECT_POWER_HERB, BattleScript_MoveEnd
+	call BattleScript_PowerHerbActivation
+	goto BattleScript_TwoTurnMovesSecondTurn
+BattleScript_StoneCannonOnFirstTurn::
+	orword gHitMarker, HITMARKER_CHARGING
+	setmoveeffect MOVE_EFFECT_CHARGING | MOVE_EFFECT_AFFECTS_USER
+	seteffectprimary
+	ppreduce
+	goto BattleScript_TwoTurnMovesSecondTurn

@@ -6108,6 +6108,22 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
+    [MOVE_STONE_CANNON] =
+    {
+        .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = 0,
+        .comboMoves = {COMBO_STARTER_SANDSTORM},
+    },
+
+    [MOVE_FIRE_STORM] =
+    {
+        .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .comboStarterId = 0,
+        .comboMoves = {COMBO_STARTER_SUNNY_DAY},
+    },
+
 };
 
 const struct ContestEffect gContestEffects[] =

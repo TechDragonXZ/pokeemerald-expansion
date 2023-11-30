@@ -16,7 +16,7 @@
 // Scaling roamer level will be equal to your highest level pokemon's level plus this constant
 #define SCALING_LEVEL_MODIFIER -5
 // Self Explanatory
-#define SCALED_LEVEL_CAP 70
+#define SCALED_LEVEL_CAP 65
 // If TRUE, scaling roamers will evolve at appropriate levels
 #define SCALING_ROAMER_EVOLUTION TRUE
 //================= Config End =========================\\
