@@ -137,7 +137,7 @@ static const u16 sRegionMap_SpecialPlaceLocations[][2] =
     #ifdef BUGFIX
     {MAPSEC_UNDERWATER_125,             MAPSEC_ROUTE_125},
     #else
-    {MAPSEC_UNDERWATER_125,             MAPSEC_ROUTE_129}, // BUG: Map will incorrectly display the name of Route 129 when diving on Route 125 (for Marine Cave only)
+    {MAPSEC_UNDERWATER_125,             MAPSEC_ROUTE_125}, // BUG: Map will incorrectly display the name of Route 129 when diving on Route 125 (for Marine Cave only)
     #endif
     {MAPSEC_UNDERWATER_126,             MAPSEC_ROUTE_126},
     {MAPSEC_UNDERWATER_127,             MAPSEC_ROUTE_127},
@@ -1216,8 +1216,8 @@ static u8 GetMapsecType(u16 mapSecId)
         return FlagGet(FLAG_LANDMARK_BATTLE_FRONTIER) ? MAPSECTYPE_BATTLE_FRONTIER : MAPSECTYPE_NONE;
     case MAPSEC_SOUTHERN_ISLAND:
         return FlagGet(FLAG_LANDMARK_SOUTHERN_ISLAND) ? MAPSECTYPE_ROUTE : MAPSECTYPE_NONE;
-    case MAPSEC_AEROWAY_ISLAND:
-        return FlagGet(FLAG_VISITED_AEROWAY_ISLAND) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+    case MAPSEC_METEOR_FALLS_PEAK:
+        return FlagGet(FLAG_VISITED_METEOR_FALLS_PEAK) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     default:
         return MAPSECTYPE_ROUTE;
     }

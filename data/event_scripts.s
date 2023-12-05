@@ -1093,9 +1093,3 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/StrangeSpaceLake/scripts.inc"
 
 	.include "data/maps/StrangeSpaceVoid/scripts.inc"
-
-	.include "data/maps/AerowayIsland/scripts.inc"
-
-	.include "data/maps/AerowayIsland_Cafe/scripts.inc"
-
-	.include "data/maps/AerowayIsland_Airport/scripts.inc"

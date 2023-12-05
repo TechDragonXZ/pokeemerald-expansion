@@ -10907,10 +10907,11 @@ static void Cmd_tryexplosion(void)
     CMD_ARGS();
 
     u32 dampBattler;
+    u32 gBattler;
     if (gBattleControllerExecFlags)
         return;
 
-    if ((dampBattler = IsAbilityOnField(ABILITY_DAMP)))
+    if ((dampBattler = IsAbilityOnField(ABILITY_DAMP)) && !HasMove(gBattler, MOVE_FINAL_STRIKE))
     {
         // Failed, a battler has Damp
         gLastUsedAbility = ABILITY_DAMP;
@@ -15821,6 +15822,7 @@ static const u16 sParentalBondBannedEffects[] =
     EFFECT_METEOR_BEAM,
     EFFECT_MULTI_HIT,
     EFFECT_OHKO,
+    EFFECT_FINAL_STRIKE,
     EFFECT_ROLLOUT,
     EFFECT_SEMI_INVULNERABLE,
     EFFECT_SKULL_BASH,

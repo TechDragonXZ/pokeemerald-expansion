@@ -3356,7 +3356,7 @@ static const u8 sMapsecToRegion[] = {
     [MAPSEC_DESERT_UNDERPASS]           = REGION_HOENN,
     [MAPSEC_ALTERING_CAVE]              = REGION_HOENN,
     [MAPSEC_DEEP_PETALBURG_WOODS]       = REGION_HOENN,
-    [MAPSEC_AEROWAY_ISLAND]             = REGION_HOENN,
+    [MAPSEC_METEOR_FALLS_PEAK]          = REGION_HOENN,
 
     // Kanto
     [MAPSEC_PALLET_TOWN]                = REGION_KANTO,

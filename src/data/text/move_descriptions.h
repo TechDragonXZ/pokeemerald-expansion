@@ -3288,6 +3288,10 @@ static const u8 sFireStormDescription[] = _(
     "Traps the foe in a fierce\n"
     "inferno. May cause burn.");
 
+static const u8 sFinalStrikeDescription[] = _(
+    "The user uses all of their power\n"
+    "for one last move, then faints.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4134,4 +4138,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FROSTBURN - 1] = sFrostburnDescription,
     [MOVE_STONE_CANNON - 1] = sStoneCannonDescription,
     [MOVE_FIRE_STORM - 1] = sFireStormDescription,
+    [MOVE_FINAL_STRIKE - 1] = sFinalStrikeDescription,
 };

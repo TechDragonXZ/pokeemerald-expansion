@@ -442,6 +442,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFrostburnHit            @ EFFECT_FROSTBURN_HIT
 	.4byte BattleScript_MonTookDisaster               @ EFFECT_DELAY_TWO_TYPED
 	.4byte BattleScript_EffectStoneCannon             @ EFFECT_STONE_CANNON
+	.4byte BattleScript_EffectFinalStrike             @ EFFECT_FINAL_STRIKE
 
 BattleScript_EffectSaltCure:
 	call BattleScript_EffectHit_Ret
@@ -10448,3 +10449,19 @@ BattleScript_StoneCannonOnFirstTurn::
 	seteffectprimary
 	ppreduce
 	goto BattleScript_TwoTurnMovesSecondTurn
+
+BattleScript_EffectFinalStrike::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	typecalc
+	moveendall
+	tryfaintmon BS_TARGET
+	setatkhptozero
+	tryfaintmon BS_ATTACKER
+	jumpifmovehadnoeffect BattleScript_HitFromAtkAnimation
+	tryKO BattleScript_KOFail
+	trysetdestinybondtohappen
+	goto BattleScript_HitFromAtkAnimation
+

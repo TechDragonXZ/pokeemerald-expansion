@@ -4560,36 +4560,6 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/StrangeSpaceVoid/border.bin",
       "blockdata_filepath": "data/layouts/StrangeSpaceVoid/map.bin"
-    },
-    {
-      "id": "LAYOUT_AEROWAY_ISLAND",
-      "name": "AerowayIsland_Layout",
-      "width": 48,
-      "height": 52,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mossdeep",
-      "border_filepath": "data/layouts/AerowayIsland/border.bin",
-      "blockdata_filepath": "data/layouts/AerowayIsland/map.bin"
-    },
-    {
-      "id": "LAYOUT_AEROWAY_ISLAND_CAFE",
-      "name": "AerowayIsland_Cafe_Layout",
-      "width": 20,
-      "height": 17,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonDayCare",
-      "border_filepath": "data/layouts/AerowayIsland_Cafe/border.bin",
-      "blockdata_filepath": "data/layouts/AerowayIsland_Cafe/map.bin"
-    },
-    {
-      "id": "LAYOUT_AEROWAY_ISLAND_AIRPORT",
-      "name": "AerowayIsland_Airport_Layout",
-      "width": 30,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/AerowayIsland_Airport/border.bin",
-      "blockdata_filepath": "data/layouts/AerowayIsland_Airport/map.bin"
     }
   ]
 }

@@ -13947,6 +13947,20 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .windMove = TRUE,
     },
 
+    [MOVE_FINAL_STRIKE] =
+    {
+        .effect = EFFECT_FINAL_STRIKE,
+        .power = 1,
+        .type = TYPE_MYSTERY,
+        .accuracy = 50,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

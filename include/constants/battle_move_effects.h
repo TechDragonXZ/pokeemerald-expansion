@@ -419,7 +419,8 @@
 #define EFFECT_FROSTBURN_HIT                413
 #define EFFECT_DELAY_TWO_TYPED              414
 #define EFFECT_STONE_CANNON                 415
+#define EFFECT_FINAL_STRIKE                 416
 
-#define NUM_BATTLE_MOVE_EFFECTS             416
+#define NUM_BATTLE_MOVE_EFFECTS             417
 
 #endif  // GUARD_CONSTANTS_BATTLE_MOVE_EFFECTS_H

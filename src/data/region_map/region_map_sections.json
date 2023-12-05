@@ -238,15 +238,15 @@
       "x": 1,
       "y": 0,
       "width": 2,
-      "height": 3
+      "height": 2
     },
     {
       "map_section": "MAPSEC_ROUTE_115",
       "name": "ROUTE 115",
       "x": 0,
-      "y": 2,
+      "y": 3,
       "width": 1,
-      "height": 3
+      "height": 2
     },
     {
       "map_section": "MAPSEC_ROUTE_116",
@@ -508,16 +508,8 @@
       "map_section": "MAPSEC_METEOR_FALLS",
       "name": "METEOR FALLS",
       "x": 0,
-      "y": 3,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "map_section": "MAPSEC_METEOR_FALLS2",
-      "name": "METEOR FALLS",
-      "x": 1,
       "y": 2,
-      "width": 1,
+      "width": 2,
       "height": 1
     },
     {
@@ -1711,14 +1703,6 @@
       "y": 7,
       "width": 2,
       "height": 2
-    },
-    {
-      "map_section": "MAPSEC_AEROWAY_ISLAND",
-      "name": "AEROWAY ISLAND",
-      "x": 23,
-      "y": 2,
-      "width": 1,
-      "height": 1
     }
   ]
 }

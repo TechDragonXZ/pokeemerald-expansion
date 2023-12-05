@@ -3631,6 +3631,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         }
         break;
     case EFFECT_OHKO:
+    case EFFECT_FINAL_STRIKE:
         if (gStatuses3[battlerAtk] & STATUS3_ALWAYS_HITS)
             score += 5;
         break;
@@ -3814,7 +3815,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
             score += 10;
         break;
     case EFFECT_LOCK_ON:
-        if (HasMoveEffect(battlerAtk, EFFECT_OHKO))
+        if (HasMoveEffect(battlerAtk, EFFECT_OHKO) || HasMoveEffect(battlerAtk, EFFECT_FINAL_STRIKE))
             score += 3;
         else if (aiData->abilities[battlerAtk] == ABILITY_COMPOUND_EYES && HasMoveWithLowAccuracy(battlerAtk, battlerDef, 80, TRUE, aiData->abilities[battlerAtk], aiData->abilities[battlerDef], aiData->holdEffects[battlerAtk], aiData->holdEffects[battlerDef]))
             score += 3;
@@ -5093,6 +5094,7 @@ static s32 AI_Risky(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
     case EFFECT_EXPLOSION:
     case EFFECT_MIRROR_MOVE:
     case EFFECT_OHKO:
+    case EFFECT_FINAL_STRIKE:
     case EFFECT_CONFUSE:
     case EFFECT_METRONOME:
     case EFFECT_PSYWAVE:

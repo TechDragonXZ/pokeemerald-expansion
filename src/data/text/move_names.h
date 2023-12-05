@@ -838,6 +838,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_FROSTBURN] = _("Frostburn"),
     [MOVE_STONE_CANNON] = _("Stone Cannon"),
     [MOVE_FIRE_STORM] = _("Fire Storm"),
+    [MOVE_FINAL_STRIKE] = _("Final Strike"),
 };
 #else
 // 12 letters
@@ -1679,6 +1680,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_FROSTBURN] = _("Frostburn"),
     [MOVE_STONE_CANNON] = _("Stone Cannon"),
     [MOVE_FIRE_STORM] = _("Fire Storm"),
+    [MOVE_FINAL_STRIKE] = _("Final Strike"),
 };
 #endif
 
