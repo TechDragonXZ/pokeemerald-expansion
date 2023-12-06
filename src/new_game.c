@@ -44,6 +44,7 @@
 #include "berry_powder.h"
 #include "mystery_gift.h"
 #include "union_room_chat.h"
+#include "constants/map_groups.h"
 #include "constants/items.h"
 #include "tx_registered_items_menu.h"
 
@@ -214,6 +215,8 @@ void NewGameInitData(void)
     InitRoamer();
     FlagSet(FLAG_SYS_POKEDEX_GET);
 #endif
+    memset(gSaveBlock1Ptr->dexNavSearchLevels, 0, sizeof(gSaveBlock1Ptr->dexNavSearchLevels));
+    gSaveBlock1Ptr->dexNavChain = 0;
 }
 
 static void ResetMiniGamesRecords(void)
