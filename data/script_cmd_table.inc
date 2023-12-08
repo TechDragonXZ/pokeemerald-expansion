@@ -228,7 +228,6 @@ gScriptCmdTable::
 	.4byte ScrCmd_buffercontestname                 @ 0xe1
 	.4byte ScrCmd_bufferitemnameplural              @ 0xe2
 	.4byte ScrCmd_checkpartymon
-    .4byte ScrCmd_givecustommon				        @ 0xe3
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

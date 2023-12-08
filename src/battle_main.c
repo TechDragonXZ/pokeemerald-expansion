@@ -124,7 +124,6 @@ static void BeginLeftEvoluionAfterFade(void);
 static void BeginRightEvoluionAfterFade(void);
 static void WaitForEvolutionThenTryAnother(void);
 static void CB2_SetUpReshowBattleScreenAfterEvolution(void);
-static bool8 partyMonHoldDoublePrizeEffect(void);
 static void TrySpecialEvolution(void);
 static u32 Crc32B (const u8 *data, u32 size);
 static u32 GeneratePartyHash(const struct Trainer *trainer, u32 i);
@@ -5533,11 +5532,6 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
 {
     if (!gPaletteFade.active)
     {
-        if (gDexnavBattle && (gBattleOutcome == B_OUTCOME_WON || gBattleOutcome == B_OUTCOME_CAUGHT))
-            IncrementDexNavChain();
-        else
-            gSaveBlock1Ptr->dexNavChain = 0;
-        
         gIsFishingEncounter = FALSE;
         gIsSurfingEncounter = FALSE;
         ResetSpriteData();

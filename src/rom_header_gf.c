@@ -113,8 +113,6 @@ static const struct GFRomHeader sGFRomHeader = {
     .flagsOffset = offsetof(struct SaveBlock1, flags),
     .varsOffset = offsetof(struct SaveBlock1, vars),
     .pokedexOffset = offsetof(struct SaveBlock2, pokedex),
-    
-    #ifndef FREE_ENIGMA_BERRY
     .seen1Offset = offsetof(struct SaveBlock1, dexSeen),
     .seen2Offset = offsetof(struct SaveBlock1, dexSeen), // dex flags are combined, just provide the same pointer
     .pokedexVar = VAR_NATIONAL_DEX - VARS_START,
@@ -172,7 +170,6 @@ static const struct GFRomHeader sGFRomHeader = {
     .giftRibbonsOffset = offsetof(struct SaveBlock1, giftRibbons),
     .enigmaBerryOffset = offsetof(struct SaveBlock1, enigmaBerry),
     .enigmaBerrySize = sizeof(struct EnigmaBerry),
-    #endif
     .moveDescriptions = NULL,
     .unk20 = 0x00000000, // 0xFFFFFFFF in FRLG
 };

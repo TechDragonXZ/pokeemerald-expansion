@@ -57,7 +57,6 @@ RustboroCity_EventScript_ScientistAddMatchCall::
 	msgbox RustboroCity_Text_DevelopedNewPokenavFeature, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_HAS_MATCH_CALL
-	setflag FLAG_SYS_DEXNAV_GET
 	applymovement LOCALID_SCIENTIST, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	playse SE_CLICK

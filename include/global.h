@@ -1014,9 +1014,7 @@ struct SaveBlock1
               struct ItemSlot bagPocket_MegaStones[BAG_MEGASTONES_COUNT];
               struct ItemSlot bagPocket_ZCrystals[BAG_ZCRYSTALS_COUNT];
     /*0x848*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
-    #ifndef FREE_EXTRA_SEEN_FLAGS
-    /*0x988*/ u8 seen1[NUM_DEX_FLAG_BYTES];   //52 bytes
-    #endif
+    /*0x988*/ u8 filler1[0x34]; // Previously Dex Flags, feel free to remove.
     /*0x9BC*/ u16 berryBlenderRecords[3];
     /*0x9C2*/ u8 unused_9C2[6];
     /*0x9C8*/ u16 trainerRematchStepCounter;
@@ -1085,25 +1083,6 @@ struct SaveBlock1
     /*0x3D64*/ struct TrainerHillSave trainerHill;
     /*0x3D70*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3D88
-                u8 registeredItemLastSelected:4; //max 16 items
-                u8 registeredItemListCount:4;
-                struct RegisteredItemSlot registeredItems[REGISTERED_ITEMS_MAX];
-    /*0x31DC*/ struct Roamer roamer;
-    /*0x31F8*/ struct EnigmaBerry enigmaBerry;
-    /*0x322C*/ struct MysteryGiftSave mysteryGift;
-    /*0x3???*/ u8 dexSeen[NUM_DEX_FLAG_BYTES];
-    /*0x3???*/ u8 dexCaught[NUM_DEX_FLAG_BYTES];
-    /*0x3???*/ u32 trainerHillTimes[NUM_TRAINER_HILL_MODES];
-    /*0x3???*/ struct RamScript ramScript;
-    /*0x3???*/ struct RecordMixingGift recordMixingGift;
-    /*0x3???*/ LilycoveLady lilycoveLady;
-    /*0x3???*/ struct TrainerNameRecord trainerNameRecords[20];
-    /*0x3???*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21];
-    /*0x3???*/ struct TrainerHillSave trainerHill;
-    /*0x3???*/ struct WaldaPhrase waldaPhrase;
-               u8 dexNavSearchLevels[NUM_SPECIES];
-               u8 dexNavChain;
-    // sizeof: 0x3???
                 u8 registeredItemLastSelected:4; //max 16 items
                 u8 registeredItemListCount:4;
                 struct RegisteredItemSlot registeredItems[REGISTERED_ITEMS_MAX];

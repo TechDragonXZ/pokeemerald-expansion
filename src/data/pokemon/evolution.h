@@ -159,7 +159,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_AIPOM]                 = {{EVO_MOVE, MOVE_DOUBLE_HIT, SPECIES_AMBIPOM}},
     [SPECIES_SUNKERN]               = {{EVO_ITEM, ITEM_SUN_STONE, SPECIES_SUNFLORA}},
 #if P_GEN_4_POKEMON == TRUE
-    [SPECIES_YANMA]                 = {{EVO_MOVE, MOVE_DRAGON_POWER, SPECIES_YANMEGA}},
+    [SPECIES_YANMA]                 = {{EVO_MOVE, MOVE_ANCIENT_POWER, SPECIES_YANMEGA}},
 #endif
     [SPECIES_WOOPER]                = {{EVO_LEVEL, 20, SPECIES_QUAGSIRE}},
 #if P_GEN_4_POKEMON == TRUE
@@ -390,8 +390,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_KLINK]                 = {{EVO_LEVEL, 38, SPECIES_KLANG}},
     [SPECIES_KLANG]                 = {{EVO_LEVEL, 49, SPECIES_KLINKLANG}},
     [SPECIES_TYNAMO]                = {{EVO_LEVEL, 39, SPECIES_EELEKTRIK}},
-    [SPECIES_EELEKTRIK]             = {{EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_EELEKTROSS},
-                                       {EVO_MAPSEC, MAPSEC_NEW_MAUVILLE, SPECIES_EELEKTROSS}},
+    [SPECIES_EELEKTRIK]             = {{EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_EELEKTROSS}},
     [SPECIES_ELGYEM]                = {{EVO_LEVEL, 42, SPECIES_BEHEEYEM}},
     [SPECIES_LITWICK]               = {{EVO_LEVEL, 41, SPECIES_LAMPENT}},
     [SPECIES_LAMPENT]               = {{EVO_ITEM, ITEM_DUSK_STONE, SPECIES_CHANDELURE}},
@@ -475,8 +474,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
                                        {EVO_ITEM, ITEM_ICE_STONE, SPECIES_CRABOMINABLE}},
     [SPECIES_CUTIEFLY]              = {{EVO_LEVEL, 25, SPECIES_RIBOMBEE}},
     [SPECIES_ROCKRUFF]              = {{EVO_LEVEL_DAY, 25, SPECIES_LYCANROC},
-                                       {EVO_LEVEL_NIGHT, 25, SPECIES_LYCANROC_MIDNIGHT},
-                                       {EVO_LEVEL_DUSK, 25, SPECIES_LYCANROC_DUSK}},
+                                       {EVO_LEVEL_NIGHT, 25, SPECIES_LYCANROC_MIDNIGHT}},
     [SPECIES_MAREANIE]              = {{EVO_LEVEL, 38, SPECIES_TOXAPEX}},
     [SPECIES_MUDBRAY]               = {{EVO_LEVEL, 30, SPECIES_MUDSDALE}},
     [SPECIES_DEWPIDER]              = {{EVO_LEVEL, 22, SPECIES_ARAQUANID}},
