@@ -68,6 +68,7 @@ static bool8 ShouldSkipFriendshipChange(void);
 static void RemoveIVIndexFromList(u8 *ivs, u8 selectedIv);
 static u16 GetPreEvolution(u16 species);
 void TrySpecialOverworldEvo();
+u8 SendMonToPC(struct Pokemon* mon);
 
 EWRAM_DATA static u8 sLearningMoveTableID = 0;
 EWRAM_DATA u8 gPlayerPartyCount = 0;
@@ -3449,6 +3450,8 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     else
         personality = Random32();
 
+    SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
+
     // Determine original trainer ID
     if (otIdType == OT_ID_RANDOM_NO_SHINY)
     {
@@ -5821,8 +5824,13 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 
     // Get item hold effect
     heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, NULL);
-    if (heldItem == ITEM_ENIGMA_BERRY_E_READER)
-        holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
+    if (heldItem == ITEM_ENIGMA_BERRY)
+    {
+        if (gMain.inBattle)
+            holdEffect = gEnigmaBerries[gBattlerInMenuId].holdEffect;
+        else
+            holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
+    }
     else
         holdEffect = ItemId_GetHoldEffect(heldItem);
 
@@ -5831,7 +5839,17 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
         return TRUE;
 
     // Get item effect
-    itemEffect = GetItemEffect(item);
+    if (item == ITEM_ENIGMA_BERRY)
+    {
+        if (gMain.inBattle)
+            itemEffect = gEnigmaBerries[gActiveBattler].itemEffect;
+        else
+            itemEffect = gSaveBlock1Ptr->enigmaBerry.itemEffect;
+    }
+    else
+    {
+        itemEffect = gItemEffectTable[item - ITEM_POTION];
+    }
 
     // Do item effect
     for (i = 0; i < ITEM_EFFECT_ARG_START; i++)
@@ -7243,6 +7261,19 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
             else
                 evIncrease = gSpeciesInfo[defeatedSpecies].evYield_SpDefense * multiplier;
             break;
+        }
+
+        heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0);
+        if (heldItem == ITEM_ENIGMA_BERRY)
+        {
+            if (gMain.inBattle)
+                holdEffect = gEnigmaBerries[0].holdEffect;
+            else
+                holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
+        }
+        else
+        {
+            holdEffect = ItemId_GetHoldEffect(heldItem);
         }
 
         if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
@@ -8754,4 +8785,21 @@ void UpdateMonPersonality(struct BoxPokemon *boxMon, u32 personality)
     *new3 = *old3;
     boxMon->checksum = CalculateBoxMonChecksum(boxMon);
     EncryptBoxMon(boxMon);
+}
+
+void CreateShinyMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 nature)
+{
+    u32 personality;
+    u32 otid = gSaveBlock2Ptr->playerTrainerId[0]
+              | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+              | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+              | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+    
+    do
+    {
+        personality = Random32();
+        personality = ((((Random() % 8) ^ (HIHALF(otid) ^ LOHALF(otid))) ^ LOHALF(personality)) << 16) | LOHALF(personality);
+    } while (nature != GetNatureFromPersonality(personality));
+
+    CreateMon(mon, species, level, 32, 1, personality, OT_ID_PRESET, otid);
 }

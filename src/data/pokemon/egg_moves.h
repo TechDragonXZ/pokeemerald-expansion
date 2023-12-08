@@ -2307,6 +2307,9 @@ const u16 gEggMoves[] = {
         MOVE_MEGAHORN,
         MOVE_HEX,
         MOVE_PERISH_SONG,
+        MOVE_MYSTIC_SLASH,
+        MOVE_DAZZLING_GLEAM,
+        MOVE_MOONBLAST,
         MOVE_PLAY_ROUGH),
 
     egg_moves(SNORUNT,
