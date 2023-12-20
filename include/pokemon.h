@@ -336,11 +336,7 @@ struct SpeciesInfo /*0x8C*/
  /* 0x14 */ u8 friendship;
  /* 0x15 */ u8 growthRate;
  /* 0x16 */ u8 eggGroups[2];
-            #ifdef BATTLE_ENGINE
- /* 0x18 */ u8 abilities[NUM_ABILITY_SLOTS];
-            #else
-            u16 abilities[NUM_ABILITY_SLOTS]; // 3 abilities, no longer u8 because we have over 255 abilities now.
-            #endif
+ /* 0x18 */ u16 abilities[NUM_ABILITY_SLOTS]; // 3 abilities, no longer u8 because we have over 255 abilities now.
  /* 0x1E */ u8 safariZoneFleeRate;
             // Pokédex data
  /* 0x1F */ u8 categoryName[13];
@@ -405,10 +401,7 @@ struct SpeciesInfo /*0x8C*/
  /* 0x88 */ const struct Evolution *evolutions;
  /* 0x84 */ const u16 *formSpeciesIdTable;
  /* 0x84 */ const struct FormChange *formChangeTable;
-            #ifndef BATTLE_ENGINE
- /* 0x1A */ u8 abilityHidden;
-            #endif
-}; /* size = 28 */
+};
 
 struct BattleMove
 {

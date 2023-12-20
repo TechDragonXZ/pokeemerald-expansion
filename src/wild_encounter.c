@@ -184,7 +184,7 @@ static void FeebasSeedRng(u16 seed)
 }
 
 // LAND_WILD_COUNT
-u8 ChooseWildMonIndex_Land(void)
+static u8 ChooseWildMonIndex_Land(void)
 {
     u8 wildMonIndex = 0;
     bool8 swap = FALSE;
@@ -225,7 +225,7 @@ u8 ChooseWildMonIndex_Land(void)
 }
 
 // ROCK_WILD_COUNT / WATER_WILD_COUNT
-u8 ChooseWildMonIndex_WaterRock(void)
+static u8 ChooseWildMonIndex_WaterRock(void)
 {
     u8 wildMonIndex = 0;
     bool8 swap = FALSE;
@@ -335,11 +335,21 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
                 if (Random() % 2 == 0)
                     return max;
 
-            if (rand != 0)
-                rand--;
+                if (rand != 0)
+                    rand--;
+            }
         }
+        return min + rand;
     }
-    return min + rand;
+    else
+    {
+        // Looks for the max level of all slots that share the same species as the selected slot.
+        max = GetMaxLevelOfSpeciesInWildTable(wildPokemon, wildPokemon[wildMonIndex].species, area);
+        if (max > 0)
+            return max + 1;
+        else // Failsafe
+            return wildPokemon[wildMonIndex].maxLevel + 1;
+    }
 }
 
 static u16 GetCurrentMapWildMonHeaderId(void)
@@ -417,7 +427,7 @@ u8 PickWildMonNature(void)
     return Random() % NUM_NATURES;
 }
 
-void CreateWildMon(u16 species, u8 level)
+static void CreateWildMon(u16 species, u8 level)
 {
     bool32 checkCuteCharm;
 
@@ -1098,28 +1108,6 @@ static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
     if (GetMonData(&gPlayerParty[0], MON_DATA_HELD_ITEM) == ITEM_CLEANSE_TAG)
         *encRate = *encRate * 2 / 3;
 }
-
-u8 ChooseHiddenMonIndex(void)
-{
-    #ifdef ENCOUNTER_CHANCE_HIDDEN_MONS_TOTAL
-        u8 rand = Random() % ENCOUNTER_CHANCE_HIDDEN_MONS_TOTAL;
-
-        if (rand < ENCOUNTER_CHANCE_HIDDEN_MONS_SLOT_0)
-            return 0;
-        else if (rand >= ENCOUNTER_CHANCE_HIDDEN_MONS_SLOT_0 && rand < ENCOUNTER_CHANCE_HIDDEN_MONS_SLOT_1)
-            return 1;
-        else
-            return 2;
-    #else
-        return 0xFF;
-    #endif
-}
-
-bool32 MapHasNoEncounterData(void)
-{
-    return (GetCurrentMapWildMonHeaderId() == HEADER_NONE);
-}
-
 
 bool8 TryDoDoubleWildBattle(void)
 {
