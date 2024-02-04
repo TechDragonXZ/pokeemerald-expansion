@@ -1,0 +1,92 @@
+{
+  "id": "MAP_STRANGE_SPACE_UNDERGROUND",
+  "name": "StrangeSpace_Underground",
+  "layout": "LAYOUT_STRANGE_SPACE_UNDERGROUND",
+  "music": "MUS_GSC_ROUTE38",
+  "region_map_section": "MAPSEC_STRANGE_SPACE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_STRANGE_SPACE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_STRANGE_SPACE_LAKE",
+      "offset": 0,
+      "direction": "emerge"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_REGICE",
+      "x": 8,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "StrangeSpace_Underground_Regidrago",
+      "flag": "FLAG_HIDE_REGIDRAGO"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_REGICE",
+      "x": 30,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "StrangeSpace_Underground_Regigigas",
+      "flag": "FLAG_HIDE_REGIGIGAS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_REGICE",
+      "x": 52,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "StrangeSpace_Underground_Regieleki",
+      "flag": "FLAG_HIDE_REGIELEKI"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 51,
+      "elevation": 0,
+      "dest_map": "MAP_STRANGE_SPACE_LAKE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 52,
+      "y": 51,
+      "elevation": 0,
+      "dest_map": "MAP_STRANGE_SPACE_ICE_CAVERN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 30,
+      "y": 51,
+      "elevation": 0,
+      "dest_map": "MAP_STRANGE_SPACE_DESERT",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

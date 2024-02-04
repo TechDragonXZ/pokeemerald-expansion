@@ -3495,7 +3495,7 @@ static const u8 sExpCharmDesc[] = _(
 // Form-changing Key Items
 static const u8 sRotomCatalogDesc[] = _(
     "A catalog full of\n"
-    "deviced liked by\n"
+    "devices liked by\n"
     "Rotom.");
 
 static const u8 sGracideaDesc[] = _(
@@ -3993,3 +3993,8 @@ static const u8 sGlimmeringCharmDesc[] = _(
     "A charm that will\n"
     "raise the shards\n"
     "from Tera Raids.");
+
+static const u8 sSpaceMeteoriteDesc[] = _(
+    "A meteorite that\n"
+    "was found with\n"
+    "Deoxys.");

@@ -3284,6 +3284,42 @@ static const u8 sIvyCudgelDescription[] = _(
     "Type changes with held mask.\n"
     "High critical-hit ratio.");
 
+static const u8 sMysticSlashDescription[] = _(
+    "Hits as soon as possible.\n"
+    "High critical-hit ratio.");
+
+static const u8 sDracoSwarmDescription[] = _(
+    "This attack does Bug\n"
+    "and Dragon-type damage.");
+
+static const u8 sDisasterStrikeDescription[] = _(
+    "Always hits first, High crit ratio.\n"
+    "Does Dark and Fairy-type damage.");
+
+static const u8 sHiddenExplosionDescription[] = _(
+    "Inflicts severe damage but\n"
+    "makes the user faint.");
+
+static const u8 sFrostburnDescription[] = _(
+    "Hits the foe with a harsh wind.\n"
+    "May cause freezing or burning.");
+
+static const u8 sStoneCannonDescription[] = _(
+    "Absorbs sand in one turn,\n"
+    "then attacks next turn.");
+
+static const u8 sFireStormDescription[] = _(
+    "Traps the foe in a fierce\n"
+    "inferno. May cause burn.");
+
+static const u8 sFinalStrikeDescription[] = _(
+    "The user uses all of their power\n"
+    "for one last move, then faints.");
+
+static const u8 sDeltaEnergyDescription[] = _(
+    "This move is super effective\n"
+    "against multiple types.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4127,4 +4163,15 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MATCHA_GOTCHA - 1] = sMatchaGotchaDescription,
     [MOVE_SYRUP_BOMB - 1] = sSyrupBombDescription,
     [MOVE_IVY_CUDGEL - 1] = sIvyCudgelDescription,
+
+    // Custom
+    [MOVE_MYSTIC_SLASH- 1] = sMysticSlashDescription,
+    [MOVE_DRACO_SWARM - 1] = sDracoSwarmDescription,
+    [MOVE_DISASTER_WARN- 1] = sDisasterStrikeDescription,
+    [MOVE_HIDDEN_EXPLOSION - 1] = sHiddenExplosionDescription,
+    [MOVE_FROSTBURN - 1] = sFrostburnDescription,
+    [MOVE_STONE_CANNON - 1] = sStoneCannonDescription,
+    [MOVE_FIRE_STORM - 1] = sFireStormDescription,
+    [MOVE_FINAL_STRIKE - 1] = sFinalStrikeDescription,
+    [MOVE_DELTA_ENERGY - 1] = sDeltaEnergyDescription,
 };

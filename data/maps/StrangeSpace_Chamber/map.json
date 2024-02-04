@@ -1,0 +1,47 @@
+{
+  "id": "MAP_STRANGE_SPACE_CHAMBER",
+  "name": "StrangeSpace_Chamber",
+  "layout": "LAYOUT_STRANGE_SPACE_CHAMBER",
+  "music": "MUS_GSC_ROUTE38",
+  "region_map_section": "MAPSEC_STRANGE_SPACE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_STRANGE_SPACE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_STRANGE_SPACE_LAKE",
+      "offset": 0,
+      "direction": "emerge"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 13,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_STRANGE_SPACE_ENTRANCE",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "StrangeSpace_Chamber_ChangeWildMons"
+    }
+  ]
+}

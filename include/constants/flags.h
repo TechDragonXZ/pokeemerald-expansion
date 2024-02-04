@@ -53,27 +53,27 @@
 #define FLAG_NO_ENCOUNTER         0x28 // No Encounter Flag
 #define FLAG_NO_TRAINER_SEE       0x29 // No Trainer Battle Flag
 #define FLAG_NO_COLLISION         0x2A // No Collision Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
+#define FLAG_ENTERED_HALL_OF_FAME 0x2B // Player Has Entered Hall of Fame Flag
+#define FLAG_CAN_GET_REWARDS      0x2C // Player Can Get League Rewards Flag
+#define FLAG_GOT_MEGA_RING        0x2D // Player Has Recieved Mega Ring Flag
+#define FLAG_GOT_Z_RING           0x2E // Player Has Recieved Z-Power Ring Flag
+#define FLAG_GOT_DYNAMAX_BAND     0x2F // Player Has Recieved Dynamax Band Flag
+#define FLAG_PICKED_KANTO_STARTER     0x30 // Player Picked a Kanto Starter Flag
+#define FLAG_PICKED_SINNOH_STARTER    0x31 // Player Picked a Sinnoh Starter Flag
+#define FLAG_PICKED_UNOVA_STARTER     0x32 // Player Picked a Unova Starter Flag
+#define FLAG_PICKED_KALOS_STARTER     0x33 // Player Picked a Kalos Starter Flag
+#define FLAG_PICKED_ALOLA_STARTER     0x34 // Player Picked a Alola Starter Flag
+#define FLAG_PICKED_GALAR_STARTER     0x35 // Player Picked a Galar Starter Flag
+#define FLAG_OBTAINED_REWARD     0x36 // Player Obtained Current Reward Flag
+#define FLAG_REGIDRAGO_ACTIVE    0x37 // Player Unlocked Regidrago Flag
+#define FLAG_REGIELEKI_ACTIVE    0x38 // Player Unlocked Regieleki Flag
+#define FLAG_REGIGIGAS_ACTIVE    0x39 // Player Unlocked Regigigas Flag
+#define FLAG_HAS_REGIS_3         0x3A // Player has 3 Regis Flag
+#define FLAG_HAS_REGIS_4         0x3B // Player has 4 Regis Flag
+#define FLAG_HAS_REGIS_5         0x3C // Player has 5 Regis Flag
+#define FLAG_DEFEATED_REGIDRAGO  0x3D // Player has defeated/ran/caught Regidrago Flag
+#define FLAG_DEFEATED_REGIELEKI  0x3E // Player has defeated/ran/caught Regieleki Flag
+#define FLAG_DEFEATED_REGIGIGAS  0x3F // Player has defeated/ran/caught Regigigas Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
 #define FLAG_UNUSED_0x041    0x41 // Unused Flag
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
@@ -1218,10 +1218,10 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
+#define FLAG_HIDDEN_ITEM_DEEP_PETALBURG_WOODS_GRASSY_SEED           0x493 // Unused Flag
+#define FLAG_HIDDEN_ITEM_DEEP_PETALBURG_WOODS_MIRACLE_SEED          0x494 // Unused Flag
+#define FLAG_ITEM_DEEP_PETALBURG_WOODS_NET_BALL                     0x495 // Unused Flag
+#define FLAG_ITEM_DEEP_PETALBURG_WOODS_SAFARI_BALL                  0x496 // Unused Flag
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
@@ -1502,9 +1502,9 @@
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
-#define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag
-#define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
-#define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
+#define FLAG_HIDE_REGIDRAGO                         (SYSTEM_FLAGS + 0x85) // Hide Regidrago Flag
+#define FLAG_HIDE_REGIELEKI                         (SYSTEM_FLAGS + 0x86) // Hide Regieleki Flag
+#define FLAG_HIDE_REGIGIGAS                         (SYSTEM_FLAGS + 0x87) // Hide Regigigas Flag
 #define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
 #define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
 #define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag

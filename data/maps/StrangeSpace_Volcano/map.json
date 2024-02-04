@@ -1,0 +1,48 @@
+{
+  "id": "MAP_STRANGE_SPACE_VOLCANO",
+  "name": "StrangeSpace_Volcano",
+  "layout": "LAYOUT_STRANGE_SPACE_VOLCANO",
+  "music": "MUS_GSC_ROUTE38",
+  "region_map_section": "MAPSEC_STRANGE_SPACE",
+  "requires_flash": false,
+  "weather": "WEATHER_VOLCANIC_ASH",
+  "map_type": "MAP_TYPE_STRANGE_SPACE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 27,
+      "y": 50,
+      "elevation": 0,
+      "dest_map": "MAP_STRANGE_SPACE_ENTRANCE",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 11,
+      "y": 52,
+      "elevation": 0,
+      "dest_map": "MAP_STRANGE_SPACE_LAKE",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 42,
+      "y": 52,
+      "elevation": 0,
+      "dest_map": "MAP_STRANGE_SPACE_ICE",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

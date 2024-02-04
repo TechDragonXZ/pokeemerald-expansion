@@ -1661,6 +1661,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-10);
             break;
         case EFFECT_FUTURE_SIGHT:
+        case EFFECT_DISASTER_WARN:
             if (gSideStatuses[GetBattlerSide(battlerDef)] & SIDE_STATUS_FUTUREATTACK
               || gSideStatuses[GetBattlerSide(battlerAtk)] & SIDE_STATUS_FUTUREATTACK)
                 ADJUST_SCORE(-12);
@@ -2091,6 +2092,13 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             }
             break;
         case EFFECT_SPECTRAL_THIEF:
+            break;
+        case EFFECT_STONE_CANNON:
+            if (aiData->holdEffects[battlerAtk] == HOLD_EFFECT_POWER_HERB
+              || ((AI_GetWeather(aiData) & B_WEATHER_SANDSTORM)))
+                break;
+            if (CanTargetFaintAi(battlerDef, battlerAtk)) //Attacker can be knocked out
+                score -= 4;
             break;
         case EFFECT_SEMI_INVULNERABLE:
             if (predictedMove != MOVE_NONE
@@ -3615,6 +3623,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         }
         break;
     case EFFECT_OHKO:
+    case EFFECT_FINAL_STRIKE:
         if (gStatuses3[battlerAtk] & STATUS3_ALWAYS_HITS)
             ADJUST_SCORE(5);
         break;
@@ -3655,6 +3664,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
     case EFFECT_SPECIAL_DEFENSE_DOWN_HIT:
     case EFFECT_ACCURACY_DOWN_HIT:
     case EFFECT_EVASION_DOWN_HIT:
+    case EFFECT_ACC_DOWN_TWO_TYPED:
         if (secondaryEffectChance >= 100 && aiData->abilities[battlerDef] != ABILITY_CONTRARY)
             ADJUST_SCORE(2);
         break;
@@ -3773,7 +3783,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
             ADJUST_SCORE(10);
         break;
     case EFFECT_LOCK_ON:
-        if (HasMoveEffect(battlerAtk, EFFECT_OHKO))
+        if (HasMoveEffect(battlerAtk, EFFECT_OHKO) || HasMoveEffect(battlerAtk, EFFECT_FINAL_STRIKE))
             ADJUST_SCORE(3);
         else if (aiData->abilities[battlerAtk] == ABILITY_COMPOUND_EYES && HasMoveWithLowAccuracy(battlerAtk, battlerDef, 80, TRUE, aiData->abilities[battlerAtk], aiData->abilities[battlerDef], aiData->holdEffects[battlerAtk], aiData->holdEffects[battlerDef]))
             ADJUST_SCORE(3);
@@ -5019,6 +5029,8 @@ static s32 AI_Risky(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
     case EFFECT_FOCUS_PUNCH:
     case EFFECT_REVENGE:
     case EFFECT_TEETER_DANCE:
+    case EFFECT_HIDDEN_EXPLOSION:
+    case EFFECT_FINAL_STRIKE:
         if (Random() & 1)
             ADJUST_SCORE(2);
         break;

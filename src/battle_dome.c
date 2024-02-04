@@ -4115,6 +4115,7 @@ static bool32 IsDomeComboMoveEffect(u32 effect)
     case EFFECT_GROWTH:
     case EFFECT_AURORA_VEIL:
     case EFFECT_WEATHER_BALL:
+    case EFFECT_STONE_CANNON:
     // Moves dependent on terrain
     case EFFECT_EXPANDING_FORCE:
     case EFFECT_GRASSY_GLIDE:

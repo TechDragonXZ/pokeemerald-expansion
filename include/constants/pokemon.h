@@ -70,7 +70,9 @@
 #define NATURE_SASSY    22
 #define NATURE_CAREFUL  23
 #define NATURE_QUIRKY   24
-#define NUM_NATURES     25
+#define NATURE_PRIDEFUL 25
+#define NATURE_INSECURE 26
+#define NUM_NATURES     27
 
 // Pokemon Stats
 #define STAT_HP      0
@@ -165,7 +167,7 @@
 #define LEVEL_UP_MOVE_LV   0xFE00
 #define LEVEL_UP_MOVE_END  0xFFFF
 
-#define MAX_LEVEL_UP_MOVES       20
+#define MAX_LEVEL_UP_MOVES       100
 
 #define MON_MALE       0x00
 #define MON_FEMALE     0xFE
@@ -330,6 +332,6 @@
 #define NUM_NORMAL_ABILITY_SLOTS 2
 #define NUM_HIDDEN_ABILITY_SLOTS 1
 
-#define LEGENDARY_PERFECT_IV_COUNT 3
+#define LEGENDARY_PERFECT_IV_COUNT 6
 
 #endif // GUARD_CONSTANTS_POKEMON_H

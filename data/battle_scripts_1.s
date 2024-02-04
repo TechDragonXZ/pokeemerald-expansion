@@ -443,6 +443,13 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectGlaiveRush              @ EFFECT_GLAIVE_RUSH
 	.4byte BattleScript_EffectBrickBreak              @ EFFECT_RAGING_BULL
 	.4byte BattleScript_EffectHit                     @ EFFECT_RAGE_FIST
+	.4byte BattleScript_EffectDisasterWarn            @ EFFECT_DISASTER_WARN
+	.4byte BattleScript_EffectDeltaEnergy             @ EFFECT_DELTA_ENERGY
+	.4byte BattleScript_EffectExplosion               @ EFFECT_HIDDEN_EXPLOSION
+	.4byte BattleScript_EffectAccuracyDownHit         @ EFFECT_ACC_DOWN_TWO_TYPED
+	.4byte BattleScript_EffectFrostburnHit            @ EFFECT_FROSTBURN_HIT
+	.4byte BattleScript_EffectStoneCannon             @ EFFECT_STONE_CANNON
+	.4byte BattleScript_EffectFinalStrike             @ EFFECT_FINAL_STRIKE
 
 BattleScript_EffectGlaiveRush::
 	call BattleScript_EffectHit_Ret
@@ -10817,3 +10824,93 @@ BattleScript_EffectSnow::
 	call BattleScript_CheckPrimalWeather
 	setsnow
 	goto BattleScript_MoveWeatherChange
+
+BattleScript_UnstableGenesActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_PKMNCHANGEDTYPEWITH
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_EffectDeltaEnergy::
+	shellsidearmcheck
+	goto BattleScript_EffectHit
+
+BattleScript_EffectFrostburnHit::
+	setmoveeffect MOVE_EFFECT_FROSTBURN
+	goto BattleScript_EffectHit
+
+BattleScript_EffectDisasterWarn::
+	printstring STRINGID_PKMNTOOKDISASTER
+	waitmessage B_WAIT_TIME_LONG
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_DISASTER_WARN, BattleScript_CheckDoomDesireMissDisaster
+	accuracycheck BattleScript_DisasterAttackMiss, MOVE_DISASTER_WARN
+	goto BattleScript_DisasterAttackAnimate
+BattleScript_CheckDoomDesireMissDisaster::
+	accuracycheck BattleScript_DisasterAttackMiss, MOVE_DOOM_DESIRE
+BattleScript_DisasterAttackAnimate::
+	critcalc
+	damagecalc
+	adjustdamage
+	jumpifmovehadnoeffect BattleScript_DoDisasterAttackResult
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_DISASTER_WARN, BattleScript_DisasterHitAnimDoomDesire
+	playanimation BS_ATTACKER, B_ANIM_FUTURE_SIGHT_HIT
+	goto BattleScript_DoDisasterAttackHit
+BattleScript_DisasterHitAnimDoomDesire::
+	playanimation BS_ATTACKER, B_ANIM_DOOM_DESIRE_HIT
+BattleScript_DoDisasterAttackHit::
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_DoDisasterAttackResult:
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_TARGET
+	checkteamslost BattleScript_DisasterAttackEnd
+BattleScript_DisasterAttackEnd::
+	moveendcase MOVEEND_RAGE
+	moveendfromto MOVEEND_ITEM_EFFECTS_ALL, MOVEEND_UPDATE_LAST_MOVES
+	setbyte gMoveResultFlags, 0
+	end2
+BattleScript_DisasterAttackMiss::
+	pause B_WAIT_TIME_SHORT
+	sethword gMoveResultFlags, MOVE_RESULT_FAILED
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	sethword gMoveResultFlags, 0
+	end2
+
+BattleScript_EffectStoneCannon::
+	jumpifweatheraffected BS_ATTACKER, B_WEATHER_SANDSTORM, BattleScript_StoneCannonOnFirstTurn
+BattleScript_StoneCannonDecideTurn::
+	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_TwoTurnMovesSecondTurn
+	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
+	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_STONE_CANNON
+	call BattleScriptFirstChargingTurn
+	jumpifnoholdeffect BS_ATTACKER, HOLD_EFFECT_POWER_HERB, BattleScript_MoveEnd
+	call BattleScript_PowerHerbActivation
+	goto BattleScript_TwoTurnMovesSecondTurn
+BattleScript_StoneCannonOnFirstTurn::
+	orword gHitMarker, HITMARKER_CHARGING
+	setmoveeffect MOVE_EFFECT_CHARGING | MOVE_EFFECT_AFFECTS_USER
+	seteffectprimary
+	ppreduce
+	goto BattleScript_TwoTurnMovesSecondTurn
+
+BattleScript_EffectFinalStrike::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	typecalc
+	moveendall
+	tryfaintmon BS_TARGET
+	setatkhptozero
+	tryfaintmon BS_ATTACKER
+	jumpifmovehadnoeffect BattleScript_HitFromAtkAnimation
+	tryKO BattleScript_KOFail
+	trysetdestinybondtohappen
+	goto BattleScript_HitFromAtkAnimation

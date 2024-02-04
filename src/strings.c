@@ -1858,3 +1858,81 @@ const u8 gText_Berries[] = _("BERRIES");
 const u8 gText_ExpShareOn[] = _("The Exp. Share has been turned on.{PAUSE_UNTIL_PRESS}");
 const u8 gText_ExpShareOff[] = _("The Exp. Share has been turned off.{PAUSE_UNTIL_PRESS}");
 const u8 gText_BasePointsResetToZero[] = _("{STR_VAR_1}'s base points\nwere all reset to zero!{PAUSE_UNTIL_PRESS}");
+
+// Kiosk
+const u8 gText_WhichFunctionShouldBeAccessed[] = _("Which function do you want to use?");
+const u8 gText_AccessedMoveReminder[] = _("Accessing Move Reminder...");
+const u8 gText_AccessedMoveDeleter[] = _("Accessing Move Deleter...");
+const u8 gText_AccessedLeagueRewards[] = _("Accessing League Rewards...");
+const u8 gText_KioskMoveReminder[] = _("MOVE REMINDER");
+const u8 gText_KioskMoveDeleter[] = _("MOVE DELETER");
+const u8 gText_KioskLeagueRewards[] = _("LEAGUE REWARDS");
+
+// Strange Space
+const u8 gText_Group1[] = _("GROUP 1");
+const u8 gText_Group2[] = _("GROUP 2");
+const u8 gText_Group3[] = _("GROUP 3");
+
+// Fossil Revival
+const u8 gText_HelixFossil[] = _("Helix Fossil");
+const u8 gText_DomeFossil[] = _("Dome Fossil");
+const u8 gText_OldAmber[] = _("Old Amber");
+const u8 gText_ArmorFossil[] = _("Armor Fossil");
+const u8 gText_SkullFossil[] = _("Skull Fossil");
+const u8 gText_OddKeystone[] = _("Odd Keystone");
+const u8 gText_CoverFossil[] = _("Cover Fossil");
+const u8 gText_PlumeFossil[] = _("Plume Fossil");
+const u8 gText_JawFossil[] = _("Jaw Fossil");
+const u8 gText_SailFossil[] = _("Sail Fossil");
+const u8 gText_FossilizedBird[] = _("Fossilized Bird");
+const u8 gText_FossilizedDino[] = _("Fossilized Dino");
+const u8 gText_FossilizedDrake[] = _("Fossilized Drake");
+const u8 gText_FossilizedFish[] = _("Fossilized Fish");
+
+// Regional Starters
+const u8 gText_Bulbasaur[] = _("Bulbasaur");
+const u8 gText_Charmander[] = _("Charmander");
+const u8 gText_Squirtle[] = _("Squirtle");
+
+const u8 gText_Turtwig[] = _("Turtwig");
+const u8 gText_Chimchar[] = _("Chimchar");
+const u8 gText_Piplup[] = _("Piplup");
+
+const u8 gText_Snivy[] = _("Snivy");
+const u8 gText_Tepig[] = _("Tepig");
+const u8 gText_Oshawott[] = _("Oshawott");
+
+const u8 gText_Chespin[] = _("Chespin");
+const u8 gText_Fennekin[] = _("Fennekin");
+const u8 gText_Froakie[] = _("Froakie");
+
+const u8 gText_Rowlet[] = _("Rowlet");
+const u8 gText_Litten[] = _("Litten");
+const u8 gText_Popplio[] = _("Popplio");
+
+const u8 gText_Grookey[] = _("Grookey");
+const u8 gText_Scorbunny[] = _("Scorbunny");
+const u8 gText_Sobble[] = _("Sobble");
+
+// Partner Eevee
+const u8 gText_Bouncy_Bubble[] = _("Bouncy Bubble");
+const u8 gText_Buzzy_Buzz[] = _("Buzzy Buzz");
+const u8 gText_Sizzly_Slide[] = _("Sizzly Slide");
+const u8 gText_Glitzy_Glow[] = _("Glitzy Glow");
+const u8 gText_Baddy_Bad[] = _("Baddy Bad");
+const u8 gText_Sappy_Seed[] = _("Sappy Seed");
+const u8 gText_Freezy_Frost[] = _("Freezy Frost");
+const u8 gText_Sparkly_Swirl[] = _("Sparkly Swirl");
+const u8 gText_Veevee_Volley[] = _("Veevee Volley");
+
+// Partner Pikachu
+const u8 gText_Splishy_Splash[] = _("Splishy Splash");
+const u8 gText_Floaty_Fall[] = _("Floaty Fall");
+const u8 gText_Pika_Papow[] = _("Pika Papow");
+const u8 gText_Zippy_Zap[] = _("Zippy Zap");
+
+// Misc
+const u8 gText_WhichForm[] = _("Choose which\nform?");
+
+// Party Menu
+const u8 gText_Nickname[] = _("NICKNAME");

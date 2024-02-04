@@ -833,6 +833,11 @@ static const u8 sText_HurtByTheSeaOfFire[] = _("{B_ATK_TEAM1} {B_ATK_NAME_WITH_P
 static const u8 sText_TheSeaOfFireDisappeared[] = _("The sea of fire around {B_ATK_TEAM2}\nteam disappeared!");
 static const u8 sText_SwampEnvelopedSide[] = _("A swamp enveloped\n{B_DEF_TEAM2} team!");
 static const u8 sText_TheSwampDisappeared[] = _("The swamp around {B_ATK_TEAM2}\nteam disappeared!");
+static const u8 sText_PkmnRaisedStats[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its STATS!");
+static const u8 sText_PkmnForesawDisaster[] = _("{B_ATK_NAME_WITH_PREFIX} foresaw\na disaster!");
+static const u8 sText_PkmnTookDisaster[] = _("{B_DEF_NAME_WITH_PREFIX} took the\ndisaster!");
+static const u8 sText_PkmnGatheredSand[] = _("{B_ATK_NAME_WITH_PREFIX} gathered\nup sand from its surroundings!");
+static const u8 sText_TrapsSet[] = _("{B_ATK_NAME_WITH_PREFIX} has\nplaced down numerous traps!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1521,6 +1526,11 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ULTRABURSTCOMPLETED - BATTLESTRINGS_TABLE_START] = sText_UltraBurstCompleted,
     [STRINGID_TEAMGAINEDEXP - BATTLESTRINGS_TABLE_START] = sText_TeamGainedEXP,
     [STRINGID_TARGETCOVEREDINSTICKYCANDYSYRUP - BATTLESTRINGS_TABLE_START] = sText_TargetCoveredInStickyCandySyrup,
+    [STRINGID_PKMNRAISEDSTATS - BATTLESTRINGS_TABLE_START] = sText_PkmnRaisedStats,
+    [STRINGID_PKMNFORESAWDISASTER - 12] = sText_PkmnForesawDisaster,
+    [STRINGID_PKMNTOOKDISASTER - 12] = sText_PkmnTookDisaster,
+    [STRINGID_PKMNGATHEREDSAND - 12] = sText_PkmnGatheredSand,
+    [STRINGID_TRAPSSET - 12] = sText_TrapsSet,
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -1762,6 +1772,7 @@ const u16 gFirstTurnOfTwoStringIds[] =
     [B_MSG_TURN1_FREEZE_SHOCK]  = STRINGID_CLOAKEDINAFREEZINGLIGHT,
     [B_MSG_TURN1_SKY_DROP]      = STRINGID_PKMNTOOKTARGETHIGH,
     [B_MSG_TURN1_METEOR_BEAM]   = STRINGID_METEORBEAMCHARGING,
+    [B_MSG_TURN1_STONE_CANNON]  = STRINGID_PKMNGATHEREDSAND,
 };
 
 // Index copied from move's index in sTrappingMoves
@@ -1886,7 +1897,8 @@ const u16 gPartyStatusHealStringIds[] =
 const u16 gFutureMoveUsedStringIds[] =
 {
     [B_MSG_FUTURE_SIGHT] = STRINGID_PKMNFORESAWATTACK,
-    [B_MSG_DOOM_DESIRE]  = STRINGID_PKMNCHOSEXASDESTINY
+    [B_MSG_DOOM_DESIRE]  = STRINGID_PKMNCHOSEXASDESTINY,
+    [B_MSG_DISASTER_WARN] = STRINGID_PKMNFORESAWDISASTER
 };
 
 const u16 gBallEscapeStringIds[] =

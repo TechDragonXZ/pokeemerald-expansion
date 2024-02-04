@@ -373,6 +373,30 @@ static u16 GetCurrentMapWildMonHeaderId(void)
                     alteringCaveId = 0;
 
                 i += alteringCaveId;
+
+                u16 strangeSpaceIceId = VarGet(VAR_STRANGE_SPACE_WILD_GROUPS);
+                u16 strangeSpaceLakeId = VarGet(VAR_STRANGE_SPACE_WILD_GROUPS);
+                u16 strangeSpaceDesertId = VarGet(VAR_STRANGE_SPACE_WILD_GROUPS);
+                u16 strangeSpaceVolcanoId = VarGet(VAR_STRANGE_SPACE_WILD_GROUPS);
+                if (strangeSpaceIceId >= NUM_STRANGE_SPACE_ICE_TABLES)
+                    strangeSpaceIceId = 0;
+
+                i += strangeSpaceIceId;
+                
+                if (strangeSpaceLakeId >= NUM_STRANGE_SPACE_LAKE_TABLES)
+                    strangeSpaceLakeId = 0;
+
+                i += strangeSpaceLakeId;
+                
+                if (strangeSpaceDesertId >= NUM_STRANGE_SPACE_DESERT_TABLES)
+                    strangeSpaceDesertId = 0;
+
+                i += strangeSpaceDesertId;
+                
+                if (strangeSpaceVolcanoId >= NUM_STRANGE_SPACE_VOLCANO_TABLES)
+                    strangeSpaceVolcanoId = 0;
+
+                i += strangeSpaceVolcanoId;
             }
 
             return i;

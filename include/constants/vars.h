@@ -264,11 +264,11 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
-#define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
-#define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
+#define VAR_HALL_OF_FAME                                 0x40F7 // Number of Time Player Has Entered Hall of Fame Var
+#define VAR_HALL_OF_FAME_OLD                             0x40F8 // Old Number of Time Player Has Entered Hall of Fame Var
+#define VAR_MEGASTONE_COUNT                              0x40F9 // Number of Megastones Given/Recieced Var
+#define VAR_Z_CRYSTAL_COUNT                              0x40FA // Number of Z-Crystals Given/Recieced Var
+#define VAR_STRANGE_SPACE_WILD_GROUPS                    0x40FB // Strange Space Wild Pokémon Encounter Groups Var
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var

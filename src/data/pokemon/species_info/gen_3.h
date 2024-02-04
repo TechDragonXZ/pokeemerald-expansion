@@ -5719,7 +5719,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpeed     = 81,
         .baseSpAttack  = 100,
         .baseSpDefense = 125,
-        .types = { TYPE_WATER, TYPE_WATER },
+        .types = { TYPE_WATER, TYPE_FAIRY },
         .catchRate = 60,
         .expYield = 189,
         .evYield_SpDefense = 2,
@@ -5764,12 +5764,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
 #if P_FAMILY_CASTFORM
 #define CASTFORM_MISC_INFO                                      \
-        .baseHP        = 70,                                    \
-        .baseAttack    = 70,                                    \
-        .baseDefense   = 70,                                    \
-        .baseSpeed     = 70,                                    \
-        .baseSpAttack  = 70,                                    \
-        .baseSpDefense = 70,                                    \
+        .baseHP        = 80,                                    \
+        .baseAttack    = 80,                                    \
+        .baseDefense   = 80,                                    \
+        .baseSpeed     = 80,                                    \
+        .baseSpAttack  = 80,                                    \
+        .baseSpDefense = 80,                                    \
         .catchRate = 45,                                        \
         .expYield = 147,                                        \
         .evYield_HP = 1,                                        \
@@ -5882,6 +5882,28 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
         PALETTES(CastformSnowy),
         ICON(CastformSnowy, 0),
+    },
+
+    [SPECIES_CASTFORM_SANDY] =
+    {
+        CASTFORM_MISC_INFO,
+        .types = { TYPE_ROCK, TYPE_ROCK },
+        .bodyColor = BODY_COLOR_BROWN,
+        .description = COMPOUND_STRING(
+            "This is Castform's form in a sandstorm.\n"
+            "In an experiment where it was placed\n"
+            "in a desert, it didn't change to this form.\n"
+            "Its hard skin is as hard as obsidian."),
+        FRONT_PIC(CastformSandy, 40, 56),
+        .frontPicYOffset = 8,
+        .frontAnimFrames = sAnims_CastformSnowy,
+        .frontAnimId = ANIM_V_STRETCH,
+        .enemyMonElevation = 5,
+        BACK_PIC(CastformSandy, 56, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
+        PALETTES(CastformSandy),
+        ICON(CastformSandy, 0),
     },
 #endif //P_FAMILY_CASTFORM
 
@@ -8152,7 +8174,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .trainerScale = 290,                                            \
         .trainerOffset = 2,                                             \
         .footprint = gMonFootprint_Deoxys,                              \
-        .formSpeciesIdTable = sDeoxysFormSpeciesIdTable
+        .formSpeciesIdTable = sDeoxysFormSpeciesIdTable,                \
+        .formChangeTable = sDeoxysFormChangeTable                       \
 
     [SPECIES_DEOXYS_NORMAL] =
     {

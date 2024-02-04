@@ -122,6 +122,17 @@
 #define MULTI_SLATEPORT_TENT_RULES         111
 #define MULTI_FALLARBOR_TENT_RULES         112
 #define MULTI_TAG_MATCH_TYPE               113
+#define MULTI_KIOSK                        114
+#define MULTI_WILD_POKEMON_GROUPS          115
+#define MULTI_KANTO_STARTERS               116
+#define MULTI_SINNOH_STARTERS              117
+#define MULTI_UNOVA_STARTERS               118
+#define MULTI_KALOS_STARTERS               119
+#define MULTI_ALOLA_STARTERS               120
+#define MULTI_GALAR_STARTERS               121
+#define MULTI_PARTNER_EEVEE_MOVES          122
+#define MULTI_PARTNER_PIKACHU_MOVES        123
+#define MULTI_MEGA_Z_SHOP                  124
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

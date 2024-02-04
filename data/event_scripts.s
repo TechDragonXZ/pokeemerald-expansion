@@ -1067,3 +1067,24 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+	.include "data/scripts/league_kiosk.inc"
+
+	.include "data/maps/DeepPetalburgWoods_Clearing/scripts.inc"
+	.include "data/maps/DeepPetalburgWoods_Pond/scripts.inc"
+
+
+	.include "data/maps/StrangeSpace_Entrance/scripts.inc"
+
+	.include "data/maps/StrangeSpace_Ice/scripts.inc"
+
+	.include "data/maps/StrangeSpace_Desert/scripts.inc"
+
+	.include "data/maps/StrangeSpace_Volcano/scripts.inc"
+
+	.include "data/maps/StrangeSpace_Lake/scripts.inc"
+
+	.include "data/maps/StrangeSpace_Chamber/scripts.inc"
+
+	.include "data/maps/StrangeSpace_Underground/scripts.inc"
+
+	.include "data/maps/StrangeSpace_IceCavern/scripts.inc"

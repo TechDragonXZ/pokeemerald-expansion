@@ -1131,60 +1131,64 @@ static const u8 sTerrainToType[BATTLE_TERRAIN_COUNT] =
 
 const ALIGNED(4) u8 gBattlePalaceNatureToMoveGroupLikelihood[NUM_NATURES][4] =
 {
-    [NATURE_HARDY]   = PALACE_STYLE(61,  7, 61,  7), // 32% support >= 50% HP, 32% support < 50% HP
-    [NATURE_LONELY]  = PALACE_STYLE(20, 25, 84,  8), // 55%,  8%
-    [NATURE_BRAVE]   = PALACE_STYLE(70, 15, 32, 60), // 15%,  8%
-    [NATURE_ADAMANT] = PALACE_STYLE(38, 31, 70, 15), // 31%, 15%
-    [NATURE_NAUGHTY] = PALACE_STYLE(20, 70, 70, 22), // 10%,  8%
-    [NATURE_BOLD]    = PALACE_STYLE(30, 20, 32, 58), // 50%, 10%
-    [NATURE_DOCILE]  = PALACE_STYLE(56, 22, 56, 22), // 22%, 22%
-    [NATURE_RELAXED] = PALACE_STYLE(25, 15, 75, 15), // 60%, 10%
-    [NATURE_IMPISH]  = PALACE_STYLE(69,  6, 28, 55), // 25%, 17%
-    [NATURE_LAX]     = PALACE_STYLE(35, 10, 29,  6), // 55%, 65%
-    [NATURE_TIMID]   = PALACE_STYLE(62, 10, 30, 20), // 28%, 50%
-    [NATURE_HASTY]   = PALACE_STYLE(58, 37, 88,  6), //  5%,  6%
-    [NATURE_SERIOUS] = PALACE_STYLE(34, 11, 29, 11), // 55%, 60%
-    [NATURE_JOLLY]   = PALACE_STYLE(35,  5, 35, 60), // 60%,  5%
-    [NATURE_NAIVE]   = PALACE_STYLE(56, 22, 56, 22), // 22%, 22%
-    [NATURE_MODEST]  = PALACE_STYLE(35, 45, 34, 60), // 20%,  6%
-    [NATURE_MILD]    = PALACE_STYLE(44, 50, 34,  6), //  6%, 60%
-    [NATURE_QUIET]   = PALACE_STYLE(56, 22, 56, 22), // 22%, 22%
-    [NATURE_BASHFUL] = PALACE_STYLE(30, 58, 30, 58), // 12%, 12%
-    [NATURE_RASH]    = PALACE_STYLE(30, 13, 27,  6), // 57%, 67%
-    [NATURE_CALM]    = PALACE_STYLE(40, 50, 25, 62), // 10%, 13%
-    [NATURE_GENTLE]  = PALACE_STYLE(18, 70, 90,  5), // 12%,  5%
-    [NATURE_SASSY]   = PALACE_STYLE(88,  6, 22, 20), //  6%, 58%
-    [NATURE_CAREFUL] = PALACE_STYLE(42, 50, 42,  5), //  8%, 53%
-    [NATURE_QUIRKY]  = PALACE_STYLE(56, 22, 56, 22)  // 22%, 22%
+    [NATURE_HARDY]     = PALACE_STYLE(61,  7, 61,  7), // 32% support >= 50% HP, 32% support < 50% HP
+    [NATURE_LONELY]    = PALACE_STYLE(20, 25, 84,  8), // 55%,  8%
+    [NATURE_BRAVE]     = PALACE_STYLE(70, 15, 32, 60), // 15%,  8%
+    [NATURE_ADAMANT]   = PALACE_STYLE(38, 31, 70, 15), // 31%, 15%
+    [NATURE_NAUGHTY]   = PALACE_STYLE(20, 70, 70, 22), // 10%,  8%
+    [NATURE_BOLD]      = PALACE_STYLE(30, 20, 32, 58), // 50%, 10%
+    [NATURE_DOCILE]    = PALACE_STYLE(56, 22, 56, 22), // 22%, 22%
+    [NATURE_RELAXED]   = PALACE_STYLE(25, 15, 75, 15), // 60%, 10%
+    [NATURE_IMPISH]    = PALACE_STYLE(69,  6, 28, 55), // 25%, 17%
+    [NATURE_LAX]       = PALACE_STYLE(35, 10, 29,  6), // 55%, 65%
+    [NATURE_TIMID]     = PALACE_STYLE(62, 10, 30, 20), // 28%, 50%
+    [NATURE_HASTY]     = PALACE_STYLE(58, 37, 88,  6), //  5%,  6%
+    [NATURE_SERIOUS]   = PALACE_STYLE(34, 11, 29, 11), // 55%, 60%
+    [NATURE_JOLLY]     = PALACE_STYLE(35,  5, 35, 60), // 60%,  5%
+    [NATURE_NAIVE]     = PALACE_STYLE(56, 22, 56, 22), // 22%, 22%
+    [NATURE_MODEST]    = PALACE_STYLE(35, 45, 34, 60), // 20%,  6%
+    [NATURE_MILD]      = PALACE_STYLE(44, 50, 34,  6), //  6%, 60%
+    [NATURE_QUIET]     = PALACE_STYLE(56, 22, 56, 22), // 22%, 22%
+    [NATURE_BASHFUL]   = PALACE_STYLE(30, 58, 30, 58), // 12%, 12%
+    [NATURE_RASH]      = PALACE_STYLE(30, 13, 27,  6), // 57%, 67%
+    [NATURE_CALM]      = PALACE_STYLE(40, 50, 25, 62), // 10%, 13%
+    [NATURE_GENTLE]    = PALACE_STYLE(18, 70, 90,  5), // 12%,  5%
+    [NATURE_SASSY]     = PALACE_STYLE(88,  6, 22, 20), //  6%, 58%
+    [NATURE_CAREFUL]   = PALACE_STYLE(42, 50, 42,  5), //  8%, 53%
+    [NATURE_QUIRKY]    = PALACE_STYLE(56, 22, 56, 22),  // 22%, 22%
+    [NATURE_PRIDEFUL]  = PALACE_STYLE(42, 50, 42,  5), //  8%, 53%
+    [NATURE_INSECURE]  = PALACE_STYLE(56, 22, 56, 22)  // 22%, 22%
 };
 
 static const u8 sBattlePalaceNatureToFlavorTextId[NUM_NATURES] =
 {
-    [NATURE_HARDY]   = B_MSG_EAGER_FOR_MORE,
-    [NATURE_LONELY]  = B_MSG_GLINT_IN_EYE,
-    [NATURE_BRAVE]   = B_MSG_GETTING_IN_POS,
-    [NATURE_ADAMANT] = B_MSG_GLINT_IN_EYE,
-    [NATURE_NAUGHTY] = B_MSG_GLINT_IN_EYE,
-    [NATURE_BOLD]    = B_MSG_GETTING_IN_POS,
-    [NATURE_DOCILE]  = B_MSG_EAGER_FOR_MORE,
-    [NATURE_RELAXED] = B_MSG_GLINT_IN_EYE,
-    [NATURE_IMPISH]  = B_MSG_GETTING_IN_POS,
-    [NATURE_LAX]     = B_MSG_GROWL_DEEPLY,
-    [NATURE_TIMID]   = B_MSG_GROWL_DEEPLY,
-    [NATURE_HASTY]   = B_MSG_GLINT_IN_EYE,
-    [NATURE_SERIOUS] = B_MSG_EAGER_FOR_MORE,
-    [NATURE_JOLLY]   = B_MSG_GETTING_IN_POS,
-    [NATURE_NAIVE]   = B_MSG_EAGER_FOR_MORE,
-    [NATURE_MODEST]  = B_MSG_GETTING_IN_POS,
-    [NATURE_MILD]    = B_MSG_GROWL_DEEPLY,
-    [NATURE_QUIET]   = B_MSG_EAGER_FOR_MORE,
-    [NATURE_BASHFUL] = B_MSG_EAGER_FOR_MORE,
-    [NATURE_RASH]    = B_MSG_GROWL_DEEPLY,
-    [NATURE_CALM]    = B_MSG_GETTING_IN_POS,
-    [NATURE_GENTLE]  = B_MSG_GLINT_IN_EYE,
-    [NATURE_SASSY]   = B_MSG_GROWL_DEEPLY,
-    [NATURE_CAREFUL] = B_MSG_GROWL_DEEPLY,
-    [NATURE_QUIRKY]  = B_MSG_EAGER_FOR_MORE,
+    [NATURE_HARDY]    = B_MSG_EAGER_FOR_MORE,
+    [NATURE_LONELY]   = B_MSG_GLINT_IN_EYE,
+    [NATURE_BRAVE]    = B_MSG_GETTING_IN_POS,
+    [NATURE_ADAMANT]  = B_MSG_GLINT_IN_EYE,
+    [NATURE_NAUGHTY]  = B_MSG_GLINT_IN_EYE,
+    [NATURE_BOLD]     = B_MSG_GETTING_IN_POS,
+    [NATURE_DOCILE]   = B_MSG_EAGER_FOR_MORE,
+    [NATURE_RELAXED]  = B_MSG_GLINT_IN_EYE,
+    [NATURE_IMPISH]   = B_MSG_GETTING_IN_POS,
+    [NATURE_LAX]      = B_MSG_GROWL_DEEPLY,
+    [NATURE_TIMID]    = B_MSG_GROWL_DEEPLY,
+    [NATURE_HASTY]    = B_MSG_GLINT_IN_EYE,
+    [NATURE_SERIOUS]  = B_MSG_EAGER_FOR_MORE,
+    [NATURE_JOLLY]    = B_MSG_GETTING_IN_POS,
+    [NATURE_NAIVE]    = B_MSG_EAGER_FOR_MORE,
+    [NATURE_MODEST]   = B_MSG_GETTING_IN_POS,
+    [NATURE_MILD]     = B_MSG_GROWL_DEEPLY,
+    [NATURE_QUIET]    = B_MSG_EAGER_FOR_MORE,
+    [NATURE_BASHFUL]  = B_MSG_EAGER_FOR_MORE,
+    [NATURE_RASH]     = B_MSG_GROWL_DEEPLY,
+    [NATURE_CALM]     = B_MSG_GETTING_IN_POS,
+    [NATURE_GENTLE]   = B_MSG_GLINT_IN_EYE,
+    [NATURE_SASSY]    = B_MSG_GROWL_DEEPLY,
+    [NATURE_CAREFUL]  = B_MSG_GROWL_DEEPLY,
+    [NATURE_QUIRKY]   = B_MSG_EAGER_FOR_MORE,
+    [NATURE_PRIDEFUL] = B_MSG_EAGER_FOR_MORE,
+    [NATURE_INSECURE] = B_MSG_GROWL_DEEPLY,
 };
 
 static bool32 NoTargetPresent(u8 battler, u32 move)
@@ -1579,6 +1583,12 @@ static bool32 AccuracyCalcHelper(u16 move)
     if (WEATHER_HAS_EFFECT)
     {
         if ((IsBattlerWeatherAffected(gBattlerTarget, B_WEATHER_RAIN) && (gBattleMoves[move].effect == EFFECT_THUNDER || gBattleMoves[move].effect == EFFECT_HURRICANE)))
+        {
+            // thunder/hurricane ignore acc checks in rain unless target is holding utility umbrella
+            JumpIfMoveFailed(7, move);
+            return TRUE;
+        }
+        if ((IsBattlerWeatherAffected(gBattlerTarget, B_WEATHER_SUN) && (move == MOVE_FIRE_STORM)))
         {
             // thunder/hurricane ignore acc checks in rain unless target is holding utility umbrella
             JumpIfMoveFailed(7, move);
@@ -3170,6 +3180,22 @@ void SetMoveEffect(bool32 primary, u32 certain)
                         MOVE_EFFECT_PARALYSIS
                     };
                     gBattleScripting.moveEffect = RandomElement(RNG_TRI_ATTACK, sTriAttackEffects);
+                    SetMoveEffect(FALSE, 0);
+                }
+                break;
+            case MOVE_EFFECT_FROSTBURN:
+                if (gBattleMons[gEffectBattler].status1)
+                {
+                    gBattlescriptCurrInstr++;
+                }
+                else
+                {
+                #if B_USE_FROSTBITE == TRUE
+                    static const u8 sFrostburnEffects[] = { MOVE_EFFECT_BURN, MOVE_EFFECT_FROSTBITE };
+                #else
+                    static const u8 sFrostburnEffects[] = { MOVE_EFFECT_BURN, MOVE_EFFECT_FREEZE };
+                #endif
+                    gBattleScripting.moveEffect = RandomElement(RNG_FROSTBURN, sFrostburnEffects);
                     SetMoveEffect(FALSE, 0);
                 }
                 break;
@@ -5316,7 +5342,8 @@ static void Cmd_moveend(void)
                 && gBattleMons[gBattlerTarget].hp != 0
                 && gBattlerAttacker != gBattlerTarget
                 && (moveType == TYPE_FIRE
-                    || (B_BURN_HIT_THAW >= GEN_6 && gBattleMoves[gCurrentMove].effect == EFFECT_BURN_HIT))
+                    || (B_BURN_HIT_THAW >= GEN_6 && gBattleMoves[gCurrentMove].effect == EFFECT_BURN_HIT)
+                    || (gBattleMoves[gCurrentMove].effect == EFFECT_FROSTBURN_HIT))
                 && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
             {
                 gBattleMons[gBattlerTarget].status1 &= ~STATUS1_FREEZE;
@@ -9195,7 +9222,7 @@ static void Cmd_various(void)
     {
         VARIOUS_ARGS();
         i = GetHighestStatId(battler);
-        if (GetBattlerAbility(battler) == ABILITY_BEAST_BOOST
+        if ((GetBattlerAbility(battler) == ABILITY_BEAST_BOOST || ABILITY_PARTNERS_BOND)
             && HasAttackerFaintedTarget()
             && !NoAliveMonsForEitherParty()
             && CompareStat(gBattlerAttacker, i, MAX_STAT_STAGE, CMP_LESS_THAN))
@@ -13489,6 +13516,8 @@ static void Cmd_trysetfutureattack(void)
 
         if (gCurrentMove == MOVE_DOOM_DESIRE)
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOOM_DESIRE;
+        else if (gCurrentMove == MOVE_DISASTER_WARN)
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DISASTER_WARN;
         else
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_FUTURE_SIGHT;
 

@@ -657,3 +657,11 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
 	end
+
+DeepPetalburgWoods_Clearing_EventScript_ItemNetBall::
+	finditem ITEM_NET_BALL
+	end
+
+DeepPetalburgWoods_Clearing_EventScript_ItemSafariBall::
+	finditem ITEM_SAFARI_BALL
+	end

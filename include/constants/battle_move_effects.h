@@ -420,7 +420,15 @@
 #define EFFECT_GLAIVE_RUSH                  414
 #define EFFECT_RAGING_BULL                  415
 #define EFFECT_RAGE_FIST                    416
+#define EFFECT_DISASTER_WARN                417
+#define EFFECT_DELTA_ENERGY                 418
+#define EFFECT_HIDDEN_EXPLOSION             419
+#define EFFECT_ACC_DOWN_TWO_TYPED           420
+#define EFFECT_FROSTBURN_HIT                421
+#define EFFECT_DELAY_TWO_TYPED              422
+#define EFFECT_STONE_CANNON                 423
+#define EFFECT_FINAL_STRIKE                 424
 
-#define NUM_BATTLE_MOVE_EFFECTS             417
+#define NUM_BATTLE_MOVE_EFFECTS             425
 
 #endif  // GUARD_CONSTANTS_BATTLE_MOVE_EFFECTS_H

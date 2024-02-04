@@ -1550,7 +1550,8 @@ bool32 ShouldSetSandstorm(u32 battler, u32 ability, u32 holdEffect)
       || IS_BATTLER_OF_TYPE(battler, TYPE_STEEL)
       || IS_BATTLER_OF_TYPE(battler, TYPE_GROUND)
       || HasMoveEffect(battler, EFFECT_SHORE_UP)
-      || HasMoveEffect(battler, EFFECT_WEATHER_BALL))
+      || HasMoveEffect(battler, EFFECT_WEATHER_BALL)
+      || HasMove(battler, MOVE_STONE_CANNON))
     {
         return TRUE;
     }
@@ -2269,6 +2270,7 @@ bool32 IsChargingMove(u32 battlerAtk, u32 effect)
     case EFFECT_SKULL_BASH:
     case EFFECT_METEOR_BEAM:
     case EFFECT_TWO_TURNS_ATTACK:
+    case EFFECT_STONE_CANNON:
         if (AI_DATA->holdEffects[battlerAtk] == HOLD_EFFECT_POWER_HERB)
             return FALSE;
         return TRUE;

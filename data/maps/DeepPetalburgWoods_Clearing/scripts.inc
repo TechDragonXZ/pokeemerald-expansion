@@ -1,0 +1,7 @@
+DeepPetalburgWoods_Clearing_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, DeepPetalburgWoods_Clearing_OnTransition
+	.byte 0
+
+DeepPetalburgWoods_Clearing_OnTransition::
+	clearflag FLAG_DYNAMAX_BATTLE
+	end

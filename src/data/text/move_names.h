@@ -889,6 +889,16 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_G_MAX_DEPLETION] = _("Gmax Depletion"),
     [MOVE_G_MAX_ONE_BLOW] = _("Gmax One Blow"),
     [MOVE_G_MAX_RAPID_FLOW] = _("Gmax Rapid Flow"),
+    // Gen 0 Moves
+    [MOVE_MYSTIC_SLASH] = _("Mystic Slash"),
+    [MOVE_DRACO_SWARM] = _("Draco Swarm"),
+    [MOVE_DISASTER_WARN] = _("Disaster Warn"),
+    [MOVE_HIDDEN_EXPLOSION] = _("Hidden Explosion"),
+    [MOVE_FROSTBURN] = _("Frostburn"),
+    [MOVE_STONE_CANNON] = _("Stone Cannon"),
+    [MOVE_FIRE_STORM] = _("Fire Storm"),
+    [MOVE_FINAL_STRIKE] = _("Final Strike"),
+    [MOVE_DELTA_ENERGY] = _("Delta Energy"),
 };
 #else
 // 12 letters
@@ -1781,6 +1791,16 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_G_MAX_DEPLETION] = _("G-Depletion"),
     [MOVE_G_MAX_ONE_BLOW] = _("G-One Blow"),
     [MOVE_G_MAX_RAPID_FLOW] = _("G-Rapid Flow"),
+    // Gen 0
+    [MOVE_MYSTIC_SLASH] = _("Mystic Slash"),
+    [MOVE_DRACO_SWARM] = _("Draco Swarm"),
+    [MOVE_DISASTER_WARN] = _("DisasterWarn"),
+    [MOVE_HIDDEN_EXPLOSION] = _("Hid. Explos."),
+    [MOVE_FROSTBURN] = _("Frostburn"),
+    [MOVE_STONE_CANNON] = _("Stone Cannon"),
+    [MOVE_FIRE_STORM] = _("Fire Storm"),
+    [MOVE_FINAL_STRIKE] = _("Final Strike"),
+    [MOVE_DELTA_ENERGY] = _("Delta Energy"),
 };
 #endif
 

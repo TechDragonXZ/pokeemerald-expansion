@@ -696,8 +696,13 @@
 #define STRINGID_SWAMPENVELOPEDSIDE                   694
 #define STRINGID_THESWAMPDISAPPEARED                  695
 #define STRINGID_PKMNTELLCHILLINGRECEPTIONJOKE        696
+#define STRINGID_PKMNRAISEDSTATS                      697
+#define STRINGID_PKMNFORESAWDISASTER                  698
+#define STRINGID_PKMNTOOKDISASTER                     699
+#define STRINGID_PKMNGATHEREDSAND                     700
+#define STRINGID_TRAPSSET                             701
 
-#define BATTLESTRINGS_COUNT                           697
+#define BATTLESTRINGS_COUNT                           702
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -755,6 +760,7 @@
 #define B_MSG_TURN1_FREEZE_SHOCK   10
 #define B_MSG_TURN1_SKY_DROP       11
 #define B_MSG_TURN1_METEOR_BEAM    12
+#define B_MSG_TURN1_STONE_CANNON   13
 
 // gMoveWeatherChangeStringIds
 #define B_MSG_STARTED_RAIN      0
@@ -841,8 +847,9 @@
 #define B_MSG_SOOTHING_AROMA           4
 
 // gFutureMoveUsedStringIds
-#define B_MSG_FUTURE_SIGHT 0
-#define B_MSG_DOOM_DESIRE  1
+#define B_MSG_FUTURE_SIGHT  0
+#define B_MSG_DOOM_DESIRE   1
+#define B_MSG_DISASTER_WARN 2
 
 // gItemSwapStringIds
 #define B_MSG_ITEM_SWAP_TAKEN 0

@@ -2081,7 +2081,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         ICON(Yanma, 1),
         .footprint = gMonFootprint_Yanma,
         LEARNSETS(Yanma),
-        .evolutions = EVOLUTION({EVO_MOVE, MOVE_ANCIENT_POWER, SPECIES_YANMEGA}),
+        .evolutions = EVOLUTION({EVO_MOVE, MOVE_DRACO_SWARM, SPECIES_YANMEGA}),
     },
 
 #if P_GEN_4_CROSS_EVOS
@@ -2093,7 +2093,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 116,
         .baseSpDefense = 56,
-        .types = { TYPE_BUG, TYPE_FLYING },
+        .types = { TYPE_BUG, TYPE_DRAGON },
         .catchRate = 30,
         .expYield = 180,
         .evYield_Attack = 2,

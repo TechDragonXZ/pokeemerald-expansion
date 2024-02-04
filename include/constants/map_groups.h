@@ -591,6 +591,20 @@
 // gMapGroup_IndoorRoute124
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 
-#define MAP_GROUPS_COUNT 34
+// gMapGroup_DeepPetalburgWoods
+#define MAP_DEEP_PETALBURG_WOODS_CLEARING (0 | (34 << 8))
+#define MAP_DEEP_PETALBURG_WOODS_POND     (1 | (34 << 8))
+
+// gMapGroup_StrangeSpace
+#define MAP_STRANGE_SPACE_ENTRANCE    (0 | (35 << 8))
+#define MAP_STRANGE_SPACE_ICE         (1 | (35 << 8))
+#define MAP_STRANGE_SPACE_DESERT      (2 | (35 << 8))
+#define MAP_STRANGE_SPACE_VOLCANO     (3 | (35 << 8))
+#define MAP_STRANGE_SPACE_LAKE        (4 | (35 << 8))
+#define MAP_STRANGE_SPACE_CHAMBER     (5 | (35 << 8))
+#define MAP_STRANGE_SPACE_UNDERGROUND (6 | (35 << 8))
+#define MAP_STRANGE_SPACE_ICE_CAVERN  (7 | (35 << 8))
+
+#define MAP_GROUPS_COUNT 36
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

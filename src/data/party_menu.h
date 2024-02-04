@@ -659,6 +659,7 @@ static const u8 *const sActionStringTable[] =
     [PARTY_MSG_ALREADY_HOLDING_ONE]    = gText_AlreadyHoldingOne,
     [PARTY_MSG_WHICH_APPLIANCE]        = gText_WhichAppliance,
     [PARTY_MSG_CHOOSE_SECOND_FUSION]   = gText_NextFusionMon,
+    [PARTY_MSG_WHICH_FORM]             = gText_WhichForm,
 };
 
 static const u8 *const sDescriptionStringTable[] =
@@ -693,6 +694,7 @@ struct
 } static const sCursorOptions[] =
 {
     [MENU_SUMMARY] = {gText_Summary5, CursorCb_Summary},
+    [MENU_NICKNAME] = {gText_Nickname, CursorCb_Nickname},
     [MENU_SWITCH] = {gText_Switch2, CursorCb_Switch},
     [MENU_CANCEL1] = {gText_Cancel2, CursorCb_Cancel1},
     [MENU_ITEM] = {gText_Item, CursorCb_Item},
@@ -733,6 +735,10 @@ struct
     [MENU_FIELD_MOVES + FIELD_MOVE_MILK_DRINK] = {gMoveNames[MOVE_MILK_DRINK], CursorCb_FieldMove},
     [MENU_FIELD_MOVES + FIELD_MOVE_SOFT_BOILED] = {gMoveNames[MOVE_SOFT_BOILED], CursorCb_FieldMove},
     [MENU_FIELD_MOVES + FIELD_MOVE_SWEET_SCENT] = {gMoveNames[MOVE_SWEET_SCENT], CursorCb_FieldMove},
+    [MENU_METEORITE_NORMAL] = {gText_Normal, CursorCb_MeteoriteNormal},
+    [MENU_METEORITE_ATTACK] = {gText_Attack, CursorCb_MeteoriteAttack},
+    [MENU_METEORITE_DEFENSE] = {gText_Defense, CursorCb_MeteoriteDefense},
+    [MENU_METEORITE_SPEED] = {gText_Speed, CursorCb_MeteoriteSpeed},
 };
 
 static const u8 sPartyMenuAction_SummarySwitchCancel[] = {MENU_SUMMARY, MENU_SWITCH, MENU_CANCEL1};
@@ -750,47 +756,50 @@ static const u8 sPartyMenuAction_TradeSummaryCancel2[] = {MENU_TRADE2, MENU_SUMM
 static const u8 sPartyMenuAction_TakeItemTossCancel[] = {MENU_TAKE_ITEM, MENU_TOSS, MENU_CANCEL1};
 static const u8 sPartyMenuAction_RotomCatalog[] = {MENU_CATALOG_BULB, MENU_CATALOG_OVEN, MENU_CATALOG_WASHING, MENU_CATALOG_FRIDGE, MENU_CATALOG_FAN, MENU_CATALOG_MOWER, MENU_CANCEL1};
 static const u8 sPartyMenuAction_ZygardeCube[] = {MENU_CHANGE_FORM, MENU_CHANGE_ABILITY, MENU_CANCEL1};
+static const u8 sPartyMenuAction_SpaceMeteorite[] = {MENU_METEORITE_NORMAL, MENU_METEORITE_ATTACK, MENU_METEORITE_DEFENSE, MENU_METEORITE_SPEED, MENU_CANCEL1};
 
 
 
 static const u8 *const sPartyMenuActions[] =
 {
-    [ACTIONS_NONE]          = NULL,
-    [ACTIONS_SWITCH]        = sPartyMenuAction_SummarySwitchCancel,
-    [ACTIONS_SHIFT]         = sPartyMenuAction_ShiftSummaryCancel,
-    [ACTIONS_SEND_OUT]      = sPartyMenuAction_SendOutSummaryCancel,
-    [ACTIONS_ENTER]         = sPartyMenuAction_EnterSummaryCancel,
-    [ACTIONS_NO_ENTRY]      = sPartyMenuAction_NoEntrySummaryCancel,
-    [ACTIONS_STORE]         = sPartyMenuAction_StoreSummaryCancel,
-    [ACTIONS_SUMMARY_ONLY]  = sPartyMenuAction_SummaryCancel,
-    [ACTIONS_ITEM]          = sPartyMenuAction_GiveTakeItemCancel,
-    [ACTIONS_MAIL]          = sPartyMenuAction_ReadTakeMailCancel,
-    [ACTIONS_REGISTER]      = sPartyMenuAction_RegisterSummaryCancel,
-    [ACTIONS_TRADE]         = sPartyMenuAction_TradeSummaryCancel1,
-    [ACTIONS_SPIN_TRADE]    = sPartyMenuAction_TradeSummaryCancel2,
-    [ACTIONS_TAKEITEM_TOSS] = sPartyMenuAction_TakeItemTossCancel,
-    [ACTIONS_ROTOM_CATALOG] = sPartyMenuAction_RotomCatalog,
-    [ACTIONS_ZYGARDE_CUBE]  = sPartyMenuAction_ZygardeCube,
+    [ACTIONS_NONE]            = NULL,
+    [ACTIONS_SWITCH]          = sPartyMenuAction_SummarySwitchCancel,
+    [ACTIONS_SHIFT]           = sPartyMenuAction_ShiftSummaryCancel,
+    [ACTIONS_SEND_OUT]        = sPartyMenuAction_SendOutSummaryCancel,
+    [ACTIONS_ENTER]           = sPartyMenuAction_EnterSummaryCancel,
+    [ACTIONS_NO_ENTRY]        = sPartyMenuAction_NoEntrySummaryCancel,
+    [ACTIONS_STORE]           = sPartyMenuAction_StoreSummaryCancel,
+    [ACTIONS_SUMMARY_ONLY]    = sPartyMenuAction_SummaryCancel,
+    [ACTIONS_ITEM]            = sPartyMenuAction_GiveTakeItemCancel,
+    [ACTIONS_MAIL]            = sPartyMenuAction_ReadTakeMailCancel,
+    [ACTIONS_REGISTER]        = sPartyMenuAction_RegisterSummaryCancel,
+    [ACTIONS_TRADE]           = sPartyMenuAction_TradeSummaryCancel1,
+    [ACTIONS_SPIN_TRADE]      = sPartyMenuAction_TradeSummaryCancel2,
+    [ACTIONS_TAKEITEM_TOSS]   = sPartyMenuAction_TakeItemTossCancel,
+    [ACTIONS_ROTOM_CATALOG]   = sPartyMenuAction_RotomCatalog,
+    [ACTIONS_ZYGARDE_CUBE]    = sPartyMenuAction_ZygardeCube,
+    [ACTIONS_SPACE_METEORITE] = sPartyMenuAction_SpaceMeteorite,
 };
 
 static const u8 sPartyMenuActionCounts[] =
 {
-    [ACTIONS_NONE]          = 0,
-    [ACTIONS_SWITCH]        = ARRAY_COUNT(sPartyMenuAction_SummarySwitchCancel),
-    [ACTIONS_SHIFT]         = ARRAY_COUNT(sPartyMenuAction_ShiftSummaryCancel),
-    [ACTIONS_SEND_OUT]      = ARRAY_COUNT(sPartyMenuAction_SendOutSummaryCancel),
-    [ACTIONS_ENTER]         = ARRAY_COUNT(sPartyMenuAction_EnterSummaryCancel),
-    [ACTIONS_NO_ENTRY]      = ARRAY_COUNT(sPartyMenuAction_NoEntrySummaryCancel),
-    [ACTIONS_STORE]         = ARRAY_COUNT(sPartyMenuAction_StoreSummaryCancel),
-    [ACTIONS_SUMMARY_ONLY]  = ARRAY_COUNT(sPartyMenuAction_SummaryCancel),
-    [ACTIONS_ITEM]          = ARRAY_COUNT(sPartyMenuAction_GiveTakeItemCancel),
-    [ACTIONS_MAIL]          = ARRAY_COUNT(sPartyMenuAction_ReadTakeMailCancel),
-    [ACTIONS_REGISTER]      = ARRAY_COUNT(sPartyMenuAction_RegisterSummaryCancel),
-    [ACTIONS_TRADE]         = ARRAY_COUNT(sPartyMenuAction_TradeSummaryCancel1),
-    [ACTIONS_SPIN_TRADE]    = ARRAY_COUNT(sPartyMenuAction_TradeSummaryCancel2),
-    [ACTIONS_TAKEITEM_TOSS] = ARRAY_COUNT(sPartyMenuAction_TakeItemTossCancel),
-    [ACTIONS_ROTOM_CATALOG] = ARRAY_COUNT(sPartyMenuAction_RotomCatalog),
-    [ACTIONS_ZYGARDE_CUBE]  = ARRAY_COUNT(sPartyMenuAction_ZygardeCube),
+    [ACTIONS_NONE]            = 0,
+    [ACTIONS_SWITCH]          = ARRAY_COUNT(sPartyMenuAction_SummarySwitchCancel),
+    [ACTIONS_SHIFT]           = ARRAY_COUNT(sPartyMenuAction_ShiftSummaryCancel),
+    [ACTIONS_SEND_OUT]        = ARRAY_COUNT(sPartyMenuAction_SendOutSummaryCancel),
+    [ACTIONS_ENTER]           = ARRAY_COUNT(sPartyMenuAction_EnterSummaryCancel),
+    [ACTIONS_NO_ENTRY]        = ARRAY_COUNT(sPartyMenuAction_NoEntrySummaryCancel),
+    [ACTIONS_STORE]           = ARRAY_COUNT(sPartyMenuAction_StoreSummaryCancel),
+    [ACTIONS_SUMMARY_ONLY]    = ARRAY_COUNT(sPartyMenuAction_SummaryCancel),
+    [ACTIONS_ITEM]            = ARRAY_COUNT(sPartyMenuAction_GiveTakeItemCancel),
+    [ACTIONS_MAIL]            = ARRAY_COUNT(sPartyMenuAction_ReadTakeMailCancel),
+    [ACTIONS_REGISTER]        = ARRAY_COUNT(sPartyMenuAction_RegisterSummaryCancel),
+    [ACTIONS_TRADE]           = ARRAY_COUNT(sPartyMenuAction_TradeSummaryCancel1),
+    [ACTIONS_SPIN_TRADE]      = ARRAY_COUNT(sPartyMenuAction_TradeSummaryCancel2),
+    [ACTIONS_TAKEITEM_TOSS]   = ARRAY_COUNT(sPartyMenuAction_TakeItemTossCancel),
+    [ACTIONS_ROTOM_CATALOG]   = ARRAY_COUNT(sPartyMenuAction_RotomCatalog),
+    [ACTIONS_ZYGARDE_CUBE]    = ARRAY_COUNT(sPartyMenuAction_ZygardeCube),
+    [ACTIONS_SPACE_METEORITE] = ARRAY_COUNT(sPartyMenuAction_SpaceMeteorite),
 };
 
 static const u16 sFieldMoves[FIELD_MOVES_COUNT + 1] =

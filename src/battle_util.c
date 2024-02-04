@@ -3213,6 +3213,8 @@ bool32 HandleWishPerishSongOnTurnEnd(void)
             {
                 if (gWishFutureKnock.futureSightMove[battler] == MOVE_FUTURE_SIGHT)
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_FUTURE_SIGHT;
+                else if (gWishFutureKnock.futureSightMove[battler] == MOVE_DISASTER_WARN)
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DISASTER_WARN;
                 else
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOOM_DESIRE;
 
@@ -4136,6 +4138,9 @@ static void ForewarnChooseMove(u32 battler)
                 {
                 case EFFECT_OHKO:
                     data[count].power = 150;
+                    break;
+                case EFFECT_FINAL_STRIKE:
+                    data[count].power = 250;
                     break;
                 case EFFECT_COUNTER:
                 case EFFECT_MIRROR_COAT:
@@ -8308,6 +8313,8 @@ bool32 IsMoveMakingContact(u32 move, u32 battlerAtk)
     {
         if (gBattleMoves[move].effect == EFFECT_SHELL_SIDE_ARM && gBattleStruct->swapDamageCategory)
             return TRUE;
+        else if (gBattleMoves[move].effect == EFFECT_DELTA_ENERGY && gBattleStruct->swapDamageCategory)
+            return TRUE;
         else
             return FALSE;
     }
@@ -8347,7 +8354,7 @@ bool32 IsBattlerProtected(u32 battler, u32 move)
     // Protective Pads doesn't stop Unseen Fist from bypassing Protect effects, so IsMoveMakingContact() isn't used here.
     // This means extra logic is needed to handle Shell Side Arm.
     if (GetBattlerAbility(gBattlerAttacker) == ABILITY_UNSEEN_FIST
-        && (gBattleMoves[move].makesContact || (gBattleMoves[move].effect == EFFECT_SHELL_SIDE_ARM && gBattleStruct->swapDamageCategory))
+        && (gBattleMoves[move].makesContact || (gBattleMoves[move].effect == EFFECT_SHELL_SIDE_ARM && gBattleStruct->swapDamageCategory) || (gBattleMoves[move].effect == EFFECT_DELTA_ENERGY && gBattleStruct->swapDamageCategory))
         && !gProtectStructs[battler].maxGuarded) // Max Guard cannot be bypassed by Unseen Fist
         return FALSE;
     else if (gBattleMoves[move].ignoresProtect)
@@ -8833,6 +8840,21 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
         }
         break;
     }
+    case EFFECT_HIDDEN_EXPLOSION:
+    {
+        u8 powerBits;
+
+        powerBits = ((gBattleMons[battlerAtk].hpIV & 2) >> 1)
+                | ((gBattleMons[battlerAtk].attackIV & 2) << 0)
+                | ((gBattleMons[battlerAtk].defenseIV & 2) << 1)
+                | ((gBattleMons[battlerAtk].speedIV & 2) << 2)
+                | ((gBattleMons[battlerAtk].spAttackIV & 2) << 3)
+                | ((gBattleMons[battlerAtk].spDefenseIV & 2) << 4);
+
+
+        basePower = uq4_12_multiply(basePower, UQ_4_12(1.5 * powerBits) / 63 + 30);
+        break;
+    }
     case EFFECT_GRAV_APPLE:
         if (gFieldStatuses & STATUS_FIELD_GRAVITY)
             basePower = uq4_12_multiply(basePower, UQ_4_12(1.5));
@@ -8912,6 +8934,10 @@ u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 battlerDef, u3
         break;
     case EFFECT_SOLAR_BEAM:
         if (IsBattlerWeatherAffected(battlerAtk, (B_WEATHER_HAIL | B_WEATHER_SANDSTORM | B_WEATHER_RAIN | B_WEATHER_SNOW)))
+            modifier = uq4_12_multiply(modifier, UQ_4_12(0.5));
+        break;
+    case EFFECT_STONE_CANNON:
+        if (IsBattlerWeatherAffected(battlerAtk, (B_WEATHER_HAIL | B_WEATHER_SUN | B_WEATHER_RAIN | B_WEATHER_SNOW)))
             modifier = uq4_12_multiply(modifier, UQ_4_12(0.5));
         break;
     case EFFECT_STOMPING_TANTRUM:
@@ -10011,6 +10037,19 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
         mod = UQ_4_12(1.0);
     if (moveType == TYPE_FIRE && gDisableStructs[battlerDef].tarShot)
         mod = UQ_4_12(2.0);
+    if (gBattleMoves[move].effect == EFFECT_DELTA_ENERGY) {
+        if ((defType == TYPE_WATER || defType == TYPE_FIRE || defType == TYPE_ELECTRIC || defType == TYPE_GRASS || defType == TYPE_ICE || defType == TYPE_DARK || defType == TYPE_PSYCHIC || defType == TYPE_FAIRY || defType == TYPE_NORMAL)) {
+            mod = UQ_4_12(2.0);
+        }
+        else if ((defType != TYPE_WATER || defType != TYPE_FIRE || defType != TYPE_ELECTRIC || defType != TYPE_GRASS || defType != TYPE_ICE || defType != TYPE_DARK || defType != TYPE_PSYCHIC || defType != TYPE_FAIRY || defType != TYPE_NORMAL)) {
+            mod = UQ_4_12(1.0);
+        }
+        else {
+            mod = UQ_4_12(1.0);
+        }
+    }
+    if (GetBattlerAbility(battlerDef) == ABILITY_VEEVEE_GUARD && (gBattleMoves[move].type == TYPE_WATER || gBattleMoves[move].type == TYPE_FIRE || gBattleMoves[move].type == TYPE_ELECTRIC || gBattleMoves[move].type == TYPE_GRASS || gBattleMoves[move].type == TYPE_ICE || gBattleMoves[move].type == TYPE_DARK || gBattleMoves[move].type == TYPE_PSYCHIC || gBattleMoves[move].type == TYPE_FAIRY || gBattleMoves[move].type == TYPE_NORMAL))
+        mod = UQ_4_12(0.5);
 
     // B_WEATHER_STRONG_WINDS weakens Super Effective moves against Flying-type Pokémon
     if (gBattleWeather & B_WEATHER_STRONG_WINDS && WEATHER_HAS_EFFECT)
@@ -10130,7 +10169,7 @@ uq4_12_t CalcTypeEffectivenessMultiplier(u32 move, u32 moveType, u32 battlerAtk,
     if (move != MOVE_STRUGGLE && moveType != TYPE_MYSTERY)
     {
         modifier = CalcTypeEffectivenessMultiplierInternal(move, moveType, battlerAtk, battlerDef, recordAbilities, modifier, defAbility);
-        if (gBattleMoves[move].effect == EFFECT_TWO_TYPED_MOVE)
+        if (gBattleMoves[move].effect == EFFECT_TWO_TYPED_MOVE || gBattleMoves[move].effect == EFFECT_ACC_DOWN_TWO_TYPED || gBattleMoves[move].effect == EFFECT_DISASTER_WARN)
             modifier = CalcTypeEffectivenessMultiplierInternal(move, gBattleMoves[move].argument, battlerAtk, battlerDef, recordAbilities, modifier, defAbility);
     }
 

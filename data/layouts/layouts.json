@@ -4410,6 +4410,106 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_DEEP_PETALBURG_WOODS_CLEARING",
+      "name": "DeepPetalburgWoods_Clearing_Layout",
+      "width": 44,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/DeepPetalburgWoods_Clearing/border.bin",
+      "blockdata_filepath": "data/layouts/DeepPetalburgWoods_Clearing/map.bin"
+    },
+    {
+      "id": "LAYOUT_DEEP_PETALBURG_WOODS_POND",
+      "name": "DeepPetalburgWoods_Pond_Layout",
+      "width": 34,
+      "height": 34,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/DeepPetalburgWoods_Pond/border.bin",
+      "blockdata_filepath": "data/layouts/DeepPetalburgWoods_Pond/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_ENTRANCE",
+      "name": "StrangeSpace_Entrance_Layout",
+      "width": 41,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpace_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpace_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_ICE",
+      "name": "StrangeSpace_Ice_Layout",
+      "width": 49,
+      "height": 45,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpace_Ice/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpace_Ice/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_DESERT",
+      "name": "StrangeSpace_Desert_Layout",
+      "width": 62,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpace_Desert/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpace_Desert/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_VOLCANO",
+      "name": "StrangeSpace_Volcano_Layout",
+      "width": 55,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpace_Volcano/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpace_Volcano/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_LAKE",
+      "name": "StrangeSpace_Lake_Layout",
+      "width": 89,
+      "height": 65,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpace_Lake/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpace_Lake/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_CHAMBER",
+      "name": "StrangeSpace_Chamber_Layout",
+      "width": 27,
+      "height": 27,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpace_Chamber/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpace_Chamber/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_UNDERGROUND",
+      "name": "StrangeSpace_Underground_Layout",
+      "width": 61,
+      "height": 55,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpace_Underground/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpace_Underground/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRANGE_SPACE_ICE_CAVERN",
+      "name": "StrangeSpace_IceCavern_Layout",
+      "width": 24,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StrangeSpace_IceCavern/border.bin",
+      "blockdata_filepath": "data/layouts/StrangeSpace_IceCavern/map.bin"
     }
   ]
 }
