@@ -8765,7 +8765,7 @@ const struct Item gItems[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_TMCase,
     },
 
     [ITEM_BERRY_POUCH] =
@@ -9052,17 +9052,7 @@ const struct Item gItems[] =
         .price = 0,
         .description = sKeyToRoom4Desc,
         .importance = 1,
-        .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
-
-    [ITEM_KEY_TO_ROOM_6] =
-    {
-        .name = _("Key to Room 6"),
-        .price = 0,
-        .description = sKeyToRoom6Desc,
-        .importance = 1,
+        .registrability = TRUE,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
