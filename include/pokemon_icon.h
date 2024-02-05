@@ -1,9 +1,7 @@
 #ifndef GUARD_POKEMON_ICON_H
 #define GUARD_POKEMON_ICON_H
 
-extern const u8 gMonIconPaletteIndices[];
-extern const u8 *const gMonIconTable[];
-extern const struct SpritePalette gMonIconPaletteTable[6];
+extern const struct SpritePalette gMonIconPaletteTable[];
 
 const u8 *GetMonIconTiles(u16 species, u32 personality);
 void TryLoadAllMonIconPalettesAtOffset(u16 offset);

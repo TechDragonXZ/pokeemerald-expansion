@@ -1490,7 +1490,7 @@ const u8 *const gMonIconTable[NUM_SPECIES + 1] =
 };
 */
 
-const struct SpritePalette gMonIconPaletteTable[6] =
+const struct SpritePalette gMonIconPaletteTable[] =
 {
     { gMonIconPalettes[0], POKE_ICON_BASE_PAL_TAG + 0 },
     { gMonIconPalettes[1], POKE_ICON_BASE_PAL_TAG + 1 },
