@@ -639,7 +639,7 @@ void LoadTrainerHillObjectEventTemplates(void)
     SetUpDataStruct();
     for (i = 0; i < HILL_TRAINERS_PER_FLOOR; i++)
         gSaveBlock2Ptr->frontier.trainerIds[i] = 0xFFFF;
-    CpuFill32(0, (struct ObjectEventTemplate *)gSaveBlock1Ptr->objectEventTemplates, sizeof(gSaveBlock1Ptr->objectEventTemplates));
+    CpuFill32(0, gSaveBlock1Ptr->objectEventTemplates, sizeof(gSaveBlock1Ptr->objectEventTemplates));
 
     floorId = GetFloorId();
     for (i = 0; i < HILL_TRAINERS_PER_FLOOR; i++)
