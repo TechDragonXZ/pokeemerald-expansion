@@ -665,7 +665,7 @@ struct BattleStruct
     u16 arenaStartHp[2];
     u8 arenaLostPlayerMons; // Bits for party member, lost as in referee's decision, not by fainting.
     u8 arenaLostOpponentMons;
-    u8 alreadyStatusedMoveAttempt; // As bits for battlers; For example when using Thunder Wave on an already paralyzed Pokémon.
+    u8 alreadyStatusedMoveAttempt; // As bits for battlers; For example when using Thunder Wave on an already paralyzed pokemon.
     u8 debugBattler;
     u8 magnitudeBasePower;
     u8 presentBasePower;
@@ -942,7 +942,7 @@ struct BattleSpriteData
 
 struct MonSpritesGfx
 {
-    void *firstDecompressed; // ptr to the decompressed sprite of the first Pokémon
+    void *firstDecompressed; // ptr to the decompressed sprite of the first pokemon
     union {
         void *ptr[MAX_BATTLERS_COUNT];
         u8 *byte[MAX_BATTLERS_COUNT];

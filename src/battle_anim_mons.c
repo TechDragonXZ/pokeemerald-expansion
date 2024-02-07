@@ -52,32 +52,6 @@ const struct UCoords8 sBattlerCoords[][MAX_BATTLERS_COUNT] =
     },
 };
 
-// One entry for each of the four Castform forms.
-const struct MonCoords gCastformFrontSpriteCoords[NUM_CASTFORM_FORMS] =
-{
-    [CASTFORM_NORMAL] = { .size = MON_COORDS_SIZE(32, 32), .y_offset = 17 },
-    [CASTFORM_FIRE]   = { .size = MON_COORDS_SIZE(48, 48), .y_offset =  9 },
-    [CASTFORM_WATER]  = { .size = MON_COORDS_SIZE(32, 48), .y_offset =  9 },
-    [CASTFORM_ICE]    = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  8 },
-};
-
-static const u8 sCastformElevations[NUM_CASTFORM_FORMS] =
-{
-    [CASTFORM_NORMAL] = 13,
-    [CASTFORM_FIRE]   = 14,
-    [CASTFORM_WATER]  = 13,
-    [CASTFORM_ICE]    = 13,
-};
-
-// Y position of the backsprite for each of the four Castform forms.
-static const u8 sCastformBackSpriteYCoords[NUM_CASTFORM_FORMS] =
-{
-    [CASTFORM_NORMAL] = 0,
-    [CASTFORM_FIRE]   = 0,
-    [CASTFORM_WATER]  = 0,
-    [CASTFORM_ICE]    = 0,
-};
-
 // Placeholders for pokemon sprites to be created for a move animation effect (e.g. Role Play / Snatch)
 #define TAG_MOVE_EFFECT_MON_1 55125
 #define TAG_MOVE_EFFECT_MON_2 55126
@@ -2078,7 +2052,7 @@ u8 GetBattlerSpriteBGPriorityRank(u8 battlerId)
     return 1;
 }
 
-// Create Pokémon sprite to be used for a move animation effect (e.g. Role Play / Snatch)
+// Create pokemon sprite to be used for a move animation effect (e.g. Role Play / Snatch)
 u8 CreateAdditionalMonSpriteForMoveAnim(u16 species, bool8 isBackpic, u8 id, s16 x, s16 y, u8 subpriority, u32 personality, u32 trainerId, u32 battlerId)
 {
     u8 spriteId;

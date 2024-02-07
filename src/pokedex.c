@@ -1765,7 +1765,7 @@ static void Task_HandlePokedexStartMenuInput(u8 taskId)
                 CreateMonSpritesAtPos(sPokedexView->selectedPokemon, 0xE);
                 gMain.newKeys |= START_BUTTON;  //Exit menu
                 break;
-            case 3: //CLOSE POKéDEX
+            case 3: //CLOSE POKEDEX
                 BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
                 gTasks[taskId].func = Task_ClosePokedex;
                 PlaySE(SE_PC_OFF);
@@ -1965,12 +1965,12 @@ static void Task_HandleSearchResultsStartMenuInput(u8 taskId)
                 CreateMonSpritesAtPos(sPokedexView->selectedPokemon, 0xE);
                 gMain.newKeys |= START_BUTTON;
                 break;
-            case 3: //BACK TO POKéDEX
+            case 3: //BACK TO POKEDEX
                 BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
                 gTasks[taskId].func = Task_ReturnToPokedexFromSearchResults;
                 PlaySE(SE_TRUCK_DOOR);
                 break;
-            case 4: //CLOSE POKéDEX
+            case 4: //CLOSE POKEDEX
                 BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
                 gTasks[taskId].func = Task_ClosePokedexFromSearchResultsStartMenu;
                 PlaySE(SE_PC_OFF);
@@ -2056,7 +2056,7 @@ static void Task_ClosePokedexFromSearchResultsStartMenu(u8 taskId)
 
 #undef tLoadScreenTaskId
 
-// For loading main pokedex page or Pokédex search results
+// For loading main pokedex page or pokedex search results
 static bool8 LoadPokedexListPage(u8 page)
 {
     switch (gMain.state)

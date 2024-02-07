@@ -14,7 +14,6 @@
 #include "decompress.h"
 #include "easy_chat.h"
 #include "event_data.h"
-#include "event_object_movement.h"
 #include "evolution_scene.h"
 #include "field_control_avatar.h"
 #include "field_effect.h"
@@ -188,7 +187,7 @@ enum {
 };
 
 enum {
-    // Window ids 0-5 are implicitly assigned to each party Pokémon in InitPartyMenuBoxes
+    // Window ids 0-5 are implicitly assigned to each party pokemon in InitPartyMenuBoxes
     WIN_MSG = PARTY_SIZE,
 };
 
@@ -4013,11 +4012,6 @@ bool8 FieldCallback_PrepareFadeInFromMenu(void)
     return TRUE;
 }
 
-bool8 FieldCallback_PrepareFadeInForTeleport(void) { // same as above, but removes follower pokemon
-    RemoveFollowingPokemon();
-    return FieldCallback_PrepareFadeInFromMenu();
-}
-
 static void Task_FieldMoveWaitForFade(u8 taskId)
 {
     if (IsWeatherNotFadingIn() == TRUE)
@@ -7063,7 +7057,7 @@ static bool8 TrySwitchInPokemon(void)
     u8 newSlot;
     u8 i;
 
-    // In a multi battle, slots 1, 4, and 5 are the partner's Pokémon
+    // In a multi battle, slots 1, 4, and 5 are the partner's pokemon
     if (IsMultiBattle() == TRUE && (slot == 1 || slot == 4 || slot == 5))
     {
         StringCopy(gStringVar1, GetTrainerPartnerName());

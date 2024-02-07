@@ -91,13 +91,13 @@ enum {
 #define PSS_LABEL_WINDOW_PORTRAIT_SPECIES 19 // The lower name
 #define PSS_LABEL_WINDOW_END 20
 
-// Dynamic fields for the Pokémon Info page
+// Dynamic fields for the Pokemon Info page
 #define PSS_DATA_WINDOW_INFO_ORIGINAL_TRAINER 0
 #define PSS_DATA_WINDOW_INFO_ID 1
 #define PSS_DATA_WINDOW_INFO_ABILITY 2
 #define PSS_DATA_WINDOW_INFO_MEMO 3
 
-// Dynamic fields for the Pokémon Skills page
+// Dynamic fields for the Pokemon Skills page
 #define PSS_DATA_WINDOW_SKILLS_HELD_ITEM 0
 #define PSS_DATA_WINDOW_SKILLS_RIBBON_COUNT 1
 #define PSS_DATA_WINDOW_SKILLS_STATS_LEFT 2 // HP, Attack, Defense
@@ -177,7 +177,7 @@ static EWRAM_DATA struct PokemonSummaryScreenData
     u8 currPageIndex;
     u8 minPageIndex;
     u8 maxPageIndex;
-    bool8 lockMonFlag; // This is used to prevent the player from changing Pokémon in the move deleter select, etc, but it is not needed because the input is handled differently there
+    bool8 lockMonFlag; // This is used to prevent the player from changing pokemon in the move deleter select, etc, but it is not needed because the input is handled differently there
     u16 newMove;
     u8 firstMoveIndex;
     u8 secondMoveIndex;
@@ -187,7 +187,7 @@ static EWRAM_DATA struct PokemonSummaryScreenData
     u8 windowIds[8];
     u8 spriteIds[SPRITE_ARR_ID_COUNT];
     bool8 handleDeoxys;
-    s16 switchCounter; // Used for various switch statement cases that decompress/load graphics or Pokémon data
+    s16 switchCounter; // Used for various switch statement cases that decompress/load graphics or pokemon data
     u8 unk_filler4[6];
     u8 splitIconSpriteId;
 } *sMonSummaryScreen = NULL;
@@ -2790,7 +2790,7 @@ static void DrawContestMoveHearts(u16 move)
     }
 }
 
-static void LimitEggSummaryPageDisplay(void) // If the Pokémon is an egg, limit the number of pages displayed to 1
+static void LimitEggSummaryPageDisplay(void) // If the pokemon is an egg, limit the number of pages displayed to 1
 {
     if (sMonSummaryScreen->summary.isEgg)
         ChangeBgX(3, 0x10000, BG_COORD_SET);
@@ -3472,40 +3472,6 @@ static void PrintRibbonCount(void)
     PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_RIBBON_COUNT), text, x, 1, 0, 0);
 }
 
-// Based on https://www.pokecommunity.com/showpost.php?p=10024409&postcount=21
-static void BufferStat(u8 *dst, s8 natureMod, u32 stat, u32 strId, u32 n) {
-  static const u8 textNatureMinus[] = _("{COLOR_HIGHLIGHT_SHADOW}{BLUE}{TRANSPARENT}{07}"); // Blue
-  static const u8 textNaturePlus[] = _("{COLOR_HIGHLIGHT_SHADOW}{05}{TRANSPARENT}{06}"); // Red
-  static const u8 textNatureNone[] = _("{COLOR_HIGHLIGHT_SHADOW}{01}{TRANSPARENT}{DARK_GRAY}"); // Black
-  u8 *txtPtr;
-  if (natureMod == 0)
-    txtPtr = StringCopy(dst, textNatureNone);
-  else if (natureMod > 0)
-    txtPtr = StringCopy(dst, textNaturePlus);
-  else
-    txtPtr = StringCopy(dst, textNatureMinus);
-
-  ConvertIntToDecimalStringN(txtPtr, stat, STR_CONV_MODE_RIGHT_ALIGN, n);
-  DynamicPlaceholderTextUtil_SetPlaceholderPtr(strId, dst);
-}
-
-// Based on https://www.pokecommunity.com/showpost.php?p=10024409&postcount=21
-static void BufferStat(u8 *dst, s8 natureMod, u32 stat, u32 strId, u32 n) {
-  static const u8 textNatureMinus[] = _("{COLOR_HIGHLIGHT_SHADOW}{BLUE}{TRANSPARENT}{07}"); // Blue
-  static const u8 textNaturePlus[] = _("{COLOR_HIGHLIGHT_SHADOW}{05}{TRANSPARENT}{06}"); // Red
-  static const u8 textNatureNone[] = _("{COLOR_HIGHLIGHT_SHADOW}{01}{TRANSPARENT}{DARK_GRAY}"); // Black
-  u8 *txtPtr;
-  if (natureMod == 0)
-    txtPtr = StringCopy(dst, textNatureNone);
-  else if (natureMod > 0)
-    txtPtr = StringCopy(dst, textNaturePlus);
-  else
-    txtPtr = StringCopy(dst, textNatureMinus);
-
-  ConvertIntToDecimalStringN(txtPtr, stat, STR_CONV_MODE_RIGHT_ALIGN, n);
-  DynamicPlaceholderTextUtil_SetPlaceholderPtr(strId, dst);
-}
-
 static void BufferStat(u8 *dst, s8 natureMod, u32 stat, u32 strId, u32 n)
 {
     static const u8 sTextNatureDown[] = _("{COLOR}{08}");
@@ -4161,7 +4127,7 @@ static bool32 UNUSED IsMonAnimationFinished(void)
         return TRUE;
 }
 
-static void StopPokemonAnimations(void)  // A subtle effect, this function stops Pokémon animations when leaving the PSS
+static void StopPokemonAnimations(void)  // A subtle effect, this function stops pokemon animations when leaving the PSS
 {
     u16 i;
     u16 paletteIndex;

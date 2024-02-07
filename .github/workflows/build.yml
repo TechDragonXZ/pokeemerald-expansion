@@ -1,16 +1,14 @@
-name: Build ROM
+name: CI
 
 on:
   push:
     branches:
       - master
-      - followers
       - upcoming
   pull_request:
 
 jobs:
-  build_rom:
-    name: Build ROM
+  build:
     runs-on: ubuntu-latest
     container: devkitpro/devkitarm
     env:
@@ -39,9 +37,6 @@ jobs:
 
       - name: Install agbcc
         run: |
-          cd ..
-          git clone --depth 1 https://github.com/pret/agbcc
-          cd agbcc
           ./build.sh
           ./install.sh ../
         working-directory: agbcc

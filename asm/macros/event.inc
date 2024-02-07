@@ -1682,11 +1682,9 @@
 
 	@ Equivalent to fadescreen but copies gPlttBufferUnfaded to gPaletteDecompressionBuffer on the fade out
 	@ and the reverse on the fade in, in effect saving gPlttBufferUnfaded to restore it.
-  @ If nowait set, does not wait for the fade to complete
-	.macro fadescreenswapbuffers mode:req, nowait=0
+	.macro fadescreenswapbuffers mode:req
 	.byte 0xdc
 	.byte \mode
-  .byte \nowait
 	.endm
 
 	@ Buffers the specified trainer's class name to the given string var.
@@ -1737,11 +1735,6 @@
 	.2byte \quantity
 	.endm
 
-  @ Like callnative, but function expects a ctx
-  .macro callfunc func:req
-  .byte 0xe3
-  .4byte \func
-  .endm
 
 @ Supplementary
 
