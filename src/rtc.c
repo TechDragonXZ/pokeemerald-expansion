@@ -131,6 +131,21 @@ void RtcGetInfo(struct SiiRtcInfo *rtc)
         RtcGetRawInfo(rtc);
 }
 
+void RtcGetInfoFast(struct SiiRtcInfo *rtc)
+{
+    if (sErrorStatus & RTC_ERR_FLAG_MASK)
+        *rtc = sRtcDummy;
+    else
+        RtcGetRawInfoFast(rtc);
+}
+
+void RtcGetTime(struct SiiRtcInfo *rtc)
+{
+    RtcDisableInterrupts();
+    SiiRtcGetTime(rtc);
+    RtcRestoreInterrupts();
+}
+
 void RtcGetDateTime(struct SiiRtcInfo *rtc)
 {
     RtcDisableInterrupts();
@@ -149,6 +164,12 @@ void RtcGetRawInfo(struct SiiRtcInfo *rtc)
 {
     RtcGetStatus(rtc);
     RtcGetDateTime(rtc);
+}
+
+void RtcGetRawInfoFast(struct SiiRtcInfo *rtc)
+{
+    RtcGetStatus(rtc);
+    RtcGetTime(rtc);
 }
 
 u16 RtcCheckInfo(struct SiiRtcInfo *rtc)
@@ -311,6 +332,12 @@ u8 GetTimeOfDay(void)
     else if (IsBetweenHours(gLocalTime.hours, NIGHT_HOUR_BEGIN, NIGHT_HOUR_END))
         return TIME_NIGHT;
     return TIME_DAY;
+}
+
+void RtcCalcLocalTimeFast(void)
+{
+    RtcGetInfoFast(&sRtc);
+    RtcCalcTimeDifference(&sRtc, &gLocalTime, &gSaveBlock2Ptr->localTimeOffset);
 }
 
 void RtcInitLocalTimeOffset(s32 hour, s32 minute)
