@@ -702,7 +702,10 @@
 #define STRINGID_PKMNGATHEREDSAND                     700
 #define STRINGID_TRAPSSET                             701
 
-#define BATTLESTRINGS_COUNT                           702
+#define STRINGID_PKMNDROPPEDITEM                      702
+#define STRINGID_BAGISFULL                            703
+
+#define BATTLESTRINGS_COUNT                           704
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -1023,5 +1026,9 @@
 #define B_MSG_HURT_BY_VORTEX    1
 #define B_MSG_BURNING_UP  2
 #define B_MSG_HURT_BY_ROCKS_THROWN 3
+
+// gItemDroppedStringIds
+#define B_MSG_ITEM_DROPPED   0
+#define B_MSG_BAG_IS_FULL    1
 
 #endif // GUARD_CONSTANTS_BATTLE_STRING_IDS_H

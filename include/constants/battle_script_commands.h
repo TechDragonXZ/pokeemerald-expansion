@@ -241,6 +241,7 @@
 #define VARIOUS_STORE_HEALING_WISH                   149
 #define VARIOUS_HIT_SWITCH_TARGET_FAILED             150
 #define VARIOUS_TRY_REVIVAL_BLESSING                 151
+#define VARIOUS_GIVE_DROPPED_ITEMS                   152
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0

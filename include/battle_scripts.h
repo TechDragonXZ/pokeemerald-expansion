@@ -533,4 +533,6 @@ extern const u8 BattleScript_MoveBlockedByDynamax[];
 extern const u8 BattleScript_UnstableGenesActivates[];
 
 
+extern const u8 BattleScript_ItemDropped[];
+
 #endif // GUARD_BATTLE_SCRIPTS_H
