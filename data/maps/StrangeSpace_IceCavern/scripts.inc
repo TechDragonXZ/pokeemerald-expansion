@@ -11,26 +11,41 @@ StrangeSpace_IceCavern_Chamber::
 	msgbox StrangeSpace_IceCavern_Text_Regis, MSGBOX_AUTOCLOSE
 	delay 30
 	showmonpic SPECIES_REGICE, 10, 3
+	checkpartymon SPECIES_REGICE
 	delay 30
 	hidemonpic
 	delay 30
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_IceCavern_Chamber_Two
+	msgbox StrangeSpace_IceCavern_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
+	end
+
+StrangeSpace_IceCavern_Chamber_Two::
 	showmonpic SPECIES_REGIROCK, 10, 3
 	delay 30
 	hidemonpic
 	delay 30
+	checkpartymon SPECIES_REGIROCK
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_IceCavern_Chamber_Three
+	msgbox StrangeSpace_IceCavern_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
+	end
+
+StrangeSpace_IceCavern_Chamber_Three::
 	showmonpic SPECIES_REGISTEEL, 10, 3
 	delay 30
 	hidemonpic
 	delay 30
+	checkpartymon SPECIES_REGISTEEL
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_IceCavern_Chamber_Four
+	msgbox StrangeSpace_IceCavern_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
+	end
+
+StrangeSpace_IceCavern_Chamber_Four::
 	showmonpic SPECIES_REGIDRAGO, 10, 3
 	delay 30
 	hidemonpic
 	delay 30
-	call_if_set FLAG_HAS_REGIS_4, StrangeSpace_IceCavern_OpeningChamber
-	call_if_unset FLAG_HAS_REGIS_4, StrangeSpace_IceCavern_CantOpenChamber
-	end
-
-StrangeSpace_IceCavern_CantOpenChamber::
+	checkpartymon SPECIES_REGIDRAGO
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_IceCavern_OpeningChamber
 	msgbox StrangeSpace_IceCavern_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
 	end
 

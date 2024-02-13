@@ -14,27 +14,48 @@ StrangeSpace_Desert_Chamber::
 	delay 30
 	hidemonpic
 	delay 30
+	checkpartymon SPECIES_REGICE
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Desert_Chamber_Two
+	msgbox StrangeSpace_Desert_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
+	end
+
+StrangeSpace_Desert_Chamber_Two::
 	showmonpic SPECIES_REGIROCK, 10, 3
 	delay 30
 	hidemonpic
 	delay 30
+	checkpartymon SPECIES_REGIROCK
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Desert_Chamber_Three
+	msgbox StrangeSpace_Desert_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
+	end
+
+StrangeSpace_Desert_Chamber_Three::
 	showmonpic SPECIES_REGISTEEL, 10, 3
 	delay 30
 	hidemonpic
 	delay 30
+	checkpartymon SPECIES_REGISTEEL
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Desert_Chamber_Four
+	msgbox StrangeSpace_Desert_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
+	end
+
+StrangeSpace_Desert_Chamber_Four::
 	showmonpic SPECIES_REGIDRAGO, 10, 3
 	delay 30
 	hidemonpic
 	delay 30
+	checkpartymon SPECIES_REGIDRAGO
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Desert_Chamber_Five
+	msgbox StrangeSpace_Desert_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
+	end
+
+StrangeSpace_Desert_Chamber_Five::
 	showmonpic SPECIES_REGIELEKI, 10, 3
 	delay 30
 	hidemonpic
 	delay 30
-	call_if_set FLAG_HAS_REGIS_5, StrangeSpace_Desert_OpeningChamber
-	call_if_unset FLAG_HAS_REGIS_5, StrangeSpace_Desert_CantOpenChamber
-	end
-
-StrangeSpace_Desert_CantOpenChamber::
+	checkpartymon SPECIES_REGIELEKI
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Desert_OpeningChamber
 	msgbox StrangeSpace_Desert_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
 	end
 

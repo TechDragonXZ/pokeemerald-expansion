@@ -2,11 +2,6 @@ StrangeSpace_Lake_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, StrangeSpace_Lake_ChamberState
 	.byte 0
 
-StrangeSpace_Lake_ChamberState::
-	goto_if_set FLAG_REGIDRAGO_ACTIVE, StrangeSpace_Lake_OpenChamber
-	goto_if_unset FLAG_REGIDRAGO_ACTIVE, StrangeSpace_Lake_CloseChamber
-	end
-
 StrangeSpace_Lake_Chamber::
 	msgbox StrangeSpace_Lake_Text_Regis, MSGBOX_AUTOCLOSE
 	delay 30
@@ -14,20 +9,34 @@ StrangeSpace_Lake_Chamber::
 	delay 30
 	hidemonpic
 	delay 30
+	checkpartymon SPECIES_REGICE
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Lake_Chamber_Two
+	msgbox StrangeSpace_Lake_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
+	end
+
+StrangeSpace_Lake_Chamber_Two::
 	showmonpic SPECIES_REGIROCK, 10, 3
 	delay 30
 	hidemonpic
 	delay 30
+	checkpartymon SPECIES_REGIROCK
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Lake_Chamber_Three
+	msgbox StrangeSpace_Lake_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
+	end
+
+StrangeSpace_Lake_Chamber_Three::
 	showmonpic SPECIES_REGISTEEL, 10, 3
 	delay 30
 	hidemonpic
 	delay 30
-	call_if_set FLAG_HAS_REGIS_3, StrangeSpace_Lake_OpeningChamber
-	call_if_unset FLAG_HAS_REGIS_3, StrangeSpace_Lake_CantOpenChamber
+	checkpartymon SPECIES_REGISTEEL
+	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Lake_OpeningChamber
+	msgbox StrangeSpace_Lake_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
 	end
 
-StrangeSpace_Lake_CantOpenChamber::
-	msgbox StrangeSpace_Lake_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
+StrangeSpace_Lake_ChamberState::
+	goto_if_set FLAG_REGIDRAGO_ACTIVE, StrangeSpace_Lake_OpenChamber
+	goto_if_unset FLAG_REGIDRAGO_ACTIVE, StrangeSpace_Lake_CloseChamber
 	end
 
 StrangeSpace_Lake_OpeningChamber::
