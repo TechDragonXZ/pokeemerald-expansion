@@ -42,54 +42,54 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_INVERSE_BATTLE       0x20 // Inverse Battle Flag
-#define FLAG_FORCE_DOUBLE_WILD    0x21 // Force Wild Double Battle Flag
-#define FLAG_SMART_WILD_AI        0x22 // Smart Wild Pokemon AI Flag
-#define FLAG_NO_BAG_USE           0x23 // No Bag Use In Battle Flag
-#define FLAG_NO_CATCHING          0x24 // No Wlid Pokemon Catching Flag
-#define FLAG_AI_VS_AI_BATTLE      0x25 // AI VS AI Battle Flag
-#define FLAG_DYNAMAX_BATTLE       0x26 // Dynamax Battle Flag
-#define FLAG_SKY_BATTLE           0x27 // Sky Battle Flag
-#define FLAG_NO_ENCOUNTER         0x28 // No Encounter Flag
-#define FLAG_NO_TRAINER_SEE       0x29 // No Trainer Battle Flag
-#define FLAG_NO_COLLISION         0x2A // No Collision Flag
-#define FLAG_ENTERED_HALL_OF_FAME 0x2B // Player Has Entered Hall of Fame Flag
-#define FLAG_CAN_GET_REWARDS      0x2C // Player Can Get League Rewards Flag
-#define FLAG_GOT_MEGA_RING        0x2D // Player Has Recieved Mega Ring Flag
-#define FLAG_GOT_Z_RING           0x2E // Player Has Recieved Z-Power Ring Flag
-#define FLAG_GOT_DYNAMAX_BAND     0x2F // Player Has Recieved Dynamax Band Flag
+#define FLAG_INVERSE_BATTLE           0x20 // Inverse Battle Flag
+#define FLAG_FORCE_DOUBLE_WILD        0x21 // Force Wild Double Battle Flag
+#define FLAG_SMART_WILD_AI            0x22 // Smart Wild Pokemon AI Flag
+#define FLAG_NO_BAG_USE               0x23 // No Bag Use In Battle Flag
+#define FLAG_NO_CATCHING              0x24 // No Wlid Pokemon Catching Flag
+#define FLAG_AI_VS_AI_BATTLE          0x25 // AI VS AI Battle Flag
+#define FLAG_DYNAMAX_BATTLE           0x26 // Dynamax Battle Flag
+#define FLAG_SKY_BATTLE               0x27 // Sky Battle Flag
+#define FLAG_NO_ENCOUNTER             0x28 // No Encounter Flag
+#define FLAG_NO_TRAINER_SEE           0x29 // No Trainer Battle Flag
+#define FLAG_NO_COLLISION             0x2A // No Collision Flag
+#define FLAG_ENTERED_HALL_OF_FAME     0x2B // Player Has Entered Hall of Fame Flag
+#define FLAG_CAN_GET_REWARDS          0x2C // Player Can Get League Rewards Flag
+#define FLAG_GOT_MEGA_RING            0x2D // Player Has Recieved Mega Ring Flag
+#define FLAG_GOT_Z_RING               0x2E // Player Has Recieved Z-Power Ring Flag
+#define FLAG_GOT_DYNAMAX_BAND         0x2F // Player Has Recieved Dynamax Band Flag
 #define FLAG_PICKED_KANTO_STARTER     0x30 // Player Picked a Kanto Starter Flag
 #define FLAG_PICKED_SINNOH_STARTER    0x31 // Player Picked a Sinnoh Starter Flag
 #define FLAG_PICKED_UNOVA_STARTER     0x32 // Player Picked a Unova Starter Flag
 #define FLAG_PICKED_KALOS_STARTER     0x33 // Player Picked a Kalos Starter Flag
 #define FLAG_PICKED_ALOLA_STARTER     0x34 // Player Picked a Alola Starter Flag
 #define FLAG_PICKED_GALAR_STARTER     0x35 // Player Picked a Galar Starter Flag
-#define FLAG_OBTAINED_REWARD     0x36 // Player Obtained Current Reward Flag
-#define FLAG_REGIDRAGO_ACTIVE    0x37 // Player Unlocked Regidrago Flag
-#define FLAG_REGIELEKI_ACTIVE    0x38 // Player Unlocked Regieleki Flag
-#define FLAG_REGIGIGAS_ACTIVE    0x39 // Player Unlocked Regigigas Flag
-#define FLAG_HAS_REGIS_3         0x3A // Player has 3 Regis Flag
-#define FLAG_HAS_REGIS_4         0x3B // Player has 4 Regis Flag
-#define FLAG_HAS_REGIS_5         0x3C // Player has 5 Regis Flag
-#define FLAG_DEFEATED_REGIDRAGO  0x3D // Player has defeated/ran/caught Regidrago Flag
-#define FLAG_DEFEATED_REGIELEKI  0x3E // Player has defeated/ran/caught Regieleki Flag
-#define FLAG_DEFEATED_REGIGIGAS  0x3F // Player has defeated/ran/caught Regigigas Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
-#define FLAG_UNUSED_0x044    0x44 // Unused Flag
-#define FLAG_UNUSED_0x045    0x45 // Unused Flag
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
-#define FLAG_UNUSED_0x048    0x48 // Unused Flag
-#define FLAG_UNUSED_0x049    0x49 // Unused Flag
-#define FLAG_UNUSED_0x04A    0x4A // Unused Flag
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+#define FLAG_OBTAINED_REWARD          0x36 // Player Obtained Current Reward Flag
+#define FLAG_REGIDRAGO_ACTIVE         0x37 // Player Unlocked Regidrago Flag
+#define FLAG_REGIELEKI_ACTIVE         0x38 // Player Unlocked Regieleki Flag
+#define FLAG_REGIGIGAS_ACTIVE         0x39 // Player Unlocked Regigigas Flag
+#define FLAG_HAS_REGIS_3              0x3A // Player has 3 Regis Flag
+#define FLAG_HAS_REGIS_4              0x3B // Player has 4 Regis Flag
+#define FLAG_HAS_REGIS_5              0x3C // Player has 5 Regis Flag
+#define FLAG_DEFEATED_REGIDRAGO       0x3D // Player has defeated/ran/caught Regidrago Flag
+#define FLAG_DEFEATED_REGIELEKI       0x3E // Player has defeated/ran/caught Regieleki Flag
+#define FLAG_DEFEATED_REGIGIGAS       0x3F // Player has defeated/ran/caught Regigigas Flag
+#define FLAG_UNUSED_0x040             0x40 // Unused Flag
+#define FLAG_UNUSED_0x041             0x41 // Unused Flag
+#define FLAG_UNUSED_0x042             0x42 // Unused Flag
+#define FLAG_UNUSED_0x043             0x43 // Unused Flag
+#define FLAG_UNUSED_0x044             0x44 // Unused Flag
+#define FLAG_UNUSED_0x045             0x45 // Unused Flag
+#define FLAG_UNUSED_0x046             0x46 // Unused Flag
+#define FLAG_UNUSED_0x047             0x47 // Unused Flag
+#define FLAG_UNUSED_0x048             0x48 // Unused Flag
+#define FLAG_UNUSED_0x049             0x49 // Unused Flag
+#define FLAG_UNUSED_0x04A             0x4A // Unused Flag
+#define FLAG_UNUSED_0x04B             0x4B // Unused Flag
+#define FLAG_UNUSED_0x04C             0x4C // Unused Flag
+#define FLAG_UNUSED_0x04D             0x4D // Unused Flag
+#define FLAG_UNUSED_0x04E             0x4E // Unused Flag
+#define FLAG_UNUSED_0x04F             0x4F // Unused Flag
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50

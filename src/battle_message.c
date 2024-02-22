@@ -2072,12 +2072,6 @@ const u8 gText_BattleSwitchWhich3[] = _("{UP_ARROW}");
 const u8 gText_BattleSwitchWhich4[] = _("{ESCAPE 4}");
 const u8 gText_BattleSwitchWhich5[] = _("-");
 
-static const u8 sText_HP[] = _("HP");
-static const u8 sText_Attack[] = _("ATTACK");
-static const u8 sText_Defense[] = _("DEFENSE");
-static const u8 sText_SpAtk[] = _("SP. ATK");
-static const u8 sText_SpDef[] = _("SP. DEF");
-
 // Unused
 static const u8 *const sStatNamesTable2[] =
 {

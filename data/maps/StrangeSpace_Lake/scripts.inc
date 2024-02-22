@@ -9,7 +9,8 @@ StrangeSpace_Lake_Chamber::
 	delay 30
 	hidemonpic
 	delay 30
-	checkpartymon SPECIES_REGICE
+	setvar 0x8005, SPECIES_REGICE
+	special CheckSpecies
 	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Lake_Chamber_Two
 	msgbox StrangeSpace_Lake_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
 	end
@@ -19,7 +20,8 @@ StrangeSpace_Lake_Chamber_Two::
 	delay 30
 	hidemonpic
 	delay 30
-	checkpartymon SPECIES_REGIROCK
+	setvar 0x8005, SPECIES_REGIROCK
+	special CheckSpecies
 	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Lake_Chamber_Three
 	msgbox StrangeSpace_Lake_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
 	end
@@ -29,7 +31,8 @@ StrangeSpace_Lake_Chamber_Three::
 	delay 30
 	hidemonpic
 	delay 30
-	checkpartymon SPECIES_REGISTEEL
+	setvar 0x8005, SPECIES_REGISTEEL
+	special CheckSpecies
 	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Lake_OpeningChamber
 	msgbox StrangeSpace_Lake_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
 	end

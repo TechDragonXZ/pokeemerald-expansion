@@ -227,7 +227,6 @@ gScriptCmdTable::
 	.4byte ScrCmd_warpwhitefade                     @ 0xe0
 	.4byte ScrCmd_buffercontestname                 @ 0xe1
 	.4byte ScrCmd_bufferitemnameplural              @ 0xe2
-	.4byte ScrCmd_checkpartymon
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

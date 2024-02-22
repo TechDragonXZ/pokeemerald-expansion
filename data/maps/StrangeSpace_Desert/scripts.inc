@@ -14,7 +14,8 @@ StrangeSpace_Desert_Chamber::
 	delay 30
 	hidemonpic
 	delay 30
-	checkpartymon SPECIES_REGICE
+	setvar 0x8005, SPECIES_REGICE
+	special CheckSpecies
 	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Desert_Chamber_Two
 	msgbox StrangeSpace_Desert_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
 	end
@@ -24,7 +25,8 @@ StrangeSpace_Desert_Chamber_Two::
 	delay 30
 	hidemonpic
 	delay 30
-	checkpartymon SPECIES_REGIROCK
+	setvar 0x8005, SPECIES_REGIROCK
+	special CheckSpecies
 	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Desert_Chamber_Three
 	msgbox StrangeSpace_Desert_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
 	end
@@ -34,7 +36,8 @@ StrangeSpace_Desert_Chamber_Three::
 	delay 30
 	hidemonpic
 	delay 30
-	checkpartymon SPECIES_REGISTEEL
+	setvar 0x8005, SPECIES_REGISTEEL
+	special CheckSpecies
 	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Desert_Chamber_Four
 	msgbox StrangeSpace_Desert_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
 	end
@@ -44,7 +47,8 @@ StrangeSpace_Desert_Chamber_Four::
 	delay 30
 	hidemonpic
 	delay 30
-	checkpartymon SPECIES_REGIDRAGO
+	setvar 0x8005, SPECIES_REGIDRAGO
+	special CheckSpecies
 	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Desert_Chamber_Five
 	msgbox StrangeSpace_Desert_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
 	end
@@ -54,7 +58,8 @@ StrangeSpace_Desert_Chamber_Five::
 	delay 30
 	hidemonpic
 	delay 30
-	checkpartymon SPECIES_REGIELEKI
+	setvar 0x8005, SPECIES_REGIELEKI
+	special CheckSpecies
 	goto_if_eq VAR_RESULT, TRUE, StrangeSpace_Desert_OpeningChamber
 	msgbox StrangeSpace_Desert_Text_CantOpenChamber, MSGBOX_AUTOCLOSE
 	end

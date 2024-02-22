@@ -3081,7 +3081,6 @@ static const u8 sTM10Desc[] = _(
     "The attack power\n"
     "varies among\n"
     "different Pokémon.");
-    "different Pokémon.");
 
 static const u8 sTM11Desc[] = _(
     "Raises the power of\n"
@@ -3282,7 +3281,6 @@ static const u8 sTM50Desc[] = _(
     "Enables full-power\n"
     "attack, but sharply\n"
     "lowers Sp. Atk.");
-    "lowers Sp. Atk.");
 
 static const u8 sTM51Desc[] = _( // Todo
     "?????");
@@ -3462,7 +3460,6 @@ static const u8 sHM05Desc[] = _(
 static const u8 sHM06Desc[] = _(
     "A rock-crushingly\n"
     "tough attack that\n"
-    "may lower Defense.");
     "may lower Defense.");
 
 static const u8 sHM07Desc[] = _(
@@ -3661,7 +3658,6 @@ static const u8 sFameCheckerDesc[] = _(
 static const u8 sTeachyTVDesc[] = _(
     "A TV set tuned to\n"
     "an advice program\n"
-    "for Trainers.");
     "for Trainers.");
 
 // Story Key Items

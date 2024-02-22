@@ -2025,9 +2025,3 @@
 	callnative CreateTrainerPartyForPlayer
 	trainerbattle_no_intro \trainer2, NULL
 	.endm
-
-	@ Checks to see if the player has a Pokemon in their party. Result returns to VAR_RESULT
-    .macro checkpartymon species:req
-    .byte 0xe3
-    .2byte \species
-    .endm
