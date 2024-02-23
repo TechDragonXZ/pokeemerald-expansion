@@ -119,7 +119,7 @@ bool32 ShouldSetSnow(u32 battler, u32 ability, u32 holdEffect);
 bool32 ShouldSetRain(u32 battlerAtk, u32 ability, u32 holdEffect);
 bool32 ShouldSetSun(u32 battlerAtk, u32 atkAbility, u32 holdEffect);
 bool32 HasSleepMoveWithLowAccuracy(u32 battlerAtk, u32 battlerDef);
-bool32 IsHealingMoveEffect(u32 effect);
+bool32 IsHealingMove(u32 move);
 bool32 HasHealingEffect(u32 battler);
 bool32 IsTrappingMoveEffect(u32 effect);
 bool32 HasTrappingMoveEffect(u32 battler);
@@ -139,7 +139,7 @@ bool32 HasSnatchAffectedMove(u32 battler);
 // status checks
 bool32 AI_CanBeBurned(u32 battler, u32 ability);
 bool32 AI_CanGetFrostbite(u32 battler, u32 ability);
-bool32 AI_CanBeConfused(u32 battler, u32 ability);
+bool32 AI_CanBeConfused(u32 battlerAtk, u32 battlerDef, u32 move, u32 ability);
 bool32 AI_CanSleep(u32 battler, u32 ability);
 bool32 IsBattlerIncapacitated(u32 battler, u32 ability);
 bool32 AI_CanPutToSleep(u32 battlerAtk, u32 battlerDef, u32 defAbility, u32 move, u32 partnerMove);
