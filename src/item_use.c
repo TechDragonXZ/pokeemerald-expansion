@@ -1469,10 +1469,4 @@ void ItemUseOutOfBattle_PokeBall(u8 taskId)
     Task_FadeAndCloseBagMenu(taskId);
 }
 
-void ItemUseOutOfBattle_Mints(u8 taskId)
-{
-    gItemUseCB = ItemUseCB_Mints;
-    SetUpItemUseCallback(taskId);
-}
-
 #undef tUsingRegisteredKeyItem
