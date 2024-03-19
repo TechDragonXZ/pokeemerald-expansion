@@ -7,14 +7,14 @@ gText_AlreadySavedFile::
 	.string "Is it okay to overwrite it?$"
 
 gText_SavingDontTurnOff::
-	.string "Saving…\n"
+	.fixstr "Saving…\n"
 	.string "Don't Turn Off The Power.$"
 
 gText_PlayerSavedGame::
 	.string "{PLAYER} saved the game.$"
 
 gText_DifferentSaveFile::
-	.string "Warning!\p"
+	.string "{FIXED_CASE}Warning!{UNFIX_CASE}\p"
 	.string "There is a different game file that\n"
 	.string "is already saved.\p"
 	.string "If you save now, the other file's\n"
@@ -29,5 +29,5 @@ gText_SaveError::
 	.string "backup memory.$"
 
 gText_SavingDontTurnOffPower::
-	.string "Saving…\n"
+	.fixstr "Saving…\n"
 	.string "Don't Turn Off The Power.$"
