@@ -691,7 +691,7 @@ struct
 {
     const u8 *text;
     TaskFunc func;
-} static const sCursorOptions[] =
+} static const sCursorOptions[MENU_FIELD_MOVES] =
 {
     [MENU_SUMMARY] = {gText_Summary5, CursorCb_Summary},
     [MENU_NICKNAME] = {gText_Nickname, CursorCb_Nickname},
