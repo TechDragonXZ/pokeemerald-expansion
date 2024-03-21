@@ -1949,4 +1949,3 @@ const u8 gText_WhichForm[] = _("Choose which\nform?");
 
 // Party Menu
 const u8 gText_Nickname[] = _("Nickname");
-const u8 gText_StatEditor[] = _("Edit Stats");
