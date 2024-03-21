@@ -19843,12 +19843,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .mirrorMoveBanned = FALSE,
         .ignoresKingsRock = FALSE,
         .minimizeDoubleDamage = TRUE,
-        .category = DAMAGE_CATEGORY_SPECIAL,
+        .split = DAMAGE_CATEGORY_SPECIAL,
         .argument = TYPE_DRAGON,
-        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_SMART,
-        .contestComboStarterId = 0,
-        .contestComboMoves = {0}
+        .comboStarterId = 0,
+        .comboMoves = {0}
     },
 
     [MOVE_DISASTER_WARN] =
@@ -19864,11 +19864,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .pp = 8,
         .target = MOVE_TARGET_SELECTED,
         .priority = 2,
-        .criticalHitStage = 1,
         .makesContact = TRUE,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = FALSE,
         .ignoresKingsRock = TRUE,
+        .highCritRatio = TRUE,
         .slicingMove = TRUE,
         .minimizeDoubleDamage = TRUE,
         .damagesAirborne = TRUE,
@@ -19878,12 +19878,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .ignoresTargetDefenseEvasionStages = TRUE,
         .ignoresTargetAbility = TRUE,
         .ignoresSubstitute = TRUE,
-        .category = DAMAGE_CATEGORY_SPECIAL,
+        .split = DAMAGE_CATEGORY_SPECIAL,
         .argument = TYPE_FAIRY,
-        .contestEffect = CONTEST_EFFECT_BETTER_IF_FIRST,
+        .effect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_COOL,
-        .contestComboStarterId = 0,
-        .contestComboMoves = {0}
+        .comboStarterId = 0,
+        .comboMoves = {0}
     },
 
     [MOVE_INNER_POWER] =
@@ -19899,11 +19899,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
-        .contestEffect = CONTEST_EFFECT_REPETITION_NOT_BORING,
+        .split = DAMAGE_CATEGORY_PHYSICAL,
+        .effect = CONTEST_EFFECT_REPETITION_NOT_BORING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .contestComboStarterId = 0,
-        .contestComboMoves = {0}
+        .comboStarterId = 0,
+        .comboMoves = {0}
     },
 
     [MOVE_FROSTBURN] =
@@ -19920,7 +19920,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .argument = TYPE_FIRE,
-        .category = DAMAGE_CATEGORY_SPECIAL,
+        .split = DAMAGE_CATEGORY_SPECIAL,
+        .sheerForceBoost = TRUE,
         .thawsUser = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
@@ -19930,10 +19931,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             .moveEffect = MOVE_EFFECT_BURN,
             .chance = 50,
         }),
-        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
-        .contestComboStarterId = 0,
-        .contestComboMoves = {0}
+        .comboStarterId = 0,
+        .comboMoves = {0}
     },
 
     [MOVE_STONE_CANNON] =
@@ -19949,15 +19950,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .split = DAMAGE_CATEGORY_PHYSICAL,
         .sleepTalkBanned = TRUE,
         .instructBanned = TRUE,
         .makesContact = TRUE,
-        .argument = TWO_TURN_ARG(STRINGID_PKMNGATHEREDSAND, B_WEATHER_SANDSTORM),
-        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .argument = TWO_TURN_ARG(STRINGID_PKMNTOOKSAND, B_WEATHER_SANDSTORM),
+        .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
-        .contestComboStarterId = 0,
-        .contestComboMoves = {COMBO_STARTER_SANDSTORM}
+        .comboStarterId = 0,
+        .comboMoves = {COMBO_STARTER_SANDSTORM}
     },
 
     [MOVE_FIRE_STORM] =
@@ -19973,16 +19974,17 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .pp = 5,
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_SPECIAL,
+        .split = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_BURN,
             .chance = 10,
         }),
+        .sheerForceBoost = TRUE,
         .windMove = TRUE,
-        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
-        .contestComboStarterId = 0,
-        .contestComboMoves = {COMBO_STARTER_SUNNY_DAY}
+        .comboStarterId = 0,
+        .comboMoves = {COMBO_STARTER_SUNNY_DAY}
     },
 
     [MOVE_FINAL_STRIKE] =
@@ -19998,11 +20000,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .pp = 5,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
-        .contestEffect = CONTEST_EFFECT_GREAT_APPEAL_BUT_NO_MORE_MOVES,
+        .split = DAMAGE_CATEGORY_PHYSICAL,
+        .effect = CONTEST_EFFECT_GREAT_APPEAL_BUT_NO_MORE_MOVES,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .contestComboStarterId = 0,
-        .contestComboMoves = {0}
+        .comboStarterId = 0,
+        .comboMoves = {0}
     },
 
     [MOVE_DELTA_ENERGY] =
@@ -20018,11 +20020,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_SPECIAL,
-        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .split = DAMAGE_CATEGORY_SPECIAL,
+        .sheerForceBoost = FALSE,
+        .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_SMART,
-        .contestComboStarterId = 0,
-        .contestComboMoves = {0}
+        .comboStarterId = 0,
+        .comboMoves = {0}
     },
 
 

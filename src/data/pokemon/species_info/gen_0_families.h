@@ -57,6 +57,7 @@ const struct SpeciesInfo gSpeciesInfoGen0[] =
         .shinyPalette = gMonShinyPalette_Eevee,
         .iconSprite = gMonIcon_Eevee,
         .iconPalIndex = 2,
+        FOOTPRINT(Eevee)
     },
 #ifdef __INTELLISENSE__
 };
