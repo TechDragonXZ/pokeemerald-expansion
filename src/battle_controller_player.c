@@ -30,6 +30,7 @@
 #include "text.h"
 #include "util.h"
 #include "window.h"
+#include "config/battle.h"
 #include "constants/battle_anim.h"
 #include "constants/battle_partner.h"
 #include "constants/hold_effects.h"
@@ -1732,9 +1733,9 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     u8 *txtPtr;
     u8 type;
     u32 speciesId;
-    u32 battlerAtk = battler;
     struct Pokemon *mon;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[battler][4]);
+    u32 battlerAtk = battler;
     u16 move = moveInfo->moves[gMoveSelectionCursor[battler]];;
     u8 moveType = GetTypeBeforeUsingMove(move, battlerAtk);
 
@@ -1758,7 +1759,10 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     else
         type = gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
 
-    StringCopy(txtPtr, gTypesInfo[moveType].name);
+    if (B_DYNAMIC_MOVE_TYPE == TRUE)
+        StringCopy(txtPtr, gTypesInfo[moveType].name);
+    else
+        StringCopy(txtPtr, gTypesInfo[type].name);
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
 }
 

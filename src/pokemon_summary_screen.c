@@ -41,6 +41,7 @@
 #include "text.h"
 #include "tv.h"
 #include "window.h"
+#include "config/battle.h"
 #include "constants/battle_move_effects.h"
 #include "constants/hold_effects.h"
 #include "constants/items.h"
@@ -3946,8 +3947,13 @@ static void SetMoveTypeIcons(void)
     {
         if (summary->moves[i] != MOVE_NONE)
         {
-            u8 movetype = GetMonMoveType(summary->moves[i], mon, 0);
-            SetTypeSpritePosAndPal(movetype, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
+            if (B_DYNAMIC_MOVE_TYPE == TRUE)
+            {
+                u8 movetype = GetMonMoveType(summary->moves[i], mon, 0);
+                SetTypeSpritePosAndPal(movetype, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
+            }
+            else
+                SetTypeSpritePosAndPal(gMovesInfo[summary->moves[i]].type, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
         }
         else
             SetSpriteInvisibility(i + SPRITE_ARR_ID_TYPE, TRUE);
