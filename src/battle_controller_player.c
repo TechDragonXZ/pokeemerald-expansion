@@ -1732,8 +1732,11 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     u8 *txtPtr;
     u8 type;
     u32 speciesId;
+    u32 battlerAtk = battler;
     struct Pokemon *mon;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[battler][4]);
+    u16 move = moveInfo->moves[gMoveSelectionCursor[battler]];;
+    u8 moveType = GetTypeBeforeUsingMove(move, battlerAtk);
 
     txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
     *(txtPtr)++ = EXT_CTRL_CODE_BEGIN;
@@ -1755,7 +1758,7 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     else
         type = gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
 
-    StringCopy(txtPtr, gTypesInfo[type].name);
+    StringCopy(txtPtr, gTypesInfo[moveType].name);
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
 }
 
