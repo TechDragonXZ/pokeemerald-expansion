@@ -409,6 +409,7 @@ static u16 GetCurrentMapWildMonHeaderId(void)
 u8 PickWildMonNature(void)
 {
     u8 i;
+    u8 j;
     struct Pokeblock *safariPokeblock;
     u8 natures[NUM_NATURES];
 
@@ -419,7 +420,17 @@ u8 PickWildMonNature(void)
         {
             for (i = 0; i < NUM_NATURES; i++)
                 natures[i] = i;
-            Shuffle(natures, NUM_NATURES, sizeof(natures[0]));
+            for (i = 0; i < NUM_NATURES - 1; i++)
+            {
+                for (j = i + 1; j < NUM_NATURES; j++)
+                {
+                    if (Random() & 1)
+                    {
+                        u8 temp;
+                        SWAP(natures[i], natures[j], temp);
+                    }
+                }
+            }
             for (i = 0; i < NUM_NATURES; i++)
             {
                 if (PokeblockGetGain(natures[i], safariPokeblock) > 0)
@@ -427,7 +438,7 @@ u8 PickWildMonNature(void)
             }
         }
     }
-    // check synchronize for a Pokémon with the same ability
+    // check synchronize for a pokemon with the same ability
     if (OW_SYNCHRONIZE_NATURE < GEN_9
         && !GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG)
         && GetMonAbility(&gPlayerParty[0]) == ABILITY_SYNCHRONIZE

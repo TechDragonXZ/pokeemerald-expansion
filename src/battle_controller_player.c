@@ -32,7 +32,6 @@
 #include "util.h"
 #include "window.h"
 #include "constants/battle_anim.h"
-#include "constants/battle_partner.h"
 #include "constants/hold_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
@@ -40,7 +39,6 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/rgb.h"
-#include "level_caps.h"
 
 static void PlayerBufferExecCompleted(u32 battler);
 static void PlayerHandleLoadMonSprite(u32 battler);
@@ -85,7 +83,7 @@ static void MoveSelectionDisplayPpString(u32 battler);
 static void MoveSelectionDisplayMoveType(u32 battler);
 static void MoveSelectionDisplayMoveNames(u32 battler);
 static void MoveSelectionDisplayInfo(u32 battler);
-/*static void MoveSelectionDisplaySplitIcon(u32 battler);*/
+static void MoveSelectionDisplaySplitIcon(u32 battler);
 static void HandleMoveSwitching(u32 battler);
 static void SwitchIn_HandleSoundAndEnd(u32 battler);
 static void WaitForMonSelection(u32 battler);
@@ -709,13 +707,13 @@ static void HandleInputChooseMove(u32 battler)
 
             QueueZMove(battler, chosenMove);
             gBattleStruct->zmove.viewing = FALSE;
-            if (gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].category != DAMAGE_CATEGORY_STATUS)
+            if (gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].split != SPLIT_STATUS)
                 moveTarget = MOVE_TARGET_SELECTED;  //damaging z moves always have selected target
         }
 
         // Status moves turn into Max Guard when Dynamaxed, targets user.
         if ((IsDynamaxed(battler) || gBattleStruct->dynamax.playerSelect))
-            moveTarget = gMovesInfo[GetMaxMove(battler, moveInfo->moves[gMoveSelectionCursor[battler]])].target;
+            moveTarget = gBattleMoves[GetMaxMove(battler, moveInfo->moves[gMoveSelectionCursor[battler]])].target;
 
         if (moveTarget & MOVE_TARGET_USER)
             gMultiUsePlayerCursor = battler;
@@ -1302,12 +1300,12 @@ static void Intro_TryShinyAnimShowHealthbox(u32 battler)
     bool32 bgmRestored = FALSE;
     bool32 battlerAnimsDone = FALSE;
 
-    // Start shiny animation if applicable for 1st Pokémon
+    // Start shiny animation if applicable for 1st pokemon
     if (!gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim
      && !gBattleSpritesDataPtr->healthBoxesData[battler].ballAnimActive)
         TryShinyAnimation(battler, &gPlayerParty[gBattlerPartyIndexes[battler]]);
 
-    // Start shiny animation if applicable for 2nd Pokémon
+    // Start shiny animation if applicable for 2nd pokemon
     if (!gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].triedShinyMonAnim
      && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].ballAnimActive)
         TryShinyAnimation(BATTLE_PARTNER(battler), &gPlayerParty[gBattlerPartyIndexes[BATTLE_PARTNER(battler)]]);
@@ -1716,9 +1714,9 @@ static void MoveSelectionDisplayMoveNames(u32 battler)
         MoveSelectionDestroyCursorAt(i);
         if ((gBattleStruct->dynamax.playerSelect && CanDynamax(battler))
             || IsDynamaxed(battler))
-            StringCopy(gDisplayedStringBattle, GetMoveName(GetMaxMove(battler, moveInfo->moves[i])));
+            StringCopy(gDisplayedStringBattle, gMoveNames[GetMaxMove(battler, moveInfo->moves[i])]);
         else
-            StringCopy(gDisplayedStringBattle, GetMoveName(moveInfo->moves[i]));
+            StringCopy(gDisplayedStringBattle, gMoveNames[moveInfo->moves[i]]);
         // Prints on windows B_WIN_MOVE_NAME_1, B_WIN_MOVE_NAME_2, B_WIN_MOVE_NAME_3, B_WIN_MOVE_NAME_4
         BattlePutTextOnWindow(gDisplayedStringBattle, i + B_WIN_MOVE_NAME_1);
         if (moveInfo->moves[i] != MOVE_NONE)
@@ -1753,7 +1751,7 @@ static void MoveSelectionDisplayMoveType(u32 battler)
 {
     u8 *txtPtr;
     u8 type;
-    u32 speciesId;
+    u32 itemId;
     struct Pokemon *mon;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[battler][4]);
 
@@ -1765,21 +1763,19 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
     {
         mon = &GetSideParty(GetBattlerSide(battler))[gBattlerPartyIndexes[battler]];
-        speciesId = GetMonData(mon, MON_DATA_SPECIES);
+        itemId = GetMonData(mon, MON_DATA_HELD_ITEM);
 
-        if (speciesId == SPECIES_OGERPON_WELLSPRING_MASK || speciesId == SPECIES_OGERPON_WELLSPRING_MASK_TERA
-            || speciesId == SPECIES_OGERPON_HEARTHFLAME_MASK || speciesId == SPECIES_OGERPON_HEARTHFLAME_MASK_TERA
-            || speciesId == SPECIES_OGERPON_CORNERSTONE_MASK || speciesId == SPECIES_OGERPON_CORNERSTONE_MASK_TERA)
-            type = gBattleMons[battler].type2;
+        if (ItemId_GetHoldEffect(itemId) == HOLD_EFFECT_MASK)
+            type = ItemId_GetSecondaryId(itemId);
         else
-            type = gMovesInfo[MOVE_IVY_CUDGEL].type;
+            type = gBattleMoves[MOVE_IVY_CUDGEL].type;
     }
     else
-        type = gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
+        type = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
 
-    StringCopy(txtPtr, gTypesInfo[type].name);
+    StringCopy(txtPtr, gTypeNames[type]);
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
-    /*MoveSelectionDisplaySplitIcon(battler);*/
+    MoveSelectionDisplaySplitIcon(battler);
 }
 
 void MoveSelectionCreateCursorAt(u8 cursorPosition, u8 baseTileNum)
@@ -1902,25 +1898,25 @@ static void PlayerHandleDrawTrainerPic(u32 battler)
         else // First mon, on the left.
             xPos = 32;
 
-        if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && gPartnerTrainerId < TRAINER_PARTNER(PARTNER_NONE))
+        if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && gPartnerTrainerId != TRAINER_STEVEN_PARTNER && gPartnerTrainerId < TRAINER_CUSTOM_PARTNER)
         {
             xPos = 90;
-            yPos = 80;
+            yPos = (8 - gTrainerFrontPicCoords[trainerPicId].size) * 4 + 80;
         }
         else
         {
-            yPos = (8 - gTrainerBacksprites[trainerPicId].coordinates.size) * 4 + 80;
+            yPos = (8 - gTrainerBackPicCoords[trainerPicId].size) * 4 + 80;
         }
 
     }
     else
     {
         xPos = 80;
-        yPos = (8 - gTrainerBacksprites[trainerPicId].coordinates.size) * 4 + 80;
+        yPos = (8 - gTrainerBackPicCoords[trainerPicId].size) * 4 + 80;
     }
 
     // Use front pic table for any tag battles unless your partner is Steven or a custom partner.
-    if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && gPartnerTrainerId < TRAINER_PARTNER(PARTNER_NONE))
+    if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && gPartnerTrainerId != TRAINER_STEVEN_PARTNER && gPartnerTrainerId < TRAINER_CUSTOM_PARTNER)
     {
         trainerPicId = PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender);
         isFrontPic = TRUE;
@@ -2169,7 +2165,7 @@ void PlayerHandleExpUpdate(u32 battler)
     u8 monId = gBattleResources->bufferA[battler][1];
     s32 taskId, expPointsToGive;
 
-    if (GetMonData(&gPlayerParty[monId], MON_DATA_LEVEL) >= GetCurrentLevelCap())
+    if (GetMonData(&gPlayerParty[monId], MON_DATA_LEVEL) >= MAX_LEVEL)
     {
         PlayerBufferExecCompleted(battler);
     }
@@ -2259,7 +2255,7 @@ static void PlayerHandleOneReturnValue_Duplicate(u32 battler)
 
 static void PlayerHandleIntroTrainerBallThrow(u32 battler)
 {
-    const u32 *trainerPal = gTrainerBacksprites[gSaveBlock2Ptr->playerGender].palette.data;
+    const u32 *trainerPal = gTrainerBackPicPaletteTable[gSaveBlock2Ptr->playerGender].data;
     BtlController_HandleIntroTrainerBallThrow(battler, 0xD6F8, trainerPal, 31, Intro_TryShinyAnimShowHealthbox);
 }
 
@@ -2343,7 +2339,6 @@ static void PlayerHandleBattleDebug(u32 battler)
     gBattlerControllerFuncs[battler] = Controller_WaitForDebug;
 }
 
-/*
 static void MoveSelectionDisplaySplitIcon(u32 battler)
 {
 	static const u16 sSplitIcons_Pal[] = INCBIN_U16("graphics/interface/split_icons_battle.gbapal");
@@ -2352,13 +2347,12 @@ static void MoveSelectionDisplaySplitIcon(u32 battler)
 	int icon;
 
 	moveInfo = (struct ChooseMoveStruct*)(&gBattleResources->bufferA[battler][4]);
-	icon = GetBattleMoveSplit(gMovesInfo->moves[gMoveSelectionCursor[battler]]);
+	icon = GetBattleMoveSplit(moveInfo->moves[gMoveSelectionCursor[battler]]);
 	LoadPalette(sSplitIcons_Pal, 10 * 0x10, 0x20);
 	BlitBitmapToWindow(B_WIN_DUMMY, sSplitIcons_Gfx + 0x80 * icon, 0, 0, 16, 16);
 	PutWindowTilemap(B_WIN_DUMMY);
 	CopyWindowToVram(B_WIN_DUMMY, 3);
 }
-*/
 
 static void MoveSelectionDisplayInfo(u32 battler)
 {
@@ -2374,7 +2368,7 @@ static void MoveSelectionDisplayInfo(u32 battler)
     u32 move = moveInfo->moves[gMoveSelectionCursor[battler]];
     u32 battlerAtk = battler;
     u32 battlerDef = BATTLE_OPPOSITE(battlerAtk);
-    u32 moveType = gMovesInfo[move].type;
+    u32 moveType = gBattleMoves[move].type;
     u32 atkAbility = GetBattlerAbility(battlerAtk);
     u32 defAbility = GetBattlerAbility(battlerDef);
     u32 holdEffectAtk = GetBattlerHoldEffect(battlerAtk, TRUE);
@@ -2385,15 +2379,15 @@ static void MoveSelectionDisplayInfo(u32 battler)
     u32 accuracy = GetTotalAccuracy(battlerAtk, battlerDef, move, atkAbility, defAbility, holdEffectAtk, holdEffectDef);                               // shows real accuracy after modifiers
 
     //Move Name
-    StringCopy(gDisplayedStringBattle, gMovesInfo[move].name);
+    StringCopy(gDisplayedStringBattle, gMoveNames[move]);
 
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_NAME_1);
     PutWindowTilemap(B_WIN_MOVE_NAME_1 );
     CopyWindowToVram(B_WIN_MOVE_NAME_1 , 3);
 
     // Move Power
-    //power = gMovesInfo[move].power; // for base power without modifiers
-    if (gMovesInfo[move].power == 0) // for status moves
+    //power = gBattleMoves[move].power; // for base power without modifiers
+    if (gBattleMoves[move].power == 0) // for status moves
     {
         StringExpandPlaceholders(gStringVar1, gPowerZeroText);
     }
@@ -2407,8 +2401,8 @@ static void MoveSelectionDisplayInfo(u32 battler)
 	CopyWindowToVram(B_WIN_MOVE_NAME_3 , 3);
 
     // Move Accuracy
-    //accuracy = gMovesInfo[move].accuracy; // for base accuracy without modifiers
-    if (gMovesInfo[move].accuracy == 0) // for never-miss moves
+    //accuracy = gBattleMoves[move].accuracy; // for base accuracy without modifiers
+    if (gBattleMoves[move].accuracy == 0) // for never-miss moves
     {
         StringExpandPlaceholders(gStringVar1, gNoMissText);
     }
@@ -2422,9 +2416,9 @@ static void MoveSelectionDisplayInfo(u32 battler)
 	CopyWindowToVram(B_WIN_MOVE_NAME_4 , 3);
 
     // Contact Move
-    if (gMovesInfo[move].category == DAMAGE_CATEGORY_PHYSICAL)
+    if (gBattleMoves[move].split == SPLIT_PHYSICAL)
 	    StringExpandPlaceholders(gStringVar4, gPhysicalText);
-    else if (gMovesInfo[move].category == DAMAGE_CATEGORY_SPECIAL)
+    else if (gBattleMoves[move].split == SPLIT_SPECIAL)
 	    StringExpandPlaceholders(gStringVar4, gSpecialText);
     else
         StringExpandPlaceholders(gStringVar4, gStatusText);

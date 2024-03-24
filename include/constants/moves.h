@@ -912,7 +912,7 @@
 #define MOVE_MYSTIC_SLASH 848
 #define MOVE_DRACO_SWARM 849
 #define MOVE_DISASTER_WARN 850
-#define MOVE_INNER_POWER 851
+#define MOVE_HIDDEN_EXPLOSION 851
 #define MOVE_FROSTBURN 852
 #define MOVE_STONE_CANNON 853
 #define MOVE_FIRE_STORM 854
@@ -1026,8 +1026,6 @@
 #define LAST_MAX_MOVE         MOVE_G_MAX_RAPID_FLOW
 
 #define MOVES_COUNT_DYNAMAX       (LAST_MAX_MOVE + 1)
-
-#define MOVES_COUNT_ALL         MOVES_COUNT_DYNAMAX
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
