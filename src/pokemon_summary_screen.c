@@ -3985,7 +3985,7 @@ static void SetNewMoveTypeIcon(void)
     else
     {
         if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
-                
+        {        
             if (B_DYNAMIC_MOVE_TYPE == TRUE)
             {
                 moveType = GetMonMoveType(sMonSummaryScreen->newMove, mon, 0);
@@ -3993,6 +3993,7 @@ static void SetNewMoveTypeIcon(void)
             }
             else
                 SetTypeSpritePosAndPal(gMovesInfo[sMonSummaryScreen->newMove].type, 85, 96, SPRITE_ARR_ID_TYPE + 4);
+        }
         else
             SetTypeSpritePosAndPal(NUMBER_OF_MON_TYPES + gMovesInfo[sMonSummaryScreen->newMove].contestCategory, 85, 96, SPRITE_ARR_ID_TYPE + 4);
     }
