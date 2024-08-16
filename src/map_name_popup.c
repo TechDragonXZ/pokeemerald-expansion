@@ -189,14 +189,18 @@ static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping[] =
     [MAPSEC_TERRARIUM - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_MARBLE
 };
 
-static const u8 gText_PyramidFloor1[] = _("Pyramid Floor 1");
-static const u8 gText_PyramidFloor2[] = _("Pyramid Floor 2");
-static const u8 gText_PyramidFloor3[] = _("Pyramid Floor 3");
-static const u8 gText_PyramidFloor4[] = _("Pyramid Floor 4");
-static const u8 gText_PyramidFloor5[] = _("Pyramid Floor 5");
-static const u8 gText_PyramidFloor6[] = _("Pyramid Floor 6");
-static const u8 gText_PyramidFloor7[] = _("Pyramid Floor 7");
-static const u8 gText_Pyramid[] = _("Pyramid");
+#if OW_POPUP_GENERATION == GEN_5
+// Gen5 assets
+static const u8 sMapPopUpTilesPrimary_BW[] = INCBIN_U8("graphics/map_popup/bw/bw_primary.4bpp");
+static const u8 sMapPopUpTilesSecondary_BW[] = INCBIN_U8("graphics/map_popup/bw/bw_secondary.4bpp");
+static const u16 sMapPopUpTilesPalette_BW_Black[16] = INCBIN_U16("graphics/map_popup/bw/black.gbapal");
+static const u16 sMapPopUpTilesPalette_BW_White[16] = INCBIN_U16("graphics/map_popup/bw/white.gbapal");
+#else
+static const u8 sMapPopUpTilesPrimary_BW[] = {0};
+static const u8 sMapPopUpTilesSecondary_BW[] = {0};
+static const u16 sMapPopUpTilesPalette_BW_Black[] = {0};
+static const u16 sMapPopUpTilesPalette_BW_White[] = {0};
+#endif
 
 static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping_BW[] =
 {
@@ -306,6 +310,15 @@ static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping_BW[] =
     [MAPSEC_TRAINER_HILL - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_BW_DEFAULT,
     [MAPSEC_TERRARIUM - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_BW_DEFAULT,
 };
+
+static const u8 sText_PyramidFloor1[] = _("PYRAMID FLOOR 1");
+static const u8 sText_PyramidFloor2[] = _("PYRAMID FLOOR 2");
+static const u8 sText_PyramidFloor3[] = _("PYRAMID FLOOR 3");
+static const u8 sText_PyramidFloor4[] = _("PYRAMID FLOOR 4");
+static const u8 sText_PyramidFloor5[] = _("PYRAMID FLOOR 5");
+static const u8 sText_PyramidFloor6[] = _("PYRAMID FLOOR 6");
+static const u8 sText_PyramidFloor7[] = _("PYRAMID FLOOR 7");
+static const u8 sText_Pyramid[] = _("PYRAMID");
 
 static const u8 *const sBattlePyramid_MapHeaderStrings[FRONTIER_STAGES_PER_CHALLENGE + 1] =
 {
