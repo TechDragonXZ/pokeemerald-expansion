@@ -84,6 +84,7 @@ void SetUpBattleVarsAndBirchZigzagoon(void)
         i = 0;
         SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, &i);
     }
+
 }
 
 void InitBattleControllers(void)
