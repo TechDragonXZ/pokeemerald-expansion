@@ -129,3 +129,86 @@ Route121_SafariZoneEntrance_EventScript_TrainerTipSign::
 	msgbox Route121_SafariZoneEntrance_Text_TrainerTip, MSGBOX_SIGN
 	end
 
+Route121_SafariZoneEntrance_EventScript_LetterCheck::
+	lockall
+	checkitem ITEM_LETTER 1
+	call_if_eq VAR_RESULT, TRUE, Route121_SafariZoneEntrance_EventScript_HasLetter
+	goto_if_eq VAR_RESULT, FALSE, Route121_SafariZoneEntrance_EventScript_NoLetter
+	setvar VAR_TEMP_1, 1
+	releaseall
+	end
+
+Route121_SafariZoneEntrance_EventScript_NoLetter::
+	msgbox Route121_SafariZoneEntrance_Text_NotAllowed, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_TERRARIUM_ACCESS
+	removeitem ITEM_LETTER 1
+	applymovement OBJ_EVENT_ID_PLAYER, Route121_SafariZoneEntrance_Movement_PushPlayerBackFromCounter
+	waitmovement 0
+	releaseall
+	end
+
+Route121_SafariZoneEntrance_EventScript_HasLetter::
+	msgbox Route121_SafariZoneEntrance_Text_Allowed, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	end
+
+Route121_SafariZoneEntrance_Movement_PushPlayerBackFromCounter:
+	walk_left
+	step_end
+
+Route121_SafariZoneEntrance_EventScript_InfoAttendant2::
+	lock
+	faceplayer
+	msgbox Route121_SafariZoneEntrance_Text_TerrariumWelcomeFirstTime, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route121_SafariZoneEntrance_EventScript_FirstTimeInfo2
+	msgbox Route121_SafariZoneEntrance_Text_TerrariumComeInAndEnjoy, MSGBOX_DEFAULT
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumAttendant::
+	lock
+	faceplayer
+	msgbox Route121_SafariZoneEntrance_Text_TerrariumWelcomeFirstTime, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
+	msgbox Route121_SafariZoneEntrance_Text_TerrariumComeInAndEnjoy, MSGBOX_DEFAULT
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_FirstTimeInfo2::
+	msgbox Route121_SafariZoneEntrance_Text_FirstTimeInfo2, MSGBOX_DEFAULT
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumGroups::
+	msgbox Route121_SafariZoneEntrance_Text_TerrariumGroups, MSGBOX_DEFAULT
+	release
+	end
+
+Route121_SafariZoneEntrance_Text_Allowed:
+	.string "Is that a letter of approval? It is!\n"
+	.string "With this you can freely enter the\p"
+	.string "Terrarium whenever you want.$"
+
+Route121_SafariZoneEntrance_Text_NotAllowed:
+	.string "Sorry, you can't enter the Terrarium\n"
+	.string "without bringing a letter of approval.$"
+
+Route121_SafariZoneEntrance_Text_FirstTimeInfo2:
+	.string "To enter the Terrarium, you need a\n"
+	.string "letter of approval. Afterwards you are\p"
+	.string "able to freely enter the Terrarium to\n"
+	.string "catch Pokémon.$"
+
+Route121_SafariZoneEntrance_Text_TerrariumGroups:
+	.string "From here, if you want, I can change the\n"
+	.string "kind of Pokémon that can be found\p"
+	.string "inside of the Terrarium.$"
+
+Route121_SafariZoneEntrance_Text_TerrariumWelcomeFirstTime:
+	.string "Welcome to the Terrarium!\n"
+	.string "Is it your first time here?$"
+
+Route121_SafariZoneEntrance_Text_TerrariumComeInAndEnjoy:
+	.string "Come in and enjoy the Terrarium!$"
