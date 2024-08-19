@@ -64,6 +64,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -172,6 +173,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -284,6 +286,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_SCARY_FACE",
@@ -387,6 +390,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -495,6 +499,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -618,6 +623,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -753,6 +759,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -864,6 +871,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -969,6 +977,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -1190,6 +1199,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -1333,6 +1343,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -1483,6 +1494,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -1631,6 +1643,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -1766,6 +1779,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -1904,6 +1918,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -2101,6 +2116,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -2289,6 +2305,7 @@
       "MOVE_DISARMING_VOICE"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -2439,6 +2456,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -2576,6 +2594,7 @@
       "MOVE_INFERNO"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -2725,6 +2744,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -2904,6 +2924,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -3073,6 +3094,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
@@ -3174,6 +3196,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
@@ -3271,6 +3294,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
@@ -3382,6 +3406,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -3496,6 +3521,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -3610,6 +3636,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -3729,6 +3756,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -3839,6 +3867,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -3965,6 +3994,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -4090,6 +4120,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -4226,6 +4257,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -4368,6 +4400,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -4506,6 +4539,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -4646,6 +4680,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -4769,6 +4804,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -4878,6 +4914,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -4975,6 +5012,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -5097,6 +5135,7 @@
       "MOVE_CIRCLE_THROW"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -5274,6 +5313,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
       "MOVE_THIEF",
@@ -5381,6 +5421,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
       "MOVE_THIEF",
@@ -5485,6 +5526,7 @@
       "MOVE_POWER_WHIP"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
@@ -5598,6 +5640,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
       "MOVE_ACID_SPRAY",
@@ -5716,6 +5759,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -5825,6 +5869,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
@@ -5937,6 +5982,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -6053,6 +6099,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -6198,6 +6245,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -6342,6 +6390,7 @@
       "MOVE_FUTURE_SIGHT"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -6484,6 +6533,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -6599,6 +6649,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -6706,6 +6757,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -6806,6 +6858,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -6922,6 +6975,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -7048,6 +7102,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -7166,6 +7221,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -7296,6 +7352,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -7430,6 +7487,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -7546,6 +7604,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -7655,6 +7714,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
@@ -7781,6 +7841,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
@@ -7922,6 +7983,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
@@ -8067,6 +8129,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -8204,6 +8267,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -8370,6 +8434,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -8484,6 +8549,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -8583,6 +8649,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
       "MOVE_THIEF",
@@ -8712,6 +8779,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -8858,6 +8926,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -8989,6 +9058,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
@@ -9118,6 +9188,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -9236,6 +9307,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -9345,6 +9417,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -9475,6 +9548,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -9637,6 +9711,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -9778,6 +9853,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -9873,6 +9949,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -10001,6 +10078,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -10123,6 +10201,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -10238,6 +10317,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -10356,6 +10436,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -10512,6 +10593,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -10635,6 +10717,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -10780,6 +10863,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -10922,6 +11006,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -11080,6 +11165,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -11235,6 +11321,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -11353,6 +11440,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -11541,6 +11629,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -11683,6 +11772,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -11797,6 +11887,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -11910,6 +12001,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -12016,6 +12108,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -12129,6 +12222,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -12267,6 +12361,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -12419,6 +12514,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -12567,6 +12663,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -12861,6 +12958,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -12966,6 +13064,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -13074,6 +13173,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -13194,6 +13294,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FIRE_FANG",
@@ -13307,6 +13408,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FIRE_FANG",
@@ -13426,6 +13528,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FIRE_FANG",
@@ -13554,6 +13657,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_MUD_SLAP",
@@ -13674,6 +13778,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_MUD_SLAP",
@@ -13794,6 +13899,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -13922,6 +14028,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -14047,6 +14154,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -14177,6 +14285,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -14298,6 +14407,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -14441,6 +14551,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -14574,6 +14685,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -14691,6 +14803,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -14814,6 +14927,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -14893,6 +15007,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -14976,6 +15091,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -15070,6 +15186,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -15218,6 +15335,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -15327,6 +15445,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -15465,6 +15584,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -15599,6 +15719,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
@@ -15717,6 +15838,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -15854,6 +15976,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -15998,6 +16121,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_MUD_SLAP",
@@ -16139,6 +16263,7 @@
       "MOVE_EARTH_POWER"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -16275,6 +16400,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -16402,6 +16528,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -16530,6 +16657,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -16644,6 +16772,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -16767,6 +16896,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -16879,6 +17009,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -16990,6 +17121,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_STRUGGLE_BUG",
@@ -17088,6 +17220,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -17207,6 +17340,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -17379,6 +17513,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -17547,6 +17682,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -17665,6 +17801,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -17817,6 +17954,7 @@
       "MOVE_CHILLY_RECEPTION"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -17952,6 +18090,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -18106,6 +18245,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -18241,6 +18381,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_STRUGGLE_BUG",
@@ -18374,6 +18515,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_STRUGGLE_BUG",
@@ -18510,6 +18652,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -18648,6 +18791,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -18796,6 +18940,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -18943,6 +19088,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -19092,6 +19238,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -19230,6 +19377,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -19363,6 +19511,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -19482,6 +19631,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -19614,6 +19764,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -19750,6 +19901,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -19885,6 +20037,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -20006,6 +20159,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -20119,6 +20273,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -20238,6 +20393,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -20329,6 +20485,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -20467,6 +20624,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -20592,6 +20750,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -20726,6 +20885,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -20860,6 +21020,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -20957,6 +21118,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -21085,6 +21247,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -21222,6 +21385,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -21319,6 +21483,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -21419,6 +21584,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -21531,6 +21697,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -21644,6 +21811,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -21757,6 +21925,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -21896,6 +22065,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -22048,6 +22218,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -22179,6 +22350,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -22307,6 +22479,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -22421,6 +22594,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -22550,6 +22724,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -22702,6 +22877,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -22860,6 +23036,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -22993,6 +23170,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CHARGE_BEAM",
@@ -23122,6 +23300,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -23257,6 +23436,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -23392,6 +23572,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -23524,6 +23705,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -23648,6 +23830,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -23786,6 +23969,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -23921,6 +24105,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -24043,6 +24228,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -24174,6 +24360,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -24306,6 +24493,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -24436,6 +24624,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -24591,6 +24780,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -24711,6 +24901,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -24854,6 +25045,7 @@
       "MOVE_ZEN_HEADBUTT"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -24979,6 +25171,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -25103,6 +25296,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -25277,6 +25471,7 @@
       "MOVE_SUCKER_PUNCH"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -25424,6 +25619,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -25555,6 +25751,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -25677,6 +25874,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -25809,6 +26007,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -25967,6 +26166,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -26090,6 +26290,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -26199,6 +26400,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -26318,6 +26520,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -26439,6 +26642,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -26551,6 +26755,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -26663,6 +26868,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -26808,6 +27014,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -27016,6 +27223,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -27159,6 +27367,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -27265,6 +27474,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -27373,6 +27583,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FACADE",
@@ -27513,6 +27724,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -27693,6 +27905,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -27845,6 +28058,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -28017,6 +28231,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -28146,6 +28361,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -28254,6 +28470,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -28381,6 +28598,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -28520,6 +28738,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -28641,6 +28860,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -28792,6 +29012,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -28931,6 +29152,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -29082,6 +29304,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FIRE_SPIN",
@@ -29193,6 +29416,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -29321,6 +29545,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -29473,6 +29698,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -29602,6 +29828,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -29754,6 +29981,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -29893,6 +30121,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -30032,6 +30261,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -30152,6 +30382,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -30268,6 +30499,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -30463,6 +30695,7 @@
       "MOVE_FINAL_GAMBIT"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -30603,6 +30836,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -30735,6 +30969,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -30850,6 +31085,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -30973,6 +31209,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -31093,6 +31330,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -31216,6 +31454,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
       "MOVE_CONFUSE_RAY",
@@ -31334,6 +31573,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -31465,6 +31705,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -31578,6 +31819,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -31700,6 +31942,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -31829,6 +32072,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -31951,6 +32195,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -32072,6 +32317,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -32213,6 +32459,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -32326,6 +32573,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -32494,6 +32742,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -32586,6 +32835,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -32694,6 +32944,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -32815,6 +33066,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -32887,6 +33139,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_ZEN_HEADBUTT",
       "MOVE_IRON_HEAD",
@@ -32962,6 +33215,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -33092,6 +33346,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -33221,6 +33476,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CHARGE_BEAM",
@@ -33338,6 +33594,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CHARGE_BEAM",
       "MOVE_FACADE",
@@ -33455,6 +33712,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CHARGE_BEAM",
@@ -33575,6 +33833,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -33717,6 +33976,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -33848,6 +34108,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -33952,6 +34213,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -34084,6 +34346,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -34222,6 +34485,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_MUD_SLAP",
@@ -34353,6 +34617,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -34477,6 +34742,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -34586,6 +34852,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -34707,6 +34974,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -34838,6 +35106,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -34970,6 +35239,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -35120,6 +35390,7 @@
       "MOVE_SLACK_OFF"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -35271,6 +35542,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -35377,6 +35649,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -35499,6 +35772,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -35631,6 +35905,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -35724,6 +35999,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -35821,6 +36097,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -35900,6 +36177,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_STRUGGLE_BUG",
       "MOVE_TERA_BLAST",
       "MOVE_BUG_BITE",
@@ -35975,6 +36253,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_STRUGGLE_BUG",
@@ -36074,6 +36353,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -36185,6 +36465,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -36300,6 +36581,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -36423,6 +36705,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -36536,6 +36819,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -36654,6 +36938,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -36772,6 +37057,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -36873,6 +37159,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_STRUGGLE_BUG",
       "MOVE_SLEEP_TALK",
       "MOVE_BUG_BUZZ",
@@ -36966,6 +37253,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -37080,6 +37368,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -37209,6 +37498,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -37331,6 +37621,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -37456,6 +37747,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -37557,6 +37849,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -37681,6 +37974,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -37815,6 +38109,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_ACROBATICS",
       "MOVE_PSYBEAM",
@@ -37943,6 +38238,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_ACROBATICS",
       "MOVE_PSYBEAM",
@@ -38050,6 +38346,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -38171,6 +38468,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -38286,6 +38584,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CHARGE_BEAM",
       "MOVE_FACADE",
@@ -38406,6 +38705,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -38531,6 +38831,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -38650,6 +38951,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -38781,6 +39083,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -38905,6 +39208,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_MUD_SLAP",
@@ -38995,6 +39299,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -39099,6 +39404,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -39206,6 +39512,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -39311,6 +39618,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -39424,6 +39732,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -39558,6 +39867,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -39688,6 +39998,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -39853,6 +40164,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -39991,6 +40303,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -40114,6 +40427,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -40241,6 +40555,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -40372,6 +40687,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -40513,6 +40829,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -40616,6 +40933,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -40727,6 +41045,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -40834,6 +41153,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -40974,6 +41294,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -41128,6 +41449,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -41253,6 +41575,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -41407,6 +41730,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -41531,6 +41855,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -41666,6 +41991,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -41813,6 +42139,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -41968,6 +42295,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -42093,6 +42421,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -42236,6 +42565,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -42377,6 +42707,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -42557,6 +42888,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -42744,6 +43076,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FACADE",
@@ -42888,6 +43221,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -43040,6 +43374,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -43161,6 +43496,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -43316,6 +43652,7 @@
       "MOVE_EXPANDING_FORCE"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -43492,6 +43829,7 @@
       "MOVE_ALLY_SWITCH"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -43683,6 +44021,7 @@
       "MOVE_EXPANDING_FORCE"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -43804,6 +44143,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -43920,6 +44260,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -44049,6 +44390,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -44171,6 +44513,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -44281,6 +44624,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -44401,6 +44745,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -44499,6 +44844,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -44595,6 +44941,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_MUD_SLAP",
@@ -44696,6 +45043,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -44806,6 +45154,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_DISARMING_VOICE",
@@ -44901,6 +45250,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -45087,6 +45437,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -45192,6 +45543,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -45289,6 +45641,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -45400,6 +45753,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -45517,6 +45871,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -45652,6 +46007,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -45788,6 +46144,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -45903,6 +46260,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -46028,6 +46386,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -46268,6 +46627,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -46365,6 +46725,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -46507,6 +46868,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -46616,6 +46978,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -46735,6 +47098,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -46844,6 +47208,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -46954,6 +47319,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -47088,6 +47454,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -47172,6 +47539,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -47275,6 +47643,7 @@
       "MOVE_BUG_BITE"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -47428,6 +47797,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -47555,6 +47925,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -47664,6 +48035,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -47780,6 +48152,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -47890,6 +48263,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -47999,6 +48373,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -48117,6 +48492,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -48249,6 +48625,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -48423,6 +48800,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -48558,6 +48936,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -48755,6 +49134,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -48876,6 +49256,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -49006,6 +49387,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -49124,6 +49506,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -49236,6 +49619,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -49346,6 +49730,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -49461,6 +49846,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -49586,6 +49972,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -49702,6 +50089,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -49818,6 +50206,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -49939,6 +50328,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
       "MOVE_DISARMING_VOICE",
@@ -50040,6 +50430,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
       "MOVE_ACROBATICS",
@@ -50162,6 +50553,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -50272,6 +50664,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -50412,6 +50805,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_FACADE",
       "MOVE_MAGICAL_LEAF",
@@ -50506,6 +50900,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_FACADE",
@@ -50623,6 +51018,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -50734,6 +51130,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
       "MOVE_STRUGGLE_BUG",
@@ -50841,6 +51238,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
       "MOVE_STRUGGLE_BUG",
@@ -50937,6 +51335,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARGE_BEAM",
       "MOVE_THUNDER_WAVE",
       "MOVE_TERA_BLAST",
@@ -51011,6 +51410,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -51094,6 +51494,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -51243,6 +51644,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -51360,6 +51762,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -51478,6 +51881,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -51607,6 +52011,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -51739,6 +52144,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -51872,6 +52278,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -52005,6 +52412,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -52145,6 +52553,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -52297,6 +52706,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -52419,6 +52829,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -52533,6 +52944,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -52664,6 +53076,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
@@ -52801,6 +53214,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
@@ -52941,6 +53355,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -53060,6 +53475,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -53183,6 +53599,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -53289,6 +53706,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -53396,6 +53814,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -53516,6 +53935,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -53656,6 +54076,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -53775,6 +54196,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -53905,6 +54327,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -54029,6 +54452,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_ACROBATICS",
@@ -54168,6 +54592,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_ACROBATICS",
@@ -54285,6 +54710,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -54401,6 +54827,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -54518,6 +54945,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -54644,6 +55072,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -54769,6 +55198,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -54892,6 +55322,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -55020,6 +55451,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -55161,6 +55593,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -55278,6 +55711,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -55402,6 +55836,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -55519,6 +55954,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -55642,6 +56078,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -55761,6 +56198,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -55906,6 +56344,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -56053,6 +56492,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -56170,6 +56610,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -56311,6 +56752,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -56446,6 +56888,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -56556,6 +56999,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -56686,6 +57130,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -56816,6 +57261,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -56916,6 +57362,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -57029,6 +57476,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -57099,6 +57547,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_STRUGGLE_BUG",
       "MOVE_POUNCE",
       "MOVE_TERA_BLAST",
@@ -57123,6 +57572,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_STRUGGLE_BUG",
       "MOVE_POUNCE",
@@ -57193,6 +57643,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_ACROBATICS",
       "MOVE_STRUGGLE_BUG",
@@ -57300,6 +57751,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -57417,6 +57869,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -57531,6 +57984,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_DISARMING_VOICE",
@@ -57634,6 +58088,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_DISARMING_VOICE",
@@ -57732,6 +58187,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_DISARMING_VOICE",
@@ -57846,6 +58302,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -57970,6 +58427,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -58089,6 +58547,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -58213,6 +58672,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -58377,6 +58837,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -58496,6 +58957,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -58620,6 +59082,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -58731,6 +59194,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -58843,6 +59307,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -58956,6 +59421,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -59146,6 +59612,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -59271,6 +59738,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -59405,6 +59873,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -59516,6 +59985,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -59619,6 +60089,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -59712,6 +60183,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -59822,6 +60294,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -59942,6 +60415,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_THIEF",
       "MOVE_FACADE",
@@ -60049,6 +60523,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -60171,6 +60646,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -60322,6 +60798,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_ICE_FANG",
@@ -60439,6 +60916,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -60552,6 +61030,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -60676,6 +61155,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -60821,6 +61301,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -60956,6 +61437,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -61093,6 +61575,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -61216,6 +61699,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -61326,6 +61810,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -61458,6 +61943,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -61588,6 +62074,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -61694,6 +62181,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -61812,6 +62300,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -61943,6 +62432,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -62045,6 +62535,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -62148,6 +62639,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -62262,6 +62754,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_ACROBATICS",
@@ -62363,6 +62856,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_ACROBATICS",
@@ -62466,6 +62960,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -62576,6 +63071,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -62683,6 +63179,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -62788,6 +63285,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -62882,6 +63380,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -63011,6 +63510,7 @@
       "MOVE_BUG_BITE"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -63122,6 +63622,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -63231,6 +63732,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -63359,6 +63861,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -63452,6 +63955,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -63552,6 +64056,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -63670,6 +64175,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -63794,6 +64300,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -63909,6 +64416,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
       "MOVE_ACID_SPRAY",
@@ -64008,6 +64516,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -64113,6 +64622,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -64213,6 +64723,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -64324,6 +64835,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
       "MOVE_TRAILBLAZE",
@@ -64428,6 +64940,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -64520,6 +65033,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -64622,6 +65136,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -64739,6 +65254,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -64881,6 +65397,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -65004,6 +65521,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -65091,6 +65609,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -65198,6 +65717,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -65325,6 +65845,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_ACROBATICS",
@@ -65438,6 +65959,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -65562,6 +66084,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -65700,6 +66223,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -65815,6 +66339,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -65958,6 +66483,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_ACROBATICS",
@@ -66058,6 +66584,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -66191,6 +66718,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -66299,6 +66827,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -66421,6 +66950,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -66528,6 +67058,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -66664,6 +67195,7 @@
       "MOVE_BELLY_DRUM"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -66871,6 +67403,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -67005,6 +67538,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -67178,6 +67712,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_THIEF",
@@ -67313,6 +67848,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -67486,6 +68022,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -67586,6 +68123,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -67704,6 +68242,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -67819,6 +68358,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -67913,6 +68453,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -68022,6 +68563,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -68134,6 +68676,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -68220,6 +68763,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -68320,6 +68864,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -68440,6 +68985,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -68535,6 +69081,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -68634,6 +69181,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -68720,6 +69268,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -68824,6 +69373,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -68984,6 +69534,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -69079,6 +69630,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -69198,6 +69750,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -69290,6 +69843,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -69398,6 +69952,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FIRE_SPIN",
@@ -69469,6 +70024,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_POUNCE",
       "MOVE_TERA_BLAST"
     ],
@@ -69553,6 +70109,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -69673,6 +70230,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -69779,6 +70337,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -69870,6 +70429,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -69975,6 +70535,7 @@
       "MOVE_BELCH"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -70070,6 +70631,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -70156,6 +70718,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -70228,6 +70791,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_FACADE",
@@ -70343,6 +70907,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_SCARY_FACE",
@@ -70483,6 +71048,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
       "MOVE_CONFUSE_RAY",
@@ -70586,6 +71152,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
       "MOVE_CONFUSE_RAY",
@@ -70678,6 +71245,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -70776,6 +71344,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -70882,6 +71451,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -70994,6 +71564,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -71094,6 +71665,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -71208,6 +71780,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -71339,6 +71912,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -71477,6 +72051,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_FACADE",
@@ -71554,6 +72129,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -71655,6 +72231,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -71760,6 +72337,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CHILLING_WATER",
@@ -71818,6 +72396,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_STRUGGLE_BUG",
       "MOVE_POUNCE",
@@ -71917,6 +72496,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_ACROBATICS",
@@ -72023,6 +72603,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -72122,6 +72703,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -72228,6 +72810,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_PSYBEAM",
@@ -72334,6 +72917,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -72454,6 +73038,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FACADE",
@@ -72563,6 +73148,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FACADE",
@@ -72706,6 +73292,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -72780,6 +73367,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_FACADE",
@@ -72879,6 +73467,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -73009,6 +73598,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -73129,6 +73719,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -73233,6 +73824,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -73350,6 +73942,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -73459,6 +74052,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -73567,6 +74161,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -73697,6 +74292,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -73824,6 +74420,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -73918,6 +74515,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FIRE_FANG",
@@ -74012,6 +74610,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -74115,6 +74714,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -74226,6 +74826,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -74345,6 +74946,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -74476,6 +75078,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -74611,6 +75214,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -74766,6 +75370,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -74882,6 +75487,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -75024,6 +75630,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -75163,6 +75770,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -75264,6 +75872,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -75369,6 +75978,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -75506,6 +76116,7 @@
       "MOVE_TRICK"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -75630,6 +76241,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -75736,6 +76348,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -75869,6 +76482,7 @@
       "MOVE_YAWN"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -75983,6 +76597,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -76085,6 +76700,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -76214,6 +76830,7 @@
       "MOVE_COUNTER"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -76332,6 +76949,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -76377,6 +76995,7 @@
     "LevelMoves": [],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -76487,6 +77106,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_STRUGGLE_BUG",
@@ -76592,6 +77212,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -76702,6 +77323,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -76811,6 +77433,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -76921,6 +77544,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -77034,6 +77658,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -77166,6 +77791,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -77294,6 +77920,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -77411,6 +78038,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -77528,6 +78156,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -77637,6 +78266,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -77743,6 +78373,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -77833,6 +78464,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -77939,6 +78571,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_TRAILBLAZE",
@@ -78054,6 +78687,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -78159,6 +78793,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FACADE",
@@ -78264,6 +78899,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FACADE",
@@ -78389,6 +79025,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FACADE",
@@ -78489,6 +79126,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -78595,6 +79233,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
@@ -78741,6 +79380,7 @@
       "MOVE_SOLAR_BLADE"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -78852,6 +79492,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -78951,6 +79592,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -79046,6 +79688,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -79153,6 +79796,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -79268,6 +79912,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -79382,6 +80027,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -79496,6 +80142,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -79613,6 +80260,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -79739,6 +80387,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -79844,6 +80493,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -79960,6 +80610,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -80091,6 +80742,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -80213,6 +80865,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -80321,6 +80974,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_THIEF",
@@ -80432,6 +81086,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -80526,6 +81181,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -80645,6 +81301,7 @@
       "MOVE_PSYCH_UP"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -80756,6 +81413,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -80869,6 +81527,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -80999,6 +81658,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
       "MOVE_THIEF",
@@ -81109,6 +81769,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
       "MOVE_THIEF",
@@ -81224,6 +81885,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
       "MOVE_THIEF",
@@ -81323,6 +81985,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -81417,6 +82080,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -81526,6 +82190,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -81639,6 +82304,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -81753,6 +82419,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -81879,6 +82546,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -81997,6 +82665,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -82112,6 +82781,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -82227,6 +82897,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -82333,6 +83004,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
       "MOVE_CONFUSE_RAY",
@@ -82447,6 +83119,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
       "MOVE_CONFUSE_RAY",
@@ -82559,6 +83232,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -82679,6 +83353,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -82799,6 +83474,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -82912,6 +83588,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -83023,6 +83700,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -83129,6 +83807,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -83245,6 +83924,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -83339,6 +84019,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -83456,6 +84137,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -83588,6 +84270,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -83727,6 +84410,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -83878,6 +84562,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -84036,6 +84721,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -84165,6 +84851,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -84295,6 +84982,7 @@
       "MOVE_SUNNY_DAY"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_SCARY_FACE",
@@ -84441,6 +85129,7 @@
       "MOVE_SUNNY_DAY"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -84558,6 +85247,7 @@
       "MOVE_SUNNY_DAY"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -84683,6 +85373,7 @@
       "MOVE_SUNNY_DAY"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -84813,6 +85504,7 @@
       "MOVE_SUNNY_DAY"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CHARGE_BEAM",
@@ -84931,6 +85623,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -85048,6 +85741,7 @@
       "MOVE_ELECTRIC_TERRAIN"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -85167,6 +85861,7 @@
       "MOVE_ELECTRIC_TERRAIN"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -85289,6 +85984,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -85423,6 +86119,7 @@
       "MOVE_ELECTRIC_TERRAIN"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -85551,6 +86248,7 @@
       "MOVE_ELECTRIC_TERRAIN"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -85684,6 +86382,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_ICE_FANG",
@@ -85772,6 +86471,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -85884,6 +86584,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -85951,6 +86652,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
@@ -86024,6 +86726,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -86149,6 +86852,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -86274,6 +86978,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -86388,6 +87093,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -86507,6 +87213,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -86640,6 +87347,7 @@
       "MOVE_SCALE_SHOT"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -86785,6 +87493,7 @@
       "MOVE_ELECTRIC_TERRAIN"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -86924,6 +87633,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_MUD_SLAP",
@@ -87064,6 +87774,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -87193,6 +87904,7 @@
       "MOVE_HONE_CLAWS"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -87325,6 +88037,7 @@
       "MOVE_ELECTRIC_TERRAIN"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -87445,6 +88158,7 @@
       "MOVE_INFESTATION"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_POUNCE",
@@ -87542,6 +88256,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_HEX",
       "MOVE_MAGICAL_LEAF",
@@ -87637,6 +88352,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_HEX",
       "MOVE_MAGICAL_LEAF",
@@ -87725,6 +88441,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -87844,6 +88561,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
@@ -87959,6 +88677,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -88099,6 +88818,7 @@
       "MOVE_HORN_LEECH"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_SCARY_FACE",
@@ -88209,6 +88929,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -88344,6 +89065,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_POUNCE",
@@ -88476,6 +89198,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -88604,6 +89327,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -88726,6 +89450,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -88841,6 +89566,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -88939,6 +89665,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -89064,6 +89791,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
       "MOVE_ACID_SPRAY",
@@ -89194,6 +89922,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -89336,6 +90065,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -89499,6 +90229,7 @@
       "MOVE_SNOWSCAPE"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -89633,6 +90364,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -89773,6 +90505,7 @@
       "MOVE_AURORA_VEIL"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -89890,6 +90623,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -90013,6 +90747,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_AGILITY",
@@ -90132,6 +90867,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -90261,6 +90997,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -90396,6 +91133,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -90522,6 +91260,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -90654,6 +91393,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -90792,6 +91532,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -90931,6 +91672,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_SCARY_FACE",
@@ -91086,6 +91828,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_LOW_KICK",
@@ -91214,6 +91957,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
@@ -91366,6 +92110,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_WATER_PULSE",
@@ -91508,6 +92253,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -91696,6 +92442,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -91815,6 +92562,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -91929,6 +92677,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -92042,6 +92791,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -92190,6 +92940,7 @@
       "MOVE_CHILLY_RECEPTION"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -92394,6 +93145,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -92529,6 +93281,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -92667,6 +93420,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -92788,6 +93542,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -92914,6 +93669,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_FIRE_FANG",
@@ -93055,6 +93811,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -93175,6 +93932,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_PROTECT",
@@ -93314,6 +94072,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -93476,6 +94235,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -93601,6 +94361,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -93699,6 +94460,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -93823,6 +94585,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_FAKE_TEARS",
       "MOVE_AGILITY",
@@ -93967,6 +94730,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -94091,6 +94855,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -94216,6 +94981,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_SCARY_FACE",
@@ -94365,6 +95131,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -94485,6 +95252,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -94616,6 +95384,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -94725,6 +95494,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -94840,6 +95610,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -94944,6 +95715,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
@@ -95068,6 +95840,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -95209,6 +95982,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -95344,6 +96118,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -95488,6 +96263,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -95588,6 +96364,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -95688,6 +96465,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -95788,6 +96566,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -95888,6 +96667,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT",
       "MOVE_CONFUSE_RAY",
       "MOVE_THIEF",
@@ -95984,6 +96764,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_PROTECT",
       "MOVE_DISARMING_VOICE",
@@ -96091,6 +96872,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -96215,6 +96997,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -96339,6 +97122,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_PROTECT",
       "MOVE_DISARMING_VOICE",
@@ -96462,6 +97246,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CHARM",
       "MOVE_FAKE_TEARS",
       "MOVE_PROTECT",
@@ -96581,6 +97366,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -96718,6 +97504,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_MUD_SLAP",
@@ -96880,6 +97667,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_SCARY_FACE",
@@ -97028,6 +97816,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_SCARY_FACE",
@@ -97144,6 +97933,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_CHARM",
       "MOVE_PROTECT",
@@ -97263,6 +98053,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",
@@ -97447,6 +98238,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -97654,6 +98446,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",
@@ -97801,6 +98594,7 @@
       "MOVE_MOONLIGHT"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAKE_DOWN",
       "MOVE_SCARY_FACE",
       "MOVE_PROTECT",

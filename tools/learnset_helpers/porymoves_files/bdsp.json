@@ -64,6 +64,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
       "MOVE_WORK_UP",
@@ -172,6 +173,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
       "MOVE_WORK_UP",
@@ -292,6 +294,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
@@ -396,6 +399,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_WORK_UP",
@@ -499,6 +503,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_WORK_UP",
@@ -618,6 +623,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
@@ -741,6 +747,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
@@ -849,6 +856,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
@@ -965,6 +973,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -1142,6 +1151,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -1288,6 +1298,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -1382,6 +1393,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -1480,6 +1492,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -1586,6 +1599,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -1674,6 +1688,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -1795,6 +1810,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -1897,6 +1913,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -2000,6 +2017,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -2109,6 +2127,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
       "MOVE_RAIN_DANCE",
@@ -2249,6 +2268,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -2375,6 +2395,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -2514,6 +2535,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -2637,6 +2659,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -2766,6 +2789,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -2875,6 +2899,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
@@ -2976,6 +3001,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
@@ -3089,6 +3115,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -3213,6 +3240,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
@@ -3315,6 +3343,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
@@ -3429,6 +3458,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -3590,6 +3620,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -3746,6 +3777,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -3881,6 +3913,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -3998,6 +4031,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -4134,6 +4168,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -4280,6 +4315,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -4397,6 +4433,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_PROTECT",
@@ -4498,6 +4535,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_HYPER_BEAM",
@@ -4601,6 +4639,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -4699,6 +4738,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -4811,6 +4851,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -4906,6 +4947,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
@@ -5019,6 +5061,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -5127,6 +5170,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
       "MOVE_GIGA_DRAIN",
@@ -5249,6 +5293,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -5343,6 +5388,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -5455,6 +5501,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -5554,6 +5601,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -5669,6 +5717,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
@@ -5783,6 +5832,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -5898,6 +5948,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -6030,6 +6081,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -6167,6 +6219,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -6287,6 +6340,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -6409,6 +6463,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -6505,6 +6560,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -6588,6 +6644,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
@@ -6697,6 +6754,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
@@ -6758,6 +6816,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -6876,6 +6935,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -6990,6 +7050,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -7112,6 +7173,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -7227,6 +7289,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -7346,6 +7409,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -7456,6 +7520,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -7561,6 +7626,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -7686,6 +7752,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -7789,6 +7856,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -7896,6 +7964,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -8009,6 +8078,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -8123,6 +8193,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -8245,6 +8316,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -8347,6 +8419,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
       "MOVE_SOLAR_BEAM",
@@ -8457,6 +8530,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -8567,6 +8641,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_HAIL",
@@ -8695,6 +8770,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -8822,6 +8898,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -8927,6 +9004,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -9022,6 +9100,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -9135,6 +9214,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -9246,6 +9326,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -9354,6 +9435,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -9490,6 +9572,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -9601,6 +9684,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_PROTECT",
@@ -9734,6 +9818,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -9850,6 +9935,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -9964,6 +10050,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -10063,6 +10150,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -10180,6 +10268,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -10303,6 +10392,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
@@ -10440,6 +10530,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -10559,6 +10650,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -10700,6 +10792,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -10812,6 +10905,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -10927,6 +11021,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -11048,6 +11143,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAUNT",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -11155,6 +11251,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TAUNT",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -11240,6 +11337,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
@@ -11367,6 +11465,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -11478,6 +11577,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
@@ -11586,6 +11686,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
@@ -11718,6 +11819,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -11853,6 +11955,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -11948,6 +12051,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -12071,6 +12175,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -12193,6 +12298,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -12301,6 +12407,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
@@ -12424,6 +12531,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -12577,6 +12685,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -12711,6 +12820,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -12817,6 +12927,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -12937,6 +13048,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -13028,6 +13140,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -13117,6 +13230,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -13203,6 +13317,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -13307,6 +13422,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -13409,6 +13525,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -13538,6 +13655,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -13660,6 +13778,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -13764,6 +13883,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -13878,6 +13998,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -13985,6 +14106,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -14093,6 +14215,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_SUNNY_DAY",
@@ -14200,6 +14323,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -14344,6 +14468,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_HAIL",
@@ -14452,6 +14577,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_HAIL",
@@ -14579,6 +14705,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -14716,6 +14843,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_HAIL",
@@ -14866,6 +14994,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -15012,6 +15141,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -15114,6 +15244,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
       "MOVE_BLIZZARD",
@@ -15209,6 +15340,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -15322,6 +15454,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -15431,6 +15564,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -15553,6 +15687,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -15666,6 +15801,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -15828,6 +15964,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -15952,6 +16089,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_HAIL",
@@ -16053,6 +16191,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_HAIL",
       "MOVE_SUNNY_DAY",
@@ -16157,6 +16296,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -16250,6 +16390,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_SUNNY_DAY",
@@ -16355,6 +16496,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_SUNNY_DAY",
@@ -16488,6 +16630,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
@@ -16625,6 +16768,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -16744,6 +16888,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
@@ -16909,6 +17054,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -17018,6 +17164,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -17145,6 +17292,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -17263,6 +17411,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -17371,6 +17520,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
@@ -17500,6 +17650,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
@@ -17623,6 +17774,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
@@ -17742,6 +17894,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
@@ -17872,6 +18025,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
@@ -17992,6 +18146,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -18119,6 +18274,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -18236,6 +18392,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -18346,6 +18503,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -18450,6 +18608,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
@@ -18558,6 +18717,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -18675,6 +18835,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
       "MOVE_GIGA_DRAIN",
@@ -18809,6 +18970,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -18922,6 +19084,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -19024,6 +19187,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -19148,6 +19312,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -19222,6 +19387,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
       "MOVE_RAIN_DANCE",
@@ -19299,6 +19465,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -19386,6 +19553,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -19496,6 +19664,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -19612,6 +19781,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -19718,6 +19888,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
@@ -19828,6 +19999,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -19942,6 +20114,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
       "MOVE_RAIN_DANCE",
@@ -20050,6 +20223,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -20192,6 +20366,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -20312,6 +20487,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -20431,6 +20607,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
@@ -20554,6 +20731,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
@@ -20685,6 +20863,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -20796,6 +20975,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
@@ -20925,6 +21105,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -21056,6 +21237,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -21187,6 +21369,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -21288,6 +21471,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -21407,6 +21591,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
@@ -21530,6 +21715,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -21636,6 +21822,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
       "MOVE_GIGA_DRAIN",
@@ -21727,6 +21914,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_TOXIC",
       "MOVE_HAIL",
@@ -21831,6 +22019,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_TOXIC",
@@ -21990,6 +22179,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -22145,6 +22335,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -22255,6 +22446,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -22386,6 +22578,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -22508,6 +22701,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -22620,6 +22814,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SAFEGUARD"
     ],
     "EggMoves": [],
@@ -22694,6 +22889,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -22807,6 +23003,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -22952,6 +23149,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -23066,6 +23264,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -23186,6 +23385,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_PROTECT",
@@ -23345,6 +23545,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -23460,6 +23661,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -23590,6 +23792,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -23736,6 +23939,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_TOXIC",
       "MOVE_HAIL",
@@ -23858,6 +24062,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -23970,6 +24175,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -24074,6 +24280,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_BULLET_SEED",
@@ -24176,6 +24383,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_HAIL",
@@ -24303,6 +24511,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_ROAR",
       "MOVE_BULK_UP",
@@ -24434,6 +24643,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_ROAR",
       "MOVE_BULK_UP",
@@ -24555,6 +24765,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -24677,6 +24888,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -24778,6 +24990,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -24889,6 +25102,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -24991,6 +25205,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_HAIL",
@@ -25100,6 +25315,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -25221,6 +25437,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -25283,6 +25500,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
@@ -25401,6 +25619,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_BULLET_SEED",
@@ -25509,6 +25728,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -25625,6 +25845,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -25749,6 +25970,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -25860,6 +26082,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -25951,6 +26174,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -26090,6 +26314,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -26203,6 +26428,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
       "MOVE_BLIZZARD",
@@ -26302,6 +26528,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
@@ -26419,6 +26646,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -26539,6 +26767,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -26641,6 +26870,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_HAIL",
@@ -26742,6 +26972,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -26838,6 +27069,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -26932,6 +27164,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -27073,6 +27306,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -27218,6 +27452,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -27338,6 +27573,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -27456,6 +27692,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_ROAR",
@@ -27563,6 +27800,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_HYPER_BEAM",
@@ -27683,6 +27921,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_HYPER_BEAM",
@@ -27815,6 +28054,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
@@ -27946,6 +28186,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_ROAR",
@@ -28064,6 +28305,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -28165,6 +28407,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -28274,6 +28517,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULLET_SEED",
       "MOVE_WORK_UP",
@@ -28405,6 +28649,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULLET_SEED",
       "MOVE_WORK_UP",
@@ -28547,6 +28792,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
@@ -28676,6 +28922,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -28798,6 +29045,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -28935,6 +29183,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_ROAR",
       "MOVE_BULK_UP",
@@ -29059,6 +29308,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_WORK_UP",
@@ -29183,6 +29433,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_WORK_UP",
@@ -29312,6 +29563,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -29439,6 +29691,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -29586,6 +29839,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -29688,6 +29942,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -29810,6 +30065,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
@@ -29977,6 +30233,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -30103,6 +30360,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -30191,6 +30449,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_BULLET_SEED",
@@ -30307,6 +30566,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_BULLET_SEED",
@@ -30429,6 +30689,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
@@ -30536,6 +30797,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -30664,6 +30926,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -30817,6 +31080,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -30931,6 +31195,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -31039,6 +31304,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -31121,6 +31387,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -31241,6 +31508,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -31350,6 +31618,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -31465,6 +31734,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -31604,6 +31874,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -31707,6 +31978,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
@@ -31847,6 +32119,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
@@ -31947,6 +32220,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -32075,6 +32349,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_BULLET_SEED",
@@ -32171,6 +32446,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_BULK_UP",
@@ -32307,6 +32583,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -32474,6 +32751,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -32575,6 +32853,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
       "MOVE_GIGA_DRAIN",
@@ -32702,6 +32981,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -32812,6 +33092,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -32901,6 +33182,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
@@ -32999,6 +33281,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
@@ -33131,6 +33414,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
@@ -33257,6 +33541,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -33384,6 +33669,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -33468,6 +33754,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_WORK_UP",
@@ -33576,6 +33863,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_PROTECT",
@@ -33687,6 +33975,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_WORK_UP",
@@ -33809,6 +34098,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_WORK_UP",
@@ -33939,6 +34229,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -34063,6 +34354,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -34193,6 +34485,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -34310,6 +34603,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -34428,6 +34722,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
@@ -34569,6 +34864,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_BULK_UP",
@@ -34716,6 +35012,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_BULK_UP",
@@ -34826,6 +35123,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -34933,6 +35231,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -35067,6 +35366,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
       "MOVE_RAIN_DANCE",
@@ -35191,6 +35491,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
       "MOVE_RAIN_DANCE",
@@ -35294,6 +35595,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_SUNNY_DAY",
@@ -35405,6 +35707,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_SUNNY_DAY",
@@ -35525,6 +35828,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -35636,6 +35940,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
@@ -35769,6 +36074,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
@@ -35866,6 +36172,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_TAUNT",
@@ -35970,6 +36277,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_HAIL",
@@ -36084,6 +36392,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_HAIL",
@@ -36204,6 +36513,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_HAIL",
@@ -36314,6 +36624,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
       "MOVE_EARTHQUAKE",
@@ -36454,6 +36765,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -36582,6 +36894,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -36689,6 +37002,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -36810,6 +37124,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -36921,6 +37236,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -37034,6 +37350,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -37166,6 +37483,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -37323,6 +37641,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -37447,6 +37766,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -37590,6 +37910,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -37697,6 +38018,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
       "MOVE_PROTECT",
@@ -37813,6 +38135,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -37933,6 +38256,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -38081,6 +38405,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_PROTECT",
@@ -38191,6 +38516,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -38303,6 +38629,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -38398,6 +38725,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -38503,6 +38831,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -38610,6 +38939,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_TAUNT",
@@ -38731,6 +39061,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_TAUNT",
@@ -38858,6 +39189,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
@@ -38984,6 +39316,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
@@ -39096,6 +39429,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -39200,6 +39534,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -39300,6 +39635,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -39395,6 +39731,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -39459,6 +39796,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -39577,6 +39915,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -39673,6 +40012,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_WORK_UP",
@@ -39798,6 +40138,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -39925,6 +40266,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -40054,6 +40396,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -40159,6 +40502,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -40284,6 +40628,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -40407,6 +40752,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -40543,6 +40889,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -40645,6 +40992,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_HAIL",
@@ -40750,6 +41098,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SAFEGUARD"
     ],
     "EggMoves": [],
@@ -40816,6 +41165,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -40922,6 +41272,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_TAUNT",
@@ -41030,6 +41381,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -41141,6 +41493,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_HAIL",
@@ -41257,6 +41610,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_HAIL",
@@ -41321,6 +41675,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -41426,6 +41781,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -41534,6 +41890,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -41625,6 +41982,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_HAIL",
@@ -41743,6 +42101,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -41831,6 +42190,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -41934,6 +42294,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -42045,6 +42406,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -42174,6 +42536,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -42281,6 +42644,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -42385,6 +42749,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -42491,6 +42856,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -42604,6 +42970,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -42718,6 +43085,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -42844,6 +43212,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -42958,6 +43327,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_ROAR",
@@ -43058,6 +43428,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
       "MOVE_BULK_UP",
@@ -43172,6 +43543,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -43296,6 +43668,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -43401,6 +43774,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -43516,6 +43890,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -43630,6 +44005,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -43760,6 +44136,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_BULLET_SEED",
       "MOVE_WORK_UP",
@@ -43882,6 +44259,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -44020,6 +44398,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_BULK_UP",
       "MOVE_WORK_UP",
@@ -44178,6 +44557,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_ROAR",
@@ -44302,6 +44682,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_WORK_UP",
@@ -44420,6 +44801,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_WORK_UP",
@@ -44549,6 +44931,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_HAIL",
@@ -44663,6 +45046,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -44753,6 +45137,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -44855,6 +45240,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -44951,6 +45337,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -45066,6 +45453,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -45220,6 +45608,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_HYPER_BEAM",
@@ -45309,6 +45698,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -45411,6 +45801,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -45517,6 +45908,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -45581,6 +45973,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -45701,6 +46094,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
@@ -45797,6 +46191,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
@@ -45910,6 +46305,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -46023,6 +46419,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -46143,6 +46540,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -46218,6 +46616,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PROTECT"
     ],
     "EggMoves": [],
@@ -46304,6 +46703,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -46413,6 +46813,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -46467,6 +46868,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BUG_BUZZ"
     ],
     "EggMoves": [],
@@ -46557,6 +46959,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -46651,6 +47054,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
       "MOVE_RAIN_DANCE",
@@ -46752,6 +47156,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
@@ -46871,6 +47276,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
@@ -46969,6 +47375,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -47071,6 +47478,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -47159,6 +47567,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -47244,6 +47653,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -47367,6 +47777,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -47488,6 +47899,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -47610,6 +48022,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -47723,6 +48136,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -47851,6 +48265,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -47982,6 +48397,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -48117,6 +48533,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -48227,6 +48644,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
@@ -48351,6 +48769,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_WORK_UP",
@@ -48435,6 +48854,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -48551,6 +48971,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
@@ -48678,6 +49099,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
@@ -48785,6 +49207,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
@@ -48901,6 +49324,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -49002,6 +49426,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_PROTECT",
@@ -49108,6 +49533,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -49202,6 +49628,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_WORK_UP",
@@ -49323,6 +49750,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WORK_UP",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -49418,6 +49846,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -49514,6 +49943,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -49620,6 +50050,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -49734,6 +50165,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -49860,6 +50292,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -49981,6 +50414,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_ROAR",
       "MOVE_BULK_UP",
@@ -50156,6 +50590,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -50286,6 +50721,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -50399,6 +50835,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -50515,6 +50952,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -50651,6 +51089,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_TOXIC",
       "MOVE_SUNNY_DAY",
@@ -50767,6 +51206,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_TOXIC",
       "MOVE_BULK_UP",
@@ -50881,6 +51321,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_TOXIC",
       "MOVE_BULK_UP",
@@ -51000,6 +51441,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -51100,6 +51542,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -51216,6 +51659,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -51318,6 +51762,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -51407,6 +51852,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_BULLET_SEED",
@@ -51511,6 +51957,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
@@ -51644,6 +52091,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_HAIL",
@@ -51787,6 +52235,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -51870,6 +52319,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -52000,6 +52450,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
@@ -52138,6 +52589,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -52259,6 +52711,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_TAUNT",
       "MOVE_HYPER_BEAM",
@@ -52374,6 +52827,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -52518,6 +52972,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_WORK_UP",
@@ -52673,6 +53128,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -52815,6 +53271,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_BULLET_SEED",
       "MOVE_WORK_UP",
@@ -52962,6 +53419,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_ROAR",
       "MOVE_HAIL",
@@ -53109,6 +53567,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_HYPER_BEAM",
@@ -53242,6 +53701,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -53365,6 +53825,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
       "MOVE_BLIZZARD",
@@ -53530,6 +53991,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_BULK_UP",
@@ -53716,6 +54178,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_HYPER_BEAM",
@@ -53842,6 +54305,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -53986,6 +54450,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_TAUNT",
@@ -54091,6 +54556,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -54178,6 +54644,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -54281,6 +54748,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -54384,6 +54852,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -54491,6 +54960,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_ROAR",
       "MOVE_BULK_UP",
@@ -54598,6 +55068,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
@@ -54712,6 +55183,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ROAR",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
@@ -54816,6 +55288,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -54916,6 +55389,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_CALM_MIND",
       "MOVE_ROAR",
@@ -55026,6 +55500,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
       "MOVE_ICE_BEAM",
@@ -55106,6 +55581,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_HAIL",
       "MOVE_ICE_BEAM",
@@ -55186,6 +55662,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
       "MOVE_HAIL",
@@ -55276,6 +55753,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_CALM_MIND",
       "MOVE_SUNNY_DAY",
@@ -55383,6 +55861,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
@@ -55462,6 +55941,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DRAGON_CLAW",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -55604,6 +56084,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -55731,6 +56212,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -55850,6 +56332,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FOCUS_PUNCH",
       "MOVE_WATER_PULSE",
       "MOVE_CALM_MIND",
@@ -55989,6 +56472,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -56108,6 +56592,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_PROTECT",
@@ -56197,6 +56682,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -56284,6 +56770,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -56371,6 +56858,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -56458,6 +56946,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -56545,6 +57034,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SUNNY_DAY",
       "MOVE_LIGHT_SCREEN",
       "MOVE_PROTECT",
@@ -56628,6 +57118,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BULLET_SEED",
       "MOVE_SUNNY_DAY",
       "MOVE_HYPER_BEAM",

@@ -97,7 +97,7 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_TERRARIUM_ACCESS                    0x54  // Access Terrarium Flag
+#define FLAG_TERRARIUM_ACCESS                0x54  // Access Terrarium Flag
 #define FLAG_UNUSED_0x055                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
@@ -1569,10 +1569,10 @@
 #define FLAG_UNUSED_0x920                           (DAILY_FLAGS_START + 0x0)  // Unused Flag
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
-#define FLAG_UNUSED_0x923                           (DAILY_FLAGS_START + 0x3)  // Unused Flag
-#define FLAG_UNUSED_0x924                           (DAILY_FLAGS_START + 0x4)  // Unused Flag
-#define FLAG_UNUSED_0x925                           (DAILY_FLAGS_START + 0x5)  // Unused Flag
-#define FLAG_UNUSED_0x926                           (DAILY_FLAGS_START + 0x6)  // Unused Flag
+#define FLAG_HAS_ADPOTED_PKMN                       (DAILY_FLAGS_START + 0x3)  // Pokémon Adopted Flag
+#define FLAG_ADOPTED_PKMN_ONE                       (DAILY_FLAGS_START + 0x4)  // 1st Pokémon Adopted Flag
+#define FLAG_ADOPTED_PKMN_TWO                       (DAILY_FLAGS_START + 0x5)  // 2nd Pokémon Adopted Flag
+#define FLAG_ADOPTED_PKMN_THREE                     (DAILY_FLAGS_START + 0x6)  // 3rd Pokémon Adopted Flag
 #define FLAG_UNUSED_0x927                           (DAILY_FLAGS_START + 0x7)  // Unused Flag
 #define FLAG_UNUSED_0x928                           (DAILY_FLAGS_START + 0x8)  // Unused Flag
 #define FLAG_UNUSED_0x929                           (DAILY_FLAGS_START + 0x9)  // Unused Flag

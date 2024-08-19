@@ -14,6 +14,7 @@
         "MOVE_SEISMIC_TOSS",
         "MOVE_SUBSTITUTE",
         "MOVE_SWAGGER",
+        "MOVE_FINAL_BLOW",
         "MOVE_THUNDER_WAVE"
       ]
     }

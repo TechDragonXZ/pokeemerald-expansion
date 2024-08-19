@@ -40,6 +40,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -104,6 +105,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -172,6 +174,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -229,6 +232,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_SWORDS_DANCE",
       "MOVE_MEGA_KICK",
@@ -298,6 +302,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_SWORDS_DANCE",
       "MOVE_MEGA_KICK",
@@ -371,6 +376,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_SWORDS_DANCE",
       "MOVE_MEGA_KICK",
@@ -439,6 +445,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -508,6 +515,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -581,6 +589,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -684,6 +693,7 @@
       "MOVE_TACKLE"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -775,6 +785,7 @@
       "MOVE_STRING_SHOT"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
@@ -828,6 +839,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -884,6 +896,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -944,6 +957,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -993,6 +1007,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -1048,6 +1063,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -1105,6 +1121,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -1160,6 +1177,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -1212,6 +1230,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -1270,6 +1289,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -1325,6 +1345,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -1373,6 +1394,7 @@
       "MOVE_THUNDER"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -1429,6 +1451,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -1487,6 +1510,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -1550,6 +1574,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -1610,6 +1635,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -1671,6 +1697,7 @@
       "MOVE_GROWL"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -1744,6 +1771,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -1805,6 +1833,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -1867,6 +1896,7 @@
       "MOVE_LEER"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -1940,6 +1970,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -2003,6 +2034,7 @@
       "MOVE_POUND"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -2074,6 +2106,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -2118,6 +2151,7 @@
       "MOVE_FLAMETHROWER"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -2175,6 +2209,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -2237,6 +2272,7 @@
       "MOVE_REST"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -2303,6 +2339,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -2357,6 +2394,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -2408,6 +2446,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
@@ -2467,6 +2506,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
@@ -2521,6 +2561,7 @@
       "MOVE_SOLAR_BEAM"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -2570,6 +2611,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -2628,6 +2670,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -2687,6 +2730,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -2750,6 +2794,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -2802,6 +2847,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -2857,6 +2903,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -2909,6 +2956,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -2971,6 +3019,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -3022,6 +3071,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3088,6 +3138,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3151,6 +3202,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3220,6 +3272,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3282,6 +3335,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -3327,6 +3381,7 @@
       "MOVE_FLAMETHROWER"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -3382,6 +3437,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -3445,6 +3501,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3509,6 +3566,7 @@
       "MOVE_HYDRO_PUMP"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3550,6 +3608,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3619,6 +3678,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3689,6 +3749,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3748,6 +3809,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3812,6 +3874,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3876,6 +3939,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -3945,6 +4009,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
@@ -4008,6 +4073,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
@@ -4063,6 +4129,7 @@
       "MOVE_VINE_WHIP"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -4124,6 +4191,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
@@ -4196,6 +4264,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
@@ -4253,6 +4322,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -4317,6 +4387,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -4381,6 +4452,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -4443,6 +4515,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -4507,6 +4580,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -4560,6 +4634,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -4639,6 +4714,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -4712,6 +4788,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -4773,6 +4850,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -4827,6 +4905,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_SWORDS_DANCE",
       "MOVE_WHIRLWIND",
@@ -4882,6 +4961,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -4943,6 +5023,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -4993,6 +5074,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -5053,6 +5135,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -5114,6 +5197,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_RAGE",
@@ -5173,6 +5257,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_HYPER_BEAM",
@@ -5225,6 +5310,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -5278,6 +5364,7 @@
       "MOVE_TACKLE"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -5328,6 +5415,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_RAGE",
       "MOVE_MEGA_DRAIN",
@@ -5372,6 +5460,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_RAGE",
       "MOVE_MEGA_DRAIN",
@@ -5416,6 +5505,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -5480,6 +5570,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -5539,6 +5630,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -5613,6 +5705,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -5676,6 +5769,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -5735,6 +5829,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -5791,6 +5886,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_RAGE",
@@ -5849,6 +5945,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_HYPER_BEAM",
@@ -5909,6 +6006,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -5953,6 +6051,7 @@
       "MOVE_STUN_SPORE"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -6010,6 +6109,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -6080,6 +6180,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -6143,6 +6244,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -6199,6 +6301,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -6255,6 +6358,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_SWORDS_DANCE",
       "MOVE_MEGA_KICK",
@@ -6322,6 +6426,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_RAGE",
       "MOVE_THUNDERBOLT",
@@ -6375,6 +6480,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HYPER_BEAM",
       "MOVE_RAGE",
@@ -6425,6 +6531,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -6494,6 +6601,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -6567,6 +6675,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -6644,6 +6753,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -6697,6 +6807,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -6759,6 +6870,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -6812,6 +6924,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -6870,6 +6983,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_TAKE_DOWN",
@@ -6932,6 +7046,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_TAKE_DOWN",
@@ -6991,6 +7106,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -7043,6 +7159,7 @@
       "MOVE_SWIFT"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -7106,6 +7223,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -7170,6 +7288,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
@@ -7225,6 +7344,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -7288,6 +7408,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -7353,6 +7474,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -7413,6 +7535,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SWORDS_DANCE",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
@@ -7462,6 +7585,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -7547,6 +7671,7 @@
       "MOVE_TACKLE"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -7611,6 +7736,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -7682,6 +7808,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -7754,6 +7881,7 @@
       "MOVE_TAKE_DOWN"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -7833,6 +7961,7 @@
       "MOVE_TAKE_DOWN"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -7910,6 +8039,7 @@
       "MOVE_TAKE_DOWN"
     ],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -7962,6 +8092,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_TAKE_DOWN",
       "MOVE_DOUBLE_EDGE",
@@ -8018,6 +8149,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -8071,6 +8203,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -8125,6 +8258,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -8178,6 +8312,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_SWORDS_DANCE",
       "MOVE_MEGA_KICK",
@@ -8234,6 +8369,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -8289,6 +8425,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -8354,6 +8491,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -8403,6 +8541,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -8452,6 +8591,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_WHIRLWIND",
       "MOVE_TOXIC",
@@ -8506,6 +8646,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_BODY_SLAM",
       "MOVE_TAKE_DOWN",
@@ -8570,6 +8711,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
       "MOVE_BODY_SLAM",
@@ -8639,6 +8781,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_RAZOR_WIND",
       "MOVE_TOXIC",
       "MOVE_HORN_DRILL",
@@ -8711,6 +8854,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_TOXIC",
@@ -8776,6 +8920,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_RAZOR_WIND",
       "MOVE_SWORDS_DANCE",

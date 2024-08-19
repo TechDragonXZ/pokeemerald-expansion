@@ -11157,12 +11157,15 @@ const struct Item gItemsInfo[] =
     {
         .name = _("TM51"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "The user gathers all of\n"
+            "all of their power\n"
+            "and attacks."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_FINAL_BLOW,
     },
 
     [ITEM_TM52] =
@@ -12890,7 +12893,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Silph Co's scope\n"
             "makes unseeable\n"
-            "POKéMON visible."),
+            "Pokémon visible."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

@@ -7573,9 +7573,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "A kick with a high critical-\n"
             "hit ratio. May cause a burn."),
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_TWO_TYPED_MOVE,
         .power = 85,
         .type = TYPE_FIRE,
+        .argument = TYPE_FIGHTING,
         .accuracy = 90,
         .criticalHitStage = 1,
         .pp = 10,
@@ -8343,9 +8344,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "Attacks with muddy water.\n"
             "May lower accuracy."),
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_TWO_TYPED_MOVE,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 90 : 95,
         .type = TYPE_WATER,
+        .argument = TYPE_GROUND,
         .accuracy = 85,
         .pp = 10,
         .target = MOVE_TARGET_BOTH,
@@ -16490,7 +16492,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Hits with a high-speed\n"
             "rock that always goes first."),
         .effect = EFFECT_HIT,
-        .power = 40,
+        .power = 60,
         .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 20,
@@ -22013,6 +22015,132 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .argument = MAX_EFFECT_BYPASS_PROTECT, //EFFECT TODO
         .battleAnimScript = Move_G_MAX_RAPID_FLOW,
+    },
+
+// Custom Moves
+
+    [MOVE_DRAKE_SWARM] =
+    {
+        .name = COMPOUND_STRING("Drake Swarm"),
+        .description = COMPOUND_STRING(
+            "This attack does Dragon\n"
+            "and Bug-type damage."),
+        .effect = EFFECT_TWO_TYPED_MOVE,
+        .power = 85,
+        .type = TYPE_DRAGON,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .zMove = { .powerOverride = 170 },
+        .argument = TYPE_BUG,
+        .makesContact = TRUE,
+        .minimizeDoubleDamage = TRUE,
+        .gravityBanned = TRUE,
+        .skyBattleBanned = FALSE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_INFESTATION,
+    },
+
+    [MOVE_LEAF_SCALE] =
+    {
+        .name = COMPOUND_STRING("Leaf Scale"),
+        .description = COMPOUND_STRING(
+            "Slashes a sharp scaley leaf.\n"
+            "Does Grass and Dragon type damage."),
+        .effect = EFFECT_TWO_TYPED_MOVE,
+        .power = 90,
+        .type = TYPE_GRASS,
+        .argument = TYPE_DRAGON,
+        .accuracy = 100,
+        .criticalHitStage = 1,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .slicingMove = TRUE,
+        .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_LEAF_BLADE,
+    },
+
+    [MOVE_FINAL_BLOW] =
+    {
+        .name = COMPOUND_STRING("Final Blow"),
+        .description = COMPOUND_STRING(
+            "The user gathers all of\n"
+            "their power and attacks."),
+        .effect = EFFECT_EXPLOSION,
+        .power = 500,
+        .type = TYPE_STELLAR,
+        .accuracy = 50,
+        .pp = 1,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .alwaysCriticalHit = TRUE,
+        .contestEffect = CONTEST_EFFECT_GREAT_APPEAL_BUT_NO_MORE_MOVES,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_MEGA_PUNCH,
+    },
+
+    [MOVE_MYSTIC_SLASH] =
+    {
+        .name = COMPOUND_STRING("Mystic Slash"),
+        .description = COMPOUND_STRING(
+            "Hits as soon as possible.\n"
+            "High critical-hit ratio."),
+        .effect = EFFECT_HIT,
+        .power = 70,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .criticalHitStage = 1,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .slicingMove = TRUE,
+        .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_NIGHT_SLASH,
+    },
+
+    [MOVE_DISASTER_BLADE] =
+    {
+        .name = COMPOUND_STRING("Disaster Blade"),
+        .description = COMPOUND_STRING(
+            "Hits as soon as possible.\n"
+            "High critical-hit ratio."),
+        .effect = EFFECT_TWO_TYPED_MOVE,
+        .power = 70,
+        .type = TYPE_DARK,
+        .argument = TYPE_FAIRY,
+        .accuracy = 100,
+        .criticalHitStage = 1,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .slicingMove = TRUE,
+        .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_NIGHT_SLASH,
     },
 
 };

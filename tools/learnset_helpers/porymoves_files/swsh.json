@@ -64,6 +64,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MAGICAL_LEAF",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -175,6 +176,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MAGICAL_LEAF",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -298,6 +300,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -406,6 +409,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -518,6 +522,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -646,6 +651,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -785,6 +791,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -904,6 +911,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -1031,6 +1039,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -1121,6 +1130,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ELECTROWEB"
     ],
     "EggMoves": [],
@@ -1139,6 +1149,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ELECTROWEB",
       "MOVE_IRON_DEFENSE"
     ],
@@ -1226,6 +1237,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -1350,6 +1362,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -1499,6 +1512,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -1633,6 +1647,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
@@ -1759,6 +1774,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -1872,6 +1888,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -1972,6 +1989,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -2081,6 +2099,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -2223,6 +2242,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -2327,6 +2347,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -2440,6 +2461,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -2622,6 +2644,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -2795,6 +2818,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -2947,6 +2971,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FIRE_SPIN",
       "MOVE_DIG",
       "MOVE_SAFEGUARD",
@@ -3071,6 +3096,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -3216,6 +3242,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -3377,6 +3404,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -3511,6 +3539,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -3620,6 +3649,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -3732,6 +3762,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -3832,6 +3863,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -3946,6 +3978,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -4051,6 +4084,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -4165,6 +4199,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -4270,6 +4305,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_DIG",
       "MOVE_SCREECH",
@@ -4390,6 +4426,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -4509,6 +4546,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -4632,6 +4670,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -4764,6 +4803,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FIRE_SPIN",
       "MOVE_DIG",
       "MOVE_SAFEGUARD",
@@ -4890,6 +4930,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -4995,6 +5036,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -5085,6 +5127,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -5202,6 +5245,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -5279,6 +5323,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -5401,6 +5446,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -5523,6 +5569,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -5655,6 +5702,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -5778,6 +5826,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -5906,6 +5955,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -6035,6 +6085,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCREECH",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
@@ -6151,6 +6202,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SCREECH",
@@ -6264,6 +6316,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_SOLAR_BLADE",
       "MOVE_FIRE_SPIN",
@@ -6383,6 +6436,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -6508,6 +6562,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
@@ -6646,6 +6701,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -6788,6 +6844,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_SCREECH",
       "MOVE_LIGHT_SCREEN",
@@ -6896,6 +6953,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -6996,6 +7054,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_SOLAR_BLADE",
       "MOVE_REST",
@@ -7112,6 +7171,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCREECH",
       "MOVE_SELF_DESTRUCT",
       "MOVE_REST",
@@ -7233,6 +7293,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -7345,6 +7406,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FIRE_PUNCH",
       "MOVE_ICE_PUNCH",
       "MOVE_THUNDER_PUNCH",
@@ -7472,6 +7534,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FIRE_PUNCH",
       "MOVE_ICE_PUNCH",
       "MOVE_THUNDER_PUNCH",
@@ -7606,6 +7669,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -7757,6 +7821,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_SELF_DESTRUCT",
@@ -7873,6 +7938,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -7989,6 +8055,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -8099,6 +8166,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -8224,6 +8292,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -8338,6 +8407,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -8458,6 +8528,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -8602,6 +8673,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_REST",
@@ -8753,6 +8825,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -8863,6 +8936,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -8993,6 +9067,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCREECH",
       "MOVE_SELF_DESTRUCT",
       "MOVE_REST",
@@ -9116,6 +9191,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SCREECH",
@@ -9224,6 +9300,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -9356,6 +9433,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -9533,6 +9611,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -9671,6 +9750,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -9777,6 +9857,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -9905,6 +9986,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -10008,6 +10090,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -10109,6 +10192,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -10207,6 +10291,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -10323,6 +10408,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -10431,6 +10517,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -10573,6 +10660,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -10709,6 +10797,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -10820,6 +10909,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -10953,6 +11043,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -11068,6 +11159,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -11184,6 +11276,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -11294,6 +11387,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -11367,6 +11461,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_BOUNCE",
       "MOVE_HYDRO_PUMP"
     ],
@@ -11458,6 +11553,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -11581,6 +11677,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SAFEGUARD",
@@ -11719,6 +11816,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_DIG",
       "MOVE_REST",
@@ -11864,6 +11962,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -12026,6 +12125,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
@@ -12181,6 +12281,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -12298,6 +12399,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -12401,6 +12503,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_THIEF",
@@ -12522,6 +12625,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -12641,6 +12745,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -12769,6 +12874,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -12894,6 +13000,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -13067,6 +13174,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -13214,6 +13322,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -13316,6 +13425,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -13420,6 +13530,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -13517,6 +13628,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_FIRE_SPIN",
@@ -13630,6 +13742,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_FIRE_SPIN",
@@ -13771,6 +13884,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -13921,6 +14035,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -14063,6 +14178,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -14351,6 +14467,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_SCREECH",
       "MOVE_REFLECT",
@@ -14465,6 +14582,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -14590,6 +14708,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -14703,6 +14822,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -14831,6 +14951,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -14910,6 +15031,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_THUNDER_PUNCH",
@@ -14994,6 +15116,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_MAGICAL_LEAF",
@@ -15087,6 +15210,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_SOLAR_BEAM",
@@ -15204,6 +15328,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_SOLAR_BEAM",
@@ -15333,6 +15458,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FLY",
@@ -15455,6 +15581,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
@@ -15575,6 +15702,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -15707,6 +15835,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -15831,6 +15960,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -15969,6 +16099,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -16120,6 +16251,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -16243,6 +16375,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -16358,6 +16491,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ICE_PUNCH",
       "MOVE_DIG",
       "MOVE_SAFEGUARD",
@@ -16469,6 +16603,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -16637,6 +16772,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -16802,6 +16938,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -16944,6 +17081,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -17074,6 +17212,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SAFEGUARD",
       "MOVE_CHARM",
       "MOVE_AMNESIA",
@@ -17151,6 +17290,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
@@ -17314,6 +17454,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -17461,6 +17602,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_THUNDER_WAVE",
       "MOVE_SELF_DESTRUCT",
@@ -17603,6 +17745,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -17727,6 +17870,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
@@ -17838,6 +17982,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -17952,6 +18097,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -18070,6 +18216,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -18183,6 +18330,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -18290,6 +18438,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_LIGHT_SCREEN",
@@ -18404,6 +18553,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_THUNDER_WAVE",
       "MOVE_SCREECH",
@@ -18530,6 +18680,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -18601,6 +18752,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -18732,6 +18884,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -18855,6 +19008,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -18970,6 +19124,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -19092,6 +19247,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -19155,6 +19311,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_REST",
@@ -19281,6 +19438,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_DIG",
@@ -19396,6 +19554,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -19509,6 +19668,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -19613,6 +19773,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -19714,6 +19875,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -19870,6 +20032,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -20018,6 +20181,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -20144,6 +20308,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -20271,6 +20436,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -20386,6 +20552,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_DIG",
       "MOVE_SCREECH",
@@ -20514,6 +20681,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_DIG",
       "MOVE_SCREECH",
@@ -20654,6 +20822,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -20806,6 +20975,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -20934,6 +21104,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -21041,6 +21212,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -21170,6 +21342,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_THUNDER_PUNCH",
@@ -21307,6 +21480,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_THUNDER_PUNCH",
@@ -21457,6 +21631,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_THUNDER_PUNCH",
@@ -21598,6 +21773,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_SPIN",
@@ -21727,6 +21903,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -21872,6 +22049,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -22012,6 +22190,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -22145,6 +22324,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -22289,6 +22469,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -22426,6 +22607,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
@@ -22553,6 +22735,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -22662,6 +22845,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -22782,6 +22966,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -22917,6 +23102,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -23039,6 +23225,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_DIG",
       "MOVE_SELF_DESTRUCT",
@@ -23171,6 +23358,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
       "MOVE_SOLAR_BEAM",
@@ -23331,6 +23519,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -23452,6 +23641,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -23574,6 +23764,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -23691,6 +23882,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -23822,6 +24014,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -23978,6 +24171,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -24099,6 +24293,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_DIG",
       "MOVE_REST",
@@ -24226,6 +24421,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -24342,6 +24538,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -24436,6 +24633,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -24542,6 +24740,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -24681,6 +24880,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -24786,6 +24986,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -24910,6 +25111,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -25044,6 +25246,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -25186,6 +25389,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -25303,6 +25507,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -25424,6 +25629,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -25566,6 +25772,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REST",
@@ -25673,6 +25880,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -25798,6 +26006,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_MAGICAL_LEAF",
       "MOVE_SOLAR_BEAM",
@@ -25900,6 +26109,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCREECH",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -26022,6 +26232,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SCREECH",
@@ -26152,6 +26363,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SELF_DESTRUCT",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -26279,6 +26491,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SELF_DESTRUCT",
@@ -26410,6 +26623,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -26522,6 +26736,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_SOLAR_BEAM",
       "MOVE_DIG",
@@ -26659,6 +26874,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_SOLAR_BEAM",
@@ -26822,6 +27038,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -26948,6 +27165,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_SOLAR_BEAM",
       "MOVE_SAFEGUARD",
@@ -27064,6 +27282,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -27190,6 +27409,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -27320,6 +27540,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -27434,6 +27655,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -27543,6 +27765,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -27658,6 +27881,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -27780,6 +28004,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -27917,6 +28142,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_DIG",
       "MOVE_LIGHT_SCREEN",
@@ -28055,6 +28281,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -28181,6 +28408,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -28290,6 +28518,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -28396,6 +28625,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -28493,6 +28723,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -28563,6 +28794,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -28688,6 +28920,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -28802,6 +29035,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_THIEF",
       "MOVE_SNORE",
@@ -28933,6 +29167,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -29049,6 +29284,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -29155,6 +29391,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SAFEGUARD",
       "MOVE_CHARM",
       "MOVE_AMNESIA",
@@ -29224,6 +29461,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
@@ -29332,6 +29570,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -29446,6 +29685,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -29561,6 +29801,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -29681,6 +29922,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -29793,6 +30035,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SAFEGUARD",
@@ -29904,6 +30147,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -30010,6 +30254,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -30124,6 +30369,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -30190,6 +30436,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_IRON_DEFENSE",
       "MOVE_ZEN_HEADBUTT",
       "MOVE_IRON_HEAD"
@@ -30268,6 +30515,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ICE_PUNCH",
       "MOVE_THUNDER_PUNCH",
       "MOVE_HYPER_BEAM",
@@ -30388,6 +30636,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ICE_PUNCH",
       "MOVE_THUNDER_PUNCH",
       "MOVE_HYPER_BEAM",
@@ -30508,6 +30757,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -30623,6 +30873,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -30740,6 +30991,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -30862,6 +31114,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -31004,6 +31257,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -31133,6 +31387,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -31238,6 +31493,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -31360,6 +31616,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -31498,6 +31755,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -31627,6 +31885,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REST",
@@ -31733,6 +31992,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REST",
@@ -31843,6 +32103,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -31915,6 +32176,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_SOLAR_BEAM",
       "MOVE_REST",
@@ -32037,6 +32299,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -32107,6 +32370,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SNORE",
       "MOVE_BUG_BUZZ"
     ],
@@ -32200,6 +32464,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -32289,6 +32554,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MAGICAL_LEAF",
       "MOVE_SOLAR_BEAM",
       "MOVE_SAFEGUARD",
@@ -32396,6 +32662,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -32491,6 +32758,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -32583,6 +32851,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -32706,6 +32975,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_SELF_DESTRUCT",
       "MOVE_REST",
@@ -32829,6 +33099,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -32945,6 +33216,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -33082,6 +33354,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -33226,6 +33499,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -33358,6 +33632,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_FIRE_SPIN",
@@ -33471,6 +33746,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -33597,6 +33873,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -33711,6 +33988,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SELF_DESTRUCT",
       "MOVE_REST",
@@ -33822,6 +34100,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
@@ -33915,6 +34194,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
@@ -34017,6 +34297,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -34118,6 +34399,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -34221,6 +34503,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -34332,6 +34615,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -34461,6 +34745,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -34593,6 +34878,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -34775,6 +35061,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -34916,6 +35203,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -35035,6 +35323,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -35163,6 +35452,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_DIG",
       "MOVE_SCREECH",
@@ -35299,6 +35589,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -35425,6 +35716,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -35554,6 +35846,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -35690,6 +35983,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -35785,6 +36079,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_ICE_PUNCH",
       "MOVE_MAGICAL_LEAF",
@@ -35892,6 +36187,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -36030,6 +36326,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -36183,6 +36480,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -36277,6 +36575,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -36414,6 +36713,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -36577,6 +36877,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -36695,6 +36996,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -36821,6 +37123,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -36975,6 +37278,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FLY",
@@ -37153,6 +37457,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -37310,6 +37615,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -37434,6 +37740,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -37565,6 +37872,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -37739,6 +38047,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -37921,6 +38230,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -38075,6 +38385,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ICE_PUNCH",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -38188,6 +38499,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -38286,6 +38598,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FIRE_PUNCH",
       "MOVE_ICE_PUNCH",
       "MOVE_THUNDER_PUNCH",
@@ -38408,6 +38721,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FIRE_PUNCH",
       "MOVE_ICE_PUNCH",
       "MOVE_THUNDER_PUNCH",
@@ -38529,6 +38843,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FIRE_PUNCH",
       "MOVE_ICE_PUNCH",
       "MOVE_THUNDER_PUNCH",
@@ -38654,6 +38969,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -38769,6 +39085,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -38892,6 +39209,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -39009,6 +39327,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -39122,6 +39441,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -39236,6 +39556,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -39359,6 +39680,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -39487,6 +39809,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
@@ -39592,6 +39915,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
@@ -39710,6 +40034,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -39813,6 +40138,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_THUNDER_WAVE",
       "MOVE_SCREECH",
@@ -39916,6 +40242,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -40037,6 +40364,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -40152,6 +40480,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -40259,6 +40588,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -40350,6 +40680,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -40441,6 +40772,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -40536,6 +40868,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -40636,6 +40969,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -40734,6 +41068,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -40836,6 +41171,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
@@ -40955,6 +41291,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -41081,6 +41418,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -41189,6 +41527,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -41310,6 +41649,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -41439,6 +41779,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -41553,6 +41894,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -41669,6 +42011,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -41791,6 +42134,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCREECH",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -41887,6 +42231,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCREECH",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -41998,6 +42343,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -42114,6 +42460,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -42221,6 +42568,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -42328,6 +42676,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_SOLAR_BEAM",
       "MOVE_SCREECH",
@@ -42427,6 +42776,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_SOLAR_BEAM",
       "MOVE_SCREECH",
@@ -42530,6 +42880,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -42655,6 +43006,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
@@ -42786,6 +43138,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -42904,6 +43257,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MAGICAL_LEAF",
       "MOVE_SOLAR_BEAM",
       "MOVE_SAFEGUARD",
@@ -43026,6 +43380,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -43135,6 +43490,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -43247,6 +43603,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -43361,6 +43718,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_DIG",
@@ -43490,6 +43848,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
@@ -43625,6 +43984,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -43743,6 +44103,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -43896,6 +44257,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_SOLAR_BEAM",
       "MOVE_SCREECH",
@@ -43998,6 +44360,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_DIG",
       "MOVE_REST",
@@ -44098,6 +44461,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -44209,6 +44573,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -44340,6 +44705,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -44476,6 +44842,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -44601,6 +44968,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -44719,6 +45087,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SAFEGUARD",
@@ -44841,6 +45210,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -44966,6 +45336,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -45098,6 +45469,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -45224,6 +45596,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -45356,6 +45729,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SELF_DESTRUCT",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -45476,6 +45850,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -45588,6 +45963,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -45715,6 +46091,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
@@ -45841,6 +46218,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
       "MOVE_SAFEGUARD",
@@ -45956,6 +46334,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -46070,6 +46449,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -46186,6 +46566,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -46302,6 +46683,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -46428,6 +46810,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -46544,6 +46927,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -46668,6 +47052,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_FIRE_PUNCH",
       "MOVE_ICE_PUNCH",
@@ -46791,6 +47176,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_SELF_DESTRUCT",
       "MOVE_REST",
@@ -46888,6 +47274,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_SELF_DESTRUCT",
       "MOVE_REST",
@@ -46997,6 +47384,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -47094,6 +47482,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
@@ -47203,6 +47592,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCREECH",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -47325,6 +47715,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SCREECH",
@@ -47433,6 +47824,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -47525,6 +47917,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -47622,6 +48015,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -47736,6 +48130,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SAFEGUARD",
@@ -47849,6 +48244,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_THUNDER_WAVE",
       "MOVE_SCREECH",
@@ -47962,6 +48358,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -48063,6 +48460,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_SOLAR_BEAM",
       "MOVE_THUNDER_WAVE",
@@ -48166,6 +48564,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -48281,6 +48680,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_THUNDER_WAVE",
       "MOVE_SCREECH",
@@ -48370,6 +48770,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_THUNDER_WAVE",
       "MOVE_SCREECH",
@@ -48472,6 +48873,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -48562,6 +48964,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_SCREECH",
       "MOVE_LIGHT_SCREEN",
@@ -48675,6 +49078,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -48802,6 +49206,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_FIRE_SPIN",
       "MOVE_SAFEGUARD",
@@ -48916,6 +49321,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_FIRE_SPIN",
       "MOVE_SAFEGUARD",
@@ -49030,6 +49436,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -49154,6 +49561,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
       "MOVE_REST",
@@ -49278,6 +49686,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
       "MOVE_REST",
@@ -49405,6 +49814,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -49536,6 +49946,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -49665,6 +50076,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -49807,6 +50219,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -49898,6 +50311,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -50025,6 +50439,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -50135,6 +50550,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
       "MOVE_REST",
@@ -50245,6 +50661,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_DIG",
@@ -50367,6 +50784,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
@@ -50486,6 +50904,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_FIRE_PUNCH",
       "MOVE_THUNDER_PUNCH",
@@ -50618,6 +51037,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -50746,6 +51166,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -50877,6 +51298,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
       "MOVE_SCREECH",
@@ -50998,6 +51420,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -51113,6 +51536,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -51232,6 +51656,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -51342,6 +51767,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -51443,6 +51869,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -51563,6 +51990,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -51677,6 +52105,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FIRE_PUNCH",
       "MOVE_THUNDER_PUNCH",
       "MOVE_GIGA_IMPACT",
@@ -51797,6 +52226,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
@@ -51915,6 +52345,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -52036,6 +52467,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -52167,6 +52599,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -52300,6 +52733,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_SCREECH",
       "MOVE_LIGHT_SCREEN",
@@ -52437,6 +52871,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -52546,6 +52981,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -52656,6 +53092,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REFLECT",
@@ -52767,6 +53204,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -52887,6 +53325,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -53006,6 +53445,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_PUNCH",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
@@ -53128,6 +53568,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -53253,6 +53694,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_PUNCH",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
@@ -53384,6 +53826,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -53497,6 +53940,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -53618,6 +54062,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REFLECT",
@@ -53734,6 +54179,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -53847,6 +54293,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -53957,6 +54404,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -54071,6 +54519,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -54169,6 +54618,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_FIRE_SPIN",
       "MOVE_REST",
@@ -54274,6 +54724,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -54374,6 +54825,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -54508,6 +54960,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -54633,6 +55086,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
@@ -54760,6 +55214,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -54876,6 +55331,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BLADE",
       "MOVE_SCREECH",
       "MOVE_REFLECT",
@@ -54974,6 +55430,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BLADE",
       "MOVE_SCREECH",
       "MOVE_REFLECT",
@@ -55084,6 +55541,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BLADE",
@@ -55191,6 +55649,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
       "MOVE_REST",
@@ -55308,6 +55767,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -55419,6 +55879,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
@@ -55526,6 +55987,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -55634,6 +56096,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
       "MOVE_REST",
@@ -55750,6 +56213,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -55861,6 +56325,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_SAFEGUARD",
@@ -55981,6 +56446,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -56107,6 +56573,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -56210,6 +56677,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -56314,6 +56782,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -56423,6 +56892,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -56526,6 +56996,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
       "MOVE_LIGHT_SCREEN",
@@ -56635,6 +57106,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -56756,6 +57228,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -56883,6 +57356,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -57015,6 +57489,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
@@ -57139,6 +57614,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -57300,6 +57776,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -57425,6 +57902,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -57561,6 +58039,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_PUNCH",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -57666,6 +58145,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
       "MOVE_SAFEGUARD",
@@ -57761,6 +58241,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -57853,6 +58334,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -57967,6 +58449,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -58088,6 +58571,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -58194,6 +58678,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MAGICAL_LEAF",
       "MOVE_SOLAR_BEAM",
       "MOVE_DIG",
@@ -58316,6 +58801,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -58443,6 +58929,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
       "MOVE_SAFEGUARD",
@@ -58573,6 +59060,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -58698,6 +59186,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -58817,6 +59306,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SAFEGUARD",
@@ -58928,6 +59418,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_SOLAR_BEAM",
       "MOVE_SCREECH",
@@ -59055,6 +59546,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -59188,6 +59680,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -59314,6 +59807,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -59434,6 +59928,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -59547,6 +60042,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -59678,6 +60174,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -59794,6 +60291,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
       "MOVE_SAFEGUARD",
@@ -59895,6 +60393,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
       "MOVE_SAFEGUARD",
@@ -60020,6 +60519,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -60138,6 +60638,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_FIRE_SPIN",
       "MOVE_REST",
@@ -60242,6 +60743,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_FIRE_SPIN",
       "MOVE_REST",
@@ -60366,6 +60868,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -60501,6 +61004,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -60608,6 +61112,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -60723,6 +61228,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -60828,6 +61334,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
       "MOVE_SCREECH",
@@ -60922,6 +61429,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
       "MOVE_SCREECH",
@@ -61043,6 +61551,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -61139,6 +61648,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
       "MOVE_SAFEGUARD",
@@ -61246,6 +61756,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -61358,6 +61869,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -61475,6 +61987,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -61584,6 +62097,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -61677,6 +62191,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
@@ -61780,6 +62295,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_SAFEGUARD",
@@ -61882,6 +62398,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -61977,6 +62494,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -62085,6 +62603,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -62187,6 +62706,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REFLECT",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
@@ -62281,6 +62801,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MAGICAL_LEAF",
       "MOVE_SOLAR_BEAM",
       "MOVE_SAFEGUARD",
@@ -62392,6 +62913,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -62496,6 +63018,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
@@ -62587,6 +63110,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -62687,6 +63211,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -62827,6 +63352,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -62943,6 +63469,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -63055,6 +63582,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -63156,6 +63684,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MAGICAL_LEAF",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -63245,6 +63774,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MAGICAL_LEAF",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -63359,6 +63889,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -63486,6 +64017,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_MAGICAL_LEAF",
       "MOVE_SOLAR_BEAM",
@@ -63596,6 +64128,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
@@ -63717,6 +64250,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
@@ -63799,6 +64333,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCREECH",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -63906,6 +64441,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -64033,6 +64569,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
       "MOVE_SNORE",
@@ -64137,6 +64674,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -64244,6 +64782,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCREECH",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -64326,6 +64865,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -64460,6 +65000,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -64586,6 +65127,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
@@ -64710,6 +65252,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -64830,6 +65373,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -64940,6 +65484,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -65084,6 +65629,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -65195,6 +65741,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SCREECH",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
@@ -65309,6 +65856,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_SCREECH",
@@ -65449,6 +65997,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -65593,6 +66142,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_PUNCH",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
@@ -65715,6 +66265,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -65834,6 +66385,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -65966,6 +66518,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ICE_PUNCH",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -66045,6 +66598,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_COSMIC_POWER"
     ],
     "EggMoves": [],
@@ -66127,6 +66681,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -66269,6 +66824,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -66398,6 +66954,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_SAFEGUARD",
@@ -66513,6 +67070,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_ICE_PUNCH",
       "MOVE_THUNDER_PUNCH",
@@ -66630,6 +67188,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -66741,6 +67300,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_PUNCH",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -66848,6 +67408,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -66962,6 +67523,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BLADE",
       "MOVE_SCREECH",
@@ -67062,6 +67624,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
@@ -67191,6 +67754,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -67325,6 +67889,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -67456,6 +68021,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -67578,6 +68144,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -67681,6 +68248,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
@@ -67808,6 +68376,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -67924,6 +68493,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FIRE_PUNCH",
       "MOVE_HYPER_BEAM",
       "MOVE_SOLAR_BEAM",
@@ -68045,6 +68615,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -68139,6 +68710,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -68227,6 +68799,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -68319,6 +68892,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_MAGICAL_LEAF",
@@ -68423,6 +68997,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_MAGICAL_LEAF",
@@ -68543,6 +69118,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
@@ -68662,6 +69238,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -68756,6 +69333,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -68868,6 +69446,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
       "MOVE_HYPER_BEAM",
@@ -68978,6 +69557,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
       "MOVE_SAFEGUARD",
@@ -69066,6 +69646,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
       "MOVE_SAFEGUARD",
@@ -69171,6 +69752,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -69288,6 +69870,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -69388,6 +69971,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -69484,6 +70068,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -69574,6 +70159,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -69680,6 +70266,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -69786,6 +70373,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -69903,6 +70491,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -70007,6 +70596,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -70104,6 +70694,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -70203,6 +70794,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MAGICAL_LEAF",
       "MOVE_SOLAR_BEAM",
       "MOVE_LIGHT_SCREEN",
@@ -70300,6 +70892,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -70393,6 +70986,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -70476,6 +71070,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -70553,6 +71148,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -70650,6 +71246,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -70765,6 +71362,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
       "MOVE_REST",
@@ -70859,6 +71457,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -70950,6 +71549,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_REFLECT",
       "MOVE_SELF_DESTRUCT",
@@ -71042,6 +71642,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FIRE_SPIN",
       "MOVE_DIG",
       "MOVE_REFLECT",
@@ -71149,6 +71750,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -71218,6 +71820,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ATTRACT"
     ],
     "EggMoves": [
@@ -71308,6 +71911,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -71427,6 +72031,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -71526,6 +72131,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -71616,6 +72222,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -71721,6 +72328,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -71813,6 +72421,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -71901,6 +72510,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -71975,6 +72585,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -72102,6 +72713,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -72210,6 +72822,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FIRE_SPIN",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -72303,6 +72916,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -72396,6 +73010,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_ICE_PUNCH",
       "MOVE_REST",
@@ -72503,6 +73118,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_ICE_PUNCH",
       "MOVE_HYPER_BEAM",
@@ -72609,6 +73225,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -72710,6 +73327,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -72796,6 +73414,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MAGICAL_LEAF",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
@@ -72892,6 +73511,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MAGICAL_LEAF",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
@@ -72997,6 +73617,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -73108,6 +73729,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_THUNDER_WAVE",
@@ -73210,6 +73832,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_THUNDER_WAVE",
@@ -73332,6 +73955,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -73486,6 +74110,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -73633,6 +74258,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -73756,6 +74382,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -73906,6 +74533,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BLADE",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -74080,6 +74708,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -74242,6 +74871,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SAFEGUARD",
@@ -74358,6 +74988,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -74442,6 +75073,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -74549,6 +75181,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SCREECH",
@@ -74652,6 +75285,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_THUNDER_WAVE",
       "MOVE_SELF_DESTRUCT",
@@ -74706,6 +75340,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -74809,6 +75444,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -74911,6 +75547,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -75008,6 +75645,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ICE_PUNCH",
       "MOVE_REFLECT",
       "MOVE_REST",
@@ -75107,6 +75745,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_MAGICAL_LEAF",
       "MOVE_REST",
@@ -75217,6 +75856,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_PUNCH",
       "MOVE_THUNDER_WAVE",
       "MOVE_REST",
@@ -75333,6 +75973,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_DIG",
       "MOVE_SCREECH",
@@ -75447,6 +76088,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -75566,6 +76208,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_THUNDER_PUNCH",
@@ -75674,6 +76317,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_THUNDER_PUNCH",
@@ -75779,6 +76423,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -75882,6 +76527,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -75980,6 +76626,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -76053,6 +76700,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -76157,6 +76805,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_REST",
       "MOVE_THIEF",
@@ -76295,6 +76944,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -76418,6 +77068,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BLADE",
@@ -76528,6 +77179,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -76645,6 +77297,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -76751,6 +77404,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -76867,6 +77521,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -77003,6 +77658,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
@@ -77130,6 +77786,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_THUNDER_WAVE",
@@ -77231,6 +77888,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_LIGHT_SCREEN",
@@ -77323,6 +77981,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -77428,6 +78087,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
@@ -77531,6 +78191,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -77681,6 +78342,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -77820,6 +78482,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ICE_PUNCH",
       "MOVE_DIG",
       "MOVE_SAFEGUARD",
@@ -77962,6 +78625,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_ICE_PUNCH",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
@@ -78091,6 +78755,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
@@ -78216,6 +78881,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -78329,6 +78995,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_REST",
@@ -78449,6 +79116,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -78560,6 +79228,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_DIG",
       "MOVE_SCREECH",
@@ -78684,6 +79353,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -78822,6 +79492,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_MAGICAL_LEAF",
@@ -78970,6 +79641,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -79102,6 +79774,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_DIG",
       "MOVE_SCREECH",
@@ -79215,6 +79888,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_REST",
       "MOVE_SNORE",
       "MOVE_PROTECT",
@@ -79329,6 +80003,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -79458,6 +80133,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
@@ -79607,6 +80283,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -79755,6 +80432,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SOLAR_BLADE",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -79902,6 +80580,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SCREECH",
@@ -80067,6 +80746,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -80216,6 +80896,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -80327,6 +81008,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_KICK",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
@@ -80442,6 +81124,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -80573,6 +81256,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -80714,6 +81398,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_DIG",
       "MOVE_SCREECH",
       "MOVE_LIGHT_SCREEN",
@@ -80837,6 +81522,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
@@ -80971,6 +81657,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PIN_MISSILE",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -81091,6 +81778,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -81216,6 +81904,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -81358,6 +82047,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_SAFEGUARD",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -81468,6 +82158,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_DIG",
       "MOVE_SCREECH",
@@ -81579,6 +82270,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -81677,6 +82369,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -81775,6 +82468,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -81873,6 +82567,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -81971,6 +82666,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_THUNDER_WAVE",
       "MOVE_LIGHT_SCREEN",
       "MOVE_REFLECT",
@@ -82077,6 +82773,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -82198,6 +82895,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -82335,6 +83033,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -82472,6 +83171,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -82630,6 +83330,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_GIGA_IMPACT",
       "MOVE_REST",
       "MOVE_ROCK_SLIDE",
@@ -82788,6 +83489,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -82896,6 +83598,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_MAGICAL_LEAF",
       "MOVE_LIGHT_SCREEN",
@@ -83022,6 +83725,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -83206,6 +83910,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -83417,6 +84122,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FINAL_BLOW",
       "MOVE_PAY_DAY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
