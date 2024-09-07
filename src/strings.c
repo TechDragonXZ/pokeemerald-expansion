@@ -1834,3 +1834,4 @@ const u8 gText_Fertilize[] = _("Fertilize");
 const u8 gText_PlantBerry[] = _("Plant Berry");
 const u8 gText_AM[] = _("AM");
 const u8 gText_PM[] = _("PM");
+const u8 gText_StatEditor[] = _("Edit Stats");
