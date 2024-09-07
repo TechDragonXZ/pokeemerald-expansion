@@ -31,6 +31,7 @@
 #include "text.h"
 #include "util.h"
 #include "window.h"
+#include "config/battle.h"
 #include "constants/battle_anim.h"
 #include "constants/battle_move_effects.h"
 #include "constants/battle_partner.h"
@@ -1716,6 +1717,9 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     u8 type;
     u32 speciesId;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[battler][4]);
+    u32 battlerAtk = battler;
+    u16 move = moveInfo->moves[gMoveSelectionCursor[battler]];;
+    u8 moveType = GetTypeBeforeUsingMove(move, battlerAtk);
 
     txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
 
@@ -1733,6 +1737,17 @@ static void MoveSelectionDisplayMoveType(u32 battler)
         if (speciesId == SPECIES_OGERPON_WELLSPRING_MASK || speciesId == SPECIES_OGERPON_WELLSPRING_MASK_TERA
             || speciesId == SPECIES_OGERPON_HEARTHFLAME_MASK || speciesId == SPECIES_OGERPON_HEARTHFLAME_MASK_TERA
             || speciesId == SPECIES_OGERPON_CORNERSTONE_MASK || speciesId == SPECIES_OGERPON_CORNERSTONE_MASK_TERA)
+            type = gBattleMons[battler].type2;
+        else
+            type = gMovesInfo[MOVE_IVY_CUDGEL].type;
+    }
+    else
+        type = gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
+
+    if (B_DYNAMIC_MOVE_TYPE == TRUE)
+        StringCopy(txtPtr, gTypesInfo[moveType].name);
+    else
+        StringCopy(txtPtr, gTypesInfo[type].name);
             type = gBattleMons[battler].types[1];
     }
     // Max Guard is a Normal-type move

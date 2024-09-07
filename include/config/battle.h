@@ -273,4 +273,8 @@
 #define B_ENEMY_THROW_BALLS_SOUND    GEN_LATEST  // In GEN_5+, enemy Trainer's Poké Balls make a sound when thrown to send out a Pokémon. This can only be used when B_ENEMY_THROW_BALLS is set to GEN_6 or later.
 #define B_PLAYER_THROW_BALLS_SOUND   GEN_LATEST  // In GEN_5+, the player's Poké Balls make a sound when thrown to send out a Pokémon.
 
+// Dynamic move type
+
+#define B_DYNAMIC_MOVE_TYPE             TRUE    // If set to TRUE, shows a move's dynamic type in the summary screen and battle move box.
+
 #endif // GUARD_CONFIG_BATTLE_H
