@@ -5296,14 +5296,110 @@
     {
       "id": "LAYOUT_TERRARIUM_CENTER",
       "name": "Terrarium_Center_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 60,
+      "height": 60,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/Terrarium_Center/border.bin",
       "blockdata_filepath": "data/layouts/Terrarium_Center/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRARIUM_SOUTH",
+      "name": "Terrarium_South_Layout",
+      "width": 60,
+      "height": 60,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Terrarium_South/border.bin",
+      "blockdata_filepath": "data/layouts/Terrarium_South/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRARIUM_NORTH",
+      "name": "Terrarium_North_Layout",
+      "width": 60,
+      "height": 60,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Terrarium_North/border.bin",
+      "blockdata_filepath": "data/layouts/Terrarium_North/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRARIUM_EAST",
+      "name": "Terrarium_East_Layout",
+      "width": 60,
+      "height": 60,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Terrarium_East/border.bin",
+      "blockdata_filepath": "data/layouts/Terrarium_East/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRARIUM_WEST",
+      "name": "Terrarium_West_Layout",
+      "width": 60,
+      "height": 60,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralSnowy",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Terrarium_West/border.bin",
+      "blockdata_filepath": "data/layouts/Terrarium_West/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRARIUM_NORTH_WEST",
+      "name": "Terrarium_NorthWest_Layout",
+      "width": 60,
+      "height": 60,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Terrarium_NorthWest/border.bin",
+      "blockdata_filepath": "data/layouts/Terrarium_NorthWest/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRARIUM_SOUTH_WEST",
+      "name": "Terrarium_SouthWest_Layout",
+      "width": 60,
+      "height": 60,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Terrarium_SouthWest/border.bin",
+      "blockdata_filepath": "data/layouts/Terrarium_SouthWest/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRARIUM_SOUTH_EAST",
+      "name": "Terrarium_SouthEast_Layout",
+      "width": 60,
+      "height": 60,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Terrarium_SouthEast/border.bin",
+      "blockdata_filepath": "data/layouts/Terrarium_SouthEast/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRARIUM_NORTH_EAST",
+      "name": "Terrarium_NorthEast_Layout",
+      "width": 60,
+      "height": 60,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Terrarium_NorthEast/border.bin",
+      "blockdata_filepath": "data/layouts/Terrarium_NorthEast/map.bin"
     }
   ]
 }

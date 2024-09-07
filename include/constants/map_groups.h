@@ -592,7 +592,15 @@
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 
 // gMapGroup_Terrarium
-#define MAP_TERRARIUM_CENTER (0 | (34 << 8))
+#define MAP_TERRARIUM_CENTER     (0 | (34 << 8))
+#define MAP_TERRARIUM_SOUTH      (1 | (34 << 8))
+#define MAP_TERRARIUM_NORTH      (2 | (34 << 8))
+#define MAP_TERRARIUM_EAST       (3 | (34 << 8))
+#define MAP_TERRARIUM_WEST       (4 | (34 << 8))
+#define MAP_TERRARIUM_NORTH_WEST (5 | (34 << 8))
+#define MAP_TERRARIUM_SOUTH_WEST (6 | (34 << 8))
+#define MAP_TERRARIUM_SOUTH_EAST (7 | (34 << 8))
+#define MAP_TERRARIUM_NORTH_EAST (8 | (34 << 8))
 
 #define MAP_GROUPS_COUNT 35
 

@@ -1145,7 +1145,6 @@ static const u16 sPikachuPartnerTeachableLearnset[] = {
     MOVE_SPLISHY_SPLASH,
     MOVE_PIKA_PAPOW,
     MOVE_FINAL_BLOW,
-    MOVE_FINAL_BLOW,
     MOVE_UNAVAILABLE,
 };
 
@@ -7915,7 +7914,6 @@ static const u16 sEeveePartnerTeachableLearnset[] = {
     MOVE_BADDY_BAD,
     MOVE_FREEZY_FROST,
     MOVE_VEEVEE_VOLLEY,
-    MOVE_FINAL_BLOW,
     MOVE_FINAL_BLOW,
     MOVE_UNAVAILABLE,
 };

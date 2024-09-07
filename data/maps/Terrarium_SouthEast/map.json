@@ -1,0 +1,40 @@
+{
+  "id": "MAP_TERRARIUM_SOUTH_EAST",
+  "name": "Terrarium_SouthEast",
+  "layout": "LAYOUT_TERRARIUM_SOUTH_EAST",
+  "music": "MUS_SAFARI_ZONE",
+  "region_map_section": "MAPSEC_TERRARIUM",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_TERRARIUM_EAST",
+      "offset": 0,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_TERRARIUM_SOUTH",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

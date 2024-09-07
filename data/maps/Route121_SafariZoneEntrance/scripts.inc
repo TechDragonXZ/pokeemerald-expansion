@@ -129,6 +129,12 @@ Route121_SafariZoneEntrance_EventScript_TrainerTipSign::
 	msgbox Route121_SafariZoneEntrance_Text_TrainerTip, MSGBOX_SIGN
 	end
 
+Route121_SafariZoneEntrance_EventScript_TryEntry::
+	lockall
+	goto_if_unset FLAG_TERRARIUM_ACCESS, Route121_SafariZoneEntrance_EventScript_LetterCheck
+	releaseall
+	end
+
 Route121_SafariZoneEntrance_EventScript_LetterCheck::
 	lockall
 	checkitem ITEM_LETTER 1
@@ -141,8 +147,6 @@ Route121_SafariZoneEntrance_EventScript_LetterCheck::
 Route121_SafariZoneEntrance_EventScript_NoLetter::
 	msgbox Route121_SafariZoneEntrance_Text_NotAllowed, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_TERRARIUM_ACCESS
-	removeitem ITEM_LETTER 1
 	applymovement OBJ_EVENT_ID_PLAYER, Route121_SafariZoneEntrance_Movement_PushPlayerBackFromCounter
 	waitmovement 0
 	releaseall
@@ -151,6 +155,8 @@ Route121_SafariZoneEntrance_EventScript_NoLetter::
 Route121_SafariZoneEntrance_EventScript_HasLetter::
 	msgbox Route121_SafariZoneEntrance_Text_Allowed, MSGBOX_DEFAULT
 	closemessage
+	setflag FLAG_TERRARIUM_ACCESS
+	removeitem ITEM_LETTER 1
 	releaseall
 	end
 
@@ -186,6 +192,11 @@ Route121_SafariZoneEntrance_EventScript_TerrariumGroups::
 	release
 	end
 
+Route121_SafariZoneEntrance_EventScript_TerrariumClosed::
+	msgbox Route121_SafariZoneEntrance_Text_TerrariumClosed, MSGBOX_DEFAULT
+	release
+	end
+
 Route121_SafariZoneEntrance_Text_Allowed:
 	.string "Is that a letter of approval? It is!\n"
 	.string "With this you can freely enter the\p"
@@ -212,3 +223,6 @@ Route121_SafariZoneEntrance_Text_TerrariumWelcomeFirstTime:
 
 Route121_SafariZoneEntrance_Text_TerrariumComeInAndEnjoy:
 	.string "Come in and enjoy the Terrarium!$"
+
+Route121_SafariZoneEntrance_Text_TerrariumClosed:
+	.string "Sorry the Terrarium is currently closed.$"

@@ -623,6 +623,14 @@
     "Route124_DivingTreasureHuntersHouse"
   ],
   "gMapGroup_Terrarium": [
-    "Terrarium_Center"
+    "Terrarium_Center",
+    "Terrarium_South",
+    "Terrarium_North",
+    "Terrarium_East",
+    "Terrarium_West",
+    "Terrarium_NorthWest",
+    "Terrarium_SouthWest",
+    "Terrarium_SouthEast",
+    "Terrarium_NorthEast"
   ]
 }

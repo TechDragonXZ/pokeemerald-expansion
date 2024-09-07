@@ -1076,3 +1076,19 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/Terrarium_Center/scripts.inc"
+
+	.include "data/maps/Terrarium_South/scripts.inc"
+
+	.include "data/maps/Terrarium_North/scripts.inc"
+
+	.include "data/maps/Terrarium_East/scripts.inc"
+
+	.include "data/maps/Terrarium_West/scripts.inc"
+
+	.include "data/maps/Terrarium_NorthWest/scripts.inc"
+
+	.include "data/maps/Terrarium_SouthWest/scripts.inc"
+
+	.include "data/maps/Terrarium_SouthEast/scripts.inc"
+
+	.include "data/maps/Terrarium_NorthEast/scripts.inc"

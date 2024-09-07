@@ -1885,6 +1885,12 @@
 	_dynmultichoice \left, \top, \ignoreBPress, \maxBeforeScroll, \shouldSort, \initialSelected, \callbacks, NULL
 	.endm
 
+	@ Returns Pokemon follower to ball
+	.macro ballfollowingmon
+	.byte 0xe5
+	delay 16
+	.endm
+
 @ Supplementary
 
 	.macro goto_if_unset flag:req, dest:req
