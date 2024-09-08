@@ -41,7 +41,6 @@
 #include "text.h"
 #include "tv.h"
 #include "window.h"
-#include "config/battle.h"
 #include "constants/battle_move_effects.h"
 #include "constants/hold_effects.h"
 #include "constants/items.h"
@@ -3958,21 +3957,13 @@ static void SetMonTypeIcons(void)
 
 static void SetMoveTypeIcons(void)
 {
-    u8 i = 0, movetype;
+    u8 i;
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
-    struct Pokemon *mon = &sMonSummaryScreen->currentMon;
-
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
         if (summary->moves[i] != MOVE_NONE)
         {
-            if (B_DYNAMIC_MOVE_TYPE == TRUE)
-            {
-                movetype = GetMonMoveType(summary->moves[i], mon, 0);
-                SetTypeSpritePosAndPal(movetype, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
-            }
-            else
-                SetTypeSpritePosAndPal(gMovesInfo[summary->moves[i]].type, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
+            SetTypeSpritePosAndPal(gMovesInfo[summary->moves[i]].type, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
         }
         else
             SetSpriteInvisibility(i + SPRITE_ARR_ID_TYPE, TRUE);
@@ -3994,9 +3985,6 @@ static void SetContestMoveTypeIcons(void)
 
 static void SetNewMoveTypeIcon(void)
 {
-    u8 moveType;
-    struct Pokemon *mon = &sMonSummaryScreen->currentMon;
-
     if (sMonSummaryScreen->newMove == MOVE_NONE)
     {
         SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 4, TRUE);
@@ -4004,15 +3992,7 @@ static void SetNewMoveTypeIcon(void)
     else
     {
         if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
-        {        
-            if (B_DYNAMIC_MOVE_TYPE == TRUE)
-            {
-                moveType = GetMonMoveType(sMonSummaryScreen->newMove, mon, 0);
-                SetTypeSpritePosAndPal(moveType, 85, 96, SPRITE_ARR_ID_TYPE + 4);
-            }
-            else
-                SetTypeSpritePosAndPal(gMovesInfo[sMonSummaryScreen->newMove].type, 85, 96, SPRITE_ARR_ID_TYPE + 4);
-        }
+            SetTypeSpritePosAndPal(gMovesInfo[sMonSummaryScreen->newMove].type, 85, 96, SPRITE_ARR_ID_TYPE + 4);
         else
             SetTypeSpritePosAndPal(NUMBER_OF_MON_TYPES + gMovesInfo[sMonSummaryScreen->newMove].contestCategory, 85, 96, SPRITE_ARR_ID_TYPE + 4);
     }
