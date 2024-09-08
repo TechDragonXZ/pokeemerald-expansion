@@ -1725,6 +1725,13 @@ void CB2_ReturnToFieldWithOpenMenu(void)
     CB2_ReturnToField();
 }
 
+void CB2_ReturnToField_OpenCraftMenu(void)
+{
+    FieldClearVBlankHBlankCallbacks();
+    gFieldCallback2 = FieldCB_ReturnToField_OpenCraftMenu;
+    CB2_ReturnToField();
+}
+
 void CB2_ReturnToFieldContinueScript(void)
 {
     FieldClearVBlankHBlankCallbacks();
