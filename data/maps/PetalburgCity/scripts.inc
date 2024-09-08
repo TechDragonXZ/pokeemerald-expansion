@@ -7,7 +7,33 @@
 PetalburgCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PetalburgCity_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, PetalburgCity_OnLoad
 	.byte 0
+
+PetalburgCity_OnLoad::
+	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
+	setflag FLAG_TEMP_3
+	random 3
+	call_if_eq VAR_RESULT, 0, PetalburgCity_EventScript_Taillow
+	call_if_eq VAR_RESULT, 1, PetalburgCity_EventScript_Swablu
+	call_if_eq VAR_RESULT, 2, PetalburgCity_EventScript_Wingull
+	end
+
+PetalburgCity_EventScript_Taillow::
+	clearflag FLAG_TEMP_1
+	playmoncry SPECIES_TAILLOW, CRY_MODE_NORMAL
+	return
+
+PetalburgCity_EventScript_Swablu::
+	clearflag FLAG_TEMP_2
+	playmoncry SPECIES_SWABLU, CRY_MODE_NORMAL
+	return
+
+PetalburgCity_EventScript_Wingull::
+	clearflag FLAG_TEMP_3
+	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
+	return
 
 PetalburgCity_OnTransition:
 	setflag FLAG_VISITED_PETALBURG_CITY
