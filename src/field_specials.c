@@ -69,8 +69,6 @@
 #include "constants/metatile_labels.h"
 #include "palette.h"
 #include "battle_util.h"
-#include "item.h"
-#include "item_menu.h"
 
 #define TAG_ITEM_ICON 5500
 

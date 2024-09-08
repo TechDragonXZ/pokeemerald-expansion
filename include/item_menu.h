@@ -18,7 +18,6 @@ enum {
     ITEMMENULOCATION_WALLY,
     ITEMMENULOCATION_PCBOX,
     ITEMMENULOCATION_BERRY_TREE_MULCH,
-    ITEMMENULOCATION_CRAFT,
     ITEMMENULOCATION_LAST,
 };
 
@@ -111,6 +110,5 @@ void DisplayItemMessage(u8 taskId, u8 fontId, const u8 *str, void ( *callback)(u
 void DisplayItemMessageOnField(u8 taskId, const u8 *src, TaskFunc callback);
 void CloseItemMessage(u8 taskId);
 void ItemMenu_RotomCatalog(u8 taskId);
-void CB2_BagMenuFromCraftMenu(void);
 
 #endif //GUARD_ITEM_MENU_H

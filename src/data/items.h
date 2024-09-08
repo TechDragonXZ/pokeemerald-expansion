@@ -14073,21 +14073,4 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
-
-    
-    [ITEM_CRAFT_BUNDLE] =
-    {
-        .name = _("Craft Bundle"),
-        .description = COMPOUND_STRING(
-            "A roll-out tool kit\n"
-            "packed full of\n"
-            "crafting supplies."),
-        .price = 0,
-        .importance = 1,
-        .iconPic = gItemIcon_TMCase,
-        .iconPalette = gItemIconPalette_TMCase,
-        .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_CraftBundle,
-    },
 };

@@ -82,12 +82,6 @@ u32 ItemId_GetFlingPower(u32 itemId);
 u32 GetItemStatus1Mask(u16 itemId);
 u32 GetItemStatus2Mask(u16 itemId);
 
-//Thanks ghoulslash!
-#define ITEM_TAG 0x2722 //same as money label
-
-void ShowItemIconSprite(u16 item, bool8 flash, u8 screen_x, u8 screen_y);
-void DestroyItemIconSprite(void);
-
 /* Expands to:
  * enum
  * {

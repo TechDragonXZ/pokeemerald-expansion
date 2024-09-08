@@ -1092,4 +1092,3 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Terrarium_SouthEast/scripts.inc"
 
 	.include "data/maps/Terrarium_NorthEast/scripts.inc"
-	.include "data/scripts/craft.inc"
