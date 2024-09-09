@@ -57,7 +57,7 @@
 #define FLAG_NO_CATCHING        0x2C // No Catching Flag
 #define FLAG_FORCE_DOUBLE_WILD  0x2D // Force Wild Double Battle Flag
 #define FLAG_CLOCK_MODE         0x2E // Clock Mode Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
+#define FLAG_PARTY_MOVES        0x2F // Party Move Relearner Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag

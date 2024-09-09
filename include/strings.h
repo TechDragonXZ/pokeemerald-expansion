@@ -3050,4 +3050,8 @@ extern const u8 gText_PlantBerry[];
 extern const u8 gText_AM[];
 extern const u8 gText_PM[];
 
+// Custom
+extern const u8 gText_Nickname[];
+extern const u8 gText_Moves_Menu[];
+
 #endif // GUARD_STRINGS_H

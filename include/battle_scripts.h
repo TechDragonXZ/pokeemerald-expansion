@@ -849,5 +849,7 @@ extern const u8 BattleScript_FickleBeamDoubled[];
 
 // Custom
 extern const u8 BattleScript_ScareActivates[];
+extern const u8 BattleScript_StoneDebrisActivates[];
+extern const u8 BattleScript_WebSlingerActivates[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H
