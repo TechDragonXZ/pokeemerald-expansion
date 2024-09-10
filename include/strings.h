@@ -3054,4 +3054,8 @@ extern const u8 gText_PM[];
 extern const u8 gText_Nickname[];
 extern const u8 gText_Moves_Menu[];
 
+// FRLG whiteout
+extern const u8 gText_PlayerScurriedToCenter[];
+extern const u8 gText_PlayerScurriedBackHome[];
+
 #endif // GUARD_STRINGS_H
