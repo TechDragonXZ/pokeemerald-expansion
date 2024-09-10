@@ -181,8 +181,8 @@ void NewGameInitData(void)
     gPlayerPartyCount = 0;
     ZeroPlayerPartyMons();
     ResetPokemonStorageSystem();
-    DeactivateAllRoamers();
     gSaveBlock1Ptr->registeredItem = ITEM_NONE;
+    StopAllRoamers();
     ClearBag();
     NewGameInitPCItems();
     ClearPokeblocks();
@@ -204,6 +204,10 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
+#if MULTIPLE_ROAMERS_EXAMPLE	
+    InitRoamer();
+    FlagSet(FLAG_SYS_POKEDEX_GET);
+#endif
 }
 
 static void ResetMiniGamesRecords(void)

@@ -34,7 +34,8 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
-    "gMapGroup_Terrarium"
+    "gMapGroup_Terrarium",
+    "gMapGroup_None"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -632,5 +633,8 @@
     "Terrarium_SouthWest",
     "Terrarium_SouthEast",
     "Terrarium_NorthEast"
+  ],
+  "gMapGroup_None": [
+    "None"
   ]
 }

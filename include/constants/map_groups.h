@@ -602,8 +602,9 @@
 #define MAP_TERRARIUM_SOUTH_EAST (7 | (34 << 8))
 #define MAP_TERRARIUM_NORTH_EAST (8 | (34 << 8))
 
-#define MAP_GROUPS_COUNT 35
+// gMapGroup_None
+#define MAP_NONE (0 | (35 << 8))
 
-// static const u8 MAP_GROUP_COUNT[] = {57, 5, 5, 6, 7, 8, 9, 7, 7, 14, 8, 17, 10, 23, 13, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 1, 0};
+#define MAP_GROUPS_COUNT 36
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

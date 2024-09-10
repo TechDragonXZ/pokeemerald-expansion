@@ -5400,6 +5400,18 @@
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/Terrarium_NorthEast/border.bin",
       "blockdata_filepath": "data/layouts/Terrarium_NorthEast/map.bin"
+    },
+    {
+      "id": "LAYOUT_NONE",
+      "name": "None_Layout",
+      "width": 11,
+      "height": 11,
+      "border_width": 1,
+      "border_height": 1,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/None/border.bin",
+      "blockdata_filepath": "data/layouts/None/map.bin"
     }
   ]
 }
