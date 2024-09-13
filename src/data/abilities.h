@@ -2630,4 +2630,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 4,
     },
 
+    [ABILITY_UNSTABLE_GENES] =
+    {
+        .name = _("Unstable Genes"),
+        .description = COMPOUND_STRING("Boosts evolutionary powers."),
+        .aiRating = 4,
+    },
+
 };

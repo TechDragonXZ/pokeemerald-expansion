@@ -22143,4 +22143,40 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .battleAnimScript = Move_NIGHT_SLASH,
     },
 
+    [MOVE_GENETIC_BURST] =
+    {
+        .name = COMPOUND_STRING("Genetic Burst"),
+        .description = COMPOUND_STRING(
+            "This attack may cause; burn,\n"
+        #if B_USE_FROSTBITE == TRUE
+            "frostbite, sleep, or paralysis."),
+        #else
+            "freeze, sleep, or paralysis."),
+        #endif
+        .effect = EFFECT_SHELL_SIDE_ARM,
+        .power = 80,
+        .type = TYPE_NORMAL,
+        .accuracy = 90,
+        .criticalHitStage = 0,
+        .pp = 10,
+        .thawsUser = TRUE,
+        .pulseMove = TRUE,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = FALSE,
+        .slicingMove = FALSE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .additionalEffects = ADDITIONAL_EFFECTS(
+            {
+                .moveEffect = MOVE_EFFECT_GENETIC_BURST,
+                .chance = 50,
+            }
+        ),
+        .battleAnimScript = Move_HIDDEN_POWER,
+    },
+
 };

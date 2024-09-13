@@ -9908,6 +9908,8 @@ static inline uq4_12_t GetSameTypeAttackBonusModifier(u32 battlerAtk, u32 moveTy
         return (abilityAtk == ABILITY_ADAPTABILITY) ? UQ_4_12(2.0) : UQ_4_12(1.5);
     else if (!IS_BATTLER_OF_TYPE(battlerAtk, moveType) || move == MOVE_STRUGGLE || move == MOVE_NONE)
         return UQ_4_12(1.0);
+    else if (IS_BATTLER_OF_TYPE(battlerAtk, moveType) || moveType == TYPE_FIRE || moveType == TYPE_WATER || moveType == TYPE_ELECTRIC || moveType == TYPE_DARK || moveType == TYPE_PSYCHIC || moveType == TYPE_ICE || moveType == TYPE_GRASS || moveType == TYPE_FAIRY)
+        return (abilityAtk == ABILITY_UNSTABLE_GENES) ? UQ_4_12(2.0) : UQ_4_12(1.5);
     return (abilityAtk == ABILITY_ADAPTABILITY) ? UQ_4_12(2.0) : UQ_4_12(1.5);
 }
 

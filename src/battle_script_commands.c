@@ -3254,6 +3254,24 @@ void SetMoveEffect(bool32 primary, bool32 certain)
                     SetMoveEffect(primary, certain);
                 }
                 break;
+            case MOVE_EFFECT_GENETIC_BURST:
+                if (gBattleMons[gEffectBattler].status1)
+                {
+                    gBattlescriptCurrInstr++;
+                }
+                else
+                {
+                    static const u8 sGeneticBurstEffects[] =
+                    {
+                        MOVE_EFFECT_BURN,
+                        MOVE_EFFECT_FREEZE_OR_FROSTBITE,
+                        MOVE_EFFECT_PARALYSIS,
+                        MOVE_EFFECT_SLEEP
+                    };
+                    gBattleScripting.moveEffect = RandomElement(RNG_TRI_ATTACK, sGeneticBurstEffects);
+                    SetMoveEffect(primary, certain);
+                }
+                break;
             case MOVE_EFFECT_CHARGING:
                 gBattleMons[gEffectBattler].status2 |= STATUS2_MULTIPLETURNS;
                 gLockedMoves[gEffectBattler] = gCurrentMove;
