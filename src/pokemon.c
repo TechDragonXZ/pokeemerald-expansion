@@ -57,6 +57,8 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/union_room.h"
+#include "day_night.h"
+#include "constants/day_night.h"
 #include "constants/weather.h"
 #include "wild_encounter.h"
 
