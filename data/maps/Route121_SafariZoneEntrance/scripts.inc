@@ -189,7 +189,262 @@ Route121_SafariZoneEntrance_EventScript_FirstTimeInfo2::
 
 Route121_SafariZoneEntrance_EventScript_TerrariumGroups::
 	msgbox Route121_SafariZoneEntrance_Text_TerrariumGroups, MSGBOX_DEFAULT
+	multichoice 19, 4, MULTI_TERRARIUM_ZONES0, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumCenter
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumNorth
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumEast
+	case 3, Route121_SafariZoneEntrance_EventScript_Zones1
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
 	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_Zones1::
+	multichoice 19, 4, MULTI_TERRARIUM_ZONES1, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumSouth
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumWest
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumNorthEast
+	case 3, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
+	case 4, Route121_SafariZoneEntrance_EventScript_Zones2
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_Zones2::
+	multichoice 19, 4, MULTI_TERRARIUM_ZONES2, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumNorthWest
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumSouthEast
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumSouthWest
+	case 3, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumCenter::
+	buffernumberstring STR_VAR_1, VAR_TERRARIUM_CENTER_WILD_SET
+	msgbox Route121_SafariZoneEntrance_Text_CurrentGroup, MSGBOX_DEFAULT
+	multichoice 19, 4, MULTI_TERRARIUM_GROUPS, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumCenterGroup0
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumCenterGroup1
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumCenterGroup2
+	case 3, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumCenterGroup0::
+	setvar VAR_TERRARIUM_CENTER_WILD_SET, 0
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumCenterGroup1::
+	setvar VAR_TERRARIUM_CENTER_WILD_SET, 1
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumCenterGroup2::
+	setvar VAR_TERRARIUM_CENTER_WILD_SET, 2
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorth::
+	buffernumberstring STR_VAR_1, VAR_TERRARIUM_NORTH_WILD_SET
+	msgbox Route121_SafariZoneEntrance_Text_CurrentGroup, MSGBOX_DEFAULT
+	multichoice 19, 4, MULTI_TERRARIUM_GROUPS, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumNorthGroup0
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumNorthGroup1
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumNorthGroup2
+	case 3, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorthGroup0::
+	setvar VAR_TERRARIUM_NORTH_WILD_SET, 0
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorthGroup1::
+	setvar VAR_TERRARIUM_NORTH_WILD_SET, 1
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorthGroup2::
+	setvar VAR_TERRARIUM_NORTH_WILD_SET, 2
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumEast::
+	buffernumberstring STR_VAR_1, VAR_TERRARIUM_EAST_WILD_SET
+	msgbox Route121_SafariZoneEntrance_Text_CurrentGroup, MSGBOX_DEFAULT
+	multichoice 19, 4, MULTI_TERRARIUM_GROUPS, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumEastGroup0
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumEastGroup1
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumEastGroup2
+	case 3, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumEastGroup0::
+	setvar VAR_TERRARIUM_EAST_WILD_SET, 0
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumEastGroup1::
+	setvar VAR_TERRARIUM_EAST_WILD_SET, 1
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumEastGroup2::
+	setvar VAR_TERRARIUM_EAST_WILD_SET, 2
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouth::
+	buffernumberstring STR_VAR_1, VAR_TERRARIUM_SOUTH_WILD_SET
+	msgbox Route121_SafariZoneEntrance_Text_CurrentGroup, MSGBOX_DEFAULT
+	multichoice 19, 4, MULTI_TERRARIUM_GROUPS, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumSouthGroup0
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumSouthGroup1
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumSouthGroup2
+	case 3, Route121_SafariZoneEntrance_EventScript_Zones1
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_Zones1
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouthGroup0::
+	setvar VAR_TERRARIUM_SOUTH_WILD_SET, 0
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouthGroup1::
+	setvar VAR_TERRARIUM_SOUTH_WILD_SET, 1
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouthGroup2::
+	setvar VAR_TERRARIUM_SOUTH_WILD_SET, 2
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumWest::
+	buffernumberstring STR_VAR_1, VAR_TERRARIUM_WEST_WILD_SET
+	msgbox Route121_SafariZoneEntrance_Text_CurrentGroup, MSGBOX_DEFAULT
+	multichoice 19, 4, MULTI_TERRARIUM_GROUPS, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumWestGroup0
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumWestGroup1
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumWestGroup2
+	case 3, Route121_SafariZoneEntrance_EventScript_Zones1
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_Zones1
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumWestGroup0::
+	setvar VAR_TERRARIUM_WEST_WILD_SET, 0
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumWestGroup1::
+	setvar VAR_TERRARIUM_WEST_WILD_SET, 1
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumWestGroup2::
+	setvar VAR_TERRARIUM_WEST_WILD_SET, 2
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorthEast::
+	buffernumberstring STR_VAR_1, VAR_TERRARIUM_NORTH_EAST_WILD_SET
+	msgbox Route121_SafariZoneEntrance_Text_CurrentGroup, MSGBOX_DEFAULT
+	multichoice 19, 4, MULTI_TERRARIUM_GROUPS, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumNorthEastGroup0
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumNorthEastGroup1
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumNorthEastGroup2
+	case 3, Route121_SafariZoneEntrance_EventScript_Zones1
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_Zones1
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorthEastGroup0::
+	setvar VAR_TERRARIUM_NORTH_EAST_WILD_SET, 0
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorthEastGroup1::
+	setvar VAR_TERRARIUM_NORTH_EAST_WILD_SET, 1
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorthEastGroup2::
+	setvar VAR_TERRARIUM_NORTH_EAST_WILD_SET, 2
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorthWest::
+	buffernumberstring STR_VAR_1, VAR_TERRARIUM_NORTH_WEST_WILD_SET
+	msgbox Route121_SafariZoneEntrance_Text_CurrentGroup, MSGBOX_DEFAULT
+	multichoice 19, 4, MULTI_TERRARIUM_GROUPS, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumNorthWestGroup0
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumNorthWestGroup1
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumNorthWestGroup2
+	case 3, Route121_SafariZoneEntrance_EventScript_Zones2
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_Zones2
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorthWestGroup0::
+	setvar VAR_TERRARIUM_NORTH_WEST_WILD_SET, 0
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorthWestGroup1::
+	setvar VAR_TERRARIUM_NORTH_WEST_WILD_SET, 1
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumNorthWestGroup2::
+	setvar VAR_TERRARIUM_NORTH_WEST_WILD_SET, 2
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouthEast::
+	buffernumberstring STR_VAR_1, VAR_TERRARIUM_SOUTH_EAST_WILD_SET
+	msgbox Route121_SafariZoneEntrance_Text_CurrentGroup, MSGBOX_DEFAULT
+	multichoice 19, 4, MULTI_TERRARIUM_GROUPS, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumSouthEastGroup0
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumSouthEastGroup1
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumSouthEastGroup2
+	case 3, Route121_SafariZoneEntrance_EventScript_Zones2
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_Zones2
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouthEastGroup0::
+	setvar VAR_TERRARIUM_SOUTH_EAST_WILD_SET, 0
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouthEastGroup1::
+	setvar VAR_TERRARIUM_SOUTH_EAST_WILD_SET, 1
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouthEastGroup2::
+	setvar VAR_TERRARIUM_SOUTH_EAST_WILD_SET, 2
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouthWest::
+	buffernumberstring STR_VAR_1, VAR_TERRARIUM_SOUTH_WEST_WILD_SET
+	msgbox Route121_SafariZoneEntrance_Text_CurrentGroup, MSGBOX_DEFAULT
+	multichoice 19, 4, MULTI_TERRARIUM_GROUPS, TRUE
+	switch VAR_RESULT
+	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumSouthWestGroup0
+	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumSouthWestGroup1
+	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumSouthWestGroup2
+	case 3, Route121_SafariZoneEntrance_EventScript_Zones2
+	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_Zones2
+	release
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouthWestGroup0::
+	setvar VAR_TERRARIUM_SOUTH_WEST_WILD_SET, 0
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouthWestGroup1::
+	setvar VAR_TERRARIUM_SOUTH_WEST_WILD_SET, 1
+	end
+
+Route121_SafariZoneEntrance_EventScript_TerrariumSouthWestGroup2::
+	setvar VAR_TERRARIUM_SOUTH_WEST_WILD_SET, 2
 	end
 
 Route121_SafariZoneEntrance_EventScript_TerrariumClosed::
@@ -226,3 +481,8 @@ Route121_SafariZoneEntrance_Text_TerrariumComeInAndEnjoy:
 
 Route121_SafariZoneEntrance_Text_TerrariumClosed:
 	.string "Sorry the Terrarium is currently closed.$"
+
+Route121_SafariZoneEntrance_Text_CurrentGroup:
+	.string "This part of the Terrarium is currently\n"
+	.string "spawning Pokémon from encounter\p"
+	.string "group {STR_VAR_1}.$"

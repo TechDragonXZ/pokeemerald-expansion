@@ -1859,3 +1859,17 @@ const u8 gText_PM[] = _("PM");
 // Custom
 const u8 gText_Nickname[] = _("Nickname");
 const u8 gText_Moves_Menu[] = _("Change Moves");
+const u8 gText_NextPage[] = _("Next Page");
+const u8 gText_PreviousPage[] = _("Previous Page");
+const u8 gText_TerrariumCenter[] = _("Terrarium Center");
+const u8 gText_TerrariumNorth[] = _("Terrarium North");
+const u8 gText_TerrariumSouth[] = _("Terrarium South");
+const u8 gText_TerrariumEast[] = _("Terrarium East");
+const u8 gText_TerrariumWest[] = _("Terrarium West");
+const u8 gText_TerrariumNorthEast[] = _("Terrarium North-East");
+const u8 gText_TerrariumNorthWest[] = _("Terrarium North-West");
+const u8 gText_TerrariumSouthEast[] = _("Terrarium South-East");
+const u8 gText_TerrariumSouthWest[] = _("Terrarium South-West");
+const u8 gText_Group0[] = _("Encounter Group 1");
+const u8 gText_Group1[] = _("Encounter Group 2");
+const u8 gText_Group2[] = _("Encounter Group 3");

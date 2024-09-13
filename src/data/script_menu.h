@@ -778,6 +778,42 @@ static const struct MenuAction MultichoiceList_BerryPlot[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_TerrariumZones0[] =
+{
+    {gText_TerrariumCenter},
+    {gText_TerrariumNorth},
+    {gText_TerrariumEast},
+    {gText_NextPage},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_TerrariumZones1[] =
+{
+    {gText_TerrariumSouth},
+    {gText_TerrariumWest},
+    {gText_TerrariumNorthEast},
+    {gText_PreviousPage},
+    {gText_NextPage},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_TerrariumZones2[] =
+{
+    {gText_TerrariumNorthWest},
+    {gText_TerrariumSouthEast},
+    {gText_TerrariumSouthWest},
+    {gText_PreviousPage},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_TerrariumGroups[] =
+{
+    {gText_Group0},
+    {gText_Group1},
+    {gText_Group2},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -906,6 +942,10 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
+    [MULTI_TERRARIUM_ZONES0]           = MULTICHOICE(MultichoiceList_TerrariumZones0),
+    [MULTI_TERRARIUM_ZONES1]           = MULTICHOICE(MultichoiceList_TerrariumZones1),
+    [MULTI_TERRARIUM_ZONES2]           = MULTICHOICE(MultichoiceList_TerrariumZones2),
+    [MULTI_TERRARIUM_GROUPS]           = MULTICHOICE(MultichoiceList_TerrariumGroups),
 };
 
 const u8 *const gStdStrings[] =

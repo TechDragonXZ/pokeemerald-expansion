@@ -23,6 +23,7 @@
 #include "constants/items.h"
 #include "constants/layouts.h"
 #include "constants/weather.h"
+#include "rtc.h"
 
 extern const u8 EventScript_SprayWoreOff[];
 
@@ -367,6 +368,53 @@ static u16 GetCurrentMapWildMonHeaderId(void)
         if (gWildMonHeaders[i].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
             gWildMonHeaders[i].mapNum == gSaveBlock1Ptr->location.mapNum)
         {
+            RtcCalcLocalTime();
+            if (
+                (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(ALTERING_CAVE) &&
+                gSaveBlock1Ptr->location.mapNum != MAP_NUM(ALTERING_CAVE)) ||
+                (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(TERRARIUM_CENTER) &&
+                gSaveBlock1Ptr->location.mapNum != MAP_NUM(TERRARIUM_CENTER)) ||
+                (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(TERRARIUM_NORTH) &&
+                gSaveBlock1Ptr->location.mapNum != MAP_NUM(TERRARIUM_NORTH)) ||
+                (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(TERRARIUM_SOUTH) &&
+                gSaveBlock1Ptr->location.mapNum != MAP_NUM(TERRARIUM_SOUTH)) ||
+                (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(TERRARIUM_EAST) &&
+                gSaveBlock1Ptr->location.mapNum != MAP_NUM(TERRARIUM_EAST)) ||
+                (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(TERRARIUM_WEST) &&
+                gSaveBlock1Ptr->location.mapNum != MAP_NUM(TERRARIUM_WEST)) ||
+                (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(TERRARIUM_NORTH_WEST) &&
+                gSaveBlock1Ptr->location.mapNum != MAP_NUM(TERRARIUM_NORTH_WEST)) ||
+                (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(TERRARIUM_NORTH_EAST) &&
+                gSaveBlock1Ptr->location.mapNum != MAP_NUM(TERRARIUM_NORTH_EAST)) ||
+                (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(TERRARIUM_SOUTH_WEST) &&
+                gSaveBlock1Ptr->location.mapNum != MAP_NUM(TERRARIUM_SOUTH_WEST)) ||
+                (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(TERRARIUM_SOUTH_EAST) &&
+                gSaveBlock1Ptr->location.mapNum != MAP_NUM(TERRARIUM_SOUTH_EAST))
+            )
+        {
+            if (gLocalTime.hours >= 6 && gLocalTime.hours <= 8)
+            {
+                i += 0; // Morning
+            }
+            else if (gLocalTime.hours >= 9 && gLocalTime.hours <= 17 &&
+              gWildMonHeaders[i + 1].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
+              gWildMonHeaders[i + 1].mapNum == gSaveBlock1Ptr->location.mapNum)
+            {
+                i += 1; // Day
+            }
+            else if (gLocalTime.hours >= 18 && gLocalTime.hours <= 20 &&
+              gWildMonHeaders[i + 2].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
+              gWildMonHeaders[i + 2].mapNum == gSaveBlock1Ptr->location.mapNum)
+            {
+                i += 2; // Evening
+            }
+            else if (gWildMonHeaders[i + 3].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
+              gWildMonHeaders[i + 3].mapNum == gSaveBlock1Ptr->location.mapNum)
+              {
+                i += 3; // Night
+            }
+        }
+        
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ALTERING_CAVE) &&
                 gSaveBlock1Ptr->location.mapNum == MAP_NUM(ALTERING_CAVE))
             {
@@ -375,6 +423,60 @@ static u16 GetCurrentMapWildMonHeaderId(void)
                     alteringCaveId = 0;
 
                 i += alteringCaveId;
+            }
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(TERRARIUM_CENTER) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(TERRARIUM_CENTER))
+            {
+                i += VarGet(VAR_TERRARIUM_CENTER_WILD_SET); // 3 Groups [0, 1, 2]
+            }
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(TERRARIUM_NORTH) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(TERRARIUM_NORTH))
+            {
+                i += VarGet(VAR_TERRARIUM_NORTH_WILD_SET); // 3 Groups [0, 1, 2]
+            }
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(TERRARIUM_SOUTH) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(TERRARIUM_SOUTH))
+            {
+                i += VarGet(VAR_TERRARIUM_SOUTH_WILD_SET); // 3 Groups [0, 1, 2]
+            }
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(TERRARIUM_WEST) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(TERRARIUM_WEST))
+            {
+                i += VarGet(VAR_TERRARIUM_WEST_WILD_SET); // 3 Groups [0, 1, 2]
+            }
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(TERRARIUM_EAST) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(TERRARIUM_EAST))
+            {
+                i += VarGet(VAR_TERRARIUM_EAST_WILD_SET); // 3 Groups [0, 1, 2]
+            }
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(TERRARIUM_NORTH_WEST) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(TERRARIUM_NORTH_WEST))
+            {
+                i += VarGet(VAR_TERRARIUM_NORTH_WEST_WILD_SET); // 3 Groups [0, 1, 2]
+            }
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(TERRARIUM_NORTH_EAST) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(TERRARIUM_NORTH_EAST))
+            {
+                i += VarGet(VAR_TERRARIUM_NORTH_EAST_WILD_SET); // 3 Groups [0, 1, 2]
+            }
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(TERRARIUM_SOUTH_WEST) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(TERRARIUM_SOUTH_WEST))
+            {
+                i += VarGet(VAR_TERRARIUM_SOUTH_WEST_WILD_SET); // 3 Groups [0, 1, 2]
+            }
+
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(TERRARIUM_SOUTH_EAST) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(TERRARIUM_SOUTH_EAST))
+            {
+                i += VarGet(VAR_TERRARIUM_SOUTH_EAST_WILD_SET); // 3 Groups [0, 1, 2]
             }
 
             return i;

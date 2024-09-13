@@ -3058,6 +3058,20 @@ extern const u8 gText_PM[];
 // Custom
 extern const u8 gText_Nickname[];
 extern const u8 gText_Moves_Menu[];
+extern const u8 gText_NextPage[];
+extern const u8 gText_PreviousPage[];
+extern const u8 gText_TerrariumCenter[];
+extern const u8 gText_TerrariumNorth[];
+extern const u8 gText_TerrariumSouth[];
+extern const u8 gText_TerrariumEast[];
+extern const u8 gText_TerrariumWest[];
+extern const u8 gText_TerrariumNorthEast[];
+extern const u8 gText_TerrariumNorthWest[];
+extern const u8 gText_TerrariumSouthEast[];
+extern const u8 gText_TerrariumSouthWest[];
+extern const u8 gText_Group0[];
+extern const u8 gText_Group1[];
+extern const u8 gText_Group2[];
 
 // FRLG whiteout
 extern const u8 gText_PlayerScurriedToCenter[];

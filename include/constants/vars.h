@@ -264,15 +264,15 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
-#define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
-#define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
-#define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_TERRARIUM_CENTER_WILD_SET                    0x40F7 // Terrarium Center Wild Pkmn Var
+#define VAR_TERRARIUM_NORTH_WILD_SET                     0x40F8 // Terrarium North Wild Pkmn Var
+#define VAR_TERRARIUM_SOUTH_WILD_SET                     0x40F9 // Terrarium South Wild Pkmn Var
+#define VAR_TERRARIUM_EAST_WILD_SET                      0x40FA // Terrarium East Wild Pkmn Var
+#define VAR_TERRARIUM_WEST_WILD_SET                      0x40FB // Terrarium West Wild Pkmn Var
+#define VAR_TERRARIUM_NORTH_WEST_WILD_SET                0x40FC // Terrarium North-West Wild Pkmn Var
+#define VAR_TERRARIUM_NORTH_EAST_WILD_SET                0x40FD // Terrarium North-East Wild Pkmn Var
+#define VAR_TERRARIUM_SOUTH_WEST_WILD_SET                0x40FE // Terrarium South-West Wild Pkmn Var
+#define VAR_TERRARIUM_SOUTH_EAST_WILD_SET                0x40FF // Terrarium South-East Wild Pkmn Var
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

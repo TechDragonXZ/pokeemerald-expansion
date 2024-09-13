@@ -123,6 +123,10 @@
 #define MULTI_FALLARBOR_TENT_RULES         112
 #define MULTI_TAG_MATCH_TYPE               113
 #define MULTI_BERRY_PLOT                   114
+#define MULTI_TERRARIUM_ZONES0             115
+#define MULTI_TERRARIUM_ZONES1             116
+#define MULTI_TERRARIUM_ZONES2             117
+#define MULTI_TERRARIUM_GROUPS             118
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
