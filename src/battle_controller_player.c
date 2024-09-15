@@ -1746,6 +1746,20 @@ static void MoveSelectionDisplayMoveType(u32 battler)
         if (gBattleMons[battler].species == SPECIES_TERAPAGOS_STELLAR
         || (IsGimmickSelected(battler, GIMMICK_TERA) && gBattleMons[battler].species == SPECIES_TERAPAGOS_TERASTAL))
             type = TYPE_STELLAR;
+    } else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER)
+    {
+        u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_HP_IV) & 1) << 0)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_ATK_IV) & 1) << 1)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_DEF_IV) & 1) << 2)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPEED_IV) & 1) << 3)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPATK_IV) & 1) << 4)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPDEF_IV) & 1) << 5);
+
+        u8 type = (15 * typeBits) / 63 + 1;
+        if (type >= TYPE_MYSTERY)
+            type++;
+        type |= 0xC0;
+        StringCopy(txtPtr, gTypesInfo[type & 0x3F].name);
     }
 
     end = StringCopy(txtPtr, gTypesInfo[type].name);
