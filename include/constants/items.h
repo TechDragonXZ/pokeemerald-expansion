@@ -1001,7 +1001,11 @@
 // HOPO Berry
 // LEGEND PLATE
 
-#define ITEMS_COUNT 828
+// Custom
+#define ITEM_SURGING_STONE 828
+#define ITEM_SURGE_BAND    829
+
+#define ITEMS_COUNT 830
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

@@ -1617,7 +1617,8 @@ u32 GetBattlerAffectionHearts(u32 battler)
 
     if (side != B_SIDE_PLAYER)
         return AFFECTION_NO_HEARTS;
-    else if (gSpeciesInfo[species].isMegaEvolution
+    else if (gSpeciesInfo[species].isMegaEvolution ||
+            gSpeciesInfo[species].isPowerSurged
           || (gBattleTypeFlags & (BATTLE_TYPE_EREADER_TRAINER
                                 | BATTLE_TYPE_FRONTIER
                                 | BATTLE_TYPE_LINK
@@ -10882,6 +10883,10 @@ u16 GetBattleFormChangeTargetSpecies(u32 battler, u16 method)
                     if (GetBattlerTeraType(battler) == formChanges[i].param1)
                         targetSpecies = formChanges[i].targetSpecies;
                     break;
+                case FORM_CHANGE_BATTLE_POWER_SURGE:
+                    if (heldItem == formChanges[i].param1)
+                        targetSpecies = formChanges[i].targetSpecies;
+                    break;
                 }
             }
         }
@@ -10903,6 +10908,9 @@ bool32 CanBattlerFormChange(u32 battler, u16 method)
         return TRUE;
     // Gigantamaxed Pokemon should revert upon fainting, switching, or ending the battle.
     else if (IsGigantamaxed(battler) && (method == FORM_CHANGE_FAINT || method == FORM_CHANGE_BATTLE_SWITCH || method == FORM_CHANGE_END_BATTLE))
+        return TRUE;
+    // Power Surged Pokémon should always revert to normal upon fainting or ending the battle.
+    else if ((IsBattlerPowerSurged(battler)) && (method == FORM_CHANGE_FAINT || method == FORM_CHANGE_END_BATTLE))
         return TRUE;
     return DoesSpeciesHaveFormChangeMethod(gBattleMons[battler].species, method);
 }
@@ -10946,6 +10954,10 @@ bool32 TryBattleFormChange(u32 battler, u32 method)
 
         // Gigantamax Pokemon have their forms reverted after fainting, switching, or ending the battle.
         else if (IsGigantamaxed(battler) && (method == FORM_CHANGE_FAINT || method == FORM_CHANGE_BATTLE_SWITCH || method == FORM_CHANGE_END_BATTLE))
+            restoreSpecies = TRUE;
+        
+        // Power Surged Pokémon should always revert to normal upon fainting or ending the battle, so no need to add it to the form change tables.
+        else if ((IsBattlerPowerSurged(battler)) && (method == FORM_CHANGE_FAINT || method == FORM_CHANGE_END_BATTLE))
             restoreSpecies = TRUE;
 
         if (restoreSpecies)
@@ -11860,4 +11872,52 @@ bool32 TargetFullyImmuneToCurrMove(u32 BattlerAtk, u32 battlerDef)
          || IsBattlerProtected(BattlerAtk, battlerDef, gCurrentMove)
          || IsSemiInvulnerable(battlerDef, gCurrentMove)
          || DoesCurrentTargetHaveAbilityImmunity());
+}
+
+bool32 CanPowerSurge(u32 battler)
+{
+    u32 holdEffect = GetBattlerHoldEffect(battler, FALSE);
+
+    if (!TESTING
+        && (GetBattlerPosition(battler) == B_POSITION_PLAYER_LEFT || (!(gBattleTypeFlags & BATTLE_TYPE_MULTI) && GetBattlerPosition(battler) == B_POSITION_PLAYER_RIGHT))
+        && !CheckBagHasItem(ITEM_SURGE_BAND, 1))
+        return FALSE;
+
+    // Check if Trainer has already Power Surge.
+    if (HasTrainerUsedGimmick(battler, GIMMICK_SURGE))
+        return FALSE;
+
+    // Check if battler has another gimmick active.
+    if (GetActiveGimmick(battler) != GIMMICK_NONE)
+        return FALSE;
+
+    // Check if battler is currently held by Sky Drop.
+    if (gStatuses3[battler] & STATUS3_SKY_DROPPED)
+        return FALSE;
+
+    // Check if battler is holding a Z-Crystal.
+    if (holdEffect == HOLD_EFFECT_Z_CRYSTAL)
+        return FALSE;
+
+    // Check if there is an entry in the form change table for regular Mega Evolution and battler is holding Mega Stone.
+    if (GetBattleFormChangeTargetSpecies(battler, FORM_CHANGE_BATTLE_POWER_SURGE) != SPECIES_NONE && holdEffect == HOLD_EFFECT_SURGING_STONE)
+        return TRUE;
+
+    // No checks passed, the mon CAN'T Power Surge.
+    return FALSE;
+}
+
+bool32 IsBattlerPowerSurged(u32 battler)
+{
+    // While Transform does copy stats and visuals, it shouldn't be counted as true Power Surge.
+    if (gBattleMons[battler].status2 & STATUS2_TRANSFORMED)
+        return FALSE;
+    return (gSpeciesInfo[gBattleMons[battler].species].isPowerSurged);
+}
+
+void ActivatePowerSurge(u32 battler)
+{
+    gLastUsedItem = gBattleMons[battler].item;
+    SetActiveGimmick(battler, GIMMICK_SURGE);
+    BattleScriptExecute(BattleScript_PowerSurge);
 }

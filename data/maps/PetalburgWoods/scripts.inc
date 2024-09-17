@@ -1,7 +1,11 @@
 .set LOCALID_GRUNT, 3
 .set LOCALID_DEVON_EMPLOYEE, 4
+.set LOCALID_SLAKING, 14
+.set LOCALID_ROUGE, 15
 
 PetalburgWoods_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, PetalburgWoods_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgWoods_OnTransition
 	.byte 0
 
 PetalburgWoods_EventScript_DevonResearcherLeft::
@@ -474,3 +478,46 @@ PetalburgWoods_Text_TrainerTipsPP:
 	.string "If a Pokémon runs out of PP, it must be\n"
 	.string "taken to a Pokémon Center.$"
 
+
+PetalburgWoods_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, PetalburgWoods_EventScript_TryRemoveRougeScientist
+	end
+
+PetalburgWoods_EventScript_TryRemoveRougeScientist::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_SLAKING
+	removeobject LOCALID_ROUGE
+	return
+
+PetalburgWoods_OnTransition:
+	call_if_unset FLAG_DEFEATED_SLAKING, PetalburgWoods_EventScript_ShowRougeScientist
+	end
+
+PetalburgWoods_EventScript_ShowRougeScientist::
+	clearflag FLAG_HIDE_PETALBURG_WOODS_SLAKING
+	setvar VAR_TEMP_1, 1
+	return
+
+PetalburgWoods_EventScript_Slaking::
+	lockall
+	playmoncry SPECIES_SLAKING, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	releaseall
+	end
+
+PetalburgWoods_EventScript_RougeScientist::
+	trainerbattle_single TRAINER_ROUGE_SCIENTIST, PetalburgWoods_Text_WhoAreYou, PetalburgWoods_Text_HowDidILose
+	release
+	end
+
+PetalburgWoods_Text_WhoAreYou:
+	.string "What! Who are you?!\p"
+	.string "No matter this Pokémon is strong\n"
+	.string "enough to deal with you!$"
+
+PetalburgWoods_Text_HowDidILose:
+	.string "What! How did you?!\p"
+	.string "Not even this Pokémon is strong\n"
+	.string "enough to deal with you!$"

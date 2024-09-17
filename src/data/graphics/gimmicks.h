@@ -4,24 +4,28 @@ static const u8 ALIGNED(4) sZMoveTriggerGfx[] = INCBIN_U8("graphics/battle_inter
 static const u8 ALIGNED(4) sBurstTriggerGfx[] = INCBIN_U8("graphics/battle_interface/burst_trigger.4bpp");
 static const u8 ALIGNED(4) sDynamaxTriggerGfx[] = INCBIN_U8("graphics/battle_interface/dynamax_trigger.4bpp");
 static const u8 ALIGNED(4) sTeraTriggerGfx[] = INCBIN_U8("graphics/battle_interface/tera_trigger.4bpp");
+static const u8 ALIGNED(4) sPowerSurgeTriggerGfx[] = INCBIN_U8("graphics/battle_interface/power_surge_trigger.4bpp");
 
 static const u16 sMegaTriggerPal[] = INCBIN_U16("graphics/battle_interface/mega_trigger.gbapal");
 static const u16 sZMoveTriggerPal[] = INCBIN_U16("graphics/battle_interface/z_move_trigger.gbapal");
 static const u16 sBurstTriggerPal[] = INCBIN_U16("graphics/battle_interface/burst_trigger.gbapal");
 static const u16 sDynamaxTriggerPal[] = INCBIN_U16("graphics/battle_interface/dynamax_trigger.gbapal");
 static const u16 sTeraTriggerPal[] = INCBIN_U16("graphics/battle_interface/tera_trigger.gbapal");
+static const u16 sPowerSurgeTriggerPal[] = INCBIN_U16("graphics/battle_interface/power_surge_trigger.gbapal");
 
 static const struct SpriteSheet sSpriteSheet_MegaTrigger = {sMegaTriggerGfx, sizeof(sMegaTriggerGfx), TAG_GIMMICK_TRIGGER_TILE};
 static const struct SpriteSheet sSpriteSheet_ZMoveTrigger = {sZMoveTriggerGfx, sizeof(sZMoveTriggerGfx), TAG_GIMMICK_TRIGGER_TILE};
 static const struct SpriteSheet sSpriteSheet_BurstTrigger = {sBurstTriggerGfx, sizeof(sBurstTriggerGfx), TAG_GIMMICK_TRIGGER_TILE};
 static const struct SpriteSheet sSpriteSheet_DynamaxTrigger = {sDynamaxTriggerGfx, sizeof(sDynamaxTriggerGfx), TAG_GIMMICK_TRIGGER_TILE};
 static const struct SpriteSheet sSpriteSheet_TeraTrigger = {sTeraTriggerGfx, sizeof(sTeraTriggerGfx), TAG_GIMMICK_TRIGGER_TILE};
+static const struct SpriteSheet sSpriteSheet_PowerSurgeTrigger = {sPowerSurgeTriggerGfx, sizeof(sPowerSurgeTriggerGfx), TAG_GIMMICK_TRIGGER_TILE};
 
 static const struct SpritePalette sSpritePalette_MegaTrigger = {sMegaTriggerPal, TAG_GIMMICK_TRIGGER_TILE};
 static const struct SpritePalette sSpritePalette_ZMoveTrigger = {sZMoveTriggerPal, TAG_GIMMICK_TRIGGER_PAL};
 static const struct SpritePalette sSpritePalette_BurstTrigger = {sBurstTriggerPal, TAG_GIMMICK_TRIGGER_TILE};
 static const struct SpritePalette sSpritePalette_DynamaxTrigger = {sDynamaxTriggerPal, TAG_GIMMICK_TRIGGER_PAL};
 static const struct SpritePalette sSpritePalette_TeraTrigger = {sTeraTriggerPal, TAG_GIMMICK_TRIGGER_TILE};
+static const struct SpritePalette sSpritePalette_PowerSurgeTrigger = {sPowerSurgeTriggerPal, TAG_GIMMICK_TRIGGER_TILE};
 
 static const struct OamData sOamData_GimmickTrigger =
 {
@@ -94,15 +98,18 @@ static const u8 ALIGNED(4) sDragonIndicatorGfx[] = INCBIN_U8("graphics/battle_in
 static const u8 ALIGNED(4) sDarkIndicatorGfx[] = INCBIN_U8("graphics/battle_interface/dark_indicator.4bpp");
 static const u8 ALIGNED(4) sFairyIndicatorGfx[] = INCBIN_U8("graphics/battle_interface/fairy_indicator.4bpp");
 static const u8 ALIGNED(4) sStellarIndicatorGfx[] = INCBIN_U8("graphics/battle_interface/stellar_indicator.4bpp");
+static const u8 ALIGNED(4) sPowerSurgeIndicatorGfx[] = INCBIN_U8("graphics/battle_interface/power_surge_indicator.4bpp");
 
 static const u16 sMiscIndicatorPal[] = INCBIN_U16("graphics/battle_interface/misc_indicator.gbapal"); // has room for more colors
 static const u16 sMegaIndicatorPal[] = INCBIN_U16("graphics/battle_interface/mega_indicator.gbapal");
 static const u16 sTeraIndicatorPal[] = INCBIN_U16("graphics/battle_interface/tera_indicator.gbapal");
+static const u16 sPowerSurgeIndicatorPal[] = INCBIN_U16("graphics/battle_interface/power_surge_indicator.gbapal");
 
 static const struct SpriteSheet sSpriteSheet_MegaIndicator = {sMegaIndicatorGfx, sizeof(sMegaIndicatorGfx), TAG_MEGA_INDICATOR_TILE};
 static const struct SpriteSheet sSpriteSheet_AlphaIndicator = {sAlphaIndicatorGfx, sizeof(sAlphaIndicatorGfx), TAG_ALPHA_INDICATOR_TILE};
 static const struct SpriteSheet sSpriteSheet_OmegaIndicator = {sOmegaIndicatorGfx, sizeof(sOmegaIndicatorGfx), TAG_OMEGA_INDICATOR_TILE};
 static const struct SpriteSheet sSpriteSheet_DynamaxIndicator = {sDynamaxIndicatorGfx, sizeof(sDynamaxIndicatorGfx), TAG_DYNAMAX_INDICATOR_TILE};
+static const struct SpriteSheet sSpriteSheet_PowerSurgeIndicator = {sPowerSurgeIndicatorGfx, sizeof(sPowerSurgeIndicatorGfx), TAG_MEGA_INDICATOR_TILE};
 static const struct SpriteSheet sTeraIndicatorSpriteSheets[NUMBER_OF_MON_TYPES + 1] =
 {
     {sNormalIndicatorGfx, sizeof(sNormalIndicatorGfx), TAG_NORMAL_INDICATOR_TILE}, // TYPE_NONE
@@ -132,6 +139,7 @@ static const struct SpriteSheet sTeraIndicatorSpriteSheets[NUMBER_OF_MON_TYPES +
 static const struct SpritePalette sSpritePalette_MiscIndicator = {sMiscIndicatorPal, TAG_MISC_INDICATOR_PAL};
 static const struct SpritePalette sSpritePalette_MegaIndicator = {sMegaIndicatorPal, TAG_MEGA_INDICATOR_PAL};
 static const struct SpritePalette sSpritePalette_TeraIndicator = {sTeraIndicatorPal, TAG_TERA_INDICATOR_PAL};
+static const struct SpritePalette sSpritePalette_PowerSurgeIndicator = {sPowerSurgeIndicatorPal, TAG_MEGA_INDICATOR_PAL};
 
 static const struct OamData sOamData_GimmickIndicator =
 {

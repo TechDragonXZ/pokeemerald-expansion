@@ -8869,6 +8869,10 @@ static void HandleScriptMegaPrimalBurst(u32 caseId, u32 battler, u32 type)
         }
         else if (type == HANDLE_TYPE_PRIMAL_REVERSION)
             TryBattleFormChange(battler, FORM_CHANGE_BATTLE_PRIMAL_REVERSION);
+        else if (type == HANDLE_TYPE_POWER_SURGE)
+        {
+            TryBattleFormChange(battler, FORM_CHANGE_BATTLE_POWER_SURGE);
+        }
         else
             TryBattleFormChange(battler, FORM_CHANGE_BATTLE_ULTRA_BURST);
 
@@ -17179,4 +17183,28 @@ void BS_FickleBeamDamageCalculation(void)
     {
         gBattlescriptCurrInstr = cmd->nextInstr;
     }
+}
+
+void BS_HandlePowerSurge(void)
+{
+    NATIVE_ARGS(u8 battler, u8 caseId);
+
+    u8 battler = GetBattlerForBattleScript(cmd->battler);
+    HandleScriptMegaPrimalBurst(cmd->caseId, battler, HANDLE_TYPE_POWER_SURGE);
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_TryTrainerSlidePowerSurgeMsg(void)
+{
+    NATIVE_ARGS();
+    s32 shouldSlide;
+
+    if ((shouldSlide = ShouldDoTrainerSlide(gBattlerAttacker, TRAINER_SLIDE_POWER_SURGE)))
+    {
+        gBattleScripting.battler = gBattlerAttacker;
+        BattleScriptPush(cmd->nextInstr);
+        gBattlescriptCurrInstr = (shouldSlide == 1 ? BattleScript_TrainerASlideMsgRet : BattleScript_TrainerBSlideMsgRet);
+    }
+    else
+        gBattlescriptCurrInstr = cmd->nextInstr;
 }

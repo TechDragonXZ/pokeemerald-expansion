@@ -1295,5 +1295,12 @@ static const struct FormChange sTerapagosFormChangeTable[] = {
 };
 #endif //P_FAMILY_TERAPAGOS
 
+#if P_FAMILY_SLAKOTH
+static const struct FormChange sSlakingFormChangeTable[] = {
+    {FORM_CHANGE_BATTLE_POWER_SURGE, SPECIES_SLAKING_SURGE, ITEM_SURGING_STONE},
+    {FORM_CHANGE_TERMINATOR},
+};
+#endif //P_FAMILY_SLAKOTH
+
 #undef WHEN_LEARNED
 #undef WHEN_FORGOTTEN

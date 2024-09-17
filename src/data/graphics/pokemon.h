@@ -7300,6 +7300,22 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gShinyOverworldPalette_Slaking[] = INCBIN_U32("graphics/pokemon/slaking/overworld_shiny.gbapal.lz");
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
+
+    const u32 gMonFrontPic_SlakingSurge[] = INCBIN_U32("graphics/pokemon/slaking/surge/anim_front.4bpp.lz");
+    const u32 gMonPalette_SlakingSurge[] = INCBIN_U32("graphics/pokemon/slaking/surge/normal.gbapal.lz");
+    const u32 gMonBackPic_SlakingSurge[] = INCBIN_U32("graphics/pokemon/slaking/surge/back.4bpp.lz");
+    const u32 gMonShinyPalette_SlakingSurge[] = INCBIN_U32("graphics/pokemon/slaking/surge/shiny.gbapal.lz");
+    const u8 gMonIcon_SlakingSurge[] = INCBIN_U8("graphics/pokemon/slaking/surge/icon.4bpp");
+#if P_FOOTPRINTS
+    const u8 gMonFootprint_SlakingSurge[] = INCBIN_U8("graphics/pokemon/slaking/surge/footprint.1bpp");
+#endif //P_FOOTPRINTS
+#if OW_POKEMON_OBJECT_EVENTS
+    const u32 gObjectEventPic_SlakingSurge[] = INCBIN_COMP("graphics/pokemon/slaking/surge/overworld.4bpp");
+#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
+    const u32 gOverworldPalette_SlakingSurge[] = INCBIN_U32("graphics/pokemon/slaking/surge/overworld_normal.gbapal.lz");
+    const u32 gShinyOverworldPalette_SlakingSurge[] = INCBIN_U32("graphics/pokemon/slaking/surge/overworld_shiny.gbapal.lz");
+#endif //OW_PKMN_OBJECTS_SHARE_PALETTES
+#endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_FAMILY_SLAKOTH
 
 #if P_FAMILY_NINCADA

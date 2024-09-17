@@ -2182,3 +2182,13 @@ static const u16 sTerapagosFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_TERAPAGOS
+
+
+#if P_FAMILY_SLAKOTH
+static const u16 sSlakingFormSpeciesIdTable[] = {
+    SPECIES_SLAKING,
+    SPECIES_SLAKING_SURGE,
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_SLAKOTH
+

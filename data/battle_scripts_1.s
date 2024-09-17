@@ -10168,3 +10168,19 @@ BattleScript_WebSlingerRet:
 	copybyte gBattlerTarget, gBattlerAttacker
 	copybyte gBattlerAttacker, sBATTLER
 	return
+
+BattleScript_PowerSurge::
+	flushtextbox
+	trytrainerslidepowersurgemsg
+	printstring STRINGID_POWERSURGEREACTING
+BattleScript_PowerSurgeAfterString:
+	waitmessage B_WAIT_TIME_LONG
+	setbyte gIsCriticalHit, 0
+	handlepowersurge BS_SCRIPTING, 0
+	playanimation BS_SCRIPTING, B_ANIM_TOTEM_FLARE
+	waitanimation
+	handlepowersurge BS_SCRIPTING, 1
+	printstring STRINGID_POWERSURGED
+	waitmessage B_WAIT_TIME_LONG
+	switchinabilities BS_SCRIPTING
+	end3

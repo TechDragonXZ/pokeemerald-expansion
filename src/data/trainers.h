@@ -39667,7 +39667,7 @@ F_TRAINER_FEMALE |
             .species = SPECIES_METAGROSS,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15906
-            .heldItem = ITEM_SITRUS_BERRY,
+            .heldItem = ITEM_METAGROSSITE,
 #line 15908
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15907
@@ -42180,6 +42180,59 @@ F_TRAINER_FEMALE |
             .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 16877
+    [TRAINER_ROUGE_SCIENTIST] =
+    {
+#line 16878
+        .trainerName = _("Scientist"),
+#line 16879
+        .trainerClass = TRAINER_CLASS_PKMN_RANGER,
+#line 16880
+        .trainerPic = TRAINER_PIC_POKEMON_RANGER_M,
+        .encounterMusic_gender = 
+#line 16882
+            TRAINER_ENCOUNTER_MUSIC_COOL,
+#line 16883
+        .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
+#line 16884
+        .doubleBattle = FALSE,
+#line 16885
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = 1,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16887
+            .species = SPECIES_SLAKING,
+#line 16887
+            .gender = TRAINER_MON_MALE,
+#line 16887
+            .heldItem = ITEM_SURGING_STONE,
+#line 16893
+            .ev = TRAINER_PARTY_EVS(248, 252, 0, 0, 0, 8),
+#line 16894
+            .iv = TRAINER_PARTY_IVS(5, 5, 5, 5, 5, 5),
+#line 16888
+            .ability = ABILITY_TRUANT,
+#line 16889
+            .lvl = 40,
+#line 16890
+            .ball = ITEM_DREAM_BALL,
+#line 16891
+            .friendship = 255,
+#line 16892
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16895
+                MOVE_BODY_SLAM,
+                MOVE_BODY_PRESS,
+                MOVE_HEAVY_SLAM,
+                MOVE_POWER_SURGE,
+            },
             },
         },
     },

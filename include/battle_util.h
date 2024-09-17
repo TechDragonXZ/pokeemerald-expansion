@@ -271,4 +271,8 @@ bool8 CanMonParticipateInSkyBattle(struct Pokemon *mon);
 bool8 IsMonBannedFromSkyBattles(u16 species);
 void RemoveBattlerType(u32 battler, u8 type);
 
+bool32 CanPowerSurge(u32 battler);
+void ActivatePowerSurge(u32 battler);
+bool32 IsBattlerPowerSurged(u32 battler);
+
 #endif // GUARD_BATTLE_UTIL_H

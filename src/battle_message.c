@@ -852,6 +852,10 @@ static const u8 sText_SupersweetAromaWafts[] = _("A supersweet aroma is wafting 
 static const u8 sText_TidyingUpComplete[] = _("Tidying up complete!");
 static const u8 sText_FickleBeamDoubled[] = _("{B_ATK_NAME_WITH_PREFIX} is going all\nout for this attack!");
 
+
+static const u8 sText_PowerSurgeReacting[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_LAST_ITEM} is\nreacting to {B_ATK_TRAINER_NAME}'s Surge Band!");
+static const u8 sText_PowerSurgeEvolved[] = _("{B_ATK_NAME_WITH_PREFIX} power has suged!");
+
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
     [STRINGID_FICKLEBEAMDOUBLED - BATTLESTRINGS_TABLE_START] = sText_FickleBeamDoubled,
@@ -1556,6 +1560,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ITEMWASUSEDUP - BATTLESTRINGS_TABLE_START] = sText_ItemWasUsedUp,
     [STRINGID_ATTACKERLOSTITSTYPE - BATTLESTRINGS_TABLE_START] = sText_AttackerLostItsType,
     [STRINGID_CLOAKEDINAHARSHLIGHT - BATTLESTRINGS_TABLE_START] = sText_PkmnIsCloakedInAHarshLight,
+
+    [STRINGID_POWERSURGEREACTING - BATTLESTRINGS_TABLE_START] = sText_PowerSurgeReacting,
+    [STRINGID_POWERSURGED - BATTLESTRINGS_TABLE_START] = sText_PowerSurgeEvolved,
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -4085,6 +4092,7 @@ struct TrainerSlide
     const u8 *msgZMove;
     const u8 *msgBeforeFirstTurn;
     const u8 *msgDynamax;
+    const u8 *msgPowerSurge;
 };
 
 static const struct TrainerSlide sTrainerSlides[] =
@@ -4296,6 +4304,14 @@ u32 ShouldDoTrainerSlide(u32 battler, u32 which)
                 {
                     gBattleStruct->trainerSlideDynamaxMsgDone = TRUE;
                     gBattleStruct->trainerSlideMsg = sTrainerSlides[i].msgDynamax;
+                    return TRUE;
+                }
+                break;
+            case TRAINER_SLIDE_POWER_SURGE:
+                if (sTrainerSlides[i].msgPowerSurge != NULL && !gBattleStruct->trainerSlidePowerSurgeMsgDone)
+                {
+                    gBattleStruct->trainerSlidePowerSurgeMsgDone = TRUE;
+                    gBattleStruct->trainerSlideMsg = sTrainerSlides[i].msgPowerSurge;
                     return TRUE;
                 }
                 break;

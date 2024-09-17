@@ -2510,3 +2510,13 @@
 	printstring STRINGID_EMPTYSTRING3
 	waitmessage 1
 	.endm
+
+	.macro handlepowersurge battler:req, case:req
+	callnative BS_HandlePowerSurge
+	.byte \battler
+	.byte \case
+	.endm
+
+	.macro trytrainerslidepowersurgemsg
+	callnative BS_TryTrainerSlidePowerSurgeMsg
+	.endm

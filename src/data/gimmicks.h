@@ -50,5 +50,15 @@ const struct GimmickInfo gGimmicksInfo[GIMMICKS_COUNT] =
         .indicatorPal = &sSpritePalette_TeraIndicator,
         .CanActivate = CanTerastallize,
         .ActivateGimmick = ActivateTera,
+    },
+    [GIMMICK_SURGE] =
+    {
+        .triggerSheet = &sSpriteSheet_PowerSurgeTrigger,
+        .triggerPal = &sSpritePalette_PowerSurgeTrigger,
+        .triggerTemplate = &sSpriteTemplate_GimmickTrigger,
+        .indicatorSheet = &sSpriteSheet_PowerSurgeIndicator,
+        .indicatorPal = &sSpritePalette_PowerSurgeIndicator,
+        .CanActivate = CanPowerSurge,
+        .ActivateGimmick = ActivatePowerSurge,
     }
 };

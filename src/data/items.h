@@ -14100,4 +14100,37 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+    // Custom
+    [ITEM_SURGING_STONE] =
+    {
+        .name = _("Surging Stone"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "certain Pokémon to\n"
+            "get a surge in power."),
+        .holdEffect = HOLD_EFFECT_SURGING_STONE,
+        .pocket = POCKET_MEGA_STONES,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Kangaskhanite,
+        .iconPalette = gItemIconPalette_Kangaskhanite,
+    },
+
+    [ITEM_SURGE_BAND] =
+    {
+        .name = _("Surge Band"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A band that allows\n"
+            "a Pokémon to undergo\n"
+            "Power Surging."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_DynamaxBand,
+        .iconPalette = gItemIconPalette_DynamaxBand,
+    },
+
 };

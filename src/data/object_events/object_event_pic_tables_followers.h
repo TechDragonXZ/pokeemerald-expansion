@@ -2042,6 +2042,9 @@ static const struct SpriteFrameImage sPicTable_Vigoroth[] = {
 static const struct SpriteFrameImage sPicTable_Slaking[] = {
     overworld_ascending_frames(gObjectEventPic_Slaking, 4, 4),
 };
+static const struct SpriteFrameImage sPicTable_SlakingSurge[] = {
+    overworld_ascending_frames(gObjectEventPic_SlakingSurge, 4, 4),
+};
 #endif //P_FAMILY_SLAKOTH
 
 #if P_FAMILY_NINCADA

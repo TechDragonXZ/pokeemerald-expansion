@@ -3873,6 +3873,18 @@ static const union AnimCmd sAnim_Slaking_1[] =
     ANIMCMD_FRAME(0, 22),
     ANIMCMD_END,
 };
+
+static const union AnimCmd sAnim_SlakingSurge_1[] =
+{
+    ANIMCMD_FRAME(0, 13),
+    ANIMCMD_FRAME(1, 7),
+    ANIMCMD_FRAME(0, 13),
+    ANIMCMD_FRAME(1, 7),
+    ANIMCMD_FRAME(0, 13),
+    ANIMCMD_FRAME(1, 7),
+    ANIMCMD_FRAME(0, 11),
+    ANIMCMD_END,
+};
 #endif //P_FAMILY_SLAKOTH
 
 #if P_FAMILY_NINCADA
@@ -11109,6 +11121,7 @@ SINGLE_ANIMATION(Breloom);
 SINGLE_ANIMATION(Slakoth);
 SINGLE_ANIMATION(Vigoroth);
 SINGLE_ANIMATION(Slaking);
+SINGLE_ANIMATION(SlakingSurge);
 #endif //P_FAMILY_SLAKOTH
 #if P_FAMILY_NINCADA
 SINGLE_ANIMATION(Nincada);
