@@ -182,7 +182,7 @@ void NewGameInitData(void)
     gPlayerPartyCount = 0;
     ZeroPlayerPartyMons();
     ResetPokemonStorageSystem();
-    DeactivateAllRoamers();
+    StopAllRoamers();
     gSaveBlock1Ptr->registeredItem = ITEM_NONE;
     ClearBag();
     NewGameInitPCItems();
@@ -209,6 +209,10 @@ void NewGameInitData(void)
     memset(gSaveBlock3Ptr->dexNavSearchLevels, 0, sizeof(gSaveBlock3Ptr->dexNavSearchLevels));
 #endif
     gSaveBlock3Ptr->dexNavChain = 0;
+#if MULTIPLE_ROAMERS_EXAMPLE	
+    InitRoamer();
+    FlagSet(FLAG_SYS_POKEDEX_GET);
+#endif
 }
 
 static void ResetMiniGamesRecords(void)

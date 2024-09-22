@@ -12,6 +12,7 @@
 #include "overworld.h"
 #include "wallclock.h"
 #include "constants/form_change_types.h"
+#include "roamer.h"
 
 static void UpdatePerDay(struct Time *localTime);
 static void UpdatePerMinute(struct Time *localTime);
@@ -55,6 +56,7 @@ static void UpdatePerDay(struct Time *localTime)
         SetShoalItemFlag(daysSince);
         SetRandomLotteryNumber(daysSince);
         UpdateDaysPassedSinceFormChange(daysSince);
+        UpdateRoamerRespawns(daysSince);
         *days = localTime->days;
     }
 }
