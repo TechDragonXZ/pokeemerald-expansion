@@ -77,7 +77,8 @@
         {
           "type": "hidden_mons",
           "encounter_rates": [
-            100
+            50,
+            50
           ]
         }
       ],
@@ -8945,6 +8946,11 @@
           "hidden_mons": {
             "encounter_rate": 1,
             "mons": [
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_CORSOLA"
+              },
               {
                 "min_level": 25,
                 "max_level": 30,
