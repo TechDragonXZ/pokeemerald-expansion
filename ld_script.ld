@@ -364,6 +364,7 @@ SECTIONS {
         src/ui_startmenu_full.o(.text);
         src/new_shop.o(.text);
         src/ui_birch_case.o(.text);
+        src/ui_main_menu.o(.text);
     } > ROM =0
 
     script_data :
@@ -736,6 +737,7 @@ SECTIONS {
         src/ui_startmenu_full.o(.rodata);
         src/new_shop.o(.rodata);
         src/ui_birch_case.o(.rodata);
+        src/ui_main_menu.o(.rodata);
     } > ROM =0
 
     song_data :
