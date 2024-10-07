@@ -4,7 +4,7 @@ const u8 gEasyChatWord_Money[] = _("MONEY");
 const u8 gEasyChatWord_Allowance[] = _("ALLOWANCE");
 const u8 gEasyChatWord_Bath[] = _("BATH");
 const u8 gEasyChatWord_Conversation[] = _("CONVERSATION");
-const u8 gEasyChatWord_School[] = _("SCHOOL");
+const u8 gEasyChatWord_School[] = _("School");
 const u8 gEasyChatWord_Commemorate[] = _("COMMEMORATE");
 const u8 gEasyChatWord_Habit[] = _("HABIT");
 const u8 gEasyChatWord_Group[] = _("GROUP");
@@ -41,7 +41,7 @@ const u8 gEasyChatWord_Dream[] = _("DREAM");
 const u8 gEasyChatWord_Kindergarten[] = _("KINDERGARTEN");
 const u8 gEasyChatWord_Life[] = _("LIFE");
 const u8 gEasyChatWord_Radio[] = _("RADIO");
-const u8 gEasyChatWord_Rental[] = _("RENTAL");
+const u8 gEasyChatWord_Rental[] = _("Rental");
 const u8 gEasyChatWord_World[] = _("WORLD");
 
 const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {

@@ -2607,4 +2607,33 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    // Custom
+    [ABILITY_SCARE] =
+    {
+        .name = _("Scare"),
+        .description = COMPOUND_STRING("Lowers the foe's Sp. Atk."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_STONE_DEBRIS] =
+    {
+        .name = _("Stone Debris"),
+        .description = COMPOUND_STRING("Throws spikes if hit."),
+        .aiRating = 4,
+    },
+
+    [ABILITY_WEB_SLINGER] =
+    {
+        .name = _("Web Slinger"),
+        .description = COMPOUND_STRING("Throws sticky webs if hit."),
+        .aiRating = 4,
+    },
+
+    [ABILITY_UNSTABLE_GENES] =
+    {
+        .name = _("Unstable Genes"),
+        .description = COMPOUND_STRING("Boosts evolutionary powers."),
+        .aiRating = 4,
+    },
 };

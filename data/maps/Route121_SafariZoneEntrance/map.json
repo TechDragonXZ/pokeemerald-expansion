@@ -11,13 +11,14 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
       "x": 17,
-      "y": 9,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -52,6 +53,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 20,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 22,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route121_SafariZoneEntrance_EventScript_TerrariumAttendant",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -71,17 +98,24 @@
     },
     {
       "x": 14,
-      "y": 13,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_ROUTE121",
       "dest_warp_id": "0"
     },
     {
       "x": 15,
-      "y": 13,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_ROUTE121",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_LOBBY",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
@@ -93,6 +127,24 @@
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "Route121_SafariZoneEntrance_EventScript_EntranceCounterTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route121_SafariZoneEntrance_EventScript_TryEntry"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 2,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route121_SafariZoneEntrance_EventScript_ToggleEntry"
     }
   ],
   "bg_events": [

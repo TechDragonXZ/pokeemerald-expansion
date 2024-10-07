@@ -97,10 +97,12 @@
 // *************************************************** //
 // Near-universal moves found in sUniversalMoves:      //
 // - MOVE_BIDE                                         //
+// - MOVE_FINAL_BLOW                                   //
 // - MOVE_FRUSTRATION                                  //
 // - MOVE_HIDDEN_POWER                                 //
 // - MOVE_MIMIC                                        //
 // - MOVE_NATURAL_GIFT                                 //
+// - MOVE_POWER_SURGE                                  //
 // - MOVE_RAGE                                         //
 // - MOVE_RETURN                                       //
 // - MOVE_SECRET_POWER                                 //
@@ -1024,6 +1026,31 @@ static const u16 sRaichuTeachableLearnset[] = {
     MOVE_SLEEP_TALK,
     MOVE_SNORE,
     MOVE_SWAGGER,
+    MOVE_SWIFT,
+    MOVE_THUNDER_PUNCH,
+    MOVE_THUNDER_WAVE,
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sPikachuPartnerTeachableLearnset[] = {
+    MOVE_BRICK_BREAK,
+    MOVE_DIG,
+    MOVE_DOUBLE_TEAM,
+    MOVE_FACADE,
+    MOVE_FOCUS_PUNCH,
+    MOVE_IRON_TAIL,
+    MOVE_LIGHT_SCREEN,
+    MOVE_PROTECT,
+    MOVE_RAIN_DANCE,
+    MOVE_REFLECT,
+    MOVE_REST,
+    MOVE_SURF,
+    MOVE_THIEF,
+    MOVE_THUNDER,
+    MOVE_THUNDERBOLT,
+    MOVE_BODY_SLAM,
+    MOVE_ENDURE,
+    MOVE_SLEEP_TALK,
     MOVE_SWIFT,
     MOVE_THUNDER_PUNCH,
     MOVE_THUNDER_WAVE,
@@ -7338,6 +7365,25 @@ static const u16 sEeveeTeachableLearnset[] = {
     MOVE_SLEEP_TALK,
     MOVE_SNORE,
     MOVE_SWAGGER,
+    MOVE_SWIFT,
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sEeveePartnerTeachableLearnset[] = {
+    MOVE_CALM_MIND,
+    MOVE_DIG,
+    MOVE_FACADE,
+    MOVE_PROTECT,
+    MOVE_RAIN_DANCE,
+    MOVE_REST,
+    MOVE_ROAR,
+    MOVE_SHADOW_BALL,
+    MOVE_SUNNY_DAY,
+    MOVE_BODY_SLAM,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENDURE,
+    MOVE_MUD_SLAP,
+    MOVE_SLEEP_TALK,
     MOVE_SWIFT,
     MOVE_UNAVAILABLE,
 };

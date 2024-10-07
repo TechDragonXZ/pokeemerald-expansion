@@ -35,6 +35,8 @@
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
     "gMapGroup_Terrarium",
+    "gMapGroup_Terrarium_Subareas",
+    "gMapGroup_Terrarium_Indoors",
     "gMapGroup_None"
   ],
   "gMapGroup_TownsAndRoutes": [
@@ -624,7 +626,26 @@
     "Route124_DivingTreasureHuntersHouse"
   ],
   "gMapGroup_Terrarium": [
-
+    "Terrarium_Center",
+    "Terrarium_North",
+    "Terrarium_South",
+    "Terrarium_East",
+    "Terrarium_West",
+    "Terrarium_SouthEast",
+    "Terrarium_NorthWest",
+    "Terrarium_NorthEast",
+    "Terrarium_SouthWest"
+  ],
+  "gMapGroup_Terrarium_Subareas": [
+    "Terrarium_Volcano",
+    "Terrarium_IcyCave",
+    "Terrarium_RockyCavern",
+    "Terrarium_FoggyCavern"
+  ],
+  "gMapGroup_Terrarium_Indoors": [
+    "Terrarium_Lobby",
+    "Terrarium_SouthWest_RestHouse",
+    "Terrarium_NorthEast_RestHouse"
   ],
   "gMapGroup_None": [
     "None"

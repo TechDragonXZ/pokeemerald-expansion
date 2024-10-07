@@ -123,6 +123,12 @@
 #define MULTI_FALLARBOR_TENT_RULES         112
 #define MULTI_TAG_MATCH_TYPE               113
 #define MULTI_BERRY_PLOT                   114
+#define MULTI_ALTERING_CAVE_ENCOUNTERS     115
+#define MULTI_ALTERING_CAVE_ENCOUNTERS_PAGE2     116
+#define MULTI_ALTERING_CAVE_ENCOUNTERS_PAGE3     117
+#define MULTI_TERRARIUM_ZONES              118
+#define MULTI_TERRARIUM_GROUPS             119
+#define MULTI_VENDING_MACHINE_POKEBALL     120
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

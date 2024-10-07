@@ -458,7 +458,7 @@
     },
     {
       "map_section": "MAPSEC_SAFARI_ZONE",
-      "name": "SAFARI ZONE",
+      "name": "Safari Zone",
       "x": 16,
       "y": 2,
       "width": 1,
@@ -466,7 +466,7 @@
     },
     {
       "map_section": "MAPSEC_BATTLE_FRONTIER",
-      "name": "BATTLE FRONTIER",
+      "name": "Battle FRONTIER",
       "x": 22,
       "y": 12,
       "width": 1,
@@ -1095,7 +1095,7 @@
     },
     {
       "map_section": "MAPSEC_KANTO_SAFARI_ZONE",
-      "name": "SAFARI ZONE",
+      "name": "Safari Zone",
       "name_clone": true,
       "x": 0,
       "y": 0,
@@ -1104,7 +1104,7 @@
     },
     {
       "map_section": "MAPSEC_POKEMON_LEAGUE",
-      "name": "POKéMON LEAGUE",
+      "name": "POKéMON League",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1128,7 +1128,7 @@
     },
     {
       "map_section": "MAPSEC_POKEMON_TOWER",
-      "name": "POKéMON TOWER",
+      "name": "POKéMON Tower",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1176,7 +1176,7 @@
     },
     {
       "map_section": "MAPSEC_FOUR_ISLAND",
-      "name": "FOUR ISLAND",
+      "name": "Four ISLAND",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1344,7 +1344,7 @@
     },
     {
       "map_section": "MAPSEC_TRAINER_TOWER",
-      "name": "TRAINER TOWER",
+      "name": "Trainer Tower",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1416,7 +1416,7 @@
     },
     {
       "map_section": "MAPSEC_BERRY_FOREST",
-      "name": "BERRY FOREST",
+      "name": "Berry FOREST",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1440,7 +1440,7 @@
     },
     {
       "map_section": "MAPSEC_TRAINER_TOWER_2",
-      "name": "TRAINER TOWER",
+      "name": "Trainer Tower",
       "name_clone": true,
       "x": 0,
       "y": 0,
@@ -1601,7 +1601,7 @@
     },
     {
       "map_section": "MAPSEC_MIRAGE_TOWER",
-      "name": "MIRAGE TOWER",
+      "name": "MIRAGE Tower",
       "x": 8,
       "y": 2,
       "width": 1,
@@ -1705,9 +1705,17 @@
     },
     {
       "map_section": "MAPSEC_TRAINER_HILL",
-      "name": "TRAINER HILL",
+      "name": "Trainer HILL",
       "x": 8,
       "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_TERRARIUM",
+      "name": "TERRARIUM",
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     }

@@ -1634,3 +1634,41 @@ const u16 gTilesetPalettes_UnionRoom[][16] =
 };
 
 const u32 gTilesetTiles_UnionRoom[] = INCBIN_U32("data/tilesets/secondary/union_room/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_General_Snowy[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_snowy/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_General_Snowy[] = INCBIN_U32("data/tilesets/primary/general_snowy/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Terrarium[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/terrarium/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Terrarium[] = INCBIN_U32("data/tilesets/secondary/terrarium/tiles.4bpp.lz");

@@ -235,7 +235,7 @@ SeafloorCavern_Room9_Text_ArchieSoItWasYou:
 SeafloorCavern_Room9_Text_ArchieBeholdKyogre:
 	.string "ARCHIE: Behold!\p"
 	.string "See how beautiful it is, the sleeping\n"
-	.string "form of the ancient POKéMON KYOGRE!\p"
+	.string "form of the ancient Pokémon KYOGRE!\p"
 	.string "I have waited so long for this day to\n"
 	.string "come…$"
 
@@ -256,16 +256,16 @@ SeafloorCavern_Room9_Text_ArchieWithThisRedOrb:
 	.string "you are truly gifted.\p"
 	.string "But!\n"
 	.string "I have this in my possession!\p"
-	.string "With this RED ORB, I can make KYOGRE…$"
+	.string "With this Red Orb, I can make KYOGRE…$"
 
 SeafloorCavern_Room9_Text_RedOrbShinesByItself:
-	.string "The RED ORB suddenly began shining\n"
+	.string "The Red Orb suddenly began shining\n"
 	.string "by itself!$"
 
 SeafloorCavern_Room9_Text_ArchieWhereDidKyogreGo:
 	.string "ARCHIE: What?!\p"
 	.string "I didn't do anything.\n"
-	.string "Why did the RED ORB…\p"
+	.string "Why did the Red Orb…\p"
 	.string "Where did KYOGRE go?$"
 
 SeafloorCavern_Room9_Text_ArchieAMessageFromOutside:
@@ -290,7 +290,7 @@ SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard:
 
 SeafloorCavern_Room9_Text_ArchieWhyDidKyogreDisappear:
 	.string "ARCHIE: There's something wrong…\p"
-	.string "The RED ORB is supposed to awaken\n"
+	.string "The Red Orb is supposed to awaken\n"
 	.string "and control KYOGRE…\p"
 	.string "But… Why?\n"
 	.string "Why did KYOGRE disappear?\p"
@@ -310,7 +310,7 @@ SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty:
 	.string "Don't get all high and mighty with me!\p"
 	.string "Wasn't it you, TEAM MAGMA, that\n"
 	.string "infuriated GROUDON?\p"
-	.string "So long as I have this RED ORB,\n"
+	.string "So long as I have this Red Orb,\n"
 	.string "I should be able to control KYOGRE…\p"
 	.string "I should be able to control it…$"
 

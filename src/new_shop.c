@@ -443,7 +443,7 @@ const u8 sText_YouDontHaveMoney[] = _("You don't have\nenough money.{PAUSE_UNTIL
 const u8 sText_NoMoreRoomForThis[] = _("You have no more\nroom for this\nitem.{PAUSE_UNTIL_PRESS}");
 const u8 sText_SpaceForVar1Full[] = _("The space for\n{STR_VAR_1}\nis full.{PAUSE_UNTIL_PRESS}");
 const u8 sText_ThrowInPremierBall[] = _("I'll throw in\na PREMIER BALL,\ntoo.{PAUSE_UNTIL_PRESS}");
-const u8 sText_ThrowInPremierBalls[] = _("I'll throw in\n{STR_VAR_1} PREMIER BALLS,\ntoo.{PAUSE_UNTIL_PRESS}");
+const u8 sText_ThrowInPremierBalls[] = _("I'll throw in\n{STR_VAR_1} PREMIER Balls,\ntoo.{PAUSE_UNTIL_PRESS}");
 
 static u8 CreateShopMenu(u8 martType)
 {

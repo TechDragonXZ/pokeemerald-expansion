@@ -55,15 +55,15 @@
 #define FLAG_NO_COLLISION       0x2A // No Collision Flag
 #define FLAG_FORCE_SHINY        0x2B // Force Shiny Flag
 #define FLAG_FORCE_NO_SHINY     0x2C // Force No Shiny Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
+#define FLAG_TERRARIUM_ACCESS   0x2D // Player Can Access Terrarium Flag
+#define FLAG_DEFEATED_REGIDRAGO 0x2E // Defeated Regidrago Flag
+#define FLAG_DEFEATED_REGIELEKI 0x2F // Defeated Regieleki Flag
+#define FLAG_DEFEATED_REGIGIGAS 0x30 // Defeated Regigigas Flag
+#define FLAG_HIDE_REGIDRAGO     0x31 // Hide Regidrago Flag
+#define FLAG_HIDE_REGIELEKI     0x32 // Hide Regieleki Flag
+#define FLAG_HIDE_REGIGIGAS     0x33 // Hide Regigigas Flag
+#define FLAG_NOT_FIRST_TIME     0x34 // Not First Visit To The Terrarium Flag
+#define FLAG_IN_TERRARIUM    0x35 // Inside Terrarium Flag
 #define FLAG_UNUSED_0x036    0x36 // Unused Flag
 #define FLAG_UNUSED_0x037    0x37 // Unused Flag
 #define FLAG_UNUSED_0x038    0x38 // Unused Flag
@@ -651,6 +651,8 @@
 #define FLAG_HIDDEN_ITEM_NAVEL_ROCK_TOP_SACRED_ASH           (FLAG_HIDDEN_ITEMS_START + 0x6D)
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
+
+#define FLAG_HIDDEN_ITEMS_END FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL
 
 #define FLAG_UNUSED_0x264  0x264 // Unused Flag
 #define FLAG_UNUSED_0x265  0x265 // Unused Flag

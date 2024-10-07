@@ -28,7 +28,7 @@ Roulette_Text_PlayMinimumWagerIsX::
 	.string "is {STR_VAR_1}. Do you want to play?$"
 
 Roulette_Text_NotEnoughCoins::
-	.string "You don't have enough COINS.$"
+	.string "You don't have enough Coins.$"
 
 Roulette_Text_SpecialRateTable::
 	.string "Special rate table right now!$"
@@ -47,10 +47,10 @@ Roulette_Text_NothingDoing::
 	.string "Nothing doing!$"
 
 Roulette_Text_YouveWonXCoins::
-	.string "You've won {STR_VAR_1} COINS!$"
+	.string "You've won {STR_VAR_1} Coins!$"
 
 Roulette_Text_NoCoinsLeft::
-	.string "No COINS left…$"
+	.string "No Coins left…$"
 
 Roulette_Text_KeepPlaying::
 	.string "Keep playing?$"

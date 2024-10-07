@@ -910,7 +910,20 @@
 
 #define MOVES_COUNT_GEN9 848
 
-#define MOVES_COUNT         MOVES_COUNT_GEN9
+// Custom
+#define MOVE_DRAKE_SWARM     848
+#define MOVE_LEAF_SCALE      849
+#define MOVE_FINAL_BLOW      850
+#define MOVE_MYSTIC_SLASH    851
+#define MOVE_DISASTER_BLADE  852
+#define MOVE_GENETIC_BURST   853
+#define MOVE_POWER_SURGE     854
+#define MOVE_BEAM_BASH       855
+#define MOVE_FROSTBURN       856
+
+#define MOVES_COUNT_CUSTOM   857
+
+#define MOVES_COUNT         MOVES_COUNT_CUSTOM
 
 // Z Moves
 #define MOVE_BREAKNECK_BLITZ (MOVES_COUNT + 0)

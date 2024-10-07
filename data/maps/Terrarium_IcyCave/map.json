@@ -1,0 +1,35 @@
+{
+  "id": "MAP_TERRARIUM_ICY_CAVE",
+  "name": "Terrarium_IcyCave",
+  "layout": "LAYOUT_TERRARIUM_ICYCAVE",
+  "music": "MUS_SAFARI_ZONE",
+  "region_map_section": "MAPSEC_TERRARIUM",
+  "requires_flash": false,
+  "weather": "WEATHER_SNOW",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 24,
+      "y": 58,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_SOUTH_WEST",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

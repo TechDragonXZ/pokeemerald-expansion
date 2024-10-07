@@ -592,10 +592,30 @@
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 
 // gMapGroup_Terrarium
+#define MAP_TERRARIUM_CENTER     (0 | (34 << 8))
+#define MAP_TERRARIUM_NORTH      (1 | (34 << 8))
+#define MAP_TERRARIUM_SOUTH      (2 | (34 << 8))
+#define MAP_TERRARIUM_EAST       (3 | (34 << 8))
+#define MAP_TERRARIUM_WEST       (4 | (34 << 8))
+#define MAP_TERRARIUM_SOUTH_EAST (5 | (34 << 8))
+#define MAP_TERRARIUM_NORTH_WEST (6 | (34 << 8))
+#define MAP_TERRARIUM_NORTH_EAST (7 | (34 << 8))
+#define MAP_TERRARIUM_SOUTH_WEST (8 | (34 << 8))
+
+// gMapGroup_Terrarium_Subareas
+#define MAP_TERRARIUM_VOLCANO      (0 | (35 << 8))
+#define MAP_TERRARIUM_ICY_CAVE     (1 | (35 << 8))
+#define MAP_TERRARIUM_ROCKY_CAVERN (2 | (35 << 8))
+#define MAP_TERRARIUM_FOGGY_CAVERN (3 | (35 << 8))
+
+// gMapGroup_Terrarium_Indoors
+#define MAP_TERRARIUM_LOBBY                 (0 | (36 << 8))
+#define MAP_TERRARIUM_SOUTH_WEST_REST_HOUSE (1 | (36 << 8))
+#define MAP_TERRARIUM_NORTH_EAST_REST_HOUSE (2 | (36 << 8))
 
 // gMapGroup_None
-#define MAP_NONE (0 | (35 << 8))
+#define MAP_NONE (0 | (37 << 8))
 
-#define MAP_GROUPS_COUNT 36
+#define MAP_GROUPS_COUNT 38
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H
