@@ -213,3 +213,6 @@ const u16 gMetatileAttributes_General_Snowy[] = INCBIN_U16("data/tilesets/primar
 
 const u16 gMetatiles_Terrarium[] = INCBIN_U16("data/tilesets/secondary/terrarium/metatiles.bin");
 const u16 gMetatileAttributes_Terrarium[] = INCBIN_U16("data/tilesets/secondary/terrarium/metatile_attributes.bin");
+
+const u16 gMetatiles_Research_Facility_Floor_2[] = INCBIN_U16("data/tilesets/secondary/research_facility_floor_2/metatiles.bin");
+const u16 gMetatileAttributes_Research_Facility_Floor_2[] = INCBIN_U16("data/tilesets/secondary/research_facility_floor_2/metatile_attributes.bin");

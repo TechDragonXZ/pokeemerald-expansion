@@ -847,3 +847,14 @@ const struct Tileset gTileset_Terrarium =
     .metatileAttributes = gMetatileAttributes_Terrarium,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Research_Facility_Floor_2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Research_Facility_Floor_2,
+    .palettes = gTilesetPalettes_Research_Facility_Floor_2,
+    .metatiles = gMetatiles_Research_Facility_Floor_2,
+    .metatileAttributes = gMetatileAttributes_Research_Facility_Floor_2,
+    .callback = NULL,
+};

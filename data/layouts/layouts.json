@@ -5508,6 +5508,42 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/Terrarium_NorthEast_RestHouse/border.bin",
       "blockdata_filepath": "data/layouts/Terrarium_NorthEast_RestHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_RESEARCH_FACILITY_FLOOR1",
+      "name": "Research_Facility_Floor1_Layout",
+      "width": 16,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/Research_Facility_Floor1/border.bin",
+      "blockdata_filepath": "data/layouts/Research_Facility_Floor1/map.bin"
+    },
+    {
+      "id": "LAYOUT_RESEARCH_FACILITY_FLOOR2",
+      "name": "Research_Facility_Floor2_Layout",
+      "width": 16,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Research_Facility_Floor_2",
+      "border_filepath": "data/layouts/Research_Facility_Floor2/border.bin",
+      "blockdata_filepath": "data/layouts/Research_Facility_Floor2/map.bin"
+    },
+    {
+      "id": "LAYOUT_DREAM_WORLD_HUB",
+      "name": "Dream_World_Hub_Layout",
+      "width": 60,
+      "height": 60,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Dream_World_Hub/border.bin",
+      "blockdata_filepath": "data/layouts/Dream_World_Hub/map.bin"
     }
   ]
 }

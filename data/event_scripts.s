@@ -1111,3 +1111,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Terrarium_SouthWest_RestHouse/scripts.inc"
 
 	.include "data/maps/Terrarium_NorthEast_RestHouse/scripts.inc"
+
+	.include "data/maps/Research_Facility_Floor1/scripts.inc"
+
+	.include "data/maps/Research_Facility_Floor2/scripts.inc"
+
+	.include "data/maps/Dream_World_Hub/scripts.inc"

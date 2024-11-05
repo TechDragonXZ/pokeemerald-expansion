@@ -613,9 +613,16 @@
 #define MAP_TERRARIUM_SOUTH_WEST_REST_HOUSE (1 | (36 << 8))
 #define MAP_TERRARIUM_NORTH_EAST_REST_HOUSE (2 | (36 << 8))
 
-// gMapGroup_None
-#define MAP_NONE (0 | (37 << 8))
+// gMapGroup_Research_Facility
+#define MAP_RESEARCH_FACILITY_FLOOR1 (0 | (37 << 8))
+#define MAP_RESEARCH_FACILITY_FLOOR2 (1 | (37 << 8))
 
-#define MAP_GROUPS_COUNT 38
+// gMapGroup_Dream_World
+#define MAP_DREAM_WORLD_HUB (0 | (38 << 8))
+
+// gMapGroup_None
+#define MAP_NONE (0 | (39 << 8))
+
+#define MAP_GROUPS_COUNT 40
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H
