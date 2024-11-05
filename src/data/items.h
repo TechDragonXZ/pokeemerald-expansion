@@ -14090,4 +14090,20 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+    [ITEM_EON_FLUTE] =
+    {
+        .name = _("Eon Flute"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A flute that can\n"
+            "summon Latias or\n"
+            "Latios."),
+		.importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_EonFlute,
+        .iconPic = gItemIcon_EonFlute,
+        .iconPalette = gItemIconPalette_EonFlute,
+    },
 };
