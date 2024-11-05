@@ -94,9 +94,10 @@ DewfordTown_EventScript_OldRodFisherman::
 
 DewfordTown_EventScript_GiveOldRod::
 	msgbox DewfordTown_Text_GiveYouOneOfMyRods, MSGBOX_DEFAULT
-	giveitem ITEM_OLD_ROD
+	giveitem ITEM_FISHING_ROD
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_OLD_ROD
+	setflag FLAG_RECEIVED_FISHING_ROD
 	msgbox DewfordTown_Text_ThrowInFishingAdvice, MSGBOX_DEFAULT
 	release
 	end

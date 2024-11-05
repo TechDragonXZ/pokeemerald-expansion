@@ -14106,4 +14106,22 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_EonFlute,
         .iconPalette = gItemIconPalette_EonFlute,
     },
+
+    [ITEM_FISHING_ROD] =
+    {
+        .name = _("Fishing Rod"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "The best fishing\n"
+            "rod for catching\n"
+            "wild Pokémon."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .secondaryId = FISHING_ROD,
+        .fieldUseFunc = ItemUseOutOfBattle_VariableRod,
+        .iconPic = gItemIcon_SuperRod,
+        .iconPalette = gItemIconPalette_SuperRod,
+    },
+
 };

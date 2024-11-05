@@ -998,11 +998,12 @@
 #define ITEM_TWICE_SPICED_RADISH 826
 #define ITEM_POKESHI_DOLL 827
 #define ITEM_EON_FLUTE 828
+#define ITEM_FISHING_ROD 829
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 829
+#define ITEMS_COUNT 830
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
@@ -1046,6 +1047,7 @@
 #define OLD_ROD   0
 #define GOOD_ROD  1
 #define SUPER_ROD 2
+#define FISHING_ROD 3
 
 // Secondary IDs for bikes
 #define MACH_BIKE 0

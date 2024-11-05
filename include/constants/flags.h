@@ -64,9 +64,9 @@
 #define FLAG_HIDE_REGIGIGAS     0x33 // Hide Regigigas Flag
 #define FLAG_NOT_FIRST_TIME     0x34 // Not First Visit To The Terrarium Flag
 #define FLAG_IN_TERRARIUM    0x35 // Inside Terrarium Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
+#define FLAG_GOOD_ROD_TECH   0x36 // Good Rod Tech Flag
+#define FLAG_SUPER_ROD_TECH  0x37 // Super Rod Tech Flag
+#define FLAG_RECEIVED_FISHING_ROD    0x38 // Received Fishing Rod Flag
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag

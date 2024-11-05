@@ -98,4 +98,9 @@
 // Pokémon Center
 #define OW_IGNORE_EGGS_ON_HEAL     GEN_LATEST               // In Gen 4+, the nurse in the Pokémon Center does not heal Eggs on healing machine.
 
+// Variable Rod
+#define OW_VAR_VARIABLE_ROD_USE_TECHNIQUE       VAR_ROD_USE_TECHNIQUE     // If this var has a value, the game will use it to remember the used fishing technique.
+#define OW_FLAG_VARIABLE_ROD_GOOD_TECHNIQUE     FLAG_GOOD_ROD_TECH     // If this flag is set, the game will unlock the 'good fishing technique'.
+#define OW_FLAG_VARIABLE_ROD_SUPER_TECHNIQUE    FLAG_SUPER_ROD_TECH     // If this flag is set, the game will unlock the 'super fishing technique'.
+
 #endif // GUARD_CONFIG_OVERWORLD_H

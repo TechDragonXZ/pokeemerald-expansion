@@ -36,6 +36,7 @@ Route118_EventScript_ReceiveGoodRod::
 	giveitem ITEM_GOOD_ROD
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_GOOD_ROD
+	setflag FLAG_GOOD_ROD_TECH
 	msgbox Route118_Text_TryYourLuckFishing, MSGBOX_DEFAULT
 	release
 	end
