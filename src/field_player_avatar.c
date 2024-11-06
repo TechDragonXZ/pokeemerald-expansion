@@ -253,7 +253,7 @@ static bool8 (*const sArrowWarpMetatileBehaviorChecks[])(u8) =
     [DIR_EAST - 1]  = MetatileBehavior_IsEastArrowWarp,
 };
 
-static const u8 sRivalAvatarGfxIds[][2] =
+static const u16 sRivalAvatarGfxIds[][2] =
 {
     [PLAYER_AVATAR_STATE_NORMAL]     = {OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL,     OBJ_EVENT_GFX_RIVAL_MAY_NORMAL},
     [PLAYER_AVATAR_STATE_MACH_BIKE]  = {OBJ_EVENT_GFX_RIVAL_BRENDAN_MACH_BIKE,  OBJ_EVENT_GFX_RIVAL_MAY_MACH_BIKE},
@@ -266,7 +266,7 @@ static const u8 sRivalAvatarGfxIds[][2] =
     [PLAYER_AVATAR_STATE_VSSEEKER]   = {OBJ_EVENT_GFX_RIVAL_BRENDAN_FIELD_MOVE, OBJ_EVENT_GFX_RIVAL_MAY_FIELD_MOVE},
 };
 
-static const u8 sPlayerAvatarGfxIds[][2] =
+static const u16 sPlayerAvatarGfxIds[][2] =
 {
     [PLAYER_AVATAR_STATE_NORMAL]     = {OBJ_EVENT_GFX_BRENDAN_NORMAL,     OBJ_EVENT_GFX_MAY_NORMAL},
     [PLAYER_AVATAR_STATE_MACH_BIKE]  = {OBJ_EVENT_GFX_BRENDAN_MACH_BIKE,  OBJ_EVENT_GFX_MAY_MACH_BIKE},
@@ -279,19 +279,19 @@ static const u8 sPlayerAvatarGfxIds[][2] =
     [PLAYER_AVATAR_STATE_VSSEEKER]   = {OBJ_EVENT_GFX_BRENDAN_FIELD_MOVE, OBJ_EVENT_GFX_MAY_FIELD_MOVE},
 };
 
-static const u8 sFRLGAvatarGfxIds[GENDER_COUNT] =
+static const u16 sFRLGAvatarGfxIds[GENDER_COUNT] =
 {
     [MALE]   = OBJ_EVENT_GFX_RED,
     [FEMALE] = OBJ_EVENT_GFX_LEAF
 };
 
-static const u8 sRSAvatarGfxIds[GENDER_COUNT] =
+static const u16 sRSAvatarGfxIds[GENDER_COUNT] =
 {
     [MALE]   = OBJ_EVENT_GFX_LINK_RS_BRENDAN,
     [FEMALE] = OBJ_EVENT_GFX_LINK_RS_MAY
 };
 
-static const u8 sPlayerAvatarGfxToStateFlag[GENDER_COUNT][5][2] =
+static const u16 sPlayerAvatarGfxToStateFlag[GENDER_COUNT][5][2] =
 {
     [MALE] =
     {
@@ -1330,6 +1330,24 @@ u16 GetRSAvatarGraphicsIdByGender(u8 gender)
 u16 GetPlayerAvatarGraphicsIdByStateId(u8 state)
 {
     return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gPlayerAvatar.gender);
+}
+
+u8 unref_GetRivalAvatarGenderByGraphicsId(u16 gfxId)
+{
+    switch (gfxId)
+    {
+    case OBJ_EVENT_GFX_RIVAL_MAY_NORMAL:
+    case OBJ_EVENT_GFX_RIVAL_MAY_MACH_BIKE:
+    case OBJ_EVENT_GFX_RIVAL_MAY_ACRO_BIKE:
+    case OBJ_EVENT_GFX_RIVAL_MAY_SURFING:
+    case OBJ_EVENT_GFX_RIVAL_MAY_FIELD_MOVE:
+    case OBJ_EVENT_GFX_MAY_UNDERWATER:
+    case OBJ_EVENT_GFX_MAY_FISHING:
+    case OBJ_EVENT_GFX_MAY_WATERING:
+        return FEMALE;
+    default:
+        return MALE;
+    }
 }
 
 u8 GetPlayerAvatarGenderByGraphicsId(u16 gfxId)

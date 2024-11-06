@@ -11025,3 +11025,8 @@ bool8 MovementActionFunc_RunSlow_Step1(struct ObjectEvent *objectEvent, struct S
     }
     return FALSE;
 }
+
+u8 GetObjectEventApricornTreeId(u8 objectEventId)
+{
+    return gObjectEvents[objectEventId].trainerRange_berryTreeId;
+}
