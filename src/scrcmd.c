@@ -16,6 +16,7 @@
 #include "event_object_lock.h"
 #include "event_object_movement.h"
 #include "event_scripts.h"
+#include "fake_rtc.h"
 #include "field_message_box.h"
 #include "field_player_avatar.h"
 #include "field_screen_effect.h"
@@ -43,6 +44,7 @@
 #include "shop.h"
 #include "slot_machine.h"
 #include "sound.h"
+#include "strings.h"
 #include "string_util.h"
 #include "text.h"
 #include "text_window.h"
@@ -690,7 +692,7 @@ bool8 ScrCmd_initclock(struct ScriptContext *ctx)
     u8 hour = VarGet(ScriptReadHalfword(ctx));
     u8 minute = VarGet(ScriptReadHalfword(ctx));
 
-    RtcInitLocalTimeOffset(hour, minute);
+    RtcInitLocalTimeOffset(1, 1, 1, hour, minute, 0);
     return FALSE;
 }
 
@@ -702,10 +704,17 @@ bool8 ScrCmd_dotimebasedevents(struct ScriptContext *ctx)
 
 bool8 ScrCmd_gettime(struct ScriptContext *ctx)
 {
-    RtcCalcLocalTime();
-    gSpecialVar_0x8000 = gLocalTime.hours;
-    gSpecialVar_0x8001 = gLocalTime.minutes;
-    gSpecialVar_0x8002 = gLocalTime.seconds;
+    struct Time *time = FakeRtc_GetCurrentTime();
+    gSpecialVar_0x8000 = time->hours;
+    gSpecialVar_0x8001 = time->minutes;
+    gSpecialVar_0x8002 = time->seconds;
+    gSpecialVar_0x8003 = time->dayOfWeek;
+    gSpecialVar_0x8004 = time->months;
+    gSpecialVar_0x8005 = time->years;
+
+    StringCopy(gStringVar1, gMonthNameStringsTable[time->months]);
+    ConvertIntToDecimalStringN(gStringVar2, time->days, STR_CONV_MODE_LEADING_ZEROS, 2);
+    ConvertIntToDecimalStringN(gStringVar3, time->years, STR_CONV_MODE_RIGHT_ALIGN, 2);
     return FALSE;
 }
 
