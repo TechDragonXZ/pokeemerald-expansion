@@ -6,6 +6,7 @@
 #include "rtc.h"
 #include "fake_rtc.h"
 #include "event_data.h"
+#include "script.h"
 
 struct Time *FakeRtc_GetCurrentTime(void)
 {
@@ -155,13 +156,24 @@ void FakeRtc_ManuallySetTime(u32 year, u32 month, u32 day, u32 hour, u32 minute,
     return;
 }
 
+void SetNewIngameTime(void)
+{
+    u32 Year = STARTING_YEAR;
+    u32 Month = STARTING_MONTH;
+    u32 Day = STARTING_DAY;
+    u32 Hour = STARTING_HOUR;
+    u32 Minute = STARTING_MINUTE;
+    u32 Second = STARTING_SECOND;
+    FakeRtc_ManuallySetTime(Year, Month, Day, Hour, Minute, Second);
+}
+
 // Edit the value after ? of RTC_CUSTOM to edit the custom ratio. 
 u32 FakeRtc_GetSecondsRatio(void)
 {
     return (OW_ALTERED_TIME_RATIO == GEN_8_PLA)   ? 60 :
            (OW_ALTERED_TIME_RATIO == GEN_9)       ? 20 :
-           (OW_ALTERED_TIME_RATIO == RTC_CUSTOM)  ? 1 :
-                                                    1;
+           (OW_ALTERED_TIME_RATIO == RTC_CUSTOM)  ?  1 :
+                                                     1 ;
 }
 
 STATIC_ASSERT((OW_FLAG_PAUSE_TIME == 0 || OW_USE_FAKE_RTC == TRUE), FakeRtcMustBeTrueToPauseTime);
@@ -211,7 +223,7 @@ bool8 RtcCmd_settime(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 RtcMacro_addyear(struct ScriptContext *ctx)
+bool8 RtcCmd_addyear(struct ScriptContext *ctx)
 {
     u32 year = ScriptReadWord(ctx);
     u32 month = 0;
@@ -224,7 +236,7 @@ bool8 RtcMacro_addyear(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 RtcMacro_addmonth(struct ScriptContext *ctx)
+bool8 RtcCmd_addmonth(struct ScriptContext *ctx)
 {
     u32 year = 0;
     u32 month = ScriptReadWord(ctx);
@@ -237,7 +249,7 @@ bool8 RtcMacro_addmonth(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 RtcMacro_addday(struct ScriptContext *ctx)
+bool8 RtcCmd_addday(struct ScriptContext *ctx)
 {
     u32 year = 0;
     u32 month = 0;
@@ -250,7 +262,7 @@ bool8 RtcMacro_addday(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 RtcMacro_addhour(struct ScriptContext *ctx)
+bool8 RtcCmd_addhour(struct ScriptContext *ctx)
 {
     u32 year = 0;
     u32 month = 0;
@@ -263,7 +275,7 @@ bool8 RtcMacro_addhour(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 RtcMacro_addminute(struct ScriptContext *ctx)
+bool8 RtcCmd_addminute(struct ScriptContext *ctx)
 {
     u32 year = 0;
     u32 month = 0;
@@ -276,7 +288,7 @@ bool8 RtcMacro_addminute(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 RtcMacro_setyear(struct ScriptContext *ctx)
+bool8 RtcCmd_setyear(struct ScriptContext *ctx)
 {
     struct Time *time = FakeRtc_GetCurrentTime();
     
@@ -291,7 +303,7 @@ bool8 RtcMacro_setyear(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 RtcMacro_setmonth(struct ScriptContext *ctx)
+bool8 RtcCmd_setmonth(struct ScriptContext *ctx)
 {
     struct Time *time = FakeRtc_GetCurrentTime();
     
@@ -306,7 +318,7 @@ bool8 RtcMacro_setmonth(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 RtcMacro_setday(struct ScriptContext *ctx)
+bool8 RtcCmd_setday(struct ScriptContext *ctx)
 {
     struct Time *time = FakeRtc_GetCurrentTime();
     
@@ -321,7 +333,7 @@ bool8 RtcMacro_setday(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 RtcMacro_sethour(struct ScriptContext *ctx)
+bool8 RtcCmd_sethour(struct ScriptContext *ctx)
 {
     struct Time *time = FakeRtc_GetCurrentTime();
     
@@ -336,7 +348,7 @@ bool8 RtcMacro_sethour(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 RtcMacro_setminute(struct ScriptContext *ctx)
+bool8 RtcCmd_setminute(struct ScriptContext *ctx)
 {
     struct Time *time = FakeRtc_GetCurrentTime();
     

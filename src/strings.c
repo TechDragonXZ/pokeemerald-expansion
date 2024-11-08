@@ -1845,19 +1845,21 @@ const u8 gText_Friday[] = _("Friday,");
 
 const u8 *const gMonthNameStringsTable[] =
 {
-    [MONTH_JAN] = gText_January,
-    [MONTH_FEB] = gText_February,
-    [MONTH_MAR] = gText_March,
-    [MONTH_APR] = gText_April,
-    [MONTH_MAY] = gText_May,
-    [MONTH_JUN] = gText_June,
-    [MONTH_JUL] = gText_July,
-    [MONTH_AUG] = gText_August,
-    [MONTH_SEP] = gText_September,
-    [MONTH_OCT] = gText_October,
-    [MONTH_NOV] = gText_November,
-    [MONTH_DEC] = gText_December,
+    [MONTH_ONE] = gText_January,
+    [MONTH_TWO] = gText_February,
+    [MONTH_THREE] = gText_March,
+    [MONTH_FOUR] = gText_April,
+    [MONTH_FIVE] = gText_May,
+    [MONTH_SIX] = gText_June,
+    [MONTH_SEVEN] = gText_July,
+    [MONTH_EIGHT] = gText_August,
+    [MONTH_NINE] = gText_September,
+    [MONTH_TEN] = gText_October,
+    [MONTH_ELEVEN] = gText_November,
+    [MONTH_TWELVE] = gText_December,
 };
+
+const u8 gText_Month[]    = _("Month");
 
 const u8 gText_January[]    = _("Jan");
 const u8 gText_February[]   = _("Feb");
@@ -1878,7 +1880,7 @@ const u8 gText_CurrentTimeAM[] = _("Time: {STR_VAR_1}:{STR_VAR_2} AM");
 const u8 gText_CurrentTimeAMOff[] = _("Time: {STR_VAR_1} {STR_VAR_2} AM");
 const u8 gText_CurrentTimePM[] = _("Time: {STR_VAR_1}:{STR_VAR_2} PM");
 const u8 gText_CurrentTimePMOff[] = _("Time: {STR_VAR_1} {STR_VAR_2} PM");
-const u8 gText_Date[] = _("{STR_VAR_1} {STR_VAR_2}, {STR_VAR_3}");
+const u8 gText_Date[] = _("{STR_VAR_1} {STR_VAR_2}, YEAR {STR_VAR_3}");
 
 const u8 *const gDayNameStringsTable[7] = {
     [DAY_SUNDAY] = gText_Sunday,
