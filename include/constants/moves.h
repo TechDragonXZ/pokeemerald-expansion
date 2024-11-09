@@ -921,8 +921,9 @@
 #define MOVE_BEAM_BASH       855
 #define MOVE_FROSTBURN       856
 #define MOVE_WIDE_SLASH      857
+#define MOVE_KINGS_BLADE     858
 
-#define MOVES_COUNT_CUSTOM   858
+#define MOVES_COUNT_CUSTOM   859
 
 #define MOVES_COUNT         MOVES_COUNT_CUSTOM
 

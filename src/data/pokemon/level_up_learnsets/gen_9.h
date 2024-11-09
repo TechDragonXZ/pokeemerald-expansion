@@ -15543,7 +15543,9 @@ static const struct LevelUpMove sDoubladeLevelUpLearnset[] = {
 
 static const struct LevelUpMove sAegislashLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 0, MOVE_KINGS_SHIELD),
+    LEVEL_UP_MOVE( 0, MOVE_KINGS_BLADE),
     LEVEL_UP_MOVE( 1, MOVE_KINGS_SHIELD),
+    LEVEL_UP_MOVE( 1, MOVE_KINGS_BLADE),
     LEVEL_UP_MOVE( 1, MOVE_HEAD_SMASH),
     LEVEL_UP_MOVE( 1, MOVE_AERIAL_ACE),
     LEVEL_UP_MOVE( 1, MOVE_METAL_SOUND),

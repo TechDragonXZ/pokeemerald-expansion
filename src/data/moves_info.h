@@ -22291,5 +22291,31 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboMoves = {COMBO_STARTER_SCRATCH, COMBO_STARTER_SWORDS_DANCE},
         .battleAnimScript = Move_SLASH,
     },
+    
+    [MOVE_KINGS_BLADE] =
+    {
+        .name = COMPOUND_STRING("King's Blade"),
+        .description = COMPOUND_STRING(
+            "Slashes with its sharp blade.\n"
+            "Has a high critical-hit ratio."),
+        .effect = EFFECT_TWO_TYPED_MOVE,
+        .power = 80,
+        .type = TYPE_GHOST,
+        .argument = TYPE_STEEL,
+        .accuracy = 100,
+        .criticalHitStage = 1,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .slicingMove = TRUE,
+        .ignoresProtect = TRUE,
+        .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_SLASH,
+    },
 
 };

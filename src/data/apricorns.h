@@ -25,15 +25,39 @@ const struct ApricornTree gApricornTrees[APRICORN_TREE_COUNT] =
         .apricornType = APRICORN_RED,
     },
 
-    [APRICORN_TREE_ROUTE101_RED_SAPLING] =
+    [APRICORN_TREE_ROUTE101_RED_TREE] =
     {
-        .isSapling = TRUE,
+        .isSapling = FALSE,
         .apricornType = APRICORN_RED,
     },
-
     [APRICORN_TREE_ROUTE101_WHITE_TREE] =
     {
         .isSapling = FALSE,
         .apricornType = APRICORN_WHITE,
+    },
+    [APRICORN_TREE_ROUTE101_PINK_TREE] =
+    {
+        .isSapling = FALSE,
+        .apricornType = APRICORN_PINK,
+    },
+    [APRICORN_TREE_ROUTE101_BLACK_TREE] =
+    {
+        .isSapling = FALSE,
+        .apricornType = APRICORN_BLACK,
+    },
+    [APRICORN_TREE_ROUTE101_BLUE_TREE] =
+    {
+        .isSapling = FALSE,
+        .apricornType = APRICORN_BLUE,
+    },
+    [APRICORN_TREE_ROUTE101_GREEN_TREE] =
+    {
+        .isSapling = FALSE,
+        .apricornType = APRICORN_GREEN,
+    },
+    [APRICORN_TREE_ROUTE101_YELLOW_TREE] =
+    {
+        .isSapling = FALSE,
+        .apricornType = APRICORN_YELLOW,
     },
 };

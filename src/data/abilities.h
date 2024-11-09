@@ -2636,4 +2636,24 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Boosts evolutionary powers."),
         .aiRating = 4,
     },
+    
+    [ABILITY_DRAGON_EATER] =
+    {
+        .name = _("Dragon Eater"),
+        .description = COMPOUND_STRING("Eats dragon to heal HP."),
+        .aiRating = 7,
+        .breakable = TRUE,
+    },
+
+    [ABILITY_GHOSTLY_BLADE] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Ghostly Blade"),
+    #else
+        .name = _("GhostlyBlade"),
+    #endif
+        .description = COMPOUND_STRING("Sharpness and Stance Change"),
+        .aiRating = 7,
+    },
+
 };

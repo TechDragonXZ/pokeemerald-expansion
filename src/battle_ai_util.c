@@ -453,6 +453,10 @@ bool32 IsDamageMoveUnusable(u32 move, u32 battlerAtk, u32 battlerDef)
         if (moveType == TYPE_GROUND)
             return TRUE;
         break;
+    case ABILITY_DRAGON_EATER:
+        if (moveType == TYPE_DRAGON)
+            return TRUE;
+        break;
     }
 
     switch (gMovesInfo[move].effect)

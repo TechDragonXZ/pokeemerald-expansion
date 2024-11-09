@@ -1157,6 +1157,34 @@ static bool32 TryAegiFormChange(void)
     return TRUE;
 }
 
+static bool32 TryAegiFormChange2(void)
+{
+    // Only Aegislash with Stance Change can transform, transformed mons cannot.
+    if (GetBattlerAbility(gBattlerAttacker) != ABILITY_GHOSTLY_BLADE
+        || gBattleMons[gBattlerAttacker].status2 & STATUS2_TRANSFORMED)
+        return FALSE;
+
+    switch (gBattleMons[gBattlerAttacker].species)
+    {
+    default:
+        return FALSE;
+    case SPECIES_AEGISLASH_SHIELD: // Shield -> Blade
+        if (IS_MOVE_STATUS(gCurrentMove))
+            return FALSE;
+        gBattleMons[gBattlerAttacker].species = SPECIES_AEGISLASH_BLADE;
+        break;
+    case SPECIES_AEGISLASH_BLADE: // Blade -> Shield
+        if (gCurrentMove != MOVE_KINGS_SHIELD)
+            return FALSE;
+        gBattleMons[gBattlerAttacker].species = SPECIES_AEGISLASH_SHIELD;
+        break;
+    }
+
+    BattleScriptPushCursor();
+    gBattlescriptCurrInstr = BattleScript_AttackerFormChange;
+    return TRUE;
+}
+
 bool32 ProteanTryChangeType(u32 battler, u32 ability, u32 move, u32 moveType)
 {
       if ((ability == ABILITY_PROTEAN || ability == ABILITY_LIBERO)
@@ -1219,6 +1247,8 @@ static void Cmd_attackcanceler(void)
     }
     if (B_STANCE_CHANGE_FAIL < GEN_7 && TryAegiFormChange())
         return;
+    if (B_STANCE_CHANGE_FAIL < GEN_7 && TryAegiFormChange2())
+        return;
     if (AtkCanceller_UnableToUseMove(moveType))
         return;
 
@@ -1279,6 +1309,8 @@ static void Cmd_attackcanceler(void)
         return;
     }
     if (B_STANCE_CHANGE_FAIL >= GEN_7 && TryAegiFormChange())
+        return;
+    if (B_STANCE_CHANGE_FAIL >= GEN_7 && TryAegiFormChange2())
         return;
 
     gHitMarker &= ~HITMARKER_ALLOW_NO_PP;
