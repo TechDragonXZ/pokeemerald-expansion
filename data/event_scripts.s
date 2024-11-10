@@ -1078,6 +1078,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
     .include "data/scripts/apricorn_tree.inc"
     .include "data/scripts/dexnav.inc"
+    .include "data/scripts/overworld_pokemon.inc"
     
 
 	.include "data/maps/None/scripts.inc"
