@@ -267,7 +267,7 @@
 #define VAR_TERRARIUM_MAIN_WILD_SET                      0x40F7 // Terrarium Main Area Wild Pkmn Var
 #define VAR_TERRARIUM_SUB_WILD_SET                       0x40F8 // Terrarium Sub Area Wild Pkmn Var
 #define VAR_ROD_USE_TECHNIQUE                            0x40F9 // Current Rod Technique Var
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
+#define VAR_SEASON                                       0x40FA // Current Season Var
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
