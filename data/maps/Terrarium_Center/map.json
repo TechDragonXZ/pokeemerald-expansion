@@ -38,8 +38,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 33,
-      "y": 10,
+      "x": 26,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_IN_GRASS",
       "movement_range_x": 10,
@@ -51,7 +51,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_1",
-      "x": 47,
+      "x": 46,
       "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_IN_GRASS",
