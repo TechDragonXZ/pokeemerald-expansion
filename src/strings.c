@@ -1857,7 +1857,7 @@ const u8 gText_PlantBerry[] = _("Plant Berry");
 const u8 gText_AM[] = _("AM");
 const u8 gText_PM[] = _("PM");
 
-const u8 gText_MenuDexNav[] = _("Dexnav");
+const u8 gText_MenuDexNav[] = _("DEXNAV");
 const u8 gText_Back[] = _("Back");
 const u8 gText_NextPg[] = _("Next");
 const u8 gText_Zubat[] = _("Zubat");
