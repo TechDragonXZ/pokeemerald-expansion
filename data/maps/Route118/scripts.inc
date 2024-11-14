@@ -33,10 +33,7 @@ Route118_EventScript_GoodRodFisherman::
 
 Route118_EventScript_ReceiveGoodRod::
 	msgbox Route118_Text_IdenticalMindsTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_GOOD_ROD
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_GOOD_ROD
-	setflag FLAG_GOOD_ROD_TECH
 	msgbox Route118_Text_TryYourLuckFishing, MSGBOX_DEFAULT
 	release
 	end
@@ -248,8 +245,8 @@ Route118_EventScript_Deandre::
 
 Route118_Text_StevenQuestions:
 	.string "STEVEN: Hi, {PLAYER}{KUN}!\p"
-	.string "It's me, STEVEN!\n"
-	.string "We met in the cave near DEWFORD.\p"
+	.string "It's me, Steven!\n"
+	.string "We met in the cave near Dewford.\p"
 	.string "Have you met many kinds of Pokémon\n"
 	.string "since I last saw you?\p"
 	.string "There are many, many kinds of Pokémon\n"
@@ -266,14 +263,18 @@ Route118_Text_StevenQuestions:
 
 Route118_Text_YouAgreeGoodRodIsGood:
 	.string "Hmm!\n"
-	.string "A GOOD ROD is really good!\p"
+	.string "A Good Rod is really good!\p"
 	.string "Wouldn't you agree?$"
 
 Route118_Text_IdenticalMindsTakeThis:
 	.string "Hmm!\n"
 	.string "We're of identical minds!\p"
 	.string "Hmm!\n"
-	.string "Take this GOOD ROD!$"
+	.string "Take this Good Rod!\p"
+	.string "Hmm!\n"
+	.string "Is what I would say, if I had another\p"
+	.string "one to give, so in exchange, I'll teach\n"
+	.string "you the Good Rod Technique!$"
 
 Route118_Text_TryYourLuckFishing:
 	.string "Wherever there's water, try your luck\n"
@@ -284,12 +285,12 @@ Route118_Text_DontYouLikeToFish:
 
 Route118_Text_TryCatchingMonWithGoodRod:
 	.string "Try catching all sorts of Pokémon\n"
-	.string "with your GOOD ROD.$"
+	.string "with your Good Rod Technique!$"
 
 Route118_Text_CanCrossRiversWithSurf:
 	.string "Even if there isn't a boat, you can\n"
 	.string "cross rivers and the sea if you have\l"
-	.string "a Pokémon that knows SURF.\p"
+	.string "a Pokémon that knows Surf.\p"
 	.string "Pokémon can be counted on to do so\n"
 	.string "much!$"
 

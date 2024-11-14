@@ -498,6 +498,13 @@ static void Task_Pokenav(u8 taskId)
                 SetMainCallback2(CB2_ReturnToFieldWithOpenMenu);
         }
         break;
+    case 6:
+        // Wait for LoopedTask_InitPokenavMenu to finish
+        if (PokenavMainMenuLoopedTaskIsActive())
+            break;
+        SetActivePokenavMenu(POKENAV_NO_CONDITION);
+        tState = 4;
+        break;
     }
 }
 

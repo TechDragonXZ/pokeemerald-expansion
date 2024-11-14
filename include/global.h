@@ -77,7 +77,7 @@
 // There are cases where GF does a&(n-1) where we would really like to have a%n, because
 // if n is changed to a value that isn't a power of 2 then a&(n-1) is unlikely to work as
 // intended, and a%n for powers of 2 isn't always optimized to use &.
-#define MOD(a, n)(((n) & ((n)-1)) ? ((a) % (n)) : ((a) & ((n)-1)))
+#define MOD(a, n) (((n) & ((n)-1)) ? ((a) % (n)) : ((a) & ((n)-1)))
 
 // Extracts the upper 16 bits of a 32-bit number
 #define HIHALF(n) (((n) & 0xFFFF0000) >> 16)
@@ -118,7 +118,7 @@
     f;                       \
 })
 
-#define DIV_ROUND_UP(val, roundBy)(((val) / (roundBy)) + (((val) % (roundBy)) ? 1 : 0))
+#define DIV_ROUND_UP(val, roundBy) (((val) / (roundBy)) + (((val) % (roundBy)) ? 1 : 0))
 
 #define ROUND_BITS_TO_BYTES(numBits) DIV_ROUND_UP(numBits, 8)
 
@@ -170,24 +170,48 @@ struct UCoords32
     u32 y;
 };
 
-struct SaveBlock3
-{
-    u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
-#if USE_DEXNAV_SEARCH_LEVELS == TRUE
-    u8 dexNavSearchLevels[ROUND_BITS_TO_BYTES(NUM_SPECIES)];
-#else
-    u8 dexNavSearchLevels[ROUND_BITS_TO_BYTES(NUM_SPECIES)];
-#endif
-    u8 dexNavChain;
-}; /* max size 1624 bytes */
-
 struct Time
 {
     /*0x00*/ s16 days;
-    /*0x02*/ s8 hours;
-    /*0x03*/ s8 minutes;
-    /*0x04*/ s8 seconds;
+    /*0x02*/  s8 hours;
+    /*0x03*/  s8 minutes;
+    /*0x04*/  s8 seconds;
+    /*0x05*/  s8 dayOfWeek;
+    /*0x06*/  s8 months;
+    /*0x07*/ s16 years; 
 };
+
+#define DAY_SUNDAY          0
+#define DAY_MONDAY          1
+#define DAY_TUESDAY         2
+#define DAY_WEDNESDAY       3
+#define DAY_THURSDAY        4
+#define DAY_FRIDAY          5
+#define DAY_SATURDAY        6
+#define DAYS_PER_WEEK       DAY_SATURDAY + 1
+
+#define    MONTH_ONE            1
+#define    MONTH_TWO            2
+#define    MONTH_THREE          3
+#define    MONTH_FOUR           4
+#define    MONTH_FIVE           5
+#define    MONTH_SIX            6
+#define    MONTH_SEVEN          7
+#define    MONTH_EIGHT          8
+#define    MONTH_NINE           9
+#define    MONTH_TEN           10
+#define    MONTH_ELEVEN        11
+#define    MONTH_TWELVE        12
+#define    MONTH_COUNT      MONTH_TWELVE
+
+
+struct SaveBlock3
+{
+    u8 dexNavSearchLevels[ROUND_BITS_TO_BYTES(NUM_SPECIES)];
+    struct Time fakeRTC;
+    u8 dexNavChain;
+    u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
+}; /* max size 1624 bytes */
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;
 

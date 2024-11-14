@@ -131,13 +131,15 @@ enum
     POKENAV_RIBBONS_MON_LIST,                   // The list of Pokémon with ribbons
     POKENAV_RIBBONS_SUMMARY_SCREEN,             // The ribbon summary screen shown when a Pokémon has been selected
     POKENAV_RIBBONS_RETURN_TO_MON_LIST,         // Exited the summary screen back to the ribbon list
+    POKENAV_NO_CONDITION,                       // The main menu where the player selects Hoenn Map/Exit
 };
 
 enum
 {
     POKENAV_MENU_TYPE_DEFAULT,
-    POKENAV_MENU_TYPE_UNLOCK_MC,
-    POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS,
+    POKENAV_MENU_TYPE_UNLOCK_CONDITION,
+    POKENAV_MENU_TYPE_UNLOCK_CONDITION_MC,
+    POKENAV_MENU_TYPE_UNLOCK_CONDITION_MC_RIBBONS,
     POKENAV_MENU_TYPE_CONDITION,
     POKENAV_MENU_TYPE_CONDITION_SEARCH,
     POKENAV_MENU_TYPE_COUNT

@@ -5544,6 +5544,18 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Dream_World_Hub/border.bin",
       "blockdata_filepath": "data/layouts/Dream_World_Hub/map.bin"
+    },
+    {
+      "id": "LAYOUT_DREAM_WORLD_LOBBY",
+      "name": "Dream_World_Lobby_Layout",
+      "width": 16,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Research_Facility_Floor_2",
+      "border_filepath": "data/layouts/Dream_World_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/Dream_World_Lobby/map.bin"
     }
   ]
 }

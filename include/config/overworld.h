@@ -11,7 +11,7 @@
 
 // These generational defines only make a distinction for Berries and the OW_PC_MOVE_ORDER
 #define GEN_6_XY GEN_6
-#define GEN_6_ORAS GEN_LATEST + 1
+#define GEN_6_ORAS GEN_6 + 4
 
 // PC settings
 #define OW_PC_PRESS_B               GEN_LATEST // In Gen4, pressing B when holding a Pokémon is equivalent to placing it. In Gen3, it gives the "You're holding a Pokémon!" error.
@@ -39,6 +39,7 @@
 #define OW_LARGE_OW_SUPPORT            TRUE       // If true, adds a small amount of overhead to OW code so that large (48x48, 64x64) OWs will display correctly under bridges, etc.
 #define OW_PKMN_OBJECTS_SHARE_PALETTES FALSE      // [WIP!! NOT ALL PALETTES HAVE BEEN ADJUSTED FOR THIS!!] If TRUE, follower palettes are taken from battle sprites.
 #define OW_GFX_COMPRESS                TRUE       // Adds support for compressed OW graphics, (Also compresses pokemon follower graphics).
+                                                  // IMPORTANT: Gfx are loaded into VRAM to avoid continous decompression. If you require more VRAM or want to use a lot of overworld Pokémon at once, you should disable this config.
                                                   // Compressed gfx are incompatible with non-power-of-two sprite sizes:
                                                   // (You should not use 48x48 sprites/tables for compressed gfx)
                                                   // 16x32, 32x32, 64x64 etc are fine
@@ -64,13 +65,22 @@
 
 //Time
 #define OW_TIMES_OF_DAY                 GEN_LATEST // Different generations have the times of day change at different times.
-#define OW_USE_FAKE_RTC                 FALSE      // When TRUE, seconds on the in-game clock will only advance once every 60 playTimeVBlanks (every 60 frames).
+#define OW_USE_FAKE_RTC                 TRUE      // When TRUE, seconds on the in-game clock will only advance once every 60 playTimeVBlanks (every 60 frames).
 #define OW_ALTERED_TIME_RATIO           GEN_CUSTOM // In GEN_8_PLA, the time in game moves forward 60 seconds for every second in the RTC. In GEN_9, it is 20 seconds. This has no effect if OW_USE_FAKE_RTC is FALSE.
+//GEN_CUSTOM's default value is 1, making it a 1:1 ratio. You can edit this in fake_rtc.c
+
+//The following defines what respective date and time the game starts on.
+#define STARTING_YEAR                   1           
+#define STARTING_MONTH                  MONTH_ONE
+#define STARTING_DAY                    1
+#define STARTING_HOUR                   10
+#define STARTING_MINUTE                 0
+#define STARTING_SECOND                 0
 
 // Overworld flags
 // To use the following features in scripting, replace the 0s with the flag ID you're assigning it to.
 // Eg: Replace with FLAG_UNUSED_0x264 so you can use that flag to toggle the feature.
-#define OW_FLAG_PAUSE_TIME          0  // If this flag is set and OW_USE_FAKE_RTC is enabled, seconds on the in-game clock will not advance.
+#define OW_FLAG_PAUSE_TIME          FLAG_PAUSE_TIME  // If this flag is set and OW_USE_FAKE_RTC is enabled, seconds on the in-game clock will not advance.
 #define OW_FLAG_NO_ENCOUNTER        FLAG_NO_ENCOUNTER  // If this flag is set, wild encounters will be disabled.
 #define OW_FLAG_NO_TRAINER_SEE      FLAG_NO_TRAINER_SEE  // If this flag is set, trainers will not battle the player unless they're talked to.
 #define OW_FLAG_NO_COLLISION        FLAG_NO_COLLISION  // If this flag is set, the player will be able to walk over tiles with collision. Mainly intended for debugging purposes.
@@ -99,8 +109,8 @@
 #define OW_IGNORE_EGGS_ON_HEAL     GEN_LATEST               // In Gen 4+, the nurse in the Pokémon Center does not heal Eggs on healing machine.
 
 // Variable Rod
-#define OW_VAR_VARIABLE_ROD_USE_TECHNIQUE       VAR_ROD_USE_TECHNIQUE     // If this var has a value, the game will use it to remember the used fishing technique.
-#define OW_FLAG_VARIABLE_ROD_GOOD_TECHNIQUE     FLAG_GOOD_ROD_TECH     // If this flag is set, the game will unlock the 'good fishing technique'.
-#define OW_FLAG_VARIABLE_ROD_SUPER_TECHNIQUE    FLAG_SUPER_ROD_TECH     // If this flag is set, the game will unlock the 'super fishing technique'.
+#define OW_VAR_VARIABLE_ROD_USE_TECHNIQUE       VAR_LAST_ROD_TECHNIQUE     // If this var has a value, the game will use it to remember the used fishing technique.
+#define OW_FLAG_VARIABLE_ROD_GOOD_TECHNIQUE     FLAG_RECEIVED_GOOD_ROD     // If this flag is set, the game will unlock the 'good fishing technique'.
+#define OW_FLAG_VARIABLE_ROD_SUPER_TECHNIQUE    FLAG_RECEIVED_SUPER_ROD    // If this flag is set, the game will unlock the 'super fishing technique'.
 
 #endif // GUARD_CONFIG_OVERWORLD_H

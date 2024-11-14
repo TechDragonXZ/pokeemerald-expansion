@@ -713,18 +713,18 @@ DewfordTown_Text_GettingItchToFish:
 DewfordTown_Text_GiveYouOneOfMyRods:
 	.string "I hear you, and I like what\n"
 	.string "you're saying!\p"
-	.string "I'll give you one of my fishing RODS.$"
+	.string "I'll give you one of my Fishing Rods.$"
 
 DewfordTown_Text_ThrowInFishingAdvice:
 	.string "And, as an added bonus, I'll even throw\n"
 	.string "in a little fishing advice!\p"
 	.string "First, you want to face the water,\n"
-	.string "then use the ROD.\p"
+	.string "then use the Rod.\p"
 	.string "Focus your mind…\n"
-	.string "If you get a bite, pull on the ROD.\p"
+	.string "If you get a bite, pull on the Rod.\p"
 	.string "Sometimes you can snag something\n"
 	.string "immediately, but with bigger catches,\l"
-	.string "you need to time the pulls on your ROD\l"
+	.string "you need to time the pulls on your Rod\l"
 	.string "to haul them in.$"
 
 DewfordTown_Text_ThatsTooBadThen:
@@ -743,12 +743,12 @@ DewfordTown_Text_FishingAdvice:
 	.string "Oh, hey, don't get down on yourself!\n"
 	.string "I'll give you a little fishing advice.\p"
 	.string "First, you want to face the water,\n"
-	.string "then use the ROD.\p"
+	.string "then use the Rod.\p"
 	.string "Focus your mind…\n"
-	.string "If you get a bite, pull the ROD.\p"
+	.string "If you get a bite, pull the Rod.\p"
 	.string "Sometimes you can snag something\n"
 	.string "immediately, but with bigger catches,\l"
-	.string "you need to time the pulls on your ROD\l"
+	.string "you need to time the pulls on your Rod\l"
 	.string "to haul them in.$"
 
 DewfordTown_Text_XIsTheBiggestHappeningThingRight:

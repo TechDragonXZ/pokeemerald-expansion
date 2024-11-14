@@ -574,8 +574,8 @@
 #define MAP_ROUTE110_TRICK_HOUSE_PUZZLE6                 (8 | (29 << 8))
 #define MAP_ROUTE110_TRICK_HOUSE_PUZZLE7                 (9 | (29 << 8))
 #define MAP_ROUTE110_TRICK_HOUSE_PUZZLE8                 (10 | (29 << 8))
-#define MAP_ROUTE110_SEASIDE_CYCLING_ROAD_NORTH_ENTRANCE (11 | (29 << 8))
-#define MAP_ROUTE110_SEASIDE_CYCLING_ROAD_SOUTH_ENTRANCE (12 | (29 << 8))
+#define MAP_ROUTE110_SEASIDE_CYCLING_ROAD_SOUTH_ENTRANCE (11 | (29 << 8))
+#define MAP_ROUTE110_SEASIDE_CYCLING_ROAD_NORTH_ENTRANCE (12 | (29 << 8))
 
 // gMapGroup_IndoorRoute113
 #define MAP_ROUTE113_GLASS_WORKSHOP (0 | (30 << 8))
@@ -620,9 +620,12 @@
 // gMapGroup_Dream_World
 #define MAP_DREAM_WORLD_HUB (0 | (38 << 8))
 
-// gMapGroup_None
-#define MAP_NONE (0 | (39 << 8))
+// gMapGroup_Dream_World_Indoors
+#define MAP_DREAM_WORLD_LOBBY (0 | (39 << 8))
 
-#define MAP_GROUPS_COUNT 40
+// gMapGroup_None
+#define MAP_NONE (0 | (40 << 8))
+
+#define MAP_GROUPS_COUNT 41
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

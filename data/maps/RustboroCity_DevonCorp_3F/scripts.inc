@@ -52,12 +52,11 @@ RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	giveitem ITEM_LETTER
 	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneWantYouToHaveThis, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
-	message RustboroCity_DevonCorp_3F_Text_ReceivedPokenav
+	message RustboroCity_DevonCorp_3F_Text_ReceivedDexnav
 	waitfanfare
-	setflag FLAG_SYS_POKENAV_GET
-	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_SYS_DEXNAV_GET
 	setflag FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT
-	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp, MSGBOX_DEFAULT
+	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneExplainDexnavRestUp, MSGBOX_DEFAULT
 	closemessage
 	call Common_EventScript_OutOfCenterPartyHeal
 	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare, MSGBOX_DEFAULT
@@ -219,18 +218,13 @@ RustboroCity_DevonCorp_3F_Text_MrStoneWantYouToHaveThis:
 	.string "a favor for nothing in return.\p"
 	.string "That's why I want you to have this!$"
 
-RustboroCity_DevonCorp_3F_Text_ReceivedPokenav:
-	.string "{PLAYER} received a PokéNav.$"
+RustboroCity_DevonCorp_3F_Text_ReceivedDexnav:
+	.string "{PLAYER} received a DéxNav.$"
 
-RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp:
+RustboroCity_DevonCorp_3F_Text_MrStoneExplainDexnavRestUp:
 	.string "MR. STONE: That device…\p"
-	.string "It's a Pokémon NAVIGATOR, or PokéNav\n"
-	.string "for short.\p"
-	.string "It's an indispensable tool for any\n"
-	.string "Trainer on an adventure.\p"
-	.string "It has a map of the HOENN region.\p"
-	.string "You can check the locations of\n"
-	.string "DEWFORD and SLATEPORT easily!\p"
+	.string "It's a DéxNav, an indispensable tool\n"
+	.string "for any Trainer on an adventure.\p"
 	.string "By the way, I've heard that sinister\n"
 	.string "criminals--MAGMA and AQUA, I believe--\l"
 	.string "have been making trouble far and wide.\p"

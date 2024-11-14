@@ -202,11 +202,20 @@ struct
         .deltaY = 20,
         .gfx = {
             sOptionsLabelGfx_RegionMap,
+            sOptionsLabelGfx_SwitchOff
+        }
+    },
+    [POKENAV_MENU_TYPE_UNLOCK_CONDITION] =
+    {
+        .yStart = 42,
+        .deltaY = 20,
+        .gfx = {
+            sOptionsLabelGfx_RegionMap,
             sOptionsLabelGfx_Condition,
             sOptionsLabelGfx_SwitchOff
         }
     },
-    [POKENAV_MENU_TYPE_UNLOCK_MC] =
+    [POKENAV_MENU_TYPE_UNLOCK_CONDITION_MC] =
     {
         .yStart = 42,
         .deltaY = 20,
@@ -217,7 +226,7 @@ struct
             sOptionsLabelGfx_SwitchOff
         }
     },
-    [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS] =
+    [POKENAV_MENU_TYPE_UNLOCK_CONDITION_MC_RIBBONS] =
     {
         .yStart = 42,
         .deltaY = 20,

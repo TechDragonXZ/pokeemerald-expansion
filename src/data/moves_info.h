@@ -14200,8 +14200,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = HANDLE_EXPANDED_MOVE_NAME("ParabolcChrg", "Parabolic Charge"),
         .description = COMPOUND_STRING(
-            "Damages adjacent Pokémon and\n"
-            "heals up by half of it."),
+            "Damages adjacent Pokémon\n"
+            "and heals up by half of it."),
         .effect = EFFECT_ABSORB,
         .power = B_UPDATED_MOVE_DATA >= GEN_7 ? 65 : 50,
         .type = TYPE_ELECTRIC,
@@ -16759,7 +16759,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .name = COMPOUND_STRING("Plasma Fists"),
         .description = COMPOUND_STRING(
             "Hits with electrical fists.\n"
-            "Normal moves become Electric."),
+            "Normal moves turn Electric."),
         .effect = EFFECT_PLASMA_FISTS,
         .power = 100,
         .type = TYPE_ELECTRIC,
@@ -17118,8 +17118,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = HANDLE_EXPANDED_MOVE_NAME("DynamxCannon", "Dynamax Cannon"),
         .description = COMPOUND_STRING(
-            "Fires a strong beam. Deals\n"
-            "2x damage to Dynamaxed foes."),
+            "Unleashes core energy.\n"
+            "2x against Dynamaxed foes."),
         .effect = EFFECT_DYNAMAX_DOUBLE_DMG,
         .power = 100,
         .type = TYPE_DRAGON,
@@ -18639,8 +18639,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = HANDLE_EXPANDED_MOVE_NAME("GlacialLance", "Glacial Lance"),
         .description = COMPOUND_STRING(
-            "Strikes by hurling a blizzard-\n"
-            "cloaked icicle lance at foes."),
+            "Hurls a blizzard-cloaked\n"
+            "icicle lance at foes."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_9 ? 120 : 130,
         .type = TYPE_ICE,
@@ -18661,8 +18661,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = HANDLE_EXPANDED_MOVE_NAME("AstrlBarrage", "Astral Barrage"),
         .description = COMPOUND_STRING(
-            "Strikes by sending a frightful\n"
-            "amount of ghosts at foes."),
+            "Sends a frightful amount\n"
+            "of small ghosts at foes."),
         .effect = EFFECT_HIT,
         .power = 120,
         .type = TYPE_GHOST,
@@ -18802,7 +18802,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .type = TYPE_FAIRY,
         .accuracy = 80,
         .pp = 5,
-        .target = MOVE_TARGET_SELECTED,
+        .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .windMove = TRUE,
@@ -20383,8 +20383,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Electro Shot"),
         .description = COMPOUND_STRING(
-            "Absorbs electricity in one turn,\n"
-            "then attacks next turn."),
+            "Gathers electricity, then\n"
+            "fires a high-voltage shot."),
         .effect = EFFECT_TWO_TURNS_ATTACK,
         .power = 130,
         .type = TYPE_ELECTRIC,
@@ -20406,8 +20406,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = HANDLE_EXPANDED_MOVE_NAME("TeraStarstrm", "Tera Starstorm"),
         .description = COMPOUND_STRING(
-            "Damages all opponents if user is\n"
-            "Stellar form Terapagos."),
+            "In Terapagos's Stellar\n"
+            "Form, it hits all foes."),
         .effect = EFFECT_TERA_STARSTORM,
         .power = 120,
         .type = TYPE_NORMAL,
@@ -20554,8 +20554,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = HANDLE_EXPANDED_MOVE_NAME("AllurngVoice", "Alluring Voice"),
         .description = COMPOUND_STRING(
-            "Confuses the target if their\n"
-            "stats were boosted this turn."),
+            "Confuses foe if its stats\n"
+            "were boosted this turn."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_FAIRY,
@@ -20946,7 +20946,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     },
     [MOVE_10000000_VOLT_THUNDERBOLT] =
     {
-        .name = COMPOUND_STRING("10000000 Volt Thunderbolt"),
+        .name = COMPOUND_STRING("10,000,000 Volt Thunderbolt"),
         .description = sNullDescription,
         .effect = EFFECT_HIT,
         .power = 195,

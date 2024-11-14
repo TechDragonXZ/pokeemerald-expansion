@@ -276,6 +276,9 @@ PlayersHouse_2F_Text_ClockIsStopped:
 	.string "The clock is stopped…\p"
 	.string "Better set it and start it!$"
 
+PlayersHouse_2F_Text_ClockIsSet:
+	.string "The clock is already set!$"
+
 PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
 	.string "MOM: {PLAYER}, how do you like your\n"
 	.string "new room?\p"
@@ -302,3 +305,18 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "It's a Nintendo GameCube.\p"
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
+
+PlayersHouse_2F_Text_GivePokeNav:
+	.string "MOM: {PLAYER}, also I got you a little\n"
+	.string "gift to mark our move here.\p"
+	.string "Let me help you set it up!$"
+
+PlayersHouse_2F_Text_ReceivedPokenav:
+	.string "{PLAYER} received a PokéNav.$"
+
+PlayersHouse_2F_Text_MomExplainPokenav:
+	.string "MOM: This device is a Pokémon Navigator,\p"
+	.string "or PokéNav for short. It's an\n"
+	.string "great tool for anyone, Trainer\p"
+	.string "or not. It even has a map of the\n"
+	.string "Hoenn region.$"

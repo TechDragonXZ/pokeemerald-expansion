@@ -567,8 +567,8 @@ gStdScripts_End::
 	.include "data/maps/Route110_TrickHousePuzzle6/scripts.inc"
 	.include "data/maps/Route110_TrickHousePuzzle7/scripts.inc"
 	.include "data/maps/Route110_TrickHousePuzzle8/scripts.inc"
-	.include "data/maps/Route110_SeasideCyclingRoadNorthEntrance/scripts.inc"
 	.include "data/maps/Route110_SeasideCyclingRoadSouthEntrance/scripts.inc"
+	.include "data/maps/Route110_SeasideCyclingRoadNorthEntrance/scripts.inc"
 	.include "data/maps/Route113_GlassWorkshop/scripts.inc"
 	.include "data/maps/Route123_BerryMastersHouse/scripts.inc"
 	.include "data/maps/Route119_WeatherInstitute_1F/scripts.inc"
@@ -1120,3 +1120,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Research_Facility_Floor2/scripts.inc"
 
 	.include "data/maps/Dream_World_Hub/scripts.inc"
+
+	.include "data/maps/Dream_World_Lobby/scripts.inc"

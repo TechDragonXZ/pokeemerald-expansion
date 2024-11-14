@@ -54,7 +54,7 @@ AlteringCave_EventScript_WildChangeAccepted::
 	case MULTI_B_PRESSED, AlteringCave_EventScript_WildChangeDeclined
 
 AlteringCave_EventScript_WildChangeAccepted_Page2::
-	multichoice 20, 0, MULTI_ALTERING_CAVE_ENCOUNTERS_PAGE2, TRUE
+	multichoice 20, 0, MULTI_ALTERING_CAVE_ENCOUNTERS2, TRUE
 	switch VAR_RESULT
 	case 0, AlteringCave_EventScript_WildChangeHoundour
 	case 1, AlteringCave_EventScript_WildChangeTeddiursa
@@ -65,7 +65,7 @@ AlteringCave_EventScript_WildChangeAccepted_Page2::
 	case MULTI_B_PRESSED, AlteringCave_EventScript_WildChangeDeclined
 
 AlteringCave_EventScript_WildChangeAccepted_Page3::
-	multichoice 20, 0, MULTI_ALTERING_CAVE_ENCOUNTERS_PAGE3, TRUE
+	multichoice 20, 0, MULTI_ALTERING_CAVE_ENCOUNTERS3, TRUE
 	switch VAR_RESULT
 	case 0, AlteringCave_EventScript_WildChangeShuckle
 	case 1, AlteringCave_EventScript_WildChangeStantler
