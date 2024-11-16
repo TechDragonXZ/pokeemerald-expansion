@@ -212,13 +212,13 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
+    gSaveBlock3Ptr->followerIndex = OW_FOLLOWER_NOT_SET;
 #if USE_DEXNAV_SEARCH_LEVELS == TRUE
     memset(gSaveBlock3Ptr->dexNavSearchLevels, 0, sizeof(gSaveBlock3Ptr->dexNavSearchLevels));
 #endif
     gSaveBlock3Ptr->dexNavChain = 0;
 #if MULTIPLE_ROAMERS_EXAMPLE	
     InitRoamer();
-    FlagSet(FLAG_SYS_POKEDEX_GET);
 #endif
 }
 

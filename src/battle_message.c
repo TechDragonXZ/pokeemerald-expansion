@@ -458,7 +458,7 @@ static const u8 sText_Evasiveness[] = _("evasiveness");
 
 // Custom
 static const u8 sText_WindBecameTwister[] = _("The wind turned into a\nTWISTER{PAUSE 64}!");
-static const u8 sText_WindBecameTwister[] = _("The wind turned into a\nICY WIND{PAUSE 64}!");
+static const u8 sText_WindBecameIcyWind[] = _("The wind turned into a\nICY WIND{PAUSE 64}!");
 static const u8 sText_AttackerHasEvolved[] = _("{B_BUFF1} evolved into {B_BUFF2}!");
 
 const u8 *const gStatNamesTable[NUM_BATTLE_STATS] =

@@ -211,6 +211,7 @@ struct SaveBlock3
     struct Time fakeRTC;
     u8 dexNavChain;
     u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
+    u8 followerIndex;
 }; /* max size 1624 bytes */
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;
