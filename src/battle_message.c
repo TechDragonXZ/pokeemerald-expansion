@@ -375,7 +375,7 @@ static const u8 sText_FogIsDeep[] = _("The fog is deep…");
 static const u8 sText_FogLifted[] = _("The fog lifted.");
 static const u8 sText_FailedToSpitUp[] = _("But it failed to spit up\na thing!");
 static const u8 sText_FailedToSwallow[] = _("But it failed to swallow\na thing!");
-static const u8 sText_WindBecameHeatWave[] = _("The wind turned into a\nHEAT WAVE!");
+static const u8 sText_WindBecameHeatWave[] = _("The wind turned into a\nHEAT WAVE{PAUSE 64}!");
 static const u8 sText_StatChangesGone[] = _("All stat changes were\neliminated!");
 static const u8 sText_CoinsScattered[] = _("Coins scattered everywhere!");
 static const u8 sText_TooWeakForSubstitute[] = _("It was too weak to make\na SUBSTITUTE!");
@@ -455,6 +455,11 @@ static const u8 sText_SpAttack[] = _("Sp. Atk");
 static const u8 sText_SpDefense[] = _("Sp. Def");
 static const u8 sText_Accuracy[] = _("accuracy");
 static const u8 sText_Evasiveness[] = _("evasiveness");
+
+// Custom
+static const u8 sText_WindBecameTwister[] = _("The wind turned into a\nTWISTER{PAUSE 64}!");
+static const u8 sText_WindBecameTwister[] = _("The wind turned into a\nICY WIND{PAUSE 64}!");
+static const u8 sText_AttackerHasEvolved[] = _("{B_BUFF1} evolved into {B_BUFF2}!");
 
 const u8 *const gStatNamesTable[NUM_BATTLE_STATS] =
 {
@@ -1557,6 +1562,11 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ITEMWASUSEDUP - BATTLESTRINGS_TABLE_START] = sText_ItemWasUsedUp,
     [STRINGID_ATTACKERLOSTITSTYPE - BATTLESTRINGS_TABLE_START] = sText_AttackerLostItsType,
     [STRINGID_CLOAKEDINAHARSHLIGHT - BATTLESTRINGS_TABLE_START] = sText_PkmnIsCloakedInAHarshLight,
+
+    // Custom
+    [STRINGID_WINDBECAMETWISTER - BATTLESTRINGS_TABLE_START] = sText_WindBecameTwister,
+    [STRINGID_WINDBECAMEICYWIND - BATTLESTRINGS_TABLE_START] = sText_WindBecameIcyWind,
+    [STRINGID_ATTACKERHASEVOLVED - BATTLESTRINGS_TABLE_START] = sText_AttackerHasEvolved,
 };
 
 const u16 gTrainerUsedItemStringIds[] =

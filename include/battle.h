@@ -804,6 +804,10 @@ struct BattleStruct
     u8 fickleBeamBoosted:1;
     u8 obedienceResult:3;
     u8 usedMicleBerry;
+    u8 firstCombinedMoveBattlerId;
+    u8 secondCombinedMoveBattlerId;
+    u16 combinedMoveId;
+    u16 combinedMoveStringId;
 };
 
 // The palaceFlags member of struct BattleStruct contains 1 flag per move to indicate which moves the AI should consider,

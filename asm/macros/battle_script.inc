@@ -2520,3 +2520,10 @@
 	.macro givedroppeditems
 	various BS_FAINTED, VARIOUS_GIVE_DROPPED_ITEMS
 	.endm
+
+	@ Attempts to update the species and stats of \battler if they are ready to evolve.	
+	.macro handlebattleevo battler:req, jumpInstr:req
+	callnative BS_HandleBattleEvo
+	.byte \battler
+	.4byte \jumpInstr
+	.endm
