@@ -268,8 +268,7 @@ bool8 MetatileBehavior_IsNonAnimDoor(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_NON_ANIMATED_DOOR
      || metatileBehavior == MB_WATER_DOOR
-     || metatileBehavior == MB_DEEP_SOUTH_WARP
-     || metatileBehavior == MB_DREAM_WORLD_BED)
+     || metatileBehavior == MB_DEEP_SOUTH_WARP)
         return TRUE;
     else
         return FALSE;
@@ -1133,7 +1132,8 @@ bool8 MetatileBehavior_IsLavaridgeB1FWarp(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsLavaridge1FWarp(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_LAVARIDGE_GYM_1F_WARP)
+    if (metatileBehavior == MB_LAVARIDGE_GYM_1F_WARP
+     || metatileBehavior == MB_DREAM_WORLD_BED)
         return TRUE;
     else
         return FALSE;

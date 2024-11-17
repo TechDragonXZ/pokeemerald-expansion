@@ -1079,6 +1079,7 @@ EventScript_VsSeekerChargingDone::
     .include "data/scripts/apricorn_tree.inc"
     .include "data/scripts/dexnav.inc"
     .include "data/scripts/overworld_pokemon.inc"
+    .include "data/scripts/self_trade.inc"
     
 
 	.include "data/maps/None/scripts.inc"

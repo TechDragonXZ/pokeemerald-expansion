@@ -71,8 +71,8 @@
 #define FLAG_DAY_SET         0x39 // Day Set Flag
 #define FLAG_MONTH_SET       0x3A // Month Set Flag
 #define FLAG_SETUP_DONE      0x3B // Setup Finished Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
+#define FLAG_HIDE_POKEMON_CENTER_MALE      0x3C // PokéCenter Floor 2 Male Flag
+#define FLAG_HIDE_POKEMON_CENTER_FEMALE    0x3D // PokéCenter Floor 2 Female Flag
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag

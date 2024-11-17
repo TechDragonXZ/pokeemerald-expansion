@@ -40,6 +40,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Terrarium_Lobby_EventScript_AdvBerryBlender_Man",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
+      "x": 15,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SelfTrade_EventScript_V1",
+      "flag": "FLAG_HIDE_POKEMON_CENTER_MALE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "x": 15,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SelfTrade_EventScript_V1",
+      "flag": "FLAG_HIDE_POKEMON_CENTER_FEMALE"
     }
   ],
   "warp_events": [

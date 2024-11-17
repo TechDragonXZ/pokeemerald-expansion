@@ -3089,6 +3089,7 @@ extern const u8 gText_SafariBallAndPrice[];
 extern const u8 gText_SportBallAndPrice[];
 extern const u8 gText_ParkBallAndPrice[];
 extern const u8 gText_Moves_Menu[];
+extern const u8 gText_AshQty[];
 
 // Text for clock
 extern const u8 gText_Saturday[];

@@ -1931,6 +1931,7 @@ const u8 gText_SportBallAndPrice[] = _("SPORT BALL{CLEAR_TO 0x48}¥300");
 const u8 gText_ParkBallAndPrice[] = _("PARK BALL{CLEAR_TO 0x48}¥350");
 const u8 gText_CurrentTimePMOff[] = _("Time: {STR_VAR_1} {STR_VAR_2} PM");
 const u8 gText_Date[] = _("{STR_VAR_1} {STR_VAR_2}, YEAR {STR_VAR_3}");
+const u8 gText_AshQty[] = _("Ash QTY: {STR_VAR_1}{PAUSE_UNTIL_PRESS}");
 
 const u8 *const gDayNameStringsTable[7] = {
     [DAY_SUNDAY] = gText_Sunday,

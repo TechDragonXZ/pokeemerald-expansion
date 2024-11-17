@@ -3,6 +3,7 @@
 OldaleTown_PokemonCenter_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, SelfTrade_OnLoad
 	.byte 0
 
 OldaleTown_PokemonCenter_1F_OnTransition:
@@ -37,6 +38,10 @@ OldaleTown_PokemonCenter_1F_EventScript_Girl::
 OldaleTown_PokemonCenter_1F_EventScript_WirelessClubAvailable::
 	msgbox OldaleTown_PokemonCenter_1F_Text_TradedInWirelessClub, MSGBOX_DEFAULT
 	release
+	end
+
+SelfTrade_OnLoad::
+	call_if_set FLAG_SYS_POKEDEX_GET, SelfTrade_EventScript_ShowPlayer
 	end
 
 OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC:
