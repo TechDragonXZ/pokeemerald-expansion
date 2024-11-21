@@ -8036,6 +8036,73 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .formSpeciesIdTable = sCastformFormSpeciesIdTable,
         .formChangeTable = sCastformFormChangeTable,
     },
+
+    [SPECIES_CASTFORM_SANDY] =
+    {
+        .baseHP        = 70,
+        .baseAttack    = 70,
+        .baseDefense   = 70,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 70,
+        .baseSpDefense = 70,
+        .types = MON_TYPES(TYPE_ROCK),
+        .catchRate = 45,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 145,
+        .evYield_HP = 1,
+        .itemCommon = ITEM_MYSTIC_WATER,
+        .itemRare = ITEM_MYSTIC_WATER,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_AMORPHOUS),
+        .abilities = { ABILITY_FORECAST, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Castform"),
+        .cryId = CRY_CASTFORM,
+        .natDexNum = NATIONAL_DEX_CASTFORM,
+        .categoryName = _("Weather"),
+        .height = 3,
+        .weight = 8,
+        .description = COMPOUND_STRING(
+            "This is Castform's form while it's raining.\n"
+            "In an experiment where it was placed in a\n"
+            "shower, it didn't change to this form. Its\n"
+            "body is soft, slightly swollen with water."),
+        .pokemonScale = 435,
+        .pokemonOffset = -5,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_CastformSandy,
+        .frontPicSize = MON_COORDS_SIZE(32, 48),
+        .frontPicYOffset = 9,
+        .frontAnimFrames = sAnims_CastformSandy,
+        .frontAnimId = ANIM_SWING_CONVEX_FAST,
+        .enemyMonElevation = 5,
+        .backPic = gMonBackPic_CastformSandy,
+        .backPicSize = MON_COORDS_SIZE(40, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
+        .palette = gMonPalette_CastformSandy,
+        .shinyPalette = gMonShinyPalette_CastformSandy,
+        .iconSprite = gMonIcon_CastformSandy,
+        .iconPalIndex = 0,
+        FOOTPRINT(Castform)
+        OVERWORLD(
+            sPicTable_CastformSnowy,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_NONE,
+            gOverworldPalette_CastformSnowy,
+            gShinyOverworldPalette_CastformSnowy
+        )
+        .levelUpLearnset = sCastformLevelUpLearnset,
+        .teachableLearnset = sCastformTeachableLearnset,
+        .eggMoveLearnset = sCastformEggMoveLearnset,
+        .formSpeciesIdTable = sCastformFormSpeciesIdTable,
+        .formChangeTable = sCastformFormChangeTable,
+    },
+
 #endif //P_FAMILY_CASTFORM
 
 #if P_FAMILY_KECLEON

@@ -22318,4 +22318,124 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .battleAnimScript = Move_SLASH,
     },
 
+    [MOVE_TOXIC_GAS] =
+    {
+        .name = COMPOUND_STRING("Toxic Gas"),
+        .description = COMPOUND_STRING(
+            "Envelops the foe in a toxic\n"
+            "gas that may badly poison."),
+        .effect = EFFECT_TOXIC,
+        .power = 0,
+        .type = TYPE_POISON,
+        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 90 : 85,
+        .pp = 10,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_DEF_UP_1 },
+        .magicCoatAffected = TRUE,
+        .contestEffect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_POISON_GAS,
+    },
+
+    [MOVE_FROST_JET] =
+    {
+        .name = COMPOUND_STRING("Frost Jet"),
+        .description = COMPOUND_STRING(
+            "Strikes first by dashing\n"
+            "at the foe at a high speed."),
+        .effect = EFFECT_TWO_TYPED_MOVE,
+        .power = 60,
+        .type = TYPE_WATER,
+        .argument = TYPE_ICE,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 1,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_NEXT_APPEAL_EARLIER,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_HAIL},
+        .battleAnimScript = Move_AQUA_JET,
+    },
+
+    [MOVE_STICKY_FLAME] =
+    {
+        .name = COMPOUND_STRING("Sticky Flame"),
+        .description = COMPOUND_STRING(
+            "Does double damage if the\n"
+            "foe is burned."),
+        .effect = EFFECT_DOUBLE_POWER_ON_ARG_STATUS,
+        .power = 65,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = STATUS1_BURN,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_SUNNY_DAY},
+        .battleAnimScript = Move_EMBER,
+    },
+
+    [MOVE_THUNDER_SURGE] =
+    {
+        .name = COMPOUND_STRING("Thunder Surge"),
+        .description = COMPOUND_STRING(
+            "Does double damage if the\n"
+            "foe is paralyzed."),
+        .effect = EFFECT_DOUBLE_POWER_ON_ARG_STATUS,
+        .power = 65,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = STATUS1_PARALYSIS,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_RAIN_DANCE},
+        .battleAnimScript = Move_THUNDER,
+    },
+
+    [MOVE_SUPER_FREEZE] =
+    {
+        .name = COMPOUND_STRING("Super Freeze"),
+        .description = COMPOUND_STRING(
+            "Does double damage if the\n"
+        #if B_USE_FROSTBITE == TRUE
+            "foe is frostbiten."),
+        #else
+            "foe is frozen."),
+        #endif
+        .effect = EFFECT_DOUBLE_POWER_ON_ARG_STATUS,
+        .power = 65,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        #if B_USE_FROSTBITE == TRUE
+        .argument = STATUS1_FROSTBITE,
+        #else
+        .argument = STATUS1_FREEZE,
+        #endif
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_SUNNY_DAY},
+        .battleAnimScript = Move_ICE_BEAM,
+    },
+
 };

@@ -459,6 +459,9 @@ static const u8 sText_Evasiveness[] = _("evasiveness");
 // Custom
 static const u8 sText_WindBecameTwister[] = _("The wind turned into a\nTWISTER{PAUSE 64}!");
 static const u8 sText_WindBecameIcyWind[] = _("The wind turned into a\nICY WIND{PAUSE 64}!");
+static const u8 sText_WindBecameAirCutter[] = _("The wind turned into a\nAIR CUTTER{PAUSE 64}!");
+static const u8 sText_WindBecameToxicGas[] = _("The wind turned into a\nTOXIC GAS{PAUSE 64}!");
+static const u8 sText_AquaBecameFrostJet[] = _("The AQUA JET turned into a\nFROST JET{PAUSE 64}!");
 static const u8 sText_AttackerHasEvolved[] = _("{B_BUFF1} evolved into {B_BUFF2}!");
 
 const u8 *const gStatNamesTable[NUM_BATTLE_STATS] =
@@ -1567,6 +1570,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_WINDBECAMETWISTER - BATTLESTRINGS_TABLE_START] = sText_WindBecameTwister,
     [STRINGID_WINDBECAMEICYWIND - BATTLESTRINGS_TABLE_START] = sText_WindBecameIcyWind,
     [STRINGID_ATTACKERHASEVOLVED - BATTLESTRINGS_TABLE_START] = sText_AttackerHasEvolved,
+    [STRINGID_WINDBECAMEAIRCUTTER - BATTLESTRINGS_TABLE_START] = sText_WindBecameAirCutter,
+    [STRINGID_WINDBECAMETOXICGAS - BATTLESTRINGS_TABLE_START] = sText_WindBecameToxicGas,
+    [STRINGID_AQUABECAMEFROSTJET - BATTLESTRINGS_TABLE_START] = sText_AquaBecameFrostJet,
 };
 
 const u16 gTrainerUsedItemStringIds[] =

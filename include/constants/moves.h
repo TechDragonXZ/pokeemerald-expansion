@@ -922,8 +922,13 @@
 #define MOVE_FROSTBURN       856
 #define MOVE_WIDE_SLASH      857
 #define MOVE_KINGS_BLADE     858
+#define MOVE_TOXIC_GAS       859
+#define MOVE_FROST_JET       860
+#define MOVE_STICKY_FLAME    861
+#define MOVE_THUNDER_SURGE   862
+#define MOVE_SUPER_FREEZE    863
 
-#define MOVES_COUNT_CUSTOM   859
+#define MOVES_COUNT_CUSTOM   864
 
 #define MOVES_COUNT         MOVES_COUNT_CUSTOM
 

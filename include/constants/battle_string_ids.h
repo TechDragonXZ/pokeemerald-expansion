@@ -717,8 +717,11 @@
 #define STRINGID_WINDBECAMETWISTER                    715
 #define STRINGID_ATTACKERHASEVOLVED                   716
 #define STRINGID_WINDBECAMEICYWIND                    717
+#define STRINGID_WINDBECAMEAIRCUTTER                  718
+#define STRINGID_WINDBECAMETOXICGAS                   719
+#define STRINGID_AQUABECAMEFROSTJET                   720
 
-#define BATTLESTRINGS_COUNT                           718
+#define BATTLESTRINGS_COUNT                           721
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
