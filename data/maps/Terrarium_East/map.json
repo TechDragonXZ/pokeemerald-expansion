@@ -40,6 +40,29 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Terrarium_East_EventScript_NoFishingSign"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 41,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Terrarium_East_EventScript_NoFishingSign"
+    },
+    {
+      "type": "sign",
+      "x": 41,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Terrarium_East_EventScript_NoFishingSign"
+    }
   ]
 }
