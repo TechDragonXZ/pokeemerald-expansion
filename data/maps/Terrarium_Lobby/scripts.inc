@@ -456,3 +456,12 @@ Terrarium_Lobby_Text_ExtraPackOfPokeballsDroppedDown:
 Terrarium_Lobby_Text_DecidedAgainstBuyingPokeballs:
 	.string "Decided against buying\n"
 	.string "a pack of Pokéballs.$"
+
+Terrarium_Lobby_EventScript_Debug::
+	msgbox Terrarium_Lobby_Text_Debug, MSGBOX_AUTOCLOSE
+	setflag FLAG_SYS_DEXNAV_GET
+	setflag FLAG_SYS_STATS_EDITOR_GET
+	end
+
+Terrarium_Lobby_Text_Debug:
+	.string "Given Dexnav and Stats Editor$"

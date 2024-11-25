@@ -1391,7 +1391,7 @@
 
 #define FLAG_SYS_DEXNAV_SEARCH                      (SYSTEM_FLAGS + 0x21) // Dexnav Search Flag
 #define FLAG_SHINY_CREATION                         (SYSTEM_FLAGS + 0x22) // Force Creation of a Shiny Pokemon Flag
-#define FLAG_CLOCK                                  (SYSTEM_FLAGS + 0x23) // Clock Mode Flag
+#define FLAG_SYS_STATS_EDITOR_GET                   (SYSTEM_FLAGS + 0x23) // Stats Editor Flag
 #define FLAG_EON_LATI                               (SYSTEM_FLAGS + 0x24) // Latios/as Eon Flute Flag
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag

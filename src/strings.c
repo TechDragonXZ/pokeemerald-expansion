@@ -1942,3 +1942,4 @@ const u8 *const gDayNameStringsTable[7] = {
     [DAY_FRIDAY] = gText_Friday,
     [DAY_SATURDAY] = gText_Saturday,
 };
+const u8 gText_StatEditor[] = _("Edit Stats");
