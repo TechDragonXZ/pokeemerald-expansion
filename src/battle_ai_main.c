@@ -2459,6 +2459,13 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
               && GetBattlerType(battlerDef, 2, FALSE) == TYPE_MYSTERY))
                 ADJUST_SCORE(-10);    // target is already water-only
             break;
+        case EFFECT_MELT:
+            if (PartnerMoveIsSameAsAttacker(BATTLE_PARTNER(battlerAtk), battlerDef, move, aiData->partnerMove)
+              || (GetBattlerType(battlerDef, 0, FALSE) == TYPE_NORMAL
+              && GetBattlerType(battlerDef, 1, FALSE) == TYPE_NORMAL
+              && GetBattlerType(battlerDef, 2, FALSE) == TYPE_MYSTERY))
+                ADJUST_SCORE(-10);    // target is already normal-only
+            break;
         case EFFECT_THIRD_TYPE:
             switch (move)
             {
@@ -3057,6 +3064,14 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             case EFFECT_SOAK:
                 if (atkPartnerAbility == ABILITY_WONDER_GUARD
                  && !IS_BATTLER_OF_TYPE(battlerAtkPartner, TYPE_WATER)
+                 && GetActiveGimmick(battlerAtkPartner) != GIMMICK_TERA)
+                {
+                    RETURN_SCORE_PLUS(WEAK_EFFECT);
+                }
+                break;
+            case EFFECT_MELT:
+                if (atkPartnerAbility == ABILITY_WONDER_GUARD
+                 && !IS_BATTLER_OF_TYPE(battlerAtkPartner, TYPE_NORMAL)
                  && GetActiveGimmick(battlerAtkPartner) != GIMMICK_TERA)
                 {
                     RETURN_SCORE_PLUS(WEAK_EFFECT);
@@ -4417,6 +4432,10 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
             ADJUST_SCORE(DECENT_EFFECT);
         break;
     case EFFECT_SOAK:
+        if (HasMoveWithType(battlerAtk, TYPE_ELECTRIC) || HasMoveWithType(battlerAtk, TYPE_GRASS) || (HasMoveEffect(battlerAtk, EFFECT_SUPER_EFFECTIVE_ON_ARG) && gMovesInfo[move].argument == TYPE_WATER) )
+            ADJUST_SCORE(DECENT_EFFECT); // Get some super effective moves
+        break;
+    case EFFECT_MELT:
         if (HasMoveWithType(battlerAtk, TYPE_ELECTRIC) || HasMoveWithType(battlerAtk, TYPE_GRASS) || (HasMoveEffect(battlerAtk, EFFECT_SUPER_EFFECTIVE_ON_ARG) && gMovesInfo[move].argument == TYPE_WATER) )
             ADJUST_SCORE(DECENT_EFFECT); // Get some super effective moves
         break;

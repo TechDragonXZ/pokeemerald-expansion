@@ -9982,6 +9982,31 @@ static void Cmd_various(void)
         }
         return;
     }
+    case VARIOUS_TRY_MELT:
+    {
+        VARIOUS_ARGS(const u8 *failInstr);
+        if ((GetBattlerType(gBattlerTarget, 0, FALSE) != TYPE_ICE
+            && GetBattlerType(gBattlerTarget, 1, FALSE) != TYPE_ICE)
+            || GetActiveGimmick(gBattlerTarget) == GIMMICK_TERA)
+        {
+            gBattlescriptCurrInstr = cmd->failInstr;
+        }
+        else if ((GetBattlerType(gBattlerTarget, 0, FALSE) == TYPE_ICE
+            && GetBattlerType(gBattlerTarget, 1, FALSE) == TYPE_ICE)
+            || GetActiveGimmick(gBattlerTarget) != GIMMICK_TERA)
+        {
+            SET_BATTLER_TYPE(gBattlerTarget, TYPE_WATER);
+            PREPARE_TYPE_BUFFER(gBattleTextBuff1, TYPE_WATER);
+            gBattlescriptCurrInstr = cmd->nextInstr;
+        }
+        else
+        {
+            SET_BATTLER_TYPE(gBattlerTarget, TYPE_NORMAL);
+            PREPARE_TYPE_BUFFER(gBattleTextBuff1, TYPE_NORMAL);
+            gBattlescriptCurrInstr = cmd->nextInstr;
+        }
+        return;
+    }
     case VARIOUS_HANDLE_FORM_CHANGE:
     {
         VARIOUS_ARGS(u8 case_);

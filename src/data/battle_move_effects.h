@@ -2262,4 +2262,10 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 0, // TODO: Assign points
     },
 
+    [EFFECT_MELT] =
+    {
+        .battleScript = BattleScript_EffectMelt,
+        .battleTvScore = 0, // TODO: Assign points
+    },
+
 };

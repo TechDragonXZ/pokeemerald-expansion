@@ -854,5 +854,6 @@ extern const u8 BattleScript_StoneDebrisActivates[];
 extern const u8 BattleScript_WebSlingerActivates[];
 
 extern const u8 BattleScript_ItemDropped[];
+extern const u8 BattleScript_EffectMelt[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

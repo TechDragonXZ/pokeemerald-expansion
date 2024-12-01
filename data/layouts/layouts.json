@@ -5360,7 +5360,7 @@
       "height": 60,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_General_Perma_Winter",
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/Terrarium_West/border.bin",
       "blockdata_filepath": "data/layouts/Terrarium_West/map.bin"
@@ -5468,46 +5468,10 @@
       "height": 14,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/Terrarium_Lobby/border.bin",
       "blockdata_filepath": "data/layouts/Terrarium_Lobby/map.bin"
-    },
-    {
-      "id": "LAYOUT_TERRARIUM_RESTHOUSE",
-      "name": "Terrarium_RestHouse_Layout",
-      "width": 18,
-      "height": 14,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Shop",
-      "border_filepath": "data/layouts/Terrarium_RestHouse/border.bin",
-      "blockdata_filepath": "data/layouts/Terrarium_RestHouse/map.bin"
-    },
-    {
-      "id": "LAYOUT_TERRARIUM_SOUTH_WEST_REST_HOUSE",
-      "name": "Terrarium_SouthWest_RestHouse_Layout",
-      "width": 20,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Shop",
-      "border_filepath": "data/layouts/Terrarium_SouthWest_RestHouse/border.bin",
-      "blockdata_filepath": "data/layouts/Terrarium_SouthWest_RestHouse/map.bin"
-    },
-    {
-      "id": "LAYOUT_TERRARIUM_NORTH_EAST_REST_HOUSE",
-      "name": "Terrarium_NorthEast_RestHouse_Layout",
-      "width": 20,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Shop",
-      "border_filepath": "data/layouts/Terrarium_NorthEast_RestHouse/border.bin",
-      "blockdata_filepath": "data/layouts/Terrarium_NorthEast_RestHouse/map.bin"
     },
     {
       "id": "LAYOUT_RESEARCH_FACILITY_FLOOR1",
@@ -5556,6 +5520,30 @@
       "secondary_tileset": "gTileset_Research_Facility_Floor_2",
       "border_filepath": "data/layouts/Dream_World_Lobby/border.bin",
       "blockdata_filepath": "data/layouts/Dream_World_Lobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRARIUM_EASTWEST_GATE",
+      "name": "Terrarium_EastWest_Gate_Layout",
+      "width": 18,
+      "height": 14,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/Terrarium_EastWest_Gate/border.bin",
+      "blockdata_filepath": "data/layouts/Terrarium_EastWest_Gate/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRARIUM_NORTHSOUTH_GATE",
+      "name": "Terrarium_NorthSouth_Gate_Layout",
+      "width": 18,
+      "height": 14,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/Terrarium_NorthSouth_Gate/border.bin",
+      "blockdata_filepath": "data/layouts/Terrarium_NorthSouth_Gate/map.bin"
     }
   ]
 }

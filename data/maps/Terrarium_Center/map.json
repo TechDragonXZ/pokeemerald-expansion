@@ -38,38 +38,86 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 26,
-      "y": 13,
+      "x": 19,
+      "y": 28,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_IN_GRASS",
       "movement_range_x": 10,
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Terrarium_Center_EventScript_RareMon",
-      "flag": "0"
+      "script": "OverworldMon_EventScript_Standard",
+      "flag": "FLAG_TEMP_2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_1",
-      "x": 46,
-      "y": 10,
+      "x": 33,
+      "y": 42,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_IN_GRASS",
       "movement_range_x": 10,
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Terrarium_Center_EventScript_StrongRareMon",
-      "flag": "0"
+      "script": "OverworldMon_EventScript_Strong",
+      "flag": "FLAG_TEMP_3"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_2",
+      "x": 38,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_IN_GRASS",
+      "movement_range_x": 10,
+      "movement_range_y": 10,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OverworldMon_EventScript_Standard2",
+      "flag": "FLAG_TEMP_1"
     }
   ],
   "warp_events": [
     {
       "x": 14,
-      "y": 9,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_TERRARIUM_LOBBY",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_CENTER_WEST_GATE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 3,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_CENTER_WEST_GATE",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 56,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_CENTER_EAST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 56,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_CENTER_EAST_GATE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 34,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_CENTER_NORTH_GATE",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [

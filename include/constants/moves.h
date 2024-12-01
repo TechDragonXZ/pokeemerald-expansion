@@ -927,8 +927,10 @@
 #define MOVE_STICKY_FLAME    861
 #define MOVE_THUNDER_SURGE   862
 #define MOVE_SUPER_FREEZE    863
+#define MOVE_MELT            864
+#define MOVE_CORROSION       865
 
-#define MOVES_COUNT_CUSTOM   864
+#define MOVES_COUNT_CUSTOM   866
 
 #define MOVES_COUNT         MOVES_COUNT_CUSTOM
 

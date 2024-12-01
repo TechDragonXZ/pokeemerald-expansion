@@ -235,31 +235,6 @@ u8 ChooseWildMonIndex_Land(void)
     return wildMonIndex;
 }
 
-// RARE_WILD_COUNT
-u8 ChooseWildMonIndex_Rare(void)
-{
-    u8 wildMonIndex = 0;
-    bool8 swap = FALSE;
-    u8 rand = Random() % ENCOUNTER_CHANCE_RARE_MONS_TOTAL;
-
-    if (rand < ENCOUNTER_CHANCE_RARE_MONS_SLOT_0)
-        wildMonIndex = 0;
-    else if (rand >= ENCOUNTER_CHANCE_RARE_MONS_SLOT_0 && rand < ENCOUNTER_CHANCE_RARE_MONS_SLOT_1)
-        wildMonIndex = 1;
-    else if (rand >= ENCOUNTER_CHANCE_RARE_MONS_SLOT_1 && rand < ENCOUNTER_CHANCE_RARE_MONS_SLOT_2)
-        wildMonIndex = 2;
-    else
-        wildMonIndex = 3;
-
-    if (LURE_STEP_COUNT != 0 && (Random() % 10 < 2))
-        swap = TRUE;
-
-    if (swap)
-        wildMonIndex = 3 - wildMonIndex;
-
-    return wildMonIndex;
-}
-
 // ROCK_WILD_COUNT / WATER_WILD_COUNT
 u8 ChooseWildMonIndex_WaterRock(void)
 {
@@ -348,19 +323,26 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
 
     if (LURE_STEP_COUNT == 0)
     {
+        u8 count = gPlayerPartyCount;
+        u8 fixedLVL = 0;
+
+        while (count-- > 0)
+        {
+            if (GetMonData(&gPlayerParty[count], MON_DATA_SPECIES) != SPECIES_NONE){
+                fixedLVL += (GetMonData(&gPlayerParty[count], MON_DATA_LEVEL));
+            }
+        }
+        fixedLVL = fixedLVL / gPlayerPartyCount;
+
         // Make sure minimum level is less than maximum level
-        if (wildPokemon[wildMonIndex].maxLevel >= wildPokemon[wildMonIndex].minLevel)
         {
-            min = wildPokemon[wildMonIndex].minLevel;
-            max = wildPokemon[wildMonIndex].maxLevel;
+            min = fixedLVL-3;
+            max = fixedLVL+3;
         }
-        else
-        {
-            min = wildPokemon[wildMonIndex].maxLevel;
-            max = wildPokemon[wildMonIndex].minLevel;
-        }
-        range = max - min + 1;
-        rand = Random() % range;
+	    if (min <= 0)
+		    min = 1;
+            range = max - min + 1; // note that range will always be equal to 7 in this case: fixedLVL+3 - (fixedLVL-3) + 1 = fixedLVL - fixedLVL + 3 +3 +1 = 7
+            rand = Random() % range;
 
         // check ability for max level mon
         if (!GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG))
@@ -486,6 +468,37 @@ void CreateWildMon(u16 species, u8 level)
     }
 
     CreateMonWithNature(&gEnemyParty[0], species, level, USE_RANDOM_IVS, PickWildMonNature());
+
+    if (FlagGet(FLAG_ENABLE_WILDMON_EVOLUTION))
+    {
+        u16 targetSpecies = GetEvolutionTargetSpecies(&gEnemyParty[0], EVO_MODE_NORMAL, ITEM_NONE, NULL);
+        if (targetSpecies != SPECIES_NONE)
+        {
+            if ((targetSpecies == SPECIES_SILCOON) && (Random() % 100) >= 50)
+                targetSpecies = SPECIES_CASCOON;
+            if ((targetSpecies == SPECIES_SILCOON) && level >= 10)
+                targetSpecies = SPECIES_BEAUTIFLY;
+            if ((targetSpecies == SPECIES_CASCOON) && level >= 10)
+                targetSpecies = SPECIES_DUSTOX;
+            if ((targetSpecies == SPECIES_KAKUNA) && level >= 10)
+                targetSpecies = SPECIES_BEEDRILL;
+            if ((targetSpecies == SPECIES_METAPOD) && level >= 10)
+                targetSpecies = SPECIES_BUTTERFREE;
+            if ((targetSpecies == SPECIES_KRICKETOT) && level >= 10)
+                targetSpecies = SPECIES_KRICKETUNE;
+            if ((targetSpecies == SPECIES_SPEWPA) && level >= 12)
+                targetSpecies = SPECIES_VIVILLON;
+            CreateMonWithNature(&gEnemyParty[0], targetSpecies, level, USE_RANDOM_IVS, PickWildMonNature());
+            if (FlagGet(FLAG_ENABLE_WILDMON_EVOLUTION))
+            {
+                u16 targetSpecies2 = GetEvolutionTargetSpecies(&gEnemyParty[0], EVO_MODE_NORMAL, ITEM_NONE, NULL);
+                if (targetSpecies2 != SPECIES_NONE)
+                {
+                    CreateMonWithNature(&gEnemyParty[0], targetSpecies, level, USE_RANDOM_IVS, PickWildMonNature());
+                }
+            }
+        }
+    }
 }
 #ifdef BUGFIX
 #define TRY_GET_ABILITY_INFLUENCED_WILD_MON_INDEX(wildPokemon, type, ability, ptr, count) TryGetAbilityInfluencedWildMonIndex(wildPokemon, type, ability, ptr, count)
@@ -1026,18 +1039,6 @@ u16 GetLocalFishingMon(u8 rod)
     return SPECIES_NONE;
 }
 
-u16 GetLocalRareMon(void)
-{
-    u16 headerId = GetCurrentMapWildMonHeaderId();
-    if (headerId != HEADER_NONE)
-    {
-        const struct WildPokemonInfo *rareMonsInfo = gWildMonHeaders[headerId].rareMonsInfo;
-        if (rareMonsInfo)
-            return rareMonsInfo->wildPokemon[ChooseWildMonIndex_Rare()].species;
-    }
-    return SPECIES_NONE;
-}
-
 bool8 UpdateRepelCounter(void)
 {
     u16 repelLureVar = VarGet(VAR_REPEL_STEP_COUNT);
@@ -1301,9 +1302,6 @@ static u16 ReturnHeaderSpeciesEncounter(u8 encounterType, u16 headerId)
         break;
     case ENCOUNTER_SUPER_ROD:
         species = GetLocalFishingMon(SUPER_ROD);
-        break;
-    case ENCOUNTER_RARE:
-        species = GetLocalRareMon();
         break;
     }
     if (species != SPECIES_NONE)

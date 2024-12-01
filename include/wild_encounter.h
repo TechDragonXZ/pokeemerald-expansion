@@ -25,7 +25,6 @@ struct WildPokemonHeader
     const struct WildPokemonInfo *rockSmashMonsInfo;
     const struct WildPokemonInfo *hiddenMonsInfo;
     const struct WildPokemonInfo *fishingMonsInfo;
-    const struct WildPokemonInfo *rareMonsInfo;
 };
 
 extern const struct WildPokemonHeader gWildMonHeaders[];
@@ -44,7 +43,6 @@ u16 GetLocalLandMon(void);
 u16 GetLocalWaterMon(void);
 u16 GetLocalRockSmashMon(void);
 u16 GetLocalFishingMon(u8 rod);
-u16 GetLocalRareMon(void);
 bool8 UpdateRepelCounter(void);
 bool8 TryDoDoubleWildBattle(void);
 bool8 StandardWildEncounter_Debug(void);

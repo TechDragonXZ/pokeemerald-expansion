@@ -233,6 +233,7 @@
 #define VARIOUS_HIT_SWITCH_TARGET_FAILED             141
 #define VARIOUS_TRY_REVIVAL_BLESSING                 142
 #define VARIOUS_GIVE_DROPPED_ITEMS                   143
+#define VARIOUS_TRY_MELT                             144
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0

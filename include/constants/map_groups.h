@@ -609,9 +609,14 @@
 #define MAP_TERRARIUM_FOGGY_CAVERN (3 | (35 << 8))
 
 // gMapGroup_Terrarium_Indoors
-#define MAP_TERRARIUM_LOBBY                 (0 | (36 << 8))
-#define MAP_TERRARIUM_SOUTH_WEST_REST_HOUSE (1 | (36 << 8))
-#define MAP_TERRARIUM_NORTH_EAST_REST_HOUSE (2 | (36 << 8))
+#define MAP_TERRARIUM_LOBBY             (0 | (36 << 8))
+#define MAP_TERRARIUM_SOUTH_WEST_GATE   (1 | (36 << 8))
+#define MAP_TERRARIUM_SOUTH_EAST_GATE   (2 | (36 << 8))
+#define MAP_TERRARIUM_NORTH_EAST_GATE   (3 | (36 << 8))
+#define MAP_TERRARIUM_NORTH_WEST_GATE   (4 | (36 << 8))
+#define MAP_TERRARIUM_CENTER_WEST_GATE  (5 | (36 << 8))
+#define MAP_TERRARIUM_CENTER_EAST_GATE  (6 | (36 << 8))
+#define MAP_TERRARIUM_CENTER_NORTH_GATE (7 | (36 << 8))
 
 // gMapGroup_Research_Facility
 #define MAP_RESEARCH_FACILITY_FLOOR1 (0 | (37 << 8))

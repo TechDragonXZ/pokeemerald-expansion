@@ -461,6 +461,7 @@ Terrarium_Lobby_EventScript_Debug::
 	msgbox Terrarium_Lobby_Text_Debug, MSGBOX_AUTOCLOSE
 	setflag FLAG_SYS_DEXNAV_GET
 	setflag FLAG_SYS_STATS_EDITOR_GET
+	setflag FLAG_ENABLE_WILDMON_EVOLUTION
 	end
 
 Terrarium_Lobby_Text_Debug:

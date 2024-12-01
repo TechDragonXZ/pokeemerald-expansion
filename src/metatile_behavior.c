@@ -130,6 +130,10 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_ISOLATED_HORIZONTAL_RAIL]        = TILE_FLAG_UNUSED,
     [MB_VERTICAL_RAIL]                   = TILE_FLAG_UNUSED,
     [MB_HORIZONTAL_RAIL]                 = TILE_FLAG_UNUSED,
+    [MB_SAND_WARP_NORTH]                 = TILE_FLAG_UNUSED,
+    [MB_SAND_WARP_SOUTH]                 = TILE_FLAG_UNUSED,
+    [MB_SAND_WARP_EAST]                  = TILE_FLAG_UNUSED,
+    [MB_SAND_WARP_WEST]                  = TILE_FLAG_UNUSED,
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -187,7 +191,7 @@ bool8 MetatileBehavior_IsPokeGrass(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsSandOrDeepSand(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_SAND || metatileBehavior == MB_DEEP_SAND)
+    if (metatileBehavior == MB_SAND || metatileBehavior == MB_DEEP_SAND || metatileBehavior == MB_SAND_WARP_NORTH || metatileBehavior == MB_SAND_WARP_SOUTH || metatileBehavior == MB_SAND_WARP_EAST || metatileBehavior == MB_SAND_WARP_WEST)
         return TRUE;
     else
         return FALSE;
@@ -292,7 +296,8 @@ bool8 MetatileBehavior_IsSurfableWaterOrUnderwater(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsEastArrowWarp(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_EAST_ARROW_WARP)
+    if (metatileBehavior == MB_EAST_ARROW_WARP
+     || metatileBehavior == MB_SAND_WARP_EAST)
         return TRUE;
     else
         return FALSE;
@@ -300,7 +305,8 @@ bool8 MetatileBehavior_IsEastArrowWarp(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsWestArrowWarp(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_WEST_ARROW_WARP)
+    if (metatileBehavior == MB_WEST_ARROW_WARP
+     || metatileBehavior == MB_SAND_WARP_WEST)
         return TRUE;
     else
         return FALSE;
@@ -309,7 +315,8 @@ bool8 MetatileBehavior_IsWestArrowWarp(u8 metatileBehavior)
 bool8 MetatileBehavior_IsNorthArrowWarp(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_NORTH_ARROW_WARP
-     || metatileBehavior == MB_STAIRS_OUTSIDE_ABANDONED_SHIP)
+     || metatileBehavior == MB_STAIRS_OUTSIDE_ABANDONED_SHIP
+     || metatileBehavior == MB_SAND_WARP_NORTH)
         return TRUE;
     else
         return FALSE;
@@ -319,7 +326,8 @@ bool8 MetatileBehavior_IsSouthArrowWarp(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_SOUTH_ARROW_WARP
      || metatileBehavior == MB_WATER_SOUTH_ARROW_WARP
-     || metatileBehavior == MB_SHOAL_CAVE_ENTRANCE)
+     || metatileBehavior == MB_SHOAL_CAVE_ENTRANCE
+     || metatileBehavior == MB_SAND_WARP_SOUTH)
         return TRUE;
     else
         return FALSE;

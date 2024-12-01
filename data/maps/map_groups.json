@@ -647,8 +647,13 @@
   ],
   "gMapGroup_Terrarium_Indoors": [
     "Terrarium_Lobby",
-    "Terrarium_SouthWest_RestHouse",
-    "Terrarium_NorthEast_RestHouse"
+    "Terrarium_SouthWest_Gate",
+    "Terrarium_SouthEast_Gate",
+    "Terrarium_NorthEast_Gate",
+    "Terrarium_NorthWest_Gate",
+    "Terrarium_CenterWest_Gate",
+    "Terrarium_CenterEast_Gate",
+    "Terrarium_CenterNorth_Gate"
   ],
   "gMapGroup_Research_Facility": [
     "Research_Facility_Floor1",

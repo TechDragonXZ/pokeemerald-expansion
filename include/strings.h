@@ -3101,7 +3101,6 @@ extern const u8 gText_Wednesday[];
 extern const u8 gText_Thursday[];
 extern const u8 gText_Friday[];
 
-
 // Month Strings
 extern const u8 *const gMonthNameStringsTable[];
 extern const u8 *const gDayNameStringsTable[];
@@ -3127,5 +3126,11 @@ extern const u8 gText_CurrentTimePM[];
 extern const u8 gText_CurrentTimePMOff[];
 extern const u8 gText_ClockOption[];
 extern const u8 gText_Date[];
+
+// Bag
+extern const u8 gMenuText_Move[];
+extern const u8 gText_MoveItemWhere[];
+extern const u8 gText_XsYAnd[];
+extern const u8 gText_XsYWereSwapped[];
 
 #endif // GUARD_STRINGS_H

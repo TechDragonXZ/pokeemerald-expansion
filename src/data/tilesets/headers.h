@@ -1051,20 +1051,6 @@ const struct Tileset gTileset_UnionRoom =
     .palettes_winter = NULL,
 };
 
-const struct Tileset gTileset_General_Snowy =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_General_Snowy,
-    .palettes = gTilesetPalettes_General_Snowy,
-    .metatiles = gMetatiles_General_Snowy,
-    .metatileAttributes = gMetatileAttributes_General_Snowy,
-    .callback = NULL,
-    .palettes_summer = NULL,
-    .palettes_autumn = NULL,
-    .palettes_winter = NULL,
-};
-
 const struct Tileset gTileset_Terrarium =
 {
     .isCompressed = TRUE,
@@ -1087,6 +1073,62 @@ const struct Tileset gTileset_Research_Facility_Floor_2 =
     .palettes = gTilesetPalettes_Research_Facility_Floor_2,
     .metatiles = gMetatiles_Research_Facility_Floor_2,
     .metatileAttributes = gMetatileAttributes_Research_Facility_Floor_2,
+    .callback = NULL,
+    .palettes_summer = NULL,
+    .palettes_autumn = NULL,
+    .palettes_winter = NULL,
+};
+
+const struct Tileset gTileset_General_Perma_Winter =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Perma_Winter,
+    .palettes = gTilesetPalettes_General_Perma_Winter,
+    .metatiles = gMetatiles_General_Perma_Winter,
+    .metatileAttributes = gMetatileAttributes_General_Perma_Winter,
+    .callback = NULL,
+    .palettes_summer = NULL,
+    .palettes_autumn = NULL,
+    .palettes_winter = NULL,
+};
+
+const struct Tileset gTileset_General_Perma_Autumn =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Perma_Autumn,
+    .palettes = gTilesetPalettes_General_Perma_Autumn,
+    .metatiles = gMetatiles_General_Perma_Autumn,
+    .metatileAttributes = gMetatileAttributes_General_Perma_Autumn,
+    .callback = NULL,
+    .palettes_summer = NULL,
+    .palettes_autumn = NULL,
+    .palettes_winter = NULL,
+};
+
+const struct Tileset gTileset_General_Perma_Summer =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Perma_Summer,
+    .palettes = gTilesetPalettes_General_Perma_Summer,
+    .metatiles = gMetatiles_General_Perma_Summer,
+    .metatileAttributes = gMetatileAttributes_General_Perma_Summer,
+    .callback = NULL,
+    .palettes_summer = NULL,
+    .palettes_autumn = NULL,
+    .palettes_winter = NULL,
+};
+
+const struct Tileset gTileset_General_Perma_Spring =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Perma_Spring,
+    .palettes = gTilesetPalettes_General_Perma_Spring,
+    .metatiles = gMetatiles_General_Perma_Spring,
+    .metatileAttributes = gMetatileAttributes_General_Perma_Spring,
     .callback = NULL,
     .palettes_summer = NULL,
     .palettes_autumn = NULL,

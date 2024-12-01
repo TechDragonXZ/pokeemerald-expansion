@@ -208,11 +208,20 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
 
-const u16 gMetatiles_General_Snowy[] = INCBIN_U16("data/tilesets/primary/general_snowy/metatiles.bin");
-const u16 gMetatileAttributes_General_Snowy[] = INCBIN_U16("data/tilesets/primary/general_snowy/metatile_attributes.bin");
-
 const u16 gMetatiles_Terrarium[] = INCBIN_U16("data/tilesets/secondary/terrarium/metatiles.bin");
 const u16 gMetatileAttributes_Terrarium[] = INCBIN_U16("data/tilesets/secondary/terrarium/metatile_attributes.bin");
 
 const u16 gMetatiles_Research_Facility_Floor_2[] = INCBIN_U16("data/tilesets/secondary/research_facility_floor_2/metatiles.bin");
 const u16 gMetatileAttributes_Research_Facility_Floor_2[] = INCBIN_U16("data/tilesets/secondary/research_facility_floor_2/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Perma_Winter[] = INCBIN_U16("data/tilesets/primary/general_perma_winter/metatiles.bin");
+const u16 gMetatileAttributes_General_Perma_Winter[] = INCBIN_U16("data/tilesets/primary/general_perma_winter/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Perma_Autumn[] = INCBIN_U16("data/tilesets/primary/general_perma_autumn/metatiles.bin");
+const u16 gMetatileAttributes_General_Perma_Autumn[] = INCBIN_U16("data/tilesets/primary/general_perma_autumn/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Perma_Summer[] = INCBIN_U16("data/tilesets/primary/general_perma_summer/metatiles.bin");
+const u16 gMetatileAttributes_General_Perma_Summer[] = INCBIN_U16("data/tilesets/primary/general_perma_summer/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Perma_Spring[] = INCBIN_U16("data/tilesets/primary/general_perma_spring/metatiles.bin");
+const u16 gMetatileAttributes_General_Perma_Spring[] = INCBIN_U16("data/tilesets/primary/general_perma_spring/metatile_attributes.bin");

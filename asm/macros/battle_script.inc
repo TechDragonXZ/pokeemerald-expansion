@@ -2303,6 +2303,11 @@
 	various \battler, VARIOUS_ACTIVATE_TERRAIN_CHANGE_ABILITIES
 	.endm
 
+	.macro trymelt failInstr:req
+	various BS_ATTACKER, VARIOUS_TRY_MELT
+	.4byte \failInstr
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER, \stat | \stages << 3 | \down << 7
