@@ -2721,13 +2721,6 @@ extern const u8 gText_PlayerScurriedBackHome[];
 extern const u8 gText_Relearn[]; // move relearner from summary screen
 extern const u8 gText_Rename[]; // change nickname from summary screen
 
-// FRLG whiteout
-extern const u8 gText_PlayerScurriedToCenter[];
-extern const u8 gText_PlayerScurriedBackHome[];
-
-extern const u8 gText_Relearn[]; // move relearner from summary screen
-extern const u8 gText_Rename[]; // change nickname from summary screen
-
 // Follower party menu
 extern const u8 gText_Follower[];
 extern const u8 gText_FollowerSet[];
@@ -2751,8 +2744,6 @@ extern const u8 gText_Houndour[];
 extern const u8 gText_Teddiursa[];
 extern const u8 gText_Mareep[];
 extern const u8 gText_Pineco[];
-extern const u8 gText_Nickname[];
-extern const u8 gText_Moves_Menu[];
 extern const u8 gText_TerrariumMain[];
 extern const u8 gText_TerrariumSub[];
 extern const u8 gText_Group0[];
@@ -2761,7 +2752,6 @@ extern const u8 gText_Group2[];
 extern const u8 gText_SafariBallAndPrice[];
 extern const u8 gText_SportBallAndPrice[];
 extern const u8 gText_ParkBallAndPrice[];
-extern const u8 gText_Moves_Menu[];
 extern const u8 gText_AshQty[];
 
 // Text for clock

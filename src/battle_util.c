@@ -4241,6 +4241,10 @@ u32 CanAbilityAbsorbMove(u32 battlerAtk, u32 battlerDef, u32 abilityDef, u32 mov
         if (moveType == TYPE_GROUND)
             effect = MOVE_ABSORBED_BY_DRAIN_HP_ABILITY;
         break;
+    case ABILITY_DRAGON_EATER:
+        if (moveType == TYPE_DRAGON)
+            effect = MOVE_ABSORBED_BY_DRAIN_HP_ABILITY;
+        break;
     case ABILITY_MOTOR_DRIVE:
         if (moveType == TYPE_ELECTRIC && gMovesInfo[move].target != MOVE_TARGET_ALL_BATTLERS) // Potential bug in singles (might be solved with simu hp reudction)
             effect = MOVE_ABSORBED_BY_STAT_INCREASE_ABILITY;

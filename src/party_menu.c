@@ -81,8 +81,6 @@
 
 enum {
     MENU_SUMMARY,
-    MENU_MOVES,
-    MENU_NICKNAME,
     MENU_STAT_EDIT,
     MENU_SWITCH,
     MENU_FOLLOWER,
@@ -2857,9 +2855,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUMMARY);
     if (FlagGet(FLAG_SYS_STATS_EDITOR_GET) == TRUE)
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_STAT_EDIT);
-    if (!IsTradedMon(&mons[slotId]))
-       AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_NICKNAME);
-
+    
     // Add field moves to action list
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
@@ -2883,8 +2879,6 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     {
         if (GetMonData(&mons[1], MON_DATA_SPECIES) != SPECIES_NONE)
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SWITCH);
-        if (GetNumberOfRelearnableMoves(&mons[slotId]) != 0)
-		    AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_MOVES);
         if (GetMonData(&mons[slotId], MON_DATA_SPECIES) != SPECIES_NONE || GetMonData(&mons[slotId], MON_DATA_IS_EGG) == FALSE)
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_FOLLOWER);
         if (ItemIsMail(GetMonData(&mons[slotId], MON_DATA_HELD_ITEM)))

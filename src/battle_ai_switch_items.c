@@ -382,7 +382,7 @@ static bool32 FindMonThatAbsorbsOpponentsMove(u32 battler)
     {
         absorbingTypeAbilities[numAbsorbingAbilities++] = ABILITY_EARTH_EATER;
     }
-    else if (gMovesInfo[gLastLandedMoves[battler]].type == TYPE_DRAGON)
+    else if (gMovesInfo[predictedMove].type == TYPE_DRAGON || (isOpposingBattlerChargingOrInvulnerable && gMovesInfo[incomingMove].type == TYPE_DRAGON))
     {
         absorbingTypeAbilities[numAbsorbingAbilities++] = ABILITY_DRAGON_EATER;
     }
