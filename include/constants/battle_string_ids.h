@@ -712,16 +712,29 @@
 #define STRINGID_FOGLIFTED                            710
 #define STRINGID_PKMNMADESHELLGLEAM                   711
 #define STRINGID_FICKLEBEAMDOUBLED                    712
-#define STRINGID_PKMNDROPPEDITEM                      713
-#define STRINGID_BAGISFULL                            714
-#define STRINGID_WINDBECAMETWISTER                    715
-#define STRINGID_ATTACKERHASEVOLVED                   716
-#define STRINGID_WINDBECAMEICYWIND                    717
-#define STRINGID_WINDBECAMEAIRCUTTER                  718
-#define STRINGID_WINDBECAMETOXICGAS                   719
-#define STRINGID_AQUABECAMEFROSTJET                   720
+#define STRINGID_COMMANDERACTIVATES                   713
+#define STRINGID_POKEFLUTECATCHY                      714
+#define STRINGID_POKEFLUTE                            715
+#define STRINGID_MONHEARINGFLUTEAWOKE                 716
+#define STRINGID_SUNLIGHTISHARSH                      717
+#define STRINGID_ITISHAILING                          718
+#define STRINGID_ITISSNOWING                          719
+#define STRINGID_ISCOVEREDWITHGRASS                   720
+#define STRINGID_MISTSWIRLSAROUND                     721
+#define STRINGID_ELECTRICCURRENTISRUNNING             722
+#define STRINGID_SEEMSWEIRD                           723
+#define STRINGID_WAGGLINGAFINGER                      724
 
-#define BATTLESTRINGS_COUNT                           721
+#define STRINGID_PKMNDROPPEDITEM                      725
+#define STRINGID_BAGISFULL                            726
+#define STRINGID_WINDBECAMETWISTER                    727
+#define STRINGID_ATTACKERHASEVOLVED                   728
+#define STRINGID_WINDBECAMEICYWIND                    729
+#define STRINGID_WINDBECAMEAIRCUTTER                  730
+#define STRINGID_WINDBECAMETOXICGAS                   731
+#define STRINGID_AQUABECAMEFROSTJET                   732
+
+#define BATTLESTRINGS_COUNT                           733
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

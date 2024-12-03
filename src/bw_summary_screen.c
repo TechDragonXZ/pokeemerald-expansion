@@ -52,15 +52,6 @@
 #include "constants/songs.h"
 
 #if BW_SUMMARY_SCREEN == TRUE
-enum BWPSSPage
-{
-    PSS_PAGE_INFO,
-    PSS_PAGE_SKILLS,
-    PSS_PAGE_BATTLE_MOVES,
-    PSS_PAGE_CONTEST_MOVES,
-    PSS_PAGE_COUNT
-};
-
 enum BWPSSEffect
 {
     PSS_EFFECT_BATTLE,
@@ -4419,7 +4410,7 @@ static void PrintMoveNameAndPP(u8 moveIndex)
     const u8 *text;
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
     u8 moveNameWindowId = AddWindowFromTemplateList(sPageMovesTemplate, PSS_DATA_WINDOW_MOVE_NAMES_PP);
-    u32 fontId = B_EXPANDED_MOVE_NAMES ? FONT_SMALL : FONT_SHORT;
+    u32 fontId = FONT_SHORT;
 
     u16 move = summary->moves[moveIndex];
 
@@ -4628,7 +4619,7 @@ static void PrintMoveDetails(u16 move)
 static void PrintNewMoveDetailsOrCancelText(void)
 {
     u8 windowId1 = AddWindowFromTemplateList(sPageMovesTemplate, PSS_DATA_WINDOW_MOVE_NAMES_PP);
-    u32 fontId = B_EXPANDED_MOVE_NAMES ? FONT_SMALL : FONT_SHORT;
+    u32 fontId = FONT_SHORT;
 
     if (sMonSummaryScreen->newMove == MOVE_NONE)
     {

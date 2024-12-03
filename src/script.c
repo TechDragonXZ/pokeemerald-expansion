@@ -5,6 +5,7 @@
 #include "util.h"
 #include "constants/event_objects.h"
 #include "constants/map_scripts.h"
+#include "field_message_box.h"
 #include "ui_birch_case.h"
 #include "task.h"
 #include "field_weather.h"
@@ -29,6 +30,8 @@ static u8 sGlobalScriptContextStatus;
 static struct ScriptContext sGlobalScriptContext;
 static struct ScriptContext sImmediateScriptContext;
 static bool8 sLockFieldControls;
+EWRAM_DATA u8 gMsgIsSignPost = FALSE;
+EWRAM_DATA u8 gMsgBoxIsCancelable = FALSE;
 
 extern ScrCmdFunc gScriptCmdTable[];
 extern ScrCmdFunc gScriptCmdTableEnd[];
