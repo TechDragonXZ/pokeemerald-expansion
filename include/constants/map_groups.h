@@ -618,19 +618,9 @@
 #define MAP_TERRARIUM_CENTER_EAST_GATE  (6 | (36 << 8))
 #define MAP_TERRARIUM_CENTER_NORTH_GATE (7 | (36 << 8))
 
-// gMapGroup_Research_Facility
-#define MAP_RESEARCH_FACILITY_FLOOR1 (0 | (37 << 8))
-#define MAP_RESEARCH_FACILITY_FLOOR2 (1 | (37 << 8))
-
-// gMapGroup_Dream_World
-#define MAP_DREAM_WORLD_HUB (0 | (38 << 8))
-
-// gMapGroup_Dream_World_Indoors
-#define MAP_DREAM_WORLD_LOBBY (0 | (39 << 8))
-
 // gMapGroup_None
-#define MAP_NONE (0 | (40 << 8))
+#define MAP_NONE (0 | (37 << 8))
 
-#define MAP_GROUPS_COUNT 41
+#define MAP_GROUPS_COUNT 38
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

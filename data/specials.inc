@@ -16,6 +16,7 @@ gSpecials::
 	def_special ExitLinkRoom
 	def_special SetPlayerSecretBase
 	def_special CheckPlayerHasSecretBase
+	def_special CheckNoMoreSecretBases
 	def_special EnterSecretBase
 	def_special ClearAndLeaveSecretBase
 	def_special MoveOutOfSecretBase

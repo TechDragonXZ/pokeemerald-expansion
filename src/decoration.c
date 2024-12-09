@@ -519,8 +519,9 @@ void InitDecorationContextItems(void)
 
     if (sDecorationContext.isPlayerRoom == FALSE)
     {
-        sDecorationContext.items = gSaveBlock1Ptr->secretBases[0].decorations;
-        sDecorationContext.pos = gSaveBlock1Ptr->secretBases[0].decorationPositions;
+        u16 currSecretBaseIdx = VarGet(VAR_CURRENT_SECRET_BASE);
+        sDecorationContext.items = gSaveBlock1Ptr->secretBases[currSecretBaseIdx].decorations;
+        sDecorationContext.pos = gSaveBlock1Ptr->secretBases[currSecretBaseIdx].decorationPositions;
     }
 
     if (sDecorationContext.isPlayerRoom == TRUE)
@@ -580,9 +581,10 @@ static void InitDecorationActionsWindow(void)
 
 void DoSecretBaseDecorationMenu(u8 taskId)
 {
+    u16 currSecretBaseIdx = VarGet(VAR_CURRENT_SECRET_BASE);
     InitDecorationActionsWindow();
-    sDecorationContext.items = gSaveBlock1Ptr->secretBases[0].decorations;
-    sDecorationContext.pos = gSaveBlock1Ptr->secretBases[0].decorationPositions;
+    sDecorationContext.items = gSaveBlock1Ptr->secretBases[currSecretBaseIdx].decorations;
+    sDecorationContext.pos = gSaveBlock1Ptr->secretBases[currSecretBaseIdx].decorationPositions;
     sDecorationContext.size = DECOR_MAX_SECRET_BASE;
     sDecorationContext.isPlayerRoom = FALSE;
     gTasks[taskId].func = HandleDecorationActionsMenuInput;
@@ -1071,6 +1073,7 @@ static void IdentifyOwnedDecorationsCurrentlyInUseInternal(u8 taskId)
 {
     u16 i, j, k;
     u16 count;
+    u16 currSecretBaseIdx = VarGet(VAR_CURRENT_SECRET_BASE);
 
     count = 0;
     memset(sSecretBaseItemsIndicesBuffer, 0, sizeof(sSecretBaseItemsIndicesBuffer));
@@ -1078,11 +1081,11 @@ static void IdentifyOwnedDecorationsCurrentlyInUseInternal(u8 taskId)
 
     for (i = 0; i < ARRAY_COUNT(sSecretBaseItemsIndicesBuffer); i++)
     {
-        if (gSaveBlock1Ptr->secretBases[0].decorations[i] != DECOR_NONE)
+        if (gSaveBlock1Ptr->secretBases[currSecretBaseIdx].decorations[i] != DECOR_NONE)
         {
             for (j = 0; j < gDecorationInventories[sCurDecorationCategory].size; j++)
             {
-                if (gCurDecorationItems[j] == gSaveBlock1Ptr->secretBases[0].decorations[i])
+                if (gCurDecorationItems[j] == gSaveBlock1Ptr->secretBases[currSecretBaseIdx].decorations[i])
                 {
                     for (k = 0; k < count && sSecretBaseItemsIndicesBuffer[k] != j + 1; k++)
                         ;

@@ -65,7 +65,7 @@
 #define FLAG_HIDE_REGIGIGAS     0x33 // Hide Regigigas Flag
 #define FLAG_NOT_FIRST_TIME     0x34 // Not First Visit To The Terrarium Flag
 #define FLAG_IN_TERRARIUM       0x35 // Inside Terrarium Flag
-#define FLAG_IN_DREAM_WORLD     0x36 // Inside Dream World Flag
+#define FLAG_UNUSED_0x036       0x36 // Unused Flag
 #define FLAG_PAUSE_TIME         0x37 // Time Paused Flag
 #define FLAG_RECEIVED_FISHING_ROD    0x38 // Received Fishing Rod Flag
 #define FLAG_DAY_SET         0x39 // Day Set Flag
@@ -1543,26 +1543,26 @@
 #define FLAG_VISITED_ROUTE133                       (SYSTEM_FLAGS + 0xA5) 
 #define FLAG_VISITED_ROUTE134                       (SYSTEM_FLAGS + 0xA6) 
 #define FLAG_VISITED_MT_CHIMNEY                     (SYSTEM_FLAGS + 0xA7)
-#define FLAG_UNUSED_0x908                           (SYSTEM_FLAGS + 0xA8) // Unused Flag
-#define FLAG_UNUSED_0x909                           (SYSTEM_FLAGS + 0xA9) // Unused Flag
-#define FLAG_UNUSED_0x90A                           (SYSTEM_FLAGS + 0xAA) // Unused Flag
-#define FLAG_UNUSED_0x90B                           (SYSTEM_FLAGS + 0xAB) // Unused Flag
-#define FLAG_UNUSED_0x90C                           (SYSTEM_FLAGS + 0xAC) // Unused Flag
-#define FLAG_UNUSED_0x90D                           (SYSTEM_FLAGS + 0xAD) // Unused Flag
-#define FLAG_UNUSED_0x90E                           (SYSTEM_FLAGS + 0xAE) // Unused Flag
-#define FLAG_UNUSED_0x90F                           (SYSTEM_FLAGS + 0xAF) // Unused Flag
-#define FLAG_UNUSED_0x910                           (SYSTEM_FLAGS + 0xB0) // Unused Flag
-#define FLAG_UNUSED_0x911                           (SYSTEM_FLAGS + 0xB1) // Unused Flag
-#define FLAG_UNUSED_0x912                           (SYSTEM_FLAGS + 0xB2) // Unused Flag
-#define FLAG_UNUSED_0x913                           (SYSTEM_FLAGS + 0xB3) // Unused Flag
-#define FLAG_UNUSED_0x914                           (SYSTEM_FLAGS + 0xB4) // Unused Flag
-#define FLAG_UNUSED_0x915                           (SYSTEM_FLAGS + 0xB5) // Unused Flag
-#define FLAG_UNUSED_0x916                           (SYSTEM_FLAGS + 0xB6) // Unused Flag
-#define FLAG_UNUSED_0x917                           (SYSTEM_FLAGS + 0xB7) // Unused Flag
-#define FLAG_UNUSED_0x918                           (SYSTEM_FLAGS + 0xB8) // Unused Flag
-#define FLAG_UNUSED_0x919                           (SYSTEM_FLAGS + 0xB9) // Unused Flag
-#define FLAG_UNUSED_0x91A                           (SYSTEM_FLAGS + 0xBA) // Unused Flag
-#define FLAG_UNUSED_0x91B                           (SYSTEM_FLAGS + 0xBB) // Unused Flag
+#define FLAG_SECRET_BASE_OWNED_00                   (SYSTEM_FLAGS + 0xA8) // Secret Base 0 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_01                   (SYSTEM_FLAGS + 0xA9) // Secret Base 1 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_02                   (SYSTEM_FLAGS + 0xAA) // Secret Base 2 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_03                   (SYSTEM_FLAGS + 0xAB) // Secret Base 3 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_04                   (SYSTEM_FLAGS + 0xAC) // Secret Base 4 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_05                   (SYSTEM_FLAGS + 0xAD) // Secret Base 5 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_06                   (SYSTEM_FLAGS + 0xAE) // Secret Base 6 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_07                   (SYSTEM_FLAGS + 0xAF) // Secret Base 8 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_08                   (SYSTEM_FLAGS + 0xB0) // Secret Base 9 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_09                   (SYSTEM_FLAGS + 0xB1) // Secret Base 10 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_10                   (SYSTEM_FLAGS + 0xB2) // Secret Base 11 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_11                   (SYSTEM_FLAGS + 0xB3) // Secret Base 12 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_12                   (SYSTEM_FLAGS + 0xB4) // Secret Base 13 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_13                   (SYSTEM_FLAGS + 0xB5) // Secret Base 14 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_14                   (SYSTEM_FLAGS + 0xB6) // Secret Base 15 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_15                   (SYSTEM_FLAGS + 0xB7) // Secret Base 16 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_16                   (SYSTEM_FLAGS + 0xB8) // Secret Base 17 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_17                   (SYSTEM_FLAGS + 0xB9) // Secret Base 18 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_18                   (SYSTEM_FLAGS + 0xBA) // Secret Base 19 Owned Flag
+#define FLAG_SECRET_BASE_OWNED_19                   (SYSTEM_FLAGS + 0xBB) // Secret Base 20 Owned Flag
 #define FLAG_UNUSED_0x91C                           (SYSTEM_FLAGS + 0xBC) // Unused Flag
 #define FLAG_UNUSED_0x91D                           (SYSTEM_FLAGS + 0xBD) // Unused Flag
 #define FLAG_UNUSED_0x91E                           (SYSTEM_FLAGS + 0xBE) // Unused Flag

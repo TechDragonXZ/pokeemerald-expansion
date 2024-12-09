@@ -1065,20 +1065,6 @@ const struct Tileset gTileset_Terrarium =
     .palettes_winter = NULL,
 };
 
-const struct Tileset gTileset_Research_Facility_Floor_2 =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Research_Facility_Floor_2,
-    .palettes = gTilesetPalettes_Research_Facility_Floor_2,
-    .metatiles = gMetatiles_Research_Facility_Floor_2,
-    .metatileAttributes = gMetatileAttributes_Research_Facility_Floor_2,
-    .callback = NULL,
-    .palettes_summer = NULL,
-    .palettes_autumn = NULL,
-    .palettes_winter = NULL,
-};
-
 const struct Tileset gTileset_General_Perma_Winter =
 {
     .isCompressed = TRUE,

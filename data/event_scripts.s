@@ -1193,14 +1193,6 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/Terrarium_NorthEast_Gate/scripts.inc"
 
-	.include "data/maps/Research_Facility_Floor1/scripts.inc"
-
-	.include "data/maps/Research_Facility_Floor2/scripts.inc"
-
-	.include "data/maps/Dream_World_Hub/scripts.inc"
-
-	.include "data/maps/Dream_World_Lobby/scripts.inc"
-
 	.include "data/maps/Terrarium_CenterWest_Gate/scripts.inc"
 
 	.include "data/maps/Terrarium_CenterNorth_Gate/scripts.inc"

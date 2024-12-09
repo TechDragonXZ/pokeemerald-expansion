@@ -3033,18 +3033,6 @@ static void CursorCb_Summary(u8 taskId)
     Task_ClosePartyMenu(taskId);
 }
 
-static void CursorCb_Moves(u8 taskId)
-{
-    PlaySE(SE_SELECT);
-	FlagSet(FLAG_TEMP_F);
-    gSpecialVar_0x8004 = gPartyMenu.slotId;
-	gSpecialVar_0x8005 = GetNumberOfRelearnableMoves(&gPlayerParty[gSpecialVar_0x8004]);
-	DisplayPartyPokemonDataForRelearner(gSpecialVar_0x8004);
-	TeachMoveRelearnerMove();
-    sPartyMenuInternal->exitCallback = TeachMoveRelearnerMove;
-    Task_ClosePartyMenu(taskId);
-}
-
 static void ChangePokemonNicknamePartyScreen_CB(void)
 {
     SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_NICKNAME, gStringVar2);
@@ -3056,14 +3044,6 @@ static void ChangePokemonNicknamePartyScreen(void)
     GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_NICKNAME, gStringVar3);
     GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_NICKNAME, gStringVar2);
     DoNamingScreen(NAMING_SCREEN_NICKNAME, gStringVar2, GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES, NULL), GetMonGender(&gPlayerParty[gSpecialVar_0x8004]), GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_PERSONALITY, NULL), ChangePokemonNicknamePartyScreen_CB);
-}
-
-static void CursorCb_Nickname(u8 taskId)
-{
-    PlaySE(SE_SELECT);
-    gSpecialVar_0x8004 = gPartyMenu.slotId;
-    sPartyMenuInternal->exitCallback = ChangePokemonNicknamePartyScreen;
-    Task_ClosePartyMenu(taskId);
 }
 
 static void CB2_ReturnToPartyMenuFromNicknameScreen(void)
