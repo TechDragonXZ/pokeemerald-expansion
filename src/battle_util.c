@@ -10667,7 +10667,7 @@ uq4_12_t CalcTypeEffectivenessMultiplier(u32 move, u32 moveType, u32 battlerAtk,
     if (move != MOVE_STRUGGLE && moveType != TYPE_MYSTERY)
     {
         modifier = CalcTypeEffectivenessMultiplierInternal(move, moveType, battlerAtk, battlerDef, recordAbilities, modifier, defAbility);
-        if (gMovesInfo[move].effect == EFFECT_TWO_TYPED_MOVE || gMovesInfo[move].effect == EFFECT_BEAM_BASH)
+        if (gMovesInfo[move].effect == EFFECT_TWO_TYPED_MOVE || gMovesInfo[move].effect == EFFECT_BEAM_BASH || gMovesInfo[move].effect == EFFECT_MEGA_MOVE)
             modifier = CalcTypeEffectivenessMultiplierInternal(move, gMovesInfo[move].argument, battlerAtk, battlerDef, recordAbilities, modifier, defAbility);
     }
 

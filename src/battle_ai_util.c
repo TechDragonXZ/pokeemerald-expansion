@@ -827,6 +827,7 @@ static bool32 AI_IsMoveEffectInPlus(u32 battlerAtk, u32 battlerDef, u32 move, s3
                         return TRUE;
                     break;
                 case MOVE_EFFECT_ALL_STATS_UP:
+                case MOVE_EFFECT_ALL_STATS_UP_2:
                     for (i = STAT_ATK; i <= NUM_STATS; i++)
                     {
                         if (BattlerStatCanRise(battlerAtk, abilityAtk, i))
@@ -956,6 +957,7 @@ static bool32 AI_IsMoveEffectInMinus(u32 battlerAtk, u32 battlerDef, u32 move, s
                 case MOVE_EFFECT_EVS_PLUS_2:
                 case MOVE_EFFECT_ACC_PLUS_2:
                 case MOVE_EFFECT_ALL_STATS_UP:
+                case MOVE_EFFECT_ALL_STATS_UP_2:
                     if ((gMovesInfo[move].additionalEffects[i].self && abilityAtk == ABILITY_CONTRARY)
                         || (noOfHitsToKo != 1 && !(abilityDef == ABILITY_CONTRARY && !DoesBattlerIgnoreAbilityChecks(abilityAtk, move))))
                         return TRUE;
@@ -2286,6 +2288,7 @@ bool32 IsStatRaisingEffect(u32 effect)
     case EFFECT_GROWTH:
     case EFFECT_COIL:
     case EFFECT_QUIVER_DANCE:
+    case EFFECT_POWER_SURGE:
     case EFFECT_BULK_UP:
     case EFFECT_GEOMANCY:
     case EFFECT_STOCKPILE:

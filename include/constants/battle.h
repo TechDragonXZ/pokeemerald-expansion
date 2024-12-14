@@ -418,8 +418,9 @@
 #define MOVE_EFFECT_ORDER_UP            80
 #define MOVE_EFFECT_GENETIC_BURST       81
 #define MOVE_EFFECT_FROSTBURN           82
+#define MOVE_EFFECT_ALL_STATS_UP_2      83
 
-#define NUM_MOVE_EFFECTS                83
+#define NUM_MOVE_EFFECTS                84
 
 #define MOVE_EFFECT_AFFECTS_USER        0x2000
 #define MOVE_EFFECT_CERTAIN             0x4000

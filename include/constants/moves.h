@@ -912,7 +912,7 @@
 
 // Custom
 #define MOVE_DRAKE_SWARM     848
-#define MOVE_LEAF_SCALE      849
+#define MOVE_LEAF_SCALES     849
 #define MOVE_FINAL_BLOW      850
 #define MOVE_MYSTIC_SLASH    851
 #define MOVE_DISASTER_BLADE  852

@@ -860,4 +860,7 @@ extern const u8 BattleScript_WebSlingerActivates[];
 extern const u8 BattleScript_ItemDropped[];
 extern const u8 BattleScript_EffectMelt[];
 
+extern const u8 BattleScript_AllStatsUp2[];
+extern const u8 BattleScript_EffectPowerSurge[];
+
 #endif // GUARD_BATTLE_SCRIPTS_H

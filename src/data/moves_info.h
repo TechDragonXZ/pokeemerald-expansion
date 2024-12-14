@@ -22057,29 +22057,29 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .battleAnimScript = gBattleAnimMove_Infestation,
     },
 
-    [MOVE_LEAF_SCALE] =
+    [MOVE_LEAF_SCALES] =
     {
-        .name = COMPOUND_STRING("Leaf Scale"),
+        .name = COMPOUND_STRING("Leaf Scales"),
         .description = COMPOUND_STRING(
-            "Slashes a sharp scaley leaf.\n"
-            "Does Grass and Dragon type damage."),
-        .effect = EFFECT_TWO_TYPED_MOVE,
+            "Shoots sharp scale-like leaves.\n"
+            "Move changes with user's form."),
+        .effect = EFFECT_MEGA_MOVE,
         .power = 90,
         .type = TYPE_GRASS,
-        .argument = TYPE_DRAGON,
+        .argument = TYPE_GRASS,
         .accuracy = 100,
         .criticalHitStage = 1,
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .makesContact = TRUE,
         .slicingMove = TRUE,
         .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_LeafBlade,
+        .battleAnimScript = gBattleAnimMove_MagicalLeaf,
     },
 
     [MOVE_FINAL_BLOW] =
@@ -22135,10 +22135,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "Hits as soon as possible.\n"
             "High critical-hit ratio."),
-        .effect = EFFECT_TWO_TYPED_MOVE,
+        .effect = EFFECT_MEGA_MOVE,
         .power = 65,
         .type = TYPE_DARK,
-        .argument = TYPE_FAIRY,
+        .argument = TYPE_DARK,
         .accuracy = 100,
         .criticalHitStage = 2,
         .pp = 10,
@@ -22194,9 +22194,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Power Surge"),
         .description = COMPOUND_STRING(
-            "The user lets out a cry that\n"
-            "boosts its power."),
-        .effect = EFFECT_HIT,
+            "The user lets out a shout.\n"
+            "Sharply boosts its power."),
+        .effect = EFFECT_POWER_SURGE,
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
@@ -22209,16 +22209,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .snatchAffected = TRUE,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_ALL_STATS_UP,
-            .self = TRUE,
-            .chance = 100,
-        }),
         .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Uproar,
+        .battleAnimScript = gBattleAnimMove_FocusEnergy,
     },
 
     [MOVE_BEAM_BASH] =

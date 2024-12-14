@@ -65,7 +65,7 @@
 #define FLAG_HIDE_REGIGIGAS     0x33 // Hide Regigigas Flag
 #define FLAG_NOT_FIRST_TIME     0x34 // Not First Visit To The Terrarium Flag
 #define FLAG_IN_TERRARIUM       0x35 // Inside Terrarium Flag
-#define FLAG_UNUSED_0x036       0x36 // Unused Flag
+#define FLAG_REMOVE_WARP_FADE   0x36 // Removes Warp Fade Flag
 #define FLAG_PAUSE_TIME         0x37 // Time Paused Flag
 #define FLAG_RECEIVED_FISHING_ROD    0x38 // Received Fishing Rod Flag
 #define FLAG_DAY_SET         0x39 // Day Set Flag

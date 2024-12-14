@@ -899,12 +899,14 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_SEEMSWEIRD]                           = COMPOUND_STRING("The battlefield seems weird!"),
     [STRINGID_WAGGLINGAFINGER]                      = COMPOUND_STRING("Waggling a finger let it use {B_CURRENT_MOVE}!"),
     
-    [STRINGID_WINDBECAMETWISTER]                      = COMPOUND_STRING("The wind turned into a\nTWISTER{PAUSE 64}!"),
-    [STRINGID_WINDBECAMEICYWIND]                      = COMPOUND_STRING("The wind turned into a\nICY WIND{PAUSE 64}!"),
-    [STRINGID_AQUABECAMEFROSTJET]                     = COMPOUND_STRING("The AQUA JET turned into a\nFROST JET{PAUSE 64}!"),
-    [STRINGID_WINDBECAMETOXICGAS]                     = COMPOUND_STRING("The wind turned into a\nTOXIC GAS{PAUSE 64}!"),
-    [STRINGID_WINDBECAMEAIRCUTTER]                    = COMPOUND_STRING("The wind turned into a\nAIR CUTTER{PAUSE 64}!"),
-    [STRINGID_ATTACKERHASEVOLVED]                     = COMPOUND_STRING("{B_BUFF1} evolved into {B_BUFF2}!"),
+    [STRINGID_WINDBECAMETWISTER]                    = COMPOUND_STRING("The wind turned into a\nTWISTER{PAUSE 64}!"),
+    [STRINGID_WINDBECAMEICYWIND]                    = COMPOUND_STRING("The wind turned into a\nICY WIND{PAUSE 64}!"),
+    [STRINGID_AQUABECAMEFROSTJET]                   = COMPOUND_STRING("The AQUA JET turned into a\nFROST JET{PAUSE 64}!"),
+    [STRINGID_WINDBECAMETOXICGAS]                   = COMPOUND_STRING("The wind turned into a\nTOXIC GAS{PAUSE 64}!"),
+    [STRINGID_WINDBECAMEAIRCUTTER]                  = COMPOUND_STRING("The wind turned into a\nAIR CUTTER{PAUSE 64}!"),
+    [STRINGID_ATTACKERHASEVOLVED]                   = COMPOUND_STRING("{B_BUFF1} evolved into {B_BUFF2}!"),
+    
+    [STRINGID_PKMNCUTHPMAXEDPOWER]                  = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} cut its own HP and maximized its Power!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =
