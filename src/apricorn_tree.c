@@ -50,7 +50,7 @@ u8 GetApricornCountByApricornTreeId(u8 id)
         return 0;
     }
 
-    return gApricornTrees[id].isSapling ? 1 : 2;
+    return RandomUniform(RNG_APRICORN, 1, 4);
 }
 
 static u16 ApricornTypeToItemId(u8 apricorn)

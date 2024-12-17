@@ -509,6 +509,7 @@ static inline void SetMoveDamageCategory(u32 battlerAtk, u32 battlerDef, u32 mov
         gBattleStruct->swapDamageCategory = (GetCategoryBasedOnStats(battlerAtk) == DAMAGE_CATEGORY_PHYSICAL);
         break;
     case EFFECT_SHELL_SIDE_ARM:
+    case EFFECT_GENETIC_BURST:
         if (gBattleStruct->shellSideArmCategory[battlerAtk][battlerDef] == DAMAGE_CATEGORY_PHYSICAL)
             gBattleStruct->swapDamageCategory = TRUE;
         break;

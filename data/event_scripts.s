@@ -1202,3 +1202,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Terrarium_NorthWest_Gate/scripts.inc"
 	
 	.include "data/maps/Terrarium_SouthEast_Gate/scripts.inc"
+
+	.include "data/maps/DeepPetalburgWoods/scripts.inc"
+
+	.include "data/maps/PokeballRecluse_House/scripts.inc"

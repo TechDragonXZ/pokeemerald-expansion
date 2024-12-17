@@ -2114,7 +2114,7 @@ static void Cmd_damagecalc(void)
 {
     CMD_ARGS();
 
-    if (gMovesInfo[gCurrentMove].effect == EFFECT_SHELL_SIDE_ARM)
+    if (gMovesInfo[gCurrentMove].effect == EFFECT_SHELL_SIDE_ARM || gMovesInfo[gCurrentMove].effect == EFFECT_GENETIC_BURST)
         gBattleStruct->swapDamageCategory = (gBattleStruct->shellSideArmCategory[gBattlerAttacker][gBattlerTarget] != gMovesInfo[gCurrentMove].category);
 
     struct DamageCalculationData damageCalcData;

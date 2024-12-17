@@ -2062,7 +2062,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Mothim,                            \
         .iconSprite = gMonIcon_Mothim,                                      \
         .iconPalIndex = 0,                                                  \
-        SHADOW(-1, 9, SHADOW_SIZE_S)                                    \
+        SHADOW(-1, 9, SHADOW_SIZE_S)                                        \
         FOOTPRINT(Mothim)                                                   \
         OVERWORLD(                                                          \
             sPicTable_Mothim,                                               \

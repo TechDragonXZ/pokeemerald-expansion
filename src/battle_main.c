@@ -6005,6 +6005,23 @@ u32 GetDynamicMoveType(struct Pokemon *mon, u32 move, u32 battler, u8 *ateBoost)
             return TYPE_NORMAL;
         }
         break;
+    case EFFECT_GENETIC_BURST:
+        switch (species)
+        {
+        case SPECIES_EEVEE:
+        case SPECIES_EEVEE_GMAX:
+        case SPECIES_EEVEE_STARTER:
+        case SPECIES_VAPOREON:
+        case SPECIES_FLAREON:
+        case SPECIES_JOLTEON:
+        case SPECIES_ESPEON:
+        case SPECIES_UMBREON:
+        case SPECIES_LEAFEON:
+        case SPECIES_GLACEON:
+        case SPECIES_SYLVEON:
+            return type1;
+        }
+        break;
     case EFFECT_IVY_CUDGEL:
         switch (species)
         {

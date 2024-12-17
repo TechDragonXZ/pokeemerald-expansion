@@ -105,7 +105,7 @@
       "flag": "FLAG_HIDE_ROUTE_101_BOY"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE_PINK",
       "x": 17,
       "y": 15,
       "elevation": 0,
@@ -118,7 +118,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE_WHITE",
       "x": 19,
       "y": 6,
       "elevation": 0,
@@ -131,7 +131,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE_BLACK",
       "x": 6,
       "y": 2,
       "elevation": 0,
@@ -144,7 +144,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE_BLUE",
       "x": 19,
       "y": 13,
       "elevation": 0,
@@ -157,7 +157,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE_RED",
       "x": 18,
       "y": 6,
       "elevation": 0,
@@ -170,7 +170,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE_YELLOW",
       "x": 5,
       "y": 2,
       "elevation": 0,
@@ -183,7 +183,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE_GREEN",
       "x": 0,
       "y": 15,
       "elevation": 0,

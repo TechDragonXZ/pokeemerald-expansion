@@ -618,9 +618,15 @@
 #define MAP_TERRARIUM_CENTER_EAST_GATE  (6 | (36 << 8))
 #define MAP_TERRARIUM_CENTER_NORTH_GATE (7 | (36 << 8))
 
-// gMapGroup_None
-#define MAP_NONE (0 | (37 << 8))
+// gMapGroup_DeepPetalburgWoods
+#define MAP_DEEP_PETALBURG_WOODS (0 | (37 << 8))
 
-#define MAP_GROUPS_COUNT 38
+// gMapGroup_DeepPetalburgWoods_Indoors
+#define MAP_POKEBALL_RECLUSE_HOUSE (0 | (38 << 8))
+
+// gMapGroup_None
+#define MAP_NONE (0 | (39 << 8))
+
+#define MAP_GROUPS_COUNT 40
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

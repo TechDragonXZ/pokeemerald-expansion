@@ -3391,4 +3391,10 @@ extern const u32 gBattleIcons_Gfx2[];
 extern const u32 gBattleIcons_Pal1[];
 extern const u32 gBattleIcons_Pal2[];
 
+// Custom
+extern const u32 gItemIcon_MegaBracelet[];
+extern const u32 gItemIconPalette_MegaBracelet[];
+extern const u32 gItemIcon_ZRing[];
+extern const u32 gItemIconPalette_ZRing[];
+
 #endif //GUARD_GRAPHICS_H

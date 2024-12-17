@@ -1500,6 +1500,31 @@ static const union AffineAnimCmd *const sAffineAnimTable_KyogreGroudon[] = {
     sAffineAnim_KyogreGroudon_DipEast,      // Unused
 };
 
+static const union AnimCmd sAnim_ApricornTree[] =
+{
+    ANIMCMD_FRAME(0, 48),
+    ANIMCMD_FRAME(1, 48),
+    ANIMCMD_FRAME(0, 48),
+    ANIMCMD_FRAME(1, 48),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnimTable_ApricornTree[] = {
+    sAnim_ApricornTree,
+};
+
+static const union AnimCmd sAnim_MegaStone[] =
+{
+    ANIMCMD_FRAME(0, 16),
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_FRAME(2, 16),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnimTable_MegaStone[] = {
+    sAnim_MegaStone,
+};
+
 // For animations with alternating steps
 static const struct StepAnimTable sStepAnimTables[] = {
     {

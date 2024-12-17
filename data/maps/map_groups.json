@@ -37,6 +37,8 @@
     "gMapGroup_Terrarium",
     "gMapGroup_Terrarium_Subareas",
     "gMapGroup_Terrarium_Indoors",
+    "gMapGroup_DeepPetalburgWoods",
+    "gMapGroup_DeepPetalburgWoods_Indoors",
     "gMapGroup_None"
   ],
   "gMapGroup_TownsAndRoutes": [
@@ -651,6 +653,12 @@
     "Terrarium_CenterWest_Gate",
     "Terrarium_CenterEast_Gate",
     "Terrarium_CenterNorth_Gate"
+  ],
+  "gMapGroup_DeepPetalburgWoods": [
+    "DeepPetalburgWoods"
+  ],
+  "gMapGroup_DeepPetalburgWoods_Indoors": [
+    "PokeballRecluse_House"
   ],
   "gMapGroup_None": [
     "None"

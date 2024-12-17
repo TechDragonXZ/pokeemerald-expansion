@@ -176,6 +176,7 @@ enum RandomTag
     RNG_RANDOM_TARGET,
     RNG_HEALER,
     RNG_DEXNAV_ENCOUNTER_LEVEL,
+    RNG_APRICORN,
 };
 
 #define RandomWeighted(tag, ...) \

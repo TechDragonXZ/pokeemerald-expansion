@@ -458,5 +458,30 @@ const u16 gObjectEventPal_StrangeBall[] = INCBIN_U16("graphics/object_events/pic
 const u32 gFieldEffectObjectPic_CaveDust[] = INCBIN_U32("graphics/field_effects/pics/cave_dust.4bpp");
 const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effects/palettes/cave_dust.gbapal");
 
-const u32 gObjectEventPic_ApricornTree[] = INCBIN_U32("graphics/object_events/pics/misc/apricorn_tree.4bpp");
-const u32 gObjectEventPic_ApricornSapling[] = INCBIN_U32("graphics/object_events/pics/misc/apricorn_sapling.4bpp");
+// Apricorns - Growing
+const u32 gObjectEventPic_YellowApricornTree[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/apricorn_yellow.4bpp");
+const u32 gObjectEventPic_BlackApricornTree[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/apricorn_black.4bpp");
+const u32 gObjectEventPic_WhiteApricornTree[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/apricorn_white.4bpp");
+const u32 gObjectEventPic_GreenApricornTree[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/apricorn_green.4bpp");
+const u32 gObjectEventPic_BlueApricornTree[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/apricorn_blue.4bpp");
+const u32 gObjectEventPic_PinkApricornTree[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/apricorn_pink.4bpp");
+const u32 gObjectEventPic_RedApricornTree[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/apricorn_red.4bpp");
+const u32 gObjectEventPic_EmptyApricornTree[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/apricorn_empty.4bpp");
+
+// Apricorns - Pallets
+const u16 gObjectEventPal_ApricornPink[] = INCBIN_U16("graphics/object_events/palettes/apricorn_pink.gbapal");
+const u16 gObjectEventPal_ApricornBlue[] = INCBIN_U16("graphics/object_events/palettes/apricorn_blue.gbapal");
+
+// Apricorns - Standalone
+const u32 gObjectEventPic_YellowApricornTreeSolo[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_yellow.4bpp");
+const u32 gObjectEventPic_BlackApricornTreeSolo[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_black.4bpp");
+const u32 gObjectEventPic_WhiteApricornTreeSolo[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_white.4bpp");
+const u32 gObjectEventPic_GreenApricornTreeSolo[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_green.4bpp");
+const u32 gObjectEventPic_BlueApricornTreeSolo[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_blue.4bpp");
+const u32 gObjectEventPic_PinkApricornTreeSolo[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_pink.4bpp");
+const u32 gObjectEventPic_RedApricornTreeSolo[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_red.4bpp");
+const u32 gObjectEventPic_EmptyApricornTreeSolo[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_empty.4bpp");
+
+// Misc
+const u32 gObjectEventPic_MegaStone[] = INCBIN_U32("graphics/object_events/pics/misc/mega_stone.4bpp");
+const u32 gObjectEventPic_TMBall[] = INCBIN_U32("graphics/object_events/pics/misc/pokeball_tm.4bpp");

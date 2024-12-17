@@ -22057,12 +22057,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .battleAnimScript = gBattleAnimMove_Infestation,
     },
 
-    [MOVE_LEAF_SCALES] =
+    [MOVE_LEAF_BURST] =
     {
-        .name = COMPOUND_STRING("Leaf Scales"),
+        .name = COMPOUND_STRING("Leaf Burst"),
         .description = COMPOUND_STRING(
-            "Shoots sharp scale-like leaves.\n"
-            "Move changes with user's form."),
+            "Fires energy infused leaves.\n"
+            "User's form changes damage."),
         .effect = EFFECT_MEGA_MOVE,
         .power = 90,
         .type = TYPE_GRASS,
@@ -22164,10 +22164,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         #else
             "freeze, sleep, or paralysis."),
         #endif
-        .effect = EFFECT_SHELL_SIDE_ARM,
-        .power = 80,
+        .effect = EFFECT_GENETIC_BURST,
+        .power = 75,
         .type = TYPE_NORMAL,
-        .accuracy = 90,
+        .accuracy = 95,
         .criticalHitStage = 0,
         .pp = 10,
         .thawsUser = TRUE,

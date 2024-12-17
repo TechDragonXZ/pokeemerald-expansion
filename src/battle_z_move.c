@@ -115,9 +115,11 @@ bool32 CanUseZMove(u32 battler)
     u32 holdEffect = GetBattlerHoldEffect(battler, FALSE);
 
     // Check if Player has Z-Power Ring.
-    if (!TESTING && (battler == B_POSITION_PLAYER_LEFT
+    if ((!TESTING && (battler == B_POSITION_PLAYER_LEFT
         || (!(gBattleTypeFlags & BATTLE_TYPE_MULTI) && battler == B_POSITION_PLAYER_RIGHT))
-        && !CheckBagHasItem(ITEM_Z_POWER_RING, 1))
+        && !CheckBagHasItem(ITEM_Z_POWER_RING, 1)) || (!TESTING && (battler == B_POSITION_PLAYER_LEFT
+        || (!(gBattleTypeFlags & BATTLE_TYPE_MULTI) && battler == B_POSITION_PLAYER_RIGHT))
+        && !CheckBagHasItem(ITEM_Z_RING, 1)))
         return FALSE;
 
     // Add '| BATTLE_TYPE_FRONTIER' to below if issues occur
@@ -183,7 +185,8 @@ bool32 IsViableZMove(u32 battler, u32 move)
 
     // Check if Player has Z-Power Ring.
     if ((battler == B_POSITION_PLAYER_LEFT || (!(gBattleTypeFlags & BATTLE_TYPE_MULTI) && battler == B_POSITION_PLAYER_RIGHT))
-        && !CheckBagHasItem(ITEM_Z_POWER_RING, 1))
+        && !CheckBagHasItem(ITEM_Z_POWER_RING, 1)
+        && !CheckBagHasItem(ITEM_Z_RING, 1))
     {
         return FALSE;
     }

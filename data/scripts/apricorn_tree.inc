@@ -18,10 +18,9 @@ ApricornTree_EventScript_PickApricorn::
 	special ObjectEventInteractionPickApricornTree
 	goto_if_eq VAR_0x8006, APRICORN_NORMAL_BAG_FULL, ApricornTree_EventScript_PocketFull
 	message ApricornTree_Text_PickedTheApricorn
-	@ uncomment the lines below if you're using ghoulslash's item description branch
-	@ copyvar VAR_0x8006 VAR_0x8004
+	copyvar VAR_0x8006 VAR_0x8004
 	delay 10
-	@ showberrydesc
+	showberrydescription
 	playfanfare MUS_OBTAIN_BERRY
 	waitmessage
 	waitfanfare
@@ -29,7 +28,7 @@ ApricornTree_EventScript_PickApricorn::
 	message ApricornTree_Text_PutAwayApricorn
 	waitmessage
 	waitbuttonpress
-	@ hideitemdesc
+	hideitemdescription
 	release
 	end
 

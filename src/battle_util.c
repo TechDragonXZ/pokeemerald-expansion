@@ -8678,7 +8678,7 @@ bool32 IsMoveMakingContact(u32 move, u32 battlerAtk)
 
     if (!gMovesInfo[move].makesContact)
     {
-        if (gMovesInfo[move].effect == EFFECT_SHELL_SIDE_ARM && gBattleStruct->shellSideArmCategory[battlerAtk][gBattlerTarget] == DAMAGE_CATEGORY_PHYSICAL)
+        if ((gMovesInfo[move].effect == EFFECT_SHELL_SIDE_ARM && gBattleStruct->shellSideArmCategory[battlerAtk][gBattlerTarget] == DAMAGE_CATEGORY_PHYSICAL) || (gMovesInfo[move].effect == EFFECT_GENETIC_BURST && gBattleStruct->shellSideArmCategory[battlerAtk][gBattlerTarget] == DAMAGE_CATEGORY_PHYSICAL))
             return TRUE;
         else
             return FALSE;
@@ -10849,7 +10849,8 @@ bool32 CanMegaEvolve(u32 battler)
     // Check if Player has a Mega Ring.
     if (!TESTING
         && (GetBattlerPosition(battler) == B_POSITION_PLAYER_LEFT || (!(gBattleTypeFlags & BATTLE_TYPE_MULTI) && GetBattlerPosition(battler) == B_POSITION_PLAYER_RIGHT))
-        && !CheckBagHasItem(ITEM_MEGA_RING, 1))
+        && !CheckBagHasItem(ITEM_MEGA_RING, 1)
+        && !CheckBagHasItem(ITEM_MEGA_BRACELET, 1))
         return FALSE;
 
     // Check if Trainer has already Mega Evolved.
@@ -10887,7 +10888,8 @@ bool32 CanUltraBurst(u32 battler)
     // Check if Player has a Z-Ring
     if (!TESTING && (GetBattlerPosition(battler) == B_POSITION_PLAYER_LEFT
         || (!(gBattleTypeFlags & BATTLE_TYPE_MULTI) && GetBattlerPosition(battler) == B_POSITION_PLAYER_RIGHT))
-        && !CheckBagHasItem(ITEM_Z_POWER_RING, 1))
+        && !CheckBagHasItem(ITEM_Z_POWER_RING, 1)
+        && !CheckBagHasItem(ITEM_Z_RING, 1))
         return FALSE;
 
     // Check if Trainer has already Ultra Bursted.

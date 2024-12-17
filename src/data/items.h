@@ -14167,4 +14167,36 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_SuperRod,
     },
 
+    [ITEM_MEGA_BRACELET] =
+    {
+        .name = _("Mega Bracelet"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Enables {PKMN} holding\n"
+            "their Mega Stone to\n"
+            "Mega Evolve."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_MegaBracelet,
+        .iconPalette = gItemIconPalette_MegaBracelet,
+    },
+
+    [ITEM_Z_RING] =
+    {
+        .name = _("Z Ring"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A strange ring\n"
+            "that enables\n"
+            "Z-Move usage."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_ZRing,
+        .iconPalette = gItemIconPalette_ZRing,
+    },
+
 };
