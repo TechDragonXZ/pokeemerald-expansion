@@ -4035,6 +4035,7 @@ static void ForewarnChooseMove(u32 battler)
                 switch (gMovesInfo[data[count].moveId].effect)
                 {
                 case EFFECT_OHKO:
+                case EFFECT_FINAL_BLOW:
                     data[count].power = 150;
                     break;
                 case EFFECT_COUNTER:

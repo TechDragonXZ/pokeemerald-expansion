@@ -547,7 +547,7 @@ u32 GetZMovePower(u32 move)
 {
     if (gMovesInfo[move].category == DAMAGE_CATEGORY_STATUS)
         return 0;
-    if (gMovesInfo[move].effect == EFFECT_OHKO)
+    if (gMovesInfo[move].effect == EFFECT_OHKO || EFFECT_FINAL_BLOW)
         return 180;
 
     if (gMovesInfo[move].zMove.powerOverride > 0)

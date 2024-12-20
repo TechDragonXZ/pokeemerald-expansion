@@ -104,7 +104,7 @@ BattleFrontier_RankingHall_Text_ExplainRankingHall:
 	.string "This is the RANKING HALL.\p"
 	.string "This is where we recognize the immortal\n"
 	.string "Trainers who left great records in\l"
-	.string "Battle FRONTIER events.$"
+	.string "Battle Frontier events.$"
 
 BattleFrontier_RankingHall_Text_DomePikeFactoryRecords:
 	.string "Battle DOME, Battle PIKE,\n"

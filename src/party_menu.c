@@ -520,7 +520,6 @@ static bool8 SetUpFieldMove_Dive(void);
 void TryItemHoldFormChange(struct Pokemon *mon);
 static void ShowMoveSelectWindow(u8 slot);
 static void Task_HandleWhichMoveInput(u8 taskId);
-static void CB2_ReturnToPartyMenuFromNicknameScreen(void);
 static void CursorCb_Follower(u8);
 static void CursorCb_FollowerSet(u8);
 static void CursorCb_FollowerUnset(u8);
@@ -3029,18 +3028,6 @@ static void CursorCb_Summary(u8 taskId)
     PlaySE(SE_SELECT);
     sPartyMenuInternal->exitCallback = CB2_ShowPokemonSummaryScreen;
     Task_ClosePartyMenu(taskId);
-}
-
-static void ChangePokemonNicknamePartyScreen_CB(void)
-{
-    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_NICKNAME, gStringVar2);
-    CB2_ReturnToPartyMenuFromNicknameScreen();
-}
-
-static void CB2_ReturnToPartyMenuFromNicknameScreen(void)
-{
-    gPaletteFade.bufferTransferDisabled = TRUE;
-    InitPartyMenu(gPartyMenu.menuType, KEEP_PARTY_LAYOUT, gPartyMenu.action, TRUE, PARTY_MSG_DO_WHAT_WITH_MON, Task_TryCreateSelectionWindow, gPartyMenu.exitCallback);
 }
 
 static void CB2_ShowPokemonSummaryScreen(void)

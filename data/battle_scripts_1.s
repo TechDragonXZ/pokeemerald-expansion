@@ -10301,3 +10301,15 @@ BattleScript_PowerSurgeTryAtk::
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_PowerSurgeEnd::
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectFinalBlow::
+	attackcanceler
+	attackstring
+	ppreduce
+	setatkhptozero
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	typecalc
+	jumpifmovehadnoeffect BattleScript_HitFromAtkAnimation
+	tryKO BattleScript_KOFail
+	trysetdestinybondtohappen
+	goto BattleScript_HitFromAtkAnimation

@@ -1209,17 +1209,17 @@ gTVTodaysRivalTrainerText02::
 
 gTVTodaysRivalTrainerText03::
 	.string "Our rival hasn't obtained a single\n"
-	.string "Battle FRONTIER Symbol yet.$"
+	.string "Battle Frontier Symbol yet.$"
 
 gTVTodaysRivalTrainerText04::
-	.string "Let's see how many Battle FRONTIER\n"
+	.string "Let's see how many Battle Frontier\n"
 	.string "Symbols our rival has.\p"
 	.string "Gold Symbols: {STR_VAR_1}!\n"
 	.string "Silver Symbols: {STR_VAR_2}!$"
 
 gTVTodaysRivalTrainerText05::
 	.string "Our rival has collected {STR_VAR_1} Battle\n"
-	.string "Point(s) at the Battle FRONTIER.$"
+	.string "Point(s) at the Battle Frontier.$"
 
 gTVTodaysRivalTrainerText06::
 	.string "So, how did you measure up in\n"
@@ -1883,7 +1883,7 @@ gTVPokemonNewsBattleFrontierText00::
 	.string "Greetings!\n"
 	.string "It's time for Pokémon NEWS.\p"
 	.string "We've got some uplifting news from\n"
-	.string "the Battle FRONTIER.$"
+	.string "the Battle Frontier.$"
 
 gTVPokemonNewsBattleFrontierText01::
 	.string "The Trainer {STR_VAR_1} set a new\n"

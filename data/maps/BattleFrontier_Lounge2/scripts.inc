@@ -114,13 +114,13 @@ BattleFrontier_Lounge2_EventScript_TriathleteF::
 
 BattleFrontier_Lounge2_Text_FrontierManiacIntro::
 	.string "Howdy! When it comes to news about\n"
-	.string "the Battle FRONTIER, I'm no. 1.\p"
+	.string "the Battle Frontier, I'm no. 1.\p"
 	.string "You can think of me as\n"
 	.string "the FRONTIER MANIAC.\p"
 	.string "Just checking, but you are a Trainer,\n"
 	.string "isn't that right?\p"
 	.string "I'll happily share the hottest news\n"
-	.string "I gathered about the Battle FRONTIER.$"
+	.string "I gathered about the Battle Frontier.$"
 
 BattleFrontier_Lounge2_Text_SwingByForTheLatestWord::
 	.string "Howdy! Did you swing by to grill me\n"
@@ -271,10 +271,10 @@ BattleFrontier_Lounge2_Text_PalaceMavenIsThere::
 	.string "One of those top Trainers that SCOTT\n"
 	.string "calls the FRONTIER BRAINS is there.\p"
 	.string "It's this sinister Trainer called\n"
-	.string "the PALACE MAVEN that runs the place.$"
+	.string "the Palace Maven that runs the place.$"
 
 BattleFrontier_Lounge2_Text_PalaceMavenSilverMons::
-	.string "Have you battled the PALACE MAVEN\n"
+	.string "Have you battled the Palace Maven\n"
 	.string "before?\p"
 	.string "When he's testing the opponent's\n"
 	.string "spirit, he's said to use these Pokémon:\p"
@@ -283,7 +283,7 @@ BattleFrontier_Lounge2_Text_PalaceMavenSilverMons::
 	.string "WATER- & ICE-type TRANSPORT Pokémon.$"
 
 BattleFrontier_Lounge2_Text_PalaceMavenGoldMons::
-	.string "Have you battled the PALACE MAVEN\n"
+	.string "Have you battled the Palace Maven\n"
 	.string "when he's serious?\p"
 	.string "When he throws his entire might into\n"
 	.string "battle, he's said to use these Pokémon:\p"
@@ -324,7 +324,7 @@ BattleFrontier_Lounge2_Text_DoubleBattleAdvice1::
 	.string "the Battle Tower are, like, basic!\p"
 	.string "They're where you should learn about\n"
 	.string "how DOUBLE BATTLES are played here\l"
-	.string "in the Battle FRONTIER.$"
+	.string "in the Battle Frontier.$"
 
 BattleFrontier_Lounge2_Text_DoubleBattleAdvice2::
 	.string "Watch yourself in the battles here.\p"

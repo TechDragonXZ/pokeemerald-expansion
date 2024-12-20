@@ -22086,11 +22086,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Final Blow"),
         .description = COMPOUND_STRING(
-            "The user gathers all of\n"
-            "their power and attacks."),
-        .effect = EFFECT_EXPLOSION,
-        .power = 500,
-        .type = TYPE_MYSTERY,
+            "A powerful final attack\n"
+            "that causes fainting."),
+        .effect = EFFECT_FINAL_BLOW,
+        .power = 1,
+        .type = TYPE_FIGHTING,
         .accuracy = 50,
         .pp = 1,
         .target = MOVE_TARGET_SELECTED,

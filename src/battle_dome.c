@@ -3965,6 +3965,7 @@ static bool32 IsDomeLuckyMove(u32 move)
     case EFFECT_REVENGE:
     case EFFECT_IMPRISON:
     case EFFECT_SNATCH:
+    case EFFECT_FINAL_BLOW:
         return TRUE;
     default:
         return FALSE;

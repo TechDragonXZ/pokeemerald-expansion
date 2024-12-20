@@ -405,6 +405,7 @@ static u8 GetMaxPowerTier(u32 move)
         case EFFECT_FINAL_GAMBIT:
             return MAX_POWER_TIER_2;
         case EFFECT_OHKO:
+        case EFFECT_FINAL_BLOW:
         case EFFECT_RETURN:
         case EFFECT_FRUSTRATION:
         case EFFECT_HEAT_CRASH:

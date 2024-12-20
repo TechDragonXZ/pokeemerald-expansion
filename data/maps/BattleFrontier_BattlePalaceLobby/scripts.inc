@@ -380,19 +380,19 @@ BattleFrontier_BattlePalaceLobby_EventScript_ExitRules::
 BattleFrontier_BattlePalaceLobby_Text_WelcomeForSingleBattle:
 	.string "Where the hearts of Trainers\n"
 	.string "are put to the test.\p"
-	.string "I welcome you to the Battle PALACE.\p"
-	.string "I accept challenges to the SINGLE\n"
-	.string "Battle HALLS.$"
+	.string "I welcome you to the Battle Palace.\p"
+	.string "I accept challenges to the Single\n"
+	.string "Battle Halls.$"
 
 BattleFrontier_BattlePalaceLobby_Text_TakeSingleBattleChallenge:
 	.string "Do you wish to take\n"
-	.string "the SINGLE Battle HALL challenge?$"
+	.string "the Single Battle Hall challenge?$"
 
 BattleFrontier_BattlePalaceLobby_Text_ExplainSingleBattleChallenge:
-	.string "In the Battle PALACE, there are\n"
-	.string "several auditoriums for SINGLE BATTLES\l"
-	.string "that are named SINGLE Battle HALLS.\p"
-	.string "The SINGLE BATTLES are conducted in\n"
+	.string "In the Battle Palace, there are\n"
+	.string "several auditoriums for Single Battles\l"
+	.string "that are named Single Battle Halls.\p"
+	.string "The Single Battles are conducted in\n"
 	.string "the usual way, except with one crucial\l"
 	.string "rule that must be obeyed.\p"
 	.string "Trainers are permitted only to switch\n"
@@ -416,7 +416,7 @@ BattleFrontier_BattlePalaceLobby_Text_ReturnWhenFortified:
 	.string "and Pokémon, you must return.$"
 
 BattleFrontier_BattlePalaceLobby_Text_WhichChallenge:
-	.string "There are two Battle HALLS,\n"
+	.string "There are two Battle Halls,\n"
 	.string "Level 50 and Open Level.\l"
 	.string "Which is your choice of a challenge?$"
 
@@ -430,7 +430,7 @@ BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsLv50:
 	.string "Level 50 or lower.\p"
 	.string "They also must not be holding\n"
 	.string "the same kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Come back when you have made\n"
 	.string "your preparations.$"
 
@@ -442,7 +442,7 @@ BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "different kinds of Pokémon.\p"
 	.string "They also must not be holding\n"
 	.string "the same kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Come back when you have made\n"
 	.string "your preparations.$"
 
@@ -452,7 +452,7 @@ BattleFrontier_BattlePalaceLobby_Text_NowSelectThreeMons:
 
 BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge2:
 	.string "I must save before I show you to\n"
-	.string "the Battle HALL. Is that okay?$"
+	.string "the Battle Hall. Is that okay?$"
 
 BattleFrontier_BattlePalaceLobby_Text_FollowMe:
 	.string "Good.\n"
@@ -489,7 +489,7 @@ BattleFrontier_BattlePalaceLobby_Text_WeHaveBeenWaiting:
 
 BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge:
 	.string "I must save before I show you to\n"
-	.string "the Battle HALL. Is that okay?$"
+	.string "the Battle Hall. Is that okay?$"
 
 BattleFrontier_BattlePalaceLobby_Text_FailedToSaveBeforeEndingChallenge:
 	.string "Sigh…\p"
@@ -534,7 +534,7 @@ BattleFrontier_BattlePalaceLobby_Text_NatureAndMovesKeyHere:
 
 BattleFrontier_BattlePalaceLobby_Text_MonDocileButTransforms:
 	.string "My Pokémon is usually very docile.\p"
-	.string "But when it's in a Battle HALL,\n"
+	.string "But when it's in a Battle Hall,\n"
 	.string "it sometimes seems to become\l"
 	.string "transformed into something wicked!\p"
 	.string "It becomes totally intimidating.\n"
@@ -550,19 +550,19 @@ BattleFrontier_BattlePalaceLobby_Text_WhatNatureFavorsChippingAway:
 BattleFrontier_BattlePalaceLobby_Text_WelcomeForDoubleBattle:
 	.string "Where the hearts of Trainers\n"
 	.string "are put to the test.\p"
-	.string "I welcome you to the Battle PALACE.\p"
-	.string "I accept challenges to the DOUBLE\n"
-	.string "Battle HALLS.$"
+	.string "I welcome you to the Battle Palace.\p"
+	.string "I accept challenges to the Double\n"
+	.string "Battle Halls.$"
 
 BattleFrontier_BattlePalaceLobby_Text_TakeDoubleBattleChallenge:
 	.string "Do you wish to take\n"
-	.string "the DOUBLE Battle HALL challenge?$"
+	.string "the Double Battle Hall challenge?$"
 
 BattleFrontier_BattlePalaceLobby_Text_ExplainDoubleBattleChallenge:
-	.string "In the Battle PALACE, there are\n"
-	.string "several auditoriums for DOUBLE BATTLES\l"
-	.string "that are named DOUBLE Battle HALLS.\p"
-	.string "The DOUBLE BATTLES are conducted in\n"
+	.string "In the Battle Palace, there are\n"
+	.string "several auditoriums for Double Battles\l"
+	.string "that are named Double Battle Halls.\p"
+	.string "The Double Battles are conducted in\n"
 	.string "the usual way, except with one crucial\l"
 	.string "rule that must be obeyed.\p"
 	.string "Trainers are permitted only to switch\n"
@@ -582,7 +582,7 @@ BattleFrontier_BattlePalaceLobby_Text_ExplainDoubleBattleChallenge:
 	.string "you will be disqualified.$"
 
 BattleFrontier_BattlePalaceLobby_Text_ToDefeatMavenAnd7Trainers:
-	.string "To defeat the PALACE MAVEN\n"
+	.string "To defeat the Palace Maven\n"
 	.string "and seven Trainers in a row…$"
 
 BattleFrontier_BattlePalaceLobby_Text_PresentYouWithBattlePoints:
@@ -592,11 +592,11 @@ BattleFrontier_BattlePalaceLobby_Text_PresentYouWithBattlePoints:
 
 BattleFrontier_BattlePalaceLobby_Text_LikeToRecordMatch:
 	.string "Would you like to record your latest\n"
-	.string "Battle PALACE match on your\l"
-	.string "FRONTIER PASS?$"
+	.string "Battle Palace match on your\l"
+	.string "Frontier Pass?$"
 
 BattleFrontier_BattlePalaceLobby_Text_RulesAreListed:
-	.string "The Battle HALL rules are listed.$"
+	.string "The Battle Hall rules are listed.$"
 
 BattleFrontier_BattlePalaceLobby_Text_ReadWhichHeading:
 	.string "Which heading do you want to read?$"

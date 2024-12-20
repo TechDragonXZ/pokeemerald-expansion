@@ -363,7 +363,7 @@ BattleFrontier_OutsideWest_Text_BestOutOfAllMyFriends:
 BattleFrontier_OutsideWest_Text_CantFindBattleTower:
 	.string "I want to go to the Battle Tower,\n"
 	.string "but I can't find it even though I have\l"
-	.string "a map of the Battle FRONTIER.\p"
+	.string "a map of the Battle Frontier.\p"
 	.string "This place is just too big!$"
 
 BattleFrontier_OutsideWest_Text_GotSeasickOnWayHere:
@@ -378,7 +378,7 @@ BattleFrontier_OutsideWest_Text_OnlyToughTrainersBroughtHere:
 	.string "Only those Trainers who've been\n"
 	.string "recognized as tough are brought here.\p"
 	.string "That's why many Trainers don't even\n"
-	.string "know about the Battle FRONTIER.$"
+	.string "know about the Battle Frontier.$"
 
 BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons:
 	.string "Hey, bro…\p"
@@ -519,7 +519,7 @@ BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers:
 BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier:
 	.string "I heard a rumor that someone saw\n"
 	.string "a Pokémon with an unusually long tail\l"
-	.string "somewhere in the Battle FRONTIER.\p"
+	.string "somewhere in the Battle Frontier.\p"
 	.string "It must be adorable. I'm sure of it…\p"
 	.string "Oh, challenges can wait. I feel driven\n"
 	.string "to find the delightful creature!$"

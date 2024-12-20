@@ -1536,6 +1536,15 @@ static bool32 AccuracyCalcHelper(u16 move)
         return TRUE;
     }
 
+    // If the target is under the effects of Telekinesis, and the move isn't Final Blow, move hits.
+    else if (gStatuses3[gBattlerTarget] & STATUS3_TELEKINESIS
+          && !(gStatuses3[gBattlerTarget] & STATUS3_SEMI_INVULNERABLE)
+          && gMovesInfo[move].effect != EFFECT_FINAL_BLOW)
+    {
+        JumpIfMoveFailed(7, move);
+        return TRUE;
+    }
+
     if (GetActiveGimmick(gBattlerAttacker) == GIMMICK_Z_MOVE && !(gStatuses3[gBattlerTarget] & STATUS3_SEMI_INVULNERABLE))
     {
         JumpIfMoveFailed(7, move);

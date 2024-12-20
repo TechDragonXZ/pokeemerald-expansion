@@ -862,5 +862,6 @@ extern const u8 BattleScript_EffectMelt[];
 
 extern const u8 BattleScript_AllStatsUp2[];
 extern const u8 BattleScript_EffectPowerSurge[];
+extern const u8 BattleScript_EffectFinalBlow[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H
