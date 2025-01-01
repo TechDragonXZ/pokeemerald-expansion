@@ -2448,13 +2448,24 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_GHOSTLY_BLADE] =
     {
-    #if B_EXPANDED_ABILITY_NAMES == TRUE
         .name = _("Ghostly Blade"),
-    #else
-        .name = _("GhostlyBlade"),
-    #endif
         .description = COMPOUND_STRING("Sharpness and Stance Change"),
         .aiRating = 7,
+    },
+
+    [ABILITY_FORTITUDE] =
+    {
+        .name = _("Fortitude"),
+        .description = COMPOUND_STRING("Ups Sp. Atk if suffering."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_GHOSTLY_MOTOR] =
+    {
+        .name = _("Ghostly Motor"),
+        .description = COMPOUND_STRING("Boosts ghost & levitate."),
+        .aiRating = 7,
+        .breakable = TRUE,
     },
 
 };

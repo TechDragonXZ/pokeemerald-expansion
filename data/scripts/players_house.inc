@@ -73,6 +73,7 @@ PlayersHouse_2F_EventScript_WallClock::
 	end
 
 PlayersHouse_2F_EventScript_MomComesUpstairsMale::
+	setflag FLAG_HIDE_POKEMON_CENTER_FEMALE
 	setvar VAR_0x8008, LOCALID_MOM_2F
 	addobject VAR_0x8008
 	applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomEntersMale
@@ -86,6 +87,7 @@ PlayersHouse_2F_EventScript_MomComesUpstairsMale::
 	end
 
 PlayersHouse_2F_EventScript_MomComesUpstairsFemale::
+	setflag FLAG_HIDE_POKEMON_CENTER_MALE
 	setvar VAR_0x8008, LOCALID_MOM_2F
 	addobject VAR_0x8008
 	applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomEntersFemale
@@ -705,7 +707,7 @@ PlayersHouse_2F_EventScript_AskSetupPokenav::
 	msgbox PlayersHouse_2F_Text_SetPokeNavWhich, MSGBOX_DEFAULT
 	dynmultipush PlayersHouse_2F_Text_SetUpMonthSeason, 0
 	dynmultipush PlayersHouse_2F_Text_SetUpDay, 1
-	dynmultistack 19, 0, TRUE, 4, FALSE, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 19, 0, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
 	case 0, PlayersHouse_2F_EventScript_SetupPokenavMonth
 	case 1, PlayersHouse_2F_EventScript_SetupPokenavDay
@@ -729,7 +731,7 @@ PlayersHouse_2F_EventScript_SetupPokenavMonth::
 	dynmultipush PlayersHouse_2F_Text_MonthSeptember, 9
 	dynmultipush PlayersHouse_2F_Text_MonthOctober, 10
 	dynmultipush PlayersHouse_2F_Text_MonthNovember, 11
-	dynmultistack 19, 0, TRUE, 4, FALSE, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 19, 0, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
 	case 0, PlayersHouse_2F_EventScript_December
 	case 1, PlayersHouse_2F_EventScript_January
@@ -780,7 +782,7 @@ PlayersHouse_2F_EventScript_SetupPokenavDay::
 	dynmultipush PlayersHouse_2F_Text_ChoiceDay26, 25
 	dynmultipush PlayersHouse_2F_Text_ChoiceDay27, 26
 	dynmultipush PlayersHouse_2F_Text_ChoiceDay28, 27
-	dynmultistack 19, 0, TRUE, 4, FALSE, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 19, 0, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
 	case 0, PlayersHouse_2F_EventScript_SetDay1
 	case 1, PlayersHouse_2F_EventScript_SetDay2

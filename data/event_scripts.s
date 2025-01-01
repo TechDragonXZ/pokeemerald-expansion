@@ -1205,4 +1205,6 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/DeepPetalburgWoods/scripts.inc"
 
-	.include "data/maps/PokeballRecluse_House/scripts.inc"
+	.include "data/maps/PokeballCrafter_House/scripts.inc"
+
+	.include "data/maps/Terrarium_Forest/scripts.inc"

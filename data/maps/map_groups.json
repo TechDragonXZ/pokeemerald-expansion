@@ -642,7 +642,8 @@
     "Terrarium_Volcano",
     "Terrarium_IcyCave",
     "Terrarium_RockyCavern",
-    "Terrarium_FoggyCavern"
+    "Terrarium_FoggyCavern",
+    "Terrarium_Forest"
   ],
   "gMapGroup_Terrarium_Indoors": [
     "Terrarium_Lobby",
@@ -658,7 +659,7 @@
     "DeepPetalburgWoods"
   ],
   "gMapGroup_DeepPetalburgWoods_Indoors": [
-    "PokeballRecluse_House"
+    "PokeballCrafter_House"
   ],
   "gMapGroup_None": [
     "None"

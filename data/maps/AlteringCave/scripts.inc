@@ -44,35 +44,34 @@ AlteringCave_EventScript_WildChange::
 	end
 
 AlteringCave_EventScript_WildChangeAccepted::
-	multichoice 20, 0, MULTI_ALTERING_CAVE_ENCOUNTERS, TRUE
+	lockall
+	dynmultipush AlteringCave_Text_Zubat, 0
+	dynmultipush AlteringCave_Text_Mareep, 1
+	dynmultipush AlteringCave_Text_Pineco, 2
+	dynmultipush AlteringCave_Text_Houndour, 3
+	dynmultipush AlteringCave_Text_Teddiursa, 4
+	dynmultipush AlteringCave_Text_Aipom, 5
+	dynmultipush AlteringCave_Text_Shuckle, 6
+	dynmultipush AlteringCave_Text_Stantler, 7
+	dynmultipush AlteringCave_Text_Smeargle, 8
+	dynmultipush AlteringCave_Text_None, 9
+	dynmultistack 19, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
 	case 0, AlteringCave_EventScript_WildChangeZubat
 	case 1, AlteringCave_EventScript_WildChangeMareep
 	case 2, AlteringCave_EventScript_WildChangePineco
-	case 3, AlteringCave_EventScript_WildChangeAccepted_Page2
-	case 4, AlteringCave_EventScript_WildChangeDeclined
+	case 3, AlteringCave_EventScript_WildChangeHoundour
+	case 4, AlteringCave_EventScript_WildChangeTeddiursa
+	case 5, AlteringCave_EventScript_WildChangeAipom
+	case 6, AlteringCave_EventScript_WildChangeShuckle
+	case 7, AlteringCave_EventScript_WildChangeStantler
+	case 8, AlteringCave_EventScript_WildChangeSmeargle
+	case 9, AlteringCave_EventScript_WildChangeDeclined
 	case MULTI_B_PRESSED, AlteringCave_EventScript_WildChangeDeclined
-
-AlteringCave_EventScript_WildChangeAccepted_Page2::
-	multichoice 20, 0, MULTI_ALTERING_CAVE_ENCOUNTERS2, TRUE
-	switch VAR_RESULT
-	case 0, AlteringCave_EventScript_WildChangeHoundour
-	case 1, AlteringCave_EventScript_WildChangeTeddiursa
-	case 2, AlteringCave_EventScript_WildChangeAipom
-	case 3, AlteringCave_EventScript_WildChangeAccepted_Page3
-	case 4, AlteringCave_EventScript_WildChangeAccepted
-	case 5, AlteringCave_EventScript_WildChangeDeclined
-	case MULTI_B_PRESSED, AlteringCave_EventScript_WildChangeDeclined
-
-AlteringCave_EventScript_WildChangeAccepted_Page3::
-	multichoice 20, 0, MULTI_ALTERING_CAVE_ENCOUNTERS3, TRUE
-	switch VAR_RESULT
-	case 0, AlteringCave_EventScript_WildChangeShuckle
-	case 1, AlteringCave_EventScript_WildChangeStantler
-	case 2, AlteringCave_EventScript_WildChangeSmeargle
-	case 3, AlteringCave_EventScript_WildChangeAccepted_Page2
-	case 4, AlteringCave_EventScript_WildChangeDeclined
-	case MULTI_B_PRESSED, AlteringCave_EventScript_WildChangeDeclined
+	closemessage
+	release
+	return
+	end
 
 AlteringCave_EventScript_WildChangeZubat::
 	setvar VAR_ALTERING_CAVE_WILD_SET, 0
@@ -219,3 +218,33 @@ AlteringCave_Text_ChangedToStantler:
 
 AlteringCave_Text_ChangedToSmeargle:
 	.string "Smeargles can now be found.$"
+
+AlteringCave_Text_Zubat:
+	.string "Zubat$"
+
+AlteringCave_Text_Mareep:
+	.string "Mareep$"
+
+AlteringCave_Text_Pineco:
+	.string "Pineco$"
+
+AlteringCave_Text_Houndour:
+	.string "Houndour$"
+
+AlteringCave_Text_Teddiursa:
+	.string "Teddiursa$"
+
+AlteringCave_Text_Aipom:
+	.string "Aipom$"
+
+AlteringCave_Text_Shuckle:
+	.string "Shuckle$"
+
+AlteringCave_Text_Stantler:
+	.string "Stantler$"
+
+AlteringCave_Text_Smeargle:
+	.string "Smeargle$"
+
+AlteringCave_Text_None:
+	.string "Don't Change$"

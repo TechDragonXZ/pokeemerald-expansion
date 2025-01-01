@@ -22063,12 +22063,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "Fires energy infused leaves.\n"
             "User's form changes damage."),
-        .effect = EFFECT_MEGA_MOVE,
+        .effect = EFFECT_FORM_MOVE,
         .power = 90,
         .type = TYPE_GRASS,
         .argument = TYPE_GRASS,
         .accuracy = 100,
-        .criticalHitStage = 1,
+        .criticalHitStage = 0,
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -22135,7 +22135,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "Hits as soon as possible.\n"
             "High critical-hit ratio."),
-        .effect = EFFECT_MEGA_MOVE,
+        .effect = EFFECT_FORM_MOVE,
         .power = 65,
         .type = TYPE_DARK,
         .argument = TYPE_DARK,
@@ -22486,6 +22486,53 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
         .battleAnimScript = gBattleAnimMove_AcidSpray,
+    },
+
+    [MOVE_ONSLAUGHT] =
+    {
+        .name = COMPOUND_STRING("Onslaught"),
+        .description = COMPOUND_STRING(
+            "Attacks rapidly, hits one\n"
+            "to ten times in a row."),
+        .effect = EFFECT_POPULATION_BOMB,
+        .power = 20,
+        .type = TYPE_FIGHTING,
+        .accuracy = 90,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .metronomeBanned = FALSE,
+        .strikeCount = 10,
+        .battleAnimScript = gBattleAnimMove_MegaPunch,
+    },
+
+    [MOVE_MOTOR_PULSE] =
+    {
+        .name = COMPOUND_STRING("Motor Pulse"),
+        .description = COMPOUND_STRING(
+            "Fires energy form its motor.\n"
+            "User's form changes damage."),
+        .effect = EFFECT_FORM_MOVE,
+        .power = 80,
+        .type = TYPE_ELECTRIC,
+        .argument = TYPE_ELECTRIC,
+        .accuracy = 95,
+        .criticalHitStage = 0,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .thawsUser = TRUE,
+        .pulseMove = TRUE,
+        .makesContact = FALSE,
+        .slicingMove = FALSE,
+        .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Discharge,
     },
 
 };

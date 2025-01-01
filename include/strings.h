@@ -2733,22 +2733,6 @@ extern const u8 gText_FollowerReturnedToBall[];
 extern const u8 gText_DoWhatWithFollower[];
 
 // Custom
-extern const u8 gText_Back[];
-extern const u8 gText_NextPg[];
-extern const u8 gText_Zubat[];
-extern const u8 gText_Aipom[];
-extern const u8 gText_Stantler[];
-extern const u8 gText_Smeargle[];
-extern const u8 gText_Shuckle[];
-extern const u8 gText_Houndour[];
-extern const u8 gText_Teddiursa[];
-extern const u8 gText_Mareep[];
-extern const u8 gText_Pineco[];
-extern const u8 gText_TerrariumMain[];
-extern const u8 gText_TerrariumSub[];
-extern const u8 gText_Group0[];
-extern const u8 gText_Group1[];
-extern const u8 gText_Group2[];
 extern const u8 gText_SafariBallAndPrice[];
 extern const u8 gText_SportBallAndPrice[];
 extern const u8 gText_ParkBallAndPrice[];

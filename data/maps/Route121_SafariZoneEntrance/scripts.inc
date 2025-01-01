@@ -180,103 +180,6 @@ Route121_SafariZoneEntrance_Movement_PushPlayerBackFromCounter:
 	walk_left
 	step_end
 
-Route121_SafariZoneEntrance_EventScript_TerrariumAttendant::
-	lock
-	faceplayer
-	msgbox Route121_SafariZoneEntrance_Text_TerrariumWelcome, MSGBOX_DEFAULT
-	goto_if_unset FLAG_NOT_FIRST_TIME, Route121_SafariZoneEntrance_EventScript_FirstTimeInfo_Terrarium
-	goto_if_set FLAG_NOT_FIRST_TIME, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
-	release
-	end
-
-Route121_SafariZoneEntrance_EventScript_FirstTimeInfo_Terrarium::
-	setflag FLAG_NOT_FIRST_TIME
-	msgbox Route121_SafariZoneEntrance_Text_FirstTimeInfo_Terrarium, MSGBOX_DEFAULT
-	release
-	end
-
-Route121_SafariZoneEntrance_EventScript_TerrariumGroups::
-	msgbox Route121_SafariZoneEntrance_Text_TerrariumGroups, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Route121_SafariZoneEntrance_EventScript_Zones
-	goto_if_eq VAR_RESULT, NO, Route121_SafariZoneEntrance_EventScript_ChangeDeclined
-	closemessage
-	release
-	end
-
-Route121_SafariZoneEntrance_EventScript_ChangeDeclined::
-	msgbox Route121_SafariZoneEntrance_Text_ChangeDeclined, MSGBOX_DEFAULT
-	release
-	end
-
-Route121_SafariZoneEntrance_EventScript_Zones::
-	msgbox Route121_SafariZoneEntrance_Text_TerrariumGroups, MSGBOX_DEFAULT
-	multichoice 19, 0, MULTI_TERRARIUM_ZONES, TRUE
-	switch VAR_RESULT
-	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumMain
-	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumSub
-	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
-	closemessage
-	release
-	end
-
-Route121_SafariZoneEntrance_EventScript_TerrariumMain::
-	buffernumberstring STR_VAR_1, VAR_TERRARIUM_MAIN_WILD_SET
-	msgbox Route121_SafariZoneEntrance_Text_CurrentGroup, MSGBOX_DEFAULT
-	multichoice 19, 0, MULTI_TERRARIUM_GROUPS, TRUE
-	switch VAR_RESULT
-	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumMainGroup0
-	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumMainGroup1
-	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumMainGroup2
-	case 3, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
-	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
-	closemessage
-	release
-	end
-
-Route121_SafariZoneEntrance_EventScript_TerrariumMainGroup0::
-	setvar VAR_TERRARIUM_MAIN_WILD_SET, 0
-	closemessage
-	end
-
-Route121_SafariZoneEntrance_EventScript_TerrariumMainGroup1::
-	setvar VAR_TERRARIUM_MAIN_WILD_SET, 1
-	closemessage
-	end
-
-Route121_SafariZoneEntrance_EventScript_TerrariumMainGroup2::
-	setvar VAR_TERRARIUM_MAIN_WILD_SET, 2
-	closemessage
-	end
-
-Route121_SafariZoneEntrance_EventScript_TerrariumSub::
-	buffernumberstring STR_VAR_1, VAR_TERRARIUM_SUB_WILD_SET
-	msgbox Route121_SafariZoneEntrance_Text_CurrentGroup, MSGBOX_DEFAULT
-	multichoice 19, 0, MULTI_TERRARIUM_GROUPS, TRUE
-	switch VAR_RESULT
-	case 0, Route121_SafariZoneEntrance_EventScript_TerrariumSubGroup0
-	case 1, Route121_SafariZoneEntrance_EventScript_TerrariumSubGroup1
-	case 2, Route121_SafariZoneEntrance_EventScript_TerrariumSubGroup2
-	case 3, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
-	case MULTI_B_PRESSED, Route121_SafariZoneEntrance_EventScript_TerrariumGroups
-	closemessage
-	release
-	end
-
-Route121_SafariZoneEntrance_EventScript_TerrariumSubGroup0::
-	setvar VAR_TERRARIUM_SUB_WILD_SET, 0
-	closemessage
-	end
-
-Route121_SafariZoneEntrance_EventScript_TerrariumSubGroup1::
-	setvar VAR_TERRARIUM_SUB_WILD_SET, 1
-	closemessage
-	end
-
-Route121_SafariZoneEntrance_EventScript_TerrariumSubGroup2::
-	setvar VAR_TERRARIUM_SUB_WILD_SET, 2
-	closemessage
-	end
-
 Route121_SafariZoneEntrance_Text_Allowed:
 	.string "Is that a letter of approval? It is!\n"
 	.string "With this you can freely enter the\p"
@@ -292,22 +195,8 @@ Route121_SafariZoneEntrance_Text_FirstTimeInfo_Terrarium:
 	.string "houses a wide range of Pokémon within\n"
 	.string "various different biomes.$"
 
-Route121_SafariZoneEntrance_Text_TerrariumGroups:
-	.string "From here, if you want, I can change the\n"
-	.string "kind of Pokémon that can be found\p"
-	.string "inside of the Terrarium.$"
-
 Route121_SafariZoneEntrance_Text_TerrariumWelcome:
 	.string "Welcome to the Terrarium!$"
 
 Route121_SafariZoneEntrance_Text_TerrariumComeInAndEnjoy:
 	.string "Come in and enjoy the Terrarium!$"
-
-Route121_SafariZoneEntrance_Text_CurrentGroup:
-	.string "This part of the Terrarium is currently\n"
-	.string "spawning Pokémon from encounter\p"
-	.string "group {STR_VAR_1}.$"
-
-Route121_SafariZoneEntrance_Text_ChangeDeclined:
-	.string "So, you don't want to change the\n"
-	.string "Pokémon that can be found here.$"

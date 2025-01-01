@@ -5510,16 +5510,28 @@
       "blockdata_filepath": "data/layouts/DeepPetalburgWoods/map.bin"
     },
     {
-      "id": "LAYOUT_POKEBALL_RECLUSE_HOUSE",
-      "name": "PokeballRecluse_House_Layout",
+      "id": "LAYOUT_POKEBALL_CRAFTER_HOUSE",
+      "name": "PokeballCrafter_House_Layout",
       "width": 12,
       "height": 9,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/PokeballRecluse_House/border.bin",
-      "blockdata_filepath": "data/layouts/PokeballRecluse_House/map.bin"
+      "border_filepath": "data/layouts/PokeballCrafter_House/border.bin",
+      "blockdata_filepath": "data/layouts/PokeballCrafter_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRARIUM_FOREST",
+      "name": "Terrarium_Forest_Layout",
+      "width": 22,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Terrarium_Forest/border.bin",
+      "blockdata_filepath": "data/layouts/Terrarium_Forest/map.bin"
     }
   ]
 }

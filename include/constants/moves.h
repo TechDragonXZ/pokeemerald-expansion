@@ -929,8 +929,10 @@
 #define MOVE_SUPER_FREEZE    863
 #define MOVE_MELT            864
 #define MOVE_CORROSION       865
+#define MOVE_ONSLAUGHT       866
+#define MOVE_MOTOR_PULSE     867
 
-#define MOVES_COUNT_CUSTOM   866
+#define MOVES_COUNT_CUSTOM   868
 
 #define MOVES_COUNT         MOVES_COUNT_CUSTOM
 

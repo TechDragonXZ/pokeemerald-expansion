@@ -264,10 +264,10 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_TERRARIUM_MAIN_WILD_SET                      0x40F7 // Terrarium Main Area Wild Pkmn Var
-#define VAR_TERRARIUM_SUB_WILD_SET                       0x40F8 // Terrarium Sub Area Wild Pkmn Var
-#define VAR_LAST_ROD_TECHNIQUE                           0x40F9 // Current Rod Technique Var
-#define VAR_SEASON                                       0x40FA // Current Season Var Spring = 0, Summer = 1, Autumn = 2, Winter = 3
+#define VAR_LAST_ROD_TECHNIQUE                           0x40F7 // Current Rod Technique Var
+#define VAR_SEASON                                       0x40F8 // Current Season Var Spring = 0, Summer = 1, Autumn = 2, Winter = 3
+#define VAR_FOREST_SET                                   0x40F9 // Forest Season Var (Same as above)
+#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var

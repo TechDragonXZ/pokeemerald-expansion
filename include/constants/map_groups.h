@@ -607,6 +607,7 @@
 #define MAP_TERRARIUM_ICY_CAVE     (1 | (35 << 8))
 #define MAP_TERRARIUM_ROCKY_CAVERN (2 | (35 << 8))
 #define MAP_TERRARIUM_FOGGY_CAVERN (3 | (35 << 8))
+#define MAP_TERRARIUM_FOREST       (4 | (35 << 8))
 
 // gMapGroup_Terrarium_Indoors
 #define MAP_TERRARIUM_LOBBY             (0 | (36 << 8))
@@ -622,7 +623,7 @@
 #define MAP_DEEP_PETALBURG_WOODS (0 | (37 << 8))
 
 // gMapGroup_DeepPetalburgWoods_Indoors
-#define MAP_POKEBALL_RECLUSE_HOUSE (0 | (38 << 8))
+#define MAP_POKEBALL_CRAFTER_HOUSE (0 | (38 << 8))
 
 // gMapGroup_None
 #define MAP_NONE (0 | (39 << 8))

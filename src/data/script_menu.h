@@ -778,49 +778,6 @@ static const struct MenuAction MultichoiceList_BerryPlot[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_AlteringCave[] =
-{
-    {gText_Zubat},
-    {gText_Mareep},
-    {gText_Pineco},
-    {gText_NextPg},
-    {gText_Exit},
-};
-
-static const struct MenuAction MultichoiceList_AlteringCave2[] =
-{
-    {gText_Houndour},
-    {gText_Teddiursa},
-    {gText_Aipom},
-    {gText_NextPg},
-    {gText_Back},
-    {gText_Exit},
-};
-
-static const struct MenuAction MultichoiceList_AlteringCave3[] =
-{
-    {gText_Shuckle},
-    {gText_Stantler},
-    {gText_Smeargle},
-    {gText_Back},
-    {gText_Exit},
-};
-
-static const struct MenuAction MultichoiceList_TerrariumZones[] =
-{
-    {gText_TerrariumMain},
-    {gText_TerrariumSub},
-    {gText_Exit},
-};
-
-static const struct MenuAction MultichoiceList_TerrariumGroups[] =
-{
-    {gText_Group0},
-    {gText_Group1},
-    {gText_Group2},
-    {gText_Exit},
-};
-
 static const struct MenuAction MultichoiceList_VendingMachinePokeball[] =
 {
     {gText_SafariBallAndPrice},
@@ -957,11 +914,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
-    [MULTI_ALTERING_CAVE_ENCOUNTERS]   = MULTICHOICE(MultichoiceList_AlteringCave),
-    [MULTI_ALTERING_CAVE_ENCOUNTERS2]  = MULTICHOICE(MultichoiceList_AlteringCave2),
-    [MULTI_ALTERING_CAVE_ENCOUNTERS3]  = MULTICHOICE(MultichoiceList_AlteringCave3),
-    [MULTI_TERRARIUM_ZONES]            = MULTICHOICE(MultichoiceList_TerrariumZones),
-    [MULTI_TERRARIUM_GROUPS]           = MULTICHOICE(MultichoiceList_TerrariumGroups),
     [MULTI_VENDING_MACHINE_POKEBALL]   = MULTICHOICE(MultichoiceList_VendingMachinePokeball),
 };
 

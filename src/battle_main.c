@@ -5967,42 +5967,42 @@ u32 GetDynamicMoveType(struct Pokemon *mon, u32 move, u32 battler, u8 *ateBoost)
             return TYPE_ROCK;
         }
         break;
-    case EFFECT_MEGA_MOVE:
+    case EFFECT_FORM_MOVE:
         switch (species)
         {
         case SPECIES_CHARIZARD_MEGA_X:
         case SPECIES_AMPHAROS_MEGA:
         case SPECIES_SCEPTILE_MEGA:
-            return TYPE_DRAGON;
-        case SPECIES_CHARIZARD:
-        case SPECIES_CHARIZARD_GMAX:
         case SPECIES_CHARIZARD_MEGA_Y:
-        case SPECIES_GYARADOS:
         case SPECIES_PINSIR_MEGA:
-        case SPECIES_ALTARIA:
-            return TYPE_FLYING;
         case SPECIES_ABSOL_MEGA:
         case SPECIES_ALTARIA_MEGA:
         case SPECIES_AUDINO_MEGA:
-            return TYPE_FAIRY;
         case SPECIES_GYARADOS_MEGA:
-        case SPECIES_ABSOL:
-            return TYPE_DARK;
         case SPECIES_MEWTWO_MEGA_X:
         case SPECIES_LOPUNNY_MEGA:
-            return TYPE_FIGHTING;
         case SPECIES_GROUDON_PRIMAL:
         case SPECIES_DARMANITAN_GALAR_ZEN:
-            return TYPE_FIRE;
         case SPECIES_DARMANITAN_ZEN:
-            return TYPE_PSYCHIC;
+        case SPECIES_ROTOM:
+        case SPECIES_ROTOM_HEAT:
+        case SPECIES_ROTOM_FAN:
+        case SPECIES_ROTOM_MOW:
+        case SPECIES_ROTOM_FROST:
+        case SPECIES_ROTOM_WASH:
+            return type2;
+        case SPECIES_CHARIZARD:
+        case SPECIES_CHARIZARD_GMAX:
+        case SPECIES_GYARADOS:
+        case SPECIES_ALTARIA:
+        case SPECIES_ABSOL:
+        case SPECIES_DARMANITAN_GALAR:
+        case SPECIES_DARMANITAN:
         case SPECIES_SCEPTILE:
-            return TYPE_GRASS;
         case SPECIES_AMPHAROS:
-            return TYPE_ELECTRIC;
         case SPECIES_LOPUNNY:
         case SPECIES_AUDINO:
-            return TYPE_NORMAL;
+            return type1;
         }
         break;
     case EFFECT_GENETIC_BURST:

@@ -314,7 +314,7 @@ static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCBIN_U32("g
 
 #define LIST_SCROLL_STEP         16
 
-#define SKIP_THRESHOLD           4 // Number of Pokémon to check are unseen before triggering a skip
+#define SKIP_THRESHOLD           1 // Number of Pokémon to check are unseen before triggering a skip
 #define SHOW_TRIPLE_BULLET       0xFFFE // Used to indicate sText_TripleBullet should be displayed (0xFFFE is an invalid dex number)
 
 #define POKEBALL_ROTATION_TOP    64
