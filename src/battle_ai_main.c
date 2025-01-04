@@ -1517,6 +1517,21 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
               || PartnerMoveIsSameNoTarget(BATTLE_PARTNER(battlerAtk), move, aiData->partnerMove)) //Only one mon needs to set up Stealth Rocks
                 ADJUST_SCORE(-10);
             break;
+        case EFFECT_STEEL_TRAP:
+            if (gSideTimers[GetBattlerSide(battlerDef)].steelTrapAmount > 0
+              || PartnerMoveIsSameNoTarget(BATTLE_PARTNER(battlerAtk), move, aiData->partnerMove)) //Only one mon needs to set up Steel Trap
+                ADJUST_SCORE(-10);
+            break;
+        case EFFECT_ASH_CLOUD:
+            if (gSideTimers[GetBattlerSide(battlerDef)].ashCloudAmount > 0
+              || PartnerMoveIsSameNoTarget(BATTLE_PARTNER(battlerAtk), move, aiData->partnerMove)) //Only one mon needs to set up Ash Cloud
+                ADJUST_SCORE(-10);
+            break;
+        case EFFECT_FROST_SPIKES:
+            if (gSideTimers[GetBattlerSide(battlerDef)].frostSpikesAmount > 0
+              || PartnerMoveIsSameNoTarget(BATTLE_PARTNER(battlerAtk), move, aiData->partnerMove)) //Only one mon needs to set up Frost Spikes
+                ADJUST_SCORE(-10);
+            break;
         case EFFECT_TOXIC_SPIKES:
             if (gSideTimers[GetBattlerSide(battlerDef)].toxicSpikesAmount >= 2)
                 ADJUST_SCORE(-10);
@@ -3704,6 +3719,9 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
         break;
     case EFFECT_SPIKES:
     case EFFECT_STEALTH_ROCK:
+    case EFFECT_STEEL_TRAP:
+    case EFFECT_ASH_CLOUD:
+    case EFFECT_FROST_SPIKES:
     case EFFECT_STICKY_WEB:
     case EFFECT_TOXIC_SPIKES:
         if (AI_ShouldSetUpHazards(battlerAtk, battlerDef, aiData));
@@ -4679,6 +4697,8 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
                     break;
                 case MOVE_EFFECT_STEALTH_ROCK:
                 case MOVE_EFFECT_SPIKES:
+                case MOVE_EFFECT_STEEL_TRAP:
+                case MOVE_EFFECT_ASH_CLOUD:
                     if (AI_ShouldSetUpHazards(battlerAtk, battlerDef, aiData));
                     {
                         if (gDisableStructs[battlerAtk].isFirstTurn)
@@ -4828,6 +4848,9 @@ static s32 AI_ForceSetupFirstTurn(u32 battlerAtk, u32 battlerDef, u32 move, s32 
     case EFFECT_ELECTRIC_TERRAIN:
     case EFFECT_MISTY_TERRAIN:
     case EFFECT_STEALTH_ROCK:
+    case EFFECT_STEEL_TRAP:
+    case EFFECT_ASH_CLOUD:
+    case EFFECT_FROST_SPIKES:
     case EFFECT_TOXIC_SPIKES:
     case EFFECT_TRICK_ROOM:
     case EFFECT_WONDER_ROOM:
@@ -4856,6 +4879,8 @@ static s32 AI_ForceSetupFirstTurn(u32 battlerAtk, u32 battlerDef, u32 move, s32 
             switch (gMovesInfo[move].additionalEffects[i].moveEffect)
             {
                 case MOVE_EFFECT_STEALTH_ROCK:
+                case MOVE_EFFECT_STEEL_TRAP:
+                case MOVE_EFFECT_ASH_CLOUD:
                 case MOVE_EFFECT_SPIKES:
                     ADJUST_SCORE(DECENT_EFFECT);
                     break;
@@ -5248,6 +5273,9 @@ static s32 AI_PowerfulStatus(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         break;
     case EFFECT_SPIKES:
     case EFFECT_STEALTH_ROCK:
+    case EFFECT_STEEL_TRAP:
+    case EFFECT_ASH_CLOUD:
+    case EFFECT_FROST_SPIKES:
     case EFFECT_STICKY_WEB:
     case EFFECT_TOXIC_SPIKES:
         if (AI_ShouldSetUpHazards(battlerAtk, battlerDef, AI_DATA))

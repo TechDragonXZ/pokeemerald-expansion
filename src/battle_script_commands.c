@@ -568,8 +568,6 @@ static void Cmd_switchoutabilities(void);
 static void Cmd_jumpifhasnohp(void);
 static void Cmd_jumpifnotcurrentmoveargtype(void);
 static void Cmd_pickup(void);
-static void Cmd_unused3(void);
-static void Cmd_unused4(void);
 static void Cmd_settypebasedhalvers(void);
 static void Cmd_jumpifsubstituteblocks(void);
 static void Cmd_tryrecycleitem(void);
@@ -594,6 +592,10 @@ static void Cmd_jumpifoppositegenders(void);
 static void Cmd_unused(void);
 static void Cmd_tryworryseed(void);
 static void Cmd_callnative(void);
+
+// Custom
+static void Cmd_setashcloud(void); // unused3
+static void Cmd_setfrostspikes(void); // unused4
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -827,8 +829,8 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_jumpifhasnohp,                           //0xE3
     Cmd_jumpifnotcurrentmoveargtype,             //0xE4
     Cmd_pickup,                                  //0xE5
-    Cmd_unused3,                                 //0xE6
-    Cmd_unused4,                                 //0xE7
+    Cmd_setashcloud,                             //0xE6
+    Cmd_setfrostspikes,                          //0xE7
     Cmd_settypebasedhalvers,                     //0xE8
     Cmd_jumpifsubstituteblocks,                  //0xE9
     Cmd_tryrecycleitem,                          //0xEA
@@ -2924,6 +2926,8 @@ void SetMoveEffect(bool32 primary, bool32 certain)
         gBattlescriptCurrInstr++;
         return;
     case MOVE_EFFECT_STEALTH_ROCK:
+    case MOVE_EFFECT_STEEL_TRAP:
+    case MOVE_EFFECT_ASH_CLOUD:
     case MOVE_EFFECT_SPIKES:
     case MOVE_EFFECT_PAYDAY:
     case MOVE_EFFECT_STEAL_ITEM:
@@ -3857,6 +3861,22 @@ void SetMoveEffect(bool32 primary, bool32 certain)
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_POINTEDSTONESFLOAT;
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
                     gBattlescriptCurrInstr = BattleScript_StealthRockActivates;
+                }
+                break;
+            case MOVE_EFFECT_STEEL_TRAP:
+                if (!(gSideStatuses[GetBattlerSide(gBattlerTarget)] & SIDE_STATUS_STEEL_TRAP))
+                {
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STEELTRAPSET;
+                    BattleScriptPush(gBattlescriptCurrInstr + 1);
+                    gBattlescriptCurrInstr = BattleScript_SteelTrapActivates;
+                }
+                break;
+            case MOVE_EFFECT_ASH_CLOUD:
+                if (!(gSideStatuses[GetBattlerSide(gBattlerTarget)] & SIDE_STATUS_ASH_CLOUD))
+                {
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ASHCLOUDSET;
+                    BattleScriptPush(gBattlescriptCurrInstr + 1);
+                    gBattlescriptCurrInstr = BattleScript_AshCloudActivates;
                 }
                 break;
             case MOVE_EFFECT_SPIKES:
@@ -7609,6 +7629,61 @@ static bool32 DoSwitchInEffectsForBattler(u32 battler)
         if (gBattleMoveDamage != 0)
             SetDmgHazardsBattlescript(battler, B_MSG_SHARPSTEELDMG);
     }
+    else if (!(gDisableStructs[battler].steelTrapDone)
+        && (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_STEEL_TRAP)
+        && IsBattlerAffectedByHazards(battler, FALSE)
+        && GetBattlerAbility(battler) != ABILITY_MAGIC_GUARD)
+    {
+        gDisableStructs[battler].steelTrapDone = TRUE;
+        gBattleMoveDamage = GetStealthHazardDamage(gMovesInfo[MOVE_STEEL_TRAP].type, battler);
+
+        if (gBattleMoveDamage != 0)
+            SetDmgHazardsBattlescript(battler, B_MSG_STEELTRAPDMG);
+    }
+    else if (!(gDisableStructs[battler].ashCloudDone)
+        && (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_ASH_CLOUD)
+        && IsBattlerAffectedByHazards(battler, FALSE)
+        && GetBattlerAbility(battler) != ABILITY_MAGIC_GUARD)
+    {
+        gDisableStructs[battler].ashCloudDone = TRUE;
+        gBattleMoveDamage = GetStealthHazardDamage(gMovesInfo[MOVE_ASH_CLOUD].type, battler);
+
+        if (gBattleMoveDamage != 0)
+            SetDmgHazardsBattlescript(battler, B_MSG_ASHCLOUDDMG);
+    }
+    else if (!(gDisableStructs[battler].frostSpikesDone)
+        && (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_FROST_SPIKES)
+        && IsBattlerGrounded(battler))
+    {
+        gDisableStructs[battler].frostSpikesDone = TRUE;
+        if (IS_BATTLER_OF_TYPE(battler, TYPE_ICE)) // Absorb the frost spikes.
+        {
+            gSideStatuses[GetBattlerSide(battler)] &= ~SIDE_STATUS_FROST_SPIKES;
+            gSideTimers[GetBattlerSide(battler)].frostSpikesAmount = 0;
+            gBattleScripting.battler = battler;
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_FrostSpikesAbsorbed;
+        }
+        else if (IsBattlerAffectedByHazards(battler, TRUE))
+        {
+            i = GetBattlerAbility(battler);
+            if (!(gBattleMons[battler].status1 & STATUS1_ANY)
+                && !IS_BATTLER_OF_TYPE(battler, TYPE_ICE)
+                && i != ABILITY_MAGMA_ARMOR
+                && i != ABILITY_COMATOSE
+                && i != ABILITY_PURIFYING_SALT
+                && !(gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_SAFEGUARD)
+                && !(gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN))
+            {
+                gBattleMons[battler].status1 |= STATUS1_FROSTBITE;
+                BtlController_EmitSetMonData(battler, BUFFER_A, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[battler].status1), &gBattleMons[battler].status1);
+                MarkBattlerForControllerExec(battler);
+                gBattleScripting.battler = battler;
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_FrostSpikesFrostbiten;
+            }
+        }
+    }
     else if (gBattleMons[battler].hp != gBattleMons[battler].maxHP && gBattleStruct->zmove.healReplacement)
     {
         gBattleStruct->zmove.healReplacement = FALSE;
@@ -7662,6 +7737,9 @@ static bool32 DoSwitchInEffectsForBattler(u32 battler)
         gDisableStructs[battler].toxicSpikesDone = FALSE;
         gDisableStructs[battler].stealthRockDone = FALSE;
         gDisableStructs[battler].steelSurgeDone = FALSE;
+        gDisableStructs[battler].steelTrapDone = FALSE;
+        gDisableStructs[battler].ashCloudDone = FALSE;
+        gDisableStructs[battler].frostSpikesDone = FALSE;
 
         for (i = 0; i < gBattlersCount; i++)
         {
@@ -8983,6 +9061,9 @@ static bool32 TryDefogClear(u32 battlerAtk, bool32 clear)
             DEFOG_CLEAR(SIDE_STATUS_TOXIC_SPIKES, toxicSpikesAmount, BattleScript_ToxicSpikesDefog, 0);
             DEFOG_CLEAR(SIDE_STATUS_STICKY_WEB, stickyWebAmount, BattleScript_StickyWebDefog, 0);
             DEFOG_CLEAR(SIDE_STATUS_STEELSURGE, steelsurgeAmount, BattleScript_SteelsurgeDefog, 0);
+            DEFOG_CLEAR(SIDE_STATUS_STEEL_TRAP, steelTrapAmount, BattleScript_SteelTrapDefog, 0);
+            DEFOG_CLEAR(SIDE_STATUS_ASH_CLOUD, ashCloudAmount, BattleScript_AshCloudDefog, 0);
+            DEFOG_CLEAR(SIDE_STATUS_FROST_SPIKES, frostSpikesAmount, BattleScript_FrostSpikesDefog, 0);
         }
         if (gBattleWeather & B_WEATHER_FOG)
         {
@@ -9176,6 +9257,10 @@ static void CourtChangeSwapSideStatuses(void)
     COURTCHANGE_SWAP(SIDE_STATUS_STICKY_WEB, stickyWebAmount, temp);
     COURTCHANGE_SWAP(SIDE_STATUS_STEELSURGE, steelsurgeAmount, temp);
     COURTCHANGE_SWAP(SIDE_STATUS_DAMAGE_NON_TYPES, damageNonTypesTimer, temp);
+    // Custom
+    COURTCHANGE_SWAP(SIDE_STATUS_STEEL_TRAP, steelTrapAmount, temp);
+    COURTCHANGE_SWAP(SIDE_STATUS_ASH_CLOUD, ashCloudAmount, temp);
+    COURTCHANGE_SWAP(SIDE_STATUS_FROST_SPIKES, frostSpikesAmount, temp);
     // Track Pledge effect side
     COURTCHANGE_SWAP(SIDE_STATUS_RAINBOW, rainbowTimer, temp);
     COURTCHANGE_SWAP(SIDE_STATUS_SEA_OF_FIRE, seaOfFireTimer, temp);
@@ -13963,6 +14048,27 @@ static void Cmd_rapidspinfree(void)
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_SteelsurgeFree;
     }
+    else if (gSideStatuses[atkSide] & SIDE_STATUS_STEEL_TRAP)
+    {
+        gSideStatuses[atkSide] &= ~SIDE_STATUS_STEEL_TRAP;
+        gSideTimers[atkSide].steelTrapAmount = 0;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_SteelTrapFree;
+    }
+    else if (gSideStatuses[atkSide] & SIDE_STATUS_ASH_CLOUD)
+    {
+        gSideStatuses[atkSide] &= ~SIDE_STATUS_ASH_CLOUD;
+        gSideTimers[atkSide].ashCloudAmount = 0;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_AshCloudFree;
+    }
+    else if (gSideStatuses[atkSide] & SIDE_STATUS_FROST_SPIKES)
+    {
+        gSideStatuses[atkSide] &= ~SIDE_STATUS_FROST_SPIKES;
+        gSideTimers[atkSide].frostSpikesAmount = 0;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_FrostSpikesFree;
+    }
     else
     {
         gBattlescriptCurrInstr = cmd->nextInstr;
@@ -15023,12 +15129,38 @@ static void Cmd_pickup(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-static void Cmd_unused3(void)
+static void Cmd_setashcloud(void) // unused3
 {
+    CMD_ARGS(const u8 *failInstr);
+
+    u8 targetSide = GetBattlerSide(gBattlerTarget);
+    if (gSideStatuses[targetSide] & SIDE_STATUS_ASH_CLOUD)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+    }
+    else
+    {
+        gSideStatuses[targetSide] |= SIDE_STATUS_ASH_CLOUD;
+        gSideTimers[targetSide].ashCloudAmount = 1;
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
 }
 
-static void Cmd_unused4(void)
+static void Cmd_setfrostspikes(void) // unused4
 {
+    CMD_ARGS(const u8 *failInstr);
+
+    u8 targetSide = GetBattlerSide(gBattlerTarget);
+    if (gSideStatuses[targetSide] & SIDE_STATUS_FROST_SPIKES)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+    }
+    else
+    {
+        gSideStatuses[targetSide] |= SIDE_STATUS_FROST_SPIKES;
+        gSideTimers[targetSide].frostSpikesAmount = 1;
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
 }
 
 // Water and Mud Sport

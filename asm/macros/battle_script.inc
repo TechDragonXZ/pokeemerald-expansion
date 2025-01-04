@@ -1230,12 +1230,14 @@
 	.byte 0xe5
 	.endm
 
-	.macro unused3
+	.macro setashcloud failInstr:req @unused3
 	.byte 0xe6
+	.4byte \failInstr
 	.endm
 
-	.macro unused4
+	.macro setfrostspikes failInstr:req @unused4
 	.byte 0xe7
+	.4byte \failInstr
 	.endm
 
 	.macro settypebasedhalvers failInstr:req

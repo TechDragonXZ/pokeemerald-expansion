@@ -1471,6 +1471,9 @@ bool32 IsHazardMoveEffect(u32 moveEffect)
     case EFFECT_TOXIC_SPIKES:
     case EFFECT_STICKY_WEB:
     case EFFECT_STEALTH_ROCK:
+    case EFFECT_STEEL_TRAP:
+    case EFFECT_ASH_CLOUD:
+    case EFFECT_FROST_SPIKES:
         return TRUE;
     default:
         return FALSE;

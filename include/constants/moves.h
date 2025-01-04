@@ -931,8 +931,12 @@
 #define MOVE_CORROSION       865
 #define MOVE_ONSLAUGHT       866
 #define MOVE_MOTOR_PULSE     867
+#define MOVE_STEEL_TRAP      868
+#define MOVE_ASH_CLOUD       869
+#define MOVE_FROST_SPIKES    870
+#define MOVE_ICY_WATER       871
 
-#define MOVES_COUNT_CUSTOM   868
+#define MOVES_COUNT_CUSTOM   872
 
 #define MOVES_COUNT         MOVES_COUNT_CUSTOM
 

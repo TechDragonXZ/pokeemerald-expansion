@@ -51,7 +51,17 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(FINAL_BLOW) \
+    F(POWER_SURGE) \
+    F(FROSTBURN) \
+    F(STEEL_TRAP) \
+    F(ASH_CLOUD) \
+    F(FROST_SPIKES) \
+    F(STEALTH_ROCK) \
+    F(TOXIC_SPIKES) \
+    F(SPIKES) \
+    F(ICY_WATER)
 
 #define FOREACH_HM(F) \
     F(CUT) \

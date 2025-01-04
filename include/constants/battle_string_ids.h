@@ -727,6 +727,7 @@
 
 #define STRINGID_PKMNDROPPEDITEM                      725
 #define STRINGID_BAGISFULL                            726
+
 #define STRINGID_WINDBECAMETWISTER                    727
 #define STRINGID_ATTACKERHASEVOLVED                   728
 #define STRINGID_WINDBECAMEICYWIND                    729
@@ -736,7 +737,25 @@
 
 #define STRINGID_PKMNCUTHPMAXEDPOWER                  733
 
-#define BATTLESTRINGS_COUNT                           734
+#define STRINGID_STEELTRAPDMG                         734
+#define STRINGID_STEELTRAPSET                         735
+#define	STRINGID_PKMNBLEWAWAYSTEELTRAP                736
+#define STRINGID_STEELTRAPDISAPPEAREDFROMTEAM         737
+
+#define STRINGID_ASHCLOUDDMG                          738
+#define STRINGID_ASHCLOUDSET                          739
+#define	STRINGID_PKMNBLEWAWAYASHCLOUD                 740
+#define STRINGID_ASHCLOUDDISAPPEAREDFROMTEAM          741
+
+#define STRINGID_FROSTSPIKESAPPEARED                  742
+#define STRINGID_FROSTSPIKESDMG                       743
+#define	STRINGID_PKMNBLEWAWAYFROSTSPIKES              744
+#define STRINGID_FROSTSPIKESDISAPPEAREDFROMTEAM       745
+#define STRINGID_FROSTSPIKESABSORBED                  746
+#define STRINGID_FROSTSPIKESFROSTBITEN                747
+
+
+#define BATTLESTRINGS_COUNT                           748
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -1046,12 +1065,18 @@
 #define B_MSG_Z_HP_TRAP       6
 
 // gDmgHazardsStringIds
-#define B_MSG_PKMNHURTBYSPIKES   0
-#define B_MSG_STEALTHROCKDMG     1
-#define B_MSG_SHARPSTEELDMG      2
-#define B_MSG_POINTEDSTONESFLOAT 3
-#define B_MSG_SPIKESSCATTERED    4
-#define B_MSG_SHARPSTEELFLOATS   5
+#define B_MSG_PKMNHURTBYSPIKES    0
+#define B_MSG_STEALTHROCKDMG      1
+#define B_MSG_SHARPSTEELDMG       2
+#define B_MSG_POINTEDSTONESFLOAT  3
+#define B_MSG_SPIKESSCATTERED     4
+#define B_MSG_SHARPSTEELFLOATS    5
+#define B_MSG_STEELTRAPDMG        6
+#define B_MSG_STEELTRAPSET        7
+#define B_MSG_ASHCLOUDDMG         8
+#define B_MSG_ASHCLOUDSET         9
+#define B_MSG_FROSTSPIKESDMG      10
+#define B_MSG_FROSTSPIKESAPPEARED 11
 
 // gDamageNonTypesStartStringIds
 #define B_MSG_TRAPPED_WITH_VINES  0

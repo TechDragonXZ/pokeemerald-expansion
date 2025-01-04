@@ -138,14 +138,6 @@ static const u8 sText_SpDefense[] = _("Sp. Def");
 static const u8 sText_Accuracy[] = _("accuracy");
 static const u8 sText_Evasiveness[] = _("evasiveness");
 
-// Custom
-static const u8 sText_WindBecameTwister[] = _("The wind turned into a\nTWISTER{PAUSE 64}!");
-static const u8 sText_WindBecameIcyWind[] = _("The wind turned into a\nICY WIND{PAUSE 64}!");
-static const u8 sText_WindBecameAirCutter[] = _("The wind turned into a\nAIR CUTTER{PAUSE 64}!");
-static const u8 sText_WindBecameToxicGas[] = _("The wind turned into a\nTOXIC GAS{PAUSE 64}!");
-static const u8 sText_AquaBecameFrostJet[] = _("The AQUA JET turned into a\nFROST JET{PAUSE 64}!");
-static const u8 sText_AttackerHasEvolved[] = _("{B_BUFF1} evolved into {B_BUFF2}!");
-
 const u8 *const gStatNamesTable[NUM_BATTLE_STATS] =
 {
     sText_HP, sText_Attack, sText_Defense,
@@ -902,6 +894,22 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ATTACKERHASEVOLVED]                   = COMPOUND_STRING("{B_BUFF1} evolved into {B_BUFF2}!"),
     
     [STRINGID_PKMNCUTHPMAXEDPOWER]                  = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} cut its own HP and maximized its Power!"),
+
+    [STRINGID_STEELTRAPSET]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} set up a steel trap around {B_DEF_TEAM2} Pokémon!"),
+    [STRINGID_STEELTRAPDMG]                         = COMPOUND_STRING("The steel trap dug into {B_DEF_NAME_WITH_PREFIX2}!"),
+    [STRINGID_PKMNBLEWAWAYSTEELTRAP]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} blew away the Steel Trap!"),
+    [STRINGID_STEELTRAPDISAPPEAREDFROMTEAM]         = COMPOUND_STRING("The steel trap disappeared from around {B_ATK_TEAM2} team!"),
+    
+    [STRINGID_ASHCLOUDSET]                          = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} created a cloud of ash around {B_DEF_TEAM2} Pokémon!"),
+    [STRINGID_ASHCLOUDDMG]                          = COMPOUND_STRING("The Ash Cloud burned {B_DEF_NAME_WITH_PREFIX2}!"),
+    [STRINGID_PKMNBLEWAWAYASHCLOUD]                 = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} blew away the Ash Cloud!"),
+    [STRINGID_ASHCLOUDDISAPPEAREDFROMTEAM]          = COMPOUND_STRING("The Ash Cloud disappeared from around {B_ATK_TEAM2} team!"),
+    
+    [STRINGID_FROSTSPIKESAPPEARED]                  = COMPOUND_STRING("Frozen Spikes appeared on the ground all around {B_DEF_TEAM2} team!"),
+    [STRINGID_FROSTSPIKESDMG]                       = COMPOUND_STRING("The frozen spikes chilled {B_DEF_NAME_WITH_PREFIX2}!"),
+    [STRINGID_FROSTSPIKESDISAPPEAREDFROMTEAM]       = COMPOUND_STRING("The frozen spikes disappeared from the ground around {B_ATK_TEAM2} team!"),
+    [STRINGID_PKMNBLEWAWAYFROSTSPIKES]              = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} blew away the Frozen Spikes!"),[STRINGID_FROSTSPIKESABSORBED]                  = COMPOUND_STRING("The frozen spikes disappeared from the ground around {B_ATK_TEAM2} team!"),
+    [STRINGID_FROSTSPIKESFROSTBITEN]                = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} got frostbite!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -969,12 +977,18 @@ const u16 gHealingWishStringIds[] =
 
 const u16 gDmgHazardsStringIds[] =
 {
-    [B_MSG_PKMNHURTBYSPIKES]   = STRINGID_PKMNHURTBYSPIKES,
-    [B_MSG_STEALTHROCKDMG]     = STRINGID_STEALTHROCKDMG,
-    [B_MSG_SHARPSTEELDMG]      = STRINGID_SHARPSTEELDMG,
-    [B_MSG_POINTEDSTONESFLOAT] = STRINGID_POINTEDSTONESFLOAT,
-    [B_MSG_SPIKESSCATTERED]    = STRINGID_SPIKESSCATTERED,
-    [B_MSG_SHARPSTEELFLOATS]   = STRINGID_SHARPSTEELFLOATS,
+    [B_MSG_PKMNHURTBYSPIKES]    = STRINGID_PKMNHURTBYSPIKES,
+    [B_MSG_STEALTHROCKDMG]      = STRINGID_STEALTHROCKDMG,
+    [B_MSG_SHARPSTEELDMG]       = STRINGID_SHARPSTEELDMG,
+    [B_MSG_POINTEDSTONESFLOAT]  = STRINGID_POINTEDSTONESFLOAT,
+    [B_MSG_SPIKESSCATTERED]     = STRINGID_SPIKESSCATTERED,
+    [B_MSG_SHARPSTEELFLOATS]    = STRINGID_SHARPSTEELFLOATS,
+    [B_MSG_STEELTRAPDMG]        = STRINGID_STEELTRAPDMG,
+    [B_MSG_STEELTRAPSET]        = STRINGID_STEELTRAPSET,
+    [B_MSG_ASHCLOUDDMG]         = STRINGID_ASHCLOUDDMG,
+    [B_MSG_ASHCLOUDSET]         = STRINGID_ASHCLOUDSET,
+    [B_MSG_FROSTSPIKESDMG]      = STRINGID_FROSTSPIKESDMG,
+    [B_MSG_FROSTSPIKESAPPEARED] = STRINGID_FROSTSPIKESAPPEARED,
 };
 
 const u16 gSwitchInAbilityStringIds[] =

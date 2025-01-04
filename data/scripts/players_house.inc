@@ -697,54 +697,66 @@ PlayersHouse_2F_EventScript_GivePlayerPokenav::
 	end
 
 PlayersHouse_2F_EventScript_SetupPokenav::
-	call_if_unset FLAG_SETUP_DONE, PlayersHouse_2F_EventScript_AskSetupPokenav
-	call_if_set FLAG_SETUP_DONE, PlayersHouse_2F_EventScript_SetupPokenavFinish
+	call_if_lt VAR_POKENAV_STATE, 3, PlayersHouse_2F_EventScript_SetupPokenavStart
+	call_if_ge VAR_POKENAV_STATE, 3, PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
-PlayersHouse_2F_EventScript_AskSetupPokenav::
+PlayersHouse_2F_EventScript_SetupPokenavStart::
 	lockall
-	msgbox PlayersHouse_2F_Text_SetPokeNavWhich, MSGBOX_DEFAULT
-	dynmultipush PlayersHouse_2F_Text_SetUpMonthSeason, 0
-	dynmultipush PlayersHouse_2F_Text_SetUpDay, 1
-	dynmultistack 19, 0, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_NONE
-	switch VAR_RESULT
-	case 0, PlayersHouse_2F_EventScript_SetupPokenavMonth
-	case 1, PlayersHouse_2F_EventScript_SetupPokenavDay
-	case MULTI_B_PRESSED, PlayersHouse_2F_EventScript_CantLeave
-	closemessage
+	msgbox PlayersHouse_2F_Text_SetingUpPokeNav, MSGBOX_DEFAULT
+	call PlayersHouse_2F_EventScript_SetupPokenavMonth
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetupPokenavMonth::
 	lockall
 	msgbox PlayersHouse_2F_Text_SetPokeNavWhatMonth, MSGBOX_DEFAULT
-	dynmultipush PlayersHouse_2F_Text_MonthDecember, 0
-	dynmultipush PlayersHouse_2F_Text_MonthJanuary, 1
-	dynmultipush PlayersHouse_2F_Text_MonthFebruary, 2
-	dynmultipush PlayersHouse_2F_Text_MonthMarch, 3
-	dynmultipush PlayersHouse_2F_Text_MonthApril, 4
-	dynmultipush PlayersHouse_2F_Text_MonthMay, 5
-	dynmultipush PlayersHouse_2F_Text_MonthJune, 6
-	dynmultipush PlayersHouse_2F_Text_MonthJuly, 7
-	dynmultipush PlayersHouse_2F_Text_MonthAugust, 8
-	dynmultipush PlayersHouse_2F_Text_MonthSeptember, 9
-	dynmultipush PlayersHouse_2F_Text_MonthOctober, 10
-	dynmultipush PlayersHouse_2F_Text_MonthNovember, 11
+	dynmultipush PlayersHouse_2F_Text_MonthJanuary, 0
+	dynmultipush PlayersHouse_2F_Text_MonthFebruary, 1
+	dynmultipush PlayersHouse_2F_Text_MonthMarch, 2
+	dynmultipush PlayersHouse_2F_Text_MonthApril, 3
+	dynmultipush PlayersHouse_2F_Text_MonthMay, 4
+	dynmultipush PlayersHouse_2F_Text_MonthJune, 5
+	dynmultipush PlayersHouse_2F_Text_MonthJuly, 6
+	dynmultipush PlayersHouse_2F_Text_MonthAugust, 7
+	dynmultipush PlayersHouse_2F_Text_MonthSeptember, 8
+	dynmultipush PlayersHouse_2F_Text_MonthOctober, 9
+	dynmultipush PlayersHouse_2F_Text_MonthNovember, 10
+	dynmultipush PlayersHouse_2F_Text_MonthDecember, 11
 	dynmultistack 19, 0, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
-	case 0, PlayersHouse_2F_EventScript_December
-	case 1, PlayersHouse_2F_EventScript_January
-	case 2, PlayersHouse_2F_EventScript_February
-	case 3, PlayersHouse_2F_EventScript_March
-	case 4, PlayersHouse_2F_EventScript_April
-	case 5, PlayersHouse_2F_EventScript_May
-	case 6, PlayersHouse_2F_EventScript_June
-	case 7, PlayersHouse_2F_EventScript_July
-	case 8, PlayersHouse_2F_EventScript_August
-	case 9, PlayersHouse_2F_EventScript_September
-	case 10, PlayersHouse_2F_EventScript_October
-	case 11, PlayersHouse_2F_EventScript_November
+	case 0, PlayersHouse_2F_EventScript_January
+	case 1, PlayersHouse_2F_EventScript_February
+	case 2, PlayersHouse_2F_EventScript_March
+	case 3, PlayersHouse_2F_EventScript_April
+	case 4, PlayersHouse_2F_EventScript_May
+	case 5, PlayersHouse_2F_EventScript_June
+	case 6, PlayersHouse_2F_EventScript_July
+	case 7, PlayersHouse_2F_EventScript_August
+	case 8, PlayersHouse_2F_EventScript_September
+	case 9, PlayersHouse_2F_EventScript_October
+	case 10, PlayersHouse_2F_EventScript_November
+	case 11, PlayersHouse_2F_EventScript_December
+	case MULTI_B_PRESSED, PlayersHouse_2F_EventScript_CantLeave
+	closemessage
+	release
+	return
+	end
+
+PlayersHouse_2F_EventScript_SetupPokenavSeason::
+	lockall
+	msgbox PlayersHouse_2F_Text_SetPokeNavWhatSeason, MSGBOX_DEFAULT
+	dynmultipush PlayersHouse_2F_Text_SeasonSpring, 0
+	dynmultipush PlayersHouse_2F_Text_SeasonSummer, 1
+	dynmultipush PlayersHouse_2F_Text_SeasonAutumn, 2
+	dynmultipush PlayersHouse_2F_Text_SeasonWinter, 3
+	dynmultistack 19, 0, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_NONE
+	switch VAR_RESULT
+	case 0, PlayersHouse_2F_EventScript_Spring
+	case 1, PlayersHouse_2F_EventScript_Summer
+	case 2, PlayersHouse_2F_EventScript_Autumn
+	case 3, PlayersHouse_2F_EventScript_Winter
 	case MULTI_B_PRESSED, PlayersHouse_2F_EventScript_CantLeave
 	closemessage
 	release
@@ -823,16 +835,6 @@ PlayersHouse_2F_EventScript_CantLeave::
 	msgbox PlayersHouse_2F_Text_CantLeave, MSGBOX_DEFAULT
 	closemessage
 	call PlayersHouse_2F_EventScript_SetupPokenav
-	return
-	end
-
-PlayersHouse_2F_EventScript_December::
-	lockall
-	msgbox PlayersHouse_2F_Text_SetPokeNavMonthDecember, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, PlayersHouse_2F_EventScript_SetMonthDecember
-	call_if_eq VAR_RESULT, NO, PlayersHouse_2F_EventScript_SetupPokenavMonth
-	closemessage
-	release
 	return
 	end
 
@@ -946,147 +948,213 @@ PlayersHouse_2F_EventScript_November::
 	return
 	end
 
-PlayersHouse_2F_EventScript_SetMonthDecember::
+PlayersHouse_2F_EventScript_December::
 	lockall
-	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 3
-	setmonth 12
+	msgbox PlayersHouse_2F_Text_SetPokeNavMonthDecember, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, PlayersHouse_2F_EventScript_SetMonthDecember
+	call_if_eq VAR_RESULT, NO, PlayersHouse_2F_EventScript_SetupPokenavMonth
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	release
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetMonthJanuary::
 	lockall
 	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 3
+	addvar VAR_POKENAV_STATE, 1
 	setmonth 1
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetMonthFebruary::
 	lockall
 	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 3
+	addvar VAR_POKENAV_STATE, 1
 	setmonth 2
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetMonthMarch::
 	lockall
 	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 0
+	addvar VAR_POKENAV_STATE, 1
 	setmonth 3
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetMonthApril::
 	lockall
 	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 0
+	addvar VAR_POKENAV_STATE, 1
 	setmonth 4
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetMonthMay::
 	lockall
 	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 0
+	addvar VAR_POKENAV_STATE, 1
 	setmonth 5
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetMonthJune::
 	lockall
 	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 1
+	addvar VAR_POKENAV_STATE, 1
 	setmonth 6
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetMonthJuly::
 	lockall
 	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 1
+	addvar VAR_POKENAV_STATE, 1
 	setmonth 7
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetMonthAugust::
 	lockall
 	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 1
+	addvar VAR_POKENAV_STATE, 1
 	setmonth 8
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetMonthSeptember::
 	lockall
 	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 2
+	addvar VAR_POKENAV_STATE, 1
 	setmonth 9
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetMonthOctober::
 	lockall
 	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 2
+	addvar VAR_POKENAV_STATE, 1
 	setmonth 10
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
 	return
 	end
 
 PlayersHouse_2F_EventScript_SetMonthNovember::
 	lockall
 	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
-	setflag FLAG_MONTH_SET
-	@ setvar VAR_SEASON, 2
+	addvar VAR_POKENAV_STATE, 1
 	setmonth 11
 	closemessage
-	call_if_set FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_DAY_SET, PlayersHouse_2F_EventScript_SetupPokenavDay
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
+	return
+	end
+
+PlayersHouse_2F_EventScript_SetMonthDecember::
+	lockall
+	msgbox PlayersHouse_2F_Text_MonthIsSet, MSGBOX_DEFAULT
+	addvar VAR_POKENAV_STATE, 1
+	setmonth 12
+	closemessage
+	goto PlayersHouse_2F_EventScript_SetupPokenavSeason
+	return
+	end
+
+PlayersHouse_2F_EventScript_Spring::
+	lockall
+	msgbox PlayersHouse_2F_Text_SetPokeNavSeasonSpring, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, PlayersHouse_2F_EventScript_SetSeasonSpring
+	call_if_eq VAR_RESULT, NO, PlayersHouse_2F_EventScript_SetupPokenavSeason
+	closemessage
+	release
+	return
+	end
+
+PlayersHouse_2F_EventScript_Summer::
+	lockall
+	msgbox PlayersHouse_2F_Text_SetPokeNavSeasonSummer, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, PlayersHouse_2F_EventScript_SetSeasonSummer
+	call_if_eq VAR_RESULT, NO, PlayersHouse_2F_EventScript_SetupPokenavSeason
+	closemessage
+	release
+	return
+	end
+
+PlayersHouse_2F_EventScript_Autumn::
+	lockall
+	msgbox PlayersHouse_2F_Text_SetPokeNavSeasonAutumn, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, PlayersHouse_2F_EventScript_SetSeasonAutumn
+	call_if_eq VAR_RESULT, NO, PlayersHouse_2F_EventScript_SetupPokenavSeason
+	closemessage
+	release
+	return
+	end
+
+PlayersHouse_2F_EventScript_Winter::
+	lockall
+	msgbox PlayersHouse_2F_Text_SetPokeNavSeasonWinter, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, PlayersHouse_2F_EventScript_SetSeasonWinter
+	call_if_eq VAR_RESULT, NO, PlayersHouse_2F_EventScript_SetupPokenavSeason
+	closemessage
+	release
+	return
+	end
+
+PlayersHouse_2F_EventScript_SetSeasonSpring::
+	lockall
+	msgbox PlayersHouse_2F_Text_SeasonIsSet, MSGBOX_DEFAULT
+	addvar VAR_POKENAV_STATE, 1
+	@ setvar VAR_SEASON, 0
+	closemessage
+	goto PlayersHouse_2F_EventScript_SetupPokenavDay
+	return
+	end
+
+PlayersHouse_2F_EventScript_SetSeasonSummer::
+	lockall
+	msgbox PlayersHouse_2F_Text_SeasonIsSet, MSGBOX_DEFAULT
+	addvar VAR_POKENAV_STATE, 1
+	@ setvar VAR_SEASON, 1
+	closemessage
+	goto PlayersHouse_2F_EventScript_SetupPokenavDay
+	return
+	end
+
+PlayersHouse_2F_EventScript_SetSeasonAutumn::
+	lockall
+	msgbox PlayersHouse_2F_Text_SeasonIsSet, MSGBOX_DEFAULT
+	addvar VAR_POKENAV_STATE, 1
+	@ setvar VAR_SEASON, 2
+	closemessage
+	goto PlayersHouse_2F_EventScript_SetupPokenavDay
+	return
+	end
+
+PlayersHouse_2F_EventScript_SetSeasonWinter::
+	lockall
+	msgbox PlayersHouse_2F_Text_SeasonIsSet, MSGBOX_DEFAULT
+	addvar VAR_POKENAV_STATE, 1
+	@ setvar VAR_SEASON, 3
+	closemessage
+	goto PlayersHouse_2F_EventScript_SetupPokenavDay
 	return
 	end
 
@@ -1373,308 +1441,280 @@ PlayersHouse_2F_EventScript_SetDay28::
 PlayersHouse_2F_EventScript_DaySet1::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 1
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet2::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 2
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet3::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 3
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet4::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 4
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet5::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 5
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet6::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 6
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet7::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 7
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet8::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 8
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet9::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 9
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet10::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 10
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet11::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 11
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet12::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 12
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet13::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 13
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet14::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 14
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet15::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 15
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet16::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 16
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet17::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 17
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet18::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 18
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet19::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 19
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet20::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 20
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet21::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 21
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet22::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 22
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet23::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 23
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet24::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 24
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet25::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 25
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet26::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 26
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet27::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 27
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
 PlayersHouse_2F_EventScript_DaySet28::
 	lockall
 	msgbox PlayersHouse_2F_Text_DayIsSet, MSGBOX_DEFAULT
-	setflag FLAG_DAY_SET
+	addvar VAR_POKENAV_STATE, 1
 	setday 28
 	closemessage
-	call_if_set FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavFinish
-	call_if_unset FLAG_MONTH_SET, PlayersHouse_2F_EventScript_SetupPokenavMonth
+	goto PlayersHouse_2F_EventScript_SetupPokenavFinish
 	return
 	end
 
@@ -1705,18 +1745,18 @@ PlayersHouse_2F_EventScript_MomGoesDownstairsFemale::
 	removeobject VAR_0x8008
 	end
 
-PlayersHouse_2F_Text_SetPokeNavWhich:
-	.string "MOM: What do you want to set first?\n"
-	.string "The month or the day of the week?$"
+PlayersHouse_2F_Text_SetingUpPokeNav:
+	.string "MOM: Here's your PokéNav {PLAYER},\n"
+	.string "but it needs to be set up properly.$"
 
 PlayersHouse_2F_Text_SetPokeNavWhatMonth:
 	.string "MOM: What month is it again?$"
 
+PlayersHouse_2F_Text_SetPokeNavWhatSeason:
+	.string "MOM: What season is it again?$"
+
 PlayersHouse_2F_Text_SetPokeNavWhatDay:
 	.string "MOM: What is today again?$"
-
-PlayersHouse_2F_Text_SetPokeNavMonthDecember:
-	.string "MOM: The month is December?$"
 
 PlayersHouse_2F_Text_SetPokeNavMonthJanuary:
 	.string "MOM: The month is January?$"
@@ -1751,8 +1791,26 @@ PlayersHouse_2F_Text_SetPokeNavMonthOctober:
 PlayersHouse_2F_Text_SetPokeNavMonthNovember:
 	.string "MOM: The month is November?$"
 
+PlayersHouse_2F_Text_SetPokeNavMonthDecember:
+	.string "MOM: The month is December?$"
+
 PlayersHouse_2F_Text_MonthIsSet:
 	.string "MOM: The month is now set!$"
+
+PlayersHouse_2F_Text_SetPokeNavSeasonSpring:
+	.string "MOM: The season is Spring?$"
+
+PlayersHouse_2F_Text_SetPokeNavSeasonSummer:
+	.string "MOM: The season is Summer?$"
+
+PlayersHouse_2F_Text_SetPokeNavSeasonAutumn:
+	.string "MOM: The season is Autumn?$"
+
+PlayersHouse_2F_Text_SetPokeNavSeasonWinter:
+	.string "MOM: The season is Winter?$"
+
+PlayersHouse_2F_Text_SeasonIsSet:
+	.string "MOM: The season is now set!$"
 
 PlayersHouse_2F_Text_SetPokeNavDay1:
 	.string "MOM: Today is Sunday the 1st?$"
@@ -1848,41 +1906,53 @@ PlayersHouse_2F_Text_CantLeave:
 	.string "MOM: Where are you going?\n"
 	.string "We still need to set this up$"
 
-PlayersHouse_2F_Text_MonthDecember:
-	.string "December, Winter$"
-
 PlayersHouse_2F_Text_MonthJanuary:
-	.string "January, Winter$"
+	.string "January$"
 
 PlayersHouse_2F_Text_MonthFebruary:
-	.string "February, Winter$"
+	.string "February$"
 
 PlayersHouse_2F_Text_MonthMarch:
-	.string "March, Spring$"
+	.string "March$"
 
 PlayersHouse_2F_Text_MonthApril:
-	.string "April, Spring$"
+	.string "April$"
 
 PlayersHouse_2F_Text_MonthMay:
-	.string "May, Spring$"
+	.string "May$"
 
 PlayersHouse_2F_Text_MonthJune:
-	.string "June, Summer$"
+	.string "June$"
 
 PlayersHouse_2F_Text_MonthJuly:
-	.string "July, Summer$"
+	.string "July$"
 
 PlayersHouse_2F_Text_MonthAugust:
-	.string "August, Summer$"
+	.string "August$"
 
 PlayersHouse_2F_Text_MonthSeptember:
-	.string "September, Autumn$"
+	.string "September$"
 
 PlayersHouse_2F_Text_MonthOctober:
-	.string "October, Autumn$"
+	.string "October$"
 
 PlayersHouse_2F_Text_MonthNovember:
-	.string "November, Autumn$"
+	.string "November$"
+
+PlayersHouse_2F_Text_MonthDecember:
+	.string "December$"
+
+PlayersHouse_2F_Text_SeasonSpring:
+	.string "Spring$"
+
+PlayersHouse_2F_Text_SeasonSummer:
+	.string "Summer$"
+
+PlayersHouse_2F_Text_SeasonAutumn:
+	.string "Autumn$"
+
+PlayersHouse_2F_Text_SeasonWinter:
+	.string "Winter$"
 
 PlayersHouse_2F_Text_ChoiceDay1:
 	.string "Sunday the 1st$"
@@ -1968,8 +2038,11 @@ PlayersHouse_2F_Text_ChoiceDay27:
 PlayersHouse_2F_Text_ChoiceDay28:
 	.string "Saturday the 28th$"
 
-PlayersHouse_2F_Text_SetUpMonthSeason:
-	.string "Month & Season$"
+PlayersHouse_2F_Text_SetUpMonth:
+	.string "Month$"
+
+PlayersHouse_2F_Text_SetUpSeason:
+	.string "Season$"
 
 PlayersHouse_2F_Text_SetUpDay:
 	.string "Day of the Week$"

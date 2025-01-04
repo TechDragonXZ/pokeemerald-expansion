@@ -149,6 +149,9 @@ struct DisableStruct
     u8 syrupBombTimer;
     u8 syrupBombIsShiny:1;
     u8 steelSurgeDone:1;
+    u8 steelTrapDone:1;
+    u8 ashCloudDone:1;
+    u8 frostSpikesDone:1;
     u8 weatherAbilityDone:1;
     u8 terrainAbilityDone:1;
     u8 usedProteanLibero:1;
@@ -266,6 +269,9 @@ struct SideTimer
     u8 spikesAmount;
     u8 toxicSpikesAmount;
     u8 stealthRockAmount;
+    u8 steelTrapAmount;
+    u8 ashCloudAmount;
+    u8 frostSpikesAmount;
     u8 stickyWebAmount;
     u8 stickyWebBattlerId;
     u8 stickyWebBattlerSide; // Used for Court Change

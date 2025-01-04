@@ -267,7 +267,7 @@
 #define VAR_LAST_ROD_TECHNIQUE                           0x40F7 // Current Rod Technique Var
 #define VAR_SEASON                                       0x40F8 // Current Season Var Spring = 0, Summer = 1, Autumn = 2, Winter = 3
 #define VAR_FOREST_SET                                   0x40F9 // Forest Season Var (Same as above)
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
+#define VAR_POKENAV_STATE                                0x40FA // PokeNav Setup State Var 0/3 = 0, 1/3 = 1, 2/3 = 2, 3/3 =3
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var

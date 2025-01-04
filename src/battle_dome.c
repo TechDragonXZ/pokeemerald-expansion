@@ -4086,6 +4086,9 @@ static bool32 IsDomeComboMoveEffect(u32 effect)
     case EFFECT_SPIKES:
     case EFFECT_TOXIC_SPIKES:
     case EFFECT_STEALTH_ROCK:
+    case EFFECT_STEEL_TRAP:
+    case EFFECT_ASH_CLOUD:
+    case EFFECT_FROST_SPIKES:
     case EFFECT_STICKY_WEB:
     // Inflicting sleep & related effects
     case EFFECT_SLEEP:

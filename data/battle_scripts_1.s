@@ -10292,3 +10292,97 @@ BattleScript_EffectFinalBlow::
 	tryKO BattleScript_KOFail
 	trysetdestinybondtohappen
 	goto BattleScript_HitFromAtkAnimation
+
+BattleScript_EffectSteelTrap::
+	attackcanceler
+	attackstring
+	ppreduce
+	setsteelsurge BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_STEELTRAPSET
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_SteelTrapActivates::
+	setsteelsurge BattleScript_MoveEnd
+	printfromtable gDmgHazardsStringIds
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_SteelTrapFree::
+	printstring STRINGID_PKMNBLEWAWAYSTEELTRAP
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_SteelTrapDefog::
+	printstring STRINGID_STEELTRAPDISAPPEAREDFROMTEAM
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_EffectAshCloud::
+	attackcanceler
+	attackstring
+	ppreduce
+	setashcloud BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_ASHCLOUDSET
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_AshCloudActivates::
+	setashcloud BattleScript_MoveEnd
+	printfromtable gDmgHazardsStringIds
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_AshCloudFree::
+	printstring STRINGID_PKMNBLEWAWAYASHCLOUD
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_AshCloudDefog::
+	printstring STRINGID_ASHCLOUDDISAPPEAREDFROMTEAM
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_EffectFrostSpikes::
+	attackcanceler
+	attackstring
+	ppreduce
+	setfrostspikes BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_FROSTSPIKESAPPEARED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_FrostSpikesActivates::
+	setfrostspikes BattleScript_MoveEnd
+	printfromtable gDmgHazardsStringIds
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_FrostSpikesAbsorbed::
+	printstring STRINGID_FROSTSPIKESABSORBED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_FrostSpikesFrostbiten::
+	printstring STRINGID_FROSTSPIKESFROSTBITEN
+	waitmessage B_WAIT_TIME_LONG
+	statusanimation BS_SCRIPTING
+	updatestatusicon BS_SCRIPTING
+	waitstate
+	return
+
+BattleScript_FrostSpikesFree::
+	printstring STRINGID_PKMNBLEWAWAYFROSTSPIKES
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_FrostSpikesDefog::
+	printstring STRINGID_FROSTSPIKESDISAPPEAREDFROMTEAM
+	waitmessage B_WAIT_TIME_LONG
+	return

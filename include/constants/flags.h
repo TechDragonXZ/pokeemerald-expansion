@@ -68,12 +68,12 @@
 #define FLAG_REMOVE_WARP_FADE   0x36 // Removes Warp Fade Flag
 #define FLAG_PAUSE_TIME         0x37 // Time Paused Flag
 #define FLAG_RECEIVED_FISHING_ROD           0x38 // Received Fishing Rod Flag
-#define FLAG_DAY_SET                        0x39 // Day Set Flag
-#define FLAG_MONTH_SET                      0x3A // Month Set Flag
-#define FLAG_SETUP_DONE                     0x3B // Setup Finished Flag
-#define FLAG_HIDE_POKEMON_CENTER_MALE       0x3C // Self Trade Male Flag
-#define FLAG_HIDE_POKEMON_CENTER_FEMALE     0x3D // Self Trade Female Flag
-#define FLAG_ENABLE_WILDMON_EVOLUTION       0x3E // Wild Pokémon Evolve Flag
+#define FLAG_HIDE_POKEMON_CENTER_MALE       0x39 //  Self Trade Male Flag
+#define FLAG_HIDE_POKEMON_CENTER_FEMALE     0x3A //  Self Trade Female Flag
+#define FLAG_ENABLE_WILDMON_EVOLUTION       0x3B // Wild Pokémon Evolve Flag
+#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
+#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
+#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
 #define FLAG_UNUSED_0x041    0x41 // Unused Flag

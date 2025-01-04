@@ -2449,7 +2449,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_GHOSTLY_BLADE] =
     {
         .name = _("Ghostly Blade"),
-        .description = COMPOUND_STRING("Sharpness and Stance Change"),
+        .description = COMPOUND_STRING("Sharpness & Stance Change"),
         .aiRating = 7,
     },
 

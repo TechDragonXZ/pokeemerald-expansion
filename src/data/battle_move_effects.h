@@ -2257,4 +2257,25 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 7,
     },
 
+    [EFFECT_STEEL_TRAP] =
+    {
+        .battleScript = BattleScript_EffectSteelTrap,
+        .battleTvScore = 0, // TODO: Assign points
+        .encourageEncore = TRUE,
+    },
+
+    [EFFECT_ASH_CLOUD] =
+    {
+        .battleScript = BattleScript_EffectAshCloud,
+        .battleTvScore = 0, // TODO: Assign points
+        .encourageEncore = TRUE,
+    },
+
+    [EFFECT_FROST_SPIKES] =
+    {
+        .battleScript = BattleScript_EffectFrostSpikes,
+        .battleTvScore = 0, // TODO: Assign points
+        .encourageEncore = TRUE,
+    },
+
 };

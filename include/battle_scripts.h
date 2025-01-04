@@ -865,4 +865,21 @@ extern const u8 BattleScript_AllStatsUp2[];
 extern const u8 BattleScript_EffectPowerSurge[];
 extern const u8 BattleScript_EffectFinalBlow[];
 
+extern const u8 BattleScript_EffectSteelTrap[];
+extern const u8 BattleScript_SteelTrapActivates[];
+extern const u8 BattleScript_SteelTrapDefog[];
+extern const u8 BattleScript_SteelTrapFree[];
+
+extern const u8 BattleScript_EffectAshCloud[];
+extern const u8 BattleScript_AshCloudActivates[];
+extern const u8 BattleScript_AshCloudDefog[];
+extern const u8 BattleScript_AshCloudFree[];
+
+extern const u8 BattleScript_EffectFrostSpikes[];
+extern const u8 BattleScript_FrostSpikesDefog[];
+extern const u8 BattleScript_FrostSpikesFree[];
+extern const u8 BattleScript_FrostSpikesFrostbiten[];
+extern const u8 BattleScript_FrostSpikesAbsorbed[];
+extern const u8 BattleScript_FrostSpikesActivates[];
+
 #endif // GUARD_BATTLE_SCRIPTS_H
