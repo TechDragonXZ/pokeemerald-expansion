@@ -2460,9 +2460,9 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 6,
     },
 
-    [ABILITY_GHOSTLY_MOTOR] =
+    [ABILITY_BOOSTED_MOTOR] =
     {
-        .name = _("Ghostly Motor"),
+        .name = _("Boosted Motor"),
         .description = COMPOUND_STRING("Boosts ghost & levitate."),
         .aiRating = 7,
         .breakable = TRUE,
