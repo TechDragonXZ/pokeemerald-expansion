@@ -265,13 +265,13 @@
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
 #define VAR_LAST_ROD_TECHNIQUE                           0x40F7 // Current Rod Technique Var
-#define VAR_SEASON                                       0x40F8 // Current Season Var Spring = 0, Summer = 1, Autumn = 2, Winter = 3
-#define VAR_FOREST_SET                                   0x40F9 // Forest Season Var (Same as above)
-#define VAR_POKENAV_STATE                                0x40FA // PokeNav Setup State Var 0/3 = 0, 1/3 = 1, 2/3 = 2, 3/3 =3
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
-#define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
+#define VAR_SEASON                                       0x40F8 // Current Season Var; Spring = 0, Summer = 1, Autumn = 2, Winter = 3
+#define VAR_FOREST_SET                                   0x40F9 // Forest Season Var; Spring = 0, Summer = 1, Autumn = 2, Winter = 3
+#define VAR_POKENAV_STATE                                0x40FA // PokeNav Setup State Var; 0/3 = 0, 1/3 = 1, 2/3 = 2, 3/3 =3
+#define VAR_BATTLE_COURSE_STATE                          0x40FB // Battle Course State Var; Unentered = 0, Can Enter = 1, Exiting = 2
+#define VAR_BATTLE_COURSE_COMPLETED                      0x40FC // Completed Battle Course Var; None = 0, VSC = 1, MC = 2, MRB = 3
+#define VAR_BATTLE_COURSE_SELECTED                       0x40FD // Selected Battle Course Var; None = 0, VSC = 1, MC = 2, MRB = 3
+#define VAR_BADGES                                       0x40FE // Badges Var None = 0, Stone = 1, Knuckle = 2, Dynamo = 3, Heat = 4, Balance = 5, Feather = 6, Mind = 7, Rain = 8, Others =+ 9
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
 
 #define VARS_END                                         0x40FF

@@ -133,10 +133,10 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_SIDEWAYS_STAIRS_RIGHT_SIDE_BOTTOM]  = TILE_FLAG_UNUSED,
     [MB_SIDEWAYS_STAIRS_LEFT_SIDE_BOTTOM]   = TILE_FLAG_UNUSED,
     [MB_ROCK_STAIRS]                        = TILE_FLAG_UNUSED,
-    [MB_SAND_WARP_NORTH]                 = TILE_FLAG_UNUSED,
-    [MB_SAND_WARP_SOUTH]                 = TILE_FLAG_UNUSED,
-    [MB_SAND_WARP_EAST]                  = TILE_FLAG_UNUSED,
-    [MB_SAND_WARP_WEST]                  = TILE_FLAG_UNUSED,
+    [MB_SAND_WARP_NORTH]                    = TILE_FLAG_UNUSED,
+    [MB_SAND_WARP_SOUTH]                    = TILE_FLAG_UNUSED,
+    [MB_SAND_WARP_EAST]                     = TILE_FLAG_UNUSED,
+    [MB_SAND_WARP_WEST]                     = TILE_FLAG_UNUSED,
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)

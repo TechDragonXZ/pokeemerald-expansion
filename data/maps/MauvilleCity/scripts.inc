@@ -668,3 +668,25 @@ MauvilleCity_Text_ExplainTV:
 
 MauvilleCity_Text_BeenCheckingOutTV:
 	.string "Hi, have you been checking out TVs?$"
+
+
+MauvilleCity_EventScript_BattleCafeSign::
+	msgbox MauvilleCity_Text_BattleCafeSign, MSGBOX_SIGN
+	end
+
+MauvilleCity_EventScript_NervousGirl::
+	lockall
+	faceplayer
+	msgbox MauvilleCity_Text_NervousGirl, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	end
+
+MauvilleCity_Text_NervousGirl:
+	.string "There's someone who's waiting on me,\n"
+	.string "but I'm too nervous to enter the\p"
+	.string "Battle Café.$"
+
+MauvilleCity_Text_BattleCafeSign:
+	.string "Mauville City Battle Café\n"
+	.string "“Enjoy Battles and Tasty Food!”$"

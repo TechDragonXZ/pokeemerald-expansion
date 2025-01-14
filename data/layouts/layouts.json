@@ -5532,6 +5532,30 @@
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/Terrarium_Forest/border.bin",
       "blockdata_filepath": "data/layouts/Terrarium_Forest/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAUVILLE_CITY_BATTLE_CAFE",
+      "name": "MauvilleCity_BattleCafe_Layout",
+      "width": 36,
+      "height": 16,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonDayCare",
+      "border_filepath": "data/layouts/MauvilleCity_BattleCafe/border.bin",
+      "blockdata_filepath": "data/layouts/MauvilleCity_BattleCafe/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAUVILLE_CITY_BATTLE_CAFE_ARENA",
+      "name": "MauvilleCity_BattleCafe_Arena_Layout",
+      "width": 10,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/MauvilleCity_BattleCafe_Arena/border.bin",
+      "blockdata_filepath": "data/layouts/MauvilleCity_BattleCafe_Arena/map.bin"
     }
   ]
 }

@@ -98,7 +98,8 @@ enum {
     CONTEST_OPPONENT_CLARA,
     CONTEST_OPPONENT_JAKOB,
     CONTEST_OPPONENT_TREY,
-    CONTEST_OPPONENT_LANE
+    CONTEST_OPPONENT_LANE,
+    CONTEST_OPPONENT_WALLACE
 };
 
 // All contest opponents have a common set of AI flags (which contains all of the actually
@@ -2906,6 +2907,34 @@ const struct ContestPokemon gContestOpponents[] =
         .sheen = 255,
         .personality = 0,
         .otId = CONTEST_AI_TRAINER_ID,
+    },
+    [CONTEST_OPPONENT_WALLACE] = {
+        .species = SPECIES_MILOTIC,
+        .nickname = _("Milotic"),
+        .trainerName = _("Wallace"),
+        .trainerGfxId = OBJ_EVENT_GFX_WALLACE,
+        .aiFlags = CONTEST_AI_SET_1D,
+        .whichRank = CONTEST_RANK_MASTER,
+        .aiPool_Cool = FALSE,
+        .aiPool_Beauty = TRUE,
+        .aiPool_Cute = FALSE,
+        .aiPool_Smart = FALSE,
+        .aiPool_Tough = FALSE,
+        .moves =
+        {
+            MOVE_AQUA_RING,
+            MOVE_AQUA_TAIL,
+            MOVE_BLIZZARD,
+            MOVE_ROUND
+        },
+        .cool = 160,
+        .beauty = 200,
+        .cute = 20,
+        .smart = 40,
+        .tough = 160,
+        .sheen = 255,
+        .personality = 0,
+        .otId = CONTEST_AI_TRAINER_ID,
     }
 };
 
@@ -3007,5 +3036,6 @@ const u8 gPostgameContestOpponentFilter[] =
     [CONTEST_OPPONENT_CLARA] = CONTEST_FILTER_ONLY_POSTGAME,
     [CONTEST_OPPONENT_JAKOB] = CONTEST_FILTER_ONLY_POSTGAME,
     [CONTEST_OPPONENT_TREY] = CONTEST_FILTER_ONLY_POSTGAME,
-    [CONTEST_OPPONENT_LANE] = CONTEST_FILTER_ONLY_POSTGAME
+    [CONTEST_OPPONENT_LANE] = CONTEST_FILTER_ONLY_POSTGAME,
+    [CONTEST_OPPONENT_WALLACE] = CONTEST_FILTER_NONE
 };

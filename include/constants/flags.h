@@ -68,13 +68,13 @@
 #define FLAG_REMOVE_WARP_FADE   0x36 // Removes Warp Fade Flag
 #define FLAG_PAUSE_TIME         0x37 // Time Paused Flag
 #define FLAG_RECEIVED_FISHING_ROD           0x38 // Received Fishing Rod Flag
-#define FLAG_HIDE_POKEMON_CENTER_MALE       0x39 //  Self Trade Male Flag
-#define FLAG_HIDE_POKEMON_CENTER_FEMALE     0x3A //  Self Trade Female Flag
+#define FLAG_HIDE_POKEMON_CENTER_MALE       0x39 // Self Trade Male Flag
+#define FLAG_HIDE_POKEMON_CENTER_FEMALE     0x3A // Self Trade Female Flag
 #define FLAG_ENABLE_WILDMON_EVOLUTION       0x3B // Wild Pokémon Evolve Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
+#define FLAG_VIP_TABLE_ACCESS               0x3C // Can goto Mauville's Battle Cafe's VIP Table Flag
+#define FLAG_IN_BATTLE_COURSE               0x3D // Doing Battle Course Flag
+#define FLAG_HIDE_VIP_3      0x3E // Battle Cafe VIP 3 Flag
+#define FLAG_HIDE_VIP_4      0x3F // Battle Cafe VIP 4 Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
 #define FLAG_UNUSED_0x041    0x41 // Unused Flag
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
@@ -1594,8 +1594,8 @@
 #define FLAG_UNUSED_0x933                           (DAILY_FLAGS_START + 0x13) // Unused Flag
 #define FLAG_DAILY_APPRENTICE_LEAVES                (DAILY_FLAGS_START + 0x14)
 
-#define FLAG_UNUSED_0x935                           (DAILY_FLAGS_START + 0x15) // Unused Flag
-#define FLAG_UNUSED_0x936                           (DAILY_FLAGS_START + 0x16) // Unused Flag
+#define FLAG_DAILY_BATTLE_CAFE_TRASH_CAN            (DAILY_FLAGS_START + 0x15) // Daily Item from Trashcan Flag
+#define FLAG_DAILY_BATTLE_CAFE_VIPS                 (DAILY_FLAGS_START + 0x16) // Daily V.I.P Check Flag
 #define FLAG_UNUSED_0x937                           (DAILY_FLAGS_START + 0x17) // Unused Flag
 #define FLAG_UNUSED_0x938                           (DAILY_FLAGS_START + 0x18) // Unused Flag
 #define FLAG_UNUSED_0x939                           (DAILY_FLAGS_START + 0x19) // Unused Flag
