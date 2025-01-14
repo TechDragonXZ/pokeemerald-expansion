@@ -9,7 +9,55 @@ MauvilleCity_BattleCafe_Arena_MapScripts::
 	.byte 0
 
 MauvilleCity_BattleCafe_Arena_EventScript_BattleBot::
-	applymovement OBJ_EVENT_ID_PLAYER, MauvilleCity_BattleCafe_Arena_Movement_Walk_ToSide
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	goto_if_eq VAR_RESULT, DIR_NORTH, MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_North
+	goto_if_eq VAR_RESULT, DIR_EAST, MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_East
+	goto_if_eq VAR_RESULT, DIR_SOUTH, MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_South
+	goto_if_eq VAR_RESULT, DIR_WEST, MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_West
+	end
+
+MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_North::
+	applymovement OBJ_EVENT_ID_PLAYER, MauvilleCity_BattleCafe_Arena_Movement_Walk_ToLeftSide_North
+	applymovement LOCALID_BATTLE_BOT, MauvilleCity_BattleCafe_Arena_Movement_Walk_ToRightSide
+	waitmovement OBJ_EVENT_ID_PLAYER
+	lockall
+	faceplayer
+	call_if_eq VAR_BATTLE_COURSE_SELECTED, 1, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo
+	call_if_eq VAR_BATTLE_COURSE_SELECTED, 2, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette
+	call_if_eq VAR_BATTLE_COURSE_SELECTED, 3, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl
+	releaseall
+	return
+	end
+
+MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_East::
+	applymovement OBJ_EVENT_ID_PLAYER, MauvilleCity_BattleCafe_Arena_Movement_Walk_ToLeftSide_East
+	applymovement LOCALID_BATTLE_BOT, MauvilleCity_BattleCafe_Arena_Movement_Walk_ToRightSide
+	waitmovement OBJ_EVENT_ID_PLAYER
+	lockall
+	faceplayer
+	call_if_eq VAR_BATTLE_COURSE_SELECTED, 1, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo
+	call_if_eq VAR_BATTLE_COURSE_SELECTED, 2, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette
+	call_if_eq VAR_BATTLE_COURSE_SELECTED, 3, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl
+	releaseall
+	return
+	end
+
+MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_South::
+	applymovement OBJ_EVENT_ID_PLAYER, MauvilleCity_BattleCafe_Arena_Movement_Walk_ToLeftSide_South
+	applymovement LOCALID_BATTLE_BOT, MauvilleCity_BattleCafe_Arena_Movement_Walk_ToRightSide
+	waitmovement OBJ_EVENT_ID_PLAYER
+	lockall
+	faceplayer
+	call_if_eq VAR_BATTLE_COURSE_SELECTED, 1, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo
+	call_if_eq VAR_BATTLE_COURSE_SELECTED, 2, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette
+	call_if_eq VAR_BATTLE_COURSE_SELECTED, 3, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl
+	releaseall
+	return
+	end
+
+MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_West::
+	applymovement OBJ_EVENT_ID_PLAYER, MauvilleCity_BattleCafe_Arena_Movement_Walk_ToLeftSide_West
+	applymovement LOCALID_BATTLE_BOT, MauvilleCity_BattleCafe_Arena_Movement_Walk_ToRightSide_West
 	waitmovement OBJ_EVENT_ID_PLAYER
 	lockall
 	faceplayer
@@ -21,7 +69,7 @@ MauvilleCity_BattleCafe_Arena_EventScript_BattleBot::
 	end
 
 MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo::
-	trainerbattle_single TRAINER_VSC, MauvilleCity_BattleCafe_Arena_Text_VSCIntro, MauvilleCity_BattleCafe_Arena_Text_BattleBot_Defeat, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo_Outcome
+	trainerbattle_no_whiteout_continue_script TRAINER_VSC, MauvilleCity_BattleCafe_Arena_Text_VSCIntro, MauvilleCity_BattleCafe_Arena_Text_BattleBot_Defeat, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo_Outcome
 	releaseall
 	return
 	end
@@ -58,7 +106,7 @@ MauvilleCity_BattleCafe_Arena_EventScript_Lost_VillageSubCombo::
 	end
 
 MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette::
-	trainerbattle_single TRAINER_MC, MauvilleCity_BattleCafe_Arena_Text_MCIntro, MauvilleCity_BattleCafe_Arena_Text_BattleBot_Defeat, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette_Outcome
+	trainerbattle_no_whiteout_continue_script TRAINER_MC, MauvilleCity_BattleCafe_Arena_Text_MCIntro, MauvilleCity_BattleCafe_Arena_Text_BattleBot_Defeat, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette_Outcome
 	releaseall
 	return
 	end
@@ -96,7 +144,7 @@ MauvilleCity_BattleCafe_Arena_EventScript_Lost_MagnemiteCroquette::
 
 MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl::
 	setflag FLAG_INVERSE_BATTLE
-	trainerbattle_single TRAINER_MRB, MauvilleCity_BattleCafe_Arena_Text_MRBIntro, MauvilleCity_BattleCafe_Arena_Text_BattleBot_Defeat, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl_Outcome
+	trainerbattle_no_whiteout_continue_script TRAINER_MRB, MauvilleCity_BattleCafe_Arena_Text_MRBIntro, MauvilleCity_BattleCafe_Arena_Text_BattleBot_Defeat, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl_Outcome
 	releaseall
 	return
 	end
@@ -133,19 +181,58 @@ MauvilleCity_BattleCafe_Arena_EventScript_Lost_MauvilleRamenBowl::
 	return
 	end
 
-MauvilleCity_BattleCafe_Arena_Movement_Walk_ToSide::
+MauvilleCity_BattleCafe_Arena_Movement_Walk_ToLeftSide_North::
 	walk_left
-	walk_left
+	walk_up
 	walk_left
 	walk_left
 	face_right
 	step_end
 
+MauvilleCity_BattleCafe_Arena_Movement_Walk_ToLeftSide_East::
+	walk_left
+	walk_left
+	face_right
+	step_end
+
+MauvilleCity_BattleCafe_Arena_Movement_Walk_ToLeftSide_South::
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	face_right
+	step_end
+
+MauvilleCity_BattleCafe_Arena_Movement_Walk_ToLeftSide_West::
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	face_right
+	step_end
+
+MauvilleCity_BattleCafe_Arena_Movement_Walk_ToRightSide::
+	walk_right
+	walk_right
+	face_left
+	step_end
+
+MauvilleCity_BattleCafe_Arena_Movement_Walk_ToRightSide_West::
+	delay_2
+	walk_right
+	walk_right
+	face_left
+	step_end
+
 MauvilleCity_BattleCafe_Movement_Walk_RightToCenter::
+	walk_right
 	walk_right
 	step_end
 
 MauvilleCity_BattleCafe_Movement_Walk_LeftToCenter::
+	walk_left
 	walk_left
 	step_end
 

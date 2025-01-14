@@ -754,8 +754,9 @@
 #define STRINGID_FROSTSPIKESABSORBED                  746
 #define STRINGID_FROSTSPIKESFROSTBITEN                747
 
+#define STRINGID_PLAYERWHITEOUT3                      748
 
-#define BATTLESTRINGS_COUNT                           748
+#define BATTLESTRINGS_COUNT                           749
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

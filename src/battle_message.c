@@ -137,6 +137,7 @@ static const u8 sText_SpAttack[] = _("Sp. Atk");
 static const u8 sText_SpDefense[] = _("Sp. Def");
 static const u8 sText_Accuracy[] = _("accuracy");
 static const u8 sText_Evasiveness[] = _("evasiveness");
+static const u8 sText_PlayerWhiteout3[] = _("{B_PLAYER_NAME} lost the battle!{PAUSE_UNTIL_PRESS}"); 
 
 const u8 *const gStatNamesTable[NUM_BATTLE_STATS] =
 {
