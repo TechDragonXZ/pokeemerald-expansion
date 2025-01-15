@@ -110,4 +110,9 @@ bool32 IsItemFlute(u16 item);
 void ItemUseCB_PokeBall(u8 taskId, TaskFunc task);
 void CB2_ReturnToPartyMenuFromSummaryScreen(void);
 
+// Start hexorb Branch
+void ItemUseCB_UseHexorb(u8 taskId, TaskFunc task);
+void InitPartyMenuForHexorbFromField(u8 taskId);
+// End hexorb Branch
+
 #endif // GUARD_PARTY_MENU_H

@@ -82,6 +82,10 @@ static void SetDistanceOfClosestHiddenItem(u8, s16, s16);
 static void CB2_OpenPokeblockFromBag(void);
 static void ItemUseOnFieldCB_Honey(u8 taskId);
 static bool32 IsValidLocationForVsSeeker(void);
+// Start hexorb Branch
+void ItemUseOutOfBattle_Hexorb(u8 taskId);
+void Task_OpenRegisteredHexorb(u8 taskId);
+// End hexorb Branch
 
 // EWRAM variables
 EWRAM_DATA static void(*sItemUseOnFieldCB)(u8 taskId) = NULL;
@@ -1655,5 +1659,33 @@ u16 GetAshCount(void)
 	ashGatherCount = GetVarPointer(VAR_ASH_GATHER_COUNT);
 	return *ashGatherCount;
 }
+
+// Start hexorb Branch
+void ItemUseOutOfBattle_Hexorb(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_UseHexorb;
+
+    if (gTasks[taskId].tUsingRegisteredKeyItem != TRUE)
+    {
+        SetUpItemUseCallback(taskId);
+    }
+    else
+    {
+        gFieldCallback = FieldCB_ReturnToFieldNoScript;
+        FadeScreen(FADE_TO_BLACK, 0);
+        gTasks[taskId].func = Task_OpenRegisteredHexorb;
+    }
+}
+
+void Task_OpenRegisteredHexorb(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        CleanupOverworldWindowsAndTilemaps();
+        InitPartyMenuForHexorbFromField(taskId);
+        DestroyTask(taskId);
+    }
+}
+// End hexorb Branch
 
 #undef tUsingRegisteredKeyItem

@@ -3397,4 +3397,9 @@ extern const u32 gItemIconPalette_MegaBracelet[];
 extern const u32 gItemIcon_ZRing[];
 extern const u32 gItemIconPalette_ZRing[];
 
+// Start hexorb branch
+extern const u32 gItemIcon_Hexorb[];
+extern const u32 gItemIconPalette_Hexorb[];
+// End hexorb Branch
+
 #endif //GUARD_GRAPHICS_H

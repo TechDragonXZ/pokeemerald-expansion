@@ -998,11 +998,12 @@
 
 #define ITEM_MEGA_BRACELET 831
 #define ITEM_Z_RING 832
+#define ITEM_HEXORB 833 //hexorb Branch
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 833
+#define ITEMS_COUNT 834
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
