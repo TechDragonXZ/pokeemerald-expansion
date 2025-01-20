@@ -9,23 +9,13 @@ AlteringCave_OnTransition:
 	call_if_unset FLAG_DEFEATED_REGIDRAGO, AlteringCave_EventScript_ShowRegidrago
 	end
 
-AlteringCave_EventScript_ShowRegieleki::
-	clearflag FLAG_HIDE_REGIELEKI
-	return
-
-AlteringCave_EventScript_ShowRegidrago::
-	clearflag FLAG_HIDE_REGIDRAGO
-	return
-
 AlteringCave_OnResume:
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AlteringCave_EventScript_TryRemoveRegieleki
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AlteringCave_EventScript_TryRemoveRegidrago
 	end
 
-AlteringCave_EventScript_TryRemoveRegieleki::
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
-	removeobject VAR_LAST_TALKED
+AlteringCave_EventScript_ShowRegidrago::
+	clearflag FLAG_HIDE_REGIDRAGO
 	return
 
 AlteringCave_EventScript_TryRemoveRegidrago::
@@ -33,6 +23,76 @@ AlteringCave_EventScript_TryRemoveRegidrago::
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject VAR_LAST_TALKED
 	return
+
+AlteringCave_EventScript_Regidrago::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_REGIDRAGO, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_REGIDRAGO, 40, ITEM_DRAGON_GEM
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special StartRegiBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AlteringCave_EventScript_DefeatedRegidrago
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AlteringCave_EventScript_RanFromRegidrago
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AlteringCave_EventScript_RanFromRegidrago
+	setflag FLAG_DEFEATED_REGIDRAGO
+	release
+	end
+
+AlteringCave_EventScript_DefeatedRegidrago::
+	setflag FLAG_DEFEATED_REGIDRAGO
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+AlteringCave_EventScript_RanFromRegidrago::
+	setvar VAR_0x8004, SPECIES_REGIDRAGO
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+AlteringCave_EventScript_ShowRegieleki::
+	clearflag FLAG_HIDE_REGIELEKI
+	return
+
+AlteringCave_EventScript_TryRemoveRegieleki::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject VAR_LAST_TALKED
+	return
+
+AlteringCave_EventScript_Regieleki::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_REGIELEKI, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_REGIELEKI, 40, ITEM_ELECTRIC_GEM
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special StartRegiBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AlteringCave_EventScript_DefeatedRegieleki
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AlteringCave_EventScript_RanFromRegieleki
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AlteringCave_EventScript_RanFromRegieleki
+	setflag FLAG_DEFEATED_REGIDRAGO
+	release
+	end
+
+AlteringCave_EventScript_DefeatedRegieleki::
+	setflag FLAG_DEFEATED_REGIELEKI
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+AlteringCave_EventScript_RanFromRegieleki::
+	setvar VAR_0x8004, SPECIES_REGIELEKI
+	goto Common_EventScript_LegendaryFlewAway
+	end
 
 AlteringCave_EventScript_WildChange::
 	lockall
@@ -122,66 +182,6 @@ AlteringCave_EventScript_WildChangeDeclined::
 	lockall
 	msgbox AlteringCave_Text_ChangeDeclined, MSGBOX_AUTOCLOSE
 	releaseall
-	end
-
-AlteringCave_EventScript_Regidrago::
-	lock
-	faceplayer
-	waitse
-	playmoncry SPECIES_REGIDRAGO, CRY_MODE_ENCOUNTER
-	delay 40
-	waitmoncry
-	setwildbattle SPECIES_REGIDRAGO, 40, ITEM_DRAGON_GEM
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	special StartRegiBattle
-	waitstate
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AlteringCave_EventScript_DefeatedRegidrago
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AlteringCave_EventScript_RanFromRegidrago
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AlteringCave_EventScript_RanFromRegidrago
-	setflag FLAG_DEFEATED_REGIDRAGO
-	release
-	end
-
-AlteringCave_EventScript_DefeatedRegidrago::
-	setflag FLAG_DEFEATED_REGIDRAGO
-	goto Common_EventScript_RemoveStaticPokemon
-	end
-
-AlteringCave_EventScript_RanFromRegidrago::
-	setvar VAR_0x8004, SPECIES_REGIDRAGO
-	goto Common_EventScript_LegendaryFlewAway
-	end
-
-AlteringCave_EventScript_Regieleki::
-	lock
-	faceplayer
-	waitse
-	playmoncry SPECIES_REGIELEKI, CRY_MODE_ENCOUNTER
-	delay 40
-	waitmoncry
-	setwildbattle SPECIES_REGIELEKI, 40, ITEM_ELECTRIC_GEM
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	special StartRegiBattle
-	waitstate
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AlteringCave_EventScript_DefeatedRegieleki
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AlteringCave_EventScript_RanFromRegieleki
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AlteringCave_EventScript_RanFromRegieleki
-	setflag FLAG_DEFEATED_REGIDRAGO
-	release
-	end
-
-AlteringCave_EventScript_DefeatedRegieleki::
-	setflag FLAG_DEFEATED_REGIELEKI
-	goto Common_EventScript_RemoveStaticPokemon
-	end
-
-AlteringCave_EventScript_RanFromRegieleki::
-	setvar VAR_0x8004, SPECIES_REGIELEKI
-	goto Common_EventScript_LegendaryFlewAway
 	end
 
 AlteringCave_Text_Change:

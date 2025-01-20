@@ -5301,7 +5301,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Distortion_World",
       "border_filepath": "data/layouts/None/border.bin",
       "blockdata_filepath": "data/layouts/None/map.bin"
     },
@@ -5556,6 +5556,18 @@
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/MauvilleCity_BattleCafe_Arena/border.bin",
       "blockdata_filepath": "data/layouts/MauvilleCity_BattleCafe_Arena/map.bin"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD",
+      "name": "DistortionWorld_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Distortion_World",
+      "border_filepath": "data/layouts/DistortionWorld/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld/map.bin"
     }
   ]
 }

@@ -1212,3 +1212,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MauvilleCity_BattleCafe/scripts.inc"
 
 	.include "data/maps/MauvilleCity_BattleCafe_Arena/scripts.inc"
+
+	.include "data/maps/DistortionWorld/scripts.inc"

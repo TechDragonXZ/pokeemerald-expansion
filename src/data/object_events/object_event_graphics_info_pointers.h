@@ -261,6 +261,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedApricorn
 // Misc
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TMBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MegaStone;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoopaRing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UltraWormhole;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -504,6 +506,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
     [OBJ_EVENT_GFX_POKE_BALL] =                &gObjectEventGraphicsInfo_PokeBall,
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
+    // Apricorn
     [OBJ_EVENT_GFX_APRICORN_TREE_YELLOW] =     &gObjectEventGraphicsInfo_YellowApricornTreeSolo,
     [OBJ_EVENT_GFX_APRICORN_TREE_EMPTY] =      &gObjectEventGraphicsInfo_EmptyApricornTreeSolo,
     [OBJ_EVENT_GFX_APRICORN_TREE_BLACK] =      &gObjectEventGraphicsInfo_BlackApricornTreeSolo,
@@ -512,8 +515,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_APRICORN_TREE_BLUE] =       &gObjectEventGraphicsInfo_BlueApricornTreeSolo,
     [OBJ_EVENT_GFX_APRICORN_TREE_PINK] =       &gObjectEventGraphicsInfo_PinkApricornTreeSolo,
     [OBJ_EVENT_GFX_APRICORN_TREE_RED] =        &gObjectEventGraphicsInfo_RedApricornTreeSolo,
+    // Misc
     [OBJ_EVENT_GFX_TM_BALL] =                  &gObjectEventGraphicsInfo_TMBall,
     [OBJ_EVENT_GFX_MEGA_STONE] =               &gObjectEventGraphicsInfo_MegaStone,
+    [OBJ_EVENT_GFX_HOOPA_RING] =               &gObjectEventGraphicsInfo_HoopaRing,
+    [OBJ_EVENT_GFX_ULTRA_WORMHOLE] =           &gObjectEventGraphicsInfo_UltraWormhole,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

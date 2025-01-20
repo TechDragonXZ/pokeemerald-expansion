@@ -39,6 +39,7 @@
     "gMapGroup_Terrarium_Indoors",
     "gMapGroup_DeepPetalburgWoods",
     "gMapGroup_DeepPetalburgWoods_Indoors",
+    "gMapGroup_Wormhole_Spots",
     "gMapGroup_None"
   ],
   "gMapGroup_TownsAndRoutes": [
@@ -662,6 +663,9 @@
   ],
   "gMapGroup_DeepPetalburgWoods_Indoors": [
     "PokeballCrafter_House"
+  ],
+  "gMapGroup_Wormhole_Spots": [
+    "DistortionWorld"
   ],
   "gMapGroup_None": [
     "None"

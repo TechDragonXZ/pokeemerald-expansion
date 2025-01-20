@@ -627,9 +627,12 @@
 // gMapGroup_DeepPetalburgWoods_Indoors
 #define MAP_POKEBALL_CRAFTER_HOUSE (0 | (38 << 8))
 
-// gMapGroup_None
-#define MAP_NONE (0 | (39 << 8))
+// gMapGroup_Wormhole_Spots
+#define MAP_DISTORTION_WORLD (0 | (39 << 8))
 
-#define MAP_GROUPS_COUNT 40
+// gMapGroup_None
+#define MAP_NONE (0 | (40 << 8))
+
+#define MAP_GROUPS_COUNT 41
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

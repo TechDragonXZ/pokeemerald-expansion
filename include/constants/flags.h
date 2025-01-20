@@ -73,10 +73,10 @@
 #define FLAG_ENABLE_WILDMON_EVOLUTION       0x3B // Wild Pokémon Evolve Flag
 #define FLAG_VIP_TABLE_ACCESS               0x3C // Can goto Mauville's Battle Cafe's VIP Table Flag
 #define FLAG_IN_BATTLE_COURSE               0x3D // Doing Battle Course Flag
-#define FLAG_HIDE_VIP_3      0x3E // Battle Cafe VIP 3 Flag
-#define FLAG_HIDE_VIP_4      0x3F // Battle Cafe VIP 4 Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
+#define FLAG_HIDE_VIP_3                     0x3E // Battle Cafe VIP 3 Flag
+#define FLAG_HIDE_VIP_4                     0x3F // Battle Cafe VIP 4 Flag
+#define FLAG_DEFEATED_GIRATINA              0x40 // Defeated Giratina Flag
+#define FLAG_HIDE_GIRATINA                  0x41 // Hide Giratina Flag
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag

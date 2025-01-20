@@ -222,3 +222,6 @@ const u16 gMetatileAttributes_General_Perma_Summer[] = INCBIN_U16("data/tilesets
 
 const u16 gMetatiles_General_Perma_Spring[] = INCBIN_U16("data/tilesets/primary/general_perma_spring/metatiles.bin");
 const u16 gMetatileAttributes_General_Perma_Spring[] = INCBIN_U16("data/tilesets/primary/general_perma_spring/metatile_attributes.bin");
+
+const u16 gMetatiles_Distortion_World[] = INCBIN_U16("data/tilesets/secondary/distortion_world/metatiles.bin");
+const u16 gMetatileAttributes_Distortion_World[] = INCBIN_U16("data/tilesets/secondary/distortion_world/metatile_attributes.bin");

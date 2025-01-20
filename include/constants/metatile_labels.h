@@ -356,6 +356,10 @@
 #define METATILE_MeteorFalls_CaveEntrance_Left    0x24D
 #define METATILE_MeteorFalls_CaveEntrance_Right   0x24F
 #define METATILE_MeteorFalls_CaveEntrance_Top     0x246
+#define METATILE_MeteorFalls_Deoxys_Attack        0x294
+#define METATILE_MeteorFalls_Deoxys_Defense       0x29B
+#define METATILE_MeteorFalls_Deoxys_Normal        0x293
+#define METATILE_MeteorFalls_Deoxys_Speed         0x29C
 
 // gTileset_Mossdeep
 #define METATILE_Mossdeep_Door              0x2A1

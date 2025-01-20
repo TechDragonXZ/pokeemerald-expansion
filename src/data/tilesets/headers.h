@@ -1120,3 +1120,17 @@ const struct Tileset gTileset_General_Perma_Spring =
     .palettes_autumn = NULL,
     .palettes_winter = NULL,
 };
+
+const struct Tileset gTileset_Distortion_World =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Distortion_World,
+    .palettes = gTilesetPalettes_Distortion_World,
+    .metatiles = gMetatiles_Distortion_World,
+    .metatileAttributes = gMetatileAttributes_Distortion_World,
+    .callback = NULL,
+    .palettes_summer = NULL,
+    .palettes_autumn = NULL,
+    .palettes_winter = NULL,
+};

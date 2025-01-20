@@ -485,3 +485,10 @@ const u32 gObjectEventPic_EmptyApricornTreeSolo[] = INCBIN_U32("graphics/object_
 // Misc
 const u32 gObjectEventPic_MegaStone[] = INCBIN_U32("graphics/object_events/pics/misc/mega_stone.4bpp");
 const u32 gObjectEventPic_TMBall[] = INCBIN_U32("graphics/object_events/pics/misc/pokeball_tm.4bpp");
+const u32 gObjectEventPic_HoopaRing[] = INCBIN_U32("graphics/object_events/pics/misc/hoopa_ring.4bpp");
+const u32 gObjectEventPic_UltraWormhole[] = INCBIN_U32("graphics/object_events/pics/misc/ultra_wormhole.4bpp");
+
+// Misc - Paletts
+const u16 gObjectEventPal_MegaStone[] = INCBIN_U16("graphics/object_events/palettes/mega_stone.gbapal");
+const u16 gObjectEventPal_HoopaRing[] = INCBIN_U16("graphics/object_events/palettes/hoopa_ring.gbapal");
+const u16 gObjectEventPal_UltraWormhole[] = INCBIN_U16("graphics/object_events/palettes/ultra_wormhole.gbapal");

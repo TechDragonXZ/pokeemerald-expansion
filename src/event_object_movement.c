@@ -514,6 +514,9 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
     {gObjectEventPal_ApricornBlue,          OBJ_EVENT_PAL_TAG_APRICORN_BLUE},
     {gObjectEventPal_ApricornPink,          OBJ_EVENT_PAL_TAG_APRICORN_PINK},
+    {gObjectEventPal_HoopaRing,             OBJ_EVENT_PAL_TAG_HOOPA_RING},
+    {gObjectEventPal_UltraWormhole,         OBJ_EVENT_PAL_TAG_ULTRA_WORMHOLE},
+    {gObjectEventPal_MegaStone,             OBJ_EVENT_PAL_TAG_MEGA_STONE},
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_BALL_ULTRA},
@@ -9624,36 +9627,36 @@ static u8 GetReflectionTypeByMetatileBehavior(u32 behavior)
         return REFL_TYPE_NONE;
 }
 
-u8 GetLedgeJumpDirection(s16 x, s16 y, u8 direction)
+u8 GetLedgeJumpDirection(s16 x, s16 y, u8 z)
 {
-    static bool8 (*const ledgeBehaviorFuncs[])(u8) = {
-        [DIR_SOUTH - 1] = MetatileBehavior_IsJumpSouth,
-        [DIR_NORTH - 1] = MetatileBehavior_IsJumpNorth,
-        [DIR_WEST - 1]  = MetatileBehavior_IsJumpWest,
-        [DIR_EAST - 1]  = MetatileBehavior_IsJumpEast,
+    static bool8 (*const sLedgeJumpBehaviors[])(u8) = {
+        MetatileBehavior_IsJumpSouth,
+        MetatileBehavior_IsJumpNorth,
+        MetatileBehavior_IsJumpWest,
+        MetatileBehavior_IsJumpEast,
     };
 
     u8 behavior;
-    u8 index = direction;
+    u8 direction = z;
     struct ObjectEvent *playerObjEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
 
-    if (index == DIR_NONE)
-        return DIR_NONE;
-    else if (index > DIR_EAST)
-        index -= DIR_EAST;
+    if (direction == 0)
+        return 0;
+    else if (direction > 4)
+        direction -= 4;
 
-    index--;
+    direction--;
     behavior = MapGridGetMetatileBehaviorAt(x, y);
 
-    if (ledgeBehaviorFuncs[index](behavior) == TRUE)
-        return index + 1;
+    if (sLedgeJumpBehaviors[direction](behavior) || MetatileBehavior_IsOmnidirectionalJump(behavior))
+        return direction + 1;
 
-   if (gPlayerAvatar.acroBikeState == ACRO_STATE_BUNNY_HOP &&
+    if (gPlayerAvatar.acroBikeState == ACRO_STATE_BUNNY_HOP &&
        MB_JUMP_EAST <= behavior && behavior <= MB_JUMP_SOUTH)
     {
-        MoveCoords(direction, &x, &y);
-        if (GetCollisionAtCoords(playerObjEvent, x, y, direction) == COLLISION_NONE)
-            return index + 1;
+       MoveCoords(direction, &x, &y);
+       if (GetCollisionAtCoords(playerObjEvent, x, y, direction) == COLLISION_NONE)
+           return direction + 1;
     }
 
     return DIR_NONE;
