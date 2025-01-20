@@ -1153,10 +1153,13 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/follower.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+	.include "data/scripts/change_deoxys_form.inc"
     .include "data/scripts/apricorn_tree.inc"
     .include "data/scripts/dexnav.inc"
     .include "data/scripts/overworld_pokemon.inc"
     .include "data/scripts/self_trade.inc"
+    .include "data/scripts/ultra_wormholes.inc"
+    .include "data/scripts/hoopa_rings.inc"
     
 
 	.include "data/maps/None/scripts.inc"

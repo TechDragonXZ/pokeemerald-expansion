@@ -69,6 +69,7 @@
 #include "constants/weather.h"
 #include "constants/metatile_labels.h"
 #include "palette.h"
+#include "constants/metatile_behaviors.h"
 #include "battle_util.h"
 
 #define TAG_ITEM_ICON 5500
@@ -4334,4 +4335,54 @@ void UseBlankMessageToCancelPokemonPic(void)
     u8 t = EOS;
     AddTextPrinterParameterized(0, FONT_NORMAL, &t, 0, 1, 0, NULL);
     ScriptMenu_HidePokemonPic();
+}
+
+// Changes a Deoxys' form if the following conditions are met:
+// -gSpecialVar_0x8004 is currently hosting a Deoxys form.
+// -The metatile behavior of the tile in front of the Player is MB_DEOXYS_NORMAL, MB_DEOXYS_ATTACK, MB_DEOXYS_DEFENCE or MB_DEOXYS_SPEED.
+// If these conditions aren't met, gSpecialVar_Result is set to FALSE meaning Deoxys' form didn't change.
+void TryChangeDeoxysForm(void)
+{
+#ifdef POKEMON_EXPANSION
+    u16 baseSpecies = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES);
+    u16 targetSpecies;
+    u8 metatileBehavior;
+
+    if (baseSpecies == SPECIES_DEOXYS
+     || baseSpecies == SPECIES_DEOXYS_ATTACK
+     || baseSpecies == SPECIES_DEOXYS_DEFENSE
+     || baseSpecies == SPECIES_DEOXYS_SPEED)
+    {
+        struct MapPosition position;
+        extern struct MapPosition gPlayerFacingPosition;
+        GetXYCoordsOneStepInFrontOfPlayer(&gPlayerFacingPosition.x, &gPlayerFacingPosition.y);
+        metatileBehavior = MapGridGetMetatileBehaviorAt(gPlayerFacingPosition.x, gPlayerFacingPosition.y);
+
+        switch (metatileBehavior)
+        {
+            case MB_DEOXYS_NORMAL:
+                targetSpecies = SPECIES_DEOXYS;
+                break;
+            case MB_DEOXYS_ATTACK:
+                targetSpecies = SPECIES_DEOXYS_ATTACK;
+                break;
+            case MB_DEOXYS_DEFENCE:
+                targetSpecies = SPECIES_DEOXYS_DEFENSE;
+                break;
+            case MB_DEOXYS_SPEED:
+                targetSpecies = SPECIES_DEOXYS_SPEED;
+                break;
+            default:
+                gSpecialVar_Result = FALSE;
+                return;
+        }
+
+        SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES, &targetSpecies);
+        CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+        gSpecialVar_Result = TRUE;
+        return;
+    }
+
+    gSpecialVar_Result = FALSE;
+#endif
 }

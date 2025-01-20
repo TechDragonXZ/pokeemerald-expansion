@@ -272,7 +272,7 @@
 #define VAR_BATTLE_COURSE_COMPLETED                      0x40FC // Completed Battle Course Var; None = 0, VSC = 1, MC = 2, MRB = 3
 #define VAR_BATTLE_COURSE_SELECTED                       0x40FD // Selected Battle Course Var; None = 0, VSC = 1, MC = 2, MRB = 3
 #define VAR_BADGES                                       0x40FE // Badges Var None = 0, Stone = 1, Knuckle = 2, Dynamo = 3, Heat = 4, Balance = 5, Feather = 6, Mind = 7, Rain = 8, Others =+ 9
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_CURRENT_MAP                                  0x40FF // Current Map Var
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
@@ -300,7 +300,7 @@
 #define VAR_CONTEST_CATEGORY          0x8011
 #define VAR_MON_BOX_ID                0x8012
 #define VAR_MON_BOX_POS               0x8013
-#define VAR_UNUSED_0x8014             0x8014
+#define VAR_BP_EARNED                 0x8014 // BP Earned from Non-Battle Frontier Battles
 #define VAR_TRAINER_BATTLE_OPPONENT_A 0x8015 // Alias of gTrainerBattleOpponent_A
 
 #define SPECIAL_VARS_END              0x8015
