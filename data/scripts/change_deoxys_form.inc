@@ -1,6 +1,24 @@
 ChangeDeoxysForm::
 	checkspecies SPECIES_DEOXYS, NO_PARTY_SCREEN
 	goto_if_eq VAR_RESULT, TRUE, ChangeDeoxysForm_Deoxys
+	goto ChangeDeoxysForm_Attack
+	end
+
+ChangeDeoxysForm_Attack::
+	checkspecies SPECIES_DEOXYS_ATTACK, NO_PARTY_SCREEN
+	goto_if_eq VAR_RESULT, TRUE, ChangeDeoxysForm_Deoxys
+	goto ChangeDeoxysForm_Defense
+	end
+
+ChangeDeoxysForm_Defense::
+	checkspecies SPECIES_DEOXYS_DEFENSE, NO_PARTY_SCREEN
+	goto_if_eq VAR_RESULT, TRUE, ChangeDeoxysForm_Deoxys
+	goto ChangeDeoxysForm_Speed
+	end
+
+ChangeDeoxysForm_Speed::
+	checkspecies SPECIES_DEOXYS_SPEED, NO_PARTY_SCREEN
+	goto_if_eq VAR_RESULT, TRUE, ChangeDeoxysForm_Deoxys
 	goto ChangeDeoxysForm_NoDeoxys
 	end
 
