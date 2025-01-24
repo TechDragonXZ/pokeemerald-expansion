@@ -516,12 +516,12 @@
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_UNUSED_0x1DE                    0x1DE // Unused Flag
-#define FLAG_UNUSED_0x1DF                    0x1DF // Unused Flag
-#define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
-#define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
-#define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
-#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
+#define FLAG_SEEN_CUTSCENE_MAXIE_MT_CHIMNEY           0x1DE // Player Seen Maxie Mt. Chimney Cutscene Flag
+#define FLAG_SEEN_CUTSCENE_MAXIE_MAGMA_BASE           0x1DF // Player Seen Maxie Magma Base Cutscene Flag
+#define FLAG_SEEN_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN     0x1E0 // Player Seen Archie Seafloor Cavern Cutscene Flag
+#define FLAG_UNUSED_0x1E1                             0x1E1 // Unused Flag
+#define FLAG_UNUSED_0x1E2                             0x1E2 // Unused Flag
+#define FLAG_UNUSED_0x1E3                             0x1E3 // Unused Flag
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
