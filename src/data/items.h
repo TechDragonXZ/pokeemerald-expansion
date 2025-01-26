@@ -5260,7 +5260,7 @@ const struct Item gItemsInfo[] =
             "A red, glowing orb\n"
             "said to contain an\n"
             "ancient power."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_RedOrb,
@@ -5276,7 +5276,7 @@ const struct Item gItemsInfo[] =
             "A blue, glowing orb\n"
             "said to contain an\n"
             "ancient power."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_BlueOrb,
@@ -13555,7 +13555,7 @@ const struct Item gItemsInfo[] =
             "A large, glowing gem\n"
             "that lets Dialga\n"
             "change form."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -13571,7 +13571,7 @@ const struct Item gItemsInfo[] =
             "A large, glowing gem\n"
             "that lets Giratina\n"
             "change form."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -13587,7 +13587,7 @@ const struct Item gItemsInfo[] =
             "A large, glowing gem\n"
             "that lets Palkia\n"
             "change form."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -14235,6 +14235,22 @@ const struct Item gItemsInfo[] =
         .effect = gItemEffect_Hexorb,
         .iconPic = gItemIcon_Hexorb,
         .iconPalette = gItemIconPalette_Hexorb,
-    }
+    },
 // End hexorb Branch
+
+    [ITEM_FASHION_CASE] =
+    {
+        .name = _("Fashion Case"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A box full of\n"
+            "costumes liked by\n"
+            "Cosplay Pikachu."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_FashionCase,
+        .iconPic = gItemIcon_FashionCase,
+        .iconPalette = gItemIconPalette_FashionCase,
+    }
 };

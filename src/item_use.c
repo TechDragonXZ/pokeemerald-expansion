@@ -1427,6 +1427,21 @@ void ItemUseOutOfBattle_RotomCatalog(u8 taskId)
     }
 }
 
+void ItemUseOutOfBattle_FashionCase(u8 taskId)
+{
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        gItemUseCB = ItemUseCB_FashionCase;
+        gTasks[taskId].data[0] = TRUE;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+    else
+    {
+        // TODO: handle key items with callbacks to menus allow to be used by registering them.
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+}
+
 void ItemUseOutOfBattle_ZygardeCube(u8 taskId)
 {
     if (!gTasks[taskId].tUsingRegisteredKeyItem)

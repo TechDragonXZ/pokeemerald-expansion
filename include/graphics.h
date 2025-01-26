@@ -3396,6 +3396,8 @@ extern const u32 gItemIcon_MegaBracelet[];
 extern const u32 gItemIconPalette_MegaBracelet[];
 extern const u32 gItemIcon_ZRing[];
 extern const u32 gItemIconPalette_ZRing[];
+extern const u32 gItemIcon_FashionCase[];
+extern const u32 gItemIconPalette_FashionCase[];
 
 // Start hexorb branch
 extern const u32 gItemIcon_Hexorb[];

@@ -559,3 +559,4 @@ gSpecials::
 	def_special DoSlidingPuzzle
 	def_special ObjectEventInteractionGetApricornTreeData
 	def_special ObjectEventInteractionPickApricornTree
+	def_special TryTrimFurfrou

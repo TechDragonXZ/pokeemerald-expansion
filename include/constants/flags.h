@@ -77,7 +77,7 @@
 #define FLAG_HIDE_VIP_4                     0x3F // Battle Cafe VIP 4 Flag
 #define FLAG_DEFEATED_GIRATINA              0x40 // Defeated Giratina Flag
 #define FLAG_HIDE_GIRATINA                  0x41 // Hide Giratina Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
+#define FLAG_NO_RUNNING      0x42 // No Running from Wild Battles Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
@@ -510,7 +510,7 @@
 #define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL 0x1D8
 #define FLAG_ENABLE_JUAN_MATCH_CALL          0x1D9
 
-#define FLAG_UNUSED_0x1DA                    0x1DA // Unused Flag
+#define FLAG_GOT_COSPLAY_PIKACHU             0x1DA // Cosplay Pikachu Flag
 
 #define FLAG_SHOWN_MYSTIC_TICKET             0x1DB
 #define FLAG_DEFEATED_HO_OH                  0x1DC

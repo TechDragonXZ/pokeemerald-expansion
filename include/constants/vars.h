@@ -204,7 +204,7 @@
 #define VAR_LAST_MADE_SECRET_BASE                        0x40B8 // Last Made Secret Base Var
 #define VAR_MT_PYRE_STATE                                0x40B9
 #define VAR_NEW_MAUVILLE_STATE                           0x40BA
-#define VAR_UNUSED_0x40BB                                0x40BB // Unused Var
+#define VAR_FURFROU_TRIM                                 0x40BB // Furfrou Trim Var
 #define VAR_BRAVO_TRAINER_BATTLE_TOWER_ON                0x40BC
 #define VAR_JAGGED_PASS_ASH_WEATHER                      0x40BD
 #define VAR_GLASS_WORKSHOP_STATE                         0x40BE

@@ -4386,3 +4386,66 @@ void TryChangeDeoxysForm(void)
     gSpecialVar_Result = FALSE;
 #endif
 }
+
+void TryTrimFurfrou(void)
+{
+    u16 baseSpecies = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES);
+    u16 targetSpecies;
+
+    if (baseSpecies == SPECIES_FURFROU_DANDY_TRIM
+     || baseSpecies == SPECIES_FURFROU_DEBUTANTE_TRIM
+     || baseSpecies == SPECIES_FURFROU_DIAMOND_TRIM
+     || baseSpecies == SPECIES_FURFROU_HEART_TRIM
+     || baseSpecies == SPECIES_FURFROU_KABUKI_TRIM
+     || baseSpecies == SPECIES_FURFROU_LA_REINE_TRIM
+     || baseSpecies == SPECIES_FURFROU_MATRON_TRIM
+     || baseSpecies == SPECIES_FURFROU_NATURAL
+     || baseSpecies == SPECIES_FURFROU_PHARAOH_TRIM
+     || baseSpecies == SPECIES_FURFROU_STAR_TRIM
+     || baseSpecies == SPECIES_FURFROU)
+    {
+        switch (VarGet(VAR_FURFROU_TRIM))
+        {
+            case 0:
+                targetSpecies = SPECIES_FURFROU_NATURAL;
+                break;
+            case 1:
+                targetSpecies = SPECIES_FURFROU_DANDY_TRIM;
+                break;
+            case 2:
+                targetSpecies = SPECIES_FURFROU_DEBUTANTE_TRIM;
+                break;
+            case 3:
+                targetSpecies = SPECIES_FURFROU_DIAMOND_TRIM;
+                break;
+            case 4:
+                targetSpecies = SPECIES_FURFROU_HEART_TRIM;
+                break;
+            case 5:
+                targetSpecies = SPECIES_FURFROU_KABUKI_TRIM;
+                break;
+            case 6:
+                targetSpecies = SPECIES_FURFROU_LA_REINE_TRIM;
+                break;
+            case 7:
+                targetSpecies = SPECIES_FURFROU_MATRON_TRIM;
+                break;
+            case 8:
+                targetSpecies = SPECIES_FURFROU_PHARAOH_TRIM;
+                break;
+            case 9:
+                targetSpecies = SPECIES_FURFROU_STAR_TRIM;
+                break;
+            default:
+                gSpecialVar_Result = FALSE;
+                return;
+        }
+
+        SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES, &targetSpecies);
+        CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+        VarSet(VAR_FURFROU_TRIM, 0);
+        gSpecialVar_Result = TRUE;
+        return;
+    }
+    gSpecialVar_Result = FALSE;
+}

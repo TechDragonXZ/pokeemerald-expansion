@@ -1161,6 +1161,7 @@ EventScript_VsSeekerChargingDone::
     .include "data/scripts/self_trade.inc"
     .include "data/scripts/ultra_wormholes.inc"
     .include "data/scripts/hoopa_rings.inc"
+    .include "data/scripts/trim_furfrou.inc"
     
 
 	.include "data/maps/None/scripts.inc"

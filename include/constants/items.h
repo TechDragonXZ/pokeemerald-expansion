@@ -993,17 +993,19 @@
 #define ITEM_POKESHI_DOLL 827
 
 #define ITEM_STRANGE_BALL 828
+
+// Custom
 #define ITEM_EON_FLUTE 829
 #define ITEM_FISHING_ROD 830
-
 #define ITEM_MEGA_BRACELET 831
 #define ITEM_Z_RING 832
 #define ITEM_HEXORB 833 //hexorb Branch
+#define ITEM_FASHION_CASE 834
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 834
+#define ITEMS_COUNT 835
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

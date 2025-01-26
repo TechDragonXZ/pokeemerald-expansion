@@ -280,13 +280,6 @@ extern const u8 gText_Sound[];
 extern const u8 gText_Frame[];
 extern const u8 gText_OptionMenuCancel[];
 extern const u8 gText_ButtonMode[];
-extern const u8 gText_SkipCutsceneAll[];
-extern const u8 gText_SkipCutsceneSeen[];
-extern const u8 gText_SkipCutsceneNone[];
-extern const u8 gText_SmallDot[];
-extern const u8 gText_LargeDot[];
-extern const u8 gText_PageNav[];
-extern const u8 gText_SkipCutscene[];
 
 extern const u8 gText_MaleSymbol[];
 extern const u8 gText_FemaleSymbol[];
@@ -2786,5 +2779,23 @@ extern const u8 gMenuText_Move[];
 extern const u8 gText_MoveItemWhere[];
 extern const u8 gText_XsYAnd[];
 extern const u8 gText_XsYWereSwapped[];
+
+// Fashion Case Text
+extern const u8 gText_CostumeNone[];
+extern const u8 gText_CostumeRockStar[];
+extern const u8 gText_CostumeBelle[];
+extern const u8 gText_CostumePopStar[];
+extern const u8 gText_CostumePhd[];
+extern const u8 gText_CostumeLibre[];
+
+// Options
+extern const u8 gText_SmallDot[];
+extern const u8 gText_LargeDot[];
+extern const u8 gText_PageNav[];
+
+extern const u8 gText_SkipCutscene[];
+extern const u8 gText_SkipCutsceneAll[];
+extern const u8 gText_SkipCutsceneSeen[];
+extern const u8 gText_SkipCutsceneNone[];
 
 #endif // GUARD_STRINGS_H

@@ -493,6 +493,17 @@ static const struct WindowTemplate sOrderWhichApplianceMsgWindowTemplate =
     .baseBlock = 0x299,
 };
 
+static const struct WindowTemplate sChangeIntoCostumeMsgWindowTemplate =
+{
+    .bg = 2,
+    .tilemapLeft = 1,
+    .tilemapTop = 15,
+    .width = 14,
+    .height = 4,
+    .paletteNum = 15,
+    .baseBlock = 0x299,
+};
+
 // Start hexorb branch
 static const struct WindowTemplate sInflictWhichStatusMsgWindowTemplate =
 {
@@ -698,6 +709,7 @@ static const u8 *const sActionStringTable[] =
     [PARTY_MSG_CHOOSE_SECOND_FUSION]   = gText_NextFusionMon,
     [PARTY_MSG_DO_WHAT_WITH_FOLLOWER]  = gText_DoWhatWithFollower,
     [PARTY_MSG_MOVE_ITEM_WHERE]        = gText_MoveItemWhere,
+    [PARTY_MSG_WHICH_COSTUME]          = COMPOUND_STRING("Change into\nwhich costume?"),
     [PARTY_MSG_WHICH_STATUS]           = COMPOUND_STRING("Inflict which status?"), // hexorb Branch
 };
 
@@ -776,6 +788,12 @@ struct
 #endif
     [MENU_INFLICT_PARALYSIS] = {gText_Par, TryHexorbAndPrintResult},
 // End Hexorb branch
+    [MENU_COSTUME_NONE] = {gText_CostumeNone, CursorCb_CostumeNone},
+    [MENU_COSTUME_ROCK_STAR] = {gText_CostumeRockStar, CursorCb_CostumeRockStar},
+    [MENU_COSTUME_BELLE] = {gText_CostumeBelle, CursorCb_CostumeBelle},
+    [MENU_COSTUME_POP_STAR] = {gText_CostumePopStar, CursorCb_CostumePopStar},
+    [MENU_COSTUME_PHD] = {gText_CostumePhd, CursorCb_CostumePhd},
+    [MENU_COSTUME_LIBRE] = {gText_CostumeLibre, CursorCb_CostumeLibre},
 };
 
 static const u8 sPartyMenuAction_SummarySwitchCancel[] = {MENU_SUMMARY, MENU_SWITCH, MENU_CANCEL1};
@@ -798,6 +816,7 @@ static const u8 sPartyMenuAction_SetReturnCancel[] = {MENU_FOLLOWER_SET, MENU_FO
 static const u8 sPartyMenuAction_UnsetCancel[] = {MENU_FOLLOWER_UNSET, MENU_CANCEL2};
 static const u8 sPartyMenuAction_UnsetReturnCancel[] = {MENU_FOLLOWER_UNSET, MENU_FOLLOWER_RETURN, MENU_CANCEL2};
 static const u8 sPartyMenuAction_Hexorb[] = {MENU_INFLICT_SLEEP, MENU_INFLICT_POISON, MENU_INFLICT_BURN, MENU_INFLICT_FREEZE_FROSTBITE, MENU_INFLICT_PARALYSIS, MENU_CANCEL1}; // hexorb Branch
+static const u8 sPartyMenuAction_FashionCase[] = {MENU_COSTUME_NONE, MENU_COSTUME_ROCK_STAR, MENU_COSTUME_BELLE, MENU_COSTUME_POP_STAR, MENU_COSTUME_PHD, MENU_COSTUME_LIBRE, MENU_CANCEL1};
 
 
 
@@ -824,6 +843,7 @@ static const u8 *const sPartyMenuActions[] =
     [ACTIONS_FOLLOWER_UNSET]        = sPartyMenuAction_UnsetCancel,
     [ACTIONS_FOLLOWER_UNSET_RETURN] = sPartyMenuAction_UnsetReturnCancel,
     [ACTIONS_HEXORB] = sPartyMenuAction_Hexorb, // hexorb Branch
+    [ACTIONS_FASHION_CASE] = sPartyMenuAction_FashionCase,
 };
 
 static const u8 sPartyMenuActionCounts[] =
@@ -849,6 +869,7 @@ static const u8 sPartyMenuActionCounts[] =
     [ACTIONS_FOLLOWER_UNSET]        = ARRAY_COUNT(sPartyMenuAction_UnsetCancel),
     [ACTIONS_FOLLOWER_UNSET_RETURN] = ARRAY_COUNT(sPartyMenuAction_UnsetReturnCancel),
     [ACTIONS_HEXORB] = ARRAY_COUNT(sPartyMenuAction_Hexorb), // hexorb Branch
+    [ACTIONS_FASHION_CASE] = ARRAY_COUNT(sPartyMenuAction_FashionCase),
 };
 
 static const u16 sFieldMoves[FIELD_MOVES_COUNT + 1] =
@@ -1226,4 +1247,20 @@ static const u16 sRotomFormChangeMoves[5] =
     ROTOM_FROST_MOVE,
     ROTOM_FAN_MOVE,
     ROTOM_MOW_MOVE,
+};
+
+#define PIKACHU_BASE_MOVE       MOVE_THUNDER_SHOCK
+#define PIKACHU_ROCK_STAR_MOVE  MOVE_METEOR_MASH
+#define PIKACHU_BELLE_MOVE      MOVE_ICICLE_CRASH
+#define PIKACHU_POP_STAR_MOVE   MOVE_DRAINING_KISS
+#define PIKACHU_PHD_MOVE        MOVE_ELECTRIC_TERRAIN
+#define PIKACHU_LIBRE_MOVE      MOVE_FLYING_PRESS
+
+static const u16 sPikachuFormChangeMoves[5] =
+{
+    PIKACHU_ROCK_STAR_MOVE,
+    PIKACHU_BELLE_MOVE,
+    PIKACHU_POP_STAR_MOVE,
+    PIKACHU_PHD_MOVE,
+    PIKACHU_LIBRE_MOVE,
 };

@@ -84,6 +84,7 @@
 #define PARTY_MSG_DO_WHAT_WITH_FOLLOWER     29
 #define PARTY_MSG_MOVE_ITEM_WHERE           30
 #define PARTY_MSG_WHICH_STATUS              31 // hexorb Branch
+#define PARTY_MSG_WHICH_COSTUME             32
 #define PARTY_MSG_NONE                      127
 
 // IDs for DisplayPartyPokemonDescriptionText, to display a message in the party pokemon's box
