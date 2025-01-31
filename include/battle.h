@@ -684,7 +684,6 @@ struct BattleStruct
     u8 safariCatchFactor;
     u8 linkBattleVsSpriteId_V; // The letter "V"
     u8 linkBattleVsSpriteId_S; // The letter "S"
-    u8 formToChangeInto;
     u8 chosenMovePositions[MAX_BATTLERS_COUNT];
     u8 stateIdAfterSelScript[MAX_BATTLERS_COUNT];
     u8 prevSelectedPartySlot;
@@ -838,6 +837,7 @@ struct BattleStruct
     u8 padding:7;
     u8 usedEjectItem;
     u8 usedMicleBerry;
+    u8 trainerSlideSpriteIds[MAX_BATTLERS_COUNT];
     u8 firstCombinedMoveBattlerId;
     u8 secondCombinedMoveBattlerId;
     u16 combinedMoveId;

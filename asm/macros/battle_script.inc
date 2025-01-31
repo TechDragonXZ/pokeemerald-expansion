@@ -1463,8 +1463,9 @@
 	.endm
 
 	@ Used by effects that may proc Symbiosis but do not call removeitem.
-	.macro trysymbiosis
+	.macro trysymbiosis battler:req
 	callnative BS_TrySymbiosis
+    .byte \battler
 	.endm
 
 	@ returns B_SIDE_x to gBattleCommunication[0]

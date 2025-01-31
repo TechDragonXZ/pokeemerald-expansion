@@ -51,8 +51,8 @@ Terrarium_Lobby_EventScript_AdvBlenderCaseFull:
 	end
 
 Terrarium_Lobby_Text_AdvBlenderPokeblockCaseFull:
-	.string "Your {POKEBLOCK} CASE appears to be full!\n"
-	.string "Use some {POKEBLOCK}S and come back!$"
+	.string "Your {POKEBLOCK} Case appears to be full!\n"
+	.string "Use some {POKEBLOCK}s and come back!$"
 
 Terrarium_Lobby_Text_AdvBlenderLetsBerryBlender:
 	.string "Let's get started, then!\n"
