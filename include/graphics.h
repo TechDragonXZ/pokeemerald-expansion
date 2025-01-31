@@ -1142,6 +1142,7 @@ extern const u32 gItemIconPalette_BlueScarf[];
 extern const u32 gItemIconPalette_PinkScarf[];
 extern const u32 gItemIconPalette_GreenScarf[];
 extern const u32 gItemIconPalette_YellowScarf[];
+extern const u32 gItemIconPalette_CyanScarf[];
 // EV Gain Modifiers
 extern const u32 gItemIcon_MachoBrace[];
 extern const u32 gItemIconPalette_MachoBrace[];

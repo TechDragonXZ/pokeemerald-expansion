@@ -73,7 +73,6 @@ PlayersHouse_2F_EventScript_WallClock::
 	end
 
 PlayersHouse_2F_EventScript_MomComesUpstairsMale::
-	setflag FLAG_HIDE_POKEMON_CENTER_FEMALE
 	setvar VAR_0x8008, LOCALID_MOM_2F
 	addobject VAR_0x8008
 	applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomEntersMale
@@ -87,7 +86,6 @@ PlayersHouse_2F_EventScript_MomComesUpstairsMale::
 	end
 
 PlayersHouse_2F_EventScript_MomComesUpstairsFemale::
-	setflag FLAG_HIDE_POKEMON_CENTER_MALE
 	setvar VAR_0x8008, LOCALID_MOM_2F
 	addobject VAR_0x8008
 	applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomEntersFemale

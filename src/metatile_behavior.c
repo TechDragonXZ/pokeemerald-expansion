@@ -1559,3 +1559,19 @@ bool8 MetatileBehavior_IsOmnidirectionalJump(u8 metatileBehavior)
     else
         return FALSE;
 }
+
+bool8 MetatileBehavior_IsCraftingKit(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_CRAFTING_KIT)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsSelfTrade(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_SELF_TRADE)
+        return TRUE;
+    else
+        return FALSE;
+}

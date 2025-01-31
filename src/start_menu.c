@@ -53,6 +53,8 @@
 #include "fake_rtc.h"
 #include "ui_stat_editor.h"
 
+#include "even_crafting_ui.h"
+
 // Menu actions
 enum
 {

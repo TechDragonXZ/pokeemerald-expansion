@@ -1293,7 +1293,7 @@ SlateportCity_Text_ExplainBerries:
 
 SlateportCity_Text_ExplainBerryPowder:
 	.string "I recently had machines installed at\n"
-	.string "Pokémon CENTERS for crushing Berries.\p"
+	.string "Pokémon Centers for crushing Berries.\p"
 	.string "The Berry CRUSH machines are at\n"
 	.string "the DIRECT CORNER upstairs.\p"
 	.string "Did you know?\p"

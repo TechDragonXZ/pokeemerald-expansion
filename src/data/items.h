@@ -14225,6 +14225,7 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Hexorb"),
         .price = 0,
+        .importance = 1,
         .description = COMPOUND_STRING(
             "A purple orb\n"
             "said to contain a\n"
@@ -14252,5 +14253,23 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_FashionCase,
         .iconPic = gItemIcon_FashionCase,
         .iconPalette = gItemIconPalette_FashionCase,
+    },
+
+    [ITEM_CYAN_SCARF] =
+    {
+        .name = _("Cyan Scarf"),
+        .pluralName = _("Cyan Scarves"),
+        .price = 100,
+        .description = COMPOUND_STRING(
+            "A held item that\n"
+            "raises every\n"
+            "Contests stat."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+        .iconPic = gItemIcon_Scarf,
+        .iconPalette = gItemIconPalette_CyanScarf,
     }
+
 };

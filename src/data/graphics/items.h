@@ -1201,6 +1201,7 @@ const u32 gItemIconPalette_GreenScarf[] = INCBIN_U32("graphics/items/icon_palett
 
 const u32 gItemIconPalette_YellowScarf[] = INCBIN_U32("graphics/items/icon_palettes/yellow_scarf.gbapal.lz");
 
+const u32 gItemIconPalette_CyanScarf[] = INCBIN_U32("graphics/items/icon_palettes/cyan_scarf.gbapal.lz");
 // EV Gain Modifiers
 
 const u32 gItemIcon_MachoBrace[] = INCBIN_U32("graphics/items/icons/macho_brace.4bpp.lz");

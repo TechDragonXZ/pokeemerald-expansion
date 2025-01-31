@@ -60,6 +60,7 @@
 #include "constants/vars.h"
 #include "constants/weather.h"
 #include "constants/cutscene.h"
+#include "constants/even_crafting_constants.h"
 	.include "asm/macros.inc"
 	.include "asm/macros/event.inc"
 	.include "constants/constants.inc"
@@ -962,7 +963,7 @@ gText_MomExplainHPGetPotions::
 	.string "measured in HP.\p"
 	.string "If your POKéMON lose their HP,\n"
 	.string "you can restore them at any\l"
-	.string "POKéMON CENTER.\p"
+	.string "POKéMON Center.\p"
 	.string "If you're going to travel far away,\n"
 	.string "the smart TRAINER stocks up on\l"
 	.string "POTIONS at the POKéMON MART.\p"
@@ -1002,7 +1003,7 @@ gText_BigHoleInTheWall::
 
 gText_SorryWirelessClubAdjustments::
 	.string "I'm terribly sorry.\n"
-	.string "The Pokémon WIRELESS CLUB is\l"
+	.string "The Pokémon Wireless Club is\l"
 	.string "undergoing adjustments now.$"
 
 gText_UndergoingAdjustments::
@@ -1162,6 +1163,7 @@ EventScript_VsSeekerChargingDone::
     .include "data/scripts/ultra_wormholes.inc"
     .include "data/scripts/hoopa_rings.inc"
     .include "data/scripts/trim_furfrou.inc"
+    .include "data/scripts/crafting_station.inc"
     
 
 	.include "data/maps/None/scripts.inc"
