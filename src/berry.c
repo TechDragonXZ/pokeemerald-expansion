@@ -1616,6 +1616,29 @@ const struct Berry gBerries[] =
         .weedsBonus = 0,
         .pestsBonus = 0,
     },
+    
+    [ITEM_HOPO_BERRY] =
+    {
+        .name = _("Hopo"),
+        .firmness = BERRY_FIRMNESS_UNKNOWN,
+        .color = BERRY_COLOR_YELLOW,
+        .size = 28,
+        .maxYield = YIELD_RATE(3, 5, 15, 22),
+        .minYield = YIELD_RATE(2, 2, 2, 2),
+        .description1 = COMPOUND_STRING("A Berry thought to have vanished."),
+        .description2 = COMPOUND_STRING("Its too firm for the berry blender."),
+        .growthDuration = GROWTH_DURATION(16, 16, 24, 24, 16, 24),
+        .spicy = 10,
+        .dry = 10,
+        .sweet = 10,
+        .bitter = 10,
+        .sour = 10,
+        .smoothness = 20,
+        .drainRate = 15,
+        .waterBonus = 15,
+        .weedsBonus = 3,
+        .pestsBonus = 6,
+    },
 };
 
 const struct BerryCrushBerryData gBerryCrush_BerryData[] = {
@@ -1686,7 +1709,8 @@ const struct BerryCrushBerryData gBerryCrush_BerryData[] = {
     [ITEM_ROWAP_BERRY - FIRST_BERRY_INDEX]           = {.difficulty = 130, .powder = 250},
     [ITEM_KEE_BERRY - FIRST_BERRY_INDEX]             = {.difficulty = 160, .powder = 500},
     [ITEM_MARANGA_BERRY - FIRST_BERRY_INDEX]         = {.difficulty = 160, .powder = 500},
-    [ITEM_ENIGMA_BERRY_E_READER - FIRST_BERRY_INDEX] = {.difficulty = 150, .powder = 200}
+    [ITEM_ENIGMA_BERRY_E_READER - FIRST_BERRY_INDEX] = {.difficulty = 150, .powder = 200},
+    [ITEM_HOPO_BERRY]                                = {.difficulty = 150, .powder = 300}
 };
 
 const struct BerryTree gBlankBerryTree = {};

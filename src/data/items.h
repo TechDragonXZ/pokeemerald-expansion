@@ -14270,6 +14270,114 @@ const struct Item gItemsInfo[] =
         .flingPower = 10,
         .iconPic = gItemIcon_Scarf,
         .iconPalette = gItemIconPalette_CyanScarf,
+    },
+
+    [ITEM_BROWN_APRICORN] =
+    {
+        .name = _("Brown Apricorn"),
+        .price = (I_PRICE == GEN_4) ? 0 : ((I_PRICE >= GEN_5 && I_PRICE <= GEN_7) ? 20 : 200),
+        .description = COMPOUND_STRING(
+            "A brown apricorn.\n"
+            "It can be\n"
+            "hollowed."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_BrownApricorn,
+        .iconPalette = gItemIconPalette_BrownApricorn,
+    },
+
+    [ITEM_BLANK_PLATE] =
+    {
+        .name = _("Blank Plate"),
+        .price = 1000,
+        .holdEffect = HOLD_EFFECT_PLATE,
+        .holdEffectParam = 20,
+        .description = COMPOUND_STRING(
+            "A tablet that ups\n"
+            "the power of\n"
+            "Normal-type moves."),
+        .pocket = POCKET_TREASURES,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_NORMAL,
+        .flingPower = 90,
+        .iconPic = gItemIcon_BlankPlate,
+        .iconPalette = gItemIconPalette_BlankPlate,
+    },
+
+    [ITEM_LEGEND_PLATE] =
+    {
+        .name = _("Legend Plate"),
+        .price = 1000,
+        .holdEffect = HOLD_EFFECT_PLATE,
+        .holdEffectParam = 20,
+        .description = COMPOUND_STRING(
+            "A tablet that ups\n"
+            "the power of\n"
+            "Arceus's Judgment."),
+        .pocket = POCKET_TREASURES,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_NORMAL,
+        .flingPower = 90,
+        .iconPic = gItemIcon_LegendPlate,
+        .iconPalette = gItemIconPalette_LegendPlate,
+    },
+
+    [ITEM_HOPO_BERRY] =
+    {
+        .name = _("Hopo Berry"),
+        .pluralName = _("Hopo Berries"),
+        .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
+        .holdEffect = HOLD_EFFECT_RESTORE_PP,
+        .holdEffectParam = 10,
+        .description = COMPOUND_STRING(
+            "A hold item that\n"
+            "restores 10 PP in\n"
+            "battle."),
+        .pocket = POCKET_BERRIES,
+        .type = ITEM_USE_PARTY_MENU_MOVES,
+        .fieldUseFunc = ItemUseOutOfBattle_PPRecovery,
+        .battleUsage = EFFECT_ITEM_RESTORE_PP,
+        .effect = gItemEffect_Elixir,
+        .flingPower = 10,
+        .iconPic = gItemIcon_HopoBerry,
+        .iconPalette = gItemIconPalette_HopoBerry,
+    },
+
+    [ITEM_MEDICINAL_PLANT] =
+    {
+        .name = _("Medicinal Plant"),
+        .price = 150,
+        .holdEffectParam = 10,
+        .description = COMPOUND_STRING(
+            "Restores the HP of\n"
+            "a Pokémon by\n"
+            "10 points."),
+        .pocket = POCKET_MEDICINE,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = EFFECT_ITEM_RESTORE_HP,
+        .effect = gItemEffect_Potion,
+        .flingPower = 30,
+        .iconPic = gItemIcon_MedicinalPlant,
+        .iconPalette = gItemIconPalette_MedicinalPlant,
+    },
+
+    [ITEM_HACKING_DEVICE] =
+    {
+        .name = _("Hacking Device"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This device can\n"
+            "hack into a wide\n"
+            "range of devices."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_HackingDevice,
+        .iconPic = gItemIcon_Scanner,
+        .iconPalette = gItemIconPalette_HackingDevice,
     }
 
 };

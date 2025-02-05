@@ -2798,4 +2798,8 @@ extern const u8 gText_SkipCutsceneAll[];
 extern const u8 gText_SkipCutsceneSeen[];
 extern const u8 gText_SkipCutsceneNone[];
 
+// Hacking Device
+extern const u8 gText_HackingDeviceOn[];
+extern const u8 gText_HackingDeviceOff[];
+
 #endif // GUARD_STRINGS_H

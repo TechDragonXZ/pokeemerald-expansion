@@ -2112,6 +2112,23 @@ const u32 gItemIconPalette_MegaBracelet[] = INCBIN_U32("graphics/items/icon_pale
 const u32 gItemIcon_FashionCase[] = INCBIN_U32("graphics/items/icons/fashion_case.4bpp.lz");
 const u32 gItemIconPalette_FashionCase[] = INCBIN_U32("graphics/items/icon_palettes/fashion_case.gbapal.lz");
 
+const u32 gItemIcon_BrownApricorn[] = INCBIN_U32("graphics/items/icons/brown_apricorn.4bpp.lz");
+const u32 gItemIconPalette_BrownApricorn[] = INCBIN_U32("graphics/items/icon_palettes/brown_apricorn.gbapal.lz");
+
+const u32 gItemIcon_BlankPlate[] = INCBIN_U32("graphics/items/icons/blank_plate.4bpp.lz");
+const u32 gItemIconPalette_BlankPlate[] = INCBIN_U32("graphics/items/icon_palettes/blank_plate.gbapal.lz");
+
+const u32 gItemIcon_LegendPlate[] = INCBIN_U32("graphics/items/icons/legend_plate.4bpp.lz");
+const u32 gItemIconPalette_LegendPlate[] = INCBIN_U32("graphics/items/icon_palettes/legend_plate.gbapal.lz");
+
+const u32 gItemIcon_HopoBerry[] = INCBIN_U32("graphics/items/icons/hopo_berry.4bpp.lz");
+const u32 gItemIconPalette_HopoBerry[] = INCBIN_U32("graphics/items/icon_palettes/hopo_berry.gbapal.lz");
+
+const u32 gItemIcon_MedicinalPlant[] = INCBIN_U32("graphics/items/icons/medicinal_plant.4bpp.lz");
+const u32 gItemIconPalette_MedicinalPlant[] = INCBIN_U32("graphics/items/icon_palettes/medicinal_plant.gbapal.lz");
+
+const u32 gItemIconPalette_HackingDevice[] = INCBIN_U32("graphics/items/icon_palettes/hacking_device.gbapal.lz");
+
 // Start hexorb branch
 const u32 gItemIcon_Hexorb[] = INCBIN_U32("graphics/items/icons/hexorb.4bpp.lz");
 const u32 gItemIconPalette_Hexorb[] = INCBIN_U32("graphics/items/icon_palettes/hexorb.gbapal.lz");

@@ -76,7 +76,7 @@
 #define FLAG_HIDE_VIP_3                 0x3E // Battle Cafe VIP 3 Flag
 #define FLAG_HIDE_VIP_4                 0x3F // Battle Cafe VIP 4 Flag
 #define FLAG_NO_RUNNING                 0x40 // No Running from Wild Battles Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
+#define FLAG_HACKING_DEVICE             0x41 // Hacking Device On/Off Flag
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag

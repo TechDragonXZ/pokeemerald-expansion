@@ -999,14 +999,17 @@
 #define ITEM_FISHING_ROD 830
 #define ITEM_MEGA_BRACELET 831
 #define ITEM_Z_RING 832
-#define ITEM_HEXORB 833 //hexorb Branch
+#define ITEM_HEXORB 833 // Hexorb Branch
 #define ITEM_FASHION_CASE 834
 #define ITEM_CYAN_SCARF 835
+#define ITEM_HOPO_BERRY 836 // HOPO BERRY
+#define ITEM_BROWN_APRICORN 837
+#define ITEM_BLANK_PLATE 838
+#define ITEM_LEGEND_PLATE 839 // LEGEND PLATE
+#define ITEM_MEDICINAL_PLANT 840
+#define ITEM_HACKING_DEVICE 841
 
-// HOPO BERRY
-// LEGEND PLATE
-
-#define ITEMS_COUNT 836
+#define ITEMS_COUNT 842
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

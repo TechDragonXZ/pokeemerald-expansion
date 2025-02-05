@@ -3399,6 +3399,23 @@ extern const u32 gItemIcon_ZRing[];
 extern const u32 gItemIconPalette_ZRing[];
 extern const u32 gItemIcon_FashionCase[];
 extern const u32 gItemIconPalette_FashionCase[];
+extern const u32 gItemIcon_BrownApricorn[];
+extern const u32 gItemIconPalette_BrownApricorn[];
+extern const u32 gItemIcon_BlankPlate[];
+extern const u32 gItemIconPalette_BlankPlate[];
+extern const u32 gItemIcon_LegendPlate[];
+extern const u32 gItemIconPalette_LegendPlate[];
+extern const u32 gItemIcon_HopoBerry[];
+extern const u32 gItemIconPalette_HopoBerry[];
+extern const u32 gItemIcon_MedicinalPlant[];
+extern const u32 gItemIconPalette_MedicinalPlant[];
+
+// Palettes
+extern const u32 gItemIconPalette_HackingDevice[];
+
+// Custom Berry
+extern const u32 gBerryPic_Hopo[];
+extern const u32 gBerryPalette_Hopo[];
 
 // Start hexorb branch
 extern const u32 gItemIcon_Hexorb[];

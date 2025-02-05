@@ -22678,4 +22678,23 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .battleAnimScript = gBattleAnimMove_MuddyWater,
     },
 
+// Custom Z-Moves
+    [MOVE_SUPREME_JUDGMENT] =
+    {
+        .name = COMPOUND_STRING("Supreme Judgment"),
+        .description = COMPOUND_STRING(
+            "The type varies with the\n"
+            "held Z-Crystal type."),
+        .effect = EFFECT_CHANGE_TYPE_ON_ITEM,
+        .power = 200,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 1,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .argument = HOLD_EFFECT_Z_CRYSTAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Judgment,
+    },
+
 };

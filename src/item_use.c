@@ -1703,4 +1703,25 @@ void Task_OpenRegisteredHexorb(u8 taskId)
 }
 // End hexorb Branch
 
+void ItemUseOutOfBattle_HackingDevice(u8 taskId)
+{
+    if (FlagGet(FLAG_HACKING_DEVICE))
+    {
+        PlaySE(SE_PC_OFF);
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_HackingDeviceOff, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_HackingDeviceOff, CloseItemMessage);
+    }
+    else
+    {
+        PlaySE(SE_PC_ON);
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_HackingDeviceOn, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_HackingDeviceOn, CloseItemMessage);
+    }
+    FlagToggle(FLAG_HACKING_DEVICE);
+}
+
 #undef tUsingRegisteredKeyItem

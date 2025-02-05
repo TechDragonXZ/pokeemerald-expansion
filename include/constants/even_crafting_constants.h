@@ -14,6 +14,8 @@ enum Recipes {
     RECIPE_PARALYZE_HEAL,
     RECIPE_FULL_HEAL,
     RECIPE_FULL_RESTORE,
+    RECIPE_REVIVE,
+    RECIPE_MAX_REVIVE,
     // Utility
     RECIPE_POKE_DOLL,
     // Pokéballs
@@ -46,9 +48,9 @@ enum IngredientCategories {
 
 enum RecipeCategories {
     RECIPE_CATEGORY_MEDICINE,
-    RECIPE_CATEGORY_UTILITY,
-    RECIPE_CATEGORY_POKEBALLS,
     RECIPE_CATEGORY_MISC,
+    RECIPE_CATEGORY_POKEBALLS,
+    RECIPE_CATEGORY_UTILITY,
 
     // Must be last
     NUM_RECIPE_CATEGORIES,

@@ -5,7 +5,7 @@ const struct CraftingIngredient sPotionIngredients[] =
 {
     [0] =
     {
-        .item = ITEM_FRESH_WATER,
+        .item = ITEM_MEDICINAL_PLANT,
         .count = 1,
         .isConsumed= TRUE,
     },
@@ -27,7 +27,7 @@ const struct CraftingIngredient sSuperPotionIngredients[] =
     },
     [1] =
     {
-        .item = ITEM_ORAN_BERRY,
+        .item = ITEM_MEDICINAL_PLANT,
         .count = 1,
         .isConsumed= TRUE,
     },
@@ -43,7 +43,7 @@ const struct CraftingIngredient sHyperPotionIngredients[] =
     },
     [1] =
     {
-        .item = ITEM_SITRUS_BERRY,
+        .item = ITEM_ORAN_BERRY,
         .count = 1,
         .isConsumed= TRUE,
     },
@@ -113,7 +113,7 @@ const struct CraftingIngredient sAntidoteIngredients[] =
 {
     [0] =
     {
-        .item = ITEM_FRESH_WATER,
+        .item = ITEM_MEDICINAL_PLANT,
         .count = 1,
         .isConsumed= TRUE,
     },
@@ -129,7 +129,7 @@ const struct CraftingIngredient sAwakeningIngredients[] =
 {
     [0] =
     {
-        .item = ITEM_FRESH_WATER,
+        .item = ITEM_MEDICINAL_PLANT,
         .count = 1,
         .isConsumed= TRUE,
     },
@@ -145,7 +145,7 @@ const struct CraftingIngredient sBurnHealIngredients[] =
 {
     [0] =
     {
-        .item = ITEM_FRESH_WATER,
+        .item = ITEM_MEDICINAL_PLANT,
         .count = 1,
         .isConsumed= TRUE,
     },
@@ -161,7 +161,7 @@ const struct CraftingIngredient sIceHealIngredients[] =
 {
     [0] =
     {
-        .item = ITEM_FRESH_WATER,
+        .item = ITEM_MEDICINAL_PLANT,
         .count = 1,
         .isConsumed= TRUE,
     },
@@ -177,13 +177,51 @@ const struct CraftingIngredient sParalyzeHealIngredients[] =
 {
     [0] =
     {
-        .item = ITEM_FRESH_WATER,
+        .item = ITEM_MEDICINAL_PLANT,
         .count = 1,
         .isConsumed= TRUE,
     },
     [1] =
     {
         .item = ITEM_CHERI_BERRY,
+        .count = 1,
+        .isConsumed= TRUE,
+    },
+};
+
+const struct CraftingIngredient sReviveIngredients[] =
+{
+    [0] =
+    {
+        .item = ITEM_MEDICINAL_PLANT,
+        .count = 1,
+        .isConsumed= TRUE,
+    },
+    [1] =
+    {
+        .item = ITEM_REVIVAL_HERB,
+        .count = 1,
+        .isConsumed= TRUE,
+    },
+};
+
+const struct CraftingIngredient sMaxReviveIngredients[] =
+{
+    [0] =
+    {
+        .item = ITEM_MEDICINAL_PLANT,
+        .count = 1,
+        .isConsumed= TRUE,
+    },
+    [1] =
+    {
+        .item = ITEM_REVIVAL_HERB,
+        .count = 1,
+        .isConsumed= TRUE,
+    },
+    [2] =
+    {
+        .item = ITEM_REVIVE,
         .count = 1,
         .isConsumed= TRUE,
     },
@@ -488,6 +526,28 @@ const struct CraftingRecipe sCraftingRecipes[] =
         .category = RECIPE_CATEGORY_MEDICINE,
         .isDiscoverable = TRUE,
     },
+    [RECIPE_REVIVE] =
+    {
+        .outputItem = ITEM_REVIVE,
+        .outputQuantity = 1,
+        .ingredientCount = 2,
+        .numDifferentIngredients = 2,
+        .ingredients = sReviveIngredients,
+        .recipeName = _("Revive"),
+        .category = RECIPE_CATEGORY_MEDICINE,
+        .isDiscoverable = TRUE,
+    },
+    [RECIPE_MAX_REVIVE] =
+    {
+        .outputItem = ITEM_MAX_REVIVE,
+        .outputQuantity = 1,
+        .ingredientCount = 3,
+        .numDifferentIngredients = 3,
+        .ingredients = sMaxReviveIngredients,
+        .recipeName = _("Max Revive"),
+        .category = RECIPE_CATEGORY_MEDICINE,
+        .isDiscoverable = TRUE,
+    },
     // Utility
     [RECIPE_POKE_DOLL] =
     {
@@ -612,6 +672,7 @@ const u8 sItemIngredientSettings[ITEMS_COUNT] =
     [ITEM_CHERI_BERRY] = 1u << INGREDIENT_CATEGORY_PLANT | ITEM_IS_CONSUMED_ON_ATTEMPT,
     [ITEM_CHESTO_BERRY] = 1u << INGREDIENT_CATEGORY_PLANT | ITEM_IS_CONSUMED_ON_ATTEMPT,
     [ITEM_LEPPA_BERRY] = 1u << INGREDIENT_CATEGORY_PLANT | ITEM_IS_CONSUMED_ON_ATTEMPT,
+    [ITEM_MEDICINAL_PLANT] = 1u << INGREDIENT_CATEGORY_PLANT | ITEM_IS_CONSUMED_ON_ATTEMPT,
     [ITEM_ORAN_BERRY] = 1u << INGREDIENT_CATEGORY_PLANT | ITEM_IS_CONSUMED_ON_ATTEMPT,
     [ITEM_PECHA_BERRY] = 1u << INGREDIENT_CATEGORY_PLANT | ITEM_IS_CONSUMED_ON_ATTEMPT,
     [ITEM_RAWST_BERRY] = 1u << INGREDIENT_CATEGORY_PLANT | ITEM_IS_CONSUMED_ON_ATTEMPT,
@@ -638,6 +699,7 @@ const u8 sItemIngredientSettings[ITEMS_COUNT] =
     // Apricorns
     [ITEM_BLACK_APRICORN] = 1u << INGREDIENT_CATEGORY_APRICORN | ITEM_IS_CONSUMED_ON_ATTEMPT,
     [ITEM_BLUE_APRICORN] = 1u << INGREDIENT_CATEGORY_APRICORN | ITEM_IS_CONSUMED_ON_ATTEMPT,
+    [ITEM_BROWN_APRICORN] = 1u << INGREDIENT_CATEGORY_APRICORN | ITEM_IS_CONSUMED_ON_ATTEMPT,
     [ITEM_GREEN_APRICORN] = 1u << INGREDIENT_CATEGORY_APRICORN | ITEM_IS_CONSUMED_ON_ATTEMPT,
     [ITEM_RED_APRICORN] = 1u << INGREDIENT_CATEGORY_APRICORN | ITEM_IS_CONSUMED_ON_ATTEMPT,
     [ITEM_PINK_APRICORN] = 1u << INGREDIENT_CATEGORY_APRICORN | ITEM_IS_CONSUMED_ON_ATTEMPT,
