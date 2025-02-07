@@ -19,6 +19,8 @@ EverGrandeCity_HallOfFame_OnFrame:
 
 EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	lockall
+	setvar VAR_CUTSCENES_SEEN, 19
+	startcutscene CUTSCENE_HALL_OF_FAME_PART2
 	applymovement LOCALID_WALLACE, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1
 	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1
 	waitmovement 0
@@ -40,9 +42,20 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
+	endcutscene
 	dofieldeffect FLDEFF_HALL_OF_FAME_RECORD
 	waitfieldeffect FLDEFF_HALL_OF_FAME_RECORD
 	delay 40
+	setvar VAR_TEMP_1, 1
+	call EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, EverGrandeCity_HallOfFame_EventScript_GameClearMale
+	goto_if_eq VAR_RESULT, FEMALE, EverGrandeCity_HallOfFame_EventScript_GameClearFemale
+	end
+
+EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame_CutsceneSkipped::
+	lockall
+	closemessage
 	setvar VAR_TEMP_1, 1
 	call EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags
 	checkplayergender

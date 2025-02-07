@@ -52,13 +52,43 @@ void ClearDailyFlags(void)
     memset(&gSaveBlock1Ptr->flags[DAILY_FLAGS_START / 8], 0, DAILY_FLAGS_SIZE);
 }
 
-void ClearDailyHiddenItemFlags(void)
+void ClearDailyHiddenItemsFlags(void)
 {
     u32 i = 0;
 
     for (i = FLAG_HIDDEN_ITEMS_START; i <= FLAG_HIDDEN_ITEMS_END; i++)
     {
         FlagClear(i);
+    }
+}
+
+void ClearDailyItemsFlags(void)
+{
+    u32 i = 0;
+
+    for (i = FLAG_ITEM_ROUTE_102_POTION; i <= FLAG_ITEMS_END; i++)
+    {
+        FlagClear(i);
+    }
+}
+
+void ClearCutscenesFlags(void)
+{
+    u32 i = 0;
+
+    for (i = FLAG_CUTSCENES_START; i <= FLAG_CUTSCENES_END; i++)
+    {
+        FlagClear(i);
+    }
+}
+
+void SetCutscenesFlags(void)
+{
+    u32 i = 0;
+
+    for (i = FLAG_CUTSCENES_START; i <= FLAG_CUTSCENES_END; i++)
+    {
+        FlagSet(i);
     }
 }
 

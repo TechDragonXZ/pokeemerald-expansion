@@ -61,41 +61,69 @@ Route103_EventScript_RivalBrendan::
 	end
 
 Route103_EventScript_StartMayBattleTreecko::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	trainerbattle_no_intro_no_whiteout TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_BattleWon
+	call_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_BattleLost
 	goto Route103_EventScript_AfterMayBattle
 	end
 
 Route103_EventScript_StartMayBattleTorchic::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, Route103_Text_MayDefeated
+	trainerbattle_no_intro_no_whiteout TRAINER_MAY_ROUTE_103_TORCHIC, Route103_Text_MayDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_BattleWon
+	call_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_BattleLost
 	goto Route103_EventScript_AfterMayBattle
 	end
 
 Route103_EventScript_StartMayBattleMudkip::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, Route103_Text_MayDefeated
+	trainerbattle_no_intro_no_whiteout TRAINER_MAY_ROUTE_103_MUDKIP, Route103_Text_MayDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_BattleWon
+	call_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_BattleLost
 	goto Route103_EventScript_AfterMayBattle
 	end
 
 Route103_EventScript_StartBrendanBattleTreecko::
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TREECKO, Route103_Text_BrendanDefeated
+	trainerbattle_no_intro_no_whiteout TRAINER_BRENDAN_ROUTE_103_TREECKO, Route103_Text_BrendanDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_BattleWon
+	call_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_BattleLost
 	goto Route103_EventScript_AfterBrendanBattle
 	end
 
 Route103_EventScript_StartBrendanBattleTorchic::
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TORCHIC, Route103_Text_BrendanDefeated
+	trainerbattle_no_intro_no_whiteout TRAINER_BRENDAN_ROUTE_103_TORCHIC, Route103_Text_BrendanDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_BattleWon
+	call_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_BattleLost
 	goto Route103_EventScript_AfterBrendanBattle
 	end
 
 Route103_EventScript_StartBrendanBattleMudkip::
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_MUDKIP, Route103_Text_BrendanDefeated
+	trainerbattle_no_intro_no_whiteout TRAINER_BRENDAN_ROUTE_103_MUDKIP, Route103_Text_BrendanDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_BattleWon
+	call_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_BattleLost
 	goto Route103_EventScript_AfterBrendanBattle
 	end
 
+Route103_EventScript_BattleWon::
+	addvar VAR_VS_RIVAL_WINS, 1
+	return
+
+Route103_EventScript_BattleLost::
+	addvar VAR_VS_RIVAL_LOSSES, 1
+	return
+
 Route103_EventScript_AfterMayBattle::
+	special HealPlayerParty
 	msgbox Route103_Text_MayTimeToHeadBack, MSGBOX_DEFAULT
 	goto Route103_EventScript_RivalExit
 	end
 
 Route103_EventScript_AfterBrendanBattle::
+	special HealPlayerParty
 	msgbox Route103_Text_BrendanTimeToHeadBack, MSGBOX_DEFAULT
 	goto Route103_EventScript_RivalExit
 	end

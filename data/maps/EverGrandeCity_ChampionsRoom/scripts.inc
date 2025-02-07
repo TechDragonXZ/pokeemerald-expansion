@@ -43,7 +43,17 @@ EverGrandeCity_ChampionsRoom_Movement_PlayerApproachWallace:
 
 EverGrandeCity_ChampionsRoom_EventScript_Wallace::
 	playbgm MUS_ENCOUNTER_CHAMPION, FALSE
+	setvar VAR_CUTSCENES_SEEN, 17
+	startcutscene CUTSCENE_WALLACE
 	msgbox EverGrandeCity_ChampionsRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	endcutscene
+	trainerbattle_no_intro TRAINER_WALLACE, EverGrandeCity_ChampionsRoom_Text_Defeat
+	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_ChampionsRoom_EventScript_Wallace_CutsceneSkipped::
+	closemessage
+	playbgm MUS_ENCOUNTER_CHAMPION, FALSE
 	trainerbattle_no_intro TRAINER_WALLACE, EverGrandeCity_ChampionsRoom_Text_Defeat
 	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated
 	end
@@ -53,6 +63,8 @@ EverGrandeCity_ChampionsRoom_EventScript_Defeated::
 	setmetatile 6, 1, METATILE_EliteFour_OpenDoorChampion_Frame, FALSE
 	setmetatile 6, 2, METATILE_EliteFour_OpenDoorChampion_Opening, FALSE
 	special DrawWholeMapView
+	setvar VAR_CUTSCENES_SEEN, 18
+	startcutscene CUTSCENE_HALL_OF_FAME_PART1
 	msgbox EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
 	closemessage
 	playse SE_DOOR
@@ -138,6 +150,13 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
 	waitstate
 	releaseall
+	endcutscene
+	end
+
+EverGrandeCity_ChampionsRoom_EventScript_HoF_CutsceneSkipped::
+	closemessage
+	setflag FLAG_HIDE_PETALBURG_GYM_GREETER
+	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
 	end
 
 EverGrandeCity_ChampionsRoom_EventScript_MayCongratulations::

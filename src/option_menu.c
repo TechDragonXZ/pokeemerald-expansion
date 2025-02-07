@@ -524,48 +524,447 @@ static void Task_OptionMenuSave(u8 taskId)
 
     if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 2)
     {
-        FlagSet(FLAG_SEEN_CUTSCENE_MAXIE_MT_CHIMNEY);
-        FlagSet(FLAG_SEEN_CUTSCENE_MAXIE_MAGMA_BASE);
-        FlagSet(FLAG_SEEN_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+        SetCutscenesFlags();
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
         gTasks[taskId].func = Task_OptionMenuFadeOut;
     }
-    else
+    else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 0)
     {
-        if (VarGet(VAR_SKIP_CUTSCENES_TYPE) <= 1 && VarGet(VAR_CUTSCENES_SETTING_CHANGE) == 0)
+        ClearCutscenesFlags();
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+        gTasks[taskId].func = Task_OptionMenuFadeOut;
+    }
+    else 
+    {
+        if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 0)
         {
-            FlagClear(FLAG_SEEN_CUTSCENE_MAXIE_MT_CHIMNEY);
-            FlagClear(FLAG_SEEN_CUTSCENE_MAXIE_MAGMA_BASE);
-            FlagClear(FLAG_SEEN_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            ClearCutscenesFlags();
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
             gTasks[taskId].func = Task_OptionMenuFadeOut;
         }
-        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) <= 1 && VarGet(VAR_CUTSCENES_SETTING_CHANGE) == 1)
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 1)
         {
-            FlagSet(FLAG_SEEN_CUTSCENE_MAXIE_MT_CHIMNEY);
-            FlagClear(FLAG_SEEN_CUTSCENE_MAXIE_MAGMA_BASE);
-            FlagClear(FLAG_SEEN_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagClear(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagClear(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagClear(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagClear(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagClear(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagClear(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
             gTasks[taskId].func = Task_OptionMenuFadeOut;
         }
-        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) <= 1 && VarGet(VAR_CUTSCENES_SETTING_CHANGE) == 2)
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 2)
         {
-            FlagSet(FLAG_SEEN_CUTSCENE_MAXIE_MT_CHIMNEY);
-            FlagSet(FLAG_SEEN_CUTSCENE_MAXIE_MAGMA_BASE);
-            FlagClear(FLAG_SEEN_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagClear(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagClear(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagClear(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagClear(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagClear(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagClear(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
             gTasks[taskId].func = Task_OptionMenuFadeOut;
         }
-        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) <= 1 && VarGet(VAR_CUTSCENES_SETTING_CHANGE) == 3)
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 3)
         {
-            FlagSet(FLAG_SEEN_CUTSCENE_MAXIE_MT_CHIMNEY);
-            FlagSet(FLAG_SEEN_CUTSCENE_MAXIE_MAGMA_BASE);
-            FlagSet(FLAG_SEEN_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagClear(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagClear(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagClear(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagClear(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagClear(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 4)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagClear(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagClear(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagClear(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagClear(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 5)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagClear(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagClear(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagClear(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 6)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagClear(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagClear(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 7)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagClear(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 8)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 9)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagClear(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 10)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 11)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagClear(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 12)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 13)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagSet(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagClear(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 14)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagSet(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagSet(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 15)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagSet(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagSet(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagSet(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagClear(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 16)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagSet(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagSet(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagSet(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagSet(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagClear(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 17)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagSet(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagSet(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagSet(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagSet(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagSet(FLAG_CUTSCENE_WALLACE);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 18)
+        {
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL);
+            FlagSet(FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MT_CHIMNEY);
+            FlagSet(FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT);
+            FlagSet(FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN);
+            FlagSet(FLAG_CUTSCENE_WALLY_VICTORY_ROAD);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_INTRO);
+            FlagSet(FLAG_CUTSCENE_SIDNEY_OUTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_INTRO);
+            FlagSet(FLAG_CUTSCENE_PHOEBE_OUTRO);
+            FlagSet(FLAG_CUTSCENE_GLACIA_INTRO);
+            FlagSet(FLAG_CUTSCENE_GLACIA_OUTRO);
+            FlagSet(FLAG_CUTSCENE_DRAKE_INTRO);
+            FlagSet(FLAG_CUTSCENE_DRAKE_OUTRO);
+            FlagSet(FLAG_CUTSCENE_WALLACE);
+            FlagSet(FLAG_CUTSCENE_HALL_OF_FAME_PART1);
+            FlagClear(FLAG_CUTSCENE_HALL_OF_FAME_PART2);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_OptionMenuFadeOut;
+        }
+        else if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 1 && VarGet(VAR_CUTSCENES_SEEN) == 19)
+        {
+            SetCutscenesFlags();
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
             gTasks[taskId].func = Task_OptionMenuFadeOut;
         }
         else
         {
+            ClearCutscenesFlags();
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
             gTasks[taskId].func = Task_OptionMenuFadeOut;
         }

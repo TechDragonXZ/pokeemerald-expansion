@@ -38,9 +38,23 @@ VictoryRoad_1F_EventScript_WallyBattleTrigger2::
 	end
 
 VictoryRoad_1F_EventScript_WallyEntranceBattle::
+	setvar VAR_CUTSCENES_SEEN, 8
+	startcutscene CUTSCENE_WALLY_VICTORY_ROAD
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	msgbox VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore, MSGBOX_DEFAULT
+	endcutscene
+	trainerbattle_no_intro TRAINER_WALLY_VR_1, VictoryRoad_1F_Text_WallyEntranceDefeat
+	msgbox VictoryRoad_1F_Text_WallyPostEntranceBattle, MSGBOX_DEFAULT
+	clearflag FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY
+	copyobjectxytoperm LOCALID_WALLY_ENTRANCE
+	setflag FLAG_DEFEATED_WALLY_VICTORY_ROAD
+	copyvar VAR_VICTORY_ROAD_1F_STATE, VAR_0x8008
+	releaseall
+	end
+
+VictoryRoad_1F_EventScript_WallyEntranceBattle_CutsceneSkipped::
+	closemessage
 	trainerbattle_no_intro TRAINER_WALLY_VR_1, VictoryRoad_1F_Text_WallyEntranceDefeat
 	msgbox VictoryRoad_1F_Text_WallyPostEntranceBattle, MSGBOX_DEFAULT
 	clearflag FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY

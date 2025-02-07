@@ -41,8 +41,20 @@ EverGrandeCity_DrakesRoom_EventScript_Drake::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_PostBattleSpeech
+	setvar VAR_CUTSCENES_SEEN, 15
+	startcutscene CUTSCENE_DRAKE_INTRO
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_DrakesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	endcutscene
+	trainerbattle_no_intro TRAINER_DRAKE, EverGrandeCity_DrakesRoom_Text_Defeat
+	goto EverGrandeCity_DrakesRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_DrakesRoom_EventScript_Drake_CutsceneSkipped::
+	lock
+	faceplayer
+	closemessage
+	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_PostBattleSpeech
 	trainerbattle_no_intro TRAINER_DRAKE, EverGrandeCity_DrakesRoom_Text_Defeat
 	goto EverGrandeCity_DrakesRoom_EventScript_Defeated
 	end
@@ -57,7 +69,19 @@ EverGrandeCity_DrakesRoom_EventScript_Defeated::
 	special Script_TryGainNewFanFromCounter
 	setflag FLAG_DEFEATED_ELITE_4_DRAKE
 	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	setvar VAR_CUTSCENES_SEEN, 16
+	startcutscene CUTSCENE_DRAKE_OUTRO
 	msgbox EverGrandeCity_DrakesRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	endcutscene
+	release
+	end
+
+EverGrandeCity_DrakesRoom_EventScript_Defeated_CutsceneSkipped::
+	closemessage
+	setvar VAR_0x8004, FANCOUNTER_DEFEATED_DRAKE
+	special Script_TryGainNewFanFromCounter
+	setflag FLAG_DEFEATED_ELITE_4_DRAKE
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
 	release
 	end
 

@@ -516,12 +516,12 @@
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_SEEN_CUTSCENE_MAXIE_MT_CHIMNEY           0x1DE // Player Seen Maxie Mt. Chimney Cutscene Flag
-#define FLAG_SEEN_CUTSCENE_MAXIE_MAGMA_BASE           0x1DF // Player Seen Maxie Magma Base Cutscene Flag
-#define FLAG_SEEN_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN     0x1E0 // Player Seen Archie Seafloor Cavern Cutscene Flag
-#define FLAG_UNUSED_0x1E1                             0x1E1 // Unused Flag
-#define FLAG_UNUSED_0x1E2                             0x1E2 // Unused Flag
-#define FLAG_UNUSED_0x1E3                             0x1E3 // Unused Flag
+#define FLAG_UNUSED_0x1DE                    0x1DE // Unused Flag
+#define FLAG_UNUSED_0x1DF                    0x1DF // Unused Flag
+#define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
+#define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
+#define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
+#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -658,25 +658,25 @@
 
 #define FLAG_HIDDEN_ITEMS_END FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
-#define FLAG_UNUSED_0x276  0x276 // Unused Flag
+#define FLAG_CUTSCENES_START                         0x264 // Start of Cutscenes Flag
+#define FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS     0x265 // Player Seen Aqua Grunt Petalburg Woods Cutscene Flag
+#define FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL      0x266 // Player Seen Aqua Grunt Rusturf Tunnel Cutscene Flag
+#define FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM     0x267 // Player Seen Aqua Grunt Oceanic Museum Cutscene Flag
+#define FLAG_CUTSCENE_MAXIE_MT_CHIMNEY               0x268 // Player Seen Maxie Mt. Chimney Cutscene Flag
+#define FLAG_CUTSCENE_MAXIE_MAGMA_HIDEOUT            0x269 // Player Seen Maxie Magma Hideout Cutscene Flag
+#define FLAG_CUTSCENE_ARCHIE_SEAFLOOR_CAVERN         0x26A // Player Seen Archie Seafloor Cavern Cutscene Flag
+#define FLAG_CUTSCENE_WALLY_VICTORY_ROAD             0x26B // Player Seen Wally Victory Road Cutscene Flag
+#define FLAG_CUTSCENE_SIDNEY_INTRO                   0x26C // Player Seen Elite 4 Sidney (Intro) Cutscene Flag
+#define FLAG_CUTSCENE_SIDNEY_OUTRO                   0x26D // Player Seen Elite 4 Sidney (Outro) Cutscene Flag
+#define FLAG_CUTSCENE_PHOEBE_INTRO                   0x26E // Player Seen Elite 4 Phoebe (Intro) Cutscene Flag
+#define FLAG_CUTSCENE_PHOEBE_OUTRO                   0x26F // Player Seen Elite 4 Phoebe (Outro) Cutscene Flag
+#define FLAG_CUTSCENE_GLACIA_INTRO                   0x270 // Player Seen Elite 4 Glacia (Intro) Cutscene Flag
+#define FLAG_CUTSCENE_GLACIA_OUTRO                   0x271 // Player Seen Elite 4 Glacia (Outro) Cutscene Flag
+#define FLAG_CUTSCENE_DRAKE_INTRO                    0x272 // Player Seen Elite 4 Drake (Intro) Cutscene Flag
+#define FLAG_CUTSCENE_DRAKE_OUTRO                    0x273 // Player Seen Elite 4 Drake (Outro) Cutscene Flag
+#define FLAG_CUTSCENE_WALLACE                        0x274 // Player Seen Wallace Cutscene Flag
+#define FLAG_CUTSCENE_HALL_OF_FAME_PART1             0x275 // Player Seen Hall of Fame (Wallace Room) Cutscene Flag
+#define FLAG_CUTSCENE_HALL_OF_FAME_PART2             0x276 // Player Seen Hall of Fame (Hall of Fame Room) Cutscene Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag
 #define FLAG_UNUSED_0x279  0x279 // Unused Flag
@@ -745,7 +745,7 @@
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
 #define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
 #define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
-#define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
+#define FLAG_CUTSCENES_END 0x2BB // End of Cutscenes Flag - 86 Free
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1223,6 +1223,8 @@
 #define FLAG_ITEM_MAGMA_HIDEOUT_4F_MAX_REVIVE                       0x490
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
+
+#define FLAG_ITEMS_END FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL
 
 #define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
