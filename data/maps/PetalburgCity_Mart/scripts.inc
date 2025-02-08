@@ -44,6 +44,7 @@ PetalburgCity_Mart_Pokemart_Expanded:
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_REPEL
+	.2byte ITEM_LURE
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE

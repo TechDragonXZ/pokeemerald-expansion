@@ -27,20 +27,20 @@
 // Exp. Share config
 // To use this feature, replace the 0 with the flag ID you're assigning it to.
 // Eg: Replace with FLAG_UNUSED_0x264 so you can use that flag to toggle the feature.
-#define I_EXP_SHARE_FLAG        0           // If this flag is set, every Pokémon in the party will gain experience, regardless if they participated in the battle or not.
-#define I_EXP_SHARE_ITEM        GEN_5       // In Gen6+, the Exp. Share was changed from a held item to a Key item that toggles the effect described above.
+#define I_EXP_SHARE_FLAG        FLAG_EXP_ALL_STATE           // If this flag is set, every Pokémon in the party will gain experience, regardless if they participated in the battle or not.
+#define I_EXP_SHARE_ITEM        GEN_LATEST       // In Gen6+, the Exp. Share was changed from a held item to a Key item that toggles the effect described above.
 
 // Repel/Lure config
 // These two settings are both independent and complementary.
-#define VAR_LAST_REPEL_LURE_USED    0       // If this var has been assigned, last Repel/Lure used will be saved and the player will get prompted with the vanilla repel YES/NO option, unless I_REPEL_LURE_MENU is set to TRUE.
+#define VAR_LAST_REPEL_LURE_USED    VAR_LAST_REPEL_LURE       // If this var has been assigned, last Repel/Lure used will be saved and the player will get prompted with the vanilla repel YES/NO option, unless I_REPEL_LURE_MENU is set to TRUE.
 #define I_REPEL_LURE_MENU           TRUE    // If TRUE, the player is able to choose which Repel/Lure to use once the previous one runs out. Cursor position is saved by VAR_LAST_REPEL_LURE_USED if not 0.
 
 // Vs. Seeker
 #define I_VS_SEEKER_CHARGING        0     // If this flag is assigned, the Vs Seeker functionality will be enabled. When the player has the Vs. Seeker, Match Call rematch functions will stop working.
 
 // Fishing
-#define I_FISHING_BITE_ODDS        GEN_LATEST // In Gen 1 and Gen 2, the Old Rod has a 100% chance for a bite, Good Rod has a 66% chance for a bite, and Super Rod has a 50% chance for a bite. In Gen 3, all rods have a base 50% chance for a bite. In Gen 4 onwards, the Old Rod has a base 25% chance for a bite, Good Rod has a 50% chance for a bite, and Super Rod has a 75% chance for a bite.
-#define I_FISHING_MINIGAME         GEN_1      // Each generation uses a variation of reeling in Pokémon once they have been hooked. NOTE: Only the Gen 1/2 and Gen 3 minigames are implemented right now!
+#define I_FISHING_BITE_ODDS        GEN_3 // In Gen 1 and Gen 2, the Old Rod has a 100% chance for a bite, Good Rod has a 66% chance for a bite, and Super Rod has a 50% chance for a bite. In Gen 3, all rods have a base 50% chance for a bite. In Gen 4 onwards, the Old Rod has a base 25% chance for a bite, Good Rod has a 50% chance for a bite, and Super Rod has a 75% chance for a bite.
+#define I_FISHING_MINIGAME         GEN_2      // Each generation uses a variation of reeling in Pokémon once they have been hooked. NOTE: Only the Gen 1/2 and Gen 3 minigames are implemented right now!
 #define I_FISHING_STICKY_BOOST     GEN_LATEST // In Gen 3, a Pokemon with Suction Cups or Sticky Hold in the first slot of the party causes the chance for a bite to increase by about 35%. In Gen 4 onwards, it doubles the base bite chance.
 #define I_FISHING_FOLLOWER_BOOST   TRUE      // In HGSS, fishing bite odds are increased depending on the friendship of the current following Pokémon.
 #define I_FISHING_CHAIN            FALSE      // Introduced in XY, hooking the same Pokémon repeatedly will increase the odds of that mon being shiny. NOTE: This implementation is an approximation of the actual feature, as XY have not been throughoutly documented or datamined.
