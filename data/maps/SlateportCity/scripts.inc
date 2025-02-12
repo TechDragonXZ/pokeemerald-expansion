@@ -1268,12 +1268,12 @@ SlateportCity_Text_HarborFerryUnderConstruction:
 	.string "shortly.”$"
 
 SlateportCity_Text_HarborSign:
-	.string "SLATEPORT HARBOR\p"
+	.string "Slateport Harbor\p"
 	.string "“Enjoy a delightful cruise on\n"
-	.string "the ferry S.S. TIDAL.”$"
+	.string "the ferry S.S. Tidal.”$"
 
 SlateportCity_Text_NameRatersHouseSign:
-	.string "NAME RATER'S HOUSE\n"
+	.string "Name Rater's House\n"
 	.string "“Pokémon nicknames rated.”$"
 
 SlateportCity_Text_ExplainBerries:
@@ -1294,8 +1294,8 @@ SlateportCity_Text_ExplainBerries:
 SlateportCity_Text_ExplainBerryPowder:
 	.string "I recently had machines installed at\n"
 	.string "Pokémon Centers for crushing Berries.\p"
-	.string "The Berry CRUSH machines are at\n"
-	.string "the DIRECT CORNER upstairs.\p"
+	.string "The Berry Crush machines are at\n"
+	.string "the Direct Corner upstairs.\p"
 	.string "Did you know?\p"
 	.string "Could you make Berry Powder for\n"
 	.string "me using those machines?\p"
@@ -1335,31 +1335,31 @@ SlateportCity_Text_ComeBackToTradeBerryPowder:
 	.string "Did you know?$"
 
 SlateportCity_Text_YouDroveTeamAquaAway:
-	.string "SCOTT: Huh?\n"
+	.string "Scott: Huh?\n"
 	.string "I'm sure I met you somewhere before.\p"
 	.string "Have I introduced myself to you?\n"
-	.string "If not, my name's SCOTT.\p"
+	.string "If not, my name's Scott.\p"
 	.string "I just saw Team Aqua run away from\n"
 	.string "here like they were stung.\p"
 	.string "Let me guess--you drove them away?$"
 
 SlateportCity_Text_MaybeThisTrainer:
-	.string "SCOTT: Hmm…\n"
+	.string "Scott: Hmm…\n"
 	.string "Maybe, just maybe, this Trainer…$"
 
 SlateportCity_Text_LetsRegisterEachOther:
-	.string "SCOTT: All right! I think you're going\n"
+	.string "Scott: All right! I think you're going\n"
 	.string "to become a good friend.\p"
 	.string "So, let's register each other in our\n"
-	.string "POKéNAVS.\p"
+	.string "Pokénavs.\p"
 	.string "… … … … … …$"
 
 SlateportCity_Text_RegisteredScott:
-	.string "Registered this SCOTT person\n"
+	.string "Registered this Scott person\n"
 	.string "in the PokéNav.$"
 
 SlateportCity_Text_KeepEyeOnTrainersBeSeeingYou:
-	.string "SCOTT: What I'd like to do is tag along\n"
+	.string "Scott: What I'd like to do is tag along\n"
 	.string "with you, but I do want to keep an eye\l"
 	.string "on the talents of other people, too.\p"
 	.string "So, I'll be off to roam other towns\n"
@@ -1367,12 +1367,45 @@ SlateportCity_Text_KeepEyeOnTrainersBeSeeingYou:
 	.string "Be seeing you, {PLAYER}{KUN}!$"
 
 SlateportCity_Text_TakingBattleTentChallenge:
-	.string "SCOTT: Oh, hey!\n"
+	.string "Scott: Oh, hey!\n"
 	.string "If it isn't {PLAYER}{KUN}!\p"
 	.string "{PLAYER}{KUN}, let me guess--you're going\n"
-	.string "to take the Battle TENT challenge?\p"
+	.string "to take the Battle Tent challenge?\p"
 	.string "Yeah! That's a good idea!\n"
 	.string "That's a really great idea!\p"
 	.string "After all, a tough Trainer is\n"
-	.string "the perfect fit for the Battle TENT!\p"
+	.string "the perfect fit for the Battle Tent!\p"
 	.string "Give it your best effort!$"
+
+SlateportCity_EventScript_ImportsClerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart SlateportCity_Pokemart_Imports
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_Imports::
+	.2byte ITEM_TUMBLESTONE
+	.2byte ITEM_SKY_TUMBLESTONE
+	.2byte ITEM_BLACK_TUMBLESTONE
+	.2byte ITEM_BROWN_APRICORN
+	.2byte ITEM_IRON_CHUNK
+	.2byte ITEM_HOPO_BERRY
+	.2byte ITEM_CANDY_TRUFFLE
+	.2byte ITEM_DIRESHROOM
+	.2byte ITEM_DOPPEL_BONNETS
+	.2byte ITEM_IRON_BARKTONGUE
+	.2byte ITEM_SWORDCAP
+	.2byte ITEM_BUGWORT
+	.2byte ITEM_KING_LEAF
+	.2byte ITEM_MEDICINAL_LEEK
+	.2byte ITEM_PEPUP_PLANT
+	.2byte ITEM_VIVICHOKE
+	.2byte ITEM_MAX_MUSHROOMS
+	.2byte ITEM_MAX_HONEY
+	pokemartlistend
+

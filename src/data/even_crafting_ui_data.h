@@ -40,7 +40,7 @@ static const u8 sIngredientCategoryTexts[NUM_INGREDIENT_CATEGORIES][CATEGORY_NAM
     [INGREDIENT_CATEGORY_PLANT] = _("Plants"),
     [INGREDIENT_CATEGORY_FLUID] = _("Fluids"),
     [INGREDIENT_CATEGORY_MISC] = _("Misc."),
-    [INGREDIENT_CATEGORY_APRICORN] = _("Apricorn"),
+    [INGREDIENT_CATEGORY_APRICORN] = _("Apricorns"),
 };
 
 static const u8 sRecipeCategoryTexts[NUM_RECIPE_CATEGORIES][CATEGORY_NAME_MAX_LENGTH] =
@@ -48,5 +48,6 @@ static const u8 sRecipeCategoryTexts[NUM_RECIPE_CATEGORIES][CATEGORY_NAME_MAX_LE
     [RECIPE_CATEGORY_MEDICINE] = _("Medicine"),
     [RECIPE_CATEGORY_UTILITY] = _("Utility"),
     [RECIPE_CATEGORY_POKEBALLS] = _("Pokéballs"),
+    [RECIPE_CATEGORY_RESTORATION] = _("Restoration"),
     [RECIPE_CATEGORY_MISC] = _("Misc."),
 };
