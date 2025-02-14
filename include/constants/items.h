@@ -1021,8 +1021,9 @@
 #define ITEM_PEPUP_PLANT 852
 #define ITEM_IRON_BARKTONGUE 853
 #define ITEM_DOPPEL_BONNETS 854
+#define ITEM_UTILITY_PACK 855
 
-#define ITEMS_COUNT 855
+#define ITEMS_COUNT 856
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

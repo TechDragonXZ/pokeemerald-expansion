@@ -911,6 +911,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_FROSTSPIKESDISAPPEAREDFROMTEAM]       = COMPOUND_STRING("The frozen spikes disappeared from the ground around {B_ATK_TEAM2} team!"),
     [STRINGID_PKMNBLEWAWAYFROSTSPIKES]              = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} blew away the Frozen Spikes!"),[STRINGID_FROSTSPIKESABSORBED]                  = COMPOUND_STRING("The frozen spikes disappeared from the ground around {B_ATK_TEAM2} team!"),
     [STRINGID_FROSTSPIKESFROSTBITEN]                = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} got frostbite!"),
+
+    [STRINGID_UTILITYPACKFLOAT]                     = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} floats in the air with its Utility Pack!"),
+    [STRINGID_UTILITYPACKBREAKS]                    = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s Utility Pack broke!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

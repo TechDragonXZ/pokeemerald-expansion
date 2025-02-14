@@ -881,4 +881,6 @@ extern const u8 BattleScript_FrostSpikesFrostbiten[];
 extern const u8 BattleScript_FrostSpikesAbsorbed[];
 extern const u8 BattleScript_FrostSpikesActivates[];
 
+extern const u8 BattleScript_UtilityPackMsgIn[];
+extern const u8 BattleScript_UtilityPackMsgBreaks[];
 #endif // GUARD_BATTLE_SCRIPTS_H

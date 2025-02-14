@@ -2166,6 +2166,9 @@ const u32 gItemIconPalette_Swordcap[] = INCBIN_U32("graphics/items/icon_palettes
 const u32 gItemIcon_DoppelBonnets[] = INCBIN_U32("graphics/items/icons/doppel_bonnets.4bpp.lz");
 const u32 gItemIconPalette_DoppelBonnets[] = INCBIN_U32("graphics/items/icon_palettes/doppel_bonnets.gbapal.lz");
 
+const u32 gItemIcon_UtilityPack[] = INCBIN_U32("graphics/items/icons/utility_pack.4bpp.lz");
+const u32 gItemIconPalette_UtilityPack[] = INCBIN_U32("graphics/items/icon_palettes/utility_pack.gbapal.lz");
+
 const u32 gItemIconPalette_HackingDevice[] = INCBIN_U32("graphics/items/icon_palettes/hacking_device.gbapal.lz");
 
 // Start hexorb branch

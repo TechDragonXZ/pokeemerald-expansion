@@ -3435,6 +3435,8 @@ extern const u32 gItemIcon_KingLeaf[];
 extern const u32 gItemIconPalette_KingLeaf[];
 extern const u32 gItemIcon_DoppelBonnets[];
 extern const u32 gItemIconPalette_DoppelBonnets[];
+extern const u32 gItemIcon_UtilityPack[];
+extern const u32 gItemIconPalette_UtilityPack[];
 
 // Palettes
 extern const u32 gItemIconPalette_HackingDevice[];

@@ -8507,8 +8507,9 @@ static void Cmd_removeitem(void)
 
     // Popped Air Balloon cannot be restored by any means.
     // Corroded items cannot be restored either.
-    if (GetBattlerHoldEffect(battler, TRUE) != HOLD_EFFECT_AIR_BALLOON
-        && gMovesInfo[gCurrentMove].effect != EFFECT_CORROSIVE_GAS)
+    if ((GetBattlerHoldEffect(battler, TRUE) != HOLD_EFFECT_AIR_BALLOON
+        && gMovesInfo[gCurrentMove].effect != EFFECT_CORROSIVE_GAS) || (GetBattlerHoldEffect(battler, TRUE) != HOLD_EFFECT_UTILITY_PACK
+        && gMovesInfo[gCurrentMove].effect != EFFECT_CORROSIVE_GAS))
         gBattleStruct->usedHeldItems[gBattlerPartyIndexes[battler]][GetBattlerSide(battler)] = itemId; // Remember if switched out
 
     gBattleMons[battler].item = ITEM_NONE;

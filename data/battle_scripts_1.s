@@ -10386,3 +10386,14 @@ BattleScript_FrostSpikesDefog::
 	printstring STRINGID_FROSTSPIKESDISAPPEAREDFROMTEAM
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+BattleScript_UtilityPackMsgIn::
+	printstring STRINGID_UTILITYPACKFLOAT
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+BattleScript_UtilityPackMsgBreaks::
+	printstring STRINGID_UTILITYPACKBREAKS
+	waitmessage B_WAIT_TIME_LONG
+	removeitem BS_TARGET
+	return

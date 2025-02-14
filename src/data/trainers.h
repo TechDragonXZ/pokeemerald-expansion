@@ -42192,7 +42192,7 @@ F_TRAINER_FEMALE |
         .trainerClass = TRAINER_CLASS_BATTLE_BOT,
 #line 16880
         .trainerPic = TRAINER_PIC_YOUNGSTER,
-        .encounterMusic_gender = 
+        .encounterMusic_gender =
 #line 16882
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 16883
@@ -42277,7 +42277,7 @@ F_TRAINER_FEMALE |
         .trainerClass = TRAINER_CLASS_BATTLE_BOT,
 #line 16919
         .trainerPic = TRAINER_PIC_YOUNGSTER,
-        .encounterMusic_gender = 
+        .encounterMusic_gender =
 #line 16921
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 16922
@@ -42385,7 +42385,7 @@ F_TRAINER_FEMALE |
         .trainerClass = TRAINER_CLASS_BATTLE_BOT,
 #line 16966
         .trainerPic = TRAINER_PIC_YOUNGSTER,
-        .encounterMusic_gender = 
+        .encounterMusic_gender =
 #line 16968
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 16969
@@ -42551,6 +42551,51 @@ F_TRAINER_FEMALE |
                 MOVE_MYSTICAL_FIRE,
                 MOVE_AROMATHERAPY,
                 MOVE_MISTY_TERRAIN,
+            },
+            },
+        },
+    },
+#line 17040
+    [TRAINER_TEST] =
+    {
+#line 17041
+        .trainerName = _("PORY-201"),
+#line 17042
+        .trainerClass = TRAINER_CLASS_BATTLE_BOT,
+#line 17043
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .encounterMusic_gender =
+#line 17045
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+#line 17046
+        .doubleBattle = FALSE,
+        .partySize = 1,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 17048
+            .species = SPECIES_GLIMMORA,
+#line 17048
+            .gender = TRAINER_MON_FEMALE,
+#line 17048
+            .heldItem = ITEM_FOCUS_SASH,
+#line 17052
+            .ev = TRAINER_PARTY_EVS(252, 0, 0, 252, 4, 0),
+#line 17051
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 17049
+            .ability = ABILITY_TOXIC_DEBRIS,
+#line 17050
+            .lvl = 40,
+#line 17053
+            .nature = NATURE_TIMID,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 17054
+                MOVE_SPIKES,
+                MOVE_STEALTH_ROCK,
+                MOVE_SANDSTORM,
+                MOVE_EARTHQUAKE,
             },
             },
         },

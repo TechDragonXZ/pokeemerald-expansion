@@ -14575,4 +14575,22 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_CandyTruffle,
     },
 
+    [ITEM_UTILITY_PACK] =
+    {
+        .name = _("Utility Pack"),
+        .price = 5000,
+        .holdEffect = HOLD_EFFECT_UTILITY_PACK,
+        .holdEffectParam = 0,
+        .description = COMPOUND_STRING(
+            "Air balloon and\n"
+            "safety goggles.\n"
+            "Breaks, if hit."),
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+        .iconPic = gItemIcon_UtilityPack,
+        .iconPalette = gItemIconPalette_UtilityPack,
+    },
+
 };
