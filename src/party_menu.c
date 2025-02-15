@@ -173,6 +173,7 @@ enum {
     FIELD_MOVE_MILK_DRINK,
     FIELD_MOVE_SOFT_BOILED,
     FIELD_MOVE_SWEET_SCENT,
+    FIELD_MOVE_ROCK_CLIMB,
     FIELD_MOVES_COUNT
 };
 
@@ -553,6 +554,7 @@ static void Task_RetryHexorbAfterFailedStatus(u8);
 static void Task_RetryHexorbAfterFailedMon(u8);
 static void DisplayHexorbMessageAndScheduleTask(u8, const u8*, TaskFunc, bool32);
 // End hexorb Branch
+static bool8 SetUpFieldMove_RockClimb(void);
 
 // static const data
 #include "data/party_menu.h"
@@ -8338,3 +8340,24 @@ void InitPartyMenuForHexorbFromField(u8 taskId)
 }
 // End hexorb Branch
 
+
+static void FieldCallback_RockClimb(void)
+{
+    gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    FieldEffectStart(FLDEFF_USE_ROCK_CLIMB);
+}
+
+static bool8 SetUpFieldMove_RockClimb(void)
+{
+    s16 x, y;
+
+    GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
+    if (MetatileBehavior_IsRockClimbable(MapGridGetMetatileBehaviorAt(x, y)))
+    {
+        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+        gPostMenuFieldCallback = FieldCallback_RockClimb;
+        return TRUE;
+    }
+    
+    return FALSE;
+}

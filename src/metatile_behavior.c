@@ -138,6 +138,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_SAND_WARP_EAST]                     = TILE_FLAG_UNUSED,
     [MB_SAND_WARP_WEST]                     = TILE_FLAG_UNUSED,
     [MB_OMNIDIRECTIONAL_JUMP]               = TILE_FLAG_UNUSED,
+    [MB_ROCK_CLIMB]                         = TILE_FLAG_UNUSED,
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -1571,6 +1572,14 @@ bool8 MetatileBehavior_IsCraftingKit(u8 metatileBehavior)
 bool8 MetatileBehavior_IsSelfTrade(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_SELF_TRADE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsRockClimbable(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_ROCK_CLIMB)
         return TRUE;
     else
         return FALSE;

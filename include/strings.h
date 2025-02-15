@@ -2802,4 +2802,5 @@ extern const u8 gText_SkipCutsceneNone[];
 extern const u8 gText_HackingDeviceOn[];
 extern const u8 gText_HackingDeviceOff[];
 
+extern const u8 gText_RockClimb[];
 #endif // GUARD_STRINGS_H

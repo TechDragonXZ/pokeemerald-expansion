@@ -1678,3 +1678,5 @@ const u8 gText_SkipCutsceneNone[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}None");
 
 const u8 gText_HackingDeviceOn[] = _("Hacking Device: Activated.{PAUSE_UNTIL_PRESS}");
 const u8 gText_HackingDeviceOff[] = _("Hacking Device: Deactivated.{PAUSE_UNTIL_PRESS}");
+
+const u8 gText_RockClimb[] = _("Rock Climb");
