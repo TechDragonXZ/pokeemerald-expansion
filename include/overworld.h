@@ -165,11 +165,6 @@ enum ItemObtainFlags
     FLAG_GET_ITEM_OBTAINED,
     FLAG_SET_ITEM_OBTAINED,
 };
-enum {
-    REGION_HOENN,
-    REGION_KANTO,
-    REGION_SEVII
-};
 
 bool8 GetSetItemObtained(u16 item, enum ItemObtainFlags caseId);
 
