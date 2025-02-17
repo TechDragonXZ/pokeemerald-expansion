@@ -47,8 +47,6 @@
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
-
-#include "even_crafting_ui.h"
 #include "ui_stat_editor.h"
 
 // Menu actions
