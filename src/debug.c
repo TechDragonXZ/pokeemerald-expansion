@@ -120,6 +120,11 @@ enum GivePCBagFillDebugMenu
     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TMHM,
     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BERRIES,
     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_KEY_ITEMS,
+    DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BATTLE_ITEMS,
+    DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_Z_CRYSTALS,
+    DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEGA_STONES,
+    DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEDICINE,
+    DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TREASURES,
 };
 
 enum PartyDebugMenu
@@ -387,6 +392,11 @@ static void DebugAction_PCBag_Fill_PocketPokeBalls(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketTMHM(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketBerries(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketKeyItems(u8 taskId);
+static void DebugAction_PCBag_Fill_PocketBattleItems(u8 taskId);
+static void DebugAction_PCBag_Fill_PocketZCrystals(u8 taskId);
+static void DebugAction_PCBag_Fill_PocketMegastones(u8 taskId);
+static void DebugAction_PCBag_Fill_PocketMedicine(u8 taskId);
+static void DebugAction_PCBag_Fill_PocketTreasures(u8 taskId);
 static void DebugAction_PCBag_AccessPC(u8 taskId);
 static void DebugAction_PCBag_ClearBag(u8 taskId);
 static void DebugAction_PCBag_ClearBoxes(u8 taskId);
@@ -549,6 +559,11 @@ static const u8 sDebugText_PCBag_Fill_PocketPokeBalls[] =    _("Fill Pocket Pok√
 static const u8 sDebugText_PCBag_Fill_PocketTMHM[] =         _("Fill Pocket TMHM");
 static const u8 sDebugText_PCBag_Fill_PocketBerries[] =      _("Fill Pocket Berries");
 static const u8 sDebugText_PCBag_Fill_PocketKeyItems[] =     _("Fill Pocket Key Items");
+static const u8 sDebugText_PCBag_Fill_PocketBattleItems[] =     _("Fill Pocket Battle Items");
+static const u8 sDebugText_PCBag_Fill_PocketMegastones[] =     _("Fill Pocket Mega Stones");
+static const u8 sDebugText_PCBag_Fill_PocketZCrystals[] =     _("Fill Pocket Z-Crystals");
+static const u8 sDebugText_PCBag_Fill_PocketMedicine[] =     _("Fill Pocket Medicine");
+static const u8 sDebugText_PCBag_Fill_PocketTreasures[] =     _("Fill Pocket Treasures");
 static const u8 sDebugText_PCBag_AccessPC[] =                _("Access PC");
 static const u8 sDebugText_PCBag_ClearBag[] =                _("Clear Bag");
 static const u8 sDebugText_PCBag_ClearBoxes[] =              _("Clear Storage Boxes");
@@ -749,6 +764,11 @@ static const struct ListMenuItem sDebugMenu_Items_PCBag_Fill[] =
     [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TMHM]      = {sDebugText_PCBag_Fill_PocketTMHM,      DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TMHM},
     [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BERRIES]   = {sDebugText_PCBag_Fill_PocketBerries,   DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BERRIES},
     [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_KEY_ITEMS] = {sDebugText_PCBag_Fill_PocketKeyItems,  DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_KEY_ITEMS},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BATTLE_ITEMS] = {sDebugText_PCBag_Fill_PocketBattleItems,  DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BATTLE_ITEMS},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEGA_STONES] = {sDebugText_PCBag_Fill_PocketMegastones,  DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEGA_STONES},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_Z_CRYSTALS] = {sDebugText_PCBag_Fill_PocketZCrystals,  DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_Z_CRYSTALS},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEDICINE] = {sDebugText_PCBag_Fill_PocketMedicine,  DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEDICINE},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TREASURES] = {sDebugText_PCBag_Fill_PocketTreasures,  DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TREASURES},
 };
 
 static const struct ListMenuItem sDebugMenu_Items_Party[] =
@@ -920,6 +940,11 @@ static void (*const sDebugMenu_Actions_PCBag_Fill[])(u8) =
     [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TMHM]      = DebugAction_PCBag_Fill_PocketTMHM,
     [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BERRIES]   = DebugAction_PCBag_Fill_PocketBerries,
     [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_KEY_ITEMS] = DebugAction_PCBag_Fill_PocketKeyItems,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BATTLE_ITEMS] = DebugAction_PCBag_Fill_PocketBattleItems,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEGA_STONES] = DebugAction_PCBag_Fill_PocketMegastones,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_Z_CRYSTALS] = DebugAction_PCBag_Fill_PocketZCrystals,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEDICINE] = DebugAction_PCBag_Fill_PocketMedicine,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TREASURES] = DebugAction_PCBag_Fill_PocketTreasures,
 };
 
 static void (*const sDebugMenu_Actions_Party[])(u8) =
@@ -5148,4 +5173,59 @@ void CheckEWRAMCounters(struct ScriptContext *ctx)
 static void DebugAction_Util_CheckEWRAMCounters(u8 taskId)
 {
     Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_EWRAMCounters);
+}
+
+static void DebugAction_PCBag_Fill_PocketBattleItems(u8 taskId)
+{
+    u16 itemId;
+
+    for (itemId = 1; itemId < ITEMS_COUNT; itemId++)
+    {
+        if (ItemId_GetPocket(itemId) == POCKET_BATTLE_ITEMS && CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
+    }
+}
+
+static void DebugAction_PCBag_Fill_PocketMegastones(u8 taskId)
+{
+    u16 itemId;
+
+    for (itemId = 1; itemId < ITEMS_COUNT; itemId++)
+    {
+        if (ItemId_GetPocket(itemId) == POCKET_MEGA_STONES && CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
+    }
+}
+
+static void DebugAction_PCBag_Fill_PocketZCrystals(u8 taskId)
+{
+    u16 itemId;
+
+    for (itemId = 1; itemId < ITEMS_COUNT; itemId++)
+    {
+        if (ItemId_GetPocket(itemId) == POCKET_Z_CRYSTALS && CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
+    }
+}
+
+static void DebugAction_PCBag_Fill_PocketMedicine(u8 taskId)
+{
+    u16 itemId;
+
+    for (itemId = 1; itemId < ITEMS_COUNT; itemId++)
+    {
+        if (ItemId_GetPocket(itemId) == POCKET_MEDICINE && CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
+    }
+}
+
+static void DebugAction_PCBag_Fill_PocketTreasures(u8 taskId)
+{
+    u16 itemId;
+
+    for (itemId = 1; itemId < ITEMS_COUNT; itemId++)
+    {
+        if (ItemId_GetPocket(itemId) == POCKET_TREASURES && CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
+    }
 }
