@@ -50,6 +50,10 @@ void DisplayDadsAdviceCannotUseItemMessage(u8 taskId, bool8 isUsingRegisteredKey
 void ItemUseOutOfBattle_PokeFlute(u8 taskId);
 void ItemUseOutOfBattle_TownMap(u8 taskId);
 
+// Custom
+void ItemUseOutOfBattle_FashionCase(u8);
+void ItemUseOutOfBattle_HackingDevice(u8);
+
 enum {
     BALL_THROW_UNABLE_TWO_MONS,
     BALL_THROW_UNABLE_NO_ROOM,
@@ -60,5 +64,6 @@ enum {
 
 bool32 CanThrowBall(void);
 bool32 CannotUseItemsInBattle(u16 itemId, struct Pokemon *mon);
+void ItemUseOutOfBattle_CraftingKit(u8);
 
 #endif // GUARD_ITEM_USE_H

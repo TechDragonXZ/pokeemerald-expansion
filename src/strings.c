@@ -1570,3 +1570,15 @@ const u8 gText_AM[] = _("AM");
 const u8 gText_PM[] = _("PM");
 const u8 gText_Relearn[] = _("{START_BUTTON} RELEARN"); // future note: don't decap this, because it mimics the summary screen BG graphics which will not get decapped
 const u8 gText_Rename[] = _("RENAME");
+
+// Custom
+const u8 gText_WhichOutfit[] = _("Put on which\noutfit?");
+const u8 gText_CosplayNone[] = _("None");
+const u8 gText_CosplayRockStar[] = _("Rock Star");
+const u8 gText_CosplayBelle[] = _("Belle");
+const u8 gText_CosplayPopStar[] = _("Pop Star");
+const u8 gText_CosplayPhd[] = _("Ph. D.");
+const u8 gText_CosplayLibre[] = _("Libre");
+
+const u8 gText_HackingDeviceOn[] = _("Hacking Device: Activated{PAUSE_UNTIL_PRESS}");
+const u8 gText_HackingDeviceOff[] = _("Hacking Device: Deactivated{PAUSE_UNTIL_PRESS}");

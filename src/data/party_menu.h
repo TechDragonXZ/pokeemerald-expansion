@@ -659,6 +659,9 @@ static const u8 *const sActionStringTable[] =
     [PARTY_MSG_ALREADY_HOLDING_ONE]    = gText_AlreadyHoldingOne,
     [PARTY_MSG_WHICH_APPLIANCE]        = gText_WhichAppliance,
     [PARTY_MSG_CHOOSE_SECOND_FUSION]   = gText_NextFusionMon,
+
+    // Custom
+    [PARTY_MSG_WHICH_OUTFIT]           = gText_WhichOutfit,
 };
 
 static const u8 *const sDescriptionStringTable[] =
@@ -720,6 +723,12 @@ struct
     [MENU_CATALOG_MOWER] = {gText_LawnMower, CursorCb_CatalogMower},
     [MENU_CHANGE_FORM] = {gText_ChangeForm, CursorCb_ChangeForm},
     [MENU_CHANGE_ABILITY] = {gText_ChangeAbility, CursorCb_ChangeAbility},
+    [MENU_COSPLAY_NONE] = {gText_CosplayNone, CursorCb_CosplayNone},
+    [MENU_COSPLAY_ROCK_STAR] = {gText_CosplayRockStar, CursorCb_CosplayRockStar},
+    [MENU_COSPLAY_BELLE] = {gText_CosplayBelle, CursorCb_CosplayBelle},
+    [MENU_COSPLAY_POP_STAR] = {gText_CosplayPopStar, CursorCb_CosplayPopStar},
+    [MENU_COSPLAY_PHD] = {gText_CosplayPhd, CursorCb_CosplayPhd},
+    [MENU_COSPLAY_LIBRE] = {gText_CosplayLibre, CursorCb_CosplayLibre},
 };
 
 static const u8 sPartyMenuAction_SummarySwitchCancel[] = {MENU_SUMMARY, MENU_SWITCH, MENU_CANCEL1};
@@ -737,6 +746,9 @@ static const u8 sPartyMenuAction_TradeSummaryCancel2[] = {MENU_TRADE2, MENU_SUMM
 static const u8 sPartyMenuAction_TakeItemTossCancel[] = {MENU_TAKE_ITEM, MENU_TOSS, MENU_CANCEL1};
 static const u8 sPartyMenuAction_RotomCatalog[] = {MENU_CATALOG_BULB, MENU_CATALOG_OVEN, MENU_CATALOG_WASHING, MENU_CATALOG_FRIDGE, MENU_CATALOG_FAN, MENU_CATALOG_MOWER, MENU_CANCEL1};
 static const u8 sPartyMenuAction_ZygardeCube[] = {MENU_CHANGE_FORM, MENU_CHANGE_ABILITY, MENU_CANCEL1};
+
+// Custom
+static const u8 sPartyMenuAction_FashionCase[] = {MENU_COSPLAY_NONE, MENU_COSPLAY_ROCK_STAR, MENU_COSPLAY_BELLE, MENU_COSPLAY_POP_STAR, MENU_COSPLAY_PHD, MENU_COSPLAY_LIBRE, MENU_CANCEL1};
 
 
 
@@ -758,6 +770,8 @@ static const u8 *const sPartyMenuActions[] =
     [ACTIONS_TAKEITEM_TOSS] = sPartyMenuAction_TakeItemTossCancel,
     [ACTIONS_ROTOM_CATALOG] = sPartyMenuAction_RotomCatalog,
     [ACTIONS_ZYGARDE_CUBE]  = sPartyMenuAction_ZygardeCube,
+    // Custom
+    [ACTIONS_FASHION_CASE]  = sPartyMenuAction_FashionCase,
 };
 
 static const u8 sPartyMenuActionCounts[] =
@@ -778,6 +792,8 @@ static const u8 sPartyMenuActionCounts[] =
     [ACTIONS_TAKEITEM_TOSS] = ARRAY_COUNT(sPartyMenuAction_TakeItemTossCancel),
     [ACTIONS_ROTOM_CATALOG] = ARRAY_COUNT(sPartyMenuAction_RotomCatalog),
     [ACTIONS_ZYGARDE_CUBE]  = ARRAY_COUNT(sPartyMenuAction_ZygardeCube),
+    // Custom
+    [ACTIONS_FASHION_CASE]  = ARRAY_COUNT(sPartyMenuAction_FashionCase),
 };
 
 static const u16 sFieldMoves[FIELD_MOVES_COUNT + 1] =
@@ -1155,4 +1171,20 @@ static const u16 sRotomFormChangeMoves[5] =
     ROTOM_FROST_MOVE,
     ROTOM_FAN_MOVE,
     ROTOM_MOW_MOVE,
+};
+
+#define PIKACHU_BASE_MOVE  MOVE_THUNDER_SHOCK
+#define PIKACHU_ROCK_STAR_MOVE  MOVE_METEOR_MASH
+#define PIKACHU_BELLE_MOVE  MOVE_ICICLE_CRASH
+#define PIKACHU_POP_STAR_MOVE MOVE_DRAINING_KISS
+#define PIKACHU_PHD_MOVE   MOVE_ELECTRIC_TERRAIN
+#define PIKACHU_LIBRE_MOVE   MOVE_FLYING_PRESS
+
+static const u16 sPikachuFormChangeMoves[5] =
+{
+    PIKACHU_ROCK_STAR_MOVE,
+    PIKACHU_BELLE_MOVE,
+    PIKACHU_POP_STAR_MOVE,
+    PIKACHU_PHD_MOVE,
+    PIKACHU_LIBRE_MOVE,
 };

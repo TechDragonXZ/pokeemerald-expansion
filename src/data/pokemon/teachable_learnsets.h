@@ -1030,6 +1030,35 @@ static const u16 sRaichuTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sPikachuPartnerTeachableLearnset[] = {
+    MOVE_BRICK_BREAK,
+    MOVE_DIG,
+    MOVE_DOUBLE_TEAM,
+    MOVE_FACADE,
+    MOVE_FOCUS_PUNCH,
+    MOVE_IRON_TAIL,
+    MOVE_LIGHT_SCREEN,
+    MOVE_PROTECT,
+    MOVE_RAIN_DANCE,
+    MOVE_REFLECT,
+    MOVE_REST,
+    MOVE_SURF,
+    MOVE_THIEF,
+    MOVE_THUNDER,
+    MOVE_THUNDERBOLT,
+    MOVE_BODY_SLAM,
+    MOVE_ENDURE,
+    MOVE_SLEEP_TALK,
+    MOVE_SWIFT,
+    MOVE_THUNDER_PUNCH,
+    MOVE_THUNDER_WAVE,
+    MOVE_PIKA_PAPOW,
+    MOVE_FLOATY_FALL,
+    MOVE_SPLISHY_SPLASH,
+    MOVE_ZIPPY_ZAP,
+    MOVE_UNAVAILABLE,
+};
+
 #if P_ALOLAN_FORMS
 static const u16 sRaichuAlolaTeachableLearnset[] = {
     MOVE_ATTRACT,
@@ -7339,6 +7368,34 @@ static const u16 sEeveeTeachableLearnset[] = {
     MOVE_SNORE,
     MOVE_SWAGGER,
     MOVE_SWIFT,
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sEeveePartnerTeachableLearnset[] = {
+    MOVE_CALM_MIND,
+    MOVE_DIG,
+    MOVE_FACADE,
+    MOVE_PROTECT,
+    MOVE_RAIN_DANCE,
+    MOVE_REST,
+    MOVE_ROAR,
+    MOVE_SHADOW_BALL,
+    MOVE_SUNNY_DAY,
+    MOVE_BODY_SLAM,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENDURE,
+    MOVE_MUD_SLAP,
+    MOVE_SLEEP_TALK,
+    MOVE_SWIFT,
+    MOVE_BOUNCY_BUBBLE,
+    MOVE_BUZZY_BUZZ,
+    MOVE_SIZZLY_SLIDE,
+    MOVE_GLITZY_GLOW,
+    MOVE_BADDY_BAD,
+    MOVE_SAPPY_SEED,
+    MOVE_FREEZY_FROST,
+    MOVE_SPARKLY_SWIRL,
+    MOVE_VEEVEE_VOLLEY,
     MOVE_UNAVAILABLE,
 };
 

@@ -114,7 +114,7 @@
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
 #define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var
 #define VAR_ROUTE101_STATE                               0x4060
-#define VAR_ROUTE102_STATE                               0x4061 // Unused Var
+#define VAR_ROUTE102_STATE                               0x4061 // Craft Tutorial
 #define VAR_ROUTE103_STATE                               0x4062 // Unused Var
 #define VAR_ROUTE104_STATE                               0x4063
 #define VAR_ROUTE105_STATE                               0x4064 // Unused Var
@@ -264,10 +264,10 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
-#define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
-#define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
+#define VAR_SKY_BATTLE                                   0x40F7 // Sky Battle Position Var
+#define VAR_STARTING_STATUS                              0x40F8 // Starting Status Var
+#define VAR_STARTING_STATUS_TIMER                        0x40F9 // Starting Status Timer Var
+#define VAR_LAST_REPEL_LURE                              0x40FA // Last Repel Used Var
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var

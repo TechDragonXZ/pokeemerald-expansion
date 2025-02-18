@@ -2697,6 +2697,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuCosplayFormChangeTable,
     },
 
     [SPECIES_PIKACHU_ROCK_STAR] =
@@ -2748,6 +2749,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuCosplayFormChangeTable,
     },
 
     [SPECIES_PIKACHU_BELLE] =
@@ -2800,6 +2802,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuCosplayFormChangeTable,
     },
 
     [SPECIES_PIKACHU_POP_STAR] =
@@ -2852,6 +2855,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuCosplayFormChangeTable,
     },
 
     [SPECIES_PIKACHU_PHD] =
@@ -2903,6 +2907,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuCosplayFormChangeTable,
     },
 
     [SPECIES_PIKACHU_LIBRE] =
@@ -2954,6 +2959,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuCosplayFormChangeTable,
     },
 
 #endif //P_COSPLAY_PIKACHU_FORMS
@@ -3530,7 +3536,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cannotBeTraded = TRUE,
         .perfectIVCount = NUM_STATS,
         .levelUpLearnset = sPikachuLevelUpLearnset,
-        .teachableLearnset = sPikachuTeachableLearnset,
+        .teachableLearnset = sPikachuPartnerTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
     },
 
@@ -16117,7 +16123,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cannotBeTraded = TRUE,
         .perfectIVCount = NUM_STATS,
         .levelUpLearnset = sEeveeLevelUpLearnset,
-        .teachableLearnset = sEeveeTeachableLearnset,
+        .teachableLearnset = sEeveePartnerTeachableLearnset,
         .eggMoveLearnset = sEeveeEggMoveLearnset,
         .formSpeciesIdTable = sEeveeFormSpeciesIdTable,
     },

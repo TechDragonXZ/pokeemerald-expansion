@@ -16,6 +16,10 @@
 #include "battle_pyramid_bag.h"
 #include "graphics.h"
 #include "constants/battle.h"
+#include "item_icon.h"
+#include "menu.h"
+#include "overworld.h"
+#include "gpu_regs.h"
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/item_effects.h"
@@ -27,6 +31,8 @@ static const u8 *ItemId_GetPluralName(u16);
 static bool32 DoesItemHavePluralName(u16);
 
 EWRAM_DATA struct BagPocket gBagPockets[POCKETS_COUNT] = {0};
+EWRAM_DATA u8 sItemIconSpriteIdMenu = 0;
+EWRAM_DATA u8 sItemIconSpriteId2Menu = 0;
 
 #include "data/pokemon/item_effects.h"
 #include "data/items.h"
@@ -1013,3 +1019,77 @@ u32 GetItemStatus2Mask(u16 itemId)
     else
         return 0;
 }
+
+#define ITEM_ICON_X 26
+#define ITEM_ICON_Y 24
+
+void ShowItemIconSpriteMenu(u16 item, bool8 flash, u8 screen_x, u8 screen_y)
+{
+    s16 x = 0, y = 0;
+    u8 iconSpriteId;   
+    u8 spriteId2 = MAX_SPRITES;
+
+    if (flash)
+    {
+        SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_OBJWIN_ON);
+        SetGpuRegBits(REG_OFFSET_WINOUT, WINOUT_WINOBJ_OBJ);
+    }
+
+    iconSpriteId = AddItemIconSprite(ITEM_TAG, ITEM_TAG, item);
+    if (flash)
+        spriteId2 = AddItemIconSprite(ITEM_TAG, ITEM_TAG, item);
+    if (iconSpriteId != MAX_SPRITES)
+    {
+
+        //dropping this since we're specifying in the parameters
+        /*if (!firstTime)
+        {
+            //show in message box
+            x = 213;
+            y = 140;
+        }
+        else
+        {
+            // show in header box
+            x = ITEM_ICON_X;
+            y = ITEM_ICON_Y;
+        }
+        */
+
+        //parameters!
+        x = screen_x;
+        y = screen_y;
+
+        gSprites[iconSpriteId].x2 = x;
+        gSprites[iconSpriteId].y2 = y;
+        gSprites[iconSpriteId].oam.priority = 0;
+    }
+
+    if (spriteId2 != MAX_SPRITES)
+    {
+        gSprites[spriteId2].x2 = x;
+        gSprites[spriteId2].y2 = y;
+        gSprites[spriteId2].oam.priority = 0;
+        gSprites[spriteId2].oam.objMode = ST_OAM_OBJ_WINDOW;
+        sItemIconSpriteId2Menu = spriteId2;
+    }
+
+    sItemIconSpriteIdMenu = iconSpriteId;
+}
+
+void DestroyItemIconSpriteMenu(void)
+{
+    FreeSpriteTilesByTag(ITEM_TAG);
+    FreeSpritePaletteByTag(ITEM_TAG);
+    FreeSpriteOamMatrix(&gSprites[sItemIconSpriteIdMenu]);
+    DestroySprite(&gSprites[sItemIconSpriteIdMenu]);
+
+    if ((GetFlashLevel() > 0 || InBattlePyramid_()) && sItemIconSpriteId2Menu != MAX_SPRITES)
+    {
+        //FreeSpriteTilesByTag(ITEM_TAG);
+        //FreeSpritePaletteByTag(ITEM_TAG);
+        FreeSpriteOamMatrix(&gSprites[sItemIconSpriteId2Menu]);
+        DestroySprite(&gSprites[sItemIconSpriteId2Menu]);
+    }
+}
+

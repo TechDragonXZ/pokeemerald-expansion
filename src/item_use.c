@@ -1584,4 +1584,66 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
     }
 }
 
+static void ItemUseOnFieldCB_CraftingKit(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(Craft_EventScript_OpenCraftMenu);
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_CraftingKit(u8 taskId)
+{
+    s16 coordsY;
+    s16 coordsX;
+    u8 behavior;
+    PlayerGetDestCoords(&coordsX, &coordsY);
+    behavior = MapGridGetMetatileBehaviorAt(coordsX, coordsY);
+
+    //If biking or surfing, not a good time to craft
+    if (FlagGet(FLAG_SYS_CYCLING_ROAD) == TRUE || MetatileBehavior_IsVerticalRail(behavior) == TRUE || MetatileBehavior_IsHorizontalRail(behavior) == TRUE || MetatileBehavior_IsIsolatedVerticalRail(behavior) == TRUE || MetatileBehavior_IsIsolatedHorizontalRail(behavior) == TRUE)
+        DisplayCannotDismountBikeMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_UNDERWATER) || TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) || gWeatherPtr->currWeather == 5 || gWeatherPtr->currWeather == 8 || gWeatherPtr->currWeather == 13) //thunder, sandstorm, downpour
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    else {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_CraftingKit;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+}
+
+void ItemUseOutOfBattle_FashionCase(u8 taskId)
+{
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        gItemUseCB = ItemUseCB_FashionCase;
+        gTasks[taskId].data[0] = TRUE;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+    else
+    {
+        // TODO: handle key items with callbacks to menus allow to be used by registering them.
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+}
+
+void ItemUseOutOfBattle_HackingDevice(u8 taskId)
+{
+    if (FlagGet(FLAG_HACKING_DEVICE))
+    {
+        PlaySE(SE_PC_OFF);
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_HackingDeviceOff, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_HackingDeviceOff, CloseItemMessage);
+    }
+    else
+    {
+        PlaySE(SE_EXP_MAX);
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_HackingDeviceOn, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_HackingDeviceOn, CloseItemMessage);
+    }
+    FlagToggle(FLAG_HACKING_DEVICE);
+}
+
 #undef tUsingRegisteredKeyItem

@@ -3389,4 +3389,76 @@ extern const u32 gBattleIcons_Gfx2[];
 extern const u32 gBattleIcons_Pal1[];
 extern const u32 gBattleIcons_Pal2[];
 
+// Custom
+extern const u32 gItemIcon_CraftingKit[];
+extern const u32 gItemIconPalette_CraftingKit[];
+
+extern const u32 gItemIcon_FashionCase[];
+extern const u32 gItemIconPalette_FashionCase[];
+
+extern const u32 gItemIcon_BrownApricorn[];
+extern const u32 gItemIconPalette_BrownApricorn[];
+
+extern const u32 gItemIcon_BlankPlate[];
+extern const u32 gItemIconPalette_BlankPlate[];
+
+extern const u32 gItemIcon_LegendPlate[];
+extern const u32 gItemIconPalette_LegendPlate[];
+
+extern const u32 gItemIcon_HopoBerry[];
+extern const u32 gItemIconPalette_HopoBerry[];
+
+extern const u32 gItemIcon_MedicinalLeek[];
+extern const u32 gItemIconPalette_MedicinalLeek[];
+
+extern const u32 gItemIcon_IronChunk[];
+extern const u32 gItemIconPalette_IronChunk[];
+
+extern const u32 gItemIcon_Tumblestone[];
+extern const u32 gItemIconPalette_Tumblestone[];
+
+extern const u32 gItemIcon_SkyTumblestone[];
+extern const u32 gItemIconPalette_SkyTumblestone[];
+
+extern const u32 gItemIcon_BlackTumblestone[];
+extern const u32 gItemIconPalette_BlackTumblestone[];
+
+extern const u32 gItemIcon_Bugwort[];
+extern const u32 gItemIconPalette_Bugwort[];
+
+extern const u32 gItemIcon_Vivichoke[];
+extern const u32 gItemIconPalette_Vivichoke[];
+
+extern const u32 gItemIcon_Direshroom[];
+extern const u32 gItemIconPalette_Direshroom[];
+
+extern const u32 gItemIcon_IronBarktongue[];
+extern const u32 gItemIconPalette_IronBarktongue[];
+
+extern const u32 gItemIcon_Swordcap[];
+extern const u32 gItemIconPalette_Swordcap[];
+
+extern const u32 gItemIcon_CandyTruffle[];
+extern const u32 gItemIconPalette_CandyTruffle[];
+
+extern const u32 gItemIcon_PepupPlant[];
+extern const u32 gItemIconPalette_PepupPlant[];
+
+extern const u32 gItemIcon_KingLeaf[];
+extern const u32 gItemIconPalette_KingLeaf[];
+
+extern const u32 gItemIcon_DoppelBonnets[];
+extern const u32 gItemIconPalette_DoppelBonnets[];
+
+extern const u32 gItemIcon_UtilityPack[];
+extern const u32 gItemIconPalette_UtilityPack[];
+
+// Palettes
+extern const u32 gItemIconPalette_HackingDevice[];
+extern const u32 gItemIconPalette_CyanScarf[];
+
+// Custom Berry
+extern const u32 gBerryPic_Hopo[];
+extern const u32 gBerryPalette_Hopo[];
+
 #endif //GUARD_GRAPHICS_H

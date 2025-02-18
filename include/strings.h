@@ -2712,4 +2712,18 @@ extern const u8 gText_PlayerScurriedBackHome[];
 extern const u8 gText_Relearn[]; // move relearner from summary screen
 extern const u8 gText_Rename[]; // change nickname from summary screen
 
+// Custom
+// Fashion Case Text
+extern const u8 gText_WhichOutfit[];
+extern const u8 gText_CosplayNone[];
+extern const u8 gText_CosplayRockStar[];
+extern const u8 gText_CosplayBelle[];
+extern const u8 gText_CosplayPopStar[];
+extern const u8 gText_CosplayPhd[];
+extern const u8 gText_CosplayLibre[];
+
+// Hacking Device
+extern const u8 gText_HackingDeviceOn[];
+extern const u8 gText_HackingDeviceOff[];
+
 #endif // GUARD_STRINGS_H

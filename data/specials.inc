@@ -534,6 +534,7 @@ gSpecials::
 	def_special RemoveRecordsWindow
 	def_special CloseDeptStoreElevatorWindow
 	def_special TrySetBattleTowerLinkType
+	def_special ShowCraftMenu
 	def_special DoSlidingPuzzle
 	def_special TrySpecialOverworldEvo
 	def_special GetNumberSprayStrength

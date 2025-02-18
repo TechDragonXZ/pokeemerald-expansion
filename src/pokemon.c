@@ -4640,6 +4640,12 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
                  && (j == WEATHER_FOG_HORIZONTAL || j == WEATHER_FOG_DIAGONAL))
                     targetSpecies = evolutions[i].targetSpecies;
                 break;
+            case EVO_ITEM_FOG:
+                j = GetCurrentWeather();
+                if (evolutions[i].param == evolutionItem
+                 && (j == WEATHER_FOG_HORIZONTAL || j == WEATHER_FOG_DIAGONAL))
+                    targetSpecies = evolutions[i].targetSpecies;
+                break;
             case EVO_MAPSEC:
                 if (gMapHeader.regionMapSectionId == evolutions[i].param)
                     targetSpecies = evolutions[i].targetSpecies;

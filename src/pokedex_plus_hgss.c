@@ -261,6 +261,9 @@ static const u8 sText_FORMS_Buttons_Submenu_Decapped_PE[] = _("{START_BUTTON}Evo
 static const u8 sText_FORMS_NONE[] = _("{STR_VAR_1} has no alternate forms.");
 static const u8 sText_PlusSymbol[] = _("+");
 
+// Custom
+static const u8 sText_EVO_ITEM_FOG[] = _("{STR_VAR_2} is used, in fog");
+
 // static .rodata graphics
 
 static const u16 sPokedexPlusHGSS_Default_Pal[] = INCBIN_U16("graphics/pokedex/hgss/palette_default.gbapal");
@@ -6612,6 +6615,11 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
             item = evolutions[i].param;
             CopyItemName(item, gStringVar2);
             StringExpandPlaceholders(gStringVar4, sText_EVO_ITEM_NIGHT );
+            break;
+        case EVO_ITEM_FOG:
+            item = evolutions[i].param;
+            CopyItemName(item, gStringVar2);
+            StringExpandPlaceholders(gStringVar4, sText_EVO_ITEM_FOG );
             break;
         case EVO_ITEM_DAY:
             item = evolutions[i].param;

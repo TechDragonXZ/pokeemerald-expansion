@@ -43,22 +43,22 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
+#define FLAG_NO_COLLISION         0x20 // No Collision Flag
+#define FLAG_NO_ENCOUNTER         0x21 // No Wild Battles Flag
+#define FLAG_NO_TRAINER_SEE       0x22 // No Trainer Battles Flag
+#define FLAG_NO_BAG_USE           0x23 // No In-battle Bag Use Flag
+#define FLAG_NO_CATCHING          0x24 // No Catching Flag
+#define FLAG_NO_RUNNING           0x25 // No Running from Battle Flag
+#define FLAG_FORCE_SHINY          0x26 // Force Shiny Flag
+#define FLAG_FORCE_NO_SHINY       0x27 // Force No Shiny Flag
+#define FLAG_FORCE_DOUBLE_WILD    0x28 // Force Double Wild Battles Flag
+#define FLAG_INVERSE_BATTLE       0x29 // Inverse Battle Flag
+#define FLAG_DYNAMAX_BATTLE       0x2A // Dynamax Battle Flag
+#define FLAG_SKY_BATTLE           0x2B // Sky Battle Flag
+#define FLAG_TERA_ORB_CHARGED     0x2C // Tera Orb Charged Flag
+#define FLAG_TERA_ORB_NO_COST     0x2D // Tera Orb Unlimited Flag
+#define FLAG_EXP_SHARE            0x2E // Exp Share On/Off Flag
+#define FLAG_HACKING_DEVICE       0x2F // Hacking Device On/Off Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
@@ -516,7 +516,7 @@
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_UNUSED_0x1DE                    0x1DE // Unused Flag
+#define FLAG_APRICORN_BALLS_RECIPES          0x1DE // Unlocked Apricorn Balls Recipes Flag
 #define FLAG_UNUSED_0x1DF                    0x1DF // Unused Flag
 #define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
 #define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag

@@ -103,4 +103,7 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
+// Custom
+void ItemUseCB_FashionCase(u8 taskId, TaskFunc task);
+
 #endif // GUARD_PARTY_MENU_H
