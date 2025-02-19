@@ -59,7 +59,7 @@
 #define FLAG_TERA_ORB_NO_COST     0x2D // Tera Orb Unlimited Flag
 #define FLAG_EXP_SHARE            0x2E // Exp Share On/Off Flag
 #define FLAG_HACKING_DEVICE       0x2F // Hacking Device On/Off Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
+#define FLAG_CLOCK_MODE           0x30 // Clock Mode 12hr/24hr Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
