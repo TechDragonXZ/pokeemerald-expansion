@@ -888,6 +888,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 
     // Custom
     [STRINGID_PLAYERWHITEOUT3]                      = COMPOUND_STRING("{B_PLAYER_NAME} lost the battle!{PAUSE_UNTIL_PRESS}"),
+    [STRINGID_PKMNDROPPEDITEM]                      = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} dropped\nits {B_LAST_ITEM}!{WAIT_SE}\p"),
+    [STRINGID_BAGISFULL]                            = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} dropped\n{B_LAST_ITEM}!{WAIT_SE}\pBut your bag is full!\p"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -1403,6 +1405,12 @@ const u16 gDamageNonTypesDmgStringIds[] =
     [B_MSG_HURT_BY_VORTEX]       = STRINGID_PKMNHURTBYVORTEX,
     [B_MSG_BURNING_UP]           = STRINGID_PKMNBURNINGUP,
     [B_MSG_HURT_BY_ROCKS_THROWN] = STRINGID_PKMNHURTBYROCKSTHROWN,
+};
+
+const u16 gItemDroppedStringIds[] =
+{
+    [B_MSG_ITEM_DROPPED] = STRINGID_PKMNDROPPEDITEM,
+    [B_MSG_BAG_IS_FULL] = STRINGID_BAGISFULL,
 };
 
 const u8 gText_PkmnIsEvolving[] = _("What?\n{STR_VAR_1} is evolving!");
