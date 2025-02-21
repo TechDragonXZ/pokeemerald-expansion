@@ -304,17 +304,33 @@ static void FindMapsWithMon(u16 species)
 
     // Add roamers to the area map
     for (i = 0; i < ROAMER_COUNT; i++)
-    {
-        roamer = &gSaveBlock1Ptr->roamer[i];
-        if (species == roamer->species && roamer->active)
-        {
-            // This is a roamer's species, show where this roamer is currently
-            struct OverworldArea *roamerLocation = &sPokedexAreaScreen->overworldAreasWithMons[sPokedexAreaScreen->numOverworldAreas];
-            GetRoamerLocation(i, &roamerLocation->mapGroup, &roamerLocation->mapNum);
-            roamerLocation->regionMapSectionId = Overworld_GetMapHeaderByGroupAndId(roamerLocation->mapGroup, roamerLocation->mapNum)->regionMapSectionId;
-            sPokedexAreaScreen->numOverworldAreas++;
-        }
-    }
+	{
+	    roamer = &gSaveBlock1Ptr->roamer[i];
+#if SHOW_STALKERS_ON_POKEDEX
+	    if (species == roamer->species)
+#else
+	    if (species == roamer->species && !roamer->isStalker)
+#endif
+		{
+			// This is a roamer's species, show where this roamer is currently
+		    if (roamer->active)
+			{
+			    u8 mapGroup, mapNum;
+			    GetRoamerLocation(i, &mapGroup, &mapNum);
+			    switch (mapGroup)
+				{
+			    case MAP_GROUP_TOWNS_AND_ROUTES:
+				    SetAreaHasMon(mapGroup, mapNum);
+				    break;
+			    case MAP_GROUP_DUNGEONS:
+			    case MAP_GROUP_SPECIAL_AREA:
+				    SetSpecialMapHasMon(mapGroup, mapNum);
+				    break;
+				}
+				//don't break; Supports multiple roamers of the same species or species that already appear as normal encounters
+			}
+		}
+	}
 }
 
 static void SetAreaHasMon(u16 mapGroup, u16 mapNum)

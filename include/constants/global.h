@@ -80,7 +80,7 @@
 #define GIFT_RIBBONS_COUNT 11
 #define SAVED_TRENDS_COUNT 5
 #define PYRAMID_BAG_ITEMS_COUNT 10
-#define ROAMER_COUNT 1 // Number of maximum concurrent active roamers
+#define ROAMER_COUNT 4 // Number of maximum concurrent active roamers, can only fit 4 without expanding saveblock1
 
 //tx_registered_items_menu
 #define REGISTERED_ITEMS_MAX 10
