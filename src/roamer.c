@@ -207,6 +207,20 @@ void InitRoamer(void)
         TryAddRoamer(SPECIES_LATIOS, 40, FLEES, DAILY_RESPAWN);
         GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_LATIOS), FLAG_SET_SEEN);
     }
+    /*
+    if (VarGet(VAR_STARTER_MON) == 0 && FlagGet(FLAG_SYS_NATIONAL_DEX)) {
+        TryAddRoamer(SPECIES_ENTEI, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_ENTEI), FLAG_SET_SEEN);
+    }
+    if (VarGet(VAR_STARTER_MON) == 1 && FlagGet(FLAG_SYS_NATIONAL_DEX)) {
+        TryAddRoamer(SPECIES_SUICUNE, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_SUICUNE), FLAG_SET_SEEN);
+    }
+    if (VarGet(VAR_STARTER_MON) == 2 && FlagGet(FLAG_SYS_NATIONAL_DEX)) {
+        TryAddRoamer(SPECIES_RAIKOU, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_RAIKOU), FLAG_SET_SEEN);
+    }
+    */
 
     TryAddStalker(SPECIES_WEEDLE, 0, DOES_NOT_FLEE, TERRESTRIAL, INSTANT_RESPAWN);
 #endif

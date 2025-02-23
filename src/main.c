@@ -272,6 +272,27 @@ static void ReadKeys(void)
     gMain.newKeys = gMain.newKeysRaw;
     gMain.newAndRepeatedKeys = gMain.newKeysRaw;
 
+    if (keyInput == SLEEP_KEYS)
+    {
+        vu16 IeBak, DispCntBak;
+        DispCntBak = REG_DISPCNT;      // LCDC OFF
+        REG_DISPCNT = 1 << 7;          // DISP_LCDC_OFF = 1 << 7
+        REG_KEYCNT= KEY_AND_INTR | KEY_INTR_ENABLE | WAKE_KEYS;
+        REG_IME = 0;
+        IeBak = REG_IE;               // IE save
+        REG_IE = INTR_FLAG_KEYPAD;    // Enable Key interrupt
+        REG_IME = 1;
+        asm("swi #3" : : : "r2", "r12", "memory");              // This is the Stop command;
+        REG_IME = 0;
+        REG_IE = IeBak;               // IE return
+        REG_IME = 1;
+        REG_DISPCNT = DispCntBak;     // LCDC ON
+        VBlankIntrWait();
+        while (keyInput)              // Doesn't continue until the wake keys are let go
+            keyInput = REG_KEYINPUT ^ KEYS_MASK;
+        return;
+    }
+
     // BUG: Key repeat won't work when pressing L using L=A button mode
     // because it compares the raw key input with the remapped held keys.
     // Note that newAndRepeatedKeys is never remapped either.
