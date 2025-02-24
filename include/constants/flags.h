@@ -60,7 +60,7 @@
 #define FLAG_EXP_SHARE            0x2E // Exp Share On/Off Flag
 #define FLAG_HACKING_DEVICE       0x2F // Hacking Device On/Off Flag
 #define FLAG_CLOCK_MODE           0x30 // Clock Mode 12hr/24hr Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
+#define FLAG_POKERADAR            0x31 // Pokéradar Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag

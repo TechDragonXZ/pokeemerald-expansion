@@ -2731,4 +2731,17 @@ extern const u8 gText_CosplayLibre[];
 extern const u8 gText_HackingDeviceOn[];
 extern const u8 gText_HackingDeviceOff[];
 
+// PokéRadar
+extern const u8 gText_PokeRadarOn[];
+extern const u8 gText_PokeRadarOff[];
+
+// Soot Sack
+extern const u8 gText_SootSack[];
+
+// Move Item
+extern const u8 gMenuText_Move[];
+extern const u8 gText_MoveItemWhere[];
+extern const u8 gText_XsYAnd[];
+extern const u8 gText_XsYWereSwapped[];
+
 #endif // GUARD_STRINGS_H

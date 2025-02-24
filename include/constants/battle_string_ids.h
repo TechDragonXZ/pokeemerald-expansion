@@ -729,8 +729,33 @@
 #define STRINGID_PLAYERWHITEOUT3                      725
 #define STRINGID_PKMNDROPPEDITEM                      726
 #define STRINGID_BAGISFULL                            727
+#define STRINGID_HARDY                                728
+#define STRINGID_LONELY                               729
+#define STRINGID_BRAVE                                730
+#define STRINGID_ADAMANT                              731
+#define STRINGID_NAUGHTY                              732
+#define STRINGID_BOLD                                 733
+#define STRINGID_DOCILE                               734
+#define STRINGID_RELAXED                              735
+#define STRINGID_IMPISH                               736
+#define STRINGID_LAX                                  738
+#define STRINGID_TIMID                                739
+#define STRINGID_HASTY                                740
+#define STRINGID_SERIOUS                              741
+#define STRINGID_JOLLY                                742
+#define STRINGID_NAIVE                                743
+#define STRINGID_MODEST                               744
+#define STRINGID_MILD                                 745
+#define STRINGID_QUIET                                746
+#define STRINGID_BASHFUL                              747
+#define STRINGID_RASH                                 748
+#define STRINGID_CALM                                 749
+#define STRINGID_GENTLE                               750
+#define STRINGID_SASSY                                751
+#define STRINGID_CAREFUL                              752
+#define STRINGID_QUIRKY                               753
 
-#define BATTLESTRINGS_COUNT                           728
+#define BATTLESTRINGS_COUNT                           754
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

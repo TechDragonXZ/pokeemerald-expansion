@@ -1582,6 +1582,7 @@ const u8 gText_Relearn[] = _("{START_BUTTON} RELEARN"); // future note: don't de
 const u8 gText_Rename[] = _("Rename");
 
 // Custom
+// Fashion Case
 const u8 gText_WhichOutfit[] = _("Put on which\noutfit?");
 const u8 gText_CosplayNone[] = _("None");
 const u8 gText_CosplayRockStar[] = _("Rock Star");
@@ -1590,5 +1591,19 @@ const u8 gText_CosplayPopStar[] = _("Pop Star");
 const u8 gText_CosplayPhd[] = _("Ph. D.");
 const u8 gText_CosplayLibre[] = _("Libre");
 
+// Hacking Device
 const u8 gText_HackingDeviceOn[] = _("Hacking Device: Activated{PAUSE_UNTIL_PRESS}");
 const u8 gText_HackingDeviceOff[] = _("Hacking Device: Deactivated{PAUSE_UNTIL_PRESS}");
+
+// PokéRadar
+const u8 gText_PokeRadarOn[] = _("PokéRadar: Activated{PAUSE_UNTIL_PRESS}");
+const u8 gText_PokeRadarOff[] = _("PokéRadar: Deactivated{PAUSE_UNTIL_PRESS}");
+
+// Soot Sack
+const u8 gText_SootSack[] = _("Ash: {STR_VAR_1}{PAUSE_UNTIL_PRESS}");
+
+// Move Item
+const u8 gMenuText_Move[] = _("MOVE");
+const u8 gText_MoveItemWhere[] = _("Move {STR_VAR_2} to where?");
+const u8 gText_XsYAnd[] = _("{STR_VAR_1}'s {STR_VAR_2} and\n");
+const u8 gText_XsYWereSwapped[] = _("{STR_VAR_1}'s {STR_VAR_2} were swapped!{PAUSE_UNTIL_PRESS}");

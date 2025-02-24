@@ -312,20 +312,27 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
     u8 range;
     u8 rand;
 
+    u8 count = gPlayerPartyCount;
+    u8 fixedLVL = 0;
+
+    while (count-- > 0)
+    {
+        if (GetMonData(&gPlayerParty[count], MON_DATA_SPECIES) != SPECIES_NONE){
+            fixedLVL += (GetMonData(&gPlayerParty[count], MON_DATA_LEVEL));
+        }
+    }
+    fixedLVL = fixedLVL / gPlayerPartyCount;
+
     if (LURE_STEP_COUNT == 0)
     {
         // Make sure minimum level is less than maximum level
-        if (wildPokemon[wildMonIndex].maxLevel >= wildPokemon[wildMonIndex].minLevel)
         {
-            min = wildPokemon[wildMonIndex].minLevel;
-            max = wildPokemon[wildMonIndex].maxLevel;
+            min = fixedLVL - 3;
+            max = fixedLVL + 3;
         }
-        else
-        {
-            min = wildPokemon[wildMonIndex].maxLevel;
-            max = wildPokemon[wildMonIndex].minLevel;
-        }
-        range = max - min + 1;
+	    if (min <= 0)
+		    min = 1;
+        range = max - min + 1; // note that range will always be equal to 7 in this case: fixedLVL + 3 - (fixedLVL - 3) + 1 = fixedLVL - fixedLVL + 3 + 3 + 1 = 7
         rand = Random() % range;
 
         // check ability for max level mon
@@ -1120,7 +1127,7 @@ bool8 TryDoDoubleWildBattle(void)
         return FALSE;
     else if (B_FLAG_FORCE_DOUBLE_WILD != 0 && FlagGet(B_FLAG_FORCE_DOUBLE_WILD))
         return TRUE;
-    else if (B_DOUBLE_WILD_CHANCE != 0 && ((Random() % 100) + 1 <= B_DOUBLE_WILD_CHANCE))
+    else if (B_DOUBLE_WILD_CHANCE != 0 && ((Random() % 100) + 1 <= B_DOUBLE_WILD_CHANCE) && !FlagGet(FLAG_POKERADAR))
         return TRUE;
     return FALSE;
 }
