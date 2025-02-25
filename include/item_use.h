@@ -69,5 +69,6 @@ bool32 CanThrowBall(void);
 bool32 CannotUseItemsInBattle(u16 itemId, struct Pokemon *mon);
 void ItemUseOutOfBattle_CraftingKit(u8);
 void ItemUseOutOfBattle_Hexorb(u8); // Hexorb
+void ItemUseOutOfBattle_PokeBall(u8);
 
 #endif // GUARD_ITEM_USE_H
