@@ -1018,8 +1018,9 @@
 #define ITEM_IRON_BARKTONGUE 849
 #define ITEM_DOPPEL_BONNETS 850
 #define ITEM_UTILITY_PACK 851
+#define ITEM_HEXORB 852 //hexorb Branch
 
-#define ITEMS_COUNT 852
+#define ITEMS_COUNT 853
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

@@ -10,14 +10,15 @@ RustboroCity_PokemonSchool_EventScript_Blackboard::
 RustboroCity_PokemonSchool_EventScript_ChooseBlackboardTopic::
 	message RustboroCity_PokemonSchool_Text_ReadWhichTopic
 	waitmessage
-	multichoicegrid 8, 1, MULTI_STATUS_INFO, 3, FALSE
+	multichoicegrid 8, 1, MULTI_STATUS_INFO2, 3, FALSE
 	switch VAR_RESULT
 	case 0, RustboroCity_PokemonSchool_EventScript_Poison
 	case 1, RustboroCity_PokemonSchool_EventScript_Paralysis
 	case 2, RustboroCity_PokemonSchool_EventScript_Sleep
 	case 3, RustboroCity_PokemonSchool_EventScript_Burn
 	case 4, RustboroCity_PokemonSchool_EventScript_Freeze
-	case 5, RustboroCity_PokemonSchool_EventScript_ExitTopicSelect
+	case 5, RustboroCity_PokemonSchool_EventScript_Frostbite
+	case 6, RustboroCity_PokemonSchool_EventScript_ExitTopicSelect
 	case MULTI_B_PRESSED, RustboroCity_PokemonSchool_EventScript_ExitTopicSelect
 	end
 
@@ -198,6 +199,17 @@ RustboroCity_PokemonSchool_EventScript_ScottWatchStudents::
 	msgbox RustboroCity_PokemonSchool_Text_StudentTalentLevelUnknown, MSGBOX_DEFAULT
 	release
 	end
+
+RustboroCity_PokemonSchool_EventScript_Frostbite::
+	msgbox RustboroCity_PokemonSchool_Text_ExplainFrostbite, MSGBOX_DEFAULT
+	goto RustboroCity_PokemonSchool_EventScript_ChooseBlackboardTopic
+	end
+
+RustboroCity_PokemonSchool_Text_ExplainFrostbite:
+	.string "Frostbite reduces SP. ATTACK power, and it\n"
+	.string "steadily reduces the victim's HP.\p"
+	.string "Frostbite lingers after battle.\n"
+	.string "Cure Frostbite using an ICE HEAL.$"
 
 RustboroCity_PokemonSchool_Text_BlackboardListsStatusChanges:
 	.string "The blackboard lists status changes\n"

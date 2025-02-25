@@ -3462,4 +3462,9 @@ extern const u32 gItemIconPalette_CyanScarf[];
 extern const u32 gBerryPic_Hopo[];
 extern const u32 gBerryPalette_Hopo[];
 
+// Start hexorb branch
+extern const u32 gItemIcon_Hexorb[];
+extern const u32 gItemIconPalette_Hexorb[];
+// End hexorb Branch
+
 #endif //GUARD_GRAPHICS_H

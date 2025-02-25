@@ -612,6 +612,19 @@ static const struct WindowTemplate sOrderWhichApplianceMsgWindowTemplate =
     .baseBlock = 0x299,
 };
 
+// Start hexorb branch
+static const struct WindowTemplate sInflictWhichStatusMsgWindowTemplate =
+{
+    .bg = 2,
+    .tilemapLeft = 1,
+    .tilemapTop = 17,
+    .width = 16,
+    .height = 2,
+    .paletteNum = 15,
+    .baseBlock = 0x24F,
+};
+// End hexorb Branch
+
 static const struct WindowTemplate sItemGiveTakeWindowTemplate =
 {
     .bg = 2,
@@ -677,6 +690,19 @@ static const struct WindowTemplate sZygardeCubeSelectWindowTemplate =
     .paletteNum = 14,
     .baseBlock = 0x2E9,
 };
+
+// Start hexorb branch
+static const struct WindowTemplate sHexorbSelectWindowTemplate =
+{
+    .bg = 2,
+    .tilemapLeft = 20,
+    .tilemapTop = 7,
+    .width = 8,
+    .height = 12,
+    .paletteNum = 15,
+    .baseBlock = 0x299,
+};
+// End hexorb Branch
 
 static const struct WindowTemplate sPartyMenuYesNoWindowTemplate =
 {
@@ -818,6 +844,7 @@ static const u8 *const sActionStringTable[] =
     // Custom
     [PARTY_MSG_WHICH_OUTFIT]           = gText_WhichOutfit,
     [PARTY_MSG_MOVE_ITEM_WHERE]        = gText_MoveItemWhere,
+    [PARTY_MSG_WHICH_STATUS]           = COMPOUND_STRING("Inflict which status?"), // hexorb Branch
 };
 
 static const u8 *const sDescriptionStringTable[] =
@@ -886,6 +913,17 @@ struct
     [MENU_COSPLAY_PHD] = {gText_CosplayPhd, CursorCb_CosplayPhd},
     [MENU_COSPLAY_LIBRE] = {gText_CosplayLibre, CursorCb_CosplayLibre},
     [MENU_MOVE_ITEM] = {gMenuText_Move, CursorCb_MoveItem},
+// Start hexorb branch
+    [MENU_INFLICT_SLEEP] = {gText_Slp, TryHexorbAndPrintResult},
+    [MENU_INFLICT_POISON] = {gText_Psn, TryHexorbAndPrintResult},
+    [MENU_INFLICT_BURN] = {gText_Brn, TryHexorbAndPrintResult},
+#if B_USE_FROSTBITE == TRUE
+    [MENU_INFLICT_FREEZE_FROSTBITE] = {gText_Fsb, TryHexorbAndPrintResult},
+#else
+    [MENU_INFLICT_FREEZE_FROSTBITE] = {gText_Frz, TryHexorbAndPrintResult},
+#endif
+    [MENU_INFLICT_PARALYSIS] = {gText_Par, TryHexorbAndPrintResult},
+// End Hexorb branch
 };
 
 static const u8 sPartyMenuAction_SummarySwitchCancel[] = {MENU_SUMMARY, MENU_SWITCH, MENU_CANCEL1};
@@ -906,6 +944,7 @@ static const u8 sPartyMenuAction_ZygardeCube[] = {MENU_CHANGE_FORM, MENU_CHANGE_
 
 // Custom
 static const u8 sPartyMenuAction_FashionCase[] = {MENU_COSPLAY_NONE, MENU_COSPLAY_ROCK_STAR, MENU_COSPLAY_BELLE, MENU_COSPLAY_POP_STAR, MENU_COSPLAY_PHD, MENU_COSPLAY_LIBRE, MENU_CANCEL1};
+static const u8 sPartyMenuAction_Hexorb[] = {MENU_INFLICT_SLEEP, MENU_INFLICT_POISON, MENU_INFLICT_BURN, MENU_INFLICT_FREEZE_FROSTBITE, MENU_INFLICT_PARALYSIS, MENU_CANCEL1}; // hexorb Branch
 
 
 
@@ -929,6 +968,7 @@ static const u8 *const sPartyMenuActions[] =
     [ACTIONS_ZYGARDE_CUBE]  = sPartyMenuAction_ZygardeCube,
     // Custom
     [ACTIONS_FASHION_CASE]  = sPartyMenuAction_FashionCase,
+    [ACTIONS_HEXORB] = sPartyMenuAction_Hexorb, // hexorb Branch
 };
 
 static const u8 sPartyMenuActionCounts[] =
@@ -951,6 +991,7 @@ static const u8 sPartyMenuActionCounts[] =
     [ACTIONS_ZYGARDE_CUBE]  = ARRAY_COUNT(sPartyMenuAction_ZygardeCube),
     // Custom
     [ACTIONS_FASHION_CASE]  = ARRAY_COUNT(sPartyMenuAction_FashionCase),
+    [ACTIONS_HEXORB] = ARRAY_COUNT(sPartyMenuAction_Hexorb), // hexorb Branch
 };
 
 static const u16 sFieldMoves[FIELD_MOVES_COUNT + 1] =

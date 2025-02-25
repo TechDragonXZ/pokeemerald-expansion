@@ -2166,3 +2166,8 @@ const u32 gItemIconPalette_UtilityPack[] = INCBIN_U32("graphics/items/icon_palet
 
 const u32 gItemIconPalette_HackingDevice[] = INCBIN_U32("graphics/items/icon_palettes/hacking_device.gbapal.lz");
 const u32 gItemIconPalette_CyanScarf[] = INCBIN_U32("graphics/items/icon_palettes/cyan_scarf.gbapal.lz");
+
+// Start hexorb branch
+const u32 gItemIcon_Hexorb[] = INCBIN_U32("graphics/items/icons/hexorb.4bpp.lz");
+const u32 gItemIconPalette_Hexorb[] = INCBIN_U32("graphics/items/icon_palettes/hexorb.gbapal.lz");
+// End hexorb branch
