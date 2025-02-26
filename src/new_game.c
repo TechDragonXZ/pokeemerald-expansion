@@ -207,6 +207,7 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
+    gSaveBlock2Ptr->autoRun = FALSE;
     ResetItemFlags();
 #if MULTIPLE_ROAMERS_EXAMPLE	
     InitRoamer();

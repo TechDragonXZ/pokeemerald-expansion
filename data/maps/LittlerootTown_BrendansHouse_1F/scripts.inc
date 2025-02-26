@@ -383,10 +383,10 @@ PlayersHouse_1F_Text_TheresAMovieOnTV:
 
 PlayersHouse_1F_Text_RunningShoesManual:
 	.string "It's the instruction booklet for the\n"
-	.string "RUNNING SHOES.\p"
-	.string "“Press the B Button to run while\n"
-	.string "wearing your RUNNING SHOES.\p"
-	.string "“Lace up your RUNNING SHOES and hit\n"
+	.string "RUNNING SHOES. “Hold the B Button or\p"
+	.string "press the L Button to run while wearing\n"
+	.string "your RUNNING SHOES. “Lace up your\p"
+	.string "RUNNING SHOES and hit\n"
 	.string "the road running!”$"
 
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
