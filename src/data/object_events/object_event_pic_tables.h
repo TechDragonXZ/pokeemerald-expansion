@@ -1355,3 +1355,54 @@ static const struct SpriteFrameImage sPicTable_KirliaOld[] = {
 static const struct SpriteFrameImage sPicTable_RubySapphireMay[] = {
     overworld_ascending_frames(gObjectEventPic_RubySapphireMayNormal, 2, 4),
 };
+
+static const struct SpriteFrameImage sPicTable_ApricornTreeYellow[] = {
+    overworld_frame(gObjectEventPic_ApricornTreeYellow, 2, 4, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_ApricornTreeEmpty[] = {
+    overworld_frame(gObjectEventPic_ApricornTreeEmpty, 2, 4, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_ApricornTreeBlack[] = {
+    overworld_frame(gObjectEventPic_ApricornTreeBlack, 2, 4, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_ApricornTreeWhite[] = {
+    overworld_frame(gObjectEventPic_ApricornTreeWhite, 2, 4, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_ApricornTreeGreen[] = {
+    overworld_frame(gObjectEventPic_ApricornTreeGreen, 2, 4, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_ApricornTreeBlue[] = {
+    overworld_frame(gObjectEventPic_ApricornTreeBlue, 2, 4, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_ApricornTreePink[] = {
+    overworld_frame(gObjectEventPic_ApricornTreePink, 2, 4, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_ApricornTreeRed[] = {
+    overworld_frame(gObjectEventPic_ApricornTreeRed, 2, 4, 0),
+};
+
+// Misc
+static const struct SpriteFrameImage sPicTable_TMBall[] = {
+    overworld_frame(gObjectEventPic_TMBall, 2, 2, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_Megastone[] = {
+    overworld_frame(gObjectEventPic_Megastone, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Megastone, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Megastone, 2, 2, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_HoopaRing[] = {
+    obj_frame_tiles(gObjectEventPic_HoopaRing),
+};
+
+static const struct SpriteFrameImage sPicTable_UltraWormhole[] = {
+    obj_frame_tiles(gObjectEventPic_UltraWormhole),
+};

@@ -243,10 +243,27 @@
 #define OBJ_EVENT_GFX_POKE_BALL                  239
 #define OBJ_EVENT_GFX_OW_MON                     240
 
+// Custom
+// Apricorns
+#define OBJ_EVENT_GFX_APRICORN_TREE_RED          241
+#define OBJ_EVENT_GFX_APRICORN_TREE_BLUE         242
+#define OBJ_EVENT_GFX_APRICORN_TREE_PINK         243
+#define OBJ_EVENT_GFX_APRICORN_TREE_GREEN        244
+#define OBJ_EVENT_GFX_APRICORN_TREE_BLACK        245
+#define OBJ_EVENT_GFX_APRICORN_TREE_WHITE        246
+#define OBJ_EVENT_GFX_APRICORN_TREE_YELLOW       247
+#define OBJ_EVENT_GFX_APRICORN_TREE_EMPTY        248
+
+// Misc
+#define OBJ_EVENT_GFX_HOOPA_RING                 249
+#define OBJ_EVENT_GFX_ULTRA_WORMHOLE             250
+#define OBJ_EVENT_GFX_MEGASTONE                  251
+#define OBJ_EVENT_GFX_TM_BALL                    252
+
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        241
+#define NUM_OBJ_EVENT_GFX                        253
 
 
 // These are dynamic object gfx ids.
@@ -383,6 +400,13 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+
+// Custom
+#define OBJ_EVENT_PAL_TAG_APRICORN_BLUE           0x1125
+#define OBJ_EVENT_PAL_TAG_APRICORN_PINK           0x1126
+#define OBJ_EVENT_PAL_TAG_HOOPA_RING              0x1127
+#define OBJ_EVENT_PAL_TAG_ULTRA_WORMHOLE          0x1128
+#define OBJ_EVENT_PAL_TAG_MEGASTONE               0x1129
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

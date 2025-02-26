@@ -454,3 +454,28 @@ const u16 gObjectEventPal_BeastBall[] = INCBIN_U16("graphics/object_events/pics/
 const u16 gObjectEventPal_StrangeBall[] = INCBIN_U16("graphics/object_events/pics/misc/ball_strange.gbapal");
 #endif //ITEM_STRANGE_BALL
 #endif //OW_FOLLOWERS_POKEBALLS
+
+// Apricorns - Pallets
+const u16 gObjectEventPal_ApricornPink[] = INCBIN_U16("graphics/object_events/palettes/apricorn_pink.gbapal");
+const u16 gObjectEventPal_ApricornBlue[] = INCBIN_U16("graphics/object_events/palettes/apricorn_blue.gbapal");
+
+// Apricorns - Tree
+const u32 gObjectEventPic_ApricornTreeYellow[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_yellow.4bpp");
+const u32 gObjectEventPic_ApricornTreeBlack[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_black.4bpp");
+const u32 gObjectEventPic_ApricornTreeWhite[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_white.4bpp");
+const u32 gObjectEventPic_ApricornTreeGreen[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_green.4bpp");
+const u32 gObjectEventPic_ApricornTreeBlue[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_blue.4bpp");
+const u32 gObjectEventPic_ApricornTreePink[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_pink.4bpp");
+const u32 gObjectEventPic_ApricornTreeRed[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_red.4bpp");
+const u32 gObjectEventPic_ApricornTreeEmpty[] = INCBIN_U32("graphics/object_events/pics/apricorn_trees/standalone/apricorn_empty.4bpp");
+
+// Misc
+const u32 gObjectEventPic_Megastone[] = INCBIN_U32("graphics/object_events/pics/misc/mega_stone.4bpp");
+const u32 gObjectEventPic_TMBall[] = INCBIN_U32("graphics/object_events/pics/misc/pokeball_tm.4bpp");
+const u32 gObjectEventPic_HoopaRing[] = INCBIN_U32("graphics/object_events/pics/misc/hoopa_ring.4bpp");
+const u32 gObjectEventPic_UltraWormhole[] = INCBIN_U32("graphics/object_events/pics/misc/ultra_wormhole.4bpp");
+
+// Misc - Paletts
+const u16 gObjectEventPal_Megastone[] = INCBIN_U16("graphics/object_events/palettes/mega_stone.gbapal");
+const u16 gObjectEventPal_HoopaRing[] = INCBIN_U16("graphics/object_events/palettes/hoopa_ring.gbapal");
+const u16 gObjectEventPal_UltraWormhole[] = INCBIN_U16("graphics/object_events/palettes/ultra_wormhole.gbapal");

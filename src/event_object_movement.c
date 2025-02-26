@@ -548,6 +548,13 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
 #endif //OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_Substitute,            OBJ_EVENT_PAL_TAG_SUBSTITUTE},
     {gObjectEventPaletteEmotes,             OBJ_EVENT_PAL_TAG_EMOTES},
+
+    // Custom
+    {gObjectEventPal_ApricornBlue,          OBJ_EVENT_PAL_TAG_APRICORN_BLUE},
+    {gObjectEventPal_ApricornPink,          OBJ_EVENT_PAL_TAG_APRICORN_PINK},
+    {gObjectEventPal_HoopaRing,             OBJ_EVENT_PAL_TAG_HOOPA_RING},
+    {gObjectEventPal_UltraWormhole,         OBJ_EVENT_PAL_TAG_ULTRA_WORMHOLE},
+    {gObjectEventPal_Megastone,             OBJ_EVENT_PAL_TAG_MEGASTONE},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else
@@ -10970,6 +10977,11 @@ bool8 MovementAction_EmoteDoubleExclamationMark_Step0(struct ObjectEvent *object
     FieldEffectStart(FLDEFF_DOUBLE_EXCL_MARK_ICON);
     sprite->sActionFuncId = 1;
     return TRUE;
+}
+
+u8 GetObjectEventApricornTreeId(u8 objectEventId)
+{
+    return gObjectEvents[objectEventId].trainerRange_berryTreeId;
 }
 
 // Get gfx data from daycare pokemon and store it in vars

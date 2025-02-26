@@ -1536,3 +1536,28 @@ static const struct StepAnimTable sStepAnimTables[] = {
     },
     {},
 };
+
+static const union AnimCmd sAnim_ApricornTree[] =
+{
+    ANIMCMD_FRAME(0, 48),
+    ANIMCMD_FRAME(1, 48),
+    ANIMCMD_FRAME(0, 48),
+    ANIMCMD_FRAME(1, 48),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnimTable_ApricornTree[] = {
+    sAnim_ApricornTree,
+};
+
+static const union AnimCmd sAnim_Megastone[] =
+{
+    ANIMCMD_FRAME(0, 16),
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_FRAME(2, 16),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnimTable_Megastone[] = {
+    sAnim_Megastone,
+};

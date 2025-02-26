@@ -248,6 +248,22 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giddy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan1;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan2;
 
+// Custom
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTreeRed;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTreeBlue;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTreePink;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTreeGreen;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTreeBlack;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTreeWhite;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTreeYellow;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTreeEmpty;
+
+// Misc
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TMBall;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Megastone;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoopaRing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UltraWormhole;
+
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
     [OBJ_EVENT_GFX_BRENDAN_MACH_BIKE] =        &gObjectEventGraphicsInfo_BrendanMachBike,
@@ -490,6 +506,23 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
     [OBJ_EVENT_GFX_POKE_BALL] =                &gObjectEventGraphicsInfo_PokeBall,
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
+
+    // Custom
+    // Apricorns
+    [OBJ_EVENT_GFX_APRICORN_TREE_RED] =        &gObjectEventGraphicsInfo_ApricornTreeRed,
+    [OBJ_EVENT_GFX_APRICORN_TREE_BLUE] =       &gObjectEventGraphicsInfo_ApricornTreeBlue,
+    [OBJ_EVENT_GFX_APRICORN_TREE_PINK] =       &gObjectEventGraphicsInfo_ApricornTreePink,
+    [OBJ_EVENT_GFX_APRICORN_TREE_GREEN] =      &gObjectEventGraphicsInfo_ApricornTreeGreen,
+    [OBJ_EVENT_GFX_APRICORN_TREE_BLACK] =      &gObjectEventGraphicsInfo_ApricornTreeBlack,
+    [OBJ_EVENT_GFX_APRICORN_TREE_WHITE] =      &gObjectEventGraphicsInfo_ApricornTreeWhite,
+    [OBJ_EVENT_GFX_APRICORN_TREE_YELLOW] =     &gObjectEventGraphicsInfo_ApricornTreeYellow,
+    [OBJ_EVENT_GFX_APRICORN_TREE_EMPTY] =      &gObjectEventGraphicsInfo_ApricornTreeEmpty,
+
+    // Misc
+    [OBJ_EVENT_GFX_HOOPA_RING] =               &gObjectEventGraphicsInfo_HoopaRing,
+    [OBJ_EVENT_GFX_ULTRA_WORMHOLE] =           &gObjectEventGraphicsInfo_UltraWormhole,
+    [OBJ_EVENT_GFX_MEGASTONE] =                &gObjectEventGraphicsInfo_Megastone,
+    [OBJ_EVENT_GFX_TM_BALL] =                  &gObjectEventGraphicsInfo_TMBall,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
