@@ -176,3 +176,4 @@ SECTIONS {
         *(*);
     }
 }
+/* Random */
