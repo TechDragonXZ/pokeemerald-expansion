@@ -25,5 +25,7 @@ void TrySetCurSecretBaseIndex(void);
 void CheckPlayerHasSecretBase(void);
 void ToggleSecretBaseEntranceMetatile(void);
 void ReceiveSecretBasesData(void *records, size_t recordSize, u8 linkIdx);
+void CheckNoMoreSecretBases(void);
+bool8 IsSecretBaseOwnedByAnotherPlayerFromIndex(u16 secretBaseIdx);
 
 #endif //GUARD_SECRET_BASE_H

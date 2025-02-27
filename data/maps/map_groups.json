@@ -34,6 +34,8 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
+    "gMapGroup_DeepPetalburgWoods",
+    "gMapGroup_DeepPetalburgWoods_Indoors",
     "gMapGroup_None"
   ],
   "gMapGroup_TownsAndRoutes": [
@@ -621,6 +623,12 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
+  ],
+  "gMapGroup_DeepPetalburgWoods": [
+    "DeepPetalburgWoods"
+  ],
+  "gMapGroup_DeepPetalburgWoods_Indoors": [
+    "PokeballCrafter_House"
   ],
   "gMapGroup_None": [
     "None"

@@ -558,3 +558,4 @@ gSpecials::
 	def_special UseBlankMessageToCancelPokemonPic
 	def_special ObjectEventInteractionGetApricornTreeData
 	def_special ObjectEventInteractionPickApricornTree
+	def_special CheckNoMoreSecretBases

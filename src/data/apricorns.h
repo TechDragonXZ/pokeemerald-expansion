@@ -58,4 +58,75 @@ const struct ApricornTree gApricornTrees[APRICORN_TREE_COUNT] =
     {
         .apricornType = APRICORN_YELLOW
     },
+
+    [RED_APRICORN_TREE_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_RED
+    },
+
+    [BLUE_APRICORN_TREE_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_BLUE
+    },
+
+    [PINK_APRICORN_TREE_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_PINK
+    },
+
+    [WHITE_APRICORN_TREE_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_WHITE
+    },
+
+    [BLACK_APRICORN_TREE_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_BLACK
+    },
+
+    [GREEN_APRICORN_TREE_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_GREEN
+    },
+
+    [YELLOW_APRICORN_TREE_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_YELLOW
+    },
+
+    [RED_APRICORN_TREE_DEEP_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_RED
+    },
+
+    [BLUE_APRICORN_TREE_DEEP_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_BLUE
+    },
+
+    [PINK_APRICORN_TREE_DEEP_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_PINK
+    },
+
+    [WHITE_APRICORN_TREE_DEEP_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_WHITE
+    },
+
+    [BLACK_APRICORN_TREE_DEEP_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_BLACK
+    },
+
+    [GREEN_APRICORN_TREE_DEEP_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_GREEN
+    },
+
+    [YELLOW_APRICORN_TREE_DEEP_PETALBURG_WOODS] =
+    {
+        .apricornType = APRICORN_YELLOW
+    },
+
 };

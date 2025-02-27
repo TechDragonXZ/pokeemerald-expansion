@@ -1375,3 +1375,69 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "After all, a tough TRAINER is\n"
 	.string "the perfect fit for the BATTLE TENT!\p"
 	.string "Give it your best effort!$"
+
+SlateportCity_EventScript_ImportsItemsClerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart SlateportCity_Pokemart_ItemImports
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_ItemImports::
+	.2byte ITEM_TUMBLESTONE
+	.2byte ITEM_SKY_TUMBLESTONE
+	.2byte ITEM_BLACK_TUMBLESTONE
+	.2byte ITEM_BROWN_APRICORN
+	.2byte ITEM_IRON_CHUNK
+	.2byte ITEM_HOPO_BERRY
+	.2byte ITEM_CANDY_TRUFFLE
+	.2byte ITEM_DIRESHROOM
+	.2byte ITEM_DOPPEL_BONNETS
+	.2byte ITEM_IRON_BARKTONGUE
+	.2byte ITEM_SWORDCAP
+	.2byte ITEM_BUGWORT
+	.2byte ITEM_KING_LEAF
+	.2byte ITEM_MEDICINAL_LEEK
+	.2byte ITEM_PEPUP_PLANT
+	.2byte ITEM_VIVICHOKE
+	.2byte ITEM_MAX_MUSHROOMS
+	.2byte ITEM_MAX_HONEY
+	pokemartlistend
+
+SlateportCity_EventScript_ImportsDecoClerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemartdecoration2 SlateportCity_Pokemart_DecoImports
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_DecoImports::
+	.2byte DECOR_REGICE_DOLL
+	.2byte DECOR_REGIROCK_DOLL
+	.2byte DECOR_REGISTEEL_DOLL
+	.2byte DECOR_MUD_BALL
+	.2byte DECOR_FENCE_LENGTH
+	.2byte DECOR_FENCE_WIDTH
+	.2byte DECOR_TIRE
+	.2byte DECOR_BREAKABLE_DOOR
+	.2byte DECOR_SOLID_BOARD
+	.2byte DECOR_SAND_ORNAMENT
+	.2byte DECOR_STAND
+	.2byte DECOR_SLIDE
+	.2byte DECOR_TV
+	.2byte DECOR_ROUND_TV
+	.2byte DECOR_CUTE_TV
+	.2byte DECOR_WAILMER_DOLL
+	.2byte DECOR_RHYDON_DOLL
+	.2byte DECOR_RED_TENT
+	.2byte DECOR_BLUE_TENT
+	.2byte DECOR_GLASS_ORNAMENT
+	pokemartlistend

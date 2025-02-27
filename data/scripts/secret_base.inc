@@ -26,7 +26,7 @@ SecretBase_Text_DiscoveredSmallEntrance:
 
 SecretBase_EventScript_CheckEntrance::
 	special GetSecretBaseTypeInFrontOfPlayer
-	special CheckPlayerHasSecretBase
+	special CheckNoMoreSecretBases
 	goto_if_eq VAR_RESULT, TRUE, SecretBase_EventScript_AlreadyHasSecretBase
 	checkpartymove MOVE_SECRET_POWER
 	setfieldeffectargument 0, VAR_RESULT
@@ -729,7 +729,7 @@ SecretBase_Text_SkittyTV:
 	.string "It looks ready to stroll away…$"
 
 SecretBase_Text_WouldYouLikeToMoveBases:
-	.string "You may only make one SECRET BASE.\p"
+	.string "You have too many SECRET BASES.\p"
 	.string "Would you like to move from the SECRET\n"
 	.string "BASE near {STR_VAR_1}?$"
 

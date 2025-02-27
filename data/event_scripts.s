@@ -1157,4 +1157,8 @@ EventScript_VsSeekerChargingDone::
     .include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/craft.inc"
 
+	.include "data/maps/DeepPetalburgWoods/scripts.inc"
+
+	.include "data/maps/PokeballCrafter_House/scripts.inc"
+
 	.include "data/maps/None/scripts.inc"

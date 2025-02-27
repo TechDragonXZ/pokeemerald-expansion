@@ -53,6 +53,8 @@
 #include "constants/trainer_types.h"
 #include "constants/union_room.h"
 #include "constants/weather.h"
+#include "constants/metatile_behaviors.h"
+#include "bike.h"
 
 // this file was known as evobjmv.c in Game Freak's original source
 
@@ -3835,7 +3837,7 @@ bool8 MovementType_LookAround_Step2(struct ObjectEvent *objectEvent, struct Spri
 
 bool8 MovementType_LookAround_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
     {
         sprite->sTypeFuncId = 4;
         return TRUE;
@@ -4155,7 +4157,7 @@ bool8 MovementType_FaceDownAndUp_Step2(struct ObjectEvent *objectEvent, struct S
 
 bool8 MovementType_FaceDownAndUp_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
     {
         sprite->sTypeFuncId = 4;
         return TRUE;
@@ -4205,7 +4207,7 @@ bool8 MovementType_FaceLeftAndRight_Step2(struct ObjectEvent *objectEvent, struc
 
 bool8 MovementType_FaceLeftAndRight_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
     {
         sprite->sTypeFuncId = 4;
         return TRUE;
@@ -4255,7 +4257,7 @@ bool8 MovementType_FaceUpAndLeft_Step2(struct ObjectEvent *objectEvent, struct S
 
 bool8 MovementType_FaceUpAndLeft_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
     {
         sprite->sTypeFuncId = 4;
         return TRUE;
@@ -4305,7 +4307,7 @@ bool8 MovementType_FaceUpAndRight_Step2(struct ObjectEvent *objectEvent, struct 
 
 bool8 MovementType_FaceUpAndRight_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
     {
         sprite->sTypeFuncId = 4;
         return TRUE;
@@ -4355,7 +4357,7 @@ bool8 MovementType_FaceDownAndLeft_Step2(struct ObjectEvent *objectEvent, struct
 
 bool8 MovementType_FaceDownAndLeft_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
     {
         sprite->sTypeFuncId = 4;
         return TRUE;
@@ -4405,7 +4407,7 @@ bool8 MovementType_FaceDownAndRight_Step2(struct ObjectEvent *objectEvent, struc
 
 bool8 MovementType_FaceDownAndRight_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
     {
         sprite->sTypeFuncId = 4;
         return TRUE;
@@ -4455,7 +4457,7 @@ bool8 MovementType_FaceDownUpAndLeft_Step2(struct ObjectEvent *objectEvent, stru
 
 bool8 MovementType_FaceDownUpAndLeft_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
     {
         sprite->sTypeFuncId = 4;
         return TRUE;
@@ -4505,7 +4507,7 @@ bool8 MovementType_FaceDownUpAndRight_Step2(struct ObjectEvent *objectEvent, str
 
 bool8 MovementType_FaceDownUpAndRight_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
     {
         sprite->sTypeFuncId = 4;
         return TRUE;
@@ -4555,7 +4557,7 @@ bool8 MovementType_FaceUpLeftAndRight_Step2(struct ObjectEvent *objectEvent, str
 
 bool8 MovementType_FaceUpLeftAndRight_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
     {
         sprite->sTypeFuncId = 4;
         return TRUE;
@@ -4605,7 +4607,7 @@ bool8 MovementType_FaceDownLeftAndRight_Step2(struct ObjectEvent *objectEvent, s
 
 bool8 MovementType_FaceDownLeftAndRight_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
     {
         sprite->sTypeFuncId = 4;
         return TRUE;
@@ -4648,7 +4650,7 @@ bool8 MovementType_RotateCounterclockwise_Step1(struct ObjectEvent *objectEvent,
 
 bool8 MovementType_RotateCounterclockwise_Step2(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
         sprite->sTypeFuncId = 3;
     return FALSE;
 }
@@ -4688,7 +4690,7 @@ bool8 MovementType_RotateClockwise_Step1(struct ObjectEvent *objectEvent, struct
 
 bool8 MovementType_RotateClockwise_Step2(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    if (WaitForMovementDelay(sprite))
         sprite->sTypeFuncId = 3;
     return FALSE;
 }
@@ -9540,6 +9542,7 @@ u8 GetLedgeJumpDirection(s16 x, s16 y, u8 direction)
 
     u8 behavior;
     u8 index = direction;
+    struct ObjectEvent *playerObjEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
 
     if (index == DIR_NONE)
         return DIR_NONE;
@@ -9549,8 +9552,15 @@ u8 GetLedgeJumpDirection(s16 x, s16 y, u8 direction)
     index--;
     behavior = MapGridGetMetatileBehaviorAt(x, y);
 
-    if (ledgeBehaviorFuncs[index](behavior) == TRUE)
+    if (ledgeBehaviorFuncs[index](behavior) == TRUE || MetatileBehavior_IsOmnidirectionalJump(behavior))
         return index + 1;
+
+    if (gPlayerAvatar.acroBikeState == ACRO_STATE_BUNNY_HOP && MB_JUMP_EAST <= behavior && behavior <= MB_JUMP_SOUTH)
+    {
+        MoveCoords(direction, &x, &y);
+        if (GetCollisionAtCoords(playerObjEvent, x, y, direction) == COLLISION_NONE)
+            return index + 1;
+    }
 
     return DIR_NONE;
 }
