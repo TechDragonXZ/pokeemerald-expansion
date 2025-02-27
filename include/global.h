@@ -209,6 +209,7 @@ struct Time
 struct SaveBlock3
 {
     u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
+    u8 followerIndex;
 #if OW_USE_FAKE_RTC
     struct Time fakeRTC;
 #endif

@@ -207,6 +207,7 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
+    gSaveBlock3Ptr->followerIndex = OW_FOLLOWER_NOT_SET;
     gSaveBlock2Ptr->autoRun = FALSE;
     ResetItemFlags();
 #if MULTIPLE_ROAMERS_EXAMPLE	
