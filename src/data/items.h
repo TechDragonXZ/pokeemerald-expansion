@@ -14495,6 +14495,7 @@ const struct Item gItemsInfo[] =
         .effect = gItemEffect_Hexorb,
         .iconPic = gItemIcon_Hexorb,
         .iconPalette = gItemIconPalette_Hexorb,
-    }
+    },
 // End hexorb Branch
+    
 };
