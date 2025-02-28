@@ -5130,7 +5130,6 @@ static void Task_HandleStatsScreenInput(u8 taskId)
     }
 }
 
-#define ITEM_TAG 0xFDF3
 
 static void PrintStatsScreen_DestroyMoveItemIcon(u8 taskId)
 {
