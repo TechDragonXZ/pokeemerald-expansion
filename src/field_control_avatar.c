@@ -233,8 +233,6 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->tookStep && TryFindHiddenPokemon())
         return TRUE;
     
-    if (input->pressedRButton && TryStartDexNavSearch())
-        return TRUE;
     
     if (input->pressedSelectButton)
     {
@@ -242,6 +240,9 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         {
             UseRegisteredKeyItemOnField(1);
             return TRUE;
+    
+    if (input->pressedRButton && TryStartDexNavSearch())
+        return TRUE;
         }
         else if (gSaveBlock1Ptr->registeredItemListCount > 0)
         {
