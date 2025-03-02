@@ -66,7 +66,7 @@
 #define FLAG_DETECTOR_MODE        0x34 // DexNav Detector Flag
 #define FLAG_SEARCHING            0x35 // DexNav Searching Flag
 #define FLAG_POKERADAR            0x36 // PokéRadar Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
+#define FLAG_PAUSE_TIME           0x37 // Pause Time Flag
 #define FLAG_UNUSED_0x038    0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
