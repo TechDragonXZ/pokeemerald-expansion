@@ -28,7 +28,7 @@
 #define OW_PC_MOVE_ORDER            GEN_LATEST // Starting in Gen4, the order of options in the PC menu change.
 #define OW_PC_RELEASE_ITEM          GEN_LATEST // In Gen8+, Pokémon that get released with a held item return it to the bag.
 
-#define OW_BERRY_MUTATIONS             FALSE      // If enabled, Berry plants can mutate based on berries planted next to them.
+#define OW_BERRY_MUTATIONS             TRUE       // If enabled, Berry plants can mutate based on berries planted next to them.
 #define OW_BERRY_MUTATION_CHANCE       25         // Determines the % chance of a mutation.
 #define OW_BERRY_MOISTURE              TRUE       // If enabled, Berry watering is not a matter of watering it once per stage, but rather of keeping the soil moist.
 #define OW_BERRY_ALWAYS_WATERABLE      FALSE      // If OW_BERRY_MOISTURE is enabled, this setting allows the player to continuously water soil; dry soil will cause a decrease in Berry Yield (like Gen4). When off, soil can only be watered when dry and watering increases yield (like Gen6).
@@ -38,7 +38,7 @@
 #define OW_BERRY_SIX_STAGES            FALSE      // In XY, Berries go through six stages instead of four. This toggle does not affect the time it takes for a tree to be ready for harvest. Without OW_BERRY_MOISTURE, the two extra stages count as BERRY_STAGE_TALLER for watering purposes.
 
 #define OW_BERRY_GROWTH_RATE           GEN_3      // Presets for how long each Berry plant takes to grow.
-#define OW_BERRY_YIELD_RATE            GEN_3      // Presets for how many Berries each plant can yield.
+#define OW_BERRY_YIELD_RATE            GEN_6_ORAS // Presets for how many Berries each plant can yield.
 #define OW_BERRY_DRAIN_RATE            GEN_6_ORAS // If OW_BERRY_MOISTURE is enabled, this setting changes how fast the soil dries out. GEN_4 uses a Berry-dependent drain rate, GEN_6_XY dries out in 24 hours (4 hours with the relevant Mulch) and GEN_6_ORAS dries out in 4 hours. Other values are illegal.
 #define OW_BERRY_IMMORTAL              TRUE       // If enabled, once a Berry tree has grown a Berry, the tree will not disappear until picked by the player.
 
@@ -61,18 +61,14 @@
 #define OW_FOLLOWERS_COPY_WILD_PKMN    TRUE      // If TRUE, follower Pokémon that know Transform or have Illusion/Imposter will copy wild Pokémon at random.
 #define OW_BATTLE_ONLY_FORMS           TRUE       // If TRUE, loads overworld sprites for battle-only forms like Mega Evos. Requires OW_POKEMON_OBJECT_EVENTS.
 #define B_FLAG_FOLLOWERS_DISABLED      FLAG_FOLLOWERS_DISABLED          // Enables / Disables followers by using a flag. Helpful to disable followers for a period of time.
+#define OW_FOLLOWERS_SCRIPT_MOVEMENT   TRUE       // If TRUE, follower Pokémon only go back to their Poké Ball if a non-player collides with them by setting the FLAG_SAFE_FOLLOWER_MOVEMENT flag by default.
 
-
-#define OW_FOLLOWERS_SCRIPT_MOVEMENT   TRUE       // TRUE: Script collisions hide follower, FLAG_SAFE_FOLLOWER_MOVEMENT on by default
-                                                  // FALSE: Script collisions unhandled, FLAG_SAFE_FOLLOWER_MOVEMENT off by default
-
-// If set, the only pokemon allowed to follow you
-// will be those matching species, met location,
-// and/or met level;
-// These accept vars, too: VAR_TEMP_1, etc
-#define OW_MON_ALLOWED_SPECIES (0)
-#define OW_MON_ALLOWED_MET_LVL (0)
-#define OW_MON_ALLOWED_MET_LOC (0)
+// Follower Pokémon Restrictions
+// If set, the only pokemon allowed to follow you will be those matching species, met location, and/or met level; These accept vars, too: VAR_TEMP_1, etc
+// For examples, check docs/dns.md:
+#define OW_FOLLOWERS_ALLOWED_SPECIES (0)
+#define OW_FOLLOWERS_ALLOWED_MET_LVL (0)
+#define OW_FOLLOWERS_ALLOWED_MET_LOC (0)
 // Examples:
 // Yellow Pikachu:
 // #define OW_MON_ALLOWED_SPECIES (SPECIES_PIKACHU)
@@ -101,10 +97,14 @@
 // These generational defines only make a distinction for OW_ALTERED_TIME_RATIO
 #define GEN_8_PLA                       GEN_LATEST + 2
 
-//Time
+// Time
 #define OW_TIMES_OF_DAY                 GEN_LATEST // Different generations have the times of day change at different times.
 #define OW_USE_FAKE_RTC                 TRUE       // When TRUE, seconds on the in-game clock will only advance once every 60 playTimeVBlanks (every 60 frames).
-#define OW_ALTERED_TIME_RATIO           GEN_LATEST // In GEN_8_PLA, the time in game moves forward 60 seconds for every second in the RTC. In GEN_9, it is 20 seconds. This has no effect if OW_USE_FAKE_RTC is FALSE.
+#define OW_ALTERED_TIME_RATIO           GEN_8_PLA  // In GEN_8_PLA, the time in game moves forward 60 seconds for every second in the RTC. In GEN_9, it is 20 seconds. This has no effect if OW_USE_FAKE_RTC is FALSE.
+
+// Lighting
+#define OW_SHADOW_INTENSITY             4          // Ranges from 0 to 16, where 0 is fully transparent and 16 is black.
+#define OW_OBJECT_SUBPRIORITY           148        // The higher the value, the farther back compared to other sprites. Shadows should be behind object events.
 
 // Overworld flags
 // To use the following features in scripting, replace the 0s with the flag ID you're assigning it to.
@@ -133,7 +133,7 @@
 // Configuration
 #define OW_POPUP_BW_COLOR          OW_POPUP_BW_COLOR_BLACK  // B2W2 use different colors for their map pop-ups.
 #define OW_POPUP_BW_TIME_MODE      OW_POPUP_BW_TIME_12_HR   // Determines what type of time is shown.
-#define OW_POPUP_BW_ALPHA_BLEND    TRUE                     // Enables alpha blending/transparency for the pop-ups. Mainly intended to be used with the black color option.
+#define OW_POPUP_BW_ALPHA_BLEND    FALSE                    // Enables alpha blending/transparency for the pop-ups. Mainly intended to be used with the black color option.
 
 // Pokémon Center
 #define OW_IGNORE_EGGS_ON_HEAL           GEN_LATEST         // In Gen 4+, the nurse in the Pokémon Center does not heal Eggs on healing machine.
