@@ -305,8 +305,53 @@ RusturfTunnel_EventScript_Peeko::
 RusturfTunnel_EventScript_Grunt::
 	lock
 	faceplayer
+	setvar VAR_CUTSCENES_SEEN, 3
+	startcutscene CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
 	msgbox RusturfTunnel_Text_GruntIntro, MSGBOX_DEFAULT
+	endcutscene
+	trainerbattle_no_intro TRAINER_GRUNT_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat
+	msgbox RusturfTunnel_Text_GruntTakePackage, MSGBOX_DEFAULT
+	giveitem ITEM_DEVON_PARTS
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PushPlayerAsideForGrunt
+	applymovement LOCALID_GRUNT, RusturfTunnel_Movement_GruntEscape
+	waitmovement 0
+	removeobject LOCALID_GRUNT
+	delay 50
+	addobject LOCALID_BRINEY
+	applymovement LOCALID_BRINEY, RusturfTunnel_Movement_BrineyApproachPeeko1
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PlayerMoveAsideForBriney
+	applymovement LOCALID_BRINEY, RusturfTunnel_Movement_BrineyApproachPeeko2
+	waitmovement 0
+	msgbox RusturfTunnel_Text_PeekoGladToSeeYouSafe, MSGBOX_DEFAULT
+	applymovement LOCALID_BRINEY, Common_Movement_FacePlayer
+	waitmovement 0
+	message RusturfTunnel_Text_ThankYouLetsGoHomePeeko
+	waitmessage
+	waitse
+	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
+	waitbuttonpress
+	waitmoncry
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PlayerWatchBrineyExit
+	applymovement LOCALID_BRINEY, RusturfTunnel_Movement_BrineyExit
+	applymovement LOCALID_PEEKO, RusturfTunnel_Movement_PeekoExit
+	waitmovement 0
+	removeobject LOCALID_BRINEY
+	removeobject LOCALID_PEEKO
+	clearflag FLAG_DEVON_GOODS_STOLEN
+	setflag FLAG_RECOVERED_DEVON_GOODS
+	setvar VAR_RUSTBORO_CITY_STATE, 4
+	setvar VAR_BRINEY_HOUSE_STATE, 1
+	setflag FLAG_HIDE_ROUTE_116_MR_BRINEY
+	release
+	end
+
+RusturfTunnel_EventScript_Grunt_CutsceneSkipped::
+	lock
+	closemessage
 	trainerbattle_no_intro TRAINER_GRUNT_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat
 	msgbox RusturfTunnel_Text_GruntTakePackage, MSGBOX_DEFAULT
 	giveitem ITEM_DEVON_PARTS

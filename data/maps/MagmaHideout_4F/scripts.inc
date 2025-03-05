@@ -11,6 +11,8 @@ MagmaHideout_4F_MapScripts::
 
 MagmaHideout_4F_EventScript_Maxie::
 	lockall
+	setvar VAR_CUTSCENES_SEEN, 6
+	startcutscene CUTSCENE_MAXIE_MAGMA_HIDEOUT
 	playbgm MUS_ENCOUNTER_MAGMA, FALSE
 	msgbox MagmaHideout_4F_Text_MaxieAwakenGroudon, MSGBOX_DEFAULT
 	closemessage
@@ -61,6 +63,29 @@ MagmaHideout_4F_EventScript_Maxie::
 	applymovement LOCALID_MAXIE, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox MagmaHideout_4F_Text_MaxieOhItWasYou, MSGBOX_DEFAULT
+	closemessage
+	endcutscene
+	trainerbattle_no_intro TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieDefeat
+	msgbox MagmaHideout_4F_Text_MaxieImGoingAfterGroudon, MSGBOX_DEFAULT
+	closemessage
+	clearflag FLAG_HIDE_SLATEPORT_CITY_CAPTAIN_STERN
+	clearflag FLAG_HIDE_SLATEPORT_CITY_GABBY_AND_TY
+	setvar VAR_SLATEPORT_CITY_STATE, 1
+	setflag FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT
+	setvar VAR_SLATEPORT_HARBOR_STATE, 1
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_MAXIE
+	removeobject LOCALID_GRUNT_1
+	removeobject LOCALID_GRUNT_2
+	removeobject LOCALID_GRUNT_3
+	removeobject LOCALID_TABITHA
+	setflag FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+
+MagmaHideout_4F_EventScript_Maxie_CutsceneSkipped::
+	lockall
 	closemessage
 	trainerbattle_no_intro TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieDefeat
 	msgbox MagmaHideout_4F_Text_MaxieImGoingAfterGroudon, MSGBOX_DEFAULT

@@ -40,8 +40,20 @@ EverGrandeCity_GlaciasRoom_EventScript_Glacia::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
+	setvar VAR_CUTSCENES_SEEN, 13
+	startcutscene CUTSCENE_GLACIA_INTRO
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_GlaciasRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	endcutscene
+	trainerbattle_no_intro TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat
+	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_GlaciasRoom_EventScript_Glacia_CutsceneSkipped::
+	lock
+	faceplayer
+	closemessage
+	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
 	trainerbattle_no_intro TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat
 	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
 	end
@@ -54,7 +66,17 @@ EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech::
 EverGrandeCity_GlaciasRoom_EventScript_Defeated::
 	setflag FLAG_DEFEATED_ELITE_4_GLACIA
 	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	setvar VAR_CUTSCENES_SEEN, 14
+	startcutscene CUTSCENE_GLACIA_OUTRO
 	msgbox EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	endcutscene
+	release
+	end
+
+EverGrandeCity_GlaciasRoom_EventScript_Defeated_CutsceneSkipped::
+	closemessage
+	setflag FLAG_DEFEATED_ELITE_4_GLACIA
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
 	release
 	end
 

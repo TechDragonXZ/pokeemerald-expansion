@@ -2476,4 +2476,23 @@ extern const u8 gText_MoveItemWhere[];
 extern const u8 gText_XsYAnd[];
 extern const u8 gText_XsYWereSwapped[];
 
+// Options
+extern const u8 gText_SmallDot[];
+extern const u8 gText_LargeDot[];
+extern const u8 gText_PageNav[];
+
+extern const u8 gText_SleepClause[];
+extern const u8 gText_SleepClauseOff[];
+extern const u8 gText_SleepClauseOn[];
+
+extern const u8 gText_Difficulty[];
+extern const u8 gText_DifficultyEasy[];
+extern const u8 gText_DifficultyNormal[];
+extern const u8 gText_DifficultyHard[];
+
+extern const u8 gText_SkipCutscene[];
+extern const u8 gText_SkipCutsceneAll[];
+extern const u8 gText_SkipCutsceneSeen[];
+extern const u8 gText_SkipCutsceneNone[];
+
 #endif // GUARD_STRINGS_H

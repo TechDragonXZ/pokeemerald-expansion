@@ -46,8 +46,20 @@ EverGrandeCity_SidneysRoom_EventScript_Sidney::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
+	setvar VAR_CUTSCENES_SEEN, 9
+	startcutscene CUTSCENE_SIDNEY_INTRO
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	endcutscene
+	trainerbattle_no_intro TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_Defeat
+	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_Sidney_CutsceneSkipped::
+	lock
+	faceplayer
+	closemessage
+	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
 	trainerbattle_no_intro TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_Defeat
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
 	end
@@ -60,7 +72,17 @@ EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech::
 EverGrandeCity_SidneysRoom_EventScript_Defeated::
 	setflag FLAG_DEFEATED_ELITE_4_SIDNEY
 	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	setvar VAR_CUTSCENES_SEEN, 10
+	startcutscene CUTSCENE_SIDNEY_OUTRO
 	msgbox EverGrandeCity_SidneysRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	endcutscene
+	release
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_Defeated_CutsceneSkipped::
+	closemessage
+	setflag FLAG_DEFEATED_ELITE_4_SIDNEY
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
 	release
 	end
 

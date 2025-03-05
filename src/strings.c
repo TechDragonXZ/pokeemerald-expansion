@@ -1365,3 +1365,22 @@ const u8 gMenuText_Move[] = _("MOVE");
 const u8 gText_MoveItemWhere[] = _("Move {STR_VAR_2} to where?");
 const u8 gText_XsYAnd[] = _("{STR_VAR_1}'s {STR_VAR_2} and\n");
 const u8 gText_XsYWereSwapped[] = _("{STR_VAR_1}'s {STR_VAR_2} were swapped!{PAUSE_UNTIL_PRESS}");
+
+// Options
+const u8 gText_SmallDot[] = _("·");
+const u8 gText_LargeDot[] = _("{EMOJI_CIRCLE}");
+const u8 gText_PageNav[] = _("{L_BUTTON}{R_BUTTON} PAGE");
+
+const u8 gText_SleepClause[] = _("SLEEP CLAUSE");
+const u8 gText_SleepClauseOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
+const u8 gText_SleepClauseOn[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}ON");
+
+const u8 gText_Difficulty[] = _("DIFFICULTY");
+const u8 gText_DifficultyEasy[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}EASY");
+const u8 gText_DifficultyNormal[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}NORMAL");
+const u8 gText_DifficultyHard[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}HARD");
+
+const u8 gText_SkipCutscene[] = _("SKIP CUTSCENES");
+const u8 gText_SkipCutsceneAll[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}ALL");
+const u8 gText_SkipCutsceneSeen[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SEEN");
+const u8 gText_SkipCutsceneNone[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}NONE");

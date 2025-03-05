@@ -40,6 +40,8 @@ MtChimney_EventScript_ArchieBusyFighting::
 
 MtChimney_EventScript_Maxie::
 	lockall
+	setvar VAR_CUTSCENES_SEEN, 5
+	startcutscene CUTSCENE_MAXIE_MT_CHIMNEY
 	playbgm MUS_ENCOUNTER_MAGMA, FALSE
 	msgbox MtChimney_Text_MeteoriteWillActivateVolcano, MSGBOX_DEFAULT
 	applymovement LOCALID_MAXIE, Common_Movement_FacePlayer
@@ -50,17 +52,51 @@ MtChimney_EventScript_Maxie::
 	applymovement LOCALID_MAXIE, Common_Movement_Delay48
 	waitmovement 0
 	msgbox MtChimney_Text_MaxieIntro, MSGBOX_DEFAULT
+	endcutscene
 	trainerbattle_no_intro TRAINER_MAXIE_MT_CHIMNEY, MtChimney_Text_MaxieDefeat
 	msgbox MtChimney_Text_MaxieYouHaventSeenLastOfMagma, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	fadescreenswapbuffers FADE_TO_BLACK
+	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_MAXIE
 	removeobject LOCALID_MAGMA_GRUNT_1
 	removeobject LOCALID_TABITHA
 	removeobject LOCALID_MAGMA_GRUNT_2
 	setflag FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA
-	fadescreenswapbuffers FADE_FROM_BLACK
+	fadescreen FADE_FROM_BLACK
+	setobjectxyperm LOCALID_ARCHIE, 10, 12
+	addobject LOCALID_ARCHIE
+	call_if_eq VAR_FACING, DIR_EAST, MtChimney_EventScript_ArchieApproachPlayerEast
+	call_if_eq VAR_FACING, DIR_NORTH, MtChimney_EventScript_ArchieApproachPlayerNorth
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	msgbox MtChimney_Text_ArchieThankYou, MSGBOX_DEFAULT
+	closemessage
+	call_if_eq VAR_FACING, DIR_EAST, MtChimney_EventScript_ArchieExitEast
+	call_if_eq VAR_FACING, DIR_NORTH, MtChimney_EventScript_ArchieExitNorth
+	removeobject LOCALID_ARCHIE
+	setflag FLAG_HIDE_MT_CHIMNEY_TEAM_AQUA
+	setflag FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY
+	clearflag FLAG_HIDE_FALLARBOR_HOUSE_PROF_COZMO
+	setflag FLAG_HIDE_METEOR_FALLS_1F_1R_COZMO
+	clearflag FLAG_HIDE_MT_CHIMNEY_LAVA_COOKIE_LADY
+	releaseall
+	end
+
+MtChimney_EventScript_Maxie_CutsceneSkipped::
+	lockall
+	closemessage
+	trainerbattle_no_intro TRAINER_MAXIE_MT_CHIMNEY, MtChimney_Text_MaxieDefeat
+	msgbox MtChimney_Text_MaxieYouHaventSeenLastOfMagma, MSGBOX_DEFAULT
+	closemessage
+	delay 30
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_MAXIE
+	removeobject LOCALID_MAGMA_GRUNT_1
+	removeobject LOCALID_TABITHA
+	removeobject LOCALID_MAGMA_GRUNT_2
+	setflag FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA
+	fadescreen FADE_FROM_BLACK
 	setobjectxyperm LOCALID_ARCHIE, 10, 12
 	addobject LOCALID_ARCHIE
 	call_if_eq VAR_FACING, DIR_EAST, MtChimney_EventScript_ArchieApproachPlayerEast
