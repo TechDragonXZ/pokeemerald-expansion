@@ -14,6 +14,7 @@ MysteryGiftScript_AuroraTicket::
 	giveitem ITEM_AURORA_TICKET
 	setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
 	setflag FLAG_RECEIVED_AURORA_TICKET
+	setflag FLAG_AURORA_TICKET_OBTAINED
 	vmessage sText_AuroraTicketUseAtPort
 	waitmessage
 	waitbuttonpress
@@ -36,7 +37,7 @@ AuroraTicket_Obtained:
 
 sText_AuroraTicketForYou:
 	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
+	.string "CODES System.\p"
 	.string "You must be {PLAYER}.\n"
 	.string "There is a ticket here for you.$"
 
@@ -48,7 +49,7 @@ sText_AuroraTicketUseAtPort:
 
 sText_AuroraTicketThankYou:
 	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.$"
+	.string "CODES System.$"
 
 sText_AuroraTicketBagFull:
 	.string "Oh, I'm sorry, {PLAYER}.\n"

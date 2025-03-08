@@ -114,6 +114,7 @@ enum {
     MENU_CHANGE_FORM,
     MENU_CHANGE_ABILITY,
     // Custom
+    // Fashion Case
     MENU_COSPLAY_NONE,
     MENU_COSPLAY_ROCK_STAR,
     MENU_COSPLAY_BELLE,

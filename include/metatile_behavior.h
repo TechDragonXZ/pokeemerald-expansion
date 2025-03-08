@@ -168,5 +168,8 @@ bool8 MetatileBehavior_IsSidewaysStairsLeftSideAny(u8 metatileBehavior);
 
 // Custom
 bool8 MetatileBehavior_IsOmnidirectionalJump(u8);
+bool8 MetatileBehavior_IsCraftingStation(u8);
+bool8 MetatileBehavior_IsTutorialStation(u8);
+bool8 MetatileBehavior_IsSelfTradeMachine(u8);
 
 #endif // GUARD_METATILE_BEHAVIOR_H

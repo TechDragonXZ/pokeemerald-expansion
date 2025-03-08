@@ -1550,3 +1550,27 @@ bool8 MetatileBehavior_IsOmnidirectionalJump(u8 metatileBehavior)
     else
         return FALSE;
 }
+
+bool8 MetatileBehavior_IsCraftingStation(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_CRAFTING_STATION)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsTutorialStation(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_TUTORIAL_STATION)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsSelfTradeMachine(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_SELF_TRADE_MACHINE)
+        return TRUE;
+    else
+        return FALSE;
+}

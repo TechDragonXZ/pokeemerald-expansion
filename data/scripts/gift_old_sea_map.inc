@@ -36,7 +36,7 @@ OldSeaMap_Obtained:
 
 sText_MysteryGiftOldSeaMapForYou:
 	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
+	.string "CODES System.\p"
 	.string "Let me confirm--you are {PLAYER}?\p"
 	.string "We received this OLD SEA MAP\n"
 	.string "addressed to you.$"
@@ -49,7 +49,7 @@ sText_MysteryGiftOldSeaMapUseAtPort:
 
 sText_MysteryGiftOldSeaMapThankYou:
 	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.$"
+	.string "CODES System.$"
 
 sText_MysteryGiftOldSeaMapBagFull:
 	.string "Oh, I'm sorry, {PLAYER}.\n"

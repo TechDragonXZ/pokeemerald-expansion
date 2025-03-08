@@ -855,7 +855,7 @@ static const u8 *const sActionStringTable[] =
     [PARTY_MSG_CHOOSE_MON_FOR_BOX]     = gText_SendWhichMonToPC,
 
     // Custom
-    [PARTY_MSG_WHICH_OUTFIT]           = gText_WhichOutfit,
+    [PARTY_MSG_WHICH_OUTFIT]           = COMPOUND_STRING("Put on which\noutfit?"),
     [PARTY_MSG_MOVE_ITEM_WHERE]        = gText_MoveItemWhere,
     [PARTY_MSG_WHICH_STATUS]           = COMPOUND_STRING("Inflict which status?"), // hexorb Branch
     [PARTY_MSG_DO_WHAT_WITH_FOLLOWER]  = gText_DoWhatWithFollower,
@@ -922,12 +922,14 @@ struct
     [MENU_CATALOG_MOWER] = {COMPOUND_STRING("Lawn mower"), CursorCb_CatalogMower},
     [MENU_CHANGE_FORM] = {COMPOUND_STRING("Change form"), CursorCb_ChangeForm},
     [MENU_CHANGE_ABILITY] = {COMPOUND_STRING("Change Ability"), CursorCb_ChangeAbility},
-    [MENU_COSPLAY_NONE] = {gText_CosplayNone, CursorCb_CosplayNone},
-    [MENU_COSPLAY_ROCK_STAR] = {gText_CosplayRockStar, CursorCb_CosplayRockStar},
-    [MENU_COSPLAY_BELLE] = {gText_CosplayBelle, CursorCb_CosplayBelle},
-    [MENU_COSPLAY_POP_STAR] = {gText_CosplayPopStar, CursorCb_CosplayPopStar},
-    [MENU_COSPLAY_PHD] = {gText_CosplayPhd, CursorCb_CosplayPhd},
-    [MENU_COSPLAY_LIBRE] = {gText_CosplayLibre, CursorCb_CosplayLibre},
+// Custom
+// Fashion Case
+    [MENU_COSPLAY_NONE] = {COMPOUND_STRING("None"), CursorCb_CosplayNone},
+    [MENU_COSPLAY_ROCK_STAR] = {COMPOUND_STRING("Rock Stat"), CursorCb_CosplayRockStar},
+    [MENU_COSPLAY_BELLE] = {COMPOUND_STRING("Belle"), CursorCb_CosplayBelle},
+    [MENU_COSPLAY_POP_STAR] = {COMPOUND_STRING("Pop Star"), CursorCb_CosplayPopStar},
+    [MENU_COSPLAY_PHD] = {COMPOUND_STRING("Ph. D."), CursorCb_CosplayPhd},
+    [MENU_COSPLAY_LIBRE] = {COMPOUND_STRING("Libre"), CursorCb_CosplayLibre},
     [MENU_MOVE_ITEM] = {gMenuText_Move, CursorCb_MoveItem},
 // Start hexorb branch
     [MENU_INFLICT_SLEEP] = {gText_Slp, TryHexorbAndPrintResult},
@@ -992,7 +994,7 @@ static const u8 *const sPartyMenuActions[] =
     [ACTIONS_ZYGARDE_CUBE]  = sPartyMenuAction_ZygardeCube,
     // Custom
     [ACTIONS_FASHION_CASE]  = sPartyMenuAction_FashionCase,
-    [ACTIONS_HEXORB] = sPartyMenuAction_Hexorb, // hexorb Branch
+    [ACTIONS_HEXORB]        = sPartyMenuAction_Hexorb, // hexorb Branch
     [ACTIONS_FOLLOWER_SET]          = sPartyMenuAction_SetCancel,
     [ACTIONS_FOLLOWER_SET_RETURN]   = sPartyMenuAction_SetReturnCancel,
     [ACTIONS_FOLLOWER_UNSET]        = sPartyMenuAction_UnsetCancel,

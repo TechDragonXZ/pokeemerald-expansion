@@ -92,10 +92,12 @@ void WarpFadeInScreen(void)
     {
     case 0:
         FillPalBufferBlack();
+        if(!FlagGet(FLAG_SYS_PREVENT_MAP_FADE))
         FadeScreen(FADE_FROM_BLACK, 0);
         break;
     case 1:
         FillPalBufferWhite();
+        if(!FlagGet(FLAG_SYS_PREVENT_MAP_FADE))
         FadeScreen(FADE_FROM_WHITE, 0);
     }
 }

@@ -1159,6 +1159,8 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dexnav.inc"
     .include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/craft.inc"
+	.include "data/scripts/codes.inc"
+	.include "data/scripts/self_trade.inc"
 
 	.include "data/maps/DeepPetalburgWoods/scripts.inc"
 

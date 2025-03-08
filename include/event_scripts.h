@@ -664,5 +664,9 @@ extern const u8 EventScript_LostSignal[];
 extern const u8 EventScript_TooDark[];
 extern const u8 EventScript_MovedTooFast[];
 
+// Custom
+extern const u8 Craft_EventScript_CraftTable[];
+extern const u8 CraftTutorial_EventScript_Table[];
+extern const u8 EventScript_SelfTrade[];
 
 #endif // GUARD_EVENT_SCRIPTS_H

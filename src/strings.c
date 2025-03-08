@@ -1340,15 +1340,6 @@ const u8 gText_Rename[] = _("Rename");
 const u8 gText_CannotSendMonToBoxHM[] = _("Cannot send that mon to the box,\nbecause it knows a HM move.{PAUSE_UNTIL_PRESS}");
 
 // Custom
-// Fashion Case
-const u8 gText_WhichOutfit[] = _("Put on which\noutfit?");
-const u8 gText_CosplayNone[] = _("None");
-const u8 gText_CosplayRockStar[] = _("Rock Star");
-const u8 gText_CosplayBelle[] = _("Belle");
-const u8 gText_CosplayPopStar[] = _("Pop Star");
-const u8 gText_CosplayPhd[] = _("Ph. D.");
-const u8 gText_CosplayLibre[] = _("Libre");
-
 // Hacking Device
 const u8 gText_HackingDeviceOn[] = _("Hacking Device: Activated{PAUSE_UNTIL_PRESS}");
 const u8 gText_HackingDeviceOff[] = _("Hacking Device: Deactivated{PAUSE_UNTIL_PRESS}");

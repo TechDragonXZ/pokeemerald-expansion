@@ -515,6 +515,12 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return EventScript_Questionnaire;
     if (MetatileBehavior_IsTrainerHillTimer(metatileBehavior) == TRUE)
         return EventScript_TrainerHillTimer;
+    if (MetatileBehavior_IsCraftingStation(metatileBehavior) == TRUE)
+        return Craft_EventScript_CraftTable;
+    if (MetatileBehavior_IsTutorialStation(metatileBehavior) == TRUE)
+        return CraftTutorial_EventScript_Table;
+    if (MetatileBehavior_IsSelfTradeMachine(metatileBehavior) == TRUE)
+        return EventScript_SelfTrade;
 
     elevation = position->elevation;
     if (elevation == MapGridGetElevationAt(position->x, position->y))

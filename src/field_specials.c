@@ -4355,11 +4355,48 @@ void EnterCode(void)
     DoNamingScreen(NAMING_SCREEN_CODE, gStringVar2, 0, 0, 0, CB2_ReturnToFieldContinueScript);
 }
 
-void GetCodeFeedback(void)
+void GetCodeFeedback(void) // 14 Character Limit
 {
-    static const u8 sText_SampleCode[] = _("SampleCode");
-    if (!StringCompare(gStringVar2, sText_SampleCode))
+    // Pokémon
+    static const u8 sText_CodePikachuOriginal[] = _("Original Cap");
+    static const u8 sText_CodePikachuHoenn[] = _("Hoenn Cap");
+    static const u8 sText_CodePikachuSinnoh[] = _("Sinnoh Cap");
+    static const u8 sText_CodePikachuUnova[] = _("Unova Cap");
+    static const u8 sText_CodePikachuKalos[] = _("Kalos Cap");
+    static const u8 sText_CodePikachuAlola[] = _("Alola Cap");
+    static const u8 sText_CodePikachuPartner[] = _("Partner Cap");
+    static const u8 sText_CodePikachuWorld[] = _("World Cap");
+
+    // Items
+    static const u8 sText_CodeEonTicket[] = _("Eon Ticket");
+    static const u8 sText_CodeAuroraTicket[] = _("Aurora Ticket");
+    static const u8 sText_CodeMysticTicket[] = _("Mystic Ticket");
+    static const u8 sText_CodeOldSeaMap[] = _("Old Sea Map");
+
+    if (!StringCompare(gStringVar2, sText_CodePikachuOriginal))
         gSpecialVar_Result = 1;
+    else if (!StringCompare(gStringVar2, sText_CodePikachuHoenn))
+        gSpecialVar_Result = 2;
+    else if (!StringCompare(gStringVar2, sText_CodePikachuSinnoh))
+        gSpecialVar_Result = 3;
+    else if (!StringCompare(gStringVar2, sText_CodePikachuUnova))
+        gSpecialVar_Result = 4;
+    else if (!StringCompare(gStringVar2, sText_CodePikachuKalos))
+        gSpecialVar_Result = 5;
+    else if (!StringCompare(gStringVar2, sText_CodePikachuAlola))
+        gSpecialVar_Result = 6;
+    else if (!StringCompare(gStringVar2, sText_CodePikachuPartner))
+        gSpecialVar_Result = 7;
+    else if (!StringCompare(gStringVar2, sText_CodePikachuWorld))
+        gSpecialVar_Result = 8;
+    else if (!StringCompare(gStringVar2, sText_CodeEonTicket))
+        gSpecialVar_Result = 9;
+    else if (!StringCompare(gStringVar2, sText_CodeAuroraTicket))
+        gSpecialVar_Result = 10;
+    else if (!StringCompare(gStringVar2, sText_CodeMysticTicket))
+        gSpecialVar_Result = 11;
+    else if (!StringCompare(gStringVar2, sText_CodeOldSeaMap))
+        gSpecialVar_Result = 12;
     else
         gSpecialVar_Result = 0;
 }

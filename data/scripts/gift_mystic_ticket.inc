@@ -15,6 +15,7 @@ MysteryGiftScript_MysticTicket::
 	giveitem ITEM_MYSTIC_TICKET
 	setflag FLAG_ENABLE_SHIP_NAVEL_ROCK
 	setflag FLAG_RECEIVED_MYSTIC_TICKET
+	setflag FLAG_MYSTIC_TICKET_OBTAINED
 	vmessage sText_MysticTicketUseAtPort
 	waitmessage
 	waitbuttonpress
@@ -37,7 +38,7 @@ MysticTicket_Obtained:
 
 sText_MysticTicketForYou:
 	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
+	.string "CODES System.\p"
 	.string "You must be {PLAYER}.\n"
 	.string "There is a ticket here for you.$"
 
@@ -49,7 +50,7 @@ sText_MysticTicketUseAtPort:
 
 sText_MysticTicketThankYou:
 	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.$"
+	.string "CODES System.$"
 
 sText_MysticTicketBagFull:
 	.string "Oh, I'm sorry, {PLAYER}.\n"

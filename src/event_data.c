@@ -316,3 +316,13 @@ void SetCutscenesFlags(void)
         FlagSet(i);
     }
 }
+
+void ClearEventCodesFlags(void)
+{
+    u32 i = 0;
+
+    for (i = FLAG_EVENT_CODES_START; i <= FLAG_EVENT_CODES_END; i++)
+    {
+        FlagClear(i);
+    }
+}

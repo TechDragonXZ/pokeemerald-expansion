@@ -393,3 +393,4 @@ MysteryGift_EventScript_Jirachi::
 ```
 
 And that's it! Super straightforward from here, just make sure to iterate `FLAG_MYSTERY_GIFT` each time you add a new mon, and of course add their code to both `GetCodeFeedback` and the main script controlling code entry.
+ 

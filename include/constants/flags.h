@@ -658,7 +658,7 @@
 
 #define FLAG_HIDDEN_ITEMS_END FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL
 
-#define FLAG_CUTSCENES_START                       0x264 // Start of Cutscenes Flag
+#define FLAG_CUTSCENES_START                       0x264 // Start of Cutscenes Flag - 19 Used
 #define FLAG_CUTSCENE_AQUA_GRUNT_PETALBURG_WOODS   0x265 // Player Seen Aqua Grunt Petalburg Woods Cutscene Flag
 #define FLAG_CUTSCENE_AQUA_GRUNT_RUSTURF_TUNNEL    0x266 // Player Seen Aqua Grunt Rusturf Tunnel Cutscene Flag
 #define FLAG_CUTSCENE_AQUA_GRUNTS_OCEANIC_MUSEUM   0x267 // Player Seen Aqua Grunt Oceanic Museum Cutscene Flag
@@ -693,19 +693,22 @@
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
 #define FLAG_UNUSED_0x285  0x285 // Unused Flag
 #define FLAG_UNUSED_0x286  0x286 // Unused Flag
-#define FLAG_UNUSED_0x287  0x287 // Unused Flag
-#define FLAG_UNUSED_0x288  0x288 // Unused Flag
-#define FLAG_UNUSED_0x289  0x289 // Unused Flag
-#define FLAG_UNUSED_0x28A  0x28A // Unused Flag
-#define FLAG_UNUSED_0x28B  0x28B // Unused Flag
-#define FLAG_UNUSED_0x28C  0x28C // Unused Flag
-#define FLAG_UNUSED_0x28D  0x28D // Unused Flag
-#define FLAG_UNUSED_0x28E  0x28E // Unused Flag
-#define FLAG_UNUSED_0x28F  0x28F // Unused Flag
-#define FLAG_UNUSED_0x290  0x290 // Unused Flag
-#define FLAG_UNUSED_0x291  0x291 // Unused Flag
-#define FLAG_UNUSED_0x292  0x292 // Unused Flag
-#define FLAG_UNUSED_0x293  0x293 // Unused Flag
+
+#define FLAG_CUTSCENES_END FLAG_CUTSCENE_HALL_OF_FAME_PART2 // End of Cutscenes Flag - 16 Free | 35 Total
+
+#define FLAG_EVENT_CODES_START       0x287 // Start of Event Codes Flag - 12 Used
+#define FLAG_ORIGINAL_CAP_OBTAINED   0x288 // Obtained Original Cap Pikachu Flag
+#define FLAG_HOENN_CAP_OBTAINED      0x289 // Obtained Hoenn Cap Pikachu Flag
+#define FLAG_SINNOH_CAP_OBTAINED     0x28A // Obtained Sinnoh Cap Pikachu Flag
+#define FLAG_UNOVA_CAP_OBTAINED      0x28B // Obtained Unova Cap Pikachu Flag
+#define FLAG_KALOS_CAP_OBTAINED      0x28C // Obtained Kalos Cap Pikachu Flag
+#define FLAG_ALOLA_CAP_OBTAINED      0x28D // Obtained Alola Cap Pikachu Flag
+#define FLAG_PARTNER_CAP_OBTAINED    0x28E // Obtained Partner Cap Pikachu Flag
+#define FLAG_WORLD_CAP_OBTAINED      0x28F // Obtained World Cap Pikachu Flag
+#define FLAG_EON_TICKET_OBTAINED     0x290 // Obtained Eon Ticket Flag
+#define FLAG_AURORA_TICKET_OBTAINED  0x291 // Obtained Aurora Ticket Flag
+#define FLAG_MYSTIC_TICKET_OBTAINED  0x292 // Obtained Mystic Ticket Flag
+#define FLAG_OLD_SEA_MAP_OBTAINED    0x293 // Obtained Old Sea Map Flag
 #define FLAG_UNUSED_0x294  0x294 // Unused Flag
 #define FLAG_UNUSED_0x295  0x295 // Unused Flag
 #define FLAG_UNUSED_0x296  0x296 // Unused Flag
@@ -745,7 +748,9 @@
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
 #define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
 #define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
-#define FLAG_CUTSCENES_END 0x2BB // End of Cutscenes Flag - 86 Free
+#define FLAG_UNUSED_0X2BB  0x2BB // Unused Flag
+
+#define FLAG_EVENT_CODES_END FLAG_OLD_SEA_MAP_OBTAINED // End of Event Codes Flag - 40 Free | 52 Total
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1354,7 +1359,7 @@
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
-#define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
+#define FLAG_SYS_PREVENT_MAP_FADE                    (SYSTEM_FLAGS + 0x3) // Prevent Map Fade Flag
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 (SYSTEM_FLAGS + 0x6)

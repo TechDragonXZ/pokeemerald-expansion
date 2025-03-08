@@ -15,7 +15,7 @@ CableClub_EventScript_ShowMysteryGiftMan::
 	return
 
 CableClub_EventScript_HideMysteryGiftMan::
-	setflag FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN
+	clearflag FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN
 	return
 
 CableClub_EventScript_MysteryGiftMan::
