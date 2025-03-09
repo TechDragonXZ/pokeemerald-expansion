@@ -1019,8 +1019,11 @@
 #define ITEM_DOPPEL_BONNETS 850
 #define ITEM_UTILITY_PACK 851
 #define ITEM_HEXORB 852 //hexorb Branch
+#define ITEM_FISHING_ROD 853
+#define ITEM_METEORITE_SHARD 854
+#define ITEM_CODE_LOGGER 855
 
-#define ITEMS_COUNT 853
+#define ITEMS_COUNT 856
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
@@ -1061,9 +1064,10 @@
 #define MAX_PYRAMID_ITEM_DIGITS ((MAX_PYRAMID_BAG_ITEM_CAPACITY > 99) ? 3 : 2)
 
 // Secondary IDs for rods
-#define OLD_ROD   0
-#define GOOD_ROD  1
-#define SUPER_ROD 2
+#define OLD_ROD     0
+#define GOOD_ROD    1
+#define SUPER_ROD   2
+#define FISHING_ROD 3
 
 // Secondary IDs for bikes
 #define MACH_BIKE 0

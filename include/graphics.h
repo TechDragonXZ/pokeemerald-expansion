@@ -3458,6 +3458,12 @@ extern const u32 gItemIconPalette_DoppelBonnets[];
 extern const u32 gItemIcon_UtilityPack[];
 extern const u32 gItemIconPalette_UtilityPack[];
 
+extern const u32 gItemIcon_MeteoriteShard[];
+extern const u32 gItemIconPalette_MeteoriteShard[];
+
+extern const u32 gItemIcon_CodeLogger[];
+extern const u32 gItemIconPalette_CodeLogger[];
+
 // Palettes
 extern const u32 gItemIconPalette_HackingDevice[];
 extern const u32 gItemIconPalette_CyanScarf[];
