@@ -102,6 +102,9 @@ enum {
     ACTION_BY_NAME,
     ACTION_BY_TYPE,
     ACTION_BY_AMOUNT,
+    ACTION_OLD_TECHNIQUE,
+    ACTION_GOOD_TECHNIQUE,
+    ACTION_SUPER_TECHNIQUE,
     ACTION_DUMMY,
 };
 
@@ -231,6 +234,16 @@ static u32 CheckForCraftSpace(u8);
 static u32 IsOnCraftTable(u16 itemId);
 static bool32 CanCraftItem(u8);
 
+// Custom
+// Fishing Rod
+static void ItemMenu_UseOutOfBattle_VariableOldRod(u8);
+static void ItemMenu_UseOutOfBattle_VariableGoodRod(u8);
+static void ItemMenu_UseOutOfBattle_VariableSuperRod(u8);
+
+static const u8 sMenuText_OldTech[] = _("Old {FONT_NARROWER}Tech.");
+static const u8 sMenuText_GoodTech[] = _("Good {FONT_NARROWER}Tech.");
+static const u8 sMenuText_SuperTech[] = _("Super {FONT_NARROWER}Tech.");
+
 //tx_registered_items_menu
 //static void ItemMenu_RegisterSelect(u8 taskId);
 static void ItemMenu_RegisterList(u8 taskId);
@@ -333,6 +346,9 @@ static const struct MenuAction sItemMenuActions[] = {
     [ACTION_BY_NAME]           = {sMenuText_ByName,   {ItemMenu_SortByName}},
     [ACTION_BY_TYPE]           = {sMenuText_ByType,   {ItemMenu_SortByType}},
     [ACTION_BY_AMOUNT]         = {sMenuText_ByAmount, {ItemMenu_SortByAmount}},
+    [ACTION_OLD_TECHNIQUE]     = {sMenuText_OldTech,  {ItemMenu_UseOutOfBattle_VariableOldRod}},
+    [ACTION_GOOD_TECHNIQUE]    = {sMenuText_GoodTech, {ItemMenu_UseOutOfBattle_VariableGoodRod}},
+    [ACTION_SUPER_TECHNIQUE]   = {sMenuText_SuperTech,{ItemMenu_UseOutOfBattle_VariableSuperRod}},
     [ACTION_DUMMY]             = {gText_EmptyString2, {NULL}}
 };
 
@@ -391,6 +407,22 @@ static const u8 sContextMenuItems_FavorLady[] = {
 
 static const u8 sContextMenuItems_QuizLady[] = {
     ACTION_CONFIRM_QUIZ_LADY, ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_OldFishingRod[] = {
+    ACTION_OLD_TECHNIQUE,   ACTION_REGISTER,
+    ACTION_DUMMY,           ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_GoodFishingRod[] = {
+    ACTION_OLD_TECHNIQUE,   ACTION_REGISTER,
+    ACTION_GOOD_TECHNIQUE,  ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_SuperFishingRod[] = {
+    ACTION_OLD_TECHNIQUE,   ACTION_REGISTER,
+    ACTION_GOOD_TECHNIQUE,  ACTION_DUMMY,
+    ACTION_SUPER_TECHNIQUE, ACTION_CANCEL
 };
 
 static const TaskFunc sContextMenuFuncs[] = {
@@ -1853,6 +1885,28 @@ static void OpenContextMenu(u8 taskId)
                         gBagMenu->contextMenuItemsBuffer[0] = ACTION_WALK;
                 }
 
+                if (gSpecialVar_ItemId == ITEM_FISHING_ROD)
+                {
+                    if (OW_FLAG_VARIABLE_ROD_SUPER_TECHNIQUE != 0 && FlagGet(OW_FLAG_VARIABLE_ROD_SUPER_TECHNIQUE))
+                    {
+                        gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
+                        gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_SuperFishingRod);
+                        memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_SuperFishingRod, sizeof(sContextMenuItems_SuperFishingRod));
+                    }
+                    else if (OW_FLAG_VARIABLE_ROD_GOOD_TECHNIQUE != 0 && FlagGet(OW_FLAG_VARIABLE_ROD_GOOD_TECHNIQUE))
+                    {
+                        gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
+                        gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_GoodFishingRod);
+                        memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_GoodFishingRod, sizeof(sContextMenuItems_GoodFishingRod));
+                    }
+                    else
+                    {
+                        gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
+                        gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_OldFishingRod);
+                        memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_OldFishingRod, sizeof(sContextMenuItems_OldFishingRod));
+                    }
+                }
+
                 //tx_registered_items_menu
                 if (TxRegItemsMenu_CheckRegisteredHasItem(gSpecialVar_ItemId))
                     gBagMenu->contextMenuItemsBuffer[1] = ACTION_DESELECT;
@@ -2056,6 +2110,27 @@ static void ItemMenu_UseOutOfBattle(u8 taskId)
                 ItemUseOutOfBattle_Berry(taskId);
         }
     }
+}
+
+static void ItemMenu_UseOutOfBattle_VariableOldRod(u8 taskId)
+{
+    if (OW_VAR_VARIABLE_ROD_USE_TECHNIQUE != 0)
+        VarSet(OW_VAR_VARIABLE_ROD_USE_TECHNIQUE, OLD_ROD);
+    ItemMenu_UseOutOfBattle(taskId);
+}
+
+static void ItemMenu_UseOutOfBattle_VariableGoodRod(u8 taskId)
+{
+    if (OW_VAR_VARIABLE_ROD_USE_TECHNIQUE != 0)
+        VarSet(OW_VAR_VARIABLE_ROD_USE_TECHNIQUE, GOOD_ROD);
+    ItemMenu_UseOutOfBattle(taskId);
+}
+
+static void ItemMenu_UseOutOfBattle_VariableSuperRod(u8 taskId)
+{
+    if (OW_VAR_VARIABLE_ROD_USE_TECHNIQUE != 0)
+        VarSet(OW_VAR_VARIABLE_ROD_USE_TECHNIQUE, SUPER_ROD);
+    ItemMenu_UseOutOfBattle(taskId);
 }
 
 static void ItemMenu_Toss(u8 taskId)

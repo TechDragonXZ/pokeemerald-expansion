@@ -83,6 +83,7 @@ static bool32 IsValidLocationForVsSeeker(void);
 void ItemUseOutOfBattle_Hexorb(u8 taskId);
 void Task_OpenRegisteredHexorb(u8 taskId);
 // End hexorb Branch
+static void ItemUseOnFieldCB_FishingRod(u8);
 
 static const u8 sText_CantDismountBike[] = _("You can't dismount your BIKE here.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_ItemFinderNearby[] = _("Huh?\nThe ITEMFINDER's responding!\pThere's an item buried around here!{PAUSE_UNTIL_PRESS}");
@@ -336,6 +337,34 @@ void ItemUseOutOfBattle_Rod(u8 taskId)
 static void ItemUseOnFieldCB_Rod(u8 taskId)
 {
     StartFishing(ItemId_GetSecondaryId(gSpecialVar_ItemId));
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_FishingRod(u8 taskId)
+{
+    if (CanFish() == TRUE && OW_VAR_VARIABLE_ROD_USE_TECHNIQUE != 0)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_FishingRod;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+    else
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
+static void ItemUseOnFieldCB_FishingRod(u8 taskId)
+{
+    switch (VarGet(OW_VAR_VARIABLE_ROD_USE_TECHNIQUE))
+    {
+    case SUPER_ROD:
+    case GOOD_ROD:
+        StartFishing(VarGet(OW_VAR_VARIABLE_ROD_USE_TECHNIQUE));
+        break;
+    
+    case OLD_ROD:
+    default:
+        StartFishing(OLD_ROD);
+        break;
+    }
     DestroyTask(taskId);
 }
 
