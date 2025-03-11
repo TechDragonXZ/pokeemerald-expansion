@@ -57,7 +57,7 @@
 #define FLAG_SKY_BATTLE           0x2B // Sky Battle Flag
 #define FLAG_TERA_ORB_CHARGED     0x2C // Tera Orb Charged Flag
 #define FLAG_TERA_ORB_NO_COST     0x2D // Tera Orb Unlimited Flag
-#define FLAG_EXP_SHARE            0x2E // Exp Share On/Off Flag
+#define FLAG_EXP_ALL              0x2E // Exp All On/Off Flag
 #define FLAG_HACKING_DEVICE       0x2F // Hacking Device On/Off Flag
 #define FLAG_SLEEP_CLAUSE         0x30 // Sleep Clause Flag
 #define FLAG_FOLLOWERS_DISABLED   0x31 // Followers Disabled Flag

@@ -28,6 +28,8 @@
 #define tSkipCutscene data[7]
 #define tDifficulty data[8]
 #define tSleepClause data[9]
+#define tBattleSpeed data[10]
+#define tExpAll data[11]
 
 // Page 1
 enum
@@ -47,7 +49,9 @@ enum
 {
     MENUITEM_SKIPCUTSCENE,
     MENUITEM_DIFFICULTY,
+    MENUITEM_BATTLESPEED,
     MENUITEM_SLEEP_CLAUSE,
+    MENUITEM_EXP_ALL,
     MENUITEM_CANCEL_PG2,
     MENUITEM_COUNT_PG2,
 };
@@ -67,7 +71,9 @@ enum
 
 #define YPOS_SKIPCUTSCENE (MENUITEM_SKIPCUTSCENE * 16)
 #define YPOS_DIFFICULTY   (MENUITEM_DIFFICULTY * 16)
+#define YPOS_BATTLESPEED  (MENUITEM_BATTLESPEED * 16)
 #define YPOS_SLEEP_CLAUSE (MENUITEM_SLEEP_CLAUSE * 16)
+#define YPOS_EXP_ALL      (MENUITEM_EXP_ALL * 16)
 
 #define PAGE_COUNT 2
 
@@ -99,8 +105,12 @@ static u8 SkipCutscene_ProcessInput(u8 selection);
 static void SkipCutscene_DrawChoices(u8 selection);
 static u8 Difficulty_ProcessInput(u8 selection);
 static void Difficulty_DrawChoices(u8 selection);
+static u8 BattleSpeed_ProcessInput(u8 selection);
+static void BattleSpeed_DrawChoices(u8 selection);
 static u8 SleepClause_ProcessInput(u8 selection);
 static void SleepClause_DrawChoices(u8 selection);
+static u8 ExpAll_ProcessInput(u8 selection);
+static void ExpAll_DrawChoices(u8 selection);
 
 EWRAM_DATA static bool8 sArrowPressed = FALSE;
 EWRAM_DATA static u8 sCurrPage = 0;
@@ -124,7 +134,9 @@ static const u8 *const sOptionMenuItemsNames_Pg2[MENUITEM_COUNT_PG2] =
 {
     [MENUITEM_SKIPCUTSCENE] = gText_SkipCutscene,
     [MENUITEM_DIFFICULTY]   = gText_Difficulty,
+    [MENUITEM_BATTLESPEED]  = gText_BattleSpeed,
     [MENUITEM_SLEEP_CLAUSE] = gText_SleepClause,
+    [MENUITEM_EXP_ALL]      = gText_ExpAll,
     [MENUITEM_CANCEL_PG2]   = gText_OptionMenuCancel,
 };
 
@@ -201,7 +213,9 @@ static void ReadAllCurrentSettings(u8 taskId)
     gTasks[taskId].tWindowFrameType = gSaveBlock2Ptr->optionsWindowFrameType;
     gTasks[taskId].tSkipCutscene = VarGet(VAR_SKIP_CUTSCENES_TYPE);
     gTasks[taskId].tDifficulty = VarGet(VAR_DIFFICULTY);
+    gTasks[taskId].tBattleSpeed = VarGet(VAR_BATTLE_SPEED);
     gTasks[taskId].tSleepClause = FlagGet(FLAG_SLEEP_CLAUSE);
+    gTasks[taskId].tExpAll = FlagGet(FLAG_EXP_ALL);
 }
 
 static void DrawOptionsPg1(u8 taskId)
@@ -222,7 +236,9 @@ static void DrawOptionsPg2(u8 taskId)
     ReadAllCurrentSettings(taskId);
     SkipCutscene_DrawChoices(gTasks[taskId].tSkipCutscene);
     Difficulty_DrawChoices(gTasks[taskId].tDifficulty);
+    BattleSpeed_DrawChoices(gTasks[taskId].tBattleSpeed);
     SleepClause_DrawChoices(gTasks[taskId].tSleepClause);
+    ExpAll_DrawChoices(gTasks[taskId].tExpAll);
     HighlightOptionMenuItem(gTasks[taskId].tMenuSelection);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
@@ -525,12 +541,26 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
             if (previousOption != gTasks[taskId].tDifficulty)
                 Difficulty_DrawChoices(gTasks[taskId].tDifficulty);
             break;
+        case MENUITEM_BATTLESPEED:
+            previousOption = gTasks[taskId].tBattleSpeed;
+            gTasks[taskId].tBattleSpeed = BattleSpeed_ProcessInput(gTasks[taskId].tBattleSpeed);
+
+            if (previousOption != gTasks[taskId].tBattleSpeed)
+                BattleSpeed_DrawChoices(gTasks[taskId].tBattleSpeed);
+            break;
         case MENUITEM_SLEEP_CLAUSE:
             previousOption = gTasks[taskId].tSleepClause;
             gTasks[taskId].tSleepClause = SleepClause_ProcessInput(gTasks[taskId].tSleepClause);
 
             if (previousOption != gTasks[taskId].tSleepClause)
                 SleepClause_DrawChoices(gTasks[taskId].tSleepClause);
+            break;
+        case MENUITEM_EXP_ALL:
+            previousOption = gTasks[taskId].tExpAll;
+            gTasks[taskId].tExpAll = ExpAll_ProcessInput(gTasks[taskId].tExpAll);
+
+            if (previousOption != gTasks[taskId].tExpAll)
+                ExpAll_DrawChoices(gTasks[taskId].tExpAll);
             break;
         default:
             return;
@@ -552,9 +582,12 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsSound = gTasks[taskId].tSound;
     gSaveBlock2Ptr->optionsButtonMode = gTasks[taskId].tButtonMode;
     gSaveBlock2Ptr->optionsWindowFrameType = gTasks[taskId].tWindowFrameType;
+    // Custom
     gSaveBlock2Ptr->optionsSkipCutscene = VarSet(VAR_SKIP_CUTSCENES_TYPE, gTasks[taskId].tSkipCutscene);
     gSaveBlock2Ptr->optionsDifficulty = VarSet(VAR_DIFFICULTY, gTasks[taskId].tDifficulty);
+    gSaveBlock2Ptr->optionsBattleSpeed = VarSet(VAR_BATTLE_SPEED, gTasks[taskId].tBattleSpeed);
     gSaveBlock2Ptr->optionsSleepClause = gTasks[taskId].tSleepClause == 0 ? FlagClear(FLAG_SLEEP_CLAUSE) : FlagSet(FLAG_SLEEP_CLAUSE);
+    gSaveBlock2Ptr->optionsExpAll = gTasks[taskId].tExpAll == 0 ? FlagClear(FLAG_EXP_ALL) : FlagSet(FLAG_EXP_ALL);
 
     if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 2)
     {
@@ -1361,6 +1394,59 @@ static void Difficulty_DrawChoices(u8 selection)
     DrawOptionMenuChoice(gText_DifficultyHard, GetStringRightAlignXOffset(FONT_NORMAL, gText_DifficultyHard, 198), YPOS_DIFFICULTY, styles[2]);
 }
 
+static u8 BattleSpeed_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_RIGHT))
+    {
+        if (selection < 5 - 1)
+            selection++;
+        else
+            selection = 0;
+
+        sArrowPressed = TRUE;
+    }
+    if (JOY_NEW(DPAD_LEFT))
+    {
+        if (selection != 0)
+            selection--;
+        else
+            selection = 5 - 1;
+
+        sArrowPressed = TRUE;
+    }
+    return selection;
+}
+
+static void BattleSpeed_DrawChoices(u8 selection)
+{
+    u8 text[16] = {EOS};
+    u8 n = selection + 1;
+    u16 i;
+
+    for (i = 0; gText_BattleSpeedNumber[i] != EOS && i <= 5; i++)
+        text[i] = gText_BattleSpeedNumber[i];
+
+    // Convert a number to decimal string
+    if (n >= 0)
+    {
+        text[i] = n - 1 + CHAR_0;
+        i++;
+    }
+    else
+    {
+        text[i] = n - 1 + CHAR_0;
+        i++;
+        text[i] = CHAR_SPACER;
+        i++;
+    }
+
+    text[i] = EOS;
+
+    DrawOptionMenuChoice(gText_BattleSpeedLevel, 104, YPOS_BATTLESPEED, 0);
+    DrawOptionMenuChoice(text, 140, YPOS_BATTLESPEED, 1);
+    DrawOptionMenuChoice(gText_BattleSpeedEnd, 150, YPOS_BATTLESPEED, 1);
+}
+
 static u8 SleepClause_ProcessInput(u8 selection)
 {
     if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
@@ -1382,6 +1468,29 @@ static void SleepClause_DrawChoices(u8 selection)
 
     DrawOptionMenuChoice(gText_SleepClauseOff, GetStringRightAlignXOffset(FONT_NORMAL, gText_SleepClauseOff, 198), YPOS_SLEEP_CLAUSE, styles[0]);
     DrawOptionMenuChoice(gText_SleepClauseOn, 104, YPOS_SLEEP_CLAUSE, styles[1]);
+}
+
+static u8 ExpAll_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
+    {
+        selection ^= 1;
+        sArrowPressed = TRUE;
+    }
+
+    return selection;
+}
+
+static void ExpAll_DrawChoices(u8 selection)
+{
+    u8 styles[2];
+
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_ExpAllOff, GetStringRightAlignXOffset(FONT_NORMAL, gText_ExpAllOff, 198), YPOS_EXP_ALL, styles[0]);
+    DrawOptionMenuChoice(gText_ExpAllOn, 104, YPOS_EXP_ALL, styles[1]);
 }
 
 static void DrawHeaderText(void)

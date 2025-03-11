@@ -101,9 +101,12 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SHIFT;
     gSaveBlock2Ptr->optionsBattleSceneOff = FALSE;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
+    // Custom
     gSaveBlock2Ptr->optionsSkipCutscene = VarSet(VAR_SKIP_CUTSCENES_TYPE, 1);
     gSaveBlock2Ptr->optionsDifficulty = VarSet(VAR_DIFFICULTY, 1);
+    gSaveBlock2Ptr->optionsBattleSpeed = VarSet(VAR_BATTLE_SPEED, 1);
     gSaveBlock2Ptr->optionsSleepClause = FlagClear(FLAG_SLEEP_CLAUSE);
+    gSaveBlock2Ptr->optionsExpAll = FlagClear(FLAG_EXP_ALL);
 }
 
 static void ClearPokedexFlags(void)

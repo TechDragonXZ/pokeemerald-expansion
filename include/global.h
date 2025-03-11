@@ -553,7 +553,9 @@ struct SaveBlock2
              u16 regionMapZoom:1; // whether the map is zoomed in
              u16 optionsSkipCutscene:3; // OPTIONS_SKIP_CUTSCENE_[ALL/SEEN/NONE]
              u16 optionsDifficulty:3; // OPTIONS_DIFFICULTY_[EASY/NORMAL/HARD]
-             u16 optionsSleepClause:1; // OPTIONS_SLEEP_CLAUSE_[ON/OFF]
+             u16 optionsSleepClause; // OPTIONS_SLEEP_CLAUSE_[ON/OFF]
+             u16 optionsBattleSpeed:5; // OPTIONS_BATTLE_SPEED_[0x/1x/2x/3x/4x]
+             u16 optionsExpAll; // OPTIONS_EXP_ALL_[ON/OFF]
              //u16 padding1;
              //u16 padding2;
     /*0x18*/ struct Pokedex pokedex;

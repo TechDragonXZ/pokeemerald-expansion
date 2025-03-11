@@ -2486,6 +2486,15 @@ extern const u8 gText_SkipCutsceneAll[];
 extern const u8 gText_SkipCutsceneSeen[];
 extern const u8 gText_SkipCutsceneNone[];
 
+extern const u8 gText_BattleSpeed[];
+extern const u8 gText_BattleSpeedLevel[];
+extern const u8 gText_BattleSpeedNumber[];
+extern const u8 gText_BattleSpeedEnd[];
+
+extern const u8 gText_ExpAll[];
+extern const u8 gText_ExpAllOff[];
+extern const u8 gText_ExpAllOn[];
+
 // Fishing Minigame
 extern const u8 gText_ReelItIn[];
 extern const u8 gText_HelpfulTextHigher0[];

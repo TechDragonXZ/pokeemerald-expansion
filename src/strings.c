@@ -1385,3 +1385,12 @@ const u8 gText_SkipCutscene[] = _("SKIP CUTSCENES");
 const u8 gText_SkipCutsceneAll[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}ALL");
 const u8 gText_SkipCutsceneSeen[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SEEN");
 const u8 gText_SkipCutsceneNone[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}NONE");
+
+const u8 gText_BattleSpeed[] = _("BATTLE SPEED");
+const u8 gText_BattleSpeedLevel[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SPEED:");
+const u8 gText_BattleSpeedNumber[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}");
+const u8 gText_BattleSpeedEnd[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}x");
+
+const u8 gText_ExpAll[] = _("EXP. ALL");
+const u8 gText_ExpAllOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
+const u8 gText_ExpAllOn[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}ON");
