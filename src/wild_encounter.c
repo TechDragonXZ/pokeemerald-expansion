@@ -312,16 +312,11 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
     u8 range;
     u8 rand;
 
-    u8 count = gPlayerPartyCount;
     u8 fixedLVL = 0;
 
-    while (count-- > 0)
-    {
-        if (GetMonData(&gPlayerParty[count], MON_DATA_SPECIES) != SPECIES_NONE){
-            fixedLVL += (GetMonData(&gPlayerParty[count], MON_DATA_LEVEL));
-        }
+    if (GetMonData(&gPlayerParty[0], MON_DATA_SPECIES) != SPECIES_NONE){
+        fixedLVL = (GetMonData(&gPlayerParty[0], MON_DATA_LEVEL));
     }
-    fixedLVL = fixedLVL / gPlayerPartyCount;
 
     if (LURE_STEP_COUNT == 0)
     {
@@ -459,6 +454,44 @@ void CreateWildMon(u16 species, u8 level)
     }
 
     CreateMonWithNature(&gEnemyParty[0], species, level, USE_RANDOM_IVS, PickWildMonNature());
+    
+    if (FlagGet(FLAG_WILD_EVOLUTION))
+    {
+        u16 targetSpecies = GetEvolutionTargetSpecies(&gEnemyParty[0], EVO_MODE_NORMAL, ITEM_NONE, NULL);
+        if (targetSpecies != SPECIES_NONE)
+        {
+            if ((targetSpecies == SPECIES_SILCOON) && (Random() % 100) >= 50)
+                targetSpecies = SPECIES_CASCOON;
+            if ((targetSpecies == SPECIES_VILEPLUME) && (Random() % 100) <= 40)
+                targetSpecies = SPECIES_BELLOSSOM;
+            if ((targetSpecies == SPECIES_POLIWRATH) && (Random() % 100) <= 30)
+                targetSpecies = SPECIES_POLITOED;
+            if ((targetSpecies == SPECIES_SLOWBRO) && (Random() % 100) <= 30)
+                targetSpecies = SPECIES_SLOWKING;
+            if ((targetSpecies == SPECIES_SLOWBRO_GALAR) && (Random() % 100) <= 30)
+                targetSpecies = SPECIES_SLOWKING_GALAR;
+            if ((targetSpecies == SPECIES_HUNTAIL) && (Random() % 100) <= 50)
+                targetSpecies = SPECIES_GOREBYSS;
+            if ((targetSpecies == SPECIES_NINJASK) && (Random() % 100) <= 20)
+                targetSpecies = SPECIES_SHEDINJA;
+            if ((targetSpecies == SPECIES_TYROGUE) && level >= 6 && GetMonData(&gEnemyParty[0], MON_DATA_ATK, 0) < GetMonData(&gEnemyParty[0], MON_DATA_DEF, 0))
+                targetSpecies = SPECIES_HITMONCHAN;
+            if ((targetSpecies == SPECIES_TYROGUE) && level >= 6 && GetMonData(&gEnemyParty[0], MON_DATA_ATK, 0) > GetMonData(&gEnemyParty[0], MON_DATA_DEF, 0))
+                targetSpecies = SPECIES_HITMONLEE;
+            if ((targetSpecies == SPECIES_TYROGUE) && level >= 6 && GetMonData(&gEnemyParty[0], MON_DATA_ATK, 0) == GetMonData(&gEnemyParty[0], MON_DATA_DEF, 0))
+                targetSpecies = SPECIES_HITMONTOP;
+            
+            CreateMonWithNature(&gEnemyParty[0], targetSpecies, level, USE_RANDOM_IVS, PickWildMonNature());
+            if (FlagGet(FLAG_WILD_EVOLUTION))
+            {
+                u16 targetSpecies2 = GetEvolutionTargetSpecies(&gEnemyParty[0], EVO_MODE_NORMAL, ITEM_NONE, NULL);
+                if (targetSpecies2 != SPECIES_NONE)
+                {
+                    CreateMonWithNature(&gEnemyParty[0], targetSpecies, level, USE_RANDOM_IVS, PickWildMonNature());
+                }
+            }
+        }
+    }
 }
 #ifdef BUGFIX
 #define TRY_GET_ABILITY_INFLUENCED_WILD_MON_INDEX(wildPokemon, type, ability, ptr, count) TryGetAbilityInfluencedWildMonIndex(wildPokemon, type, ability, ptr, count)

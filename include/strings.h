@@ -2495,6 +2495,10 @@ extern const u8 gText_ExpAll[];
 extern const u8 gText_ExpAllOff[];
 extern const u8 gText_ExpAllOn[];
 
+extern const u8 gText_WildEvo[];
+extern const u8 gText_WildEvoOff[];
+extern const u8 gText_WildEvoOn[];
+
 // Fishing Minigame
 extern const u8 gText_ReelItIn[];
 extern const u8 gText_HelpfulTextHigher0[];

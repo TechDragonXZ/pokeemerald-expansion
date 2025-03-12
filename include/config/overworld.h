@@ -100,7 +100,7 @@
 // Time
 #define OW_TIMES_OF_DAY                 GEN_LATEST // Different generations have the times of day change at different times.
 #define OW_USE_FAKE_RTC                 TRUE       // When TRUE, seconds on the in-game clock will only advance once every 60 playTimeVBlanks (every 60 frames).
-#define OW_ALTERED_TIME_RATIO           GEN_8_PLA  // In GEN_8_PLA, the time in game moves forward 60 seconds for every second in the RTC. In GEN_9, it is 20 seconds. This has no effect if OW_USE_FAKE_RTC is FALSE.
+#define OW_ALTERED_TIME_RATIO           GEN_9      // In GEN_8_PLA, the time in game moves forward 60 seconds for every second in the RTC. In GEN_9, it is 20 seconds. This has no effect if OW_USE_FAKE_RTC is FALSE.
 
 // Lighting
 #define OW_SHADOW_INTENSITY             4          // Ranges from 0 to 16, where 0 is fully transparent and 16 is black.
@@ -144,7 +144,7 @@
 #define BERRY_BLENDER_THROW_ALL_BERRIES_AT_ONCE TRUE        // This is a small little addition, that basically speeds up the animation where all players' berries are thrown into the blender. Self-explanatory I hope!
 
 // Variable Rod
-#define OW_VAR_VARIABLE_ROD_USE_TECHNIQUE       VAR_ROD_TECHNIQUE     // If this var has a value, the game will use it to remember the used fishing technique.
+#define OW_VAR_VARIABLE_ROD_USE_TECHNIQUE       VAR_ROD_TECHNIQUE           // If this var has a value, the game will use it to remember the used fishing technique.
 #define OW_FLAG_VARIABLE_ROD_GOOD_TECHNIQUE     FLAG_GOOD_ROD_TECHNIQUE     // If this flag is set, the game will unlock the 'good fishing technique'.
 #define OW_FLAG_VARIABLE_ROD_SUPER_TECHNIQUE    FLAG_SUPER_ROD_TECHNIQUE    // If this flag is set, the game will unlock the 'super fishing technique'.
 

@@ -106,7 +106,8 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsDifficulty = VarSet(VAR_DIFFICULTY, 1);
     gSaveBlock2Ptr->optionsBattleSpeed = VarSet(VAR_BATTLE_SPEED, 1);
     gSaveBlock2Ptr->optionsSleepClause = FlagClear(FLAG_SLEEP_CLAUSE);
-    gSaveBlock2Ptr->optionsExpAll = FlagClear(FLAG_EXP_ALL);
+    gSaveBlock2Ptr->optionsExpAll = FlagSet(FLAG_EXP_ALL);
+    gSaveBlock2Ptr->optionsWildEvo = FlagSet(FLAG_WILD_EVOLUTION);
 }
 
 static void ClearPokedexFlags(void)

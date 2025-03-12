@@ -1394,3 +1394,7 @@ const u8 gText_BattleSpeedEnd[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}x");
 const u8 gText_ExpAll[] = _("EXP. ALL");
 const u8 gText_ExpAllOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
 const u8 gText_ExpAllOn[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}ON");
+
+const u8 gText_WildEvo[] = _("WILD EVOLUTIONS");
+const u8 gText_WildEvoOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
+const u8 gText_WildEvoOn[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}ON");

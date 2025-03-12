@@ -25,11 +25,13 @@
 #define tSound data[4]
 #define tButtonMode data[5]
 #define tWindowFrameType data[6]
+// Custom
 #define tSkipCutscene data[7]
 #define tDifficulty data[8]
 #define tSleepClause data[9]
 #define tBattleSpeed data[10]
 #define tExpAll data[11]
+#define tWildEvo data[12]
 
 // Page 1
 enum
@@ -52,6 +54,7 @@ enum
     MENUITEM_BATTLESPEED,
     MENUITEM_SLEEP_CLAUSE,
     MENUITEM_EXP_ALL,
+    MENUITEM_WILD_EVO,
     MENUITEM_CANCEL_PG2,
     MENUITEM_COUNT_PG2,
 };
@@ -74,6 +77,7 @@ enum
 #define YPOS_BATTLESPEED  (MENUITEM_BATTLESPEED * 16)
 #define YPOS_SLEEP_CLAUSE (MENUITEM_SLEEP_CLAUSE * 16)
 #define YPOS_EXP_ALL      (MENUITEM_EXP_ALL * 16)
+#define YPOS_WILD_EVO     (MENUITEM_WILD_EVO * 16)
 
 #define PAGE_COUNT 2
 
@@ -111,6 +115,8 @@ static u8 SleepClause_ProcessInput(u8 selection);
 static void SleepClause_DrawChoices(u8 selection);
 static u8 ExpAll_ProcessInput(u8 selection);
 static void ExpAll_DrawChoices(u8 selection);
+static u8 WildEvo_ProcessInput(u8 selection);
+static void WildEvo_DrawChoices(u8 selection);
 
 EWRAM_DATA static bool8 sArrowPressed = FALSE;
 EWRAM_DATA static u8 sCurrPage = 0;
@@ -137,6 +143,7 @@ static const u8 *const sOptionMenuItemsNames_Pg2[MENUITEM_COUNT_PG2] =
     [MENUITEM_BATTLESPEED]  = gText_BattleSpeed,
     [MENUITEM_SLEEP_CLAUSE] = gText_SleepClause,
     [MENUITEM_EXP_ALL]      = gText_ExpAll,
+    [MENUITEM_WILD_EVO]     = gText_WildEvo,
     [MENUITEM_CANCEL_PG2]   = gText_OptionMenuCancel,
 };
 
@@ -211,11 +218,13 @@ static void ReadAllCurrentSettings(u8 taskId)
     gTasks[taskId].tSound = gSaveBlock2Ptr->optionsSound;
     gTasks[taskId].tButtonMode = gSaveBlock2Ptr->optionsButtonMode;
     gTasks[taskId].tWindowFrameType = gSaveBlock2Ptr->optionsWindowFrameType;
+    // Custom
     gTasks[taskId].tSkipCutscene = VarGet(VAR_SKIP_CUTSCENES_TYPE);
     gTasks[taskId].tDifficulty = VarGet(VAR_DIFFICULTY);
     gTasks[taskId].tBattleSpeed = VarGet(VAR_BATTLE_SPEED);
     gTasks[taskId].tSleepClause = FlagGet(FLAG_SLEEP_CLAUSE);
     gTasks[taskId].tExpAll = FlagGet(FLAG_EXP_ALL);
+    gTasks[taskId].tWildEvo = FlagGet(FLAG_WILD_EVOLUTION);
 }
 
 static void DrawOptionsPg1(u8 taskId)
@@ -239,6 +248,7 @@ static void DrawOptionsPg2(u8 taskId)
     BattleSpeed_DrawChoices(gTasks[taskId].tBattleSpeed);
     SleepClause_DrawChoices(gTasks[taskId].tSleepClause);
     ExpAll_DrawChoices(gTasks[taskId].tExpAll);
+    WildEvo_DrawChoices(gTasks[taskId].tWildEvo);
     HighlightOptionMenuItem(gTasks[taskId].tMenuSelection);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
@@ -562,6 +572,13 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
             if (previousOption != gTasks[taskId].tExpAll)
                 ExpAll_DrawChoices(gTasks[taskId].tExpAll);
             break;
+        case MENUITEM_WILD_EVO:
+            previousOption = gTasks[taskId].tWildEvo;
+            gTasks[taskId].tWildEvo = WildEvo_ProcessInput(gTasks[taskId].tWildEvo);
+
+            if (previousOption != gTasks[taskId].tWildEvo)
+                WildEvo_DrawChoices(gTasks[taskId].tWildEvo);
+            break;
         default:
             return;
         }
@@ -588,6 +605,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsBattleSpeed = VarSet(VAR_BATTLE_SPEED, gTasks[taskId].tBattleSpeed);
     gSaveBlock2Ptr->optionsSleepClause = gTasks[taskId].tSleepClause == 0 ? FlagClear(FLAG_SLEEP_CLAUSE) : FlagSet(FLAG_SLEEP_CLAUSE);
     gSaveBlock2Ptr->optionsExpAll = gTasks[taskId].tExpAll == 0 ? FlagClear(FLAG_EXP_ALL) : FlagSet(FLAG_EXP_ALL);
+    gSaveBlock2Ptr->optionsWildEvo = gTasks[taskId].tWildEvo == 0 ? FlagClear(FLAG_WILD_EVOLUTION) : FlagSet(FLAG_WILD_EVOLUTION);
 
     if (VarGet(VAR_SKIP_CUTSCENES_TYPE) == 2)
     {
@@ -1491,6 +1509,29 @@ static void ExpAll_DrawChoices(u8 selection)
 
     DrawOptionMenuChoice(gText_ExpAllOff, GetStringRightAlignXOffset(FONT_NORMAL, gText_ExpAllOff, 198), YPOS_EXP_ALL, styles[0]);
     DrawOptionMenuChoice(gText_ExpAllOn, 104, YPOS_EXP_ALL, styles[1]);
+}
+
+static u8 WildEvo_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
+    {
+        selection ^= 1;
+        sArrowPressed = TRUE;
+    }
+
+    return selection;
+}
+
+static void WildEvo_DrawChoices(u8 selection)
+{
+    u8 styles[2];
+
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_WildEvoOff, GetStringRightAlignXOffset(FONT_NORMAL, gText_WildEvoOff, 198), YPOS_WILD_EVO, styles[0]);
+    DrawOptionMenuChoice(gText_WildEvoOn, 104, YPOS_WILD_EVO, styles[1]);
 }
 
 static void DrawHeaderText(void)

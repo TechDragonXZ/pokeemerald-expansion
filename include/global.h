@@ -553,13 +553,14 @@ struct SaveBlock2
              u16 regionMapZoom:1; // whether the map is zoomed in
              u16 optionsSkipCutscene:3; // OPTIONS_SKIP_CUTSCENE_[ALL/SEEN/NONE]
              u16 optionsDifficulty:3; // OPTIONS_DIFFICULTY_[EASY/NORMAL/HARD]
-             u16 optionsSleepClause; // OPTIONS_SLEEP_CLAUSE_[ON/OFF]
+             u16 optionsSleepClause:1; // OPTIONS_SLEEP_CLAUSE_[ON/OFF]
              u16 optionsBattleSpeed:5; // OPTIONS_BATTLE_SPEED_[0x/1x/2x/3x/4x]
-             u16 optionsExpAll; // OPTIONS_EXP_ALL_[ON/OFF]
+             u16 optionsExpAll:1; // OPTIONS_EXP_ALL_[ON/OFF]
+             u16 optionsWildEvo:1; // OPTIONS_WILD_EVOLUTIONS_[ON/OFF]
              //u16 padding1;
              //u16 padding2;
     /*0x18*/ struct Pokedex pokedex;
-    /*0x90*/ u8 filler_90[0x8];
+    /*0x90   u8 filler_90[0x8];*/
     /*0x98*/ struct Time localTimeOffset;
     /*0xA0*/ struct Time lastBerryTreeUpdate;
     /*0xA8*/ u32 gcnLinkFlags; // Read by Pokémon Colosseum/XD

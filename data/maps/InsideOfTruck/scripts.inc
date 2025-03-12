@@ -16,6 +16,12 @@ InsideOfTruck_OnResume:
 InsideOfTruck_EventScript_SetIntroFlags::
 	lockall
 	setflag FLAG_HIDE_MAP_NAME_POPUP
+	clearflag FLAG_SLEEP_CLAUSE
+	setflag FLAG_EXP_ALL
+	setflag FLAG_WILD_EVOLUTION
+	setvar VAR_SKIP_CUTSCENES_TYPE, 1
+	setvar VAR_DIFFICULTY, 1
+	setvar VAR_BATTLE_SPEED, 1
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, InsideOfTruck_EventScript_SetIntroFlagsMale
 	goto_if_eq VAR_RESULT, FEMALE, InsideOfTruck_EventScript_SetIntroFlagsFemale
