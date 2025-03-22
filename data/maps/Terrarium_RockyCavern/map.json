@@ -1,0 +1,35 @@
+{
+  "id": "MAP_TERRARIUM_ROCKY_CAVERN",
+  "name": "Terrarium_RockyCavern",
+  "layout": "LAYOUT_TERRARIUM_ROCKY_CAVERN",
+  "music": "MUS_SAFARI_ZONE",
+  "region_map_section": "MAPSEC_TERRARIUM",
+  "requires_flash": false,
+  "weather": "WEATHER_SANDSTORM",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 30,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_SOUTH_EAST",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

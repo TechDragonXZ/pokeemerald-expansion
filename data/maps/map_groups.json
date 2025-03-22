@@ -36,6 +36,10 @@
     "gMapGroup_IndoorRoute124",
     "gMapGroup_DeepPetalburgWoods",
     "gMapGroup_DeepPetalburgWoods_Indoors",
+    "gMapGroup_Terrarium",
+    "gMapGroup_Terrarium_Subareas",
+    "gMapGroup_Terrarium_Indoors",
+    "gMapGroup_Wormhole_Spots",
     "gMapGroup_None"
   ],
   "gMapGroup_TownsAndRoutes": [
@@ -191,7 +195,9 @@
     "MauvilleCity_House2",
     "MauvilleCity_PokemonCenter_1F",
     "MauvilleCity_PokemonCenter_2F",
-    "MauvilleCity_Mart"
+    "MauvilleCity_Mart",
+    "MauvilleCity_BattleCafe",
+    "MauvilleCity_BattleCafe_Arena"
   ],
   "gMapGroup_IndoorRustboro": [
     "RustboroCity_DevonCorp_1F",
@@ -629,6 +635,37 @@
   ],
   "gMapGroup_DeepPetalburgWoods_Indoors": [
     "PokeballCrafter_House"
+  ],
+  "gMapGroup_Terrarium": [
+    "Terrarium_Center",
+    "Terrarium_North",
+    "Terrarium_South",
+    "Terrarium_East",
+    "Terrarium_West",
+    "Terrarium_SouthEast",
+    "Terrarium_NorthWest",
+    "Terrarium_NorthEast",
+    "Terrarium_SouthWest"
+  ],
+  "gMapGroup_Terrarium_Subareas": [
+    "Terrarium_Volcano",
+    "Terrarium_IcyCave",
+    "Terrarium_RockyCavern",
+    "Terrarium_FoggyCavern",
+    "Terrarium_Forest"
+  ],
+  "gMapGroup_Terrarium_Indoors": [
+    "Terrarium_Lobby",
+    "Terrarium_SouthWest_Gate",
+    "Terrarium_SouthEast_Gate",
+    "Terrarium_NorthEast_Gate",
+    "Terrarium_NorthWest_Gate",
+    "Terrarium_CenterWest_Gate",
+    "Terrarium_CenterEast_Gate",
+    "Terrarium_CenterNorth_Gate"
+  ],
+  "gMapGroup_Wormhole_Spots": [
+    "DistortionWorld"
   ],
   "gMapGroup_None": [
     "None"

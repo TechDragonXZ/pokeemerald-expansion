@@ -1398,3 +1398,8 @@ const u8 gText_ExpAllOn[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}ON");
 const u8 gText_WildEvo[] = _("WILD EVOLUTIONS");
 const u8 gText_WildEvoOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
 const u8 gText_WildEvoOn[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}ON");
+
+// Vending Machine - Pokeballs
+const u8 gText_SafariBallAndPrice[] = _("Safari Balls{CLEAR_TO 0x48}¥200");
+const u8 gText_SportBallAndPrice[] = _("Sport Balls{CLEAR_TO 0x48}¥300");
+const u8 gText_ParkBallAndPrice[] = _("Park Balls{CLEAR_TO 0x48}¥350");

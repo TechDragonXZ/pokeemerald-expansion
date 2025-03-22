@@ -789,6 +789,14 @@ static const struct MenuAction MultichoiceList_StatusInfo2[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_VendingMachinePokeball[] =
+{
+    {gText_SafariBallAndPrice},
+    {gText_SportBallAndPrice},
+    {gText_ParkBallAndPrice},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -918,6 +926,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
     [MULTI_STATUS_INFO2]               = MULTICHOICE(MultichoiceList_StatusInfo2),
+    [MULTI_VENDING_MACHINE_POKEBALL]   = MULTICHOICE(MultichoiceList_VendingMachinePokeball),
 };
 
 const u8 *const gStdStrings[] =

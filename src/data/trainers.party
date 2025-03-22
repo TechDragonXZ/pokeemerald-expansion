@@ -18402,7 +18402,7 @@ EVs: 0 HP / 0 Atk / 126 Def/ 252 SpA / 126 SpD / 0 Spe
 
 === TRAINER_BATTLEBOT ===
 Name: BattleBot
-Class: Pkmn Trainer 1
+Class: Battle Bot
 Pic: Hiker
 Gender: Male
 Music: Male
@@ -18556,3 +18556,166 @@ IVs: 13 HP / 6 Def / 9 SpA / 10 SpD / 24 Spe
 - Hyper Voice
 - Parabolic Charge
 - Bulldoze
+
+=== TRAINER_VSC ===
+Name: PORY-101
+Class: Battle Bot
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+
+Applin
+Ability: Ripen
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Adamant Nature
+- Pounce
+- Rollout
+- Defense Curl
+- Leafage
+
+Combee
+Ability: Honey Gather
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Hasty Nature
+- Bug Bite
+- Gust
+- Sweet Scent
+- Bug Buzz
+
+Fidough (F)
+Ability: Own Tempo
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tera Type: Fairy
+Naughty Nature  
+- Lick
+- Alluring Voice
+- Tackle
+- Baby-Doll Eyes
+
+=== TRAINER_MC ===
+Name: PORY-101
+Class: Battle Bot
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: Yes
+
+Arboliva (F)
+Ability: Seed Sower
+Level: 35
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Energy Ball
+- Terrain Pulse
+- Sunny Day
+- Reflect
+
+SPECIES_SINISTCHA_MASTERPIECE
+Ability: Hospitality
+Level: 35
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Matcha Gotcha
+- Hex
+- Nasty Plot
+- Pain Split
+
+Dachsbun (F)
+Ability: Well-Baked Body
+Level: 35
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tera Type: Fairy
+- Play Rough
+- Trailblaze
+- Charm
+- Wish
+
+SPECIES_ALCREMIE_RIBBON_RAINBOW_SWIRL (F)
+Ability: Sweet Veil
+Level: 35
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dynamax Level: 2
+Gigantamax: Yes
+- Dazzling Gleam
+- Mystical Fire
+- Aromatherapy
+- Misty Terrain
+
+=== TRAINER_MRB ===
+Name: PORY-101
+Class: Battle Bot
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: Yes
+
+Arboliva (F) @ Heat Rock
+Ability: Seed Sower
+EVs: 248 HP / 252 SpA / 8 SpD
+Modest Nature
+Level: 50
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Energy Ball
+- Terrain Pulse
+- Sunny Day
+- Reflect
+
+Vanilluxe (F) @ Never-Melt Ice
+Ability: Weak Armor
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Level: 50
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Freeze-Dry
+- Ice Beam
+- Ally Switch
+- Light Screen
+
+Dachsbun (F) @ Heavy-Duty Boots
+Ability: Well-Baked Body
+Tera Type: Fairy
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Play Rough
+- Trailblaze
+- Charm
+- Wish
+
+SINISTCHA_MASTERPIECE @ Ghostium Z
+Ability: Hospitality
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Level: 50
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Matcha Gotcha
+- Hex
+- Nasty Plot
+- Pain Split
+
+Heracross @ Heracronite
+Ability: Guts
+EVs: 248 HP / 252 Atk / 8 SpD
+Adamant Nature
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Brick Break
+- Bug Bite
+- Swords Dance
+- Substitute
+
+SPECIES_ALCREMIE_RIBBON_RAINBOW_SWIRL (F) @ Fairy Feather
+Ability: Sweet Veil
+EVs: 252 HP / 252 SpA / 4 SpD
+Dynamax Level: 5
+Gigantamax: Yes
+Modest Nature
+Level: 50
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dazzling Gleam
+- Mystical Fire
+- Aromatherapy
+- Misty Terrain

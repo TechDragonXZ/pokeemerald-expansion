@@ -1,0 +1,110 @@
+{
+  "id": "MAP_TERRARIUM_WEST",
+  "name": "Terrarium_West",
+  "layout": "LAYOUT_TERRARIUM_WEST",
+  "music": "MUS_SAFARI_ZONE",
+  "region_map_section": "MAPSEC_TERRARIUM",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_TERRARIUM_CENTER",
+      "offset": 0,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_TERRARIUM_NORTH_WEST",
+      "offset": 0,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_TERRARIUM_SOUTH_WEST",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_2",
+      "x": 51,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_IN_GRASS",
+      "movement_range_x": 10,
+      "movement_range_y": 10,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OverworldMon_EventScript_Standard2",
+      "flag": "FLAG_TEMP_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 11,
+      "y": 41,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_IN_GRASS",
+      "movement_range_x": 10,
+      "movement_range_y": 10,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OverworldMon_EventScript_Standard",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_1",
+      "x": 51,
+      "y": 48,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_IN_GRASS",
+      "movement_range_x": 10,
+      "movement_range_y": 10,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OverworldMon_EventScript_Strong",
+      "flag": "FLAG_TEMP_3"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 26,
+      "y": 58,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_SOUTH_WEST_GATE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 56,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_CENTER_WEST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 56,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_CENTER_WEST_GATE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 33,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_NORTH_WEST_GATE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

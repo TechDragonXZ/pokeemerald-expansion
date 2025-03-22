@@ -1634,3 +1634,101 @@ const u16 gTilesetPalettes_UnionRoom[][16] =
 };
 
 const u32 gTilesetTiles_UnionRoom[] = INCBIN_U32("data/tilesets/secondary/union_room/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_General_Perma_Winter[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_winter/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_General_Perma_Winter[] = INCBIN_U32("data/tilesets/primary/general_perma_winter/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_General_Perma_Summer[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_summer/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_General_Perma_Summer[] = INCBIN_U32("data/tilesets/primary/general_perma_summer/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_General_Perma_Spring[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_spring/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_General_Perma_Spring[] = INCBIN_U32("data/tilesets/primary/general_perma_spring/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_General_Perma_Autumn[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_perma_autumn/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_General_Perma_Autumn[] = INCBIN_U32("data/tilesets/primary/general_perma_autumn/tiles.4bpp.lz");
+
+const u32 gTilesetTiles_Distortion_World[] = INCBIN_U32("data/tilesets/secondary/distortion_world/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Distortion_World[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/distortion_world/palettes/15.gbapal"),
+};

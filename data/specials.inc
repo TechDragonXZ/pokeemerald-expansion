@@ -568,3 +568,4 @@ gSpecials::
 	def_special ObjectEventInteractionGetApricornTreeData
 	def_special ObjectEventInteractionPickApricornTree
 	def_special CheckNoMoreSecretBases
+	def_special TryTrimFurfrou

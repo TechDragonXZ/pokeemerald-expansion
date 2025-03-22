@@ -1,0 +1,91 @@
+{
+  "id": "MAP_TERRARIUM_SOUTH_WEST",
+  "name": "Terrarium_SouthWest",
+  "layout": "LAYOUT_TERRARIUM_SOUTH_WEST",
+  "music": "MUS_SAFARI_ZONE",
+  "region_map_section": "MAPSEC_TERRARIUM",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_TERRARIUM_WEST",
+      "offset": 0,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_TERRARIUM_SOUTH",
+      "offset": 0,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_2",
+      "x": 15,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_IN_GRASS",
+      "movement_range_x": 10,
+      "movement_range_y": 10,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OverworldMon_EventScript_Standard2",
+      "flag": "FLAG_TEMP_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 15,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 10,
+      "movement_range_y": 10,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OverworldMon_EventScript_Standard",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_1",
+      "x": 31,
+      "y": 53,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 10,
+      "movement_range_y": 10,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OverworldMon_EventScript_Strong",
+      "flag": "FLAG_TEMP_3"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 30,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_ICY_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_TERRARIUM_SOUTH_WEST_GATE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

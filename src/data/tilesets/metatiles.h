@@ -207,3 +207,18 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Perma_Winter[] = INCBIN_U16("data/tilesets/primary/general_perma_winter/metatiles.bin");
+const u16 gMetatileAttributes_General_Perma_Winter[] = INCBIN_U16("data/tilesets/primary/general_perma_winter/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Perma_Autumn[] = INCBIN_U16("data/tilesets/primary/general_perma_autumn/metatiles.bin");
+const u16 gMetatileAttributes_General_Perma_Autumn[] = INCBIN_U16("data/tilesets/primary/general_perma_autumn/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Perma_Summer[] = INCBIN_U16("data/tilesets/primary/general_perma_summer/metatiles.bin");
+const u16 gMetatileAttributes_General_Perma_Summer[] = INCBIN_U16("data/tilesets/primary/general_perma_summer/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Perma_Spring[] = INCBIN_U16("data/tilesets/primary/general_perma_spring/metatiles.bin");
+const u16 gMetatileAttributes_General_Perma_Spring[] = INCBIN_U16("data/tilesets/primary/general_perma_spring/metatile_attributes.bin");
+
+const u16 gMetatiles_Distortion_World[] = INCBIN_U16("data/tilesets/secondary/distortion_world/metatiles.bin");
+const u16 gMetatileAttributes_Distortion_World[] = INCBIN_U16("data/tilesets/secondary/distortion_world/metatile_attributes.bin");

@@ -326,3 +326,8 @@ void ClearEventCodesFlags(void)
         FlagClear(i);
     }
 }
+
+u8 getCurrentSeason(void)
+{
+    return VarGet(VAR_SEASON);
+}

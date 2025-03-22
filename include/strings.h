@@ -2511,4 +2511,8 @@ extern const u8 gText_FishingWantToQuit[];
 extern const u8 gText_ReeledInAPokemon[];
 extern const u8 gText_PokemonGotAway[];
 
+// Vending Machine - Pokeballs
+extern const u8 gText_SafariBallAndPrice[];
+extern const u8 gText_SportBallAndPrice[];
+extern const u8 gText_ParkBallAndPrice[];
 #endif // GUARD_STRINGS_H

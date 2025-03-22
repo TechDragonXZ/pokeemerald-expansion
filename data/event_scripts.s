@@ -1161,9 +1161,63 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/craft.inc"
 	.include "data/scripts/codes.inc"
 	.include "data/scripts/self_trade.inc"
+    .include "data/scripts/overworld_pokemon.inc"
+    .include "data/scripts/ultra_wormholes.inc"
+    .include "data/scripts/hoopa_rings.inc"
+    .include "data/scripts/trim_furfrou.inc"
 
 	.include "data/maps/DeepPetalburgWoods/scripts.inc"
 
 	.include "data/maps/PokeballCrafter_House/scripts.inc"
 
 	.include "data/maps/None/scripts.inc"
+
+	.include "data/maps/Terrarium_Center/scripts.inc"
+
+	.include "data/maps/Terrarium_North/scripts.inc"
+
+	.include "data/maps/Terrarium_South/scripts.inc"
+
+	.include "data/maps/Terrarium_East/scripts.inc"
+
+	.include "data/maps/Terrarium_West/scripts.inc"
+
+	.include "data/maps/Terrarium_SouthEast/scripts.inc"
+
+	.include "data/maps/Terrarium_NorthWest/scripts.inc"
+
+	.include "data/maps/Terrarium_NorthEast/scripts.inc"
+
+	.include "data/maps/Terrarium_SouthWest/scripts.inc"
+
+	.include "data/maps/Terrarium_Volcano/scripts.inc"
+
+	.include "data/maps/Terrarium_IcyCave/scripts.inc"
+
+	.include "data/maps/Terrarium_RockyCavern/scripts.inc"
+
+	.include "data/maps/Terrarium_FoggyCavern/scripts.inc"
+
+	.include "data/maps/Terrarium_Lobby/scripts.inc"
+
+	.include "data/maps/Terrarium_SouthWest_Gate/scripts.inc"
+
+	.include "data/maps/Terrarium_NorthEast_Gate/scripts.inc"
+
+	.include "data/maps/Terrarium_CenterWest_Gate/scripts.inc"
+
+	.include "data/maps/Terrarium_CenterNorth_Gate/scripts.inc"
+
+	.include "data/maps/Terrarium_CenterEast_Gate/scripts.inc"
+	
+	.include "data/maps/Terrarium_NorthWest_Gate/scripts.inc"
+	
+	.include "data/maps/Terrarium_SouthEast_Gate/scripts.inc"
+
+	.include "data/maps/Terrarium_Forest/scripts.inc"
+
+	.include "data/maps/MauvilleCity_BattleCafe/scripts.inc"
+
+	.include "data/maps/MauvilleCity_BattleCafe_Arena/scripts.inc"
+
+	.include "data/maps/DistortionWorld/scripts.inc"

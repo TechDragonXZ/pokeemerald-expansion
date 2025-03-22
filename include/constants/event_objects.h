@@ -287,6 +287,7 @@
 #define OBJ_EVENT_GFX_VAR_D  (OBJ_EVENT_GFX_VARS + 0xD)
 #define OBJ_EVENT_GFX_VAR_E  (OBJ_EVENT_GFX_VARS + 0xE)
 #define OBJ_EVENT_GFX_VAR_F  (OBJ_EVENT_GFX_VARS + 0xF)
+#define OBJ_EVENT_GFX_LAST   OBJ_EVENT_GFX_VAR_F
 
 #define OBJ_EVENT_MON               (1u << 14)
 #define OBJ_EVENT_MON_SHINY         (1u << 13)
