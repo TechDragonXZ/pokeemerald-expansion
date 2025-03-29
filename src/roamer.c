@@ -207,20 +207,109 @@ void InitRoamer(void)
         TryAddRoamer(SPECIES_LATIOS, 40, FLEES, DAILY_RESPAWN);
         GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_LATIOS), FLAG_SET_SEEN);
     }
-    /*
-    if (VarGet(VAR_STARTER_MON) == 0 && FlagGet(FLAG_SYS_NATIONAL_DEX)) {
+    // Legendary Beasts
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX)) {
         TryAddRoamer(SPECIES_ENTEI, 50, FLEES, DAILY_RESPAWN);
         GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_ENTEI), FLAG_SET_SEEN);
     }
-    if (VarGet(VAR_STARTER_MON) == 1 && FlagGet(FLAG_SYS_NATIONAL_DEX)) {
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX)) {
         TryAddRoamer(SPECIES_SUICUNE, 50, FLEES, DAILY_RESPAWN);
         GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_SUICUNE), FLAG_SET_SEEN);
     }
-    if (VarGet(VAR_STARTER_MON) == 2 && FlagGet(FLAG_SYS_NATIONAL_DEX)) {
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX)) {
         TryAddRoamer(SPECIES_RAIKOU, 50, FLEES, DAILY_RESPAWN);
         GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_RAIKOU), FLAG_SET_SEEN);
     }
-    */
+    // Legendary Birds - Kanto
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_BIRDS_KANTO)) {
+        TryAddRoamer(SPECIES_ARTICUNO, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_ARTICUNO), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_BIRDS_KANTO)) {
+        TryAddRoamer(SPECIES_ZAPDOS, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_ZAPDOS), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_BIRDS_KANTO)) {
+        TryAddRoamer(SPECIES_MOLTRES, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_MOLTRES), FLAG_SET_SEEN);
+    }
+    // Legendary Birds - Galar
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_BIRDS_GALAR)) {
+        TryAddRoamer(SPECIES_ARTICUNO_GALAR, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_ARTICUNO_GALAR), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_BIRDS_GALAR)) {
+        TryAddRoamer(SPECIES_ZAPDOS_GALAR, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_ZAPDOS_GALAR), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_BIRDS_GALAR)) {
+        TryAddRoamer(SPECIES_MOLTRES_GALAR, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_MOLTRES_GALAR), FLAG_SET_SEEN);
+    }
+    // Loyal Three
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_LOYAL_THREE)) {
+        TryAddRoamer(SPECIES_FEZANDIPITI, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_FEZANDIPITI), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_LOYAL_THREE)) {
+        TryAddRoamer(SPECIES_MUNKIDORI, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_MUNKIDORI), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_LOYAL_THREE)) {
+        TryAddRoamer(SPECIES_OKIDOGI, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_OKIDOGI), FLAG_SET_SEEN);
+    }
+    // Swords of Justice
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_SWORDS)) {
+        TryAddRoamer(SPECIES_COBALION, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_COBALION), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_SWORDS)) {
+        TryAddRoamer(SPECIES_TERRAKION, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_TERRAKION), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_SWORDS)) {
+        TryAddRoamer(SPECIES_VIRIZION, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_VIRIZION), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_NATURE)) {
+        TryAddRoamer(SPECIES_KELDEO, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_KELDEO), FLAG_SET_SEEN);
+    }
+    // Forces of Nature
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_NATURE)) {
+        TryAddRoamer(SPECIES_TORNADUS, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_TORNADUS), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_NATURE)) {
+        TryAddRoamer(SPECIES_LANDORUS, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_LANDORUS), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_NATURE)) {
+        TryAddRoamer(SPECIES_THUNDURUS, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_THUNDURUS), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_NATURE)) {
+        TryAddRoamer(SPECIES_ENAMORUS, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_ENAMORUS), FLAG_SET_SEEN);
+    }
+    // Treasures of Ruin
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_RUIN)) {
+        TryAddRoamer(SPECIES_CHIEN_PAO, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_CHIEN_PAO), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_RUIN)) {
+        TryAddRoamer(SPECIES_CHI_YU, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_CHI_YU), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_RUIN)) {
+        TryAddRoamer(SPECIES_WO_CHIEN, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_WO_CHIEN), FLAG_SET_SEEN);
+    }
+    if (FlagGet(FLAG_SYS_NATIONAL_DEX) && FlagGet(FLAG_RELEASED_RUIN)) {
+        TryAddRoamer(SPECIES_TING_LU, 50, FLEES, DAILY_RESPAWN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_TING_LU), FLAG_SET_SEEN);
+    }
 
     TryAddStalker(SPECIES_WEEDLE, 0, DOES_NOT_FLEE, TERRESTRIAL, INSTANT_RESPAWN);
 #endif

@@ -74,7 +74,7 @@
 #define FLAG_HIDE_VIP_3           0x3C // Hide VIP #3 Flag
 #define FLAG_HIDE_VIP_4           0x3D // Hide VIP #4 Flag
 #define FLAG_IN_BATTLE_COURSE     0x3E // Player in Battle Course Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
+#define FLAG_IN_TERRARIUM         0x3F // In Terrarium Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
 #define FLAG_UNUSED_0x041    0x41 // Unused Flag
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
@@ -709,17 +709,17 @@
 #define FLAG_AURORA_TICKET_OBTAINED  0x291 // Obtained Aurora Ticket Flag
 #define FLAG_MYSTIC_TICKET_OBTAINED  0x292 // Obtained Mystic Ticket Flag
 #define FLAG_OLD_SEA_MAP_OBTAINED    0x293 // Obtained Old Sea Map Flag
-#define FLAG_UNUSED_0x294  0x294 // Unused Flag
-#define FLAG_UNUSED_0x295  0x295 // Unused Flag
-#define FLAG_UNUSED_0x296  0x296 // Unused Flag
-#define FLAG_UNUSED_0x297  0x297 // Unused Flag
-#define FLAG_UNUSED_0x298  0x298 // Unused Flag
-#define FLAG_UNUSED_0x299  0x299 // Unused Flag
-#define FLAG_UNUSED_0x29A  0x29A // Unused Flag
-#define FLAG_UNUSED_0x29B  0x29B // Unused Flag
-#define FLAG_UNUSED_0x29C  0x29C // Unused Flag
-#define FLAG_UNUSED_0x29D  0x29D // Unused Flag
-#define FLAG_UNUSED_0x29E  0x29E // Unused Flag
+#define FLAG_MANAPHY_OBTAINED        0x294 // Obtained Manaphy Flag
+#define FLAG_PHIONE_OBTAINED         0x295 // Obtained Phione Flag
+#define FLAG_VICTINI_OBTAINED        0x296 // Obtained Victini Flag
+#define FLAG_PECHARUNT_OBTAINED      0x297 // Obtained Pecharunt Flag
+#define FLAG_SHAYMIN_OBTAINED        0x298 // Obtained Shaymin Flag
+#define FLAG_DIANCIE_OBTAINED        0x299 // Obtained Diancie Flag
+#define FLAG_VOLCANION_OBTAINED      0x29A // Obtained Volcanion Flag
+#define FLAG_MARSHADOW_OBTAINED      0x29B // Obtained Marshadow Flag
+#define FLAG_ZERAORA_OBTAINED        0x29C // Obtained Zeraora Flag
+#define FLAG_MELTAN_OBTAINED         0x29D // Obtained Meltan Flag
+#define FLAG_ZARUDE_OBTAINED         0x29E // Obtained Zarude Flag
 #define FLAG_UNUSED_0x29F  0x29F // Unused Flag
 #define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
 #define FLAG_UNUSED_0x2A1  0x2A1 // Unused Flag
@@ -1231,78 +1231,94 @@
 
 #define FLAG_ITEMS_END FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL
 
+// Ultra Wormhole
+// Sinnoh
 #define FLAG_HIDE_GIRATINA                                          0x493 // Hide Giratina Flag
 #define FLAG_DEFEATED_GIRATINA                                      0x494 // Defeated Giratina Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
-#define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
-#define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
-#define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
-#define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
-#define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
-#define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
-#define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
-#define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
-#define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
-#define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
-#define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
-#define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
-#define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
-#define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
-#define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
-#define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
-#define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
-#define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
-#define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
-#define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
-#define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
-#define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
-#define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
-#define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
-#define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
-#define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
-#define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
-#define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
-#define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
-#define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
-#define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
-#define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
-#define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
+#define FLAG_HIDE_PALKIA                                            0x495 // Hide Palkia Flag
+#define FLAG_DEFEATED_PALKIA                                        0x496 // Defeated Palkia Flag
+#define FLAG_HIDE_DIALGA                                            0x497 // Hide Dialga Flag
+#define FLAG_DEFEATED_DIALGA                                        0x498 // Defeated Dialga Flag
+#define FLAG_HIDE_AZELF                                             0x499 // Hide Azelf Flag
+#define FLAG_DEFEATED_AZELF                                         0x49A // Defeated Azelf Flag
+#define FLAG_HIDE_UXIE                                              0x49B // Hide Uxie Flag
+#define FLAG_DEFEATED_UXIE                                          0x49C // Defeated Uxie Flag
+#define FLAG_HIDE_MESPRIT                                           0x49D // Hide Mesprit Flag
+#define FLAG_DEFEATED_MESPRIT                                       0x49E // Defeated Mesprit Flag
+#define FLAG_HIDE_HEATRAN                                           0x49F // Hide Heatran Flag
+#define FLAG_DEFEATED_HEATRAN                                       0x4A0 // Defeated Heatran Flag
+#define FLAG_HIDE_REGIGIGAS                                         0x4A1 // Hide Regigigas Flag
+#define FLAG_DEFEATED_REGIGIGAS                                     0x4A2 // Defeated Regigigas Flag
+#define FLAG_HIDE_CRESSELIA                                         0x4A3 // Hide Cresselia Flag
+#define FLAG_DEFEATED_CRESSELIA                                     0x4A4 // Defeated Cresselia Flag
+#define FLAG_HIDE_DARKRAI                                           0x4A5 // Hide Darkrai Flag
+#define FLAG_DEFEATED_DARKRAI                                       0x4A6 // Defeated Darkrai Flag
+#define FLAG_HIDE_ARCEUS                                            0x4A7 // Hide Arceus Flag
+#define FLAG_DEFEATED_ARCEUS                                        0x4A8 // Defeated Arceus Flag
+// Jhoto
+#define FLAG_HIDE_CELEBI                                            0x4A9 // Hide Celebi Flag
+#define FLAG_DEFEATED_CELEBI                                        0x4AA // Defeated Celebi Flag
+// Kanto
+#define FLAG_HIDE_MEWTWO                                            0x4AB // Hide Mewtwo Flag
+#define FLAG_DEFEATED_MEWTWO                                        0x4AC // Defeated Mewtwo Flag
+// Unova
+#define FLAG_HIDE_GENESECT                                          0x4AD // Hide Genesect Flag
+#define FLAG_DEFEATED_GENESECT                                      0x4AE // Defeated Genesect Flag
+// Kalos
+#define FLAG_HIDE_XERNEAS                                           0x4AF // Hide Xerneas Flag
+#define FLAG_DEFEATED_XERNEAS                                       0x4B0 // Defeated Xerneas Flag
+#define FLAG_HIDE_YVELTAL                                           0x4B1 // Hide Yveltal Flag
+#define FLAG_DEFEATED_YVELTAL                                       0x4B2 // Defeated Yveltal Flag
+#define FLAG_HIDE_ZYGARDE                                           0x4B3 // Hide Zygarde Flag
+#define FLAG_DEFEATED_ZYGARDE                                       0x4B4 // Defeated Zygarde Flag
+// Alola
+#define FLAG_HIDE_COSMOG                                            0x4B5 // Hide Cosmog Flag
+#define FLAG_DEFEATED_COSMOG                                        0x4B6 // Defeated Cosmog Flag
+#define FLAG_HIDE_SOLGALEO                                          0x4B7 // Hide Solgaleo Flag
+#define FLAG_DEFEATED_SOLGALEO                                      0x4B8 // Defeated Solgaleo Flag
+#define FLAG_HIDE_LUNALA                                            0x4B9 // Hide Lunala Flag
+#define FLAG_DEFEATED_LUNALA                                        0x4BA // Defeated Lunala Flag
+#define FLAG_HIDE_NECROZMA                                          0x4BB // Hide Necrozma Flag
+#define FLAG_DEFEATED_NECROZMA                                      0x4BC // Defeated Necrozma Flag
+// Galar
+#define FLAG_HIDE_ZAMAZENTA                                         0x4BD // Hide Zamazenta Flag
+#define FLAG_DEFEATED_ZAMAZENTA                                     0x4BE // Defeated Zamazenta Flag
+#define FLAG_HIDE_ZACIAN                                            0x4BF // Hide Zacian Flag
+#define FLAG_DEFEATED_ZACIAN                                        0x4C0 // Defeated Zacian Flag
+#define FLAG_HIDE_GLASTRIER                                         0x4C1 // Hide Glastrier Flag
+#define FLAG_DEFEATED_GLASTRIER                                     0x4C2 // Defeated Glastrier Flag
+#define FLAG_HIDE_SPECTRIER                                         0x4C3 // Hide Spectrier Flag
+#define FLAG_DEFEATED_SPECTRIER                                     0x4C4 // Defeated Spectrier Flag
+#define FLAG_HIDE_REGIDRAGO                                         0x4C5 // Hide Regidrago Flag
+#define FLAG_DEFEATED_REGIDRAGO                                     0x4C6 // Defeated Regidrago Flag
+#define FLAG_HIDE_REGELEKI                                          0x4C7 // Hide Regieleki Flag
+#define FLAG_DEFEATED_REGELEKI                                      0x4C8 // Defeated Regieleki Flag
+
+// Hoopa Ring
+// Unova
+#define FLAG_RING_RESHIRAM                                          0x4C9 // Defeated Reshiram Flag
+#define FLAG_RING_ZEKROM                                            0x4CA // Defeated Zekrom Flag
+#define FLAG_RING_KYUREM                                            0x4CB // Defeated Kyurem Flag
+#define FLAG_RING_MELOETTA                                          0x4CC // Defeated Meloetta Flag
+#define FLAG_RELEASED_NATURE                                        0x4CD // Released Forces of Nature Flag
+#define FLAG_RELEASED_SWORDS                                        0x4CE // Released Swords of Justice Flag
+// Kanto
+#define FLAG_RELEASED_BIRDS_KANTO                                   0x4CF // Released Legendary Birds Flag
+// Galar
+#define FLAG_RELEASED_BIRDS_GALAR                                   0x4D0 // Released Legendary Birds - Galar Flag
+#define FLAG_RING_ETERNATUS                                         0x4D1 // Defeated Eternatus Flag
+#define FLAG_RING_CALIREX                                           0x4D2 // Defeated Calyrex Flag
+// Alola
+#define FLAG_RING_TAPU_KOKO                                         0x4D3 // Defeated Tapu Koko Flag
+#define FLAG_RING_TAPU_LELE                                         0x4D4 // Defeated Tapu Koko Flag
+#define FLAG_RING_TAPU_BULU                                         0x4D5 // Defeated Tapu Koko Flag
+#define FLAG_RING_TAPU_FINI                                         0x4D6 // Defeated Tapu Koko Flag
+// Paldea
+#define FLAG_RELEASED_RUIN                                          0x4D7 // Released Treasures of Ruin Flag
+#define FLAG_RING_MIRAIDON                                          0x4D8 // Defeated Miraidon Flag
+#define FLAG_RING_KORAIDON                                          0x4D9 // Defeated Koraidon Flag
+#define FLAG_RELEASED_LOYAL_THREE                                   0x4DA // Released Loyal 3 Flag
+// Extra
 #define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
 #define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
 #define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
@@ -1354,7 +1370,7 @@
 
 // System Flags
 
-#define SYSTEM_FLAGS                                   (TRAINER_FLAGS_END + 1) // 0x860
+#define SYSTEM_FLAGS                                 (TRAINER_FLAGS_END + 1) // 0x860
 
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
@@ -1396,7 +1412,7 @@
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
-#define FLAG_UNUSED_0x881                           (SYSTEM_FLAGS + 0x21) // Unused Flag
+#define FLAG_SYS_REMOVE_WARP_FADE                   (SYSTEM_FLAGS + 0x21) // Remove Warp Fade Flag
 #define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Unused Flag
 #define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
 #define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
@@ -1583,9 +1599,9 @@
 #define FLAG_UNUSED_0x920                           (DAILY_FLAGS_START + 0x0)  // Unused Flag
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
-#define FLAG_DAILY_BATTLE_CAFE_VIPS                 (DAILY_FLAGS_START + 0x3)  // Set Daily VIP Flag
-#define FLAG_DAILY_BATTLE_CAFE_TRASH_CAN            (DAILY_FLAGS_START + 0x4)  // Set Daily Trash Can Flag
-#define FLAG_UNUSED_0x925                           (DAILY_FLAGS_START + 0x5)  // Unused Flag
+#define FLAG_DAILY_BATTLE_CAFE_VIPS                 (DAILY_FLAGS_START + 0x3)  // Daily VIP Flag
+#define FLAG_DAILY_BATTLE_CAFE_TRASH_CAN            (DAILY_FLAGS_START + 0x4)  // Daily Trash Can Flag
+#define FLAG_DAILY_GAME_CORNER_BREAK_IN             (DAILY_FLAGS_START + 0x5)  // Daily Game Corner Break-in Flag
 #define FLAG_UNUSED_0x926                           (DAILY_FLAGS_START + 0x6)  // Unused Flag
 #define FLAG_UNUSED_0x927                           (DAILY_FLAGS_START + 0x7)  // Unused Flag
 #define FLAG_UNUSED_0x928                           (DAILY_FLAGS_START + 0x8)  // Unused Flag

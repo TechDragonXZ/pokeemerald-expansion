@@ -73,7 +73,8 @@ enum {
     BLENDER_LASSIE,
     BLENDER_MASTER,
     BLENDER_DUDE,
-    BLENDER_MISS
+    BLENDER_MISS,
+    BLENDER_AI
 };
 
 #define BLENDER_MAX_PLAYERS MAX_LINK_PLAYERS
@@ -267,6 +268,7 @@ static const u8 *const sBlenderOpponentsNames[] =
     [BLENDER_MASTER] = COMPOUND_STRING("MASTER"),
     [BLENDER_DUDE]   = COMPOUND_STRING("DUDE"),
     [BLENDER_MISS]   = COMPOUND_STRING("MISS"),
+    [BLENDER_AI]     = COMPOUND_STRING("AI"),
 };
 
 static const u8 sText_CommunicationStandby[] = _("Communication standby…");
@@ -1234,6 +1236,8 @@ static void InitLocalPlayers(u8 opponentsNum)
 
         if (!FlagGet(FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER))
             StringCopy(gLinkPlayers[1].name, sBlenderOpponentsNames[BLENDER_MASTER]);
+        else if (FlagGet(FLAG_IN_TERRARIUM))
+            StringCopy(gLinkPlayers[1].name, sBlenderOpponentsNames[BLENDER_AI]);
         else
             StringCopy(gLinkPlayers[1].name, sBlenderOpponentsNames[BLENDER_MISTER]);
 
@@ -1574,6 +1578,16 @@ static void SetOpponentsBerryData(u16 playerBerryItemId, u8 playersNum, struct B
             if (berryMasterDiff < ARRAY_COUNT(sBerryMasterBerries))
                 opponentBerryId -= ARRAY_COUNT(sBerryMasterBerries);
         }
+        else if (FlagGet(FLAG_IN_TERRARIUM) && gSpecialVar_0x8004 == 1)
+        {
+            opponentSetId %= ARRAY_COUNT(sBerryMasterBerries);
+            opponentBerryId = sBerryMasterBerries[opponentSetId];
+
+            // If the player's berry is any of the Berry Master's berries,
+            // then use the next lower set of berries
+            if (berryMasterDiff < ARRAY_COUNT(sBerryMasterBerries))
+                opponentBerryId -= ARRAY_COUNT(sBerryMasterBerries);
+        }
         SetPlayerBerryData(i + 1, opponentBerryId + FIRST_BERRY_INDEX);
     }
 }
@@ -1776,6 +1790,8 @@ static void CB2_StartBlenderLocal(void)
         if (gSpecialVar_0x8004 == 1)
         {
             if (!FlagGet(FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER))
+                sBerryBlender->opponentTaskIds[0] = CreateTask(Task_HandleBerryMaster, 10);
+            else if (FlagGet(FLAG_IN_TERRARIUM))
                 sBerryBlender->opponentTaskIds[0] = CreateTask(Task_HandleBerryMaster, 10);
             else
                 sBerryBlender->opponentTaskIds[0] = CreateTask(sLocalOpponentTasks[0], 10);

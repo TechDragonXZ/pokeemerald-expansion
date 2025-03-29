@@ -349,7 +349,13 @@ Terrarium_Lobby_Text_DecidedAgainstBuyingPokeballs:
 Terrarium_Lobby_EventScript_Debug::
 	msgbox Terrarium_Lobby_Text_Debug, MSGBOX_AUTOCLOSE
 	setflag FLAG_DEXNAV_GET
+	setflag FLAG_RELEASED_BIRDS_GALAR
+	setflag FLAG_RELEASED_BIRDS_KANTO
+	setflag FLAG_RELEASED_LOYAL_THREE
+	setflag FLAG_RELEASED_RUIN
+	setflag FLAG_RELEASED_SWORDS
 	end
 
 Terrarium_Lobby_Text_Debug:
-	.string "Given Dexnav$"
+	.string "Given Dexnav and Released Roaming\n"
+	.string "Legendary & Mythical Pokémon$"

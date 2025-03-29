@@ -327,7 +327,8 @@ void ClearEventCodesFlags(void)
     }
 }
 
+#define CURRENT_SEASON VAR_SEASON
 u8 getCurrentSeason(void)
 {
-    return VarGet(VAR_SEASON);
+    return VarGet(CURRENT_SEASON);
 }

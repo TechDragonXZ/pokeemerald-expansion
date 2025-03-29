@@ -890,6 +890,17 @@ static void LoadTilesetPalette(struct Tileset const *tileset, u16 destOffset, u1
         if (tileset->isSecondary == FALSE)
         {
             LoadPalette(&black, destOffset, PLTT_SIZEOF(1));
+            
+            // LoadPalette(&black, destOffset, 2);
+            if (skipFaded)
+                CpuFastCopy(tileset->palettes, &gPlttBufferUnfaded[destOffset], size); // always word-aligned
+            else
+                LoadPaletteFast(tileset->palettes, destOffset, size);
+            gPlttBufferFaded[destOffset] = gPlttBufferUnfaded[destOffset] = RGB_BLACK; // why does it have to be black?
+            ApplyGlobalTintToPaletteEntries(destOffset + 1, (size - 2) >> 1);
+            low = 0;
+            high = NUM_PALS_IN_PRIMARY;
+
             switch(season){
                 case SEASON_SPRING:
                     LoadPalette(tileset->palettes[0] + 1, destOffset + 1, size - PLTT_SIZEOF(1));
@@ -914,18 +925,16 @@ static void LoadTilesetPalette(struct Tileset const *tileset, u16 destOffset, u1
                 break;
             }
             ApplyGlobalTintToPaletteEntries(destOffset + 1, (size - PLTT_SIZEOF(1)) >> 1);
-            // LoadPalette(&black, destOffset, 2);
-            if (skipFaded)
-                CpuFastCopy(tileset->palettes, &gPlttBufferUnfaded[destOffset], size); // always word-aligned
-            else
-                LoadPaletteFast(tileset->palettes, destOffset, size);
-            gPlttBufferFaded[destOffset] = gPlttBufferUnfaded[destOffset] = RGB_BLACK; // why does it have to be black?
-            ApplyGlobalTintToPaletteEntries(destOffset + 1, (size - 2) >> 1);
-            low = 0;
-            high = NUM_PALS_IN_PRIMARY;
         }
         else if (tileset->isSecondary == TRUE)
         {
+            if (skipFaded)
+                CpuCopy16(tileset->palettes[NUM_PALS_IN_PRIMARY], &gPlttBufferUnfaded[destOffset], size);
+            else
+                LoadPaletteFast(tileset->palettes[NUM_PALS_IN_PRIMARY], destOffset, size);
+            low = NUM_PALS_IN_PRIMARY;
+            high = NUM_PALS_TOTAL;
+
             switch(season){
                 case SEASON_SPRING:
                     LoadPalette(tileset->palettes[NUM_PALS_IN_PRIMARY], destOffset, size);
@@ -949,12 +958,6 @@ static void LoadTilesetPalette(struct Tileset const *tileset, u16 destOffset, u1
                         LoadPalette(tileset->palettes[NUM_PALS_IN_PRIMARY], destOffset, size);
                 break;
             }
-            if (skipFaded)
-                CpuCopy16(tileset->palettes[NUM_PALS_IN_PRIMARY], &gPlttBufferUnfaded[destOffset], size);
-            else
-                LoadPaletteFast(tileset->palettes[NUM_PALS_IN_PRIMARY], destOffset, size);
-            low = NUM_PALS_IN_PRIMARY;
-            high = NUM_PALS_TOTAL;
             
             ApplyGlobalTintToPaletteEntries(destOffset, size >> 1);
         }
