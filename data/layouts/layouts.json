@@ -5568,6 +5568,30 @@
       "secondary_tileset": "gTileset_Distortion_World",
       "border_filepath": "data/layouts/DistortionWorld/border.bin",
       "blockdata_filepath": "data/layouts/DistortionWorld/map.bin"
+    },
+    {
+      "id": "LAYOUT_DRACON_HARBOR_EXTERIOR",
+      "name": "Dracon_Harbor_Exterior_Layout",
+      "width": 17,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Dracon_Harbor_Exterior/border.bin",
+      "blockdata_filepath": "data/layouts/Dracon_Harbor_Exterior/map.bin"
+    },
+    {
+      "id": "LAYOUT_DRACON_HARBOR_INTERIOR",
+      "name": "Dracon_Harbor_Interior_Layout",
+      "width": 20,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/Dracon_Harbor_Interior/border.bin",
+      "blockdata_filepath": "data/layouts/Dracon_Harbor_Interior/map.bin"
     }
   ]
 }

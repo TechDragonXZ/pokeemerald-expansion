@@ -36,6 +36,7 @@
     "gMapGroup_IndoorRoute124",
     "gMapGroup_DeepPetalburgWoods",
     "gMapGroup_DeepPetalburgWoods_Indoors",
+    "gMapGroup_Dracon_Harbor",
     "gMapGroup_Terrarium",
     "gMapGroup_Terrarium_Subareas",
     "gMapGroup_Terrarium_Indoors",
@@ -635,6 +636,10 @@
   ],
   "gMapGroup_DeepPetalburgWoods_Indoors": [
     "PokeballCrafter_House"
+  ],
+  "gMapGroup_Dracon_Harbor": [
+    "Dracon_Harbor_Exterior",
+    "Dracon_Harbor_Interior"
   ],
   "gMapGroup_Terrarium": [
     "Terrarium_Center",

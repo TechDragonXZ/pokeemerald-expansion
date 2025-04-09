@@ -1707,8 +1707,8 @@
     {
       "map_section": "MAPSEC_TERRARIUM",
       "name": "TERRARIUM",
-      "x": 0,
-      "y": 0,
+      "x": 23,
+      "y": 1,
       "width": 1,
       "height": 1
     }

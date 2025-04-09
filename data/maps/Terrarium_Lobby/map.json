@@ -27,32 +27,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Terrarium_Lobby_EventScript_AdvBerryBlender_Man",
       "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PORYGON)",
-      "x": 12,
-      "y": 11,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Terrarium_Lobby_EventScript_Debug",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_TRUCK",
-      "x": 10,
-      "y": 3,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
     }
   ],
   "warp_events": [
@@ -74,8 +48,8 @@
       "x": 10,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE121_SAFARI_ZONE_ENTRANCE",
-      "dest_warp_id": "4"
+      "dest_map": "MAP_DRACON_HARBOR_INTERIOR",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
