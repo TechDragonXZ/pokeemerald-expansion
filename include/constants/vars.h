@@ -185,7 +185,7 @@
 #define VAR_TRICK_HOUSE_BEING_WATCHED_STATE              0x40A5
 #define VAR_TRICK_HOUSE_FOUND_TRICK_MASTER               0x40A6
 #define VAR_TRICK_HOUSE_ENTRANCE_STATE                   0x40A7
-#define VAR_BATTLE_COURSE_COMPLETED                      0x40A8 // Battle Course Completed Var
+#define VAR_BATTLE_COURSE_STATE                          0x40A8 // Battle Course State Var 0 = None, 1 = Village Sub Combo, 2 = Magnemite Croquette, 3 = Mauville Ramen Bowl, 4 = Incomplete, 5 = Village Sub Combo Complete, 6 = Magnemite Croquette Complete, 7 = Mauville Ramen Bowl Complete
 #define VAR_CYCLING_CHALLENGE_STATE                      0x40A9
 #define VAR_SLATEPORT_MUSEUM_1F_STATE                    0x40AA
 #define VAR_TRICK_HOUSE_PUZZLE_1_STATE                   0x40AB
@@ -201,10 +201,10 @@
 #define VAR_TRICK_HOUSE_ENTER_FROM_CORRIDOR              0x40B5
 #define VAR_TRICK_HOUSE_PUZZLE_7_STATE_2                 0x40B6 // Leftover from RS, never set
 #define VAR_SLATEPORT_FAN_CLUB_STATE                     0x40B7
-#define VAR_BATTLE_COURSE_STATE                          0x40B8 // Battle Course State Var
+#define VAR_TREASURE_CHANCE                              0x40B8 // Fishing Treasure Chance Var
 #define VAR_MT_PYRE_STATE                                0x40B9
 #define VAR_NEW_MAUVILLE_STATE                           0x40BA
-#define VAR_BATTLE_COURSE_SELECTED                       0x40BB // Battle Course Selected Var
+#define VAR_UNUSED_0X40BB                                0x40BB // Unused Var
 #define VAR_BRAVO_TRAINER_BATTLE_TOWER_ON                0x40BC
 #define VAR_JAGGED_PASS_ASH_WEATHER                      0x40BD
 #define VAR_GLASS_WORKSHOP_STATE                         0x40BE

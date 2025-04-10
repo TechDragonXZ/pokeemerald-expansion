@@ -344,13 +344,13 @@ static const struct MenuAction sItemMenuActions[] = {
     [ACTION_SHOW]              = {COMPOUND_STRING("SHOW"),      {ItemMenu_Show}},
     [ACTION_GIVE_FAVOR_LADY]   = {gMenuText_Give2,              {ItemMenu_GiveFavorLady}},
     [ACTION_CONFIRM_QUIZ_LADY] = {gMenuText_Confirm,            {ItemMenu_ConfirmQuizLady}},
-    [ACTION_BY_NAME]           = {sMenuText_ByName,   {ItemMenu_SortByName}},
-    [ACTION_BY_TYPE]           = {sMenuText_ByType,   {ItemMenu_SortByType}},
-    [ACTION_BY_AMOUNT]         = {sMenuText_ByAmount, {ItemMenu_SortByAmount}},
-    [ACTION_OLD_TECHNIQUE]     = {sMenuText_OldTech,  {ItemMenu_UseOutOfBattle_VariableOldRod}},
-    [ACTION_GOOD_TECHNIQUE]    = {sMenuText_GoodTech, {ItemMenu_UseOutOfBattle_VariableGoodRod}},
-    [ACTION_SUPER_TECHNIQUE]   = {sMenuText_SuperTech,{ItemMenu_UseOutOfBattle_VariableSuperRod}},
-    [ACTION_DUMMY]             = {gText_EmptyString2, {NULL}}
+    [ACTION_BY_NAME]           = {sMenuText_ByName,             {ItemMenu_SortByName}},
+    [ACTION_BY_TYPE]           = {sMenuText_ByType,             {ItemMenu_SortByType}},
+    [ACTION_BY_AMOUNT]         = {sMenuText_ByAmount,           {ItemMenu_SortByAmount}},
+    [ACTION_OLD_TECHNIQUE]     = {sMenuText_OldTech,            {ItemMenu_UseOutOfBattle_VariableOldRod}},
+    [ACTION_GOOD_TECHNIQUE]    = {sMenuText_GoodTech,           {ItemMenu_UseOutOfBattle_VariableGoodRod}},
+    [ACTION_SUPER_TECHNIQUE]   = {sMenuText_SuperTech,          {ItemMenu_UseOutOfBattle_VariableSuperRod}},
+    [ACTION_DUMMY]             = {gText_EmptyString2,           {NULL}}
 };
 
 // these are all 2D arrays with a width of 2 but are represented as 1D arrays
@@ -2121,6 +2121,7 @@ static void ItemMenu_UseOutOfBattle_VariableOldRod(u8 taskId)
 {
     if (OW_VAR_VARIABLE_ROD_USE_TECHNIQUE != 0)
         VarSet(OW_VAR_VARIABLE_ROD_USE_TECHNIQUE, OLD_ROD);
+        VarSet(VAR_TREASURE_CHANCE, 25);
     ItemMenu_UseOutOfBattle(taskId);
 }
 
@@ -2128,6 +2129,7 @@ static void ItemMenu_UseOutOfBattle_VariableGoodRod(u8 taskId)
 {
     if (OW_VAR_VARIABLE_ROD_USE_TECHNIQUE != 0)
         VarSet(OW_VAR_VARIABLE_ROD_USE_TECHNIQUE, GOOD_ROD);
+        VarSet(VAR_TREASURE_CHANCE, 50);
     ItemMenu_UseOutOfBattle(taskId);
 }
 
@@ -2135,6 +2137,7 @@ static void ItemMenu_UseOutOfBattle_VariableSuperRod(u8 taskId)
 {
     if (OW_VAR_VARIABLE_ROD_USE_TECHNIQUE != 0)
         VarSet(OW_VAR_VARIABLE_ROD_USE_TECHNIQUE, SUPER_ROD);
+        VarSet(VAR_TREASURE_CHANCE, 75);
     ItemMenu_UseOutOfBattle(taskId);
 }
 

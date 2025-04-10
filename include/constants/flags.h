@@ -1351,8 +1351,8 @@
 #define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7
 #define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4F8
 
-#define FLAG_GOOD_ROD_TECHNIQUE                                     0x4F9 // Fishing Rod Good Tech Flag
-#define FLAG_SUPER_ROD_TECHNIQUE                                    0x4FA // Fishing Rod Super Tech Flag
+#define FLAG_UNUSED_0x4F9                                           0x4F9 // Unused Flag
+#define FLAG_UNUSED_0x4FA                                           0x4FA // Unused Flag
 
 #define FLAG_DEFEATED_ELITE_4_SIDNEY                                0x4FB
 #define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC

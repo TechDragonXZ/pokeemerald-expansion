@@ -2510,6 +2510,10 @@ extern const u8 gText_HelpfulTextLower2[];
 extern const u8 gText_FishingWantToQuit[];
 extern const u8 gText_ReeledInAPokemon[];
 extern const u8 gText_PokemonGotAway[];
+extern const u8 gText_ReeledInTreasure[];
+extern const u8 gText_FoundATreasureItem[];
+extern const u8 gText_PutTreasureInPocket[];
+extern const u8 gText_NoRoomForTreasure[];
 
 // Vending Machine - Pokeballs
 extern const u8 gText_SafariBallAndPrice[];

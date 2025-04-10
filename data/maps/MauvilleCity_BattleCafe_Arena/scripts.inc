@@ -22,9 +22,9 @@ MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_North::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	lockall
 	faceplayer
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 1, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 2, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 3, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl
+	call_if_eq VAR_BATTLE_COURSE_STATE, 1, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo
+	call_if_eq VAR_BATTLE_COURSE_STATE, 2, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette
+	call_if_eq VAR_BATTLE_COURSE_STATE, 3, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl
 	releaseall
 	return
 	end
@@ -35,9 +35,9 @@ MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_East::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	lockall
 	faceplayer
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 1, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 2, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 3, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl
+	call_if_eq VAR_BATTLE_COURSE_STATE, 1, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo
+	call_if_eq VAR_BATTLE_COURSE_STATE, 2, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette
+	call_if_eq VAR_BATTLE_COURSE_STATE, 3, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl
 	releaseall
 	return
 	end
@@ -48,9 +48,9 @@ MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_South::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	lockall
 	faceplayer
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 1, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 2, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 3, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl
+	call_if_eq VAR_BATTLE_COURSE_STATE, 1, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo
+	call_if_eq VAR_BATTLE_COURSE_STATE, 2, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette
+	call_if_eq VAR_BATTLE_COURSE_STATE, 3, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl
 	releaseall
 	return
 	end
@@ -61,9 +61,9 @@ MauvilleCity_BattleCafe_Arena_EventScript_BattleBot_West::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	lockall
 	faceplayer
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 1, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 2, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette
-	call_if_eq VAR_BATTLE_COURSE_SELECTED, 3, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl
+	call_if_eq VAR_BATTLE_COURSE_STATE, 1, MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo
+	call_if_eq VAR_BATTLE_COURSE_STATE, 2, MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette
+	call_if_eq VAR_BATTLE_COURSE_STATE, 3, MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl
 	releaseall
 	return
 	end
@@ -88,18 +88,14 @@ MauvilleCity_BattleCafe_Arena_EventScript_VillageSubCombo_Outcome::
 
 MauvilleCity_BattleCafe_Arena_EventScript_Defeat_VillageSubCombo::
 	msgbox MauvilleCity_BattleCafe_Arena_Text_BattleBot_PostBattle_Win, MSGBOX_AUTOCLOSE
-	setvar VAR_BATTLE_COURSE_COMPLETED, 1
-	setvar VAR_BATTLE_COURSE_SELECTED, 0
-	setvar VAR_BATTLE_COURSE_STATE, 2
+	setvar VAR_BATTLE_COURSE_STATE, 5
 	releaseall
 	return
 	end
 
 MauvilleCity_BattleCafe_Arena_EventScript_Lost_VillageSubCombo::
 	msgbox MauvilleCity_BattleCafe_Arena_Text_BattleBot_PostBattle_Lose, MSGBOX_AUTOCLOSE
-	setvar VAR_BATTLE_COURSE_COMPLETED, 0
-	setvar VAR_BATTLE_COURSE_SELECTED, 0
-	setvar VAR_BATTLE_COURSE_STATE, 2
+	setvar VAR_BATTLE_COURSE_STATE, 4
 	addmoney VSC_PRICE
 	releaseall
 	return
@@ -125,18 +121,14 @@ MauvilleCity_BattleCafe_Arena_EventScript_MagnemiteCroquette_Outcome::
 
 MauvilleCity_BattleCafe_Arena_EventScript_Defeat_MagnemiteCroquette::
 	msgbox MauvilleCity_BattleCafe_Arena_Text_BattleBot_PostBattle_Win, MSGBOX_AUTOCLOSE
-	setvar VAR_BATTLE_COURSE_COMPLETED, 2
-	setvar VAR_BATTLE_COURSE_SELECTED, 0
-	setvar VAR_BATTLE_COURSE_STATE, 2
+	setvar VAR_BATTLE_COURSE_STATE, 6
 	releaseall
 	return
 	end
 
 MauvilleCity_BattleCafe_Arena_EventScript_Lost_MagnemiteCroquette::
 	msgbox MauvilleCity_BattleCafe_Arena_Text_BattleBot_PostBattle_Lose, MSGBOX_AUTOCLOSE
-	setvar VAR_BATTLE_COURSE_COMPLETED, 0
-	setvar VAR_BATTLE_COURSE_SELECTED, 0
-	setvar VAR_BATTLE_COURSE_STATE, 2
+	setvar VAR_BATTLE_COURSE_STATE, 4
 	addmoney MC_PRICE
 	releaseall
 	return
@@ -164,18 +156,14 @@ MauvilleCity_BattleCafe_Arena_EventScript_MauvilleRamenBowl_Outcome::
 
 MauvilleCity_BattleCafe_Arena_EventScript_Defeat_MauvilleRamenBowl::
 	msgbox MauvilleCity_BattleCafe_Arena_Text_BattleBot_PostBattle_Win, MSGBOX_AUTOCLOSE
-	setvar VAR_BATTLE_COURSE_COMPLETED, 3
-	setvar VAR_BATTLE_COURSE_SELECTED, 0
-	setvar VAR_BATTLE_COURSE_STATE, 2
+	setvar VAR_BATTLE_COURSE_STATE, 6
 	releaseall
 	return
 	end
 
 MauvilleCity_BattleCafe_Arena_EventScript_Lost_MauvilleRamenBowl::
 	msgbox MauvilleCity_BattleCafe_Arena_Text_BattleBot_PostBattle_Lose, MSGBOX_AUTOCLOSE
-	setvar VAR_BATTLE_COURSE_COMPLETED, 0
-	setvar VAR_BATTLE_COURSE_SELECTED, 0
-	setvar VAR_BATTLE_COURSE_STATE, 2
+	setvar VAR_BATTLE_COURSE_STATE, 4
 	addmoney MRB_PRICE
 	releaseall
 	return

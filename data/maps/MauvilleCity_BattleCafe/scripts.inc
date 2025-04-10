@@ -515,7 +515,6 @@ MauvilleCity_BattleCafe_EventScript_VillageSubCombo::
 	closemessage
 	setflag FLAG_IN_BATTLE_COURSE
 	setvar VAR_BATTLE_COURSE_STATE, 1
-	setvar VAR_BATTLE_COURSE_SELECTED, 1
 	removemoney VSC_PRICE
 	end
 
@@ -525,8 +524,7 @@ MauvilleCity_BattleCafe_EventScript_MagnemiteCroquette::
 	msgbox MauvilleCity_BattleCafe_Text_Enjoy, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_IN_BATTLE_COURSE
-	setvar VAR_BATTLE_COURSE_STATE, 1
-	setvar VAR_BATTLE_COURSE_SELECTED, 2
+	setvar VAR_BATTLE_COURSE_STATE, 2
 	removemoney MC_PRICE
 	end
 
@@ -536,8 +534,7 @@ MauvilleCity_BattleCafe_EventScript_MauvilleRamenBowl::
 	msgbox MauvilleCity_BattleCafe_Text_Enjoy, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_IN_BATTLE_COURSE
-	setvar VAR_BATTLE_COURSE_STATE, 1
-	setvar VAR_BATTLE_COURSE_SELECTED, 3
+	setvar VAR_BATTLE_COURSE_STATE, 3
 	removemoney MRB_PRICE
 	end
 
@@ -545,17 +542,16 @@ MauvilleCity_BattleCafe_EventScript_MealCourseDeclined::
 	msgbox MauvilleCity_BattleCafe_Text_Declined, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_BATTLE_COURSE_STATE, 0
-	setvar VAR_BATTLE_COURSE_SELECTED, 0
 	end
 
 MauvilleCity_BattleCafe_EventScript_RewardWaiter::
 	msgbox MauvilleCity_BattleCafe_Text_Rewards, MSGBOX_DEFAULT
 	waitmessage
 	delay 5
-	goto_if_eq VAR_BATTLE_COURSE_COMPLETED, 0, MauvilleCity_BattleCafe_EventScript_Uncompleted
-	goto_if_eq VAR_BATTLE_COURSE_COMPLETED, 1, MauvilleCity_BattleCafe_EventScript_Completed_VillageSubCombo
-	goto_if_eq VAR_BATTLE_COURSE_COMPLETED, 2, MauvilleCity_BattleCafe_EventScript_Completed_MagnemiteCroquette
-	goto_if_eq VAR_BATTLE_COURSE_COMPLETED, 3, MauvilleCity_BattleCafe_EventScript_Completed_MauvilleRamenBowl
+	goto_if_eq VAR_BATTLE_COURSE_STATE, 4, MauvilleCity_BattleCafe_EventScript_Uncompleted
+	goto_if_eq VAR_BATTLE_COURSE_STATE, 5, MauvilleCity_BattleCafe_EventScript_Completed_VillageSubCombo
+	goto_if_eq VAR_BATTLE_COURSE_STATE, 6, MauvilleCity_BattleCafe_EventScript_Completed_MagnemiteCroquette
+	goto_if_eq VAR_BATTLE_COURSE_STATE, 7, MauvilleCity_BattleCafe_EventScript_Completed_MauvilleRamenBowl
 	end
 
 MauvilleCity_BattleCafe_EventScript_Uncompleted::
@@ -579,7 +575,7 @@ MauvilleCity_BattleCafe_EventScript_VSC_FigyBerry::
 	closemessage
 	giveitem ITEM_NUGGET, 1
 	giveitem ITEM_FIGY_BERRY, 1
-	setvar VAR_BATTLE_COURSE_COMPLETED, 0
+	setvar VAR_BATTLE_COURSE_STATE, 0
 	closemessage
 	end
 
@@ -588,7 +584,7 @@ MauvilleCity_BattleCafe_EventScript_VSC_WikiBerry::
 	closemessage
 	giveitem ITEM_NUGGET, 1
 	giveitem ITEM_WIKI_BERRY, 1
-	setvar VAR_BATTLE_COURSE_COMPLETED, 0
+	setvar VAR_BATTLE_COURSE_STATE, 0
 	closemessage
 	end
 
@@ -597,7 +593,7 @@ MauvilleCity_BattleCafe_EventScript_VSC_MagoBerry::
 	closemessage
 	giveitem ITEM_NUGGET, 1
 	giveitem ITEM_MAGO_BERRY, 1
-	setvar VAR_BATTLE_COURSE_COMPLETED, 0
+	setvar VAR_BATTLE_COURSE_STATE, 0
 	closemessage
 	end
 
@@ -606,7 +602,7 @@ MauvilleCity_BattleCafe_EventScript_VSC_AguavBerry::
 	closemessage
 	giveitem ITEM_NUGGET, 1
 	giveitem ITEM_AGUAV_BERRY, 1
-	setvar VAR_BATTLE_COURSE_COMPLETED, 0
+	setvar VAR_BATTLE_COURSE_STATE, 0
 	closemessage
 	end
 
@@ -615,7 +611,7 @@ MauvilleCity_BattleCafe_EventScript_VSC_IapapaBerry::
 	closemessage
 	giveitem ITEM_NUGGET, 1
 	giveitem ITEM_IAPAPA_BERRY, 1
-	setvar VAR_BATTLE_COURSE_COMPLETED, 0
+	setvar VAR_BATTLE_COURSE_STATE, 0
 	closemessage
 	end
 
@@ -624,7 +620,7 @@ MauvilleCity_BattleCafe_EventScript_Completed_MagnemiteCroquette::
 	closemessage
 	giveitem ITEM_PEARL_STRING, 1
 	giveitem ITEM_METAL_POWDER, 1
-	setvar VAR_BATTLE_COURSE_COMPLETED, 0
+	setvar VAR_BATTLE_COURSE_STATE, 0
 	closemessage
 	end
 
@@ -634,7 +630,7 @@ MauvilleCity_BattleCafe_EventScript_Completed_MauvilleRamenBowl::
 	giveitem ITEM_BIG_NUGGET, 2
 	giveitem ITEM_DEEP_SEA_TOOTH, 1
 	giveitem ITEM_DEEP_SEA_SCALE, 1
-	setvar VAR_BATTLE_COURSE_COMPLETED, 0
+	setvar VAR_BATTLE_COURSE_STATE, 0
 	closemessage
 	end
 

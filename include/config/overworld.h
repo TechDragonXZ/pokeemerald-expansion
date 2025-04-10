@@ -144,8 +144,8 @@
 #define BERRY_BLENDER_THROW_ALL_BERRIES_AT_ONCE TRUE        // This is a small little addition, that basically speeds up the animation where all players' berries are thrown into the blender. Self-explanatory I hope!
 
 // Variable Rod
-#define OW_VAR_VARIABLE_ROD_USE_TECHNIQUE       VAR_ROD_TECHNIQUE           // If this var has a value, the game will use it to remember the used fishing technique.
-#define OW_FLAG_VARIABLE_ROD_GOOD_TECHNIQUE     FLAG_GOOD_ROD_TECHNIQUE     // If this flag is set, the game will unlock the 'good fishing technique'.
-#define OW_FLAG_VARIABLE_ROD_SUPER_TECHNIQUE    FLAG_SUPER_ROD_TECHNIQUE    // If this flag is set, the game will unlock the 'super fishing technique'.
+#define OW_VAR_VARIABLE_ROD_USE_TECHNIQUE       VAR_ROD_TECHNIQUE          // If this var has a value, the game will use it to remember the used fishing technique.
+#define OW_FLAG_VARIABLE_ROD_GOOD_TECHNIQUE     FLAG_RECEIVED_GOOD_ROD     // If this flag is set, the game will unlock the 'good fishing technique'.
+#define OW_FLAG_VARIABLE_ROD_SUPER_TECHNIQUE    FLAG_RECEIVED_SUPER_ROD    // If this flag is set, the game will unlock the 'super fishing technique'.
 
 #endif // GUARD_CONFIG_OVERWORLD_H
