@@ -7,6 +7,8 @@
 #include "battle_scripts.h"
 #include "battle_z_move.h"
 #include "bw_summary_screen.h"
+#include "constants/moves.h"
+#include "constants/abilities.h"
 #include "item.h"
 #include "util.h"
 #include "pokemon.h"
