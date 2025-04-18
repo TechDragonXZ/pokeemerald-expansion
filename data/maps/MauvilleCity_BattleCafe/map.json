@@ -55,20 +55,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
-      "x": 20,
-      "y": 6,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_BattleCafe_EventScript_Girl",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
       "x": 20,
       "y": 12,
       "elevation": 0,
@@ -77,7 +64,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_BattleCafe_EventScript_Man",
+      "script": "MauvilleCity_BattleCafe_EventScript_Woman2",
       "flag": "0"
     },
     {
@@ -146,19 +133,6 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 23,
-      "y": 7,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_BattleCafe_EventScript_Girl2",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 17,
       "y": 13,
@@ -185,32 +159,6 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_VAR_B",
-      "x": 30,
-      "y": 7,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_BattleCafe_EventScript_VIP1",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_VAR_C",
-      "x": 30,
-      "y": 11,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_BattleCafe_EventScript_VIP2",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
       "x": 1,
       "y": 12,
@@ -224,22 +172,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
-      "x": 26,
-      "y": 9,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_BattleCafe_EventScript_VIPWaiter",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(STEENEE)",
-      "x": 5,
-      "y": 9,
+      "x": 6,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 6,
@@ -251,8 +186,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(STEENEE)",
-      "x": 18,
-      "y": 9,
+      "x": 17,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 6,
@@ -289,30 +224,30 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_VAR_D",
-      "x": 28,
-      "y": 9,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_BattleCafe_EventScript_VIP3",
-      "flag": "FLAG_HIDE_VIP_3"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_VAR_E",
-      "x": 32,
-      "y": 9,
+      "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+      "x": 23,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_BattleCafe_EventScript_VIP4",
-      "flag": "FLAG_HIDE_VIP_4"
+      "script": "MauvilleCity_BattleCafe_EventScript_Waiter",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(STEENEE)",
+      "x": 20,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 6,
+      "movement_range_y": 6,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MauvilleCity_BattleCafe_EventScript_Steenee2",
+      "flag": "0"
     }
   ],
   "warp_events": [

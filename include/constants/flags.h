@@ -68,13 +68,13 @@
 #define FLAG_POKERADAR            0x36 // PokéRadar Flag
 #define FLAG_PAUSE_TIME           0x37 // Pause Time Flag
 #define FLAG_WILD_EVOLUTION       0x38 // Wild Pokémon Evolve Flag
-#define FLAG_VIP_TABLE_ACCESS     0x39 // Can access VIP Table Flag
-#define FLAG_HIDE_VIP_1           0x3A // Hide VIP #1 Flag
-#define FLAG_HIDE_VIP_2           0x3B // Hide VIP #2 Flag
-#define FLAG_HIDE_VIP_3           0x3C // Hide VIP #3 Flag
-#define FLAG_HIDE_VIP_4           0x3D // Hide VIP #4 Flag
-#define FLAG_IN_BATTLE_COURSE     0x3E // Player in Battle Course Flag
-#define FLAG_IN_TERRARIUM         0x3F // In Terrarium Flag
+#define FLAG_IN_BATTLE_COURSE     0x39 // Player in Battle Course Flag
+#define FLAG_IN_TERRARIUM         0x3A // In Terrarium Flag
+#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
+#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
+#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
+#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
+#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
 #define FLAG_UNUSED_0x041    0x41 // Unused Flag
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
@@ -1599,9 +1599,9 @@
 #define FLAG_UNUSED_0x920                           (DAILY_FLAGS_START + 0x0)  // Unused Flag
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
-#define FLAG_DAILY_BATTLE_CAFE_VIPS                 (DAILY_FLAGS_START + 0x3)  // Daily VIP Flag
+#define FLAG_DAILY_GAME_CORNER_BREAK_IN             (DAILY_FLAGS_START + 0x3)  // Daily Game Corner Break-in Flag
 #define FLAG_DAILY_BATTLE_CAFE_TRASH_CAN            (DAILY_FLAGS_START + 0x4)  // Daily Trash Can Flag
-#define FLAG_DAILY_GAME_CORNER_BREAK_IN             (DAILY_FLAGS_START + 0x5)  // Daily Game Corner Break-in Flag
+#define FLAG_UNUSED_0x925                           (DAILY_FLAGS_START + 0x5)  // Unused Flag
 #define FLAG_UNUSED_0x926                           (DAILY_FLAGS_START + 0x6)  // Unused Flag
 #define FLAG_UNUSED_0x927                           (DAILY_FLAGS_START + 0x7)  // Unused Flag
 #define FLAG_UNUSED_0x928                           (DAILY_FLAGS_START + 0x8)  // Unused Flag

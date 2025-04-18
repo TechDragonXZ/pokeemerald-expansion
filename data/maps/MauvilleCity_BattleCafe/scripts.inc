@@ -1,8 +1,4 @@
 .set LOCALID_BC_WAITER, 1
-.set LOCALID_VIP1, 14
-.set LOCALID_VIP2, 15
-.set LOCALID_VIP3, 22
-.set LOCALID_VIP4, 23
 
 @ Prices
 .set TERA_PRICE, 500
@@ -11,12 +7,7 @@
 .set MRB_PRICE,  5000
 
 MauvilleCity_BattleCafe_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, MauvilleCity_BattleCafe_EventScript_OnLoad
 	.byte 0
-
-MauvilleCity_BattleCafe_EventScript_OnLoad::
-	call_if_unset FLAG_DAILY_BATTLE_CAFE_VIPS, MauvilleCity_BattleCafe_EventScript_VIPs
-	end
 
 MauvilleCity_BattleCafe_EventScript_LeftWaiter::
 	lock
@@ -634,34 +625,6 @@ MauvilleCity_BattleCafe_EventScript_Completed_MauvilleRamenBowl::
 	closemessage
 	end
 
-MauvilleCity_BattleCafe_EventScript_VIPWaiter::
-	call_if_unset FLAG_IS_CHAMPION, MauvilleCity_BattleCafe_EventScript_VIPWaiter_NotChampion
-	call_if_set FLAG_IS_CHAMPION, MauvilleCity_BattleCafe_EventScript_VIPWaiter_Champion
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIPWaiter_NotChampion::
-	msgbox MauvilleCity_BattleCafe_Text_VIPs_Only, MSGBOX_DEFAULT
-	closemessage
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIPWaiter_Champion::
-	call_if_unset FLAG_VIP_TABLE_ACCESS, MauvilleCity_BattleCafe_EventScript_VIPWaiter_Champion_NotEntered
-	call_if_set FLAG_VIP_TABLE_ACCESS, MauvilleCity_BattleCafe_EventScript_VIPWaiter_Champion_Entered
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIPWaiter_Champion_NotEntered::
-	msgbox MauvilleCity_BattleCafe_Text_Enter_VIP_Area, MSGBOX_DEFAULT
-	closemessage
-	applymovement VAR_LAST_TALKED, MauvilleCity_BattleCafe_Movement_Step_Aside
-	setflag FLAG_VIP_TABLE_ACCESS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIPWaiter_Champion_Entered::
-	msgbox MauvilleCity_BattleCafe_Text_Welcome_VIP_Area, MSGBOX_DEFAULT
-	closemessage
-	applymovement VAR_LAST_TALKED, MauvilleCity_BattleCafe_Movement_Step_Aside
-	end
-
 MauvilleCity_BattleCafe_EventScript_Trashcan::
 	lock
 	call_if_unset FLAG_DAILY_BATTLE_CAFE_TRASH_CAN, MauvilleCity_BattleCafe_EventScript_Trashcan_NotEmpty
@@ -885,6 +848,10 @@ MauvilleCity_BattleCafe_Text_Steenee::
 	.string "Stee Steenee!\n"
 	.string "This Pokémon is busy working.$"
 
+MauvilleCity_BattleCafe_Text_Steenee2::
+	.string "Stee Steenee!\n"
+	.string "This Pokémon is eating.$"
+
 MauvilleCity_BattleCafe_Text_Smeargle::
 	.string "Smear Smeargle!\n"
 	.string "This Pokémon is happily eating.$"
@@ -911,23 +878,13 @@ MauvilleCity_BattleCafe_Text_Boy2::
 	.string "I'm waiting for someone to arrive.\n"
 	.string "Hopefully they show up soon.$"
 
-MauvilleCity_BattleCafe_Text_Girl::
-	.string "This is one of the closest tables to\n"
-	.string "the VIP area. So, I like sitting here.$"
-
-MauvilleCity_BattleCafe_Text_Girl2::
-	.string "My friend likes to see the famous\n"
-	.string "people that come into this restaurant.\p"
-	.string "Though in my opinion, I think it's a\n"
-	.string "little odd that she's here every day.$"
-
-MauvilleCity_BattleCafe_Text_Man::
+MauvilleCity_BattleCafe_Text_Woman::
 	.string "This is our first time seeing each other\n"
 	.string "in years. Ever since my cousin moved to\p"
 	.string "the Kanto region, we have been sending\n"
 	.string "mail to each other to keep in touch.$"
 
-MauvilleCity_BattleCafe_Text_Woman::
+MauvilleCity_BattleCafe_Text_Woman2::
 	.string "I haven't seen my cousin ever since I\n"
 	.string "moved to the Kanto region. But being\p"
 	.string "back in Hoenn feels nostalgic.$"
@@ -937,24 +894,16 @@ MauvilleCity_BattleCafe_Text_Artist::
 	.string "before we head out to get some\p"
 	.string "inspiration for our next art piece.$"
 
+MauvilleCity_BattleCafe_Text_Waiter::
+	.string "Sorry, we are currently on our\n"
+	.string "lunch break at the moment.$"
+
 MauvilleCity_BattleCafe_Text_BattleCourse::
 	.string "Welcome, behind me is the entrance to\n"
 	.string "the Battle Course. Here you can engage\p"
 	.string "in battles while you wait for your meal.\n"
 	.string "We offer a variety of different meals,\p"
 	.string "which one would you like to have?$"
-
-MauvilleCity_BattleCafe_Text_VIPs_Only::
-	.string "Sorry, this is the VIP area,\n"
-	.string "so, I can't allow you to enter.$"
-
-MauvilleCity_BattleCafe_Text_Enter_VIP_Area::
-	.string "Wait... are you the new Champion?\n"
-	.string "You are!\p"
-	.string "Welcome to the VIP Table {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Welcome_VIP_Area::
-	.string "Welcome to the VIP Table {PLAYER}.$"
 
 MauvilleCity_BattleCafe_Text_Enjoy::
 	.string "Enjoy your Battle Course meal!$"
@@ -1069,455 +1018,3 @@ MauvilleCity_BattleCafe_Text_Stellar::
 
 MauvilleCity_BattleCafe_Text_Decline::
 	.string "Decline$"
-
-
-MauvilleCity_BattleCafe_EventScript_VIPs::
-	clearflag FLAG_HIDE_VIP_3
-	clearflag FLAG_HIDE_VIP_4
-	goto_if_unset FLAG_IS_CHAMPION, MauvilleCity_BattleCafe_EventScript_VIPs_Generate_NotChampion
-	goto_if_set FLAG_IS_CHAMPION, MauvilleCity_BattleCafe_EventScript_VIPs_Generate_Champion
-    end
-
-MauvilleCity_BattleCafe_EventScript_VIPs_Generate_NotChampion::
-	random 8
-	switch VAR_RESULT
-	case 0, MauvilleCity_BattleCafe_EventScript_VIP_Roxanne
-	case 1, MauvilleCity_BattleCafe_EventScript_VIP_Brawly
-	case 2, MauvilleCity_BattleCafe_EventScript_VIP_Wattson
-	case 3, MauvilleCity_BattleCafe_EventScript_VIP_Flannery
-	case 4, MauvilleCity_BattleCafe_EventScript_VIP_Norman
-	case 5, MauvilleCity_BattleCafe_EventScript_VIP_Winona
-	case 6, MauvilleCity_BattleCafe_EventScript_VIP_TateLiza
-	case 7, MauvilleCity_BattleCafe_EventScript_VIP_Juan
-    end
-
-MauvilleCity_BattleCafe_EventScript_VIPs_Generate_Champion::
-	random 14
-	switch VAR_RESULT
-	case 0, MauvilleCity_BattleCafe_EventScript_VIP_Roxanne
-	case 1, MauvilleCity_BattleCafe_EventScript_VIP_Brawly
-	case 2, MauvilleCity_BattleCafe_EventScript_VIP_Wattson
-	case 3, MauvilleCity_BattleCafe_EventScript_VIP_Flannery
-	case 4, MauvilleCity_BattleCafe_EventScript_VIP_Norman
-	case 5, MauvilleCity_BattleCafe_EventScript_VIP_Winona
-	case 6, MauvilleCity_BattleCafe_EventScript_VIP_TateLiza
-	case 7, MauvilleCity_BattleCafe_EventScript_VIP_Juan
-	case 8, MauvilleCity_BattleCafe_EventScript_VIP_Sidney
-	case 9, MauvilleCity_BattleCafe_EventScript_VIP_Phoebe
-	case 10, MauvilleCity_BattleCafe_EventScript_VIP_Glacia
-	case 11, MauvilleCity_BattleCafe_EventScript_VIP_Drake
-	case 12, MauvilleCity_BattleCafe_EventScript_VIP_Wallace
-	case 13, MauvilleCity_BattleCafe_EventScript_VIP_Steven
-    end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Roxanne::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_ROXANNE
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(NOSEPASS)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Brawly::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_BRAWLY
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(HARIYAMA)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Wattson::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_WATTSON
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(MANECTRIC)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Flannery::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_FLANNERY
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(TORKOAL)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Norman::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_NORMAN
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(SLAKING)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Winona::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_WINONA
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(ALTARIA)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_TateLiza::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_TATE
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_LIZA
-	setvar VAR_OBJ_GFX_ID_D, OBJ_EVENT_GFX_SPECIES(SOLROCK)
-	setvar VAR_OBJ_GFX_ID_E, OBJ_EVENT_GFX_SPECIES(LUNATONE)
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Juan::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_JUAN
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(KINGDRA)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Sidney::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_SIDNEY
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(ABSOL)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Phoebe::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_PHOEBE
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(SABLEYE)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Glacia::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_GLACIA
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(GLALIE)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Drake::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_DRAKE
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(SALAMENCE)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Wallace::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_WALLACE
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(MILOTIC)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP_Steven::
-	setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_STEVEN
-	setvar VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(METAGROSS)
-	setflag FLAG_HIDE_VIP_3
-	setflag FLAG_HIDE_VIP_4
-	setflag FLAG_DAILY_BATTLE_CAFE_VIPS
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP1::
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_ROXANNE, MauvilleCity_BattleCafe_EventScript_Roxanne
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_BRAWLY, MauvilleCity_BattleCafe_EventScript_Brawly
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_WATTSON, MauvilleCity_BattleCafe_EventScript_Wattson
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_FLANNERY, MauvilleCity_BattleCafe_EventScript_Flannery
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_NORMAN, MauvilleCity_BattleCafe_EventScript_Norman
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_WINONA, MauvilleCity_BattleCafe_EventScript_Winona
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_TATE, MauvilleCity_BattleCafe_EventScript_Tate
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_JUAN, MauvilleCity_BattleCafe_EventScript_Juan
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_SIDNEY, MauvilleCity_BattleCafe_EventScript_Sidney
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_PHOEBE, MauvilleCity_BattleCafe_EventScript_Phoebe
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_GLACIA, MauvilleCity_BattleCafe_EventScript_Glacia
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_DRAKE, MauvilleCity_BattleCafe_EventScript_Drake
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_WALLACE, MauvilleCity_BattleCafe_EventScript_Wallace
-	goto_if_eq VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_STEVEN, MauvilleCity_BattleCafe_EventScript_Steven
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP2::
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(NOSEPASS), MauvilleCity_BattleCafe_EventScript_Nosepass
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(HARIYAMA), MauvilleCity_BattleCafe_EventScript_Hariyama
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(MANECTRIC), MauvilleCity_BattleCafe_EventScript_Manectric
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(TORKOAL), MauvilleCity_BattleCafe_EventScript_Torkoal
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(SLAKING), MauvilleCity_BattleCafe_EventScript_Slaking
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(ALTARIA), MauvilleCity_BattleCafe_EventScript_Altaria
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(SOLROCK), MauvilleCity_BattleCafe_EventScript_Solrock
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_LIZA, MauvilleCity_BattleCafe_EventScript_Liza
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(KINGDRA), MauvilleCity_BattleCafe_EventScript_Kingdra
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(ABSOL), MauvilleCity_BattleCafe_EventScript_Absol
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(SABLEYE), MauvilleCity_BattleCafe_EventScript_Sableye
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(GLALIE), MauvilleCity_BattleCafe_EventScript_Glalie
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(SALAMENCE), MauvilleCity_BattleCafe_EventScript_Salamence
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(MILOTIC), MauvilleCity_BattleCafe_EventScript_Milotic
-	goto_if_eq VAR_OBJ_GFX_ID_C, OBJ_EVENT_GFX_SPECIES(METAGROSS), MauvilleCity_BattleCafe_EventScript_Metagross
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP3::
-	goto_if_eq VAR_OBJ_GFX_ID_D, OBJ_EVENT_GFX_SPECIES(SOLROCK), MauvilleCity_BattleCafe_EventScript_Solrock
-	goto_if_eq VAR_OBJ_GFX_ID_D, OBJ_EVENT_GFX_SPECIES(LUNATONE), MauvilleCity_BattleCafe_EventScript_Lunatone
-	end
-
-MauvilleCity_BattleCafe_EventScript_VIP4::
-	goto_if_eq VAR_OBJ_GFX_ID_E, OBJ_EVENT_GFX_SPECIES(SOLROCK), MauvilleCity_BattleCafe_EventScript_Solrock
-	goto_if_eq VAR_OBJ_GFX_ID_E, OBJ_EVENT_GFX_SPECIES(LUNATONE), MauvilleCity_BattleCafe_EventScript_Lunatone
-	end
-
-MauvilleCity_BattleCafe_EventScript_Roxanne::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Roxanne, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Brawly::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Brawly, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Wattson::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Wattson, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Flannery::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Flannery, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Norman::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Norman, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Winona::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Winona, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Tate::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Tate, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Liza::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Liza, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Juan::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Juan, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Sidney::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Sidney, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Phoebe::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Phoebe, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Glacia::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Glacia, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Drake::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Drake, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Wallace::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Wallace, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Steven::
-	lockall
-	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Steven, MSGBOX_DEFAULT
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Nosepass::
-	lockall
-	playmoncry SPECIES_NOSEPASS, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Hariyama::
-	lockall
-	playmoncry SPECIES_HARIYAMA, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Manectric::
-	lockall
-	playmoncry SPECIES_MANECTRIC, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Torkoal::
-	lockall
-	playmoncry SPECIES_TORKOAL, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Slaking::
-	lockall
-	playmoncry SPECIES_SLAKING, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Altaria::
-	lockall
-	playmoncry SPECIES_ALTARIA, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Solrock::
-	lockall
-	playmoncry SPECIES_SOLROCK, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Lunatone::
-	lockall
-	playmoncry SPECIES_LUNATONE, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Kingdra::
-	lockall
-	playmoncry SPECIES_KINGDRA, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Absol::
-	lockall
-	playmoncry SPECIES_ABSOL, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Sableye::
-	lockall
-	playmoncry SPECIES_SABLEYE, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Glalie::
-	lockall
-	playmoncry SPECIES_GLALIE, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Salamence::
-	lockall
-	playmoncry SPECIES_SALAMENCE, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Milotic::
-	lockall
-	playmoncry SPECIES_MILOTIC, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_EventScript_Metagross::
-	lockall
-	playmoncry SPECIES_METAGROSS, CRY_MODE_NORMAL
-	waitmoncry
-	releaseall
-	end
-
-MauvilleCity_BattleCafe_Text_Roxanne::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Brawly::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Wattson::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Flannery::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Norman::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Winona::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Tate::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Liza::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Juan::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Sidney::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Phoebe::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Glacia::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Drake::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Wallace::
-	.string "Hi, {PLAYER}!$"
-
-MauvilleCity_BattleCafe_Text_Steven::
-	.string "Hi, {PLAYER}!$"
