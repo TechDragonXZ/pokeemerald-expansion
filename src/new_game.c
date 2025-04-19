@@ -1,5 +1,6 @@
 #include "global.h"
 #include "new_game.h"
+#include "derby.h"
 #include "random.h"
 #include "pokemon.h"
 #include "roamer.h"
@@ -17,6 +18,7 @@
 #include "rtc.h"
 #include "easy_chat.h"
 #include "event_data.h"
+#include "constants/flags.h"
 #include "money.h"
 #include "trainer_hill.h"
 #include "tv.h"
@@ -139,6 +141,7 @@ static void ClearFrontierRecord(void)
 static void WarpToTruck(void)
 {
     SetWarpDestination(MAP_GROUP(INSIDE_OF_TRUCK), MAP_NUM(INSIDE_OF_TRUCK), WARP_ID_NONE, -1, -1);
+	//SetWarpDestination(MAP_GROUP(MAUVILLE_CITY), MAP_NUM(MAUVILLE_CITY), 1, 0, 0);
     WarpIntoMap();
 }
 
@@ -183,7 +186,9 @@ void NewGameInitData(void)
     ClearSecretBases();
     ClearBerryTrees();
     SetMoney(&gSaveBlock1Ptr->money, 3000);
-    SetCoins(0);
+    //SetCoins(0);
+	GetNewDerby();
+	//SetCoins(5000);
     ResetLinkContestBoolean();
     ResetGameStats();
     ClearAllContestWinnerPics();
@@ -196,6 +201,9 @@ void NewGameInitData(void)
     StopAllRoamers();
     gSaveBlock1Ptr->registeredItemSelect = ITEM_NONE;
     ClearBag();
+	//AddBagItem(ITEM_COIN_CASE, 1);
+	//FlagSet(FLAG_BADGE01_GET);
+	//FlagSet(FLAG_BADGE02_GET);
     NewGameInitPCItems();
     TxRegItemsMenu_RegisteredItemsMenuNewGame();
     ClearPokeblocks();

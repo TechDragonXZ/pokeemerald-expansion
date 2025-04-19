@@ -595,8 +595,8 @@ static const struct FormChange sGroudonFormChangeTable[] = {
 static const struct FormChange sRayquazaFormChangeTable[] = {
 #if P_MEGA_EVOLUTIONS
     {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_MOVE,    SPECIES_RAYQUAZA_MEGA, MOVE_DRAGON_ASCENT},
-    {FORM_CHANGE_ITEM_USE,                      SPECIES_RAYQUAZA_MEGA, ITEM_METEORITE_SHARD},
-    {FORM_CHANGE_ITEM_USE,                      SPECIES_RAYQUAZA,      ITEM_METEORITE_SHARD},
+    {FORM_CHANGE_ITEM_USE,                      SPECIES_RAYQUAZA_MEGA, ITEM_METEORITE_PIECE},
+    {FORM_CHANGE_ITEM_USE,                      SPECIES_RAYQUAZA,      ITEM_METEORITE_PIECE},
 #endif
     {FORM_CHANGE_TERMINATOR},
 };
@@ -604,22 +604,22 @@ static const struct FormChange sRayquazaFormChangeTable[] = {
 
 #if P_FAMILY_DEOXYS
 static const struct FormChange sDeoxysNormalFormChangeTable[] = {
-    {FORM_CHANGE_ITEM_USE, SPECIES_DEOXYS_ATTACK,  ITEM_METEORITE},
+    {FORM_CHANGE_ITEM_USE, SPECIES_DEOXYS_ATTACK,  ITEM_METEORITE_SHARD},
     {FORM_CHANGE_TERMINATOR},
 };
 
 static const struct FormChange sDeoxysAttackFormChangeTable[] = {
-    {FORM_CHANGE_ITEM_USE, SPECIES_DEOXYS_DEFENSE,  ITEM_METEORITE},
+    {FORM_CHANGE_ITEM_USE, SPECIES_DEOXYS_DEFENSE,  ITEM_METEORITE_SHARD},
     {FORM_CHANGE_TERMINATOR},
 };
 
 static const struct FormChange sDeoxysDefenseFormChangeTable[] = {
-    {FORM_CHANGE_ITEM_USE, SPECIES_DEOXYS_SPEED,  ITEM_METEORITE},
+    {FORM_CHANGE_ITEM_USE, SPECIES_DEOXYS_SPEED,  ITEM_METEORITE_SHARD},
     {FORM_CHANGE_TERMINATOR},
 };
 
 static const struct FormChange sDeoxysSpeedFormChangeTable[] = {
-    {FORM_CHANGE_ITEM_USE, SPECIES_DEOXYS_NORMAL,  ITEM_METEORITE},
+    {FORM_CHANGE_ITEM_USE, SPECIES_DEOXYS_NORMAL,  ITEM_METEORITE_SHARD},
     {FORM_CHANGE_TERMINATOR},
 };
 #endif //P_FAMILY_DEOXYS

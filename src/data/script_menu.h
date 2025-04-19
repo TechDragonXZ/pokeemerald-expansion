@@ -240,8 +240,8 @@ static const struct MenuAction MultichoiceList_Satisfaction[] =
 
 static const struct MenuAction MultichoiceList_SternDeepSea[] =
 {
-    {COMPOUND_STRING("DEEPSEATOOTH")},
-    {COMPOUND_STRING("DEEPSEASCALE")},
+    {COMPOUND_STRING("DEEP SEA TOOTH")},
+    {COMPOUND_STRING("DEEP SEA SCALE")},
     {gText_Exit},
 };
 
@@ -268,10 +268,10 @@ static const struct MenuAction MultichoiceList_GameCornerDolls[] =
 static const struct MenuAction MultichoiceList_GameCornerTMs[] =
 {
     {COMPOUND_STRING("TM32{CLEAR_TO 0x48}1,500 COINS")},
-    {COMPOUND_STRING("TM29{CLEAR_TO 0x48}3,500 COINS")},
-    {COMPOUND_STRING("TM35{CLEAR_TO 0x48}4,000 COINS")},
-    {COMPOUND_STRING("TM24{CLEAR_TO 0x48}4,000 COINS")},
-    {COMPOUND_STRING("TM13{CLEAR_TO 0x48}4,000 COINS")},
+    {COMPOUND_STRING("TM29{CLEAR_TO 0x48}1,500 COINS")},
+    {COMPOUND_STRING("TM35{CLEAR_TO 0x48}1,500 COINS")},
+    {COMPOUND_STRING("TM24{CLEAR_TO 0x48}1,500 COINS")},
+    {COMPOUND_STRING("TM13{CLEAR_TO 0x48}1,500 COINS")},
     {gText_Exit},
 };
 
@@ -802,6 +802,25 @@ static const struct MenuAction MultichoiceList_Exit[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_GCNew[] =
+{
+	{gText_SStone},
+	{gText_MStone},
+    {gText_RareCandy},
+	{gText_ChoiceB},
+	{gText_BrightP},
+	{gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_GCNew2[] =
+{
+	{gText_FStone},
+	{gText_TStone},
+	{gText_WStone},
+	{gText_LStone},
+	{gText_Exit},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -831,8 +850,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BATTLE_MODE]                = MULTICHOICE(MultichoiceList_BattleMode),
     [MULTI_UNUSED_19]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_YESNOINFO_2]                = MULTICHOICE(MultichoiceList_YesNoInfo2),
-    [MULTI_UNUSED_21]                  = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_22]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_GAMECORNER_NEW2]            = MULTICHOICE(MultichoiceList_GCNew2),
+    [MULTI_GAMECORNER_NEW]             = MULTICHOICE(MultichoiceList_GCNew),
     [MULTI_CHALLENGEINFO]              = MULTICHOICE(MultichoiceList_ChallengeInfo),
     [MULTI_LEVEL_MODE]                 = MULTICHOICE(MultichoiceList_LevelMode),
     [MULTI_MECHADOLL1_Q1]              = MULTICHOICE(MultichoiceList_Mechadoll1_Q1),

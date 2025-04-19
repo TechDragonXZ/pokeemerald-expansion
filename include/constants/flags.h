@@ -2,7 +2,6 @@
 #define GUARD_CONSTANTS_FLAGS_H
 
 #include "constants/opponents.h"
-#include "constants/rematches.h"
 
 // Temporary Flags
 // These temporary flags are are cleared every time a map is loaded. They are used
@@ -70,9 +69,9 @@
 #define FLAG_WILD_EVOLUTION       0x38 // Wild Pokémon Evolve Flag
 #define FLAG_IN_BATTLE_COURSE     0x39 // Player in Battle Course Flag
 #define FLAG_IN_TERRARIUM         0x3A // In Terrarium Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
+#define FLAG_INSURANCE            0x3B // Unused Flag
+#define FLAG_RESET_BJ             0x3C // Unused Flag
+#define FLAG_BLACKJACK            0x3D // Unused Flag
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
@@ -376,11 +375,8 @@
 #define FLAG_MET_FRONTIER_BEAUTY_MOVE_TUTOR  0x15A
 #define FLAG_MET_FRONTIER_SWIMMER_MOVE_TUTOR 0x15B
 
-// Flags for whether a rematchable trainer has been registered in the player's Match Call.
-// Most are used implicitly by adding their REMATCH_* id to TRAINER_REGISTERED_FLAGS_START.
-// Some Match Call entries (like those for gym leaders, Wally, and all non-trainer NPCs like Prof. Birch)
-// have their own separate flag that needs to be set to be enabled; see src/pokenav_match_call_data.c
-#define TRAINER_REGISTERED_FLAGS_START       0x15C
+// Trainer Rematch Flags
+#define TRAINER_REGISTERED_FLAGS_START    0x15C
 #define FLAG_REGISTERED_ROSE                 (TRAINER_REGISTERED_FLAGS_START + REMATCH_ROSE)
 #define FLAG_REGISTERED_ANDRES               (TRAINER_REGISTERED_FLAGS_START + REMATCH_ANDRES)
 #define FLAG_REGISTERED_DUSTY                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DUSTY)
@@ -926,7 +922,7 @@
 #define FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN                           0x364
 #define FLAG_HIDE_SLATEPORT_CITY_STERNS_SHIPYARD_MR_BRINEY          0x365
 #define FLAG_HIDE_LANETTES_HOUSE_LANETTE                            0x366
-#define FLAG_HIDE_FALLARBOR_POKEMON_CENTER_LANETTE                  0x367
+#define FLAG_HIDE_FALLORBOR_POKEMON_CENTER_LANETTE                  0x367
 #define FLAG_HIDE_TRICK_HOUSE_ENTRANCE_MAN                          0x368
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER_REPLACEMENT    0x369
 #define FLAG_HIDE_DESERT_UNDERPASS_FOSSIL                           0x36A
@@ -1599,8 +1595,8 @@
 #define FLAG_UNUSED_0x920                           (DAILY_FLAGS_START + 0x0)  // Unused Flag
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
-#define FLAG_DAILY_GAME_CORNER_BREAK_IN             (DAILY_FLAGS_START + 0x3)  // Daily Game Corner Break-in Flag
-#define FLAG_DAILY_BATTLE_CAFE_TRASH_CAN            (DAILY_FLAGS_START + 0x4)  // Daily Trash Can Flag
+#define FLAG_DAILY_BATTLE_CAFE_TRASH_CAN            (DAILY_FLAGS_START + 0x3)  // Daily Battle Cafe Trash Can Flag
+#define FLAG_UNUSED_0x924                           (DAILY_FLAGS_START + 0x4)  // Unused Flag
 #define FLAG_UNUSED_0x925                           (DAILY_FLAGS_START + 0x5)  // Unused Flag
 #define FLAG_UNUSED_0x926                           (DAILY_FLAGS_START + 0x6)  // Unused Flag
 #define FLAG_UNUSED_0x927                           (DAILY_FLAGS_START + 0x7)  // Unused Flag

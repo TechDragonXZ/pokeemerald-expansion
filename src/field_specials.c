@@ -74,6 +74,7 @@
 #include "item.h"
 #include "item_menu.h"
 #include "naming_screen.h"
+#include "rogue_voltorbflip.h"
 
 #define TAG_ITEM_ICON 5500
 
@@ -164,6 +165,13 @@ static const u8 sText_SpaceTimes[] = _(" time(s)");
 void Special_ShowDiploma(void)
 {
     SetMainCallback2(CB2_ShowDiploma);
+    LockPlayerFieldControls();
+}
+
+void Special_ViewVoltorbFlip(void)
+{
+    gMain.savedCallback = CB2_ReturnToField;
+    SetMainCallback2(CB2_ShowVoltorbFlip);
     LockPlayerFieldControls();
 }
 

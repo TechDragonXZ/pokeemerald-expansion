@@ -767,24 +767,26 @@ MauvilleCity_BattleCafe_EventScript_Boy2::
 	release
 	end
 
-MauvilleCity_BattleCafe_EventScript_Girl::
+MauvilleCity_BattleCafe_EventScript_Waiter::
 	lock
 	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Girl, MSGBOX_DEFAULT
+	msgbox MauvilleCity_BattleCafe_Text_Waiter, MSGBOX_DEFAULT
 	release
 	end
 
-MauvilleCity_BattleCafe_EventScript_Girl2::
+MauvilleCity_BattleCafe_EventScript_Steenee2::
 	lock
 	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Girl2, MSGBOX_DEFAULT
+	playmoncry SPECIES_STEENEE, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox MauvilleCity_BattleCafe_Text_Steenee2, MSGBOX_DEFAULT
 	release
 	end
 
-MauvilleCity_BattleCafe_EventScript_Man::
+MauvilleCity_BattleCafe_EventScript_Woman2::
 	lock
 	faceplayer
-	msgbox MauvilleCity_BattleCafe_Text_Man, MSGBOX_DEFAULT
+	msgbox MauvilleCity_BattleCafe_Text_Woman2, MSGBOX_DEFAULT
 	release
 	end
 

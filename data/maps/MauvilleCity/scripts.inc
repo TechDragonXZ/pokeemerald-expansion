@@ -435,8 +435,8 @@ MauvilleCity_EventScript_BegunNewMauville::
 	end
 
 MauvilleCity_EventScript_CompletedNewMauville::
-	msgbox MauvilleCity_Text_WattsonThanksTakeTM, MSGBOX_DEFAULT
-	giveitem ITEM_TM_THUNDERBOLT
+	msgbox MauvilleCity_Text_WattsonThanksTakeTypeGem, MSGBOX_DEFAULT
+	giveitem ITEM_ELECTRIC_GEM
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_GOT_TM_THUNDERBOLT_FROM_WATTSON
 	msgbox MauvilleCity_Text_WattsonYoungTakeCharge, MSGBOX_DEFAULT
@@ -600,12 +600,12 @@ MauvilleCity_Text_WattsonWontBeChallenge:
 	.string "That's it, then, you have my trust!\n"
 	.string "Wahahahaha!$"
 
-MauvilleCity_Text_WattsonThanksTakeTM:
+MauvilleCity_Text_WattsonThanksTakeTypeGem:
 	.string "WATTSON: Wahahahaha!\p"
 	.string "I knew it, {PLAYER}{KUN}! I knew I'd made\n"
 	.string "the right choice asking you!\p"
-	.string "This is my thanks--a TM containing\n"
-	.string "THUNDERBOLT!\p"
+	.string "This is my thanks--a TYPE GEM\n"
+	.string "the ELECTRIC GEM!\p"
 	.string "Go on, you've earned it!$"
 
 MauvilleCity_Text_WattsonYoungTakeCharge:

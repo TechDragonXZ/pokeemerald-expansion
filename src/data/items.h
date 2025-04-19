@@ -12780,7 +12780,7 @@ const struct Item gItemsInfo[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_FormChange,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_Meteorite,
         .iconPalette = gItemIconPalette_Meteorite,
     },
@@ -14521,9 +14521,9 @@ const struct Item gItemsInfo[] =
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
-            "Makes a certain\n"
-            "species of Pokémon\n"
-            "mega evolve."),
+            "A shard of a\n"
+            "meteorite found\n"
+            "at Meteor Falls."),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_FormChange,
@@ -14545,6 +14545,22 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_CodeLogger,
         .iconPalette = gItemIconPalette_CodeLogger,
+    },
+
+    [ITEM_METEORITE_PIECE] =
+    {
+        .name = _("Meteorite Piece"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Makes a certain\n"
+            "species of Pokémon\n"
+            "mega evolve."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange,
+        .iconPic = gItemIcon_MeteoritePiece,
+        .iconPalette = gItemIconPalette_MeteoritePiece,
     },
 
 };

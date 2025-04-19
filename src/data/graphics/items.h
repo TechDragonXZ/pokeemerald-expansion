@@ -2170,6 +2170,9 @@ const u32 gItemIconPalette_MeteoriteShard[] = INCBIN_U32("graphics/items/icon_pa
 const u32 gItemIcon_CodeLogger[] = INCBIN_U32("graphics/items/icons/code_logger.4bpp.lz");
 const u32 gItemIconPalette_CodeLogger[] = INCBIN_U32("graphics/items/icon_palettes/code_logger.gbapal.lz");
 
+const u32 gItemIcon_MeteoritePiece[] = INCBIN_U32("graphics/items/icons/meteorite_piece.4bpp.lz");
+const u32 gItemIconPalette_MeteoritePiece[] = INCBIN_U32("graphics/items/icon_palettes/meteorite_piece.gbapal.lz");
+
 const u32 gItemIconPalette_HackingDevice[] = INCBIN_U32("graphics/items/icon_palettes/hacking_device.gbapal.lz");
 const u32 gItemIconPalette_CyanScarf[] = INCBIN_U32("graphics/items/icon_palettes/cyan_scarf.gbapal.lz");
 

@@ -1022,8 +1022,9 @@
 #define ITEM_FISHING_ROD 853
 #define ITEM_METEORITE_SHARD 854
 #define ITEM_CODE_LOGGER 855
+#define ITEM_METEORITE_PIECE 856
 
-#define ITEMS_COUNT 856
+#define ITEMS_COUNT 857
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

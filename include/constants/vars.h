@@ -4,7 +4,7 @@
 #define VARS_START 0x4000
 
 // temporary vars
-// The first 0x10 vars are temporary--they are cleared every time a map is loaded.
+// The first 0x10 vars are are temporary--they are cleared every time a map is loaded.
 #define TEMP_VARS_START            0x4000
 #define VAR_TEMP_0                 (TEMP_VARS_START + 0x0)
 #define VAR_TEMP_1                 (TEMP_VARS_START + 0x1)
@@ -99,17 +99,17 @@
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
 #define VAR_LITTLEROOT_TOWN_STATE                        0x4050
 #define VAR_OLDALE_TOWN_STATE                            0x4051
-#define VAR_DEWFORD_TOWN_STATE                           0x4052 // Unused Var
+#define VAR_OPTION1_TILENUM                              0x4052 // Tile Option 1 Var
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_VERDANTURF_TOWN_STATE                        0x4055 // Unused Var
-#define VAR_PACIFIDLOG_TOWN_STATE                        0x4056 // Unused Var
+#define VAR_OPTION2_TILENUM                              0x4055 // Tile Option 2 Var
+#define VAR_OPTION3_TILENUM                              0x4056 // Tile Option 3 Var
 #define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
 #define VAR_MAUVILLE_CITY_STATE                          0x4059 // Unused Var
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
-#define VAR_FORTREE_CITY_STATE                           0x405B // Unused Var
-#define VAR_LILYCOVE_CITY_STATE                          0x405C // Unused Var
+#define VAR_FLIP_LEVEL                                   0x405B // Voltorb Flip Level Var
+#define VAR_FLIP_WINNINGS                                0x405C // Voltorb Flip Winnings Var
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
 #define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var
@@ -117,16 +117,16 @@
 #define VAR_ROUTE102_STATE                               0x4061 // Craft Tutorial
 #define VAR_ROUTE103_STATE                               0x4062 // Unused Var
 #define VAR_ROUTE104_STATE                               0x4063
-#define VAR_ROUTE105_STATE                               0x4064 // Unused Var
-#define VAR_ROUTE106_STATE                               0x4065 // Unused Var
-#define VAR_ROUTE107_STATE                               0x4066 // Unused Var
-#define VAR_ROUTE108_STATE                               0x4067 // Unused Var
-#define VAR_ROUTE109_STATE                               0x4068 // Unused Var
+#define VAR_RACER_NAME_1                                 0x4064 // Used for Race Names
+#define VAR_RACER_NAME_2                                 0x4065 
+#define VAR_RACER_NAME_3                                 0x4066 
+#define VAR_RACER_NAME_4                                 0x4067 
+#define VAR_RACER_NAME_5                                 0x4068 
 #define VAR_ROUTE110_STATE                               0x4069
-#define VAR_ROUTE111_STATE                               0x406A // Unused Var
-#define VAR_ROUTE112_STATE                               0x406B // Unused Var
-#define VAR_ROUTE113_STATE                               0x406C // Unused Var
-#define VAR_ROUTE114_STATE                               0x406D // Unused Var
+#define VAR_RACER_NAME_6                                 0x406A 
+#define VAR_NICKNAME_TOGGLE                              0x406B // Confirms if Nicknames were Set
+#define VAR_FLAPPY_HISCORE                               0x406C // For Hi Scores
+#define VAR_TRAINER_ID_CHECK                             0x406D // Game Corner Gag
 #define VAR_ROUTE115_STATE                               0x406E // Unused Var
 #define VAR_ROUTE116_STATE                               0x406F
 #define VAR_ROUTE117_STATE                               0x4070 // Unused Var
@@ -134,18 +134,18 @@
 #define VAR_ROUTE119_STATE                               0x4072
 #define VAR_ROUTE120_STATE                               0x4073 // Unused Var
 #define VAR_ROUTE121_STATE                               0x4074
-#define VAR_ROUTE122_STATE                               0x4075 // Unused Var
-#define VAR_ROUTE123_STATE                               0x4076 // Unused Var
-#define VAR_ROUTE124_STATE                               0x4077 // Unused Var
-#define VAR_ROUTE125_STATE                               0x4078 // Unused Var
-#define VAR_ROUTE126_STATE                               0x4079 // Unused Var
-#define VAR_ROUTE127_STATE                               0x407A // Unused Var
+#define VAR_RACER_1		                                 0x4075 // Race Values (Species, Shiny, Condition)
+#define VAR_RACER_2 	                                 0x4076 // Race Var
+#define VAR_RACER_3        	   	                         0x4077 // Race Var
+#define VAR_RACER_4     	                             0x4078 // Race Var
+#define VAR_RACER_5        		                         0x4079 // Race Var
+#define VAR_RACER_6            		                     0x407A // Race Var
 #define VAR_ROUTE128_STATE                               0x407B
-#define VAR_ROUTE129_STATE                               0x407C // Unused Var
-#define VAR_ROUTE130_STATE                               0x407D // Unused Var
-#define VAR_ROUTE131_STATE                               0x407E // Unused Var
-#define VAR_ROUTE132_STATE                               0x407F // Unused Var
-#define VAR_ROUTE133_STATE                               0x4080 // Unused Var
+#define VAR_NEW_DERBY	                                 0x407C // Check for Derby Reset
+#define VAR_PLAYER_BJ                                    0x407D // Player BJ Var
+#define VAR_DEALER_BJ                                    0x407E // Dealer BJ Var
+#define VAR_BET_BJ                                       0x407F // Bet BJ Var
+#define VAR_OPTIONS_BJ                                   0x4080 // BJ Options Var
 #define VAR_ROUTE134_STATE                               0x4081 // Unused Var
 #define VAR_LITTLEROOT_HOUSES_STATE_MAY                  0x4082
 #define VAR_ROD_TECHNIQUE                                0x4083 // Fishing Rod Tech Var
