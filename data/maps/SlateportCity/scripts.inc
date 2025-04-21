@@ -512,7 +512,9 @@ SlateportCity_PokemartDecor_Dolls:
 	.2byte DECOR_AZURILL_DOLL
 	.2byte DECOR_MARILL_DOLL
 	.2byte DECOR_SKITTY_DOLL
-	pokemartlistend
+	.2byte DECOR_NONE
+	release
+	end
 
 SlateportCity_EventScript_ComeBackWithSecretPower::
 	msgbox gText_ComeBackWithSecretPower, MSGBOX_DEFAULT
@@ -546,7 +548,9 @@ SlateportCity_PokemartDecor:
 	.2byte DECOR_A_NOTE_MAT
 	.2byte DECOR_B_NOTE_MAT
 	.2byte DECOR_C_HIGH_NOTE_MAT
-	pokemartlistend
+	.2byte DECOR_NONE
+	release
+	end
 
 SlateportCity_EventScript_PowerTMClerk::
 	lock

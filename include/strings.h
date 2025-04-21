@@ -108,6 +108,16 @@ extern const u8 gText_NoDecorationsInUse[];
 extern const u8 gText_Exit[];
 extern const u8 gText_Cancel[];
 
+extern const u8 gText_RareCandy[];
+extern const u8 gText_WStone[];
+extern const u8 gText_FStone[];
+extern const u8 gText_LStone[];
+extern const u8 gText_TStone[];
+extern const u8 gText_MStone[];
+extern const u8 gText_SStone[];
+extern const u8 gText_ChoiceB[];
+extern const u8 gText_BrightP[];
+
 extern const u8 gText_Color161Shadow161[];
 extern const u8 gText_GoBackPrevMenu[];
 extern const u8 gText_CantPlaceInRoom[];
@@ -2400,6 +2410,17 @@ extern const u8 gText_YourName[];
 extern const u8 gText_BoxName[];
 extern const u8 gText_PkmnsNickname[];
 extern const u8 gText_TellHimTheWords[];
+
+// Blackjack
+extern const u8 gText_Bust[];
+extern const u8 gText_YouLose[];
+extern const u8 gText_YouWin[];
+extern const u8 gText_Push[];
+extern const u8 gText_BlackJack[];
+
+extern const u8 gText_Betting[];
+extern const u8 gText_NoBetting[];
+extern const u8 gText_NoMoney[];
 
 // Exp. Share
 extern const u8 gText_ExpShareOn[];
