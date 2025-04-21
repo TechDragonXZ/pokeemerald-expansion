@@ -43,26 +43,26 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
+#define FLAG_INVERSE_BATTLE       0x20 // Inverse Battle Flag
+#define FLAG_FORCE_DOUBLE_WILD    0x21 // Force Double Wild Battles Flag
+#define FLAG_NO_BAG_USE           0x22 // Disable Bag Use Flag
+#define FLAG_NO_CATCHING          0x23 // Disable Catching Flag
+#define FLAG_NO_RUNNING           0x24 // Disable Runing Flag
+#define FLAG_DYNAMAX_BATTLE       0x25 // Dynamax Battle Flag
+#define FLAG_TERA_ORB_CHARGED     0x26 // Tera Orb (Charged) Flag
+#define FLAG_TERA_ORB_NO_COST     0x27 // Tera Orb (Infinite) Flag
+#define FLAG_SLEEP_CLAUSE         0x28 // Sleep Clause Flag
+#define FLAG_SKY_BATTLE           0x29 // Sky Battle Flag
+#define FLAG_SEARCHING            0x2A // DexNav Search Flag
+#define FLAG_DETECTOR_MODE        0x2B // DexNav Detector Mode Flag
+#define FLAG_EXP_SHARE            0x2C // Exp All Flag
+#define FLAG_FOLLOWERS_DISABLED   0x2D // Disable Followers Flag
+#define FLAG_PAUSE_TIME           0x2E // Freeze Time Flag
+#define FLAG_NO_ENCOUNTER         0x2F // Disable Wild Battles Flag
+#define FLAG_NO_TRAINER_SEE       0x30 // Disable Trainer Battles Flag
+#define FLAG_NO_COLLISION         0x31 // Disable Map Collision Flag
+#define FLAG_FORCE_SHINY          0x32 // Force Shiny Flag
+#define FLAG_FORCE_NO_SHINY       0x33 // Force No Shiny Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag
 #define FLAG_UNUSED_0x035    0x35 // Unused Flag
 #define FLAG_UNUSED_0x036    0x36 // Unused Flag
@@ -1350,7 +1350,7 @@
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
-#define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
+#define FLAG_SYS_DEXNAV_GET                          (SYSTEM_FLAGS + 0x3) // Got Dexnav Flag
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 (SYSTEM_FLAGS + 0x6)
@@ -1402,7 +1402,7 @@
 #define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2C)
 #define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2D)
 
-#define FLAG_UNUSED_0x88E                           (SYSTEM_FLAGS + 0x2E) // Unused Flag
+#define FLAG_SYS_POKE_RIDER                         (SYSTEM_FLAGS + 0x2E) // Unlocked PokeRider Flag
 #define FLAG_UNUSED_0x88F                           (SYSTEM_FLAGS + 0x2F) // Unused Flag
 
 #define FLAG_SYS_TV_HOME                            (SYSTEM_FLAGS + 0x30)
