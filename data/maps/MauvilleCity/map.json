@@ -255,6 +255,13 @@
       "elevation": 0,
       "dest_map": "MAP_MAUVILLE_CITY_HOUSE2",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
