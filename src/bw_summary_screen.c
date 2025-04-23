@@ -4794,7 +4794,12 @@ static void ShowCategoryIcon(u16 move)
     
     gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_CATEGORY]].invisible = FALSE;
 
-    StartSpriteAnim(&gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_CATEGORY]], GetBattleMoveCategory(move));
+    if (gMovesInfo[move].category == DAMAGE_CATEGORY_SPECIAL)
+        StartSpriteAnim(&gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_CATEGORY]], CATEGORY_ICON_SPECIAL);
+    else if (gMovesInfo[move].category == DAMAGE_CATEGORY_PHYSICAL)
+        StartSpriteAnim(&gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_CATEGORY]], CATEGORY_ICON_PHYSICAL);
+    else
+        StartSpriteAnim(&gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_CATEGORY]], CATEGORY_ICON_STATUS);
 }
 
 static void DestroyCategoryIcon(void)
@@ -4998,23 +5003,23 @@ static void SetMonTypeIcons(void)
 static void SetMoveTypeIcons(void)
 {
     u32 i;
-    u16 move;
-    u32 type;
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
+    struct Pokemon *mon = &sMonSummaryScreen->currentMon;
+    u32 type;
 
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
-        move = summary->moves[i];
-        if (move != MOVE_NONE)
+        if (summary->moves[i] != MOVE_NONE)
         {
-            type = P_SHOW_DYNAMIC_TYPES ? CheckDynamicMoveType(&sMonSummaryScreen->currentMon, move, 0) : GetMoveType(move);
+            type = GetMoveType(summary->moves[i]);
+            if (P_SHOW_DYNAMIC_TYPES)
+                type = CheckDynamicMoveType(mon, summary->moves[i], 0);
             SetTypeSpritePosAndPal(type, 8, 16 + (i * 28), i + SPRITE_ARR_ID_TYPE);
         }
         else
         {
             SetSpriteInvisibility(i + SPRITE_ARR_ID_TYPE, TRUE);
         }
-            
     }
 }
 
@@ -5033,23 +5038,16 @@ static void SetContestMoveTypeIcons(void)
 
 static void SetNewMoveTypeIcon(void)
 {
-    u32 move = sMonSummaryScreen->newMove;
-    
-    if (move == MOVE_NONE)
+    if (sMonSummaryScreen->newMove == MOVE_NONE)
     {
         SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 4, TRUE);
     }
     else
     {
         if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
-        {
-            u32 type = P_SHOW_DYNAMIC_TYPES ? CheckDynamicMoveType(&sMonSummaryScreen->currentMon, move, 0) : GetMoveType(move);
-            SetTypeSpritePosAndPal(type, 8, 128, SPRITE_ARR_ID_TYPE + 4);
-        }
+            SetTypeSpritePosAndPal(gMovesInfo[sMonSummaryScreen->newMove].type, 8, 128, SPRITE_ARR_ID_TYPE + 4);
         else
-        {
-            SetTypeSpritePosAndPal(NUMBER_OF_MON_TYPES + gMovesInfo[move].contestCategory, 8, 128, SPRITE_ARR_ID_TYPE + 4);
-        }
+            SetTypeSpritePosAndPal(NUMBER_OF_MON_TYPES + gMovesInfo[sMonSummaryScreen->newMove].contestCategory, 8, 128, SPRITE_ARR_ID_TYPE + 4);
     }
 }
 
