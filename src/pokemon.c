@@ -11,7 +11,6 @@
 #include "battle_setup.h"
 #include "battle_tower.h"
 #include "battle_z_move.h"
-#include "bw_summary_screen.h"
 #include "data.h"
 #include "dexnav.h"
 #include "event_data.h"
@@ -6128,8 +6127,6 @@ static void Task_AnimateAfterDelay(u8 taskId)
     }
 }
 
-#define tIsShadow data[4]
-
 static void Task_PokemonSummaryAnimateAfterDelay(u8 taskId)
 {
     if (--gTasks[taskId].sAnimDelay == 0)
@@ -6226,8 +6223,6 @@ void PokemonSummaryDoMonAnimation(struct Sprite *sprite, u16 species, bool8 oneF
         StartMonSummaryAnimation(sprite, gSpeciesInfo[species].frontAnimId);
     }
 }
-
-#define tIsShadow data[4]
 
 void StopPokemonAnimationDelayTask(void)
 {
