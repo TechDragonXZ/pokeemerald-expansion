@@ -36,15 +36,15 @@ Info taken from https://bulbapedia.bulbagarden.net/wiki/Stats_judge.
 #define DEFAULT_PAL 2
 
 //Shadow Settings
-#define P_SUMMARY_SCREEN_MON_SHADOWS FALSE //If TRUE, the mon sprite will have a shadow loaded behind it.
+#define P_SUMMARY_SCREEN_MON_SHADOWS TRUE //If TRUE, the mon sprite will have a shadow loaded behind it.
 #define MON_SHADOWS_PALLETE DEFAULT_PAL //Changes the palette of the shadow sprite.
 #define MON_SHADOWS_X 4 //The X position of the shadow sprite.
 #define MON_SHADOWS_Y 2 //The Y position of the shadow sprite.
 
 //Ability Settings Settings
-#define P_SUMMARY_SCREEN_EXPAND_ABILITY_DESCRIPTION TRUE //If TRUE, the ability description will be expanded to show the full description of the ability instead of just one line.
+#define P_SUMMARY_SCREEN_EXPAND_ABILITY_DESCRIPTION FALSE //If TRUE, the ability description will be expanded to show the full description of the ability instead of just one line.
 #define P_SUMMARY_SCREEN_EXPAND_MOVE_DESCRIPTION TRUE //If TRUE, the ability description will be expanded to show the full description of the move instead of just one line.
-#define P_SUMMARY_SCREEN_ABILITY_DESCRIPTION_FONT_CHANGE TRUE //If TRUE && P_SUMMARY_SCREEN_EXPAND_ABILITY_DESCRIPTION = FALSE, the ability desc font will change to make one line desc somewhat longer.
+#define P_SUMMARY_SCREEN_ABILITY_DESCRIPTION_FONT_CHANGE FALSE //If TRUE && P_SUMMARY_SCREEN_EXPAND_ABILITY_DESCRIPTION = FALSE, the ability desc font will change to make one line desc somewhat longer.
 #define DESCRIPTION_FONT_CHANGE_VALUE 7 //7 By Default.
 
 //This should only be used if P_SUMMARY_SCREEN_EXPAND_ABILITY_DESCRIPTION is TRUE
@@ -61,13 +61,13 @@ Info taken from https://bulbapedia.bulbagarden.net/wiki/Stats_judge.
 #define MAX_MOVE_DESCRIPTION_WIDTH     159 //The maximum length of the move description string.
 
 //Color Settings
-#define P_SUMMARY_SCREEN_ABILITY_COLOR    FALSE //If TRUE, the ability description will be have to its color changes if its a Hidden Ability.
-#define P_SUMMARY_SCREEN_BACKGROUND_COLOR FALSE //If TRUE, the background color of the summary screen will be changed when the mon is shiny.
+#define P_SUMMARY_SCREEN_ABILITY_COLOR    TRUE //If TRUE, the ability description will be have to its color changes if its a Hidden Ability.
+#define P_SUMMARY_SCREEN_BACKGROUND_COLOR TRUE //If TRUE, the background color of the summary screen will be changed when the mon is shiny.
 #define ABILITY_COLOR_VALUE               2 //The color of the ability name. Defaults to Red.
 #define BACKGROUND_COLOR_VALUE            2 //The color of the background. Defaults to Gold.
 
 //Item Settings
-#define P_SUMMARY_SCREEN_ITEM_ICON         FALSE //If TRUE, the item icon will be shown in the summary screen, next to the name.
+#define P_SUMMARY_SCREEN_ITEM_ICON         TRUE //If TRUE, the item icon will be shown in the summary screen, next to the name.
 
 //Page Settings
 #define P_SUMMARY_SCREEN_SHOW_CONTEST_MOVES  TRUE //If FALSE, the contest moves page will be hidden in the summary screen.

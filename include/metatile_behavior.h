@@ -171,5 +171,12 @@ bool8 MetatileBehavior_IsOmnidirectionalJump(u8);
 bool8 MetatileBehavior_IsCraftingStation(u8);
 bool8 MetatileBehavior_IsTutorialStation(u8);
 bool8 MetatileBehavior_IsSelfTradeMachine(u8);
+bool8 MetatileBehavior_IsSnakeMachine(u8);
+bool8 MetatileBehavior_IsFlappyBirdMachine(u8);
+bool8 MetatileBehavior_IsBlockStackerMachine(u8);
+bool8 MetatileBehavior_IsVoltorbFlipTable(u8);
+bool8 MetatileBehavior_IsBlackjackTable(u8);
+bool8 MetatileBehavior_IsDerbyMachine(u8);
+bool8 MetatileBehavior_IsPachinkoMachine(u8);
 
 #endif // GUARD_METATILE_BEHAVIOR_H

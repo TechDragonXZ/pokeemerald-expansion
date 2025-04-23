@@ -133,6 +133,8 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_SIDEWAYS_STAIRS_RIGHT_SIDE_BOTTOM]  = TILE_FLAG_UNUSED,
     [MB_SIDEWAYS_STAIRS_LEFT_SIDE_BOTTOM]   = TILE_FLAG_UNUSED,
     [MB_ROCK_STAIRS]                        = TILE_FLAG_UNUSED,
+
+    // Custom
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -1570,6 +1572,62 @@ bool8 MetatileBehavior_IsTutorialStation(u8 metatileBehavior)
 bool8 MetatileBehavior_IsSelfTradeMachine(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_SELF_TRADE_MACHINE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsSnakeMachine(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_SNAKE_MACHINE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsFlappyBirdMachine(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_FLAPPY_BIRD_MACHINE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsBlockStackerMachine(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_BLOCK_STACKER_MACHINE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsVoltorbFlipTable(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_VOLTORB_FLIP_TABLE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsBlackjackTable(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_BLACKJACK_TABLE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsDerbyMachine(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_DERBY_MACHINE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsPachinkoMachine(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_PACHINKO_MACHINE)
         return TRUE;
     else
         return FALSE;

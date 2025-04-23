@@ -521,6 +521,20 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return CraftTutorial_EventScript_Table;
     if (MetatileBehavior_IsSelfTradeMachine(metatileBehavior) == TRUE)
         return EventScript_SelfTrade;
+    if (MetatileBehavior_IsSnakeMachine(metatileBehavior) == TRUE)
+        return MauvilleCity_GameCorner_EventScript_Snake;
+    if (MetatileBehavior_IsFlappyBirdMachine(metatileBehavior) == TRUE)
+        return MauvilleCity_GameCorner_EventScript_FlappyBird;
+    if (MetatileBehavior_IsBlockStackerMachine(metatileBehavior) == TRUE)
+        return MauvilleCity_GameCorner_EventScript_BlockStacker;
+    if (MetatileBehavior_IsVoltorbFlipTable(metatileBehavior) == TRUE)
+        return MauvilleCity_GameCorner_EventScript_VoltorbFlip;
+    if (MetatileBehavior_IsBlackjackTable(metatileBehavior) == TRUE)
+        return MauvilleCity_GameCorner_EventScript_Blackjack;
+    if (MetatileBehavior_IsDerbyMachine(metatileBehavior) == TRUE)
+        return MauvilleCity_GameCorner_EventScript_Derby;
+    if (MetatileBehavior_IsPachinkoMachine(metatileBehavior) == TRUE)
+        return MauvilleCity_GameCorner_EventScript_Pachinko;
     if (MetatileBehavior_IsPokeMartSign(metatileBehavior) == TRUE)
     {
         if(direction != DIR_NORTH)

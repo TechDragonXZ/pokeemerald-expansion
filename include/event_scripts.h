@@ -668,5 +668,12 @@ extern const u8 EventScript_MovedTooFast[];
 extern const u8 Craft_EventScript_CraftTable[];
 extern const u8 CraftTutorial_EventScript_Table[];
 extern const u8 EventScript_SelfTrade[];
+extern const u8 MauvilleCity_GameCorner_EventScript_Snake[];
+extern const u8 MauvilleCity_GameCorner_EventScript_FlappyBird[];
+extern const u8 MauvilleCity_GameCorner_EventScript_BlockStacker[];
+extern const u8 MauvilleCity_GameCorner_EventScript_VoltorbFlip[];
+extern const u8 MauvilleCity_GameCorner_EventScript_Blackjack[];
+extern const u8 MauvilleCity_GameCorner_EventScript_Derby[];
+extern const u8 MauvilleCity_GameCorner_EventScript_Pachinko[];
 
 #endif // GUARD_EVENT_SCRIPTS_H
