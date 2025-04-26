@@ -272,7 +272,7 @@
 #define VAR_SEASON                                       0x40FC // Current Season Var
 #define VAR_CURRENT_MAP                                  0x40FD // Current Map Var
 #define VAR_FOREST_SET                                   0x40FE // Terrarium Forest Var
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_MOVE_RELEARNER_STATE                         0x40FF // Move Relearner State Var
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
