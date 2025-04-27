@@ -2223,11 +2223,7 @@ static void CreateTypeIconSprites(void)
     u8 i;
 
     LoadCompressedSpriteSheet(&gSpriteSheet_MoveTypes);
-    #if P_SUMMARY_SCREEN_NEW_TYPE_ICONS
-    LoadCompressedPalette(gMoveTypes_Pal_New, 0x1D0, 0x60);
-    #else
     LoadCompressedPalette(gMoveTypes_Pal, 0x1D0, 0x60);
-    #endif
     for (i = 0; i < 2; i++)
     {
         if (sDexNavUiDataPtr->typeIconSpriteIds[i] == 0xFF)
