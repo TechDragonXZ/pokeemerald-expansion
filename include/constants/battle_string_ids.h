@@ -729,38 +729,39 @@
 #define STRINGID_ITDOESNTAFFECTTWOFOES                727
 #define STRINGID_SENDCAUGHTMONPARTYORBOX              728
 #define STRINGID_PKMNSENTTOPCAFTERCATCH               729
+#define STRINGID_TOXICSPIKESBADLYPOISONED             730
 
 // Custom
-#define STRINGID_PLAYERWHITEOUT3                      730
-#define STRINGID_PKMNDROPPEDITEM                      731
-#define STRINGID_BAGISFULL                            732
-#define STRINGID_HARDY                                733
-#define STRINGID_LONELY                               734
-#define STRINGID_BRAVE                                735
-#define STRINGID_ADAMANT                              736
-#define STRINGID_NAUGHTY                              737
-#define STRINGID_BOLD                                 738
-#define STRINGID_DOCILE                               739
-#define STRINGID_RELAXED                              740
-#define STRINGID_IMPISH                               741
-#define STRINGID_LAX                                  742
-#define STRINGID_TIMID                                743
-#define STRINGID_HASTY                                744
-#define STRINGID_SERIOUS                              745
-#define STRINGID_JOLLY                                746
-#define STRINGID_NAIVE                                747
-#define STRINGID_MODEST                               748
-#define STRINGID_MILD                                 749
-#define STRINGID_QUIET                                750
-#define STRINGID_BASHFUL                              751
-#define STRINGID_RASH                                 752
-#define STRINGID_CALM                                 753
-#define STRINGID_GENTLE                               754
-#define STRINGID_SASSY                                755
-#define STRINGID_CAREFUL                              756
-#define STRINGID_QUIRKY                               757
+#define STRINGID_PLAYERWHITEOUT3                      731
+#define STRINGID_PKMNDROPPEDITEM                      732
+#define STRINGID_BAGISFULL                            733
+#define STRINGID_HARDY                                734
+#define STRINGID_LONELY                               735
+#define STRINGID_BRAVE                                736
+#define STRINGID_ADAMANT                              737
+#define STRINGID_NAUGHTY                              738
+#define STRINGID_BOLD                                 739
+#define STRINGID_DOCILE                               740
+#define STRINGID_RELAXED                              741
+#define STRINGID_IMPISH                               742
+#define STRINGID_LAX                                  743
+#define STRINGID_TIMID                                744
+#define STRINGID_HASTY                                745
+#define STRINGID_SERIOUS                              746
+#define STRINGID_JOLLY                                747
+#define STRINGID_NAIVE                                748
+#define STRINGID_MODEST                               749
+#define STRINGID_MILD                                 750
+#define STRINGID_QUIET                                751
+#define STRINGID_BASHFUL                              752
+#define STRINGID_RASH                                 753
+#define STRINGID_CALM                                 754
+#define STRINGID_GENTLE                               755
+#define STRINGID_SASSY                                756
+#define STRINGID_CAREFUL                              757
+#define STRINGID_QUIRKY                               758
 
-#define BATTLESTRINGS_COUNT                           758
+#define BATTLESTRINGS_COUNT                           759
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

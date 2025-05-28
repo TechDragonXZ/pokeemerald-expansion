@@ -1984,7 +1984,7 @@ void Task_DoReturnToFieldFishTreasure(u8 taskId)
         case FISHTASK_FIRST_MSG:
                 LoadMessageBoxAndBorderGfx();
                 DrawDialogueFrame(0, TRUE);
-                StringCopy(gStringVar2, ItemId_GetName(gSpecialVar_ItemId));
+                StringCopy(gStringVar2, GetItemName(gSpecialVar_ItemId));
                 StringExpandPlaceholders(gStringVar4, gText_ReeledInTreasure);
                 AddTextPrinterParameterized(0, FONT_NORMAL, gStringVar4, 0, 1, 1, NULL);
 
@@ -2059,7 +2059,7 @@ void Task_DoReturnToFieldFishTreasure(u8 taskId)
                 ItemSpriteId = spriteId;
                 ItemSprite.x = TREASURE_POST_GAME_X;
                 ItemSprite.y = TREASURE_POST_GAME_Y;
-                StringCopy(gStringVar2, ItemId_GetName(gSpecialVar_ItemId));
+                StringCopy(gStringVar2, GetItemName(gSpecialVar_ItemId));
                 StringExpandPlaceholders(gStringVar4, gText_FoundATreasureItem);
                 FillWindowPixelBuffer(0, PIXEL_FILL(1));
                 AddTextPrinterParameterized(0, FONT_NORMAL, gStringVar4, 0, 1, 1, NULL);

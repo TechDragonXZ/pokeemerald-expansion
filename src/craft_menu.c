@@ -425,7 +425,7 @@ static const u8 *GetCraftTableItemName(u16 itemId){
     if(itemId == ITEM_NONE || itemId >= ITEMS_COUNT)
         return gText_Dash;
     else
-        return ItemId_GetName(itemId);
+        return GetItemName(itemId);
 }
 
 static void RemoveExtraCraftMenuWindows(void)
@@ -1134,7 +1134,7 @@ static u8 CraftMenuReadyCallback(void){
     ClearCraftInfo(sCraftMenuCursorPos);
 
     CopyItemName(CraftProduct, gStringVar1);
-    StringCopy(gStringVar2, gPocketNamesStringsTable[ItemId_GetPocket(CraftProduct) - 1]);
+    StringCopy(gStringVar2, gPocketNamesStringsTable[GetItemPocket(CraftProduct) - 1]);
     StringExpandPlaceholders(gStringVar4, sText_CraftInProcess);
     ShowCraftMessage(gStringVar4, CraftDialoguePackUp);
 

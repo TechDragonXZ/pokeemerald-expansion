@@ -20,7 +20,7 @@ void RoamerMoveToOtherLocationSet(u8 id);
 void RoamerMove(u8 index);
 bool8 IsRoamerAt(u8 id, u8 mapGroup, u8 mapNum);
 void CreateRoamerMonInstance(u8 id);
-u8 TryStartRoamerEncounter(bool8 isWaterEncounter);
+bool8 TryStartRoamerEncounter(bool8 isWaterEncounter);
 void UpdateRoamerHPStatus(struct Pokemon *mon);
 void StopRoamer(u8 index);
 void GetRoamerLocation(u8 index, u8 *mapGroup, u8 *mapNum);
