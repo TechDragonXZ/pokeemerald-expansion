@@ -3,7 +3,7 @@
   "name": "Terrarium_RockyCavern",
   "layout": "LAYOUT_TERRARIUM_ROCKY_CAVERN",
   "music": "MUS_SAFARI_ZONE",
-  "region_map_section": "MAPSEC_TERRARIUM",
+  "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,
   "weather": "WEATHER_SANDSTORM",
   "map_type": "MAP_TYPE_ROUTE",

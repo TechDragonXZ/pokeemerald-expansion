@@ -3,7 +3,7 @@
   "name": "Terrarium_FoggyCavern",
   "layout": "LAYOUT_TERRARIUM_FOGGY_CAVERN",
   "music": "MUS_SAFARI_ZONE",
-  "region_map_section": "MAPSEC_TERRARIUM",
+  "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,
   "weather": "WEATHER_FOG_HORIZONTAL",
   "map_type": "MAP_TYPE_ROUTE",
