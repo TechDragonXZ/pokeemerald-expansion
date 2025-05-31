@@ -34,6 +34,7 @@ Route103_EventScript_RivalMay::
 	waitmovement 0
 	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_Delay48
 	waitmovement 0
+	setflag FLAG_NO_WHITEOUT
 	msgbox Route103_Text_MayLetsBattle, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, Route103_EventScript_StartMayBattleTreecko
@@ -51,6 +52,7 @@ Route103_EventScript_RivalBrendan::
 	waitmovement 0
 	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_Delay48
 	waitmovement 0
+	setflag FLAG_NO_WHITEOUT
 	msgbox Route103_Text_BrendanLetsBattle, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, Route103_EventScript_StartBrendanBattleTreecko
@@ -60,41 +62,71 @@ Route103_EventScript_RivalBrendan::
 
 Route103_EventScript_StartMayBattleTreecko::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
-	goto Route103_EventScript_AfterMayBattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_AfterMayBattle
+	goto_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_AfterMayBattleLost
 	end
 
 Route103_EventScript_StartMayBattleTorchic::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, Route103_Text_MayDefeated
-	goto Route103_EventScript_AfterMayBattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_AfterMayBattle
+	goto_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_AfterMayBattleLost
 	end
 
 Route103_EventScript_StartMayBattleMudkip::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, Route103_Text_MayDefeated
-	goto Route103_EventScript_AfterMayBattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_AfterMayBattle
+	goto_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_AfterMayBattleLost
 	end
 
 Route103_EventScript_StartBrendanBattleTreecko::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TREECKO, Route103_Text_BrendanDefeated
-	goto Route103_EventScript_AfterBrendanBattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_AfterBrendanBattle
+	goto_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_AfterBrendanBattleLost
 	end
 
 Route103_EventScript_StartBrendanBattleTorchic::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TORCHIC, Route103_Text_BrendanDefeated
-	goto Route103_EventScript_AfterBrendanBattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_AfterBrendanBattle
+	goto_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_AfterBrendanBattleLost
 	end
 
 Route103_EventScript_StartBrendanBattleMudkip::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_MUDKIP, Route103_Text_BrendanDefeated
-	goto Route103_EventScript_AfterBrendanBattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route103_EventScript_AfterBrendanBattle
+	goto_if_eq VAR_RESULT, B_OUTCOME_LOST, Route103_EventScript_AfterBrendanBattleLost
 	end
 
 Route103_EventScript_AfterMayBattle::
+	clearflag FLAG_NO_WHITEOUT
+	special HealPlayerParty
 	msgbox Route103_Text_MayTimeToHeadBack, MSGBOX_DEFAULT
 	goto Route103_EventScript_RivalExit
 	end
 
+Route103_EventScript_AfterMayBattleLost::
+	clearflag FLAG_NO_WHITEOUT
+	special HealPlayerParty
+	msgbox Route103_Text_MayTimeToHeadBackLost, MSGBOX_DEFAULT
+	goto Route103_EventScript_RivalExit
+	end
+
 Route103_EventScript_AfterBrendanBattle::
+	clearflag FLAG_NO_WHITEOUT
+	special HealPlayerParty
 	msgbox Route103_Text_BrendanTimeToHeadBack, MSGBOX_DEFAULT
+	goto Route103_EventScript_RivalExit
+	end
+
+Route103_EventScript_AfterBrendanBattleLost::
+	clearflag FLAG_NO_WHITEOUT
+	special HealPlayerParty
+	msgbox Route103_Text_BrendanTimeToHeadBackLost, MSGBOX_DEFAULT
 	goto Route103_EventScript_RivalExit
 	end
 
@@ -313,6 +345,18 @@ Route103_Text_MayTimeToHeadBack:
 	.string "Well, it's time to head back to\n"
 	.string "the LAB.$"
 
+Route103_Text_MayTimeToHeadBackLost:
+	.string "MAY: Wow!\n"
+	.string "{PLAYER}{KUN}, you're good!\p"
+	.string "I think I know why my dad has\n"
+	.string "an eye out for you now.\p"
+	.string "I mean, you just got that POKéMON,\n"
+	.string "but it already likes you.\p"
+	.string "You might be able to befriend any\n"
+	.string "kind of POKéMON easily.\p"
+	.string "Well, it's time to head back to\n"
+	.string "the LAB.$"
+
 Route103_Text_BrendanRoute103Pokemon:
 	.string "BRENDAN: Okay, so it's this one and\n"
 	.string "that one that live on ROUTE 103…$"
@@ -330,6 +374,16 @@ Route103_Text_BrendanDefeated:
 
 Route103_Text_BrendanTimeToHeadBack:
 	.string "BRENDAN: I think I get it.\n"
+	.string "I think I know why my dad has his eye\l"
+	.string "out for you now.\p"
+	.string "Look, your POKéMON already likes you,\n"
+	.string "even though you just got it.\p"
+	.string "{PLAYER}, I get the feeling that you\n"
+	.string "could befriend any POKéMON with ease.\p"
+	.string "We should head back to the LAB.$"
+
+Route103_Text_BrendanTimeToHeadBackLost:
+	.string "BRENDAN: {PLAYER}, not too shabby.\n"
 	.string "I think I know why my dad has his eye\l"
 	.string "out for you now.\p"
 	.string "Look, your POKéMON already likes you,\n"
