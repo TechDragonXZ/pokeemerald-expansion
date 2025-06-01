@@ -67,8 +67,8 @@
 #define FLAG_FORCE_NO_SHINY                0x35 // Force No Shiny Flag
 #define FLAG_SLEEP_CLAUSE                  0x36 // Sleep Clause Flag
 #define FLAG_SKY_BATTLE                    0x37 // Sky Battle Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
+#define FLAG_DERBY_NICKNAME                0x38 // Derby Nickname Flag
+#define FLAG_DERBY_RESET                   0x39 // Derby Reset Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag
 #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
