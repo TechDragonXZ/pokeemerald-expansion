@@ -213,11 +213,32 @@ const u8 gText_ReturnToVar1[] = _("Return to\n{STR_VAR_1}.");
 
 const u8 *const gPocketNamesStringsTable[] =
 {
-    [ITEMS_POCKET] =    COMPOUND_STRING("ITEMS"),
-    [BALLS_POCKET] =    COMPOUND_STRING("POKé BALLS"),
-    [TMHM_POCKET]  =    COMPOUND_STRING("TMs & HMs"),
-    [BERRIES_POCKET] =  COMPOUND_STRING("BERRIES"),
-    [KEYITEMS_POCKET] = COMPOUND_STRING("KEY ITEMS")
+    [POCKET_ITEMS] =    COMPOUND_STRING("ITEMS"),
+    [POCKET_POKE_BALLS] =    COMPOUND_STRING("POKé BALLS"),
+    [POCKET_TM_HM]  =    COMPOUND_STRING("TMs & HMs"),
+    [POCKET_BERRIES] =  COMPOUND_STRING("BERRIES"),
+    [POCKET_KEY_ITEMS] = COMPOUND_STRING("KEY ITEMS"),
+#if POCKET_MEDICINE != DEFAULT_MEDICINE_POCKET
+    [POCKET_MEDICINE] = COMPOUND_STRING("MEDICINE"),
+#endif
+#if POCKET_BATTLE_ITEMS != DEFAULT_BATTLE_ITEMS_POCKET
+    [POCKET_BATTLE_ITEMS] = COMPOUND_STRING("BATTLE ITEM"),
+#endif
+#if POCKET_POWER_UP != DEFAULT_POWER_UP_POCKET
+    [POCKET_POWER_UP] = COMPOUND_STRING("POWER UP"),
+#endif
+#if POCKET_MAIL != DEFAULT_MAIL_POCKET
+    [POCKET_MAIL] = COMPOUND_STRING("MAIL"),
+#endif
+#if POCKET_TREASURES != DEFAULT_TREASURES_POCKET
+    [POCKET_TREASURES] = COMPOUND_STRING("TREASURES"),
+#endif
+#if POCKET_MEGA_STONES != DEFAULT_MEGA_STONES_POCKET
+    [POCKET_MEGA_STONES] = COMPOUND_STRING("MEGA STONES"),
+#endif
+#if POCKET_Z_CRYSTALS != DEFAULT_Z_CRYSTALS_POCKET
+    [POCKET_Z_CRYSTALS] = COMPOUND_STRING("Z-CRYSTALS"),
+#endif
 };
 
 const u8 gText_NumberItem_TMBerry[] = _("{NO}{STR_VAR_1}{CLEAR 0x07}{STR_VAR_2}");
@@ -513,6 +534,13 @@ const u8 gText_Key_Items[] = _("KEY ITEMS");
 const u8 gText_Poke_Balls[] = _("POKé BALLS");
 const u8 gText_TMs_Hms[] = _("TMs & HMs");
 const u8 gText_Berries2[] = _("BERRIES");
+const u8 gText_Medicine[] = _("MEDICINE");
+const u8 gText_BattleItems[] = _("BATTLE ITEM");
+const u8 gText_Treasures[] = _("TREASURES");
+const u8 gText_MegaStones[] = _("MEGA STONES");
+const u8 gText_ZCrystals[] = _("Z-CRYSTALS");
+const u8 gText_PowerUp[] = _("POWER UP");
+const u8 gText_Mail[] = _("MAIL");
 const u8 gText_SomeonesPC[] = _("SOMEONE'S PC");
 const u8 gText_LanettesPC[] = _("LANETTE'S PC");
 const u8 gText_PlayersPC[] = _("{PLAYER}'s PC");
