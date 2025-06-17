@@ -1352,3 +1352,35 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "After all, a tough TRAINER is\n"
 	.string "the perfect fit for the BATTLE TENT!\p"
 	.string "Give it your best effort!$"
+
+SlateportCity_EventScript_ImportsClerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart SlateportCity_Pokemart_Imports
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_Imports::
+	.2byte ITEM_TUMBLESTONE
+	.2byte ITEM_SKY_TUMBLESTONE
+	.2byte ITEM_BLACK_TUMBLESTONE
+	.2byte ITEM_BROWN_APRICORN
+	.2byte ITEM_IRON_CHUNK
+	.2byte ITEM_CANDY_TRUFFLE
+	.2byte ITEM_DIRESHROOM
+	.2byte ITEM_DOPPEL_BONNETS
+	.2byte ITEM_IRON_BARKTONGUE
+	.2byte ITEM_SWORDCAP
+	.2byte ITEM_BUGWORT
+	.2byte ITEM_KING_LEAF
+	.2byte ITEM_MEDICINAL_LEEK
+	.2byte ITEM_PEPUP_PLANT
+	.2byte ITEM_VIVICHOKE
+	.2byte ITEM_MAX_MUSHROOMS
+	.2byte ITEM_MAX_HONEY
+	pokemartlistend
+

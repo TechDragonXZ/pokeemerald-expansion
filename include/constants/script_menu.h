@@ -171,7 +171,7 @@
 #define STDSTRING_MEGASTONES       33
 #define STDSTRING_ZCRYSTALS        34
 #define STDSTRING_POWERUP          35
-#define STDSTRING_MAIL             36
+#define STDSTRING_MATERIALS        36
 
 // Dynamic Multichoice Callbacks
 

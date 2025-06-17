@@ -2933,6 +2933,12 @@ void CreateContestMonFromParty(u8 partyIndex)
         smart += 20;
     else if (heldItem == ITEM_YELLOW_SCARF)
         tough += 20;
+    else if (heldItem == ITEM_CYAN_SCARF)
+        cool += 40;
+        beauty += 40;
+        cute += 40;
+        tough += 40;
+        smart += 40;
     if (cool > 255)
         cool = 255;
     if (beauty > 255)

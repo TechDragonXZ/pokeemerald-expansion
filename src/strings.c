@@ -227,8 +227,8 @@ const u8 *const gPocketNamesStringsTable[] =
 #if POCKET_POWER_UP != DEFAULT_POWER_UP_POCKET
     [POCKET_POWER_UP] = COMPOUND_STRING("POWER UP"),
 #endif
-#if POCKET_MAIL != DEFAULT_MAIL_POCKET
-    [POCKET_MAIL] = COMPOUND_STRING("MAIL"),
+#if POCKET_MATERIALS != DEFAULT_MATERIALS_POCKET
+    [POCKET_MATERIALS] = COMPOUND_STRING("MATERIALS"),
 #endif
 #if POCKET_TREASURES != DEFAULT_TREASURES_POCKET
     [POCKET_TREASURES] = COMPOUND_STRING("TREASURES"),
@@ -540,7 +540,7 @@ const u8 gText_Treasures[] = _("TREASURES");
 const u8 gText_MegaStones[] = _("MEGA STONES");
 const u8 gText_ZCrystals[] = _("Z-CRYSTALS");
 const u8 gText_PowerUp[] = _("POWER UP");
-const u8 gText_Mail[] = _("MAIL");
+const u8 gText_Materials[] = _("MATERIALS");
 const u8 gText_SomeonesPC[] = _("SOMEONE'S PC");
 const u8 gText_LanettesPC[] = _("LANETTE'S PC");
 const u8 gText_PlayersPC[] = _("{PLAYER}'s PC");
@@ -1343,3 +1343,7 @@ const u8 gText_PM[] = _("PM");
 const u8 gText_Relearn[] = _("{START_BUTTON} RELEARN"); // future note: don't decap this, because it mimics the summary screen BG graphics which will not get decapped
 const u8 gText_Rename[] = _("RENAME");
 const u8 gText_CannotSendMonToBoxHM[] = _("Cannot send that mon to the box,\nbecause it knows a HM move.{PAUSE_UNTIL_PRESS}");
+
+// Custom
+const u8 gText_HackingDeviceOn[] = _("Hacking Device Activated.{PAUSE_UNTIL_PRESS}");
+const u8 gText_HackingDeviceOff[] = _("Hacking Device Deactivated.{PAUSE_UNTIL_PRESS}");

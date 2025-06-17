@@ -1083,8 +1083,8 @@ struct SaveBlock1
         #if POCKET_TREASURES != DEFAULT_TREASURES_POCKET
               struct ItemSlot bagPocket_Treasures[BAG_TREASURES_COUNT];
         #endif
-        #if POCKET_MAIL != DEFAULT_MAIL_POCKET
-              struct ItemSlot bagPocket_Mail[BAG_MAIL_COUNT];
+        #if POCKET_MATERIALS != DEFAULT_MATERIALS_POCKET
+              struct ItemSlot bagPocket_Materials[BAG_MATERIALS_COUNT];
         #endif
         #if POCKET_MEGA_STONES != DEFAULT_MEGA_STONES_POCKET
               struct ItemSlot bagPocket_MegaStones[BAG_MEGASTONES_COUNT];

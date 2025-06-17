@@ -1423,6 +1423,21 @@ void ItemUseOutOfBattle_RotomCatalog(u8 taskId)
     }
 }
 
+void ItemUseOutOfBattle_FashionCase(u8 taskId)
+{
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        gItemUseCB = ItemUseCB_FashionCase;
+        gTasks[taskId].data[0] = TRUE;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+    else
+    {
+        // TODO: handle key items with callbacks to menus allow to be used by registering them.
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+}
+
 void ItemUseOutOfBattle_ZygardeCube(u8 taskId)
 {
     if (!gTasks[taskId].tUsingRegisteredKeyItem)
@@ -1612,6 +1627,27 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
         // TODO: handle key items with callbacks to menus allow to be used by registering them.
         DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
     }
+}
+
+void ItemUseOutOfBattle_HackingDevice(u8 taskId)
+{
+    if (FlagGet(FLAG_HACKING_DEVICE))
+    {
+        PlaySE(SE_PC_OFF);
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_HackingDeviceOff, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_HackingDeviceOff, CloseItemMessage);
+    }
+    else
+    {
+        PlaySE(SE_PC_ON);
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_HackingDeviceOn, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_HackingDeviceOn, CloseItemMessage);
+    }
+    FlagToggle(FLAG_HACKING_DEVICE);
 }
 
 #undef tUsingRegisteredKeyItem

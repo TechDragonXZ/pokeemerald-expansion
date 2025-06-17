@@ -1686,8 +1686,8 @@ static void OpenContextMenu(u8 taskId)
         #if POCKET_POWER_UP != DEFAULT_POWER_UP_POCKET
             case POCKET_POWER_UP:
         #endif
-        #if POCKET_MAIL != DEFAULT_MAIL_POCKET
-            case POCKET_MAIL:
+        #if POCKET_MATERIALS != DEFAULT_MATERIALS_POCKET
+            case POCKET_MATERIALS:
         #endif
         #if POCKET_TREASURES != DEFAULT_TREASURES_POCKET
             case POCKET_TREASURES:

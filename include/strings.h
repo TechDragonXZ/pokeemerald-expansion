@@ -59,7 +59,7 @@ extern const u8 gText_Treasures[];
 extern const u8 gText_MegaStones[];
 extern const u8 gText_ZCrystals[];
 extern const u8 gText_PowerUp[];
-extern const u8 gText_Mail[];
+extern const u8 gText_Materials[];
 
 extern const u8 gText_Single2[];
 extern const u8 gText_Double2[];
@@ -2449,5 +2449,9 @@ extern const u8 gText_ReeledInTreasure[];
 extern const u8 gText_FoundATreasureItem[];
 extern const u8 gText_PutTreasureInPocket[];
 extern const u8 gText_NoRoomForTreasure[];
+
+// Hacking Device
+extern const u8 gText_HackingDeviceOn[];
+extern const u8 gText_HackingDeviceOff[];
 
 #endif // GUARD_STRINGS_H

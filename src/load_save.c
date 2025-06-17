@@ -40,8 +40,8 @@ struct LoadedSaveData
 #if POCKET_POWER_UP != DEFAULT_POWER_UP_POCKET
  /*0x0230*/ struct ItemSlot powerUp[BAG_POWERUP_COUNT];
 #endif
-#if POCKET_MAIL != DEFAULT_MAIL_POCKET
- /*0x0230*/ struct ItemSlot bagMail[BAG_MAIL_COUNT];
+#if POCKET_MATERIALS != DEFAULT_MATERIALS_POCKET
+ /*0x0230*/ struct ItemSlot materials[BAG_MATERIALS_COUNT];
 #endif
 #if POCKET_TREASURES != DEFAULT_TREASURES_POCKET
  /*0x0230*/ struct ItemSlot treasures[BAG_TREASURES_COUNT];
@@ -323,10 +323,10 @@ void LoadPlayerBag(void)
         gLoadedSaveData.powerUp[i] = gSaveBlock1Ptr->bagPocket_PowerUp[i];
 #endif
 
-#if POCKET_MAIL != DEFAULT_MAIL_POCKET
-    // load player mail.
-    for (i = 0; i < BAG_MAIL_COUNT; i++)
-        gLoadedSaveData.bagMail[i] = gSaveBlock1Ptr->bagPocket_Mail[i];
+#if POCKET_MATERIALS != DEFAULT_MATERIALS_POCKET
+    // load player materials.
+    for (i = 0; i < BAG_MATERIALS_COUNT; i++)
+        gLoadedSaveData.materials[i] = gSaveBlock1Ptr->bagPocket_Materials[i];
 #endif
 
 #if POCKET_TREASURES != DEFAULT_TREASURES_POCKET
@@ -397,10 +397,10 @@ void SavePlayerBag(void)
         gSaveBlock1Ptr->bagPocket_PowerUp[i] = gLoadedSaveData.powerUp[i];
 #endif
 
-#if POCKET_MAIL != DEFAULT_MAIL_POCKET
-    // save player mail.
-    for (i = 0; i < BAG_MAIL_COUNT; i++)
-        gSaveBlock1Ptr->bagPocket_Mail[i] = gLoadedSaveData.bagMail[i];
+#if POCKET_MATERIALS != DEFAULT_MATERIALS_POCKET
+    // save player materials.
+    for (i = 0; i < BAG_MATERIALS_COUNT; i++)
+        gSaveBlock1Ptr->bagPocket_Materials[i] = gLoadedSaveData.materials[i];
 #endif
 
 #if POCKET_TREASURES != DEFAULT_TREASURES_POCKET

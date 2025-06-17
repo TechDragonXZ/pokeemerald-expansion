@@ -116,6 +116,13 @@ enum {
     MENU_CATALOG_MOWER,
     MENU_CHANGE_FORM,
     MENU_CHANGE_ABILITY,
+    // Fashion Case
+    MENU_COSTUME_NONE,
+    MENU_COSTUME_ROCK_STAR,
+    MENU_COSTUME_BELLE,
+    MENU_COSTUME_POP_STAR,
+    MENU_COSTUME_PHD,
+    MENU_COSTUME_LIBRE,
     MENU_FIELD_MOVES
 };
 
@@ -138,6 +145,7 @@ enum {
     ACTIONS_TAKEITEM_TOSS,
     ACTIONS_ROTOM_CATALOG,
     ACTIONS_ZYGARDE_CUBE,
+    ACTIONS_FASHION_CASE,
 };
 
 enum {
@@ -512,6 +520,14 @@ void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId);
 static void ShowMoveSelectWindow(u8 slot);
 static void Task_HandleWhichMoveInput(u8 taskId);
 static void Task_HideFollowerNPCForTeleport(u8);
+
+// Fashion Case
+static void CursorCb_CostumeNone(u8);
+static void CursorCb_CostumeRockStar(u8);
+static void CursorCb_CostumeBelle(u8);
+static void CursorCb_CostumePopStar(u8);
+static void CursorCb_CostumePhd(u8);
+static void CursorCb_CostumeLibre(u8);
 
 // static const data
 #include "data/party_menu.h"
@@ -2745,6 +2761,9 @@ void DisplayPartyMenuStdMessage(u32 stringId)
             *windowPtr = AddWindow(&sAlreadyHoldingOneMsgWindowTemplate);
             break;
         case PARTY_MSG_WHICH_APPLIANCE:
+            *windowPtr = AddWindow(&sOrderWhichApplianceMsgWindowTemplate);
+            break;
+        case PARTY_MSG_WHICH_COSTUME:
             *windowPtr = AddWindow(&sOrderWhichApplianceMsgWindowTemplate);
             break;
         default:
@@ -6660,6 +6679,27 @@ static void Task_TryItemUseFormChange(u8 taskId)
         }
         break;
     case 7:
+        if (!IsPartyMenuTextPrinterActive())
+        {
+            if (gSpecialVar_ItemId == ITEM_FASHION_CASE) // Only for Cosplay Pikachu currently
+            {
+                u32 i;
+                for (i = 0; i < ARRAY_COUNT(sPikachuFormChangeMoves); i++)
+                    DeleteMove(mon, sPikachuFormChangeMoves[i]);
+
+                if (gSpecialVar_0x8000 == PIKACHU_BASE_MOVE)
+                {
+                    if (!DoesMonHaveAnyMoves(mon))
+                        FormChangeTeachMove(taskId, gSpecialVar_0x8000, gPartyMenu.slotId);
+                }
+                else
+                    FormChangeTeachMove(taskId, gSpecialVar_0x8000, gPartyMenu.slotId);
+            }
+
+            gTasks[taskId].tState++;
+        }
+        break;
+    case 8:
         gTasks[taskId].func = (void *)GetWordTaskArg(taskId, tNextFunc);
         break;
     }
@@ -6710,6 +6750,17 @@ void ItemUseCB_RotomCatalog(u8 taskId, TaskFunc task)
     SetPartyMonSelectionActions(gPlayerParty, gPartyMenu.slotId, ACTIONS_ROTOM_CATALOG);
     DisplaySelectionWindow(SELECTWINDOW_CATALOG);
     DisplayPartyMenuStdMessage(PARTY_MSG_WHICH_APPLIANCE);
+    gTasks[taskId].data[0] = 0xFF;
+    gTasks[taskId].func = Task_HandleSelectionMenuInput;
+}
+
+void ItemUseCB_FashionCase(u8 taskId, TaskFunc task)
+{
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+    SetPartyMonSelectionActions(gPlayerParty, gPartyMenu.slotId, ACTIONS_FASHION_CASE);
+    DisplaySelectionWindow(SELECTWINDOW_CATALOG);
+    DisplayPartyMenuStdMessage(PARTY_MSG_WHICH_COSTUME);
     gTasks[taskId].data[0] = 0xFF;
     gTasks[taskId].func = Task_HandleSelectionMenuInput;
 }
@@ -6783,6 +6834,48 @@ static void CursorCb_CatalogMower(u8 taskId)
 {
     gSpecialVar_Result = 5;
     gSpecialVar_0x8000 = ROTOM_MOW_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+static void CursorCb_CostumeNone(u8 taskId)
+{
+    gSpecialVar_Result = 0;
+    gSpecialVar_0x8000 = PIKACHU_BASE_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+static void CursorCb_CostumeRockStar(u8 taskId)
+{
+    gSpecialVar_Result = 1;
+    gSpecialVar_0x8000 = PIKACHU_ROCK_STAR_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+static void CursorCb_CostumeBelle(u8 taskId)
+{
+    gSpecialVar_Result = 2;
+    gSpecialVar_0x8000 = PIKACHU_BELLE_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+static void CursorCb_CostumePopStar(u8 taskId)
+{
+    gSpecialVar_Result = 3;
+    gSpecialVar_0x8000 = PIKACHU_POP_STAR_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+static void CursorCb_CostumePhd(u8 taskId)
+{
+    gSpecialVar_Result = 4;
+    gSpecialVar_0x8000 = PIKACHU_PHD_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+static void CursorCb_CostumeLibre(u8 taskId)
+{
+    gSpecialVar_Result = 5;
+    gSpecialVar_0x8000 = PIKACHU_LIBRE_MOVE;
     TryMultichoiceFormChange(taskId);
 }
 

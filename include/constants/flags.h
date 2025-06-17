@@ -69,7 +69,7 @@
 #define FLAG_SKY_BATTLE                    0x37 // Sky Battle Flag
 #define FLAG_DERBY_NICKNAME                0x38 // Derby Nickname Flag
 #define FLAG_DERBY_RESET                   0x39 // Derby Reset Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
+#define FLAG_HACKING_DEVICE                0x3A // Hacking Device Flag
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag
 #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
 #define FLAG_UNUSED_0x03D    0x3D // Unused Flag

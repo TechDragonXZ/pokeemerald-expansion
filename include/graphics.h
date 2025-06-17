@@ -3395,4 +3395,44 @@ extern const u32 gBattleIcons_Gfx2[];
 extern const u16 gBattleIcons_Pal1[];
 extern const u16 gBattleIcons_Pal2[];
 
+// Custom
+extern const u32 gItemIcon_FashionCase[];
+extern const u16 gItemIconPalette_FashionCase[];
+extern const u32 gItemIcon_BrownApricorn[];
+extern const u16 gItemIconPalette_BrownApricorn[];
+extern const u32 gItemIcon_BlankPlate[];
+extern const u16 gItemIconPalette_BlankPlate[];
+extern const u32 gItemIcon_MedicinalLeek[];
+extern const u16 gItemIconPalette_MedicinalLeek[];
+extern const u32 gItemIcon_IronChunk[];
+extern const u16 gItemIconPalette_IronChunk[];
+extern const u32 gItemIcon_Tumblestone[];
+extern const u16 gItemIconPalette_Tumblestone[];
+extern const u32 gItemIcon_SkyTumblestone[];
+extern const u16 gItemIconPalette_SkyTumblestone[];
+extern const u32 gItemIcon_BlackTumblestone[];
+extern const u16 gItemIconPalette_BlackTumblestone[];
+extern const u32 gItemIcon_Bugwort[];
+extern const u16 gItemIconPalette_Bugwort[];
+extern const u32 gItemIcon_Vivichoke[];
+extern const u16 gItemIconPalette_Vivichoke[];
+extern const u32 gItemIcon_Direshroom[];
+extern const u16 gItemIconPalette_Direshroom[];
+extern const u32 gItemIcon_IronBarktongue[];
+extern const u16 gItemIconPalette_IronBarktongue[];
+extern const u32 gItemIcon_Swordcap[];
+extern const u16 gItemIconPalette_Swordcap[];
+extern const u32 gItemIcon_CandyTruffle[];
+extern const u16 gItemIconPalette_CandyTruffle[];
+extern const u32 gItemIcon_PepupPlant[];
+extern const u16 gItemIconPalette_PepupPlant[];
+extern const u32 gItemIcon_KingLeaf[];
+extern const u16 gItemIconPalette_KingLeaf[];
+extern const u32 gItemIcon_DoppelBonnets[];
+extern const u16 gItemIconPalette_DoppelBonnets[];
+
+// Palettes
+extern const u16 gItemIconPalette_HackingDevice[];
+extern const u16 gItemIconPalette_CyanScarf[];
+
 #endif //GUARD_GRAPHICS_H

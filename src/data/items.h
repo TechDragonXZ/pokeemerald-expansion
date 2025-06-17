@@ -3639,7 +3639,7 @@ const struct Item gItemsInfo[] =
             "A Zigzagoon-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_ORANGE_MAIL),
@@ -3656,7 +3656,7 @@ const struct Item gItemsInfo[] =
             "A Wingull-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_HARBOR_MAIL),
@@ -3673,7 +3673,7 @@ const struct Item gItemsInfo[] =
             "A Pikachu-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_GLITTER_MAIL),
@@ -3690,7 +3690,7 @@ const struct Item gItemsInfo[] =
             "A Magnemite-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_MECH_MAIL),
@@ -3707,7 +3707,7 @@ const struct Item gItemsInfo[] =
             "A Slakoth-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_WOOD_MAIL),
@@ -3724,7 +3724,7 @@ const struct Item gItemsInfo[] =
             "A Wailmer-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_WAVE_MAIL),
@@ -3738,7 +3738,7 @@ const struct Item gItemsInfo[] =
         .pluralName = _("Bead Mail"),
         .price = 50,
         .description = sBeadMailDesc,
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_BEAD_MAIL),
@@ -3755,7 +3755,7 @@ const struct Item gItemsInfo[] =
             "A Duskull-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_SHADOW_MAIL),
@@ -3772,7 +3772,7 @@ const struct Item gItemsInfo[] =
             "A Bellossom-print\n"
             "Mail to be held by\n"
             "a Pokémon."),
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_TROPIC_MAIL),
@@ -3786,7 +3786,7 @@ const struct Item gItemsInfo[] =
         .pluralName = _("Dream Mail"),
         .price = 50,
         .description = sBeadMailDesc,
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_DREAM_MAIL),
@@ -3803,7 +3803,7 @@ const struct Item gItemsInfo[] =
             "A gorgeous-print\n"
             "Mail to be held\n"
             "by a Pokémon."),
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_FAB_MAIL),
@@ -3820,7 +3820,7 @@ const struct Item gItemsInfo[] =
             "Mail featuring the\n"
             "drawings of three\n"
             "Pokémon."),
-        .pocket = POCKET_MAIL,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_MAIL,
         .fieldUseFunc = ItemUseOutOfBattle_Mail,
         .secondaryId = ITEM_TO_MAIL(ITEM_RETRO_MAIL),
@@ -14141,4 +14141,301 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+    
+    [ITEM_HACKING_DEVICE] =
+    {
+        .name = _("Hacking Device"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "This device can\n"
+            "hack into a wide\n"
+            "range of devices."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_HackingDevice,
+        .iconPic = gItemIcon_Scanner,
+        .iconPalette = gItemIconPalette_HackingDevice,
+    },
+
+    [ITEM_FASHION_CASE] =
+    {
+        .name = _("Fashion Case"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A box full of\n"
+            "costumes liked by\n"
+            "Cosplay Pikachu."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_FashionCase,
+        .iconPic = gItemIcon_FashionCase,
+        .iconPalette = gItemIconPalette_FashionCase,
+    },
+
+    [ITEM_CYAN_SCARF] =
+    {
+        .name = _("Cyan Scarf"),
+        .pluralName = _("Cyan Scarves"),
+        .price = 100,
+        .description = COMPOUND_STRING(
+            "A held item that\n"
+            "raises every\n"
+            "Contests stat."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+        .iconPic = gItemIcon_Scarf,
+        .iconPalette = gItemIconPalette_CyanScarf,
+    },
+
+    [ITEM_BROWN_APRICORN] =
+    {
+        .name = _("Brown Apricorn"),
+        .price = (I_PRICE == GEN_4) ? 0 : ((I_PRICE >= GEN_5 && I_PRICE <= GEN_7) ? 20 : 200),
+        .description = COMPOUND_STRING(
+            "A brown apricorn.\n"
+            "It can be\n"
+            "hollowed."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_BrownApricorn,
+        .iconPalette = gItemIconPalette_BrownApricorn,
+    },
+
+    [ITEM_BLANK_PLATE] =
+    {
+        .name = _("Blank Plate"),
+        .price = 1000,
+        .holdEffect = HOLD_EFFECT_PLATE,
+        .holdEffectParam = 20,
+        .description = COMPOUND_STRING(
+            "A tablet that ups\n"
+            "the power of\n"
+            "Normal-type moves."),
+        .pocket = POCKET_TREASURES,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_NORMAL,
+        .flingPower = 90,
+        .iconPic = gItemIcon_BlankPlate,
+        .iconPalette = gItemIconPalette_BlankPlate,
+    },
+
+    [ITEM_MEDICINAL_LEEK] =
+    {
+        .name = _("Medicinal Leek"),
+        .price = 150,
+        .holdEffectParam = 10,
+        .description = COMPOUND_STRING(
+            "Restores the HP of\n"
+            "a Pokémon by\n"
+            "10 points."),
+        .pocket = POCKET_MEDICINE,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = EFFECT_ITEM_RESTORE_HP,
+        .effect = gItemEffect_Potion,
+        .flingPower = 30,
+        .iconPic = gItemIcon_MedicinalLeek,
+        .iconPalette = gItemIconPalette_MedicinalLeek,
+    },
+
+    [ITEM_IRON_CHUNK] =
+    {
+        .name = _("Iron Chunk"),
+        .price = 100,
+        .description = COMPOUND_STRING(
+            "A chunk of iron.\n"
+            "It can be made\n"
+            "into various items."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_IronChunk,
+        .iconPalette = gItemIconPalette_IronChunk,
+    },
+
+    [ITEM_TUMBLESTONE] =
+    {
+        .name = _("Tumblestone"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "A mysterious stone.\n"
+            "It can be made\n"
+            "into Pokéballs."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Tumblestone,
+        .iconPalette = gItemIconPalette_Tumblestone,
+    },
+
+    [ITEM_SKY_TUMBLESTONE] =
+    {
+        .name = _("Sky Tumblestone"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "A mysterious stone.\n"
+            "It can be made\n"
+            "into Feather Balls."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_SkyTumblestone,
+        .iconPalette = gItemIconPalette_SkyTumblestone,
+    },
+
+    [ITEM_BLACK_TUMBLESTONE] =
+    {
+        .name = _("Black Tumblestone"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "A mysterious stone.\n"
+            "It can be made\n"
+            "into Heavy Balls."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_BlackTumblestone,
+        .iconPalette = gItemIconPalette_BlackTumblestone,
+    },
+
+    [ITEM_BUGWORT] =
+    {
+        .name = _("Bugwort"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "A bitter flower.\n"
+            "It can be made\n"
+            "into medicine."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Bugwort,
+        .iconPalette = gItemIconPalette_Bugwort,
+    },
+
+    [ITEM_DIRESHROOM] =
+    {
+        .name = _("Direshroom"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "A mushroom.\n"
+            "It's used as\n"
+            "a focus booster."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Direshroom,
+        .iconPalette = gItemIconPalette_Direshroom,
+    },
+
+    [ITEM_SWORDCAP] =
+    {
+        .name = _("Swordcap"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "A mushroom.\n"
+            "It's used as\n"
+            "a power booster."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Swordcap,
+        .iconPalette = gItemIconPalette_Swordcap,
+    },
+
+    [ITEM_PEPUP_PLANT] =
+    {
+        .name = _("Pep-Up Plant"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "A spicy plant.\n"
+            "It's used to\n"
+            "restore PP."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_PepupPlant,
+        .iconPalette = gItemIconPalette_PepupPlant,
+    },
+
+    [ITEM_IRON_BARKTONGUE] =
+    {
+        .name = _("Iron Barktongue"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "A mushroom.\n"
+            "It's used as\n"
+            "a defense booster."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_IronBarktongue,
+        .iconPalette = gItemIconPalette_IronBarktongue,
+    },
+
+    [ITEM_KING_LEAF] =
+    {
+        .name = _("King's Leaf"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "The king of herbs.\n"
+            "It's used to\n"
+            "boost medicine."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_KingLeaf,
+        .iconPalette = gItemIconPalette_KingLeaf,
+    },
+
+    [ITEM_DOPPEL_BONNETS] =
+    {
+        .name = _("Doppel Bonnets"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "A mushroom.\n"
+            "It's used as\n"
+            "a speed booster."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_DoppelBonnets,
+        .iconPalette = gItemIconPalette_DoppelBonnets,
+    },
+
+    [ITEM_VIVICHOKE] =
+    {
+        .name = _("Vivichoke"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "A morning plant.\n"
+            "It's used to\n"
+            "restore vitality."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Vivichoke,
+        .iconPalette = gItemIconPalette_Vivichoke,
+    },
+
+    [ITEM_CANDY_TRUFFLE] =
+    {
+        .name = _("Candy Truffle"),
+        .price = 50,
+        .description = COMPOUND_STRING(
+            "A sweet truffle.\n"
+            "It's used to make\n"
+            "various items."),
+        .pocket = POCKET_MATERIALS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_CandyTruffle,
+        .iconPalette = gItemIconPalette_CandyTruffle,
+    },
+
 };
