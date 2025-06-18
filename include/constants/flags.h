@@ -70,7 +70,7 @@
 #define FLAG_DERBY_NICKNAME                0x38 // Derby Nickname Flag
 #define FLAG_DERBY_RESET                   0x39 // Derby Reset Flag
 #define FLAG_HACKING_DEVICE                0x3A // Hacking Device Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
+#define FLAG_ORAS_DOWSING                  0x3B // ORAS Dowsing Machine Flag
 #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
 #define FLAG_UNUSED_0x03D    0x3D // Unused Flag
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag

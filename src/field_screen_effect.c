@@ -5,6 +5,7 @@
 #include "field_camera.h"
 #include "field_door.h"
 #include "field_effect.h"
+#include "field_effect_helpers.h"
 #include "event_object_lock.h"
 #include "event_object_movement.h"
 #include "event_scripts.h"
@@ -87,7 +88,7 @@ static void FillPalBufferBlack(void)
 
 void WarpFadeInScreen(void)
 {
-    u8 previousMapType = GetLastUsedWarpMapType();
+    enum MapType previousMapType = GetLastUsedWarpMapType();
     switch (GetMapPairFadeFromType(previousMapType, GetCurrentMapType()))
     {
     case 0:
@@ -114,7 +115,7 @@ void FadeInFromBlack(void)
 
 void WarpFadeOutScreen(void)
 {
-    u8 currentMapType = GetCurrentMapType();
+    enum MapType currentMapType = GetCurrentMapType();
     switch (GetMapPairFadeToType(currentMapType, GetDestinationWarpMapHeader()->mapType))
     {
     case 0:
@@ -701,6 +702,7 @@ void Task_WarpAndLoadMap(u8 taskId)
     case 0:
         FreezeObjectEvents();
         LockPlayerFieldControls();
+        EndORASDowsing();
         task->tState++;
         break;
     case 1:
@@ -762,6 +764,7 @@ void Task_DoDoorWarp(u8 taskId)
             ObjectEventSetHeldMovement(followerObject, MOVEMENT_ACTION_ENTER_POKEBALL);
         }
         task->tDoorTask = FieldAnimateDoorOpen(*x, *y - 1);
+        EndORASDowsing();
         task->tState = DOORWARP_START_WALK_UP;
         break;
     case DOORWARP_START_WALK_UP:

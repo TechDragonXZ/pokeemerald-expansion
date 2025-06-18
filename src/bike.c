@@ -1,13 +1,14 @@
 #include "global.h"
 #include "bike.h"
+#include "event_data.h"
 #include "event_object_movement.h"
+#include "field_effect_helpers.h"
 #include "field_player_avatar.h"
 #include "fieldmap.h"
 #include "field_specials.h"
 #include "metatile_behavior.h"
 #include "overworld.h"
 #include "sound.h"
-#include "constants/map_types.h"
 #include "constants/songs.h"
 
 // this file's functions
@@ -1004,6 +1005,7 @@ void GetOnOffBike(u8 transitionFlags)
     }
     else
     {
+        EndORASDowsing();
         SetPlayerAvatarTransitionFlags(transitionFlags);
         Overworld_SetSavedMusic(MUS_CYCLING);
         Overworld_ChangeMusicTo(MUS_CYCLING);
