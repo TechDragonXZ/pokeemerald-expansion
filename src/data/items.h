@@ -14455,5 +14455,20 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Hexorb,
     },
     // End hexorb Branch
-    
+   
+    [ITEM_MINING_KIT] =
+    {
+        .name = _("Mining Kit"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "An exploration kit.\n"
+            "It's filled with\n"
+            "various items."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_MiningKit,
+        .iconPalette = gItemIconPalette_MiningKit,
+    },
+ 
 };

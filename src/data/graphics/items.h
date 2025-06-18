@@ -2152,6 +2152,9 @@ const u16 gItemIconPalette_Swordcap[] = INCBIN_U16("graphics/items/icon_palettes
 const u32 gItemIcon_DoppelBonnets[] = INCBIN_U32("graphics/items/icons/doppel_bonnets.4bpp.smol");
 const u16 gItemIconPalette_DoppelBonnets[] = INCBIN_U16("graphics/items/icon_palettes/doppel_bonnets.gbapal");
 
+const u32 gItemIcon_MiningKit[] = INCBIN_U32("graphics/items/icons/mining_kit.4bpp.smol");
+const u16 gItemIconPalette_MiningKit[] = INCBIN_U16("graphics/items/icon_palettes/mining_kit.gbapal");
+
 const u16 gItemIconPalette_HackingDevice[] = INCBIN_U16("graphics/items/icon_palettes/hacking_device.gbapal");
 const u16 gItemIconPalette_CyanScarf[] = INCBIN_U16("graphics/items/icon_palettes/cyan_scarf.gbapal");
 

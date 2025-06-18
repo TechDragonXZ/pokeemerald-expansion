@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -27,6 +28,84 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DesertUnderpass_EventScript_Fossil",
       "flag": "FLAG_HIDE_DESERT_UNDERPASS_FOSSIL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MINING_SPOT",
+      "x": 16,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MiningSpots_EventScript_MiningSpot",
+      "flag": "FLAG_DESERT_UNDERPASS_MINING_SPOT_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MINING_SPOT",
+      "x": 26,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MiningSpots_EventScript_MiningSpot",
+      "flag": "FLAG_DESERT_UNDERPASS_MINING_SPOT_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MINING_SPOT",
+      "x": 74,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MiningSpots_EventScript_MiningSpot",
+      "flag": "FLAG_DESERT_UNDERPASS_MINING_SPOT_3"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MINING_SPOT",
+      "x": 87,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MiningSpots_EventScript_MiningSpot",
+      "flag": "FLAG_DESERT_UNDERPASS_MINING_SPOT_4"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MINING_SPOT",
+      "x": 100,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MiningSpots_EventScript_MiningSpot",
+      "flag": "FLAG_DESERT_UNDERPASS_MINING_SPOT_5"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MINING_SPOT",
+      "x": 120,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MiningSpots_EventScript_MiningSpot",
+      "flag": "FLAG_DESERT_UNDERPASS_MINING_SPOT_6"
     }
   ],
   "warp_events": [

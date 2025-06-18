@@ -656,6 +656,8 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
+#define FLAG_HIDDEN_ITEMS_END   FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL
+
 #define FLAG_UNUSED_0x264  0x264 // Unused Flag
 #define FLAG_UNUSED_0x265  0x265 // Unused Flag
 #define FLAG_UNUSED_0x266  0x266 // Unused Flag
@@ -1222,30 +1224,33 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
-#define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
+// Mining Spot Flags
+#define FLAG_MINING_SPOTS_START   FLAG_METEOR_FALLS_MINING_SPOT_1
+
+#define FLAG_METEOR_FALLS_MINING_SPOT_1                             0x493 // Meteor Falls Mining Spot 1 Flag
+#define FLAG_METEOR_FALLS_MINING_SPOT_2                             0x494 // Meteor Falls Mining Spot 2 Flag
+#define FLAG_METEOR_FALLS_MINING_SPOT_3                             0x495 // Meteor Falls Mining Spot 3 Flag
+#define FLAG_METEOR_FALLS_MINING_SPOT_4                             0x496 // Meteor Falls Mining Spot 4 Flag
+#define FLAG_METEOR_FALLS_MINING_SPOT_5                             0x497 // Meteor Falls Mining Spot 5 Flag
+#define FLAG_METEOR_FALLS_MINING_SPOT_6                             0x498 // Meteor Falls Mining Spot 6 Flag
+#define FLAG_DESERT_UNDERPASS_MINING_SPOT_1                         0x499 // Desert Underpass Mining Spot 1 Flag
+#define FLAG_DESERT_UNDERPASS_MINING_SPOT_2                         0x49A // Desert Underpass Mining Spot 2 Flag
+#define FLAG_DESERT_UNDERPASS_MINING_SPOT_3                         0x49B // Desert Underpass Mining Spot 3 Flag
+#define FLAG_DESERT_UNDERPASS_MINING_SPOT_4                         0x49C // Desert Underpass Mining Spot 4 Flag
+#define FLAG_DESERT_UNDERPASS_MINING_SPOT_5                         0x49D // Desert Underpass Mining Spot 5 Flag
+#define FLAG_DESERT_UNDERPASS_MINING_SPOT_6                         0x49E // Desert Underpass Mining Spot 6 Flag
+#define FLAG_SHOAL_CAVE_ENTRANCE_MINING_SPOT_1                      0x49F // Shoal Cave Entrance Mining Spot 1 Flag
+#define FLAG_SHOAL_CAVE_ENTRANCE_MINING_SPOT_2                      0x4A0 // Shoal Cave Entrance Mining Spot 2 Flag
+#define FLAG_SHOAL_CAVE_ENTRANCE_MINING_SPOT_3                      0x4A1 // Shoal Cave Entrance Mining Spot 3 Flag
+#define FLAG_SHOAL_CAVE_ENTRANCE_MINING_SPOT_4                      0x4A2 // Shoal Cave Entrance Mining Spot 4 Flag
+#define FLAG_SHOAL_CAVE_ENTRANCE_MINING_SPOT_5                      0x4A3 // Shoal Cave Entrance Mining Spot 5 Flag
+#define FLAG_SHOAL_CAVE_ENTRANCE_MINING_SPOT_6                      0x4A4 // Shoal Cave Entrance Mining Spot 6 Flag
+#define FLAG_SHOAL_CAVE_INNER_MINING_SPOT_1                         0x4A5 // Shoal Cave Inner Mining Spot 1 Flag
+#define FLAG_SHOAL_CAVE_INNER_MINING_SPOT_2                         0x4A6 // Shoal Cave Inner Mining Spot 2 Flag
+#define FLAG_SHOAL_CAVE_INNER_MINING_SPOT_3                         0x4A7 // Shoal Cave Inner Mining Spot 3 Flag
+#define FLAG_SHOAL_CAVE_INNER_MINING_SPOT_4                         0x4A8 // Shoal Cave Inner Mining Spot 4 Flag
+#define FLAG_SHOAL_CAVE_INNER_MINING_SPOT_5                         0x4A9 // Shoal Cave Inner Mining Spot 5 Flag
+#define FLAG_SHOAL_CAVE_INNER_MINING_SPOT_6                         0x4AA // Shoal Cave Inner Mining Spot 6 Flag
 #define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
 #define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
 #define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
@@ -1270,6 +1275,9 @@
 #define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
 #define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
 #define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
+
+#define FLAG_MINING_SPOTS_END   FLAG_UNUSED_0x4C2
+
 #define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
 #define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
 #define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag

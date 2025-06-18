@@ -1364,3 +1364,30 @@ static const struct SpriteFrameImage sPicTable_BrendanOrasDowsing[] = {
 static const struct SpriteFrameImage sPicTable_MayOrasDowsing[] = {
     overworld_ascending_frames(gObjectEventPic_MayOrasDowsing, 2, 4),
 };
+
+// Custom
+static const struct SpriteFrameImage sPicTable_MiningSpot[] = {
+    overworld_ascending_frames(gObjectEventPic_MiningSpot, 2, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_TMBall[] = {
+    overworld_frame(gObjectEventPic_TMBall, 2, 2, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_ItemBall[] = {
+    overworld_frame(gObjectEventPic_ItemBall, 2, 2, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_MegaStone[] = {
+    overworld_frame(gObjectEventPic_MegaStone, 2, 2, 0),
+    overworld_frame(gObjectEventPic_MegaStone, 2, 2, 1),
+    overworld_frame(gObjectEventPic_MegaStone, 2, 2, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_HoopaRing[] = {
+    obj_frame_tiles(gObjectEventPic_HoopaRing),
+};
+
+static const struct SpriteFrameImage sPicTable_UltraWormhole[] = {
+    obj_frame_tiles(gObjectEventPic_UltraWormhole),
+};

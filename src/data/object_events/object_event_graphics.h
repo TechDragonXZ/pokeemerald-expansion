@@ -468,3 +468,22 @@ const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effe
 
 const u32 gObjectEventPic_BrendanOrasDowsing[] = INCBIN_U32("graphics/object_events/pics/people/brendan/oras_dowsing.4bpp");
 const u32 gObjectEventPic_MayOrasDowsing[] = INCBIN_U32("graphics/object_events/pics/people/may/oras_dowsing.4bpp");
+
+// Custom
+const u32 gObjectEventPic_MiningSpot[] = INCBIN_U32("graphics/object_events/pics/misc/mining_spot.4bpp");
+const u16 gObjectEventPal_MiningSpot[] = INCBIN_U16("graphics/object_events/palettes/mining_spot.gbapal");
+
+const u32 gObjectEventPic_MegaStone[] = INCBIN_U32("graphics/object_events/pics/misc/mega_stone.4bpp");
+const u16 gObjectEventPal_MegaStone[] = INCBIN_U16("graphics/object_events/palettes/mega_stone.gbapal");
+
+const u32 gObjectEventPic_HoopaRing[] = INCBIN_U32("graphics/object_events/pics/misc/hoopa_ring.4bpp");
+const u16 gObjectEventPal_HoopaRing[] = INCBIN_U16("graphics/object_events/palettes/hoopa_ring.gbapal");
+
+const u32 gObjectEventPic_UltraWormhole[] = INCBIN_U32("graphics/object_events/pics/misc/ultra_wormhole.4bpp");
+const u16 gObjectEventPal_UltraWormhole[] = INCBIN_U16("graphics/object_events/palettes/ultra_wormhole.gbapal");
+
+const u32 gObjectEventPic_TMBall[] = INCBIN_U32("graphics/object_events/pics/misc/tmball.4bpp");
+const u16 gObjectEventPal_TMBall[] = INCBIN_U16("graphics/object_events/palettes/tmball.gbapal");
+
+const u32 gObjectEventPic_ItemBall[] = INCBIN_U32("graphics/object_events/pics/misc/itemball.4bpp");
+const u16 gObjectEventPal_ItemBall[] = INCBIN_U16("graphics/object_events/palettes/itemball.gbapal");

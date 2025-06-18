@@ -1536,3 +1536,16 @@ static const struct StepAnimTable sStepAnimTables[] = {
     },
     {},
 };
+
+// Custom
+static const union AnimCmd sAnim_MegaStone[] =
+{
+    ANIMCMD_FRAME(0, 16),
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_FRAME(2, 16),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnimTable_MegaStone[] = {
+    sAnim_MegaStone,
+};

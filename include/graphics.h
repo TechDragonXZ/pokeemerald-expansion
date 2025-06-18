@@ -3430,6 +3430,8 @@ extern const u32 gItemIcon_KingLeaf[];
 extern const u16 gItemIconPalette_KingLeaf[];
 extern const u32 gItemIcon_DoppelBonnets[];
 extern const u16 gItemIconPalette_DoppelBonnets[];
+extern const u32 gItemIcon_MiningKit[];
+extern const u16 gItemIconPalette_MiningKit[];
 
 // Palettes
 extern const u16 gItemIconPalette_HackingDevice[];

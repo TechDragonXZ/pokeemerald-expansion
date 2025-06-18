@@ -274,3 +274,23 @@ bool8 FlagGet(u16 id)
 
     return TRUE;
 }
+
+void ClearDailyHiddenItemsFlags(void)
+{
+    u32 i = 0;
+
+    for (i = FLAG_HIDDEN_ITEMS_START; i <= FLAG_HIDDEN_ITEMS_END; i++)
+    {
+        FlagClear(i);
+    }
+}
+
+void ClearDailyMiningSpotsFlags(void)
+{
+    u32 i = 0;
+
+    for (i = FLAG_MINING_SPOTS_START; i <= FLAG_MINING_SPOTS_END; i++)
+    {
+        FlagClear(i);
+    }
+}
