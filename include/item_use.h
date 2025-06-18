@@ -64,6 +64,7 @@ enum {
 
 bool32 CanThrowBall(void);
 bool32 CannotUseItemsInBattle(u16 itemId, struct Pokemon *mon);
+void ItemUseOutOfBattle_Hexorb(u8); // Hexorb
 
 void StartORASDowsing(void);
 void ResumeORASDowseFieldEffect(void);

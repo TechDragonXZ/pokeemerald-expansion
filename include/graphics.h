@@ -3435,4 +3435,9 @@ extern const u16 gItemIconPalette_DoppelBonnets[];
 extern const u16 gItemIconPalette_HackingDevice[];
 extern const u16 gItemIconPalette_CyanScarf[];
 
+// Start hexorb branch
+extern const u32 gItemIcon_Hexorb[];
+extern const u16 gItemIconPalette_Hexorb[];
+// End hexorb Branch
+
 #endif //GUARD_GRAPHICS_H
