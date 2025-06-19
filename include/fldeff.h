@@ -51,6 +51,10 @@ u8 CreateFieldMoveTask(void);
 bool32 SetUpFieldMove_RockSmash(void);
 bool8 FldEff_UseRockSmash(void);
 
+// rock climb
+bool32 SetUpFieldMove_RockClimb(void);
+bool8 FldEff_UseRockClimb(void);
+
 // defog
 bool32 SetUpFieldMove_Defog(void);
 bool8 FldEff_Defog(void);

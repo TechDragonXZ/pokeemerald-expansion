@@ -768,15 +768,15 @@ struct
     [MENU_COSTUME_PHD]       = {COMPOUND_STRING("Phd"),             CursorCb_CostumePhd},
     [MENU_COSTUME_LIBRE]     = {COMPOUND_STRING("Libre"),           CursorCb_CostumeLibre},
 // Start hexorb branch
-    [MENU_INFLICT_SLEEP] = {COMPOUND_STRING("Sleep"), TryHexorbAndPrintResult},
-    [MENU_INFLICT_POISON] = {COMPOUND_STRING("Poison"), TryHexorbAndPrintResult},
-    [MENU_INFLICT_BURN] = {COMPOUND_STRING("Burn"), TryHexorbAndPrintResult},
+    [MENU_INFLICT_SLEEP]     = {COMPOUND_STRING("Sleep"), TryHexorbAndPrintResult},
+    [MENU_INFLICT_POISON]    = {COMPOUND_STRING("Poison"), TryHexorbAndPrintResult},
+    [MENU_INFLICT_BURN]      = {COMPOUND_STRING("Burn"), TryHexorbAndPrintResult},
 #if B_USE_FROSTBITE == TRUE
     [MENU_INFLICT_FREEZE_FROSTBITE] = {COMPOUND_STRING("Frostbite"), TryHexorbAndPrintResult},
 #else
     [MENU_INFLICT_FREEZE_FROSTBITE] = {COMPOUND_STRING("Freeze"), TryHexorbAndPrintResult},
 #endif
-    [MENU_INFLICT_PARALYSIS] = {COMPOUND_STRING("Paralysis"), TryHexorbAndPrintResult},
+    [MENU_INFLICT_PARALYSIS]  = {COMPOUND_STRING("Paralysis"), TryHexorbAndPrintResult},
 // End Hexorb branch
 };
 
@@ -840,7 +840,7 @@ static const u8 sPartyMenuActionCounts[] =
     [ACTIONS_TAKEITEM_TOSS] = ARRAY_COUNT(sPartyMenuAction_TakeItemTossCancel),
     [ACTIONS_ROTOM_CATALOG] = ARRAY_COUNT(sPartyMenuAction_RotomCatalog),
     [ACTIONS_ZYGARDE_CUBE]  = ARRAY_COUNT(sPartyMenuAction_ZygardeCube),
-    [ACTIONS_HEXORB] = ARRAY_COUNT(sPartyMenuAction_Hexorb), // hexorb Branch
+    [ACTIONS_HEXORB]        = ARRAY_COUNT(sPartyMenuAction_Hexorb), // hexorb Branch
     [ACTIONS_FASHION_CASE]  = ARRAY_COUNT(sPartyMenuAction_FashionCase),
 };
 

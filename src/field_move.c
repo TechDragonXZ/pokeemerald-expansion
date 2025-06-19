@@ -78,6 +78,11 @@ static bool32 IsFieldMoveUnlocked_SweetScent(void)
     return TRUE;
 }
 
+static bool32 IsFieldMoveUnlocked_RockClimb(void)
+{
+    return TRUE;
+}
+
 #if OW_DEFOG_FIELD_MOVE == TRUE
 static bool32 IsFieldMoveUnlocked_Defog(void)
 {
@@ -196,6 +201,14 @@ const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
         .fieldMoveFunc = SetUpFieldMove_SweetScent,
         .isUnlockedFunc = IsFieldMoveUnlocked_SweetScent,
         .moveID = MOVE_SWEET_SCENT,
+        .partyMsgID = PARTY_MSG_CANT_USE_HERE,
+    },
+
+    [FIELD_MOVE_ROCK_CLIMB] =
+    {
+        .fieldMoveFunc = SetUpFieldMove_RockClimb,
+        .isUnlockedFunc = IsFieldMoveUnlocked_RockClimb,
+        .moveID = MOVE_ROCK_CLIMB,
         .partyMsgID = PARTY_MSG_CANT_USE_HERE,
     },
 
