@@ -86,8 +86,8 @@ u32 GetItemSecondaryId(u32 itemId);
 u32 GetItemFlingPower(u32 itemId);
 u32 GetItemStatus1Mask(u16 itemId);
 u32 GetItemStatus2Mask(u16 itemId);
-u32 ItemId_GetCoinPrice(u16 itemId);
-u32 ItemId_GetBpPrice(u16 itemId);
+u32 GetItemCoinPrice(u16 itemId);
+u32 GetItemBpPrice(u16 itemId);
 
 /* Expands to:
  * enum

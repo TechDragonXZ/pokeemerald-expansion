@@ -27,6 +27,7 @@
 #include "constants/rgb.h"
 #include "constants/slot_machine.h"
 #include "constants/songs.h"
+#include "event_data.h"
 
 #define SLOTMACHINE_GFX_TILES 233
 #define MAX_BET 3
@@ -700,6 +701,7 @@ static const u16 sReelTimeSpeed_Probabilities[][2];
 static const u16 sQuarterSpeed_ProbabilityBoost[];
 static const u16 sSlotMatchFlags[];
 static const u16 sSlotPayouts[];
+static const u16 sSlotPayoutsHacked[];
 static const u8 *const sReelBackground_Tilemap;
 static const u32 sReelTimeGfx[];
 static const struct SpriteSheet sSlotMachineSpriteSheets[22];
@@ -1998,9 +2000,18 @@ static void CheckMatch_CenterRow(void)
     match = GetMatchFromSymbols(sym1, sym2, sym3);
     if (match != MATCH_NONE)
     {
-        sSlotMachine->payout += sSlotPayouts[match];
-        sSlotMachine->matches |= sSlotMatchFlags[match];
-        FlashMatchLine(MATCH_MIDDLE_ROW);
+        if (FlagGet(FLAG_HACKING_DEVICE))
+        {
+            sSlotMachine->payout += sSlotPayoutsHacked[match];
+            sSlotMachine->matches |= sSlotMatchFlags[match];
+            FlashMatchLine(MATCH_MIDDLE_ROW);
+        }
+        else
+        {
+            sSlotMachine->payout += sSlotPayouts[match];
+            sSlotMachine->matches |= sSlotMatchFlags[match];
+            FlashMatchLine(MATCH_MIDDLE_ROW);
+        }
     }
 }
 
@@ -2016,9 +2027,18 @@ static void CheckMatch_TopAndBottom(void)
     {
         if (match == MATCH_CHERRY)
             match = MATCH_TOPBOT_CHERRY;
-        sSlotMachine->payout += sSlotPayouts[match];
-        sSlotMachine->matches |= sSlotMatchFlags[match];
-        FlashMatchLine(MATCH_TOP_ROW);
+        if (FlagGet(FLAG_HACKING_DEVICE))
+        {
+            sSlotMachine->payout += sSlotPayoutsHacked[match];
+            sSlotMachine->matches |= sSlotMatchFlags[match];
+            FlashMatchLine(MATCH_TOP_ROW);
+        }
+        else
+        {
+            sSlotMachine->payout += sSlotPayouts[match];
+            sSlotMachine->matches |= sSlotMatchFlags[match];
+            FlashMatchLine(MATCH_TOP_ROW);
+        }
     }
     sym1 = GetSymbolAtRest(LEFT_REEL, 3);
     sym2 = GetSymbolAtRest(MIDDLE_REEL, 3);
@@ -2028,9 +2048,18 @@ static void CheckMatch_TopAndBottom(void)
     {
         if (match == MATCH_CHERRY)
             match = MATCH_TOPBOT_CHERRY;
-        sSlotMachine->payout += sSlotPayouts[match];
-        sSlotMachine->matches |= sSlotMatchFlags[match];
-        FlashMatchLine(MATCH_BOTTOM_ROW);
+        if (FlagGet(FLAG_HACKING_DEVICE))
+        {
+            sSlotMachine->payout += sSlotPayoutsHacked[match];
+            sSlotMachine->matches |= sSlotMatchFlags[match];
+            FlashMatchLine(MATCH_BOTTOM_ROW);
+        }
+        else
+        {
+            sSlotMachine->payout += sSlotPayouts[match];
+            sSlotMachine->matches |= sSlotMatchFlags[match];
+            FlashMatchLine(MATCH_BOTTOM_ROW);
+        }
     }
 }
 
@@ -2048,8 +2077,16 @@ static void CheckMatch_Diagonals(void)
         // CheckMatch_TopAndBottom().
         if (match != MATCH_CHERRY)
         {
-            sSlotMachine->payout += sSlotPayouts[match];
-            sSlotMachine->matches |= sSlotMatchFlags[match];
+            if (FlagGet(FLAG_HACKING_DEVICE))
+            {
+                sSlotMachine->payout += sSlotPayoutsHacked[match];
+                sSlotMachine->matches |= sSlotMatchFlags[match];
+            }
+            else
+            {
+                sSlotMachine->payout += sSlotPayouts[match];
+                sSlotMachine->matches |= sSlotMatchFlags[match];
+            }
         }
         FlashMatchLine(MATCH_NWSE_DIAG);
     }
@@ -2063,8 +2100,16 @@ static void CheckMatch_Diagonals(void)
         // CheckMatch_TopAndBottom().
         if (match != MATCH_CHERRY)
         {
-            sSlotMachine->payout += sSlotPayouts[match];
-            sSlotMachine->matches |= sSlotMatchFlags[match];
+            if (FlagGet(FLAG_HACKING_DEVICE))
+            {
+                sSlotMachine->payout += sSlotPayoutsHacked[match];
+                sSlotMachine->matches |= sSlotMatchFlags[match];
+            }
+            else
+            {
+                sSlotMachine->payout += sSlotPayouts[match];
+                sSlotMachine->matches |= sSlotMatchFlags[match];
+            }
         }
         FlashMatchLine(MATCH_NESW_DIAG);
     }
@@ -5507,6 +5552,18 @@ static const u16 sSlotPayouts[] = {
     [MATCH_MIXED_7]       = 90,
     [MATCH_RED_7]         = 300,
     [MATCH_BLUE_7]        = 300
+};
+
+static const u16 sSlotPayoutsHacked[] = {
+    [MATCH_CHERRY]        = 50,
+    [MATCH_TOPBOT_CHERRY] = 100,
+    [MATCH_REPLAY]        = 50,
+    [MATCH_LOTAD]         = 200,
+    [MATCH_AZURILL]       = 250,
+    [MATCH_POWER]         = 150,
+    [MATCH_MIXED_7]       = 300,
+    [MATCH_RED_7]         = 600,
+    [MATCH_BLUE_7]        = 600
 };
 
 static const s16 sDigitalDisplay_SpriteCoords[][2] = {

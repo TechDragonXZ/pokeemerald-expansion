@@ -1302,6 +1302,8 @@ const struct Item gItemsInfo[] =
             "Raises the base HP\n"
             "of one Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_HPUp,
@@ -1319,6 +1321,8 @@ const struct Item gItemsInfo[] =
             "Attack stat of one\n"
             "Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_Protein,
@@ -1336,6 +1340,8 @@ const struct Item gItemsInfo[] =
             "Defense stat of\n"
             "one Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_Iron,
@@ -1353,6 +1359,8 @@ const struct Item gItemsInfo[] =
             "Sp. Atk stat of one\n"
             "Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_Calcium,
@@ -1370,6 +1378,8 @@ const struct Item gItemsInfo[] =
             "Sp. Def stat of one\n"
             "Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_Zinc,
@@ -1388,6 +1398,8 @@ const struct Item gItemsInfo[] =
             "Speed stat of one\n"
             "Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_Carbos,
@@ -1405,6 +1417,8 @@ const struct Item gItemsInfo[] =
             "PP of a selected\n"
             "move."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PPUp,
         .effect = gItemEffect_PPUp,
@@ -1423,6 +1437,8 @@ const struct Item gItemsInfo[] =
             "move to its maximum\n"
             "points."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PPUp,
         .effect = gItemEffect_PPMax,
@@ -1439,6 +1455,8 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sHealthFeatherDesc,
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_HpFeather,
@@ -1453,6 +1471,8 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sMuscleFeatherDesc,
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_AtkFeather,
@@ -1467,6 +1487,8 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sResistFeatherDesc,
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_DefFeather,
@@ -1481,6 +1503,8 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sGeniusFeatherDesc,
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_SpatkFeather,
@@ -1495,6 +1519,8 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sCleverFeatherDesc,
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_SpdefFeather,
@@ -1509,6 +1535,8 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sSwiftFeatherDesc,
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .effect = gItemEffect_SpeedFeather,
@@ -1528,6 +1556,8 @@ const struct Item gItemsInfo[] =
             "Switches a Poké-\n"
             "mon's ability."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_AbilityCapsule,
         .iconPic = gItemIcon_AbilityCapsule,
@@ -1545,6 +1575,8 @@ const struct Item gItemsInfo[] =
             "of a Pokémon into\n"
             "a rare ability."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_AbilityPatch,
         .iconPic = gItemIcon_AbilityPatch,
@@ -1562,6 +1594,8 @@ const struct Item gItemsInfo[] =
             "ups Attack, but\n"
             "reduces Defense."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_LONELY,
@@ -1579,6 +1613,8 @@ const struct Item gItemsInfo[] =
             "ups Attack, but\n"
             "reduces Sp. Atk."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_ADAMANT,
@@ -1596,6 +1632,8 @@ const struct Item gItemsInfo[] =
             "ups Attack, but\n"
             "reduces Sp. Def."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_NAUGHTY,
@@ -1613,6 +1651,8 @@ const struct Item gItemsInfo[] =
             "ups Attack, but\n"
             "reduces Speed."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_BRAVE,
@@ -1630,6 +1670,8 @@ const struct Item gItemsInfo[] =
             "ups Defense, but\n"
             "reduces Attack."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_BOLD,
@@ -1647,6 +1689,8 @@ const struct Item gItemsInfo[] =
             "ups Defense, but\n"
             "reduces Sp. Atk."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_IMPISH,
@@ -1664,6 +1708,8 @@ const struct Item gItemsInfo[] =
             "ups Defense, but\n"
             "reduces Sp. Def."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_LAX,
@@ -1681,6 +1727,8 @@ const struct Item gItemsInfo[] =
             "ups Defense, but\n"
             "reduces Speed."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_RELAXED,
@@ -1698,6 +1746,8 @@ const struct Item gItemsInfo[] =
             "ups Sp. Atk, but\n"
             "reduces Attack."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_MODEST,
@@ -1715,6 +1765,8 @@ const struct Item gItemsInfo[] =
             "ups Sp. Atk, but\n"
             "reduces Defense."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_MILD,
@@ -1732,6 +1784,8 @@ const struct Item gItemsInfo[] =
             "ups Sp. Atk, but\n"
             "reduces Sp. Def."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_RASH,
@@ -1749,6 +1803,8 @@ const struct Item gItemsInfo[] =
             "ups Sp. Atk, but\n"
             "reduces Speed."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_QUIET,
@@ -1766,6 +1822,8 @@ const struct Item gItemsInfo[] =
             "ups Sp. Def, but\n"
             "reduces Attack."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_CALM,
@@ -1783,6 +1841,8 @@ const struct Item gItemsInfo[] =
             "ups Sp. Def, but\n"
             "reduces Defense."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_GENTLE,
@@ -1800,6 +1860,8 @@ const struct Item gItemsInfo[] =
             "ups Sp. Def, but\n"
             "reduces Sp. Atk."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_CAREFUL,
@@ -1817,6 +1879,8 @@ const struct Item gItemsInfo[] =
             "ups Sp. Def, but\n"
             "reduces Speed."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_SASSY,
@@ -1834,6 +1898,8 @@ const struct Item gItemsInfo[] =
             "ups Speed, but\n"
             "reduces Attack."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_TIMID,
@@ -1851,6 +1917,8 @@ const struct Item gItemsInfo[] =
             "ups Speed, but\n"
             "reduces Defense."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_HASTY,
@@ -1868,6 +1936,8 @@ const struct Item gItemsInfo[] =
             "ups Speed, but\n"
             "reduces Sp. Atk."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_JOLLY,
@@ -1885,6 +1955,8 @@ const struct Item gItemsInfo[] =
             "ups Speed, but\n"
             "reduces Sp. Def."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_NAIVE,
@@ -1902,6 +1974,8 @@ const struct Item gItemsInfo[] =
             "makes each stat\n"
             "grow equally."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Mint,
         .secondaryId = NATURE_SERIOUS,
@@ -1922,6 +1996,8 @@ const struct Item gItemsInfo[] =
             "of a Pokémon by\n"
             "one."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 4500,
+        .bpPrice = 4500,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
@@ -1941,6 +2017,8 @@ const struct Item gItemsInfo[] =
             "amount of Exp. to\n"
             "a single Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 100,
+        .bpPrice = 50,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
@@ -1960,6 +2038,8 @@ const struct Item gItemsInfo[] =
             "amount of Exp. to\n"
             "a single Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 125,
+        .bpPrice = 75,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
@@ -1979,6 +2059,8 @@ const struct Item gItemsInfo[] =
             "amount of Exp. to\n"
             "a single Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 150,
+        .bpPrice = 100,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
@@ -1998,6 +2080,8 @@ const struct Item gItemsInfo[] =
             "amount of Exp. to\n"
             "a single Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 200,
+        .bpPrice = 150,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
@@ -2017,6 +2101,8 @@ const struct Item gItemsInfo[] =
             "amount of Exp. to\n"
             "a single Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 500,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
@@ -2035,6 +2121,8 @@ const struct Item gItemsInfo[] =
             "Level of a single\n"
             "Pokémon by one."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_DynamaxCandy,
         .flingPower = 30,
@@ -2285,6 +2373,8 @@ const struct Item gItemsInfo[] =
             "battle."),
         #endif
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_INCREASE_STAT,
@@ -2310,6 +2400,8 @@ const struct Item gItemsInfo[] =
             "battle."),
         #endif
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_INCREASE_STAT,
@@ -2335,6 +2427,8 @@ const struct Item gItemsInfo[] =
             "battle."),
         #endif
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_INCREASE_STAT,
@@ -2360,6 +2454,8 @@ const struct Item gItemsInfo[] =
             "battle."),
         #endif
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_INCREASE_STAT,
@@ -2385,6 +2481,8 @@ const struct Item gItemsInfo[] =
             "battle."),
         #endif
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_INCREASE_STAT,
@@ -2411,6 +2509,8 @@ const struct Item gItemsInfo[] =
             "during one battle."),
         #endif
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_INCREASE_STAT,
@@ -2429,6 +2529,8 @@ const struct Item gItemsInfo[] =
             "critical-hit ratio\n"
             "during one battle."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_SET_FOCUS_ENERGY,
@@ -2448,6 +2550,8 @@ const struct Item gItemsInfo[] =
             "reduction when\n"
             "used in battle."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_SET_MIST,
@@ -2463,6 +2567,8 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE < GEN_7) ? 1000 : ((I_PRICE == GEN_7) ? 100 : 300),
         .description = sPokeDollDesc,
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_ESCAPE,
@@ -2477,6 +2583,8 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 100 : 1000,
         .description = sPokeDollDesc,
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_ESCAPE,
@@ -2491,6 +2599,8 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 100 : 1000,
         .description = sPokeDollDesc,
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_ESCAPE,
@@ -2509,6 +2619,8 @@ const struct Item gItemsInfo[] =
             "during one battle\n"
             "by one stage."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = EFFECT_ITEM_INCREASE_ALL_STATS,
@@ -3834,6 +3946,8 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Fire Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .coinPrice = 2000,
+        .bpPrice = 50,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
@@ -3848,6 +3962,8 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Water Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .coinPrice = 2000,
+        .bpPrice = 50,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
@@ -3862,6 +3978,8 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Thunder Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .coinPrice = 2000,
+        .bpPrice = 50,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
@@ -3876,6 +3994,8 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Leaf Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .coinPrice = 2000,
+        .bpPrice = 50,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
@@ -3890,6 +4010,8 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Ice Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .coinPrice = 2000,
+        .bpPrice = 50,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
@@ -3904,6 +4026,8 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Sun Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .coinPrice = 2000,
+        .bpPrice = 50,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
@@ -3918,6 +4042,8 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Moon Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .coinPrice = 2000,
+        .bpPrice = 50,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
@@ -3932,6 +4058,8 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Shiny Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .coinPrice = 2000,
+        .bpPrice = 50,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
@@ -3946,6 +4074,8 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Dusk Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .coinPrice = 2000,
+        .bpPrice = 50,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
@@ -3960,6 +4090,8 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Dawn Stone"),
         .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .coinPrice = 2000,
+        .bpPrice = 50,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_POWER_UP,
         .type = ITEM_USE_PARTY_MENU,
@@ -3979,6 +4111,8 @@ const struct Item gItemsInfo[] =
             "that makes certain\n"
             "Pokémon evolve."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .effect = gItemEffect_EvoItem,
@@ -3996,6 +4130,8 @@ const struct Item gItemsInfo[] =
             "that makes certain\n"
             "Pokémon evolve."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .effect = gItemEffect_EvoItem,
@@ -4013,6 +4149,8 @@ const struct Item gItemsInfo[] =
             "that makes certain\n"
             "Pokémon evolve."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .effect = gItemEffect_EvoItem,
@@ -4030,6 +4168,8 @@ const struct Item gItemsInfo[] =
             "that makes certain\n"
             "Pokémon evolve."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .effect = gItemEffect_EvoItem,
@@ -4047,6 +4187,8 @@ const struct Item gItemsInfo[] =
             "that makes certain\n"
             "Pokémon evolve."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .effect = gItemEffect_EvoItem,
@@ -4065,6 +4207,8 @@ const struct Item gItemsInfo[] =
             "Galar. Makes some\n"
             "Pokémon evolve."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .effect = gItemEffect_EvoItem,
@@ -4084,6 +4228,8 @@ const struct Item gItemsInfo[] =
             "held by Dragon-\n"
             "type Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -4101,6 +4247,8 @@ const struct Item gItemsInfo[] =
             "A peculiar box made\n"
             "by Silph Co."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -4118,6 +4266,8 @@ const struct Item gItemsInfo[] =
             "Pokémon. It's stiff\n"
             "and heavy."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -4135,6 +4285,8 @@ const struct Item gItemsInfo[] =
             "Pokémon. It's full\n"
             "of electric energy."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -4152,6 +4304,8 @@ const struct Item gItemsInfo[] =
             "Pokémon. It's full\n"
             "of magma energy."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -4169,6 +4323,8 @@ const struct Item gItemsInfo[] =
             "overflowing with\n"
             "dubious data."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -4187,6 +4343,8 @@ const struct Item gItemsInfo[] =
             "Pokémon. Imbued\n"
             "with spirit energy."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -4204,6 +4362,8 @@ const struct Item gItemsInfo[] =
             "that evolves a\n"
             "certain Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -4222,6 +4382,8 @@ const struct Item gItemsInfo[] =
             "treat loved by\n"
             "a certain Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -4239,6 +4401,8 @@ const struct Item gItemsInfo[] =
             "perfumes, loved by\n"
             "a certain Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -4256,6 +4420,8 @@ const struct Item gItemsInfo[] =
             "that evolves a\n"
             "certain Pokémon."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -4273,6 +4439,8 @@ const struct Item gItemsInfo[] =
             "sweet loved by\n"
             "Milcery."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -4289,6 +4457,8 @@ const struct Item gItemsInfo[] =
             "sweet loved by\n"
             "Milcery."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -4305,6 +4475,8 @@ const struct Item gItemsInfo[] =
             "sweet loved by\n"
             "Milcery."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -4321,6 +4493,8 @@ const struct Item gItemsInfo[] =
             "sweet loved by\n"
             "Milcery."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -4337,6 +4511,8 @@ const struct Item gItemsInfo[] =
             "sweet loved by\n"
             "Milcery."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -4353,6 +4529,8 @@ const struct Item gItemsInfo[] =
             "sweet loved by\n"
             "Milcery."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -4369,6 +4547,8 @@ const struct Item gItemsInfo[] =
             "sweet loved by\n"
             "Milcery."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -4386,6 +4566,8 @@ const struct Item gItemsInfo[] =
             "item that prevents\n"
             "evolution."),
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -4402,6 +4584,8 @@ const struct Item gItemsInfo[] =
         .holdEffectParam = 0,
         .description = sNectarDesc,
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_FormChange_ConsumedOnUse,
         .flingPower = 10,
@@ -4416,6 +4600,8 @@ const struct Item gItemsInfo[] =
         .holdEffectParam = 0,
         .description = sNectarDesc,
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_FormChange_ConsumedOnUse,
         .flingPower = 10,
@@ -4430,6 +4616,8 @@ const struct Item gItemsInfo[] =
         .holdEffectParam = 0,
         .description = sNectarDesc,
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_FormChange_ConsumedOnUse,
         .flingPower = 10,
@@ -4444,6 +4632,8 @@ const struct Item gItemsInfo[] =
         .holdEffectParam = 0,
         .description = sNectarDesc,
         .pocket = POCKET_POWER_UP,
+        .coinPrice = 1750,
+        .bpPrice = 250,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_FormChange_ConsumedOnUse,
         .flingPower = 10,
@@ -6984,6 +7174,8 @@ const struct Item gItemsInfo[] =
             "raises the Atk and\n"
             "Sp. Atk of Pikachu."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -7001,6 +7193,8 @@ const struct Item gItemsInfo[] =
             "raises Farfetch'd's\n"
             "critical-hit ratio."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -7018,6 +7212,8 @@ const struct Item gItemsInfo[] =
             "raises Cubone or\n"
             "Marowak's Attack."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 90,
@@ -7036,6 +7232,8 @@ const struct Item gItemsInfo[] =
             "raises Chansey's\n"
             "critical-hit rate."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 40,
@@ -7054,6 +7252,8 @@ const struct Item gItemsInfo[] =
             "raises Ditto's\n"
             "Defense."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -7072,6 +7272,8 @@ const struct Item gItemsInfo[] =
             "raises the Speed\n"
             "of Ditto."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -7089,6 +7291,8 @@ const struct Item gItemsInfo[] =
             "raises the Sp. Def\n"
             "of Clamperl."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -7108,6 +7312,8 @@ const struct Item gItemsInfo[] =
             "raises the Sp. Atk\n"
             "of Clamperl."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -7133,6 +7339,8 @@ const struct Item gItemsInfo[] =
             "Latios & Latias."),
         #endif
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -7151,6 +7359,8 @@ const struct Item gItemsInfo[] =
             "Dragon and Steel-\n"
             "type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -7169,6 +7379,8 @@ const struct Item gItemsInfo[] =
             "Dragon and Water-\n"
             "type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -7187,6 +7399,8 @@ const struct Item gItemsInfo[] =
             "Dragon and Ghost-\n"
             "type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -7436,6 +7650,8 @@ const struct Item gItemsInfo[] =
             "promotes growth,\n"
             "but reduces Speed."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -7454,6 +7670,8 @@ const struct Item gItemsInfo[] =
             "promotes HP gain,\n"
             "but reduces Speed."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = STAT_HP,
@@ -7473,6 +7691,8 @@ const struct Item gItemsInfo[] =
             "promotes Atk gain,\n"
             "but reduces Speed."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = STAT_ATK,
@@ -7492,6 +7712,8 @@ const struct Item gItemsInfo[] =
             "promotes Def gain,\n"
             "but reduces Speed."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = STAT_DEF,
@@ -7512,6 +7734,8 @@ const struct Item gItemsInfo[] =
             "motes Sp. Atk gain,\n"
             "but reduces Speed."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = STAT_SPATK,
@@ -7531,6 +7755,8 @@ const struct Item gItemsInfo[] =
             "motes Sp. Def gain,\n"
             "but reduces Speed."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = STAT_SPDEF,
@@ -7550,6 +7776,8 @@ const struct Item gItemsInfo[] =
             "promotes Spd gain,\n"
             "but reduces Speed."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = STAT_SPEED,
@@ -7572,6 +7800,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Normal-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_NORMAL,
@@ -7591,6 +7821,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Fire-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_FIRE,
@@ -7611,6 +7843,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Water-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_WATER,
@@ -7630,6 +7864,8 @@ const struct Item gItemsInfo[] =
             "boosts Electric-\n"
             "type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_ELECTRIC,
@@ -7646,6 +7882,8 @@ const struct Item gItemsInfo[] =
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = sRoseIncenseDesc,
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_GRASS,
@@ -7666,6 +7904,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Ice-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_ICE,
@@ -7685,6 +7925,8 @@ const struct Item gItemsInfo[] =
             "boosts Fighting-\n"
             "type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_FIGHTING,
@@ -7704,6 +7946,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Poison-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_POISON,
@@ -7724,6 +7968,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Ground-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_GROUND,
@@ -7743,6 +7989,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Flying-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_FLYING,
@@ -7759,6 +8007,8 @@ const struct Item gItemsInfo[] =
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = sOddIncenseDesc,
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_PSYCHIC,
@@ -7779,6 +8029,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Bug-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_BUG,
@@ -7795,6 +8047,8 @@ const struct Item gItemsInfo[] =
         .holdEffectParam = TYPE_BOOST_PARAM,
         .description = sRockIncenseDesc,
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_ROCK,
@@ -7814,6 +8068,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Ghost-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_GHOST,
@@ -7833,6 +8089,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Dragon-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_DRAGON,
@@ -7853,6 +8111,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Dark-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_DARK,
@@ -7872,6 +8132,8 @@ const struct Item gItemsInfo[] =
             "raises the power of\n"
             "Steel-type moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -7893,6 +8155,8 @@ const struct Item gItemsInfo[] =
             "allows the use of\n"
             "only one move."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -7911,6 +8175,8 @@ const struct Item gItemsInfo[] =
             "allows the use of\n"
             "only one move."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -7929,6 +8195,8 @@ const struct Item gItemsInfo[] =
             "allows the use of\n"
             "only one move."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -7948,6 +8216,8 @@ const struct Item gItemsInfo[] =
             "inflicts a burn on\n"
             "holder in battle."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -7965,6 +8235,8 @@ const struct Item gItemsInfo[] =
             "badly poisons the\n"
             "holder in battle."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -7984,6 +8256,8 @@ const struct Item gItemsInfo[] =
             "of Rain Dance if\n"
             "used by the holder."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -8001,6 +8275,8 @@ const struct Item gItemsInfo[] =
             "of Sunny Day if\n"
             "used by the holder."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -8018,6 +8294,8 @@ const struct Item gItemsInfo[] =
             "of Sandstorm if\n"
             "used by the holder."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8047,6 +8325,8 @@ const struct Item gItemsInfo[] =
             "used by the holder."),
         #endif
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 40,
@@ -8067,6 +8347,8 @@ const struct Item gItemsInfo[] =
             "Electric Terrain,\n"
             "but only one time."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8085,6 +8367,8 @@ const struct Item gItemsInfo[] =
             "Psychic Terrain,\n"
             "but only one time."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8103,6 +8387,8 @@ const struct Item gItemsInfo[] =
             "Misty Terrain,\n"
             "but only one time."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8121,6 +8407,8 @@ const struct Item gItemsInfo[] =
             "Grassy Terrain,\n"
             "but only one time."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8141,6 +8429,8 @@ const struct Item gItemsInfo[] =
             "the holder is hit by\n"
             "a Water-type move."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8160,6 +8450,8 @@ const struct Item gItemsInfo[] =
             "the holder is hit by\n"
             "an Electric move."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8179,6 +8471,8 @@ const struct Item gItemsInfo[] =
             "the holder is hit by\n"
             "a Water-type move."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8197,6 +8491,8 @@ const struct Item gItemsInfo[] =
             "holder is hit by an\n"
             "Ice-type move."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8218,6 +8514,8 @@ const struct Item gItemsInfo[] =
             "casts a glare to\n"
             "reduce accuracy."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8235,6 +8533,8 @@ const struct Item gItemsInfo[] =
             "restores any\n"
             "lowered stat."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8278,6 +8578,8 @@ const struct Item gItemsInfo[] =
             "occasionally allows\n"
             "the first strike."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
@@ -8295,6 +8597,8 @@ const struct Item gItemsInfo[] =
             "calms spirits and\n"
             "fosters friendship."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8318,6 +8622,8 @@ const struct Item gItemsInfo[] =
             "of infatuation."),
         #endif
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8333,6 +8639,8 @@ const struct Item gItemsInfo[] =
         .holdEffectParam = 10,
         .description = sKingsRockDesc,
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -8397,6 +8705,8 @@ const struct Item gItemsInfo[] =
             "occasionally\n"
             "prevents fainting."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8432,6 +8742,8 @@ const struct Item gItemsInfo[] =
             "improves the\n"
             "critical-hit rate."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8451,6 +8763,8 @@ const struct Item gItemsInfo[] =
             "gradually restores\n"
             "HP in battle."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8469,6 +8783,8 @@ const struct Item gItemsInfo[] =
             "restores HP upon\n"
             "striking the foe."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8488,6 +8804,8 @@ const struct Item gItemsInfo[] =
             "that boosts the\n"
             "accuracy of moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8506,6 +8824,8 @@ const struct Item gItemsInfo[] =
             "boosts the power\n"
             "of physical moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8525,6 +8845,8 @@ const struct Item gItemsInfo[] =
             "that ups the power\n"
             "of special moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8543,6 +8865,8 @@ const struct Item gItemsInfo[] =
             "the power of super\n"
             "effective moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8561,6 +8885,8 @@ const struct Item gItemsInfo[] =
             "of barrier moves\n"
             "used by the holder."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8578,6 +8904,8 @@ const struct Item gItemsInfo[] =
             "but holder loses HP\n"
             "with each attack."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8595,6 +8923,8 @@ const struct Item gItemsInfo[] =
             "use of a move that\n"
             "charges first."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8613,6 +8943,8 @@ const struct Item gItemsInfo[] =
             "full HP, it endures\n"
             "KO hits with 1 HP."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8632,6 +8964,8 @@ const struct Item gItemsInfo[] =
             "after the foe, it'll\n"
             "boost accuracy."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8650,6 +8984,8 @@ const struct Item gItemsInfo[] =
             "boosts a move used\n"
             "consecutively."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8667,6 +9003,8 @@ const struct Item gItemsInfo[] =
             "becomes vulnerable\n"
             "to Ground moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 130,
@@ -8681,6 +9019,8 @@ const struct Item gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_LAGGING_TAIL,
         .description = sFullIncenseDesc,
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8698,6 +9038,8 @@ const struct Item gItemsInfo[] =
             "in love, the foe\n"
             "does too."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8716,6 +9058,8 @@ const struct Item gItemsInfo[] =
             "Poison-types.\n"
             "Damages all others."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8733,6 +9077,8 @@ const struct Item gItemsInfo[] =
             "extends binding\n"
             "moves like Wrap."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 90,
@@ -8750,6 +9096,8 @@ const struct Item gItemsInfo[] =
             "each turn. May\n"
             "latch on to foes."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
@@ -8767,6 +9115,8 @@ const struct Item gItemsInfo[] =
             "to switch out\n"
             "without fail."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8785,6 +9135,8 @@ const struct Item gItemsInfo[] =
             "ups the power of\n"
             "HP-stealing moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8802,6 +9154,8 @@ const struct Item gItemsInfo[] =
             "ups the holder's\n"
             "critical-hit ratio."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -8818,6 +9172,8 @@ const struct Item gItemsInfo[] =
         .holdEffectParam = 10,
         .description = sKingsRockDesc,
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = EVO_HELD_ITEM_TYPE,
         .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .effect = gItemEffect_EvoItem,
@@ -8837,6 +9193,8 @@ const struct Item gItemsInfo[] =
             "Sp. Def of Pokémon\n"
             "that can evolve."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 40,
@@ -8854,6 +9212,8 @@ const struct Item gItemsInfo[] =
             "when held, it halves\n"
             "a Pokémon's weight."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8872,6 +9232,8 @@ const struct Item gItemsInfo[] =
             "they touch its\n"
             "holder."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -8890,6 +9252,8 @@ const struct Item gItemsInfo[] =
             "float but bursts\n"
             "if hit by an attack."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8908,6 +9272,8 @@ const struct Item gItemsInfo[] =
             "foe if they hit the\n"
             "holder."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8926,6 +9292,8 @@ const struct Item gItemsInfo[] =
             "have no effect will\n"
             "hit the holder."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
@@ -8943,6 +9311,8 @@ const struct Item gItemsInfo[] =
             "power of binding\n"
             "moves when held."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8961,6 +9331,8 @@ const struct Item gItemsInfo[] =
             "user if they're hit\n"
             "by the foe."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -8980,6 +9352,8 @@ const struct Item gItemsInfo[] =
             "effective move,\n"
             "ups Atk and Sp. Atk."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
@@ -8998,6 +9372,8 @@ const struct Item gItemsInfo[] =
             "prevents the use\n"
             "of status moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
@@ -9016,6 +9392,8 @@ const struct Item gItemsInfo[] =
             "weather damage and\n"
             "powder moves."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
@@ -9033,6 +9411,8 @@ const struct Item gItemsInfo[] =
             "Speed if the holder\n"
             "is intimidated."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -9050,6 +9430,8 @@ const struct Item gItemsInfo[] =
             "of the active\n"
             "battle terrain."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -9068,6 +9450,8 @@ const struct Item gItemsInfo[] =
             "from contact move\n"
             "effects."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -9085,6 +9469,8 @@ const struct Item gItemsInfo[] =
             "the holder uses a\n"
             "sound-based move."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -9102,6 +9488,8 @@ const struct Item gItemsInfo[] =
             "switch if its stats\n"
             "are lowered."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 50,
@@ -9120,6 +9508,8 @@ const struct Item gItemsInfo[] =
             "effects of traps\n"
             "set in the field."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
@@ -9138,6 +9528,8 @@ const struct Item gItemsInfo[] =
             "the user misses\n"
             "due to Accuracy."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
@@ -9155,6 +9547,8 @@ const struct Item gItemsInfo[] =
             "Trick Room is\n"
             "active."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 100,
@@ -9172,6 +9566,8 @@ const struct Item gItemsInfo[] =
             "protects from\n"
             "weather effects."),
         .pocket = POCKET_BATTLE_ITEMS,
+        .coinPrice = 2500,
+        .bpPrice = 500,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
@@ -10451,6 +10847,8 @@ const struct Item gItemsInfo[] =
             "the user flinch if\n"
             "hit by the foe."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10466,6 +10864,8 @@ const struct Item gItemsInfo[] =
             "the foe with long,\n"
             "sharp claws."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10481,6 +10881,8 @@ const struct Item gItemsInfo[] =
             "ultrasonic wave\n"
             "that may confuse."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10496,6 +10898,8 @@ const struct Item gItemsInfo[] =
             "Sp. Def by focusing\n"
             "the mind."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10511,6 +10915,8 @@ const struct Item gItemsInfo[] =
             "makes the foe flee \n"
             "to end the battle."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10526,6 +10932,8 @@ const struct Item gItemsInfo[] =
             "with a toxin that\n"
             "gradually worsens."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10548,6 +10956,8 @@ const struct Item gItemsInfo[] =
             "types except Ice."),
         #endif
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10563,6 +10973,8 @@ const struct Item gItemsInfo[] =
             "to boost both\n"
             "Attack & Defense."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10578,6 +10990,8 @@ const struct Item gItemsInfo[] =
             "in a row to strike\n"
             "the foe."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10593,6 +11007,8 @@ const struct Item gItemsInfo[] =
             "varies among\n"
             "different Pokémon."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10608,6 +11024,8 @@ const struct Item gItemsInfo[] =
             "Fire-type moves\n"
             "for 5 turns."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10623,6 +11041,8 @@ const struct Item gItemsInfo[] =
             "it can only use\n"
             "attack moves."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10642,6 +11062,8 @@ const struct Item gItemsInfo[] =
             "freeze the foe."),
         #endif
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10663,6 +11085,8 @@ const struct Item gItemsInfo[] =
             "may freeze the foe."),
         #endif
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10678,6 +11102,8 @@ const struct Item gItemsInfo[] =
             "recharging the\n"
             "next turn."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10693,6 +11119,8 @@ const struct Item gItemsInfo[] =
             "light that lowers\n"
             "Sp. Atk damage."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10708,6 +11136,8 @@ const struct Item gItemsInfo[] =
             "but may fail if used\n"
             "in succession."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10723,6 +11153,8 @@ const struct Item gItemsInfo[] =
             "Water-type moves\n"
             "for 5 turns."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10738,6 +11170,8 @@ const struct Item gItemsInfo[] =
             "HP of the damage \n"
             "this move inflicts."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10753,6 +11187,8 @@ const struct Item gItemsInfo[] =
             "abnormality with a\n"
             "mystical power."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10768,6 +11204,8 @@ const struct Item gItemsInfo[] =
             "likes you, the more\n"
             "powerful this move."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10783,6 +11221,8 @@ const struct Item gItemsInfo[] =
             "the 1st turn, then\n"
             "attacks next turn."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10798,6 +11238,8 @@ const struct Item gItemsInfo[] =
             "a hard tail. It may\n"
             "lower Defense."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10813,6 +11255,8 @@ const struct Item gItemsInfo[] =
             "attack that may\n"
             "cause paralysis."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10828,6 +11272,8 @@ const struct Item gItemsInfo[] =
             "with a thunderbolt.\n"
             "It may paralyze."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10843,6 +11289,8 @@ const struct Item gItemsInfo[] =
             "that has no effect\n"
             "on flying foes."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10858,6 +11306,8 @@ const struct Item gItemsInfo[] =
             "likes you, the more\n"
             "powerful this move."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10873,6 +11323,8 @@ const struct Item gItemsInfo[] =
             "the 1st turn, then\n"
             "strikes next turn."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10888,6 +11340,8 @@ const struct Item gItemsInfo[] =
             "attack that may\n"
             "lower Sp. Def."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10903,6 +11357,8 @@ const struct Item gItemsInfo[] =
             "at the foe. It may\n"
             "lower Sp. Def."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10918,6 +11374,8 @@ const struct Item gItemsInfo[] =
             "like Light Screen\n"
             "and causes damage."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10933,6 +11391,8 @@ const struct Item gItemsInfo[] =
             "copies to enhance\n"
             "elusiveness."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10948,6 +11408,8 @@ const struct Item gItemsInfo[] =
             "light that weakens\n"
             "physical attacks."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10963,6 +11425,8 @@ const struct Item gItemsInfo[] =
             "jolt of electricity\n"
             "that never misses."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10978,6 +11442,8 @@ const struct Item gItemsInfo[] =
             "fire that may burn\n"
             "the foe."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -10993,6 +11459,8 @@ const struct Item gItemsInfo[] =
             "foe. It may poison\n"
             "the foe."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11008,6 +11476,8 @@ const struct Item gItemsInfo[] =
             "that hits the foe\n"
             "over several turns."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11023,6 +11493,8 @@ const struct Item gItemsInfo[] =
             "attack that may\n"
             "burn the foe."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11038,6 +11510,8 @@ const struct Item gItemsInfo[] =
             "moving with rocks.\n"
             "May lower Speed."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11053,6 +11527,8 @@ const struct Item gItemsInfo[] =
             "attack that can't\n"
             "be avoided."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11068,6 +11544,8 @@ const struct Item gItemsInfo[] =
             "from using the same\n"
             "move in a row."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11083,6 +11561,8 @@ const struct Item gItemsInfo[] =
             "poisoned, burned,\n"
             "or paralyzed."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11098,6 +11578,8 @@ const struct Item gItemsInfo[] =
             "attack depending\n"
             "on the location."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11113,6 +11595,8 @@ const struct Item gItemsInfo[] =
             "2 turns to restore\n"
             "health and status."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11128,6 +11612,8 @@ const struct Item gItemsInfo[] =
             "attack a foe of the\n"
             "opposite gender."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11143,6 +11629,8 @@ const struct Item gItemsInfo[] =
             "it may steal the\n"
             "foe's held item."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11158,6 +11646,8 @@ const struct Item gItemsInfo[] =
             "edged wings and\n"
             "slams into the foe."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11173,6 +11663,8 @@ const struct Item gItemsInfo[] =
             "with the foe on the\n"
             "turn this is used."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11188,6 +11680,8 @@ const struct Item gItemsInfo[] =
             "of the move the foe\n"
             "is trying to use."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11203,6 +11697,8 @@ const struct Item gItemsInfo[] =
             "attack, but sharply\n"
             "lowers Sp. Atk."),
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11215,6 +11711,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11227,6 +11725,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11239,6 +11739,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11251,6 +11753,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11263,6 +11767,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11275,6 +11781,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11287,6 +11795,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11299,6 +11809,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11311,6 +11823,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11323,6 +11837,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11335,6 +11851,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11347,6 +11865,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11359,6 +11879,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11371,6 +11893,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11383,6 +11907,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11395,6 +11921,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11407,6 +11935,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11419,6 +11949,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11431,6 +11963,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11443,6 +11977,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11455,6 +11991,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11467,6 +12005,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11479,6 +12019,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11491,6 +12033,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11503,6 +12047,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11515,6 +12061,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11527,6 +12075,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11539,6 +12089,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11551,6 +12103,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11563,6 +12117,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11575,6 +12131,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11587,6 +12145,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11599,6 +12159,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11611,6 +12173,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11623,6 +12187,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11635,6 +12201,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11647,6 +12215,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11659,6 +12229,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11671,6 +12243,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11683,6 +12257,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11695,6 +12271,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11707,6 +12285,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11719,6 +12299,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11731,6 +12313,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11743,6 +12327,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11755,6 +12341,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11767,6 +12355,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11779,6 +12369,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11791,6 +12383,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -11803,6 +12397,8 @@ const struct Item gItemsInfo[] =
         .price = 3000,
         .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
+        .coinPrice = 1500,
+        .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,

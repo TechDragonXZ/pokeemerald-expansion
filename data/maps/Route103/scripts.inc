@@ -105,6 +105,7 @@ Route103_EventScript_StartBrendanBattleMudkip::
 Route103_EventScript_AfterMayBattle::
 	clearflag FLAG_NO_WHITEOUT
 	special HealPlayerParty
+	hidefollower
 	msgbox Route103_Text_MayTimeToHeadBack, MSGBOX_DEFAULT
 	goto Route103_EventScript_RivalExit
 	end
@@ -112,6 +113,7 @@ Route103_EventScript_AfterMayBattle::
 Route103_EventScript_AfterMayBattleLost::
 	clearflag FLAG_NO_WHITEOUT
 	special HealPlayerParty
+	hidefollower
 	msgbox Route103_Text_MayTimeToHeadBackLost, MSGBOX_DEFAULT
 	goto Route103_EventScript_RivalExit
 	end
@@ -119,6 +121,7 @@ Route103_EventScript_AfterMayBattleLost::
 Route103_EventScript_AfterBrendanBattle::
 	clearflag FLAG_NO_WHITEOUT
 	special HealPlayerParty
+	hidefollower
 	msgbox Route103_Text_BrendanTimeToHeadBack, MSGBOX_DEFAULT
 	goto Route103_EventScript_RivalExit
 	end
@@ -126,6 +129,7 @@ Route103_EventScript_AfterBrendanBattle::
 Route103_EventScript_AfterBrendanBattleLost::
 	clearflag FLAG_NO_WHITEOUT
 	special HealPlayerParty
+	hidefollower
 	msgbox Route103_Text_BrendanTimeToHeadBackLost, MSGBOX_DEFAULT
 	goto Route103_EventScript_RivalExit
 	end

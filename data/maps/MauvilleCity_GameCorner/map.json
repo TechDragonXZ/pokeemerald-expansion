@@ -11,8 +11,9 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
@@ -115,7 +116,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_GameCorner_EventScript_PrizeCornerTMs",
+      "script": "MauvilleCity_GameCorner_EventScript_TMLady",
       "flag": "0"
     },
     {
@@ -245,7 +246,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_GameCorner_EventScript_PrizeCornerNew",
+      "script": "MauvilleCity_GameCorner_EventScript_DollLady",
       "flag": "0"
     },
     {
@@ -375,7 +376,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_GameCorner_EventScript_PrizeCornerNew2",
+      "script": "MauvilleCity_GameCorner_EventScript_ItemLady",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
+      "x": 12,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MauvilleCity_GameCorner_EventScript_Bouncer",
       "flag": "0"
     }
   ],
@@ -395,9 +409,7 @@
       "dest_warp_id": "5"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
@@ -745,16 +757,16 @@
     },
     {
       "type": "sign",
-      "x": 14,
-      "y": 4,
+      "x": 10,
+      "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "MauvilleCity_GameCorner_EventScript_Derby"
     },
     {
       "type": "sign",
-      "x": 15,
-      "y": 4,
+      "x": 19,
+      "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "MauvilleCity_GameCorner_EventScript_Derby"
@@ -770,7 +782,7 @@
     {
       "type": "sign",
       "x": 18,
-      "y": 3,
+      "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "MauvilleCity_GameCorner_EventScript_Derby"
@@ -778,7 +790,7 @@
     {
       "type": "sign",
       "x": 11,
-      "y": 3,
+      "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "MauvilleCity_GameCorner_EventScript_Derby"

@@ -96,6 +96,8 @@ enum
     SELLER_NONE,
     SELLER_JERRY, // OBJ_EVENT_GFX_MART_EMPLOYEE
     SELLER_JENNIE, // OBJ_EVENT_GFX_WOMAN_3
+    SELLER_BEAUTY, // OBJ_EVENT_GFX_BEAUTY
+    SELLER_TEALA, // OBJ_EVENT_GFX_TEALA
     SELLER_COUNT,
 };
 
@@ -251,6 +253,32 @@ static const u16 sNewShopMenu_SellerScrollPal_Jennie[] = INCBIN_U16("graphics/ne
 static const u32 sNewShopMenu_SellerScrollMap_Jennie[] = INCBIN_U32("graphics/new_shop/sellers/jennie/scroll.bin.lz");
 static const u16 sNewShopMenu_SellerCursorGfx_Jennie[] = INCBIN_U16("graphics/new_shop/sellers/jennie/cursor.4bpp");
 static const u16 sNewShopMenu_SellerCursorPal_Jennie[] = INCBIN_U16("graphics/new_shop/sellers/jennie/cursor.gbapal");
+
+static const u8 sNewShopMenu_SellerMugshotGfx_Beauty[] = INCBIN_U8("graphics/new_shop/sellers/beauty/mugshot.4bpp");
+static const u16 sNewShopMenu_SellerMugshotPal_Beauty[] = INCBIN_U16("graphics/new_shop/sellers/beauty/mugshot.gbapal");
+static const u32 sNewShopMenu_SellerMenuGfx_Beauty[] = INCBIN_U32("graphics/new_shop/sellers/beauty/menu.4bpp.lz");
+static const u32 sNewShopMenu_SellerMenuCoinGfx_Beauty[] = INCBIN_U32("graphics/new_shop/sellers/beauty/menu_coin.4bpp.lz");
+static const u32 sNewShopMenu_SellerMenuBpGfx_Beauty[] = INCBIN_U32("graphics/new_shop/sellers/beauty/menu_bp.4bpp.lz");
+static const u16 sNewShopMenu_SellerMenuPal_Beauty[] = INCBIN_U16("graphics/new_shop/sellers/beauty/menu.gbapal");
+static const u32 sNewShopMenu_SellerMenuMap_Beauty[] = INCBIN_U32("graphics/new_shop/sellers/beauty/menu.bin.lz");
+static const u32 sNewShopMenu_SellerScrollGfx_Beauty[] = INCBIN_U32("graphics/new_shop/sellers/beauty/scroll.4bpp.lz");
+static const u16 sNewShopMenu_SellerScrollPal_Beauty[] = INCBIN_U16("graphics/new_shop/sellers/beauty/scroll.gbapal");
+static const u32 sNewShopMenu_SellerScrollMap_Beauty[] = INCBIN_U32("graphics/new_shop/sellers/beauty/scroll.bin.lz");
+static const u16 sNewShopMenu_SellerCursorGfx_Beauty[] = INCBIN_U16("graphics/new_shop/sellers/beauty/cursor.4bpp");
+static const u16 sNewShopMenu_SellerCursorPal_Beauty[] = INCBIN_U16("graphics/new_shop/sellers/beauty/cursor.gbapal");
+
+static const u8 sNewShopMenu_SellerMugshotGfx_Teala[] = INCBIN_U8("graphics/new_shop/sellers/teala/mugshot.4bpp");
+static const u16 sNewShopMenu_SellerMugshotPal_Teala[] = INCBIN_U16("graphics/new_shop/sellers/teala/mugshot.gbapal");
+static const u32 sNewShopMenu_SellerMenuGfx_Teala[] = INCBIN_U32("graphics/new_shop/sellers/teala/menu.4bpp.lz");
+static const u32 sNewShopMenu_SellerMenuCoinGfx_Teala[] = INCBIN_U32("graphics/new_shop/sellers/teala/menu_coin.4bpp.lz");
+static const u32 sNewShopMenu_SellerMenuBpGfx_Teala[] = INCBIN_U32("graphics/new_shop/sellers/teala/menu_bp.4bpp.lz");
+static const u16 sNewShopMenu_SellerMenuPal_Teala[] = INCBIN_U16("graphics/new_shop/sellers/teala/menu.gbapal");
+static const u32 sNewShopMenu_SellerMenuMap_Teala[] = INCBIN_U32("graphics/new_shop/sellers/teala/menu.bin.lz");
+static const u32 sNewShopMenu_SellerScrollGfx_Teala[] = INCBIN_U32("graphics/new_shop/sellers/teala/scroll.4bpp.lz");
+static const u16 sNewShopMenu_SellerScrollPal_Teala[] = INCBIN_U16("graphics/new_shop/sellers/teala/scroll.gbapal");
+static const u32 sNewShopMenu_SellerScrollMap_Teala[] = INCBIN_U32("graphics/new_shop/sellers/teala/scroll.bin.lz");
+static const u16 sNewShopMenu_SellerCursorGfx_Teala[] = INCBIN_U16("graphics/new_shop/sellers/teala/cursor.4bpp");
+static const u16 sNewShopMenu_SellerCursorPal_Teala[] = INCBIN_U16("graphics/new_shop/sellers/teala/cursor.gbapal");
 
 static void Task_ShopMenu(u8 taskId);
 static void Task_HandleShopMenuQuit(u8 taskId);
@@ -532,6 +560,38 @@ static const struct Seller sSellers[] = {
         .scrollMap = sNewShopMenu_SellerScrollMap_Jennie,
         .cursorGfx = sNewShopMenu_SellerCursorGfx_Jennie,
         .cursorPal = sNewShopMenu_SellerCursorPal_Jennie,
+    },
+    [SELLER_BEAUTY] = {
+        { .gfxId = OBJ_EVENT_GFX_BEAUTY },
+        .mugshotGfx = sNewShopMenu_SellerMugshotGfx_Beauty,
+        .mugshotPal = sNewShopMenu_SellerMugshotPal_Beauty,
+        .menuTileOffset = 9,
+        .menuGfx = sNewShopMenu_SellerMenuGfx_Beauty,
+        .menuCoinGfx = sNewShopMenu_SellerMenuCoinGfx_Beauty,
+        .menuPointGfx = sNewShopMenu_SellerMenuBpGfx_Beauty,
+        .menuPal = sNewShopMenu_SellerMenuPal_Beauty,
+        .menuMap = sNewShopMenu_SellerMenuMap_Beauty,
+        .scrollGfx = sNewShopMenu_SellerScrollGfx_Beauty,
+        .scrollPal = sNewShopMenu_SellerScrollPal_Beauty,
+        .scrollMap = sNewShopMenu_SellerScrollMap_Beauty,
+        .cursorGfx = sNewShopMenu_SellerCursorGfx_Beauty,
+        .cursorPal = sNewShopMenu_SellerCursorPal_Beauty,
+    },
+    [SELLER_TEALA] = {
+        { .gfxId = OBJ_EVENT_GFX_TEALA },
+        .mugshotGfx = sNewShopMenu_SellerMugshotGfx_Teala,
+        .mugshotPal = sNewShopMenu_SellerMugshotPal_Teala,
+        .menuTileOffset = 9,
+        .menuGfx = sNewShopMenu_SellerMenuGfx_Teala,
+        .menuCoinGfx = sNewShopMenu_SellerMenuCoinGfx_Teala,
+        .menuPointGfx = sNewShopMenu_SellerMenuBpGfx_Teala,
+        .menuPal = sNewShopMenu_SellerMenuPal_Teala,
+        .menuMap = sNewShopMenu_SellerMenuMap_Teala,
+        .scrollGfx = sNewShopMenu_SellerScrollGfx_Teala,
+        .scrollPal = sNewShopMenu_SellerScrollPal_Teala,
+        .scrollMap = sNewShopMenu_SellerScrollMap_Teala,
+        .cursorGfx = sNewShopMenu_SellerCursorGfx_Teala,
+        .cursorPal = sNewShopMenu_SellerCursorPal_Teala,
     },
 };
 
@@ -1172,9 +1232,9 @@ static inline u32 BuyMenuGetItemPrice(u32 id)
         case NEW_SHOP_TYPE_VARIABLE:
             return SearchItemListForPrice(sMartInfo.itemList[id]);
         case NEW_SHOP_TYPE_COINS:
-            return ItemId_GetCoinPrice(sMartInfo.itemList[id]);
+            return GetItemCoinPrice(sMartInfo.itemList[id]);
         case NEW_SHOP_TYPE_POINTS:
-            return ItemId_GetBpPrice(sMartInfo.itemList[id]);
+            return GetItemBpPrice(sMartInfo.itemList[id]);
     #ifdef MUDSKIP_OUTFIT_SYSTEM
         case NEW_SHOP_TYPE_OUTFIT:
             return GetOutfitPrice(sMartInfo.itemList[id]);

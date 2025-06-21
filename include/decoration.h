@@ -48,6 +48,8 @@ struct Decoration
     u8 shape;
     u8 category;
     u16 price;
+    u16 coinPrice;
+    u16 bpPrice;
     const u8 *description;
     const u16 *tiles;
 };
