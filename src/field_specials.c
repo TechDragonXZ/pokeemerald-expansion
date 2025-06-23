@@ -69,6 +69,8 @@
 #include "constants/metatile_labels.h"
 #include "constants/rgb.h"
 #include "palette.h"
+#include "item.h"
+#include "item_menu.h"
 #include "battle_util.h"
 #include "naming_screen.h"
 #include "rogue_voltorbflip.h"
@@ -4367,4 +4369,26 @@ void GetCodeFeedback(void)
         gSpecialVar_Result = 1;
     else
         gSpecialVar_Result = 0;
+}
+
+void ChooseItemFromBag(void)
+{
+    switch (VarGet(VAR_TEMP_1))
+    {
+    case POCKET_ITEMS:
+    case POCKET_POKE_BALLS:
+    case POCKET_MEDICINE:
+    case POCKET_BATTLE_ITEMS:
+    case POCKET_POWER_UP:
+    case POCKET_TM_HM:
+    case POCKET_BERRIES:
+    case POCKET_TREASURES:
+    case POCKET_MEGA_STONES:
+    case POCKET_Z_CRYSTALS:
+    case POCKET_KEY_ITEMS:
+    case POCKET_MATERIALS:
+        GoToBagMenu(ITEMMENULOCATION_CHOOSE_ITEM, VarGet(VAR_TEMP_1), CB2_ReturnToFieldContinueScript);
+    default:
+        break;
+    }
 }
