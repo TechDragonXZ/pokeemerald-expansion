@@ -525,3 +525,119 @@ RusturfTunnel_Text_MikePostBattle:
 	.string "protect POKéMON, right?\l"
 	.string "There's a feel-good story!$"
 
+RusturfTunnel_EventScript_HiddenLab_Door::
+	checkflag FLAG_HIDDEN_LAB_UNLOCKED
+	goto_if FALSE, RusturfTunnel_EventScript_HiddenLab_DoorEnd
+	setmetatile 23, 11, METATILE_RusturfTunnel_Door_TopLeft, TRUE
+	setmetatile 24, 11, METATILE_RusturfTunnel_Door_TopMiddle, TRUE
+	setmetatile 25, 11, METATILE_RusturfTunnel_Door_TopRight, TRUE
+	setmetatile 23, 12, METATILE_RusturfTunnel_Door_BottomLeft, TRUE
+	setmetatile 24, 12, METATILE_RusturfTunnel_Door_BottomMiddle, FALSE
+	setmetatile 25, 12, METATILE_RusturfTunnel_Door_BottomRight, TRUE
+	special DrawWholeMapView
+	end
+
+RusturfTunnel_EventScript_HiddenLab_DoorEnd::
+	end
+
+RusturfTunnel_Movement_StepAside::
+	walk_right
+	face_up
+	walk_in_place_fast_up
+	face_player
+	step_end
+
+RusturfTunnel_Movement_Flee::
+	walk_down
+	walk_fast_down
+	walk_faster_down
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	face_down
+	walk_in_place_faster_down
+	step_end
+
+RusturfTunnel_EventScript_ShadyMan::
+	lock
+	faceplayer
+	msgbox RusturfTunnel_Text_ShadyMan, MSGBOX_DEFAULT
+	waitmessage
+	closemessage
+    trainerbattle_double TRAINER_HIDDEN_LAB_GUARD, RusturfTunnel_Text_ShadyManIntro, RusturfTunnel_Text_ShadyManLost, RusturfTunnel_Text_NotEnoughMons, RusturfTunnel_EventScript_ShadyMan_PostBattle
+	release
+	end
+
+RusturfTunnel_EventScript_ShadyMan_PostBattle::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, RusturfTunnel_EventScript_ShadyMan_Exit
+	end
+
+RusturfTunnel_EventScript_ShadyMan_Exit::
+	lock
+	faceplayer
+	msgbox RusturfTunnel_Text_ShadyMan_GettingFired, MSGBOX_DEFAULT
+	waitmessage
+	closemessage
+	applymovement LOCALID_SHADY_MAN, RusturfTunnel_Movement_StepAside
+	waitmovement
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 5  @ shake delay
+	special ShakeCamera
+	delay 2
+	setmetatile 23, 11, METATILE_RusturfTunnel_Door_TopLeft, TRUE
+	setmetatile 24, 11, METATILE_RusturfTunnel_Door_TopMiddle, TRUE
+	setmetatile 25, 11, METATILE_RusturfTunnel_Door_TopRight, TRUE
+	setmetatile 23, 12, METATILE_RusturfTunnel_Door_BottomLeft, TRUE
+	setmetatile 24, 12, METATILE_RusturfTunnel_Door_BottomMiddle, FALSE
+	setmetatile 25, 12, METATILE_RusturfTunnel_Door_BottomRight, TRUE
+	special DrawWholeMapView
+	setflag FLAG_HIDDEN_LAB_UNLOCKED
+	goto RusturfTunnel_EventScript_ShadyMan_Flee
+	release
+	end
+
+RusturfTunnel_EventScript_ShadyMan_Flee::
+    setvar VAR_HIDDEN_LAB_STATE, 2
+	msgbox RusturfTunnel_Text_ShadyManFlee, MSGBOX_DEFAULT
+	waitmessage
+	closemessage
+	applymovement LOCALID_SHADY_MAN, RusturfTunnel_Movement_Flee
+	waitmovement
+	removeobject LOCALID_SHADY_MAN
+	release
+	end
+
+RusturfTunnel_Text_ShadyMan:
+	.string "All good no sign of danger yet.\n"
+	.string "Hehe, Hopefully my pay will be good.\p"
+	.string "… … …\p"
+	.string "Wait!? How much of that did you hear?\p"
+	.string "I… I… I mean, there's nothing\n"
+	.string "suspicious happening around here!\p"
+	.string "… … …\p"
+	.string "You don't believe me? Then we'll have to\n"
+	.string "settle this with a POKéMON battle!$"
+
+RusturfTunnel_Text_ShadyMan_GettingFired:
+	.string "Well since I'm likely fired anyways and\n"
+	.string "there's pretty much nothing stopping\p"
+	.string "you from getting in otherwise. I'm just\n"
+	.string "going to open the door for you so you\p"
+	.string "don't destroy it.$"
+
+RusturfTunnel_Text_ShadyManIntro:
+	.string "I can't afford to lose!$"
+
+RusturfTunnel_Text_ShadyManLost:
+	.string "There goes my job! Heh heh…$"
+
+RusturfTunnel_Text_ShadyManFlee:
+	.string "I'm out of here, good luck with going in\n"
+	.string "there, you're going to need it!$"
+
+RusturfTunnel_Text_NotEnoughMons::
+    .string "Not Enough POKéMON!$"

@@ -830,3 +830,16 @@ const struct Tileset gTileset_UnionRoom =
     .metatileAttributes = gMetatileAttributes_UnionRoom,
     .callback = NULL,
 };
+
+// Custom
+
+const struct Tileset gTileset_RangerBaseExterior =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_RangerBaseExterior,
+    .palettes = gTilesetPalettes_RangerBaseExterior,
+    .metatiles = gMetatiles_RangerBaseExterior,
+    .metatileAttributes = gMetatileAttributes_RangerBaseExterior,
+    .callback = InitTilesetAnim_RangerBaseExterior,
+};

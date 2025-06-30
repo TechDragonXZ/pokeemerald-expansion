@@ -4359,13 +4359,22 @@ void UseBlankMessageToCancelPokemonPic(void)
 
 void EnterCode(void)
 {
-    DoNamingScreen(NAMING_SCREEN_CODE, gStringVar2, 0, 0, 0, CB2_ReturnToFieldContinueScript);
+    if (FlagGet(FLAG_CODE_MODE) == TRUE)
+    {
+        DoNamingScreen(NAMING_SCREEN_NUMBERS, gStringVar2, 0, 0, 0, CB2_ReturnToFieldContinueScript);
+    }
+    else
+    {
+        DoNamingScreen(NAMING_SCREEN_CODE, gStringVar2, 0, 0, 0, CB2_ReturnToFieldContinueScript);
+    }
+    
 }
 
 void GetCodeFeedback(void)
 {
-    static const u8 sText_SampleCode[] = _("SampleCode");
-    if (!StringCompare(gStringVar2, sText_SampleCode))
+    static const u8 sText_DoorCode[] = _("5972");
+
+    if (!StringCompare(gStringVar2, sText_DoorCode))
         gSpecialVar_Result = 1;
     else
         gSpecialVar_Result = 0;

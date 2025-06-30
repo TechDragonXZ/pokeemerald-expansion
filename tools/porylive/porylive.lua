@@ -5,6 +5,9 @@ local SCRIPT_BUFFER        -- gPoryLiveScriptBuffer
 local SCRIPT_OVERRIDES_SIZE = 200
 local SCRIPT_BUFFER_SIZE = 102400 -- 100kb buffer
 
+-- OS variables
+local is_windows = false
+
 -- Socket server variables
 local server = nil
 local sockets = {}
@@ -15,6 +18,23 @@ local LISTEN_PORT = 1370
 local build_dir
 local bin_data_dir
 local generated_files_path
+
+-- Function to convert WSL path to Windows path
+function convert_wsl_path_to_windows(path)
+  if not is_windows then
+    return path  -- No conversion needed on non-Windows systems
+  end
+
+  -- Check if this is a WSL path (starts with /mnt/)
+  local drive_letter, rest_of_path = path:match("^/mnt/([a-zA-Z])/(.*)$")
+  if drive_letter and rest_of_path then
+    -- Convert /mnt/c/... to C:\...
+    local windows_path = drive_letter:upper() .. ":/" .. rest_of_path
+    return windows_path
+  end
+
+  return path  -- Return original path if not a WSL path
+end
 
 -- Function to set up project paths based on project root
 function setup_project_paths(project_root)
@@ -79,6 +99,9 @@ function reload()
   for i = 0, (SCRIPT_BUFFER_SIZE / 4) - 1 do
     emu.memory.cart0:write32(SCRIPT_BUFFER + i , 0)
   end
+  for i = 0, (SCRIPT_OVERRIDES_SIZE / 4) - 1 do
+    emu:write32(SCRIPT_OVERRIDES + i * 8, 0)
+  end
 
   -- Load the generated files list from script directory
   local status, file_list = pcall(function()
@@ -105,13 +128,14 @@ function reload()
     local files = {}
     
     for _, file_entry in ipairs(file_list) do
+      local original_filename = convert_wsl_path_to_windows(file_entry.filename)
       -- Verify the file exists
-      local test_file = io.open(file_entry.filename, "rb")
+      local test_file = io.open(original_filename, "rb")
       if test_file then
         test_file:close()
-        table.insert(files, file_entry.filename)
+        table.insert(files, original_filename)
       else
-        console:error("[-] File not found: " .. file_entry.filename)
+        console:error("[-] File not found: " .. original_filename)
       end
     end
     
@@ -162,7 +186,7 @@ function reload()
           is_new_script = (address == 0),  -- Mark if this is a new script (address 0)
           original_address = address  -- Store original address for reference
         }
-        
+
         -- Check if this file has lua_adjustments in the file_list
         for _, file_entry in ipairs(file_list) do
           if file_entry.filename == file_path and file_entry.lua_adjustments then
@@ -410,6 +434,10 @@ function start_porylive(path_to_project)
     console:error("[-] No path to project provided")
     return
   end
+
+  -- Detect if we're running on Windows
+  is_windows = path_to_project:match("^[a-zA-Z]:/") ~= nil
+
   local success = setup_project_paths(path_to_project)
   if not success then
     console:error("[-] Failed to setup project paths")
@@ -417,8 +445,6 @@ function start_porylive(path_to_project)
   end
   if emu == nil then
     console:log("[-] Please load your GBA ROM to before using Porylive")
-  else
-    reload()
   end
   init_socket_server()
 end

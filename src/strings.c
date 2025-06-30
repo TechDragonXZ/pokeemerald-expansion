@@ -1347,3 +1347,6 @@ const u8 gText_CannotSendMonToBoxHM[] = _("Cannot send that mon to the box,\nbec
 // Custom
 const u8 gText_HackingDeviceOn[] = _("Hacking Device Activated.{PAUSE_UNTIL_PRESS}");
 const u8 gText_HackingDeviceOff[] = _("Hacking Device Deactivated.{PAUSE_UNTIL_PRESS}");
+
+const u8 gText_PokeScannerOn[] = _("Poké Scanner Activated.{PAUSE_UNTIL_PRESS}");
+const u8 gText_PokeScannerOff[] = _("Poké Scanner Deactivated.{PAUSE_UNTIL_PRESS}");

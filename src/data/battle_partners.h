@@ -103,3 +103,115 @@
             },
         },
     },
+#line 45
+    [DIFFICULTY_NORMAL][PARTNER_YOUNG_MAN] =
+    {
+#line 46
+        .trainerName = _("Young Man"),
+#line 47
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+#line 48
+        .trainerPic = TRAINER_BACK_PIC_STEVEN,
+        .encounterMusic_gender =
+#line 50
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 52
+            .species = SPECIES_GHOLDENGO,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 52
+            .heldItem = ITEM_ABILITY_SHIELD,
+#line 57
+            .ev = TRAINER_PARTY_EVS(52, 0, 0, 16, 60, 24),
+#line 59
+            .iv = TRAINER_PARTY_IVS(31, 0, 31, 20, 31, 31),
+#line 53
+            .ability = ABILITY_GOOD_AS_GOLD,
+#line 54
+            .lvl = 30,
+#line 55
+            .ball = ITEM_TIMER_BALL,
+#line 56
+            .friendship = 255,
+#line 58
+            .nature = NATURE_MODEST,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 60
+                MOVE_MAKE_IT_RAIN,
+                MOVE_HEX,
+                MOVE_TERA_BLAST,
+                MOVE_METAL_SOUND,
+            },
+            },
+            {
+#line 65
+            .species = SPECIES_HONCHKROW,
+#line 65
+            .gender = TRAINER_MON_MALE,
+#line 65
+            .heldItem = ITEM_SCOPE_LENS,
+#line 70
+            .ev = TRAINER_PARTY_EVS(32, 12, 0, 8, 8, 60),
+#line 72
+            .iv = TRAINER_PARTY_IVS(31, 31, 13, 31, 0, 3),
+#line 66
+            .ability = ABILITY_SUPER_LUCK,
+#line 67
+            .lvl = 30,
+#line 68
+            .ball = ITEM_DUSK_BALL,
+#line 69
+            .friendship = 255,
+#line 71
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 73
+                MOVE_NIGHT_SLASH,
+                MOVE_AIR_CUTTER,
+                MOVE_FACADE,
+                MOVE_WHIRLWIND,
+            },
+            },
+            {
+#line 78
+            .nickname = COMPOUND_STRING("Lucky"),
+#line 78
+            .species = SPECIES_CINCCINO,
+#line 78
+            .gender = TRAINER_MON_FEMALE,
+#line 78
+            .heldItem = ITEM_LOADED_DICE,
+#line 85
+            .ev = TRAINER_PARTY_EVS(16, 24, 28, 20, 28, 4),
+#line 87
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 12, 22, 16),
+#line 79
+            .ability = ABILITY_TECHNICIAN,
+#line 80
+            .lvl = 30,
+#line 81
+            .ball = ITEM_FRIEND_BALL,
+#line 82
+            .friendship = 255,
+#line 86
+            .nature = NATURE_JOLLY,
+#line 83
+            .isShiny = TRUE,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+#line 84
+            .teraType = TYPE_STELLAR,
+            .moves = {
+#line 88
+                MOVE_TAIL_SLAP,
+                MOVE_BULLET_SEED,
+                MOVE_ROCK_BLAST,
+                MOVE_PLAY_ROUGH,
+            },
+            },
+        },
+    },

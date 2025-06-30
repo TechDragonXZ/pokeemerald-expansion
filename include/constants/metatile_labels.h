@@ -264,6 +264,12 @@
 #define METATILE_InsideShip_IntactDoor_Bottom_Locked    0x233
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B
 
+// gTileset_Lab
+#define METATILE_Lab_DoorFrame_Locked    0x2A2
+#define METATILE_Lab_DoorFrame_Unlocked  0x2B4
+#define METATILE_Lab_Door_Locked         0x297
+#define METATILE_Lab_Door_Unlocked       0x26F
+
 // gTileset_Lavaridge
 #define METATILE_Lavaridge_AshGrass             0x207
 #define METATILE_Lavaridge_CaveEntrance_Bottom  0x25E
@@ -434,6 +440,15 @@
 // gTileset_Rustboro
 #define METATILE_Rustboro_Door_Gray  0x21F
 #define METATILE_Rustboro_Door_Tan   0x22F
+
+// gTileset_RusturfTunnel
+#define METATILE_RusturfTunnel_Door_BottomLeft    0x235
+#define METATILE_RusturfTunnel_Door_BottomMiddle  0x214
+#define METATILE_RusturfTunnel_Door_BottomRight   0x236
+#define METATILE_RusturfTunnel_Door_Sealed        0x219
+#define METATILE_RusturfTunnel_Door_TopLeft       0x20B
+#define METATILE_RusturfTunnel_Door_TopMiddle     0x20C
+#define METATILE_RusturfTunnel_Door_TopRight      0x20D
 
 // gTileset_SecretBase
 #define METATILE_SecretBase_AttractMat_BottomLeft       0x313

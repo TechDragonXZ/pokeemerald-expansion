@@ -53,6 +53,7 @@ void ItemUseOutOfBattle_TownMap(u8 taskId);
 // Custom
 void ItemUseOutOfBattle_FashionCase(u8);
 void ItemUseOutOfBattle_HackingDevice(u8);
+void ItemUseOutOfBattle_PokeScanner(u8);
 
 enum {
     BALL_THROW_UNABLE_TWO_MONS,

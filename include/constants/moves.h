@@ -910,7 +910,12 @@
 
 #define MOVES_COUNT_GEN9 848
 
-#define MOVES_COUNT         MOVES_COUNT_GEN9
+// Custom
+#define MOVE_SOLAR_STORM 848
+
+#define MOVES_COUNT_CUSTOM 849
+
+#define MOVES_COUNT         MOVES_COUNT_CUSTOM
 
 // Z Moves
 #define MOVE_BREAKNECK_BLITZ (MOVES_COUNT + 0)

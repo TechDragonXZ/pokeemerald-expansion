@@ -490,3 +490,9 @@ const u16 gObjectEventPal_TMBall[] = INCBIN_U16("graphics/object_events/palettes
 
 const u32 gObjectEventPic_ItemBall[] = INCBIN_U32("graphics/object_events/pics/misc/itemball.4bpp");
 const u16 gObjectEventPal_ItemBall[] = INCBIN_U16("graphics/object_events/palettes/itemball.gbapal");
+
+const u32 gObjectEventPic_PKMNBall[] = INCBIN_U32("graphics/object_events/pics/misc/pkmnball.4bpp");
+const u16 gObjectEventPal_PKMNBall[] = INCBIN_U16("graphics/object_events/palettes/pkmnball.gbapal");
+
+const u32 gObjectEventPic_TeraCrystal[] = INCBIN_U32("graphics/object_events/pics/misc/tera_crystal.4bpp");
+const u16 gObjectEventPal_TeraCrystal[] = INCBIN_U16("graphics/object_events/palettes/tera_crystal.gbapal");

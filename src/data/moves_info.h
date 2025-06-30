@@ -22851,4 +22851,33 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .ignoresProtect = TRUE,
         .battleAnimScript = gBattleAnimMove_GMaxRapidFlow,
     },
+
+    // Custom
+
+    [MOVE_SOLAR_STORM] =
+    {
+        .name = COMPOUND_STRING("Solar Storm"),
+        .description = COMPOUND_STRING(
+            "Boosts the power of Fire-\n"
+            "and Electric type moves."),
+        .effect = EFFECT_SOLAR_STORM,
+        .power = 0,
+        .type = TYPE_FIRE,
+        .argument = { .type = TYPE_ELECTRIC },
+        .accuracy = 0,
+        .pp = 5,
+        .target = MOVE_TARGET_ALL_BATTLERS,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_SPD_UP_1 },
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_BETTER_WHEN_AUDIENCE_EXCITED,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = COMBO_STARTER_SUNNY_DAY,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_SunnyDay,
+        .validApprenticeMove = TRUE,
+    },
+
 };

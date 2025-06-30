@@ -963,11 +963,6 @@ bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y)
     u8 taskId;
     u8 spriteId;
 
-    if (FindTaskIdByFunc(Task_PokemonPicWindow) != TASK_NONE)
-    {
-        return FALSE;
-    }
-    else
     {
         spriteId = CreateMonSprite_PicBox(species, x * 8 + 40, y * 8 + 40, 0);
         taskId = CreateTask(Task_PokemonPicWindow, 0x50);
@@ -985,11 +980,18 @@ bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y)
 
 bool8 (*ScriptMenu_HidePokemonPic(void))(void)
 {
-    u8 taskId = FindTaskIdByFunc(Task_PokemonPicWindow);
+    u32 i, found = FALSE;
+    for (i = 0; i < NUM_TASKS; i++)
+    {
+        if (gTasks[i].isActive == TRUE && gTasks[i].func == Task_PokemonPicWindow)
+        {
+            gTasks[i].tState++;
+            found = TRUE;
+        }
+    }
 
-    if (taskId == TASK_NONE)
+    if (found == TRUE)
         return NULL;
-    gTasks[taskId].tState++;
     return IsPicboxClosed;
 }
 

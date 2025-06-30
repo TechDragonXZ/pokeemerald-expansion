@@ -391,6 +391,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MauvilleCity_GameCorner_EventScript_Bouncer",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_GAME_CORNER_NIGHT_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 27,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MauvilleCity_EventScript_NightMan_GoodLuck",
+      "flag": "FLAG_HIDE_GAME_CORNER_NIGHT_MAN"
     }
   ],
   "warp_events": [

@@ -11709,14 +11709,17 @@ const struct Item gItemsInfo[] =
     {
         .name = _("TM51"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "Raises the power of\n"
+            "Fire and Electric\n"
+            "type moves."),
         .importance = I_REUSABLE_TMS,
         .coinPrice = 1500,
         .bpPrice = 1500,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_SOLAR_STORM,
     },
 
     [ITEM_TM52] =
@@ -15066,5 +15069,36 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_MiningKit,
         .iconPalette = gItemIconPalette_MiningKit,
     },
- 
+
+    [ITEM_FAKE_ID_CARD] =
+    {
+        .name = _("Fake Trainer Card"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A well made fake\n"
+            "TRAINER CARD.\n"
+            "It's really well made!"),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_FakeId,
+        .iconPalette = gItemIconPalette_FakeId,
+    },
+
+    [ITEM_POKE_SCANNER] =
+    {
+        .name = _("Poké Scanner"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A tool used to\n"
+            "show hidden stats\n"
+            "of wild Pokémon."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeScanner,
+        .iconPic = gItemIcon_PokeScanner,
+        .iconPalette = gItemIconPalette_PokeScanner,
+    },
+
 };

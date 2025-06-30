@@ -71,7 +71,7 @@
 #define FLAG_DERBY_RESET                   0x39 // Derby Reset Flag
 #define FLAG_HACKING_DEVICE                0x3A // Hacking Device Flag
 #define FLAG_ORAS_DOWSING                  0x3B // ORAS Dowsing Machine Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
+#define FLAG_POKE_SCANNER                  0x3C // PokéScanner Flag
 #define FLAG_UNUSED_0x03D    0x3D // Unused Flag
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
@@ -255,7 +255,7 @@
 #define FLAG_RECEIVED_TM_ROAR                0xE7
 #define FLAG_RECEIVED_TM_GIGA_DRAIN          0xE8
 
-#define FLAG_UNUSED_0x0E9                    0xE9 // Unused Flag
+#define FLAG_CODE_MODE                       0xE9 // Code Mode Flag True = Numbers/False = Alphanumeric
 
 #define FLAG_RECEIVED_TM_REST                0xEA
 #define FLAG_RECEIVED_TM_ATTRACT             0xEB
@@ -658,19 +658,19 @@
 
 #define FLAG_HIDDEN_ITEMS_END   FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
+#define FLAG_HIDE_MAUVILLE_NIGHT_MAN  0x264 // Mauville City Night Man Flag
+#define FLAG_HELPED_NIGHT_MAN         0x265 // Gave Money to Night Man Flag
+#define FLAG_HIDE_MAUVILLE_YOUNG_MAN  0x266 // Mauville City Young Man Flag
+#define FLAG_HELPED_YOUNG_MAN         0x267 // Helped Young Man Flag
+#define FLAG_HIDE_GAME_CORNER_NIGHT_MAN  0x268 // Game Corner Night Man Flag
+#define FLAG_HIDE_HIDDEN_LAB_PEOPLE      0x269 // Hidden Lab People Flag
+#define FLAG_HIDE_HIDDEN_LAB_POLICE      0x26A // Hidden Lab Police Flag
+#define FLAG_HIDDEN_LAB_FAKE_ID_CARD     0x26B // Grabbed Fake Trainer ID Flag
+#define FLAG_HIDDEN_LAB_HACKING_DEVICE   0x26C // Found Hacking Device Flag
+#define FLAG_HIDDEN_LAB_BOOSTER_ENERGY   0x26D // Found Booster Energy Flag
+#define FLAG_HIDDEN_LAB_TM51             0x26E // Found TM51 Solar Storm Flag
+#define FLAG_HIDE_SHADY_MAN              0x26F // Rusturf Tunnel Shady Man Flag
+#define FLAG_HIDDEN_LAB_UNLOCKED         0x270 // Hidden Lab Door Unlocked Flag
 #define FLAG_UNUSED_0x271  0x271 // Unused Flag
 #define FLAG_UNUSED_0x272  0x272 // Unused Flag
 #define FLAG_UNUSED_0x273  0x273 // Unused Flag
@@ -1396,7 +1396,7 @@
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
 #define FLAG_SYS_PARTY_MOVE_RELEARNER               (SYSTEM_FLAGS + 0x21) // Move Relearner (Party) Flag
-#define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Unused Flag
+#define FLAG_SYS_STATS_EDITOR                       (SYSTEM_FLAGS + 0x22) // Party Stat Editor Flag
 #define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
 #define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
@@ -1578,7 +1578,7 @@
 // These flags are cleared once per day
 // The start and end are byte-aligned because the flags are cleared in byte increments
 #define DAILY_FLAGS_START                           (FLAG_UNUSED_0x91F + (8 - FLAG_UNUSED_0x91F % 8))
-#define FLAG_UNUSED_0x920                           (DAILY_FLAGS_START + 0x0)  // Unused Flag
+#define FLAG_DAILY_THIRSTY_MAN                      (DAILY_FLAGS_START + 0x0)  // Daily Thisrty Lilycove Department Store Man Flag
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
 #define FLAG_UNUSED_0x923                           (DAILY_FLAGS_START + 0x3)  // Unused Flag

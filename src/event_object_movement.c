@@ -571,6 +571,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_UltraWormhole,         OBJ_EVENT_PAL_TAG_ULTRA_WORMHOLE},
     {gObjectEventPal_MegaStone,             OBJ_EVENT_PAL_TAG_MEGASTONE},
     {gObjectEventPal_ItemBall,              OBJ_EVENT_PAL_TAG_ITEM_BALL},
+    {gObjectEventPal_PKMNBall,              OBJ_EVENT_PAL_TAG_PKMN_BALL},
+    {gObjectEventPal_TeraCrystal,           OBJ_EVENT_PAL_TAG_TERA_CRYSTAL},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

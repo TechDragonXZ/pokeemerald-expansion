@@ -349,6 +349,9 @@ enum BattleMoveEffects
     EFFECT_SPECTRAL_THIEF,
     EFFECT_RECOIL,
     EFFECT_SMACK_DOWN,
+
+    //Custom
+    EFFECT_SOLAR_STORM,
     NUM_BATTLE_MOVE_EFFECTS,
 };
 

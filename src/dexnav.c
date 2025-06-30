@@ -813,7 +813,7 @@ static u8 GetSearchLevel(u16 species)
 #if USE_DEXNAV_SEARCH_LEVELS == TRUE
     searchLevel = gSaveBlock3Ptr->dexNavSearchLevels[species];
 #else
-    searchLevel = 0;
+    searchLevel = 100;
 #endif
     return searchLevel;
 }

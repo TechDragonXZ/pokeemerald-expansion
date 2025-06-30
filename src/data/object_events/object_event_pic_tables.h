@@ -1378,6 +1378,10 @@ static const struct SpriteFrameImage sPicTable_ItemBall[] = {
     overworld_frame(gObjectEventPic_ItemBall, 2, 2, 0),
 };
 
+static const struct SpriteFrameImage sPicTable_PKMNBall[] = {
+    overworld_frame(gObjectEventPic_PKMNBall, 2, 2, 0),
+};
+
 static const struct SpriteFrameImage sPicTable_MegaStone[] = {
     overworld_frame(gObjectEventPic_MegaStone, 2, 2, 0),
     overworld_frame(gObjectEventPic_MegaStone, 2, 2, 1),
@@ -1390,4 +1394,8 @@ static const struct SpriteFrameImage sPicTable_HoopaRing[] = {
 
 static const struct SpriteFrameImage sPicTable_UltraWormhole[] = {
     obj_frame_tiles(gObjectEventPic_UltraWormhole),
+};
+
+static const struct SpriteFrameImage sPicTable_TeraCrystal[] = {
+    obj_frame_tiles(gObjectEventPic_TeraCrystal),
 };

@@ -2155,6 +2155,12 @@ const u16 gItemIconPalette_DoppelBonnets[] = INCBIN_U16("graphics/items/icon_pal
 const u32 gItemIcon_MiningKit[] = INCBIN_U32("graphics/items/icons/mining_kit.4bpp.smol");
 const u16 gItemIconPalette_MiningKit[] = INCBIN_U16("graphics/items/icon_palettes/mining_kit.gbapal");
 
+const u32 gItemIcon_PokeScanner[] = INCBIN_U32("graphics/items/icons/pokescanner.4bpp.smol");
+const u16 gItemIconPalette_PokeScanner[] = INCBIN_U16("graphics/items/icon_palettes/pokescanner.gbapal");
+
+const u32 gItemIcon_FakeId[] = INCBIN_U32("graphics/items/icons/fake_id.4bpp.smol");
+const u16 gItemIconPalette_FakeId[] = INCBIN_U16("graphics/items/icon_palettes/fake_id.gbapal");
+
 const u16 gItemIconPalette_HackingDevice[] = INCBIN_U16("graphics/items/icon_palettes/hacking_device.gbapal");
 const u16 gItemIconPalette_CyanScarf[] = INCBIN_U16("graphics/items/icon_palettes/cyan_scarf.gbapal");
 

@@ -61,7 +61,17 @@ LilycoveCity_DepartmentStoreRooftop_EventScript_ManClearOutSale::
 	end
 
 LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyMan::
-	msgbox LilycoveCity_DepartmentStoreRooftop_Text_BoneDryThirsty, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_DAILY_THIRSTY_MAN, LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManQuenched
+	goto_if_eq VAR_LILYCOVE_CITY_STATE, 1, LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManDrink
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_BoneDryThirsty, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManDeclined
+	case YES, LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManAccepted
+	case MULTI_B_PRESSED, LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManDeclined
+	closemessage
+	release
 	end
 
 LilycoveCity_DepartmentStoreRooftop_EventScript_VendingMachine::
@@ -197,7 +207,10 @@ LilycoveCity_DepartmentStoreRooftop_Text_BeenWaitingForClearOutSale:
 	.string "here. I'm going to load up, that I am!$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_BoneDryThirsty:
-	.string "Ohh… I'm bone-dry thirsty!$"
+	.string "Ohh… I'm bone-dry thirsty!\n"
+	.string "… … …\p"
+	.string "Say, you wouldn't mind buying me a soda?\n"
+	.string "I'll make it worth your time if you do.$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_WhichDrinkWouldYouLike:
 	.string "It's a VENDING MACHINE.\n"
@@ -217,3 +230,119 @@ LilycoveCity_DepartmentStoreRooftop_Text_NotEnoughMoney:
 
 LilycoveCity_DepartmentStoreRooftop_Text_DecidedAgainstBuyingDrink:
 	.string "Decided against buying a drink.$"
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManAccepted::
+	lock
+	faceplayer
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_Thankful, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_LILYCOVE_CITY_STATE, 1
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManDeclined::
+	lock
+	faceplayer
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_OhThatsFine, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_LILYCOVE_CITY_STATE, 0
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManDrink::
+	lock
+	faceplayer
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_YoureBack, MSGBOX_DEFAULT
+	closemessage
+	chooseitem POCKET_MEDICINE
+	goto_if_eq VAR_ITEM_ID, ITEM_SODA_POP, LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManQuenched
+	goto_if_eq VAR_ITEM_ID, ITEM_LEMONADE, LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManWrongDrink
+	goto_if_eq VAR_ITEM_ID, ITEM_FRESH_WATER, LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManWrongDrink
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_NotDrink, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManQuenched::
+	lock
+	faceplayer
+	removeitem ITEM_SODA_POP, 1
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_Greatful, MSGBOX_DEFAULT
+	closemessage
+	goto_if_unset FLAG_DAILY_THIRSTY_MAN, LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManReward
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManReward::
+	lock
+	faceplayer
+	setflag FLAG_DAILY_THIRSTY_MAN
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_Reward, MSGBOX_DEFAULT
+	closemessage
+	random 2
+	switch VAR_RESULT
+	case 0, LilycoveCity_DepartmentStoreRooftop_EventScript_SilverReward
+	case 1, LilycoveCity_DepartmentStoreRooftop_EventScript_GoldReward
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_SilverReward::
+	lock
+	faceplayer
+	bufferitemname STR_VAR_2, ITEM_BOTTLE_CAP
+	giveitem ITEM_BOTTLE_CAP, 1
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_FromCollection, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_GoldReward::
+	lock
+	faceplayer
+	bufferitemname STR_VAR_2, ITEM_GOLD_BOTTLE_CAP
+	giveitem ITEM_GOLD_BOTTLE_CAP, 1
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_FromCollection, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyManWrongDrink::
+	lock
+	faceplayer
+	bufferitemname STR_VAR_2, VAR_ITEM_ID
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_NotRightDrink, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_Text_Thankful::
+	.string "Thank you!\p"
+	.string "You can get a bottle of Soda Pop\n"
+	.string "from the vending machines over there.$"
+
+LilycoveCity_DepartmentStoreRooftop_Text_OhThatsFine::
+	.string "Oh, it's fine, you don't have to.$"
+
+LilycoveCity_DepartmentStoreRooftop_Text_YoureBack::
+	.string "You're back. Did you bring it?$"
+
+LilycoveCity_DepartmentStoreRooftop_Text_NotDrink::
+	.string "Sorry, but this isn't a drink.$"
+
+LilycoveCity_DepartmentStoreRooftop_Text_NotRightDrink::
+	.string "Sorry, but this isn't the right drink.\n"
+	.string "I wanted a Soda Pop not {STR_VAR_2}.$"
+
+LilycoveCity_DepartmentStoreRooftop_Text_Greatful::
+	.string "Once again thank you for this drink!\p"
+	.string "Gulp Gulp\p"
+	.string "That hit the sopt!$"
+
+LilycoveCity_DepartmentStoreRooftop_Text_Reward::
+	.string "As promised, here's your reward.$"
+
+LilycoveCity_DepartmentStoreRooftop_Text_FromCollection::
+	.string "It's a {STR_VAR_2} from my collection,\n"
+	.string "I heard that there's a guy who accepts\p"
+	.string "them for some kind of service right\n"
+	.string "here in LILYCOVE CITY.$"

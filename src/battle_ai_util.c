@@ -3767,7 +3767,8 @@ bool32 IsMoveEffectWeather(u32 move)
       || effect == EFFECT_SANDSTORM
       || effect == EFFECT_HAIL
       || effect == EFFECT_SNOWSCAPE
-      || effect == EFFECT_CHILLY_RECEPTION))
+      || effect == EFFECT_CHILLY_RECEPTION
+      || effect == EFFECT_SOLAR_STORM))
         return TRUE;
     return FALSE;
 }
@@ -3783,7 +3784,8 @@ bool32 PartnerMoveEffectIsTerrain(u32 battlerAtkPartner, u32 partnerMove)
      && (partnerEffect == EFFECT_GRASSY_TERRAIN
       || partnerEffect == EFFECT_MISTY_TERRAIN
       || partnerEffect == EFFECT_ELECTRIC_TERRAIN
-      || partnerEffect == EFFECT_PSYCHIC_TERRAIN))
+      || partnerEffect == EFFECT_PSYCHIC_TERRAIN
+      || partnerEffect == EFFECT_SOLAR_STORM))
         return TRUE;
 
     return FALSE;

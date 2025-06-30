@@ -3432,6 +3432,10 @@ extern const u32 gItemIcon_DoppelBonnets[];
 extern const u16 gItemIconPalette_DoppelBonnets[];
 extern const u32 gItemIcon_MiningKit[];
 extern const u16 gItemIconPalette_MiningKit[];
+extern const u32 gItemIcon_PokeScanner[];
+extern const u16 gItemIconPalette_PokeScanner[];
+extern const u32 gItemIcon_FakeId[];
+extern const u16 gItemIconPalette_FakeId[];
 
 // Palettes
 extern const u16 gItemIconPalette_HackingDevice[];

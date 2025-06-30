@@ -1702,6 +1702,14 @@
       "y": 4,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_RANGER_BASE",
+      "name": "RANGER BASE",
+      "x": 10,
+      "y": 0,
+      "width": 1,
+      "height": 1
     }
   ]
 }

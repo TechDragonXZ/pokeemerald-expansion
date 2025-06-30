@@ -2,6 +2,7 @@
 
 MauvilleCity_GameCorner_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerId_Onframe
+	map_script MAP_SCRIPT_ON_LOAD, MauvilleCity_GameCorner_OnLoad
 	.byte 0
 
     @ Game Corner prices
@@ -1813,3 +1814,18 @@ MauvilleCity_GameCorner_Dolls:
 	.2byte DECOR_CYNDAQUIL_DOLL
 	.2byte DECOR_TOTODILE_DOLL
 	pokemartlistend
+
+MauvilleCity_GameCorner_OnLoad::
+	call_if_unset FLAG_HELPED_NIGHT_MAN, MauvilleCity_GameCorner_NightManDisppears
+	call_if_set FLAG_HELPED_NIGHT_MAN, MauvilleCity_GameCorner_NightManAppears
+	end
+
+MauvilleCity_GameCorner_NightManAppears::
+	clearflag FLAG_HIDE_GAME_CORNER_NIGHT_MAN
+	return
+	end
+
+MauvilleCity_GameCorner_NightManDisppears::
+	setflag FLAG_HIDE_GAME_CORNER_NIGHT_MAN
+	return
+	end

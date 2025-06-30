@@ -2454,4 +2454,8 @@ extern const u8 gText_NoRoomForTreasure[];
 extern const u8 gText_HackingDeviceOn[];
 extern const u8 gText_HackingDeviceOff[];
 
+// Poké Scanner
+extern const u8 gText_PokeScannerOn[];
+extern const u8 gText_PokeScannerOff[];
+
 #endif // GUARD_STRINGS_H

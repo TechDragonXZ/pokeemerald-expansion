@@ -1163,3 +1163,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
 	.include "data/scripts/mining_spots.inc"
+	.include "data/scripts/following_npcs.inc"
+	.include "data/scripts/tera_crystals.inc"
+
+	.include "data/maps/RusturfTunnel_HiddenLab/scripts.inc"
+
+	.include "data/maps/RangerBaseExterior/scripts.inc"
+
+	.include "data/maps/RangerBase/scripts.inc"

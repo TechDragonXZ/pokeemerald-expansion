@@ -41,3 +41,51 @@ EVs: 252 Atk / 252 SpA / 6 SpD
 - Protect
 - Solar Beam
 - Dragon Claw
+
+=== PARTNER_YOUNG_MAN ===
+Name: Young Man
+Class: Pkmn Trainer 1
+Pic: Steven
+Gender: Male
+Music: Male
+
+Gholdengo @ Ability Shield
+Ability: Good as Gold
+Level: 30
+Ball: ITEM_TIMER_BALL
+Happiness: 255
+EVs: 52 HP / 60 SpA / 24 SpD / 16 Spe
+Modest Nature
+IVs: 0 Atk / 20 Spe
+- Make It Rain
+- Hex
+- Tera Blast
+- Metal Sound
+
+Honchkrow (M) @ Scope Lens
+Ability: Super Luck
+Level: 30
+Ball: ITEM_DUSK_BALL
+Happiness: 255
+EVs: 32 HP / 12 Atk / 8 SpA / 60 SpD / 8 Spe
+Adamant Nature
+IVs: 13 Def / 0 SpA / 3 SpD
+- Night Slash
+- Air Cutter
+- Facade
+- Whirlwind
+
+Lucky (Cinccino) (F) @ Loaded Dice
+Ability: Technician
+Level: 30
+Ball: ITEM_FRIEND_BALL
+Happiness: 255
+Shiny: Yes
+Tera Type: Stellar
+EVs: 16 HP / 24 Atk / 28 Def / 28 SpA / 4 SpD / 20 Spe
+Jolly Nature
+IVs: 22 SpA / 16 SpD / 12 Spe
+- Tail Slap
+- Bullet Seed
+- Rock Blast
+- Play Rough

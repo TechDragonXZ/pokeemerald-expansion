@@ -608,3 +608,14 @@ Route119_Text_TrainerTipsDecoration:
 	.string "Pick your favorite items and create\n"
 	.string "your very own SECRET BASE exactly the\l"
 	.string "way you want.$"
+
+Route119_EventScript_UnderConstruction::
+	lock
+	faceplayer
+	msgbox Route119_Text_UnderConstruction, MSGBOX_DEFAULT
+	waitmessage
+	closemessage
+	end
+
+Route119_Text_UnderConstruction:
+	.string "Sorry this area is under construction.$"

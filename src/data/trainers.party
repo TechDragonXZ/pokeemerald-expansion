@@ -16873,3 +16873,220 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_MAUVILLE_YOUNG_MAN ===
+Name: Young Man
+Class: Pkmn Trainer 1
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+
+Gholdengo @ Ability Shield
+Ability: Good as Gold
+Level: 30
+Ball: ITEM_TIMER_BALL
+Happiness: 255
+EVs: 52 HP / 60 SpA / 24 SpD / 16 Spe
+Modest Nature
+IVs: 0 Atk / 20 Spe
+- Make It Rain
+- Hex
+- Tera Blast
+- Metal Sound
+
+Honchkrow (M) @ Scope Lens
+Ability: Super Luck
+Level: 30
+Ball: ITEM_DUSK_BALL
+Happiness: 255
+EVs: 32 HP / 12 Atk / 8 SpA / 60 SpD / 8 Spe
+Adamant Nature
+IVs: 13 Def / 0 SpA / 3 SpD
+- Night Slash
+- Air Cutter
+- Facade
+- Whirlwind
+
+Lucky (Cinccino) (F) @ Loaded Dice
+Ability: Technician
+Level: 30
+Ball: ITEM_FRIEND_BALL
+Happiness: 255
+Shiny: Yes
+Tera Type: Stellar
+EVs: 16 HP / 24 Atk / 28 Def / 28 SpA / 4 SpD / 20 Spe
+Jolly Nature
+IVs: 22 SpA / 16 SpD / 12 Spe
+- Tail Slap
+- Bullet Seed
+- Rock Blast
+- Play Rough
+
+=== TRAINER_HIDDEN_LAB_GUARD ===
+Name: Shady Man
+Class: Pkmn Trainer 1
+Pic: Collector
+Gender: Male
+Music: Male
+Double Battle: Yes
+
+Ms. Mime (Mr. Mime) (F) @ Sitrus Berry
+Ability: Soundproof
+Level: 30
+Ball: ITEM_PARK_BALL
+Happiness: 255
+EVs: 36 HP / 16 Atk / 52 Def / 24 SpA / 76 Spe
+Timid Nature
+IVs: 11 HP / 0 Atk / 12 Def / 8 SpD / 14 Spe
+- Psyshock
+- Dazzling Gleam
+- Shadow Ball
+- Barrier
+
+Weezing-Galar (M) @ Misty Seed
+Ability: Misty Surge
+Level: 30
+Ball: ITEM_PARK_BALL
+Happiness: 255
+EVs: 52 HP / 16 Atk / 36 Def / 92 SpA / 36 SpD / 64 Spe
+Bold Nature
+IVs: 15 HP / 0 Atk / 23 SpA / 10 SpD / 5 Spe
+- Sludge Bomb
+- Strange Steam
+- Toxic
+- Smokescreen
+
+=== TRAINER_HIDDEN_LAB_LACKY_1 ===
+Name: Lab Tech
+Class: Pkmn Trainer 1
+Pic: Collector
+Gender: Male
+Music: Male
+Double Battle: No
+
+Alakazam (M) @ Twisted Spoon
+Ability: Inner Focus
+Level: 30
+Ball: ITEM_QUICK_BALL
+Happiness: 255
+EVs: 24 HP / 36 Atk / 24 Def / 68 SpA / 12 SpD / 36 Spe
+Timid Nature
+IVs: 0 Atk
+- Psychic
+- Energy Ball
+- Tri Attack
+- Calm Mind
+
+Thievul (F) @ Dark Gem
+Ability: Unburden
+Level: 30
+Ball: ITEM_QUICK_BALL
+Happiness: 255
+EVs: 24 HP / 68 Atk / 40 Def / 36 SpA / 48 SpD / 64 Spe
+Adamant Nature
+IVs: 13 HP / 10 Def / 20 SpA / 5 SpD / 12 Spe
+- Crunch
+- Acrobatics
+- Agility
+- Baton Pass
+
+=== TRAINER_HIDDEN_LAB_LACKY_2 ===
+Name: Lab Tech
+Class: Pkmn Trainer 1
+Pic: Collector
+Gender: Male
+Music: Male
+Double Battle: No
+
+Clodsire (F) @ Leftovers
+Ability: Poison Point
+Level: 30
+Ball: ITEM_REPEAT_BALL
+Happiness: 255
+EVs: 52 HP / 28 Atk / 36 Def / 52 SpA / 12 SpD / 24 Spe
+Modest Nature
+IVs: 11 HP / 7 Atk / 8 SpA / 21 SpD / 19 Spe
+- Sludge Wave
+- Earth Power
+- Chilling Water
+- Recover
+
+Slowbro-Galar (M) @ Black Sludge
+Ability: Quick Draw
+Level: 30
+Ball: ITEM_REPEAT_BALL
+Happiness: 255
+EVs: 52 HP / 24 Atk / 12 Def / 52 SpA / 12 SpD / 24 Spe
+Modest Nature
+IVs: 18 HP / 10 Atk / 21 Def / 18 SpD / 7 Spe
+- Shell Side Arm
+- Psybeam
+- Calm Mind
+- Protect
+
+=== TRAINER_HIDDEN_LAB_BOSS ===
+Name: Lab Boss
+Class: Scientist
+Pic: Scientist
+Gender: Male
+Music: Male
+Double Battle: Yes
+Mugshot: Purple
+Starting Status: Electric Terrain
+
+Slither Wing @ Life Orb
+Ability: Protosynthesis
+Level: 30
+Happiness: 255
+Tags: Lead
+EVs: 24 HP / 52 Atk / 20 Def / 36 SpA / 12 SpD / 44 Spe
+Jolly Nature
+IVs: 18 HP / 15 Def / 9 SpA / 20 SpD / 10 Spe
+- Lunge
+- Body Press
+- Flare Blitz
+- Bulk Up
+
+Iron Moth @ Poisonium Z
+Ability: Quark Drive
+Level: 30
+Happiness: 255
+Tags: Lead
+EVs: 12 HP / 40 Atk / 12 Def / 36 SpA / 12 SpD / 24 Spe
+Modest Nature
+IVs: 22 HP / 0 Atk / 10 Def / 12 SpD / 18 Spe
+- Fiery Dance
+- Sludge Wave
+- Bug Buzz
+- Calm Mind
+
+Volcarona (M) @ Fire Gem
+Ability: Flame Body
+Level: 32
+Tera Type: Fire
+Happiness: 255
+Tags: Ace
+EVs: 48 HP / 20 Atk / 44 Def / 24 SpA / 12 SpD / 16 Spe
+Modest Nature
+IVs: 14 HP / 0 Atk / 13 Def / 12 SpD / 23 Spe
+- Fiery Dance
+- Bug Buzz
+- Solar Storm
+- Quiver Dance
+
+Volcarona (F) @ Bug Gem
+Ability: Flame Body
+Level: 32
+Happiness: 255
+Shiny: Yes
+Dynamax Level: 1
+Gigantamax: No
+Tags: Ace
+EVs: 48 HP / 20 Atk / 44 Def / 24 SpA / 12 SpD / 16 Spe
+Modest Nature
+IVs: 14 HP / 0 Atk / 13 Def / 12 SpD / 23 Spe
+- Fiery Dance
+- Bug Buzz
+- Solar Storm
+- Quiver Dance

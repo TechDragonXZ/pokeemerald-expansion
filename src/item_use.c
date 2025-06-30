@@ -1862,6 +1862,27 @@ void ItemUseOutOfBattle_HackingDevice(u8 taskId)
     FlagToggle(FLAG_HACKING_DEVICE);
 }
 
+void ItemUseOutOfBattle_PokeScanner(u8 taskId)
+{
+    if (FlagGet(FLAG_POKE_SCANNER))
+    {
+        PlaySE(SE_PC_OFF);
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_PokeScannerOff, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_PokeScannerOff, CloseItemMessage);
+    }
+    else
+    {
+        PlaySE(SE_PC_ON);
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_PokeScannerOn, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_PokeScannerOn, CloseItemMessage);
+    }
+    FlagToggle(FLAG_POKE_SCANNER);
+}
+
 // Start hexorb Branch
 void ItemUseOutOfBattle_Hexorb(u8 taskId)
 {

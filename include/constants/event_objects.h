@@ -253,11 +253,13 @@
 #define OBJ_EVENT_GFX_MEGA_STONE                 246
 #define OBJ_EVENT_GFX_HOOPA_RING                 247
 #define OBJ_EVENT_GFX_ULTRA_WORMHOLE             248
+#define OBJ_EVENT_GFX_PKMN_BALL                  249
+#define OBJ_EVENT_GFX_TERA_CRYSTAL               250
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        249
+#define NUM_OBJ_EVENT_GFX                        251
 
 
 // These are dynamic object gfx ids.
@@ -390,6 +392,8 @@
 #define OBJ_EVENT_PAL_TAG_ULTRA_WORMHOLE          0x1128
 #define OBJ_EVENT_PAL_TAG_MEGASTONE               0x1129
 #define OBJ_EVENT_PAL_TAG_ITEM_BALL               0x1130
+#define OBJ_EVENT_PAL_TAG_PKMN_BALL               0x1131
+#define OBJ_EVENT_PAL_TAG_TERA_CRYSTAL            0x1132
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

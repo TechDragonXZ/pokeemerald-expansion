@@ -75,6 +75,7 @@ static void QueueAnimTiles_SootopolisGym_Waterfalls(u16);
 static void QueueAnimTiles_EliteFour_GroundLights(u16);
 static void QueueAnimTiles_EliteFour_WallLights(u16);
 static void QueueAnimTiles_Mauville_Game_Corner_Lights(u16);
+static void TilesetAnim_RangerBaseExterior(u16);
 
 const u16 gTilesetAnims_MauvilleGameCorner_Lights_Frame0[] = INCBIN_U16("data/tilesets/secondary/mauville_game_corner/anim/lights/light_anim_0.4bpp");
 const u16 gTilesetAnims_MauvilleGameCorner_Lights_Frame1[] = INCBIN_U16("data/tilesets/secondary/mauville_game_corner/anim/lights/light_anim_1.4bpp");
@@ -1222,4 +1223,34 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
         if (!--sSecondaryTilesetAnimCounterMax)
             sSecondaryTilesetAnimCallback = NULL;
     }
+}
+
+void InitTilesetAnim_RangerBaseExterior(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_RangerBaseExterior;
+}
+
+static void TilesetAnim_RangerBaseExterior(u16 timer)
+{
+    if (timer % 8 == 0)
+    {
+        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 0);
+        QueueAnimTiles_Rustboro_Fountain(timer / 8);
+    }
+    if (timer % 8 == 1)
+        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 1);
+    if (timer % 8 == 2)
+        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 2);
+    if (timer % 8 == 3)
+        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 3);
+    if (timer % 8 == 4)
+        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 4);
+    if (timer % 8 == 5)
+        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 5);
+    if (timer % 8 == 6)
+        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 6);
+    if (timer % 8 == 7)
+        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 7);
 }

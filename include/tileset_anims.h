@@ -33,4 +33,7 @@ void InitTilesetAnim_MauvilleGameCorner(void);
 void InitTilesetAnim_BattleDome(void);
 void InitTilesetAnim_BattlePyramid(void);
 
+// Custom
+void InitTilesetAnim_RangerBaseExterior(void);
+
 #endif // GUARD_TILESET_ANIMS_H

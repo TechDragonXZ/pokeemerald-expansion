@@ -10,6 +10,8 @@ MauvilleCity_OnTransition:
 	clearflag FLAG_MAUVILLE_GYM_BARRIERS_STATE
 	setvar VAR_MAUVILLE_GYM_STATE, 0
 	call_if_set FLAG_GOT_TM_THUNDERBOLT_FROM_WATTSON, MauvilleCity_EventScript_MoveWattsonBackToGym
+	call_if_unset FLAG_HELPED_NIGHT_MAN, MauvilleCity_EventScript_NightManSetup
+	call_if_unset FLAG_HELPED_YOUNG_MAN, MauvilleCity_EventScript_YoungManSetup
 	end
 
 MauvilleCity_EventScript_MoveWattsonBackToGym::
@@ -662,3 +664,352 @@ MauvilleCity_Text_ExplainTV:
 
 MauvilleCity_Text_BeenCheckingOutTV:
 	.string "Hi, have you been checking out TVs?$"
+
+MauvilleCity_Movement_NightMan_EnterGamecorner:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+MauvilleCity_Movement_NightMan_EnterGamecorner_Player:
+	walk_up
+	walk_right
+	face_left
+	step_end
+
+MauvilleCity_Movement_NightMan_ExitsGamecorner:
+	walk_down
+	walk_down
+	face_player
+	step_end
+
+MauvilleCity_Movement_NightMan_ReenterGamecorner:
+	walk_up
+	walk_up
+	step_end
+
+MauvilleCity_EventScript_NightManSetup::
+	gettimeofday
+	call_if_eq VAR_0x8000, 3, MauvilleCity_EventScript_NightManAppears
+	call_if_ne VAR_0x8000, 3, MauvilleCity_EventScript_NightManDisappears
+	return
+
+MauvilleCity_EventScript_NightManAppears::
+	setobjectxy LOCALID_MAUVILLE_NIGHT_MAN, 8, 17
+	clearflag FLAG_HIDE_MAUVILLE_NIGHT_MAN
+	return
+
+MauvilleCity_EventScript_NightManDisappears::
+	removeobject LOCALID_MAUVILLE_NIGHT_MAN
+	setflag FLAG_HIDE_MAUVILLE_NIGHT_MAN
+	return
+
+MauvilleCity_EventScript_NightMan::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_NightMan_LowOnMoney, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, MauvilleCity_EventScript_NightMan_Declined
+	case YES, MauvilleCity_EventScript_NightMan_Accepted
+	case MULTI_B_PRESSED, MauvilleCity_EventScript_NightMan_Declined
+	release
+	end
+
+MauvilleCity_EventScript_NightMan_Declined::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_NightMan_ItsAlright, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MauvilleCity_EventScript_NightMan_Accepted::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_NightMan_YouSure, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, MauvilleCity_EventScript_NightMan_Declined
+	case YES, MauvilleCity_EventScript_NightMan_GiveMoney
+	case MULTI_B_PRESSED, MauvilleCity_EventScript_NightMan_Declined
+	closemessage
+	release
+	end
+
+MauvilleCity_EventScript_NightMan_GiveMoney::
+	lock
+	faceplayer
+	showmoneybox 0, 0
+	checkmoney 5000
+	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_EventScript_NightMan_NotEnoughMoney
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_EventScript_NightMan_NoCoinCase
+	msgbox MauvilleCity_Text_NightMan_ThankYou, MSGBOX_DEFAULT
+	closemessage
+	removemoney 5000
+	updatemoneybox
+	msgbox MauvilleCity_Text_NightMan_StayHere, MSGBOX_DEFAULT
+	waitmessage
+	closemessage
+	hidemoneybox
+	hidefollower
+	applymovement VAR_LAST_TALKED, MauvilleCity_Movement_NightMan_EnterGamecorner
+	applymovement LOCALID_PLAYER, MauvilleCity_Movement_NightMan_EnterGamecorner_Player
+	waitmovement
+	playse SE_DOOR
+	fadescreenswapbuffers FADE_TO_BLACK
+	hideobjectat VAR_LAST_TALKED, MAP_MAUVILLE_CITY
+	delay 5
+	playse SE_DOOR
+	fadescreenswapbuffers FADE_FROM_BLACK
+	addhours 3
+	msgbox MauvilleCity_Text_NightMan_HoursLater, MSGBOX_DEFAULT
+	closemessage
+	delay 5
+	showobjectat VAR_LAST_TALKED, MAP_MAUVILLE_CITY
+	applymovement VAR_LAST_TALKED, MauvilleCity_Movement_NightMan_ExitsGamecorner
+	showmoneybox 0, 0
+	showcoinsbox 1, 5
+	msgbox MauvilleCity_Text_NightMan_ImBack, MSGBOX_DEFAULT
+	waitmessage
+	closemessage
+	addmoney 15000
+	addcoins 1000
+	updatemoneybox
+	updatecoinsbox 1, 5
+	givemon SPECIES_GIMMIGHOUL_ROAMING, 20, ITEM_AMULET_COIN, ITEM_LUXURY_BALL, NATURE_ADAMANT, 0, MON_GENDERLESS, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_HEX, MOVE_PAY_DAY, MOVE_TERA_BLAST, MOVE_CELEBRATE, FALSE, FALSE, TYPE_STEEL
+	msgbox MauvilleCity_Text_NightMan_GoodLuck, MSGBOX_DEFAULT
+	waitmessage
+	hidecoinsbox 1, 5
+	hidemoneybox
+	closemessage
+	applymovement VAR_LAST_TALKED, MauvilleCity_Movement_NightMan_ReenterGamecorner
+	waitmovement
+	removeobject VAR_LAST_TALKED, MAP_MAUVILLE_CITY
+	setflag FLAG_HIDE_MAUVILLE_NIGHT_MAN
+	setflag FLAG_HELPED_NIGHT_MAN
+	release
+	end
+
+MauvilleCity_EventScript_NightMan_GoodLuck::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_NightMan_GoodLuck, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MauvilleCity_EventScript_NightMan_NotEnoughMoney::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_NightMan_Sorry, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MauvilleCity_EventScript_NightMan_NoCoinCase::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_NightMan_NoCoinCase, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MauvilleCity_Text_NightMan_LowOnMoney:
+	.string "Sigh, this day has been terrible for me.\n"
+	.string "Say, you wouldn't mind lending me some\p"
+	.string "money? Say ¥5000?\n"
+	.string "I'll pay you back as soon as possible.$"
+
+MauvilleCity_Text_NightMan_ItsAlright:
+	.string "Sigh, I guess I'll call it a night.$"
+
+MauvilleCity_Text_NightMan_ThankYou:
+	.string "Really!?\n"
+	.string "I can't thank you enough young man!$"
+
+MauvilleCity_Text_NightMan_StayHere:
+	.string "Young man, I feel as if my luck has\n"
+	.string "improved. Stay here for a minute and I'm\p"
+	.string "going to win enough to pay you back!$"
+
+MauvilleCity_Text_NightMan_ImBack:
+	.string "Young man, thanks to your donation, my\n"
+	.string "luck has definitely improved! As\p"
+	.string "promised, here's your payment and a\n"
+	.string "Pokémon that I found in my Coin Case.$"
+
+MauvilleCity_Text_NightMan_GoodLuck:
+	.string "Young man, I hope that you have good\n"
+	.string "luck as you continue on your journey.$"
+
+MauvilleCity_Text_NightMan_YouSure:
+	.string "Thank you. But are you sure?$"
+
+MauvilleCity_Text_NightMan_Sorry:
+	.string "Sorry, but you don't have enough money…$"
+
+MauvilleCity_Text_NightMan_NoCoinCase:
+	.string "Sorry, but you don't have a Coin Case…$"
+
+MauvilleCity_Text_NightMan_HoursLater:
+	.string "3 Hours Later…$"
+
+MauvilleCity_Movement_YoungMan_Nervous::
+	walk_in_place_fast_up
+	delay_16
+	walk_in_place_fast_left
+	delay_16
+	walk_in_place_fast_down
+	delay_16
+	walk_in_place_fast_right
+	delay_16
+	face_player
+	step_end
+
+MauvilleCity_EventScript_YoungManSetup::
+	call_if_set FLAG_HELPED_YOUNG_MAN, MauvilleCity_EventScript_YoungManDisappears
+	checkflag FLAG_BADGE06_GET
+	call_if TRUE, MauvilleCity_EventScript_YoungManAppears
+	call_if FALSE, MauvilleCity_EventScript_YoungManDisappears
+	return
+	end
+
+MauvilleCity_EventScript_YoungManAppears::
+	clearflag FLAG_HIDE_MAUVILLE_YOUNG_MAN
+	addobject LOCALID_MAUVILLE_YOUNG_MAN
+	return
+	end
+
+MauvilleCity_EventScript_YoungManDisappears::
+	removeobject LOCALID_MAUVILLE_YOUNG_MAN
+	setflag FLAG_HIDE_MAUVILLE_YOUNG_MAN
+	return
+	end
+
+MauvilleCity_EventScript_YoungMan::
+	lock
+	faceplayer
+	goto_if_eq VAR_HIDDEN_LAB_STATE, 1, MauvilleCity_EventScript_YoungMan_HelpingMe
+	msgbox MauvilleCity_Text_YoungMan_MissingId, MSGBOX_DEFAULT
+	waitmessage
+	applymovement VAR_LAST_TALKED, MauvilleCity_Movement_YoungMan_Nervous
+	waitmovement
+	msgbox MauvilleCity_Text_YoungMan_TooYoung, MSGBOX_DEFAULT
+	waitmessage
+	hidefollower
+	setflag FLAG_NO_WHITEOUT
+	trainerbattle_single TRAINER_MAUVILLE_YOUNG_MAN, MauvilleCity_Text_YoungMan_BattleIntro, MauvilleCity_Text_YoungMan_BattleStuned, MauvilleCity_EventScript_YoungMan_PostBattle
+	release
+	end
+
+MauvilleCity_EventScript_YoungMan_PostBattle::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MauvilleCity_EventScript_YoungMan_PostBattle_Won
+	goto_if_eq VAR_RESULT, B_OUTCOME_LOST, MauvilleCity_EventScript_YoungMan_PostBattle_Lost
+	end
+
+MauvilleCity_EventScript_YoungMan_PostBattle_Won::
+	lock
+	faceplayer
+	hidefollower
+	setvar VAR_HIDDEN_LAB_STATE, 1
+	clearflag FLAG_NO_WHITEOUT
+	msgbox MauvilleCity_Text_YoungMan_BattleLost, MSGBOX_DEFAULT
+	waitmessage
+	msgbox MauvilleCity_Text_YoungMan_HealTeam, MSGBOX_DEFAULT
+	special HealPlayerParty
+	closemessage
+	goto MauvilleCity_EventScript_YoungMan_HelpingMe
+	release
+	end
+
+MauvilleCity_EventScript_YoungMan_PostBattle_Lost::
+	lock
+	faceplayer
+	hidefollower
+	setvar VAR_HIDDEN_LAB_STATE, 1
+	clearflag FLAG_NO_WHITEOUT
+	msgbox MauvilleCity_Text_YoungMan_BattleWon, MSGBOX_DEFAULT
+	waitmessage
+	msgbox MauvilleCity_Text_YoungMan_HealTeam, MSGBOX_DEFAULT
+	special HealPlayerParty
+	closemessage
+	goto MauvilleCity_EventScript_YoungMan_HelpingMe
+	release
+	end
+
+MauvilleCity_EventScript_YoungMan_HelpingMe::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_YoungMan_HelpingMe, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, MauvilleCity_EventScript_YoungMan_Declined
+	case YES, MauvilleCity_EventScript_YoungMan_Accepted
+	case MULTI_B_PRESSED, MauvilleCity_EventScript_YoungMan_Declined
+	release
+	end
+
+MauvilleCity_EventScript_YoungMan_Accepted::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_YoungMan_ThankYou, MSGBOX_DEFAULT
+	waitmessage
+	closemessage
+	setfollowernpc 13, FNPC_LEAVE_ROUTE, FollowingNPCs_EventScript_Follower, PARTNER_YOUNG_MAN
+	release
+	end
+
+MauvilleCity_EventScript_YoungMan_Declined::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_YoungMan_Declined, MSGBOX_DEFAULT
+	waitmessage
+	closemessage
+	release
+	end
+
+MauvilleCity_Text_YoungMan_MissingId:
+	.string "Hi, have you seen a Trainer ID?\n"
+	.string "I think that I might have dropped it.\p"
+	.string "I can't get into the Game Corner if I\n"
+	.string "don't have it with me for the ID Check.$"
+
+MauvilleCity_Text_YoungMan_TooYoung:
+	.string "You think that I look too young to\n"
+	.string "enter the Game Corner?\p"
+	.string "… … …\p"
+	.string "I guess that without my ID, I'll have to\n"
+	.string "prove it the old-fashioned way!$"
+
+MauvilleCity_Text_YoungMan_BattleIntro:
+	.string "I won't be holding anything back!$"
+
+MauvilleCity_Text_YoungMan_BattleStuned:
+	.string "… … …$"
+
+MauvilleCity_Text_YoungMan_BattleLost:
+	.string "You're good!\n"
+	.string "But now you see that I'm not young!$"
+
+MauvilleCity_Text_YoungMan_BattleWon:
+	.string "You're pretty good yourself!\n"
+	.string "But I was just better!$"
+
+MauvilleCity_Text_YoungMan_HealTeam:
+	.string "But let me heal your Pokémon for you.$"
+
+MauvilleCity_Text_YoungMan_HelpingMe:
+	.string "Now, would you be willing to help me?\n"
+	.string "I'll make it worth your time.$"
+
+MauvilleCity_Text_YoungMan_ThankYou:
+	.string "Thank you! As it seems to not be here in\n"
+	.string "MAUVILLE CITY. We need to go over to\p"
+	.string "RUSTURF TUNNEL, where I bought it from.\p"
+	.string "… … …\p"
+	.string "Sorry, misspoke there, but I had walked\n"
+	.string "through the tunnel to get here.$"
+
+MauvilleCity_Text_YoungMan_Declined:
+	.string "Oh, hopefully you'll change your mind.$"
