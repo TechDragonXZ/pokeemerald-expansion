@@ -51,26 +51,26 @@
 
 #else
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
+#define FLAG_EGG_MOVES          0x20 // Move Relearner Egg Moves Flag
+#define FLAG_TUTOR_MOVES        0x21 // Move Relearner Tutor Moves Flag
+#define FLAG_FORCE_SHINY        0x22 // Force Shiny Flag
+#define FLAG_FORCE_NO_SHINY     0x23 // Force No Shiny Flag
+#define FLAG_PAUSE_TIME         0x24 // Pause Time Flag
+#define FLAG_POKE_RIDER         0x25 // PokéRider Flag
+#define FLAG_ORAS_DOWSING       0x26 // Upgraded Item Finder (Dowsing Machine) Flag
+#define FLAG_SKY_BATTLE         0x27 // Sky Battle Flag
+#define FLAG_NO_WHITEOUT        0x28 // No Whiteout Flag
+#define FLAG_SLEEP_CLAUSE       0x29 // Sleep Clause Flag
+#define FLAG_TERA_ORB_NO_COST   0x2A // Infinite Tera Orb Flag
+#define FLAG_TERA_ORB_CHARGED   0x2B // Charged Tera Orb Flag
+#define FLAG_DYNAMAX_BATTLE     0x2C // Dynamax Battle Flag
+#define FLAG_INVERSE_BATTLE     0x2D // Inverse Battle Flag
+#define FLAG_FORCE_DOUBLE_WILD  0x2E // Force Double Wild Battle Flag
+#define FLAG_NO_CATCHING        0x2F // No Catching Flag
+#define FLAG_NO_RUNNING         0x30 // No Running Flag
+#define FLAG_NO_ENCOUNTER       0x31 // No Encounter Flag
+#define FLAG_NO_TRAINER_SEE     0x32 // No Trainer See Flag
+#define FLAG_NO_COLLISION       0x33 // No Collision Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag
 #define FLAG_UNUSED_0x035    0x35 // Unused Flag
 #define FLAG_UNUSED_0x036    0x36 // Unused Flag
